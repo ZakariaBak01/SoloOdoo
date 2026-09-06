@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="action_chantier" model="ir.actions.act_window">
+        <field name="name">Chantiers</field>
+        <field name="res_model">project.project</field>
+        <field name="view_mode">kanban,tree,form</field>
+        <field name="view_id" ref="project.view_project_kanban"/>
+        <field name="search_view_id" ref="project.view_project_project_filter"/>
+        <field name="domain">[('is_chantier', '=', True)]</field>
+        <field name="context">{'default_is_chantier': True}</field>
+    </record>
+
+    <menuitem id="menu_chantier"
+              name="Chantiers"
+              parent="project.menu_main_pm"
+              action="action_chantier"
+              sequence="2"
+              groups="project.group_project_user,project.group_project_manager"/>
+
+    <menuitem id="menu_chantier_root"
+              name="EL MOKRIF"
+              action="action_chantier"
+              web_icon="project,static/description/icon.png"
+              sequence="71"
+              groups="project.group_project_user,project.group_project_manager"/>
+
+    <record id="project_project_form_chantier" model="ir.ui.view">
+        <field name="name">project.project.form.chantier</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.edit_project"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header" position="inside">
+                <button name="action_initialize_chantier"
+                        type="object"
+                        string="Initialize Chantier"
+                        class="btn-primary"
+                        groups="elmokrif_chantier.group_chantier_manager"
+                        invisible="not is_chantier or chantier_initialized"/>
+                <button name="action_approve_chantier"
+                        type="object"
+                        string="Approve"
+                        class="btn-primary"
+                        groups="elmokrif_chantier.group_chantier_manager"
+                        invisible="not is_chantier or chantier_state != 'draft'"/>
+                <button name="action_start_chantier"
+                        type="object"
+                        string="Start"
+                        groups="elmokrif_chantier.group_chantier_user"
+                        invisible="not is_chantier or chantier_state not in ['approved', 'on_hold', 'completed']"/>
+                <button name="action_hold_chantier"
+                        type="object"
+                        string="Put on Hold"
+                        groups="elmokrif_chantier.group_chantier_user"
+                        invisible="not is_chantier or chantier_state != 'in_progress'"/>
+                <button name="action_complete_chantier"
+                        type="object"
+                        string="Complete"
+                        groups="elmokrif_chantier.group_chantier_user"
+                        invisible="not is_chantier or chantier_state not in ['in_progress', 'on_hold']"/>
+                <button name="action_close_chantier"
+                        type="object"
+                        string="Close"
+                        groups="elmokrif_chantier.group_chantier_manager"
+                        invisible="not is_chantier or chantier_state != 'completed'"/>
+                <button name="action_reopen_chantier"
+                        type="object"
+                        string="Reopen"
+                        groups="elmokrif_chantier.group_chantier_manager"
+                        invisible="not is_chantier or chantier_state != 'closed' or not reopen_reason"/>
+                <field name="chantier_state"
+                       widget="statusbar"
+                       statusbar_visible="draft,approved,in_progress,on_hold,completed,closed"
+                       invisible="not is_chantier"/>
+            </xpath>
+
+            <xpath expr="//field[@name='label_tasks']" position="before">
+                <field name="is_chantier"/>
+                <field name="chantier_reference" invisible="not is_chantier"/>
+            </xpath>
+
+            <xpath expr="//page[@name='description']" position="after">
+                <page name="chantier" string="Chantier" invisible="not is_chantier">
+                    <group>
+                        <group string="Classification">
+                            <field name="work_type"/>
+                            <field name="chantier_region"/>
+                            <field name="site_partner_id"/>
+                        </group>
+                        <group string="Stock and Analytics">
+                            <field name="warehouse_id"
+                                   readonly="chantier_initialized"
+                                   options="{'no_create': True}"/>
+                            <field name="site_location_id"/>
+                            <field name="analytic_account_id"
+                                   groups="analytic.group_analytic_accounting"/>
+                            <field name="chantier_initialized" invisible="1"/>
+                        </group>
+                    </group>
+                    <group string="Closure and Reopening">
+                        <field name="reopen_reason"
+                               placeholder="Required before reopening a closed chantier"
+                               readonly="chantier_state != 'closed'"/>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="project_project_search_chantier" model="ir.ui.view">
+        <field name="name">project.project.search.chantier</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.view_project_project_filter"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="after">
+                <field name="chantier_reference"/>
+                <field name="work_type"/>
+            </xpath>
+            <xpath expr="//filter[@name='own_projects']" position="before">
+                <filter string="Chantiers" name="chantiers" domain="[('is_chantier', '=', True)]"/>
+            </xpath>
+            <xpath expr="//group" position="inside">
+                <filter string="Chantier Status" name="chantier_state" context="{'group_by': 'chantier_state'}"/>
+                <filter string="Work Type" name="work_type" context="{'group_by': 'work_type'}"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="project_project_tree_chantier" model="ir.ui.view">
+        <field name="name">project.project.tree.chantier</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.view_project"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='display_name']" position="after">
+                <field name="is_chantier" optional="hide"/>
+                <field name="chantier_reference" optional="show"/>
+                <field name="chantier_state" optional="show"/>
+                <field name="work_type" optional="hide"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
