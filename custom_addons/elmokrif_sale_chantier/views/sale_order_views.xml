@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="sale_order_form_chantier" model="ir.ui.view">
+        <field name="name">sale.order.form.chantier</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header" position="inside">
+                <button name="action_initialize_linked_chantiers"
+                        type="object"
+                        string="Initialize Chantier(s)"
+                        class="btn-secondary"
+                        groups="elmokrif_chantier.group_chantier_manager"
+                        invisible="not chantier_id and not order_line"/>
+            </xpath>
+            <xpath expr="//field[@name='partner_id']" position="after">
+                <field name="chantier_id" options="{'no_create': True}"/>
+            </xpath>
+            <xpath expr="//field[@name='order_line']//field[@name='product_id']" position="after">
+                <field name="chantier_id" optional="show" options="{'no_create': True}"/>
+            </xpath>
+            <xpath expr="//field[@name='client_order_ref']" position="after">
+                <field name="chantier_first_sent_at" invisible="1"/>
+                <field name="chantier_followup_activity_id" invisible="1"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="sale_order_tree_chantier" model="ir.ui.view">
+        <field name="name">sale.order.tree.chantier</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='partner_id']" position="after">
+                <field name="chantier_id" optional="show"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="sale_order_search_chantier" model="ir.ui.view">
+        <field name="name">sale.order.search.chantier</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_sales_order_filter"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='partner_id']" position="after">
+                <field name="chantier_id"/>
+            </xpath>
+            <xpath expr="//filter[@name='my_sale_orders_filter']" position="before">
+                <filter name="chantier_orders"
+                        string="Chantier"
+                        domain="[('chantier_id', '!=', False)]"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
