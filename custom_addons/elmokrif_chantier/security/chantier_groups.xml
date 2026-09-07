@@ -7,6 +7,6 @@
 
     <record id="group_chantier_manager" model="res.groups">
         <field name="name">Chantier Manager</field>
-        <field name="implied_ids" eval="[(4, ref('elmokrif_chantier.group_chantier_user')), (4, ref('project.group_project_manager'))]"/>
+        <field name="implied_ids" eval="[(4, ref('elmokrif_chantier.group_chantier_user')), (4, ref('project.group_project_manager')), (4, ref('stock.group_stock_user'))]"/>
     </record>
 </odoo>
