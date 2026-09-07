@@ -1,0 +1,25 @@
+SoloOdoo clean-database system test evidence — 2026-09-07
+
+Command:
+C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\run-system-tests.ps1
+
+Runtime:
+Odoo 17.0-20260817
+PostgreSQL container: odoo17-db
+Disposable database: soloodoo_system_test
+Installed module graph: 72 modules
+
+Static checks:
+Python compileall: PASS
+XML parse: PASS (17 files)
+
+Odoo final result:
+44 post-tests in 15.69s, 14847 queries
+elmokrif_chantier: 27 tests
+elmokrif_chantier_stock: 17 tests
+elmokrif_integration_tests: 3 tests
+elmokrif_sale_chantier: 5 tests
+0 failed, 0 errors of 44 tests
+
+Cleanup:
+DROP DATABASE soloodoo_system_test: PASS

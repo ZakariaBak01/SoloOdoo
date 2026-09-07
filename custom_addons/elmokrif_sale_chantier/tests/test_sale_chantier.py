@@ -1,3 +1,5 @@
+from datetime import date
+
 from odoo.exceptions import UserError, ValidationError
 from odoo.tests import TransactionCase, tagged
 
@@ -35,12 +37,17 @@ class TestSaleChantier(TransactionCase):
                 "is_chantier": True,
                 "company_id": self.company.id,
                 "warehouse_id": self.warehouse.id,
+                "partner_id": self.partner.id,
                 "site_partner_id": self.partner.id,
+                "chantier_region": "Casablanca-Settat",
+                "work_type": "construction",
+                "date_start": date(2026, 1, 1),
+                "date": date(2026, 12, 31),
             }
         )
         chantier = self.env["project.project"].create(values)
-        chantier.action_initialize_chantier()
         chantier.action_approve_chantier()
+        chantier.action_initialize_chantier()
         chantier.action_start_chantier()
         return chantier
 
@@ -70,7 +77,12 @@ class TestSaleChantier(TransactionCase):
                 "is_chantier": True,
                 "company_id": self.company.id,
                 "warehouse_id": self.warehouse.id,
+                "partner_id": self.partner.id,
                 "site_partner_id": self.partner.id,
+                "chantier_region": "Casablanca-Settat",
+                "work_type": "construction",
+                "date_start": date(2026, 1, 1),
+                "date": date(2026, 12, 31),
             }
         )
         order = self._create_order(chantier)

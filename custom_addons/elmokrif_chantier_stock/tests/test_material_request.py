@@ -159,6 +159,20 @@ class TestChantierMaterialRequest(TransactionCase):
         self.assertEqual(picking.location_id, chantier.site_location_id)
         self.assertEqual(picking.location_dest_id, loss_location)
 
+    def test_manual_chantier_transfer_normalizes_delivery_order_defaults(self):
+        chantier = self._create_in_progress_chantier()
+        picking = self.env["stock.picking"].create({
+            "picking_type_id": self.warehouse.out_type_id.id,
+            "chantier_id": chantier.id,
+            "chantier_operation": "delivery",
+            "location_id": self.warehouse.lot_stock_id.id,
+            "location_dest_id": self.warehouse.out_type_id.default_location_dest_id.id,
+        })
+
+        self.assertEqual(picking.picking_type_id, self.warehouse.int_type_id)
+        self.assertEqual(picking.location_id, self.warehouse.lot_stock_id)
+        self.assertEqual(picking.location_dest_id, chantier.site_location_id)
+
     def test_global_request_defaults_company_and_accepts_its_chantier(self):
         request = self.env["chantier.material.request"].new({})
         self.assertEqual(request.company_id, self.company)
@@ -203,6 +217,53 @@ class TestChantierMaterialRequest(TransactionCase):
         self.assertEqual(first.line_ids.delivered_qty, 4)
         self.assertEqual(second.line_ids.delivered_qty, 6)
 
+    def test_duplicate_product_lines_keep_exact_move_allocation(self):
+        chantier = self._create_in_progress_chantier()
+        product = self._stockable_product("Duplicate-line stock", quantity=10)
+        request = self.env["chantier.material.request"].create({
+            "chantier_id": chantier.id,
+            "line_ids": [
+                (0, 0, {"product_id": product.id, "product_uom_qty": 4}),
+                (0, 0, {"product_id": product.id, "product_uom_qty": 6}),
+            ],
+        })
+        picking = self._create_and_approve_transfer(request)
+
+        picking.action_confirm()
+        picking.action_assign()
+        self.assertEqual(len(picking.move_ids), 2)
+        self.assertEqual(
+            picking.move_ids.mapped("material_request_line_id"), request.line_ids
+        )
+        for move in picking.move_ids:
+            move.quantity = move.product_uom_qty
+            move.picked = True
+        picking.button_validate()
+
+        self.assertEqual(request.state, "done")
+        self.assertEqual(
+            sorted(request.line_ids.mapped("delivered_qty")), [4, 6]
+        )
+
+    def test_short_delivery_without_backorder_remains_partial(self):
+        chantier = self._create_in_progress_chantier()
+        product = self._stockable_product("Short delivery stock", quantity=10)
+        request = self._create_request(chantier, product, quantity=10)
+        picking = self._create_and_approve_transfer(request)
+        picking.action_confirm()
+        picking.action_assign()
+        picking.move_ids.quantity = 4
+        picking.move_ids.picked = True
+        action = picking.button_validate()
+        wizard = Form(
+            picking.env["stock.backorder.confirmation"].with_context(action["context"])
+        ).save()
+        wizard.process_cancel_backorder()
+
+        self.assertEqual(picking.state, "done")
+        self.assertEqual(request.line_ids.delivered_qty, 4)
+        self.assertEqual(request.state, "partially_delivered")
+
     def test_backorder_keeps_material_request_link(self):
         chantier = self._create_in_progress_chantier()
         product = self._stockable_product("Partial delivery stock", quantity=10)
@@ -239,6 +300,19 @@ class TestChantierMaterialRequest(TransactionCase):
             request.with_user(user).with_context(
                 allowed_company_ids=[other_company.id]
             ).write({"request_date": request.request_date})
+
+    def test_assignment_rule_hides_another_chantiers_request(self):
+        chantier = self._create_in_progress_chantier()
+        request = self._create_request(chantier)
+        user = self._create_chantier_user()
+
+        visible = self.env["chantier.material.request"].with_user(user).search(
+            [("id", "=", request.id)]
+        )
+
+        self.assertFalse(visible)
+        with self.assertRaises(AccessError):
+            request.with_user(user).write({"request_date": request.request_date})
 
     def test_preselected_chantier_sets_its_company(self):
         other_company = self.env["res.company"].create({"name": "Other chantier company"})

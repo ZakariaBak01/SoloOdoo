@@ -1,7 +1,7 @@
 {
     "name": "EL MOKRIF Chantier Materials",
     "summary": "Material requests and warehouse transfers for chantiers",
-    "version": "17.0.1.2.0",
+    "version": "17.0.1.4.0",
     "category": "Inventory/Inventory",
     "author": "EL MOKRIF",
     "license": "LGPL-3",

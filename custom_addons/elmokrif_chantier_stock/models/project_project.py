@@ -132,3 +132,18 @@ class ProjectProject(models.Model):
                 "default_location_id": self.site_location_id.id,
             },
         }
+
+    def _get_chantier_closure_blockers(self):
+        blockers = super()._get_chantier_closure_blockers()
+        for chantier in self:
+            open_requests = self.env["chantier.material.request"].search_count(
+                [
+                    ("chantier_id", "=", chantier.id),
+                    ("state", "not in", ("done", "cancel")),
+                ]
+            )
+            if open_requests:
+                blockers.append(
+                    _("%(count)s open material request(s)", count=open_requests)
+                )
+        return blockers

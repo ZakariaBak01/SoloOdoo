@@ -87,6 +87,12 @@ class ProjectProject(models.Model):
     can_manage_chantier = fields.Boolean(
         string="Can Manage Chantier",
         compute="_compute_can_manage_chantier",
+        # Odoo evaluates form modifiers before non-stored computed fields are
+        # calculated for a new record.  Supplying the same value through
+        # default_get keeps draft master-data fields editable for managers.
+        default=lambda self: self.env.su or self.env.user.has_group(
+            "elmokrif_chantier.group_chantier_manager"
+        ),
     )
 
     _sql_constraints = [
@@ -128,8 +134,23 @@ class ProjectProject(models.Model):
         for project in self:
             project.can_manage_chantier = can_manage
 
+    @api.model
+    def default_get(self, fields_list):
+        defaults = super().default_get(fields_list)
+        # The supplying-warehouse domain is scoped to company_id.  Project's
+        # standard defaults do not provide a company for a new record, so a
+        # chantier opened from its action would otherwise see no warehouse.
+        if (
+            self.env.context.get("default_is_chantier")
+            and "company_id" in fields_list
+            and not defaults.get("company_id")
+        ):
+            defaults["company_id"] = self.env.company.id
+        return defaults
+
     @api.model_create_multi
     def create(self, vals_list):
+        form_analytic_account_ids = []
         for vals in vals_list:
             is_chantier = vals.get(
                 "is_chantier", self.env.context.get("default_is_chantier", False)
@@ -145,14 +166,30 @@ class ProjectProject(models.Model):
                 raise UserError(_("A new chantier must start in Draft."))
             if is_chantier and vals.get("chantier_reference"):
                 raise UserError(_("The chantier reference is generated automatically."))
-            if is_chantier and (
-                vals.get("analytic_account_id") or vals.get("site_location_id")
-            ):
-                raise UserError(
-                    _(
-                        "Create chantier analytic and stock resources with Initialize Chantier."
+            form_create = (
+                is_chantier
+                and self.env.context.get("default_is_chantier")
+                and not self.env.context.get("chantier_initialization")
+            )
+            analytic_account_id = vals.get("analytic_account_id")
+            if is_chantier and vals.get("site_location_id"):
+                if form_create:
+                    vals.pop("site_location_id")
+                else:
+                    raise UserError(
+                        _("Create chantier analytic and stock resources with Initialize Chantier.")
                     )
+            if is_chantier and analytic_account_id and not form_create:
+                raise UserError(
+                    _("Create chantier analytic and stock resources with Initialize Chantier.")
                 )
+            # hr_timesheet creates an analytic account before calling this
+            # method when Timesheets are enabled.  Preserve that mandatory
+            # account for the New Chantier form, then make it chantier-owned
+            # immediately after the project receives its database ID.
+            form_analytic_account_ids.append(
+                analytic_account_id if form_create else False
+            )
             # Odoo's Project quick-create dialog only sends the project name.
             # A chantier must be attached to the currently active company.
             if is_chantier and not vals.get("company_id"):
@@ -167,7 +204,23 @@ class ProjectProject(models.Model):
                     .with_company(company)
                     .next_by_code("elmokrif.chantier")
                 )
-        projects = super().create(vals_list)
+        create_context = {}
+        if any(form_analytic_account_ids):
+            create_context["chantier_form_create"] = True
+        projects = super(ProjectProject, self.with_context(**create_context)).create(vals_list)
+        for project, analytic_account_id in zip(projects, form_analytic_account_ids):
+            if analytic_account_id:
+                analytic_account = self.env["account.analytic.account"].browse(
+                    analytic_account_id
+                )
+                analytic_account.sudo().with_context(
+                    chantier_initialization=True
+                ).write({
+                    "company_id": project.company_id.id,
+                    "plan_id": project._get_chantier_analytic_plan().id,
+                    "chantier_id": project.id,
+                })
+                project._check_chantier_company_consistency()
         projects.filtered("is_chantier")._subscribe_chantier_assignees()
         return projects
 
@@ -433,7 +486,9 @@ class ProjectProject(models.Model):
                 raise ValidationError(
                     _("The chantier and site stock location must link to each other.")
                 )
-            if project.analytic_account_id:
+            if project.analytic_account_id and not self.env.context.get(
+                "chantier_form_create"
+            ):
                 chantier_plan = project._get_chantier_analytic_plan()
                 if project.analytic_account_id.plan_id != chantier_plan:
                     raise ValidationError(

@@ -7,6 +7,7 @@
     "license": "LGPL-3",
     "depends": [
         "sale_management",
+        "sale_stock",
         "account",
         "mail",
         "elmokrif_chantier",
