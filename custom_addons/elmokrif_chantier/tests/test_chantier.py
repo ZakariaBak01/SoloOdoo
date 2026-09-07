@@ -2,6 +2,7 @@ from datetime import date
 
 from odoo.exceptions import AccessError, UserError, ValidationError
 from odoo.tests import TransactionCase, tagged
+from odoo.tools.safe_eval import safe_eval
 
 
 @tagged("post_install", "-at_install")
@@ -40,6 +41,42 @@ class TestChantier(TransactionCase):
 
     def _approve(self, chantier):
         chantier.action_approve_chantier()
+
+    def test_new_chantier_actions_open_in_edit_mode(self):
+        for xmlid in (
+            "elmokrif_chantier.action_chantier",
+            "elmokrif_chantier.action_new_chantier",
+        ):
+            context = safe_eval(self.env.ref(xmlid).context)
+            self.assertTrue(context["default_is_chantier"])
+            self.assertEqual(context["form_view_initial_mode"], "edit")
+
+    def test_new_chantier_defaults_manager_editability(self):
+        manager = self.env["res.users"].with_context(no_reset_password=True).create(
+            {
+                "name": "Chantier form manager",
+                "login": "chantier_form_manager@example.test",
+                "groups_id": [
+                    (6, 0, [
+                        self.env.ref("base.group_user").id,
+                        self.env.ref("elmokrif_chantier.group_chantier_manager").id,
+                    ]),
+                ],
+            }
+        )
+
+        defaults = self.env["project.project"].with_user(manager).default_get(
+            ["can_manage_chantier"]
+        )
+
+        self.assertTrue(defaults["can_manage_chantier"])
+
+    def test_new_chantier_defaults_active_company_for_warehouse_domain(self):
+        defaults = self.env["project.project"].with_context(
+            default_is_chantier=True
+        ).default_get(["company_id", "warehouse_id"])
+
+        self.assertEqual(defaults["company_id"], self.env.company.id)
 
     def test_initialize_is_idempotent(self):
         chantier = self._create_chantier()
@@ -310,6 +347,45 @@ class TestChantier(TransactionCase):
 
         with self.assertRaises(UserError):
             self._create_chantier(analytic_account_id=analytic_account.id)
+
+    def test_new_chantier_form_ignores_hidden_system_link_values(self):
+        analytic_account = self.env["account.analytic.account"].create({
+            "name": "Hidden Form Account",
+            "plan_id": self.env.ref(
+                "elmokrif_chantier.analytic_plan_chantier"
+            ).id,
+            "company_id": self.company.id,
+        })
+
+        chantier = self.env["project.project"].with_context(
+            default_is_chantier=True
+        ).create({
+            "name": "New Form Chantier",
+            "is_chantier": True,
+            "company_id": self.company.id,
+            "warehouse_id": self.warehouse.id,
+            "partner_id": self.env["res.partner"].create({
+                "name": "New Form Customer",
+            }).id,
+            "user_id": self.env.user.id,
+            "date_start": date(2026, 1, 1),
+            "date": date(2026, 12, 31),
+            "chantier_region": "Casablanca-Settat",
+            "work_type": "construction",
+            "site_partner_id": self.env["res.partner"].create({
+                "name": "New Form Site",
+            }).id,
+            "analytic_account_id": analytic_account.id,
+        })
+
+        self.assertEqual(chantier.analytic_account_id, analytic_account)
+        self.assertEqual(
+            chantier.analytic_account_id.plan_id,
+            self.env.ref("elmokrif_chantier.analytic_plan_chantier"),
+        )
+        self.assertEqual(chantier.analytic_account_id.chantier_id, chantier)
+        chantier.action_approve_chantier()
+        self.assertTrue(chantier.chantier_initialized)
 
     def test_chantiers_are_archived_instead_of_deleted(self):
         draft = self._create_chantier(name="Draft chantier")

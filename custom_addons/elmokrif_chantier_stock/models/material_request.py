@@ -87,12 +87,28 @@ class ChantierMaterialRequest(models.Model):
     def _update_delivery_state(self):
         """Synchronize a request after Odoo validates one of its transfers."""
         for request in self:
-            pickings = request.picking_ids.filtered(lambda item: item.state != "cancel")
-            done_pickings = pickings.filtered(lambda item: item.state == "done")
-            if pickings and len(done_pickings) == len(pickings):
-                request.sudo().write({"state": "done"})
-            elif done_pickings:
-                request.sudo().write({"state": "partially_delivered"})
+            if request.state not in ("approved", "partially_delivered"):
+                continue
+            request.line_ids.invalidate_recordset(["delivered_qty"])
+            complete = request.line_ids and all(
+                float_compare(
+                    line.delivered_qty,
+                    line.product_uom_qty,
+                    precision_rounding=line.product_uom_id.rounding,
+                ) >= 0
+                for line in request.line_ids
+            )
+            has_delivery = any(
+                float_compare(
+                    line.delivered_qty,
+                    0,
+                    precision_rounding=line.product_uom_id.rounding,
+                ) > 0
+                for line in request.line_ids
+            )
+            target_state = "done" if complete else "partially_delivered" if has_delivery else False
+            if target_state and target_state != request.state:
+                request.sudo().write({"state": target_state})
 
     def _check_manager(self):
         if not (self.env.su or self.env.user.has_group("elmokrif_chantier.group_chantier_manager")):
@@ -106,7 +122,12 @@ class ChantierMaterialRequest(models.Model):
 
     def action_create_transfer(self):
         self._check_manager()
-        for request in self:
+        for request in self.sorted("id"):
+            self.env.cr.execute(
+                "SELECT id FROM chantier_material_request WHERE id = %s FOR UPDATE",
+                [request.id],
+            )
+            request.invalidate_recordset(["state", "picking_id"])
             if request.state != "approved" or request.picking_id:
                 continue
             picking_type = request.warehouse_id.int_type_id
@@ -125,6 +146,7 @@ class ChantierMaterialRequest(models.Model):
                     "product_uom": line.product_uom_id.id,
                     "location_id": request.warehouse_id.lot_stock_id.id,
                     "location_dest_id": request.location_dest_id.id,
+                    "material_request_line_id": line.id,
                 }) for line in request.line_ids],
             })
             request.picking_id = picking
@@ -176,13 +198,22 @@ class ChantierMaterialRequestLine(models.Model):
         "request_id.picking_ids.move_ids.quantity",
         "request_id.picking_ids.move_ids.product_uom",
         "request_id.picking_ids.move_ids.product_id",
+        "request_id.picking_ids.move_ids.material_request_line_id",
     )
     def _compute_quantities(self):
         for line in self:
+            # New transfers have an exact source-line link. The second branch
+            # retains readable quantities for legacy moves created before that
+            # link existed; old duplicate-product lines remain inherently
+            # ambiguous and should be reconciled during migration.
             moves = self.env["stock.move"].search([
+                ("state", "=", "done"),
+                "|",
+                ("material_request_line_id", "=", line.id),
+                "&",
+                ("material_request_line_id", "=", False),
                 ("picking_id.material_request_id", "=", line.request_id.id),
                 ("product_id", "=", line.product_id.id),
-                ("state", "=", "done"),
             ])
             # A request owns its receipts. Consumption, returns and losses belong
             # to the chantier inventory and are intentionally not allocated here.

@@ -20,7 +20,7 @@
         <field name="view_id" ref="elmokrif_chantier.project_project_kanban_chantier"/>
         <field name="search_view_id" ref="project.view_project_project_filter"/>
         <field name="domain">[('is_chantier', '=', True)]</field>
-        <field name="context">{'default_is_chantier': True}</field>
+        <field name="context">{'default_is_chantier': True, 'form_view_initial_mode': 'edit'}</field>
     </record>
 
     <record id="action_new_chantier" model="ir.actions.act_window">
@@ -28,7 +28,7 @@
         <field name="res_model">project.project</field>
         <field name="view_mode">form</field>
         <field name="view_id" ref="project.edit_project"/>
-        <field name="context">{'default_is_chantier': True}</field>
+        <field name="context">{'default_is_chantier': True, 'form_view_initial_mode': 'edit'}</field>
         <field name="target">current</field>
     </record>
 
