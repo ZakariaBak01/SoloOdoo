@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_saleorder_document_chantier" inherit_id="sale.report_saleorder_document">
+        <xpath expr="//h2" position="before">
+            <div t-if="doc.chantier_id" class="mt-2">
+                <strong>Chantier:</strong>
+                <span t-field="doc.chantier_id"/>
+            </div>
+        </xpath>
+        <xpath expr="//th[@name='th_description']" position="after">
+            <th name="th_chantier" class="text-start">Chantier</th>
+        </xpath>
+        <xpath expr="//td[@name='td_name']" position="after">
+            <td name="td_chantier">
+                <span t-field="line.chantier_id"/>
+            </td>
+        </xpath>
+    </template>
+</odoo>

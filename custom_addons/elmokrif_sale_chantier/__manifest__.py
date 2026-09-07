@@ -1,0 +1,24 @@
+{
+    "name": "EL MOKRIF Sale Chantier",
+    "summary": "Link sales and invoicing to existing chantiers",
+    "version": "17.0.1.0.0",
+    "category": "Sales/Sales",
+    "author": "EL MOKRIF",
+    "license": "LGPL-3",
+    "depends": [
+        "sale_management",
+        "account",
+        "mail",
+        "elmokrif_chantier",
+    ],
+    "data": [
+        "views/res_company_views.xml",
+        "views/res_partner_views.xml",
+        "views/sale_order_views.xml",
+        "views/account_move_views.xml",
+        "views/project_project_views.xml",
+        "views/sale_order_report.xml",
+    ],
+    "installable": True,
+    "application": False,
+}
