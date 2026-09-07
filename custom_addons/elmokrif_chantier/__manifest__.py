@@ -1,13 +1,16 @@
 {
     "name": "EL MOKRIF Chantier",
     "summary": "Chantier lifecycle and stock-location foundation",
-    "version": "17.0.1.0.0",
+    "version": "17.0.1.3.0",
     "category": "Services/Project",
     "author": "EL MOKRIF",
     "license": "LGPL-3",
-    "depends": ["project", "stock"],
+    "depends": ["project", "analytic", "stock", "mail"],
     "data": [
         "security/chantier_groups.xml",
+        "security/ir.model.access.csv",
+        "security/chantier_rules.xml",
+        "data/analytic_plan_data.xml",
         "data/chantier_sequence.xml",
         "views/project_project_views.xml",
         "views/project_task_views.xml",

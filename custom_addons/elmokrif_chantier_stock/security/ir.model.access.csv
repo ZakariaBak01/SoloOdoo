@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_chantier_material_request_user,chantier.material.request user,model_chantier_material_request,elmokrif_chantier.group_chantier_user,1,1,1,0
+access_chantier_material_request_manager,chantier.material.request manager,model_chantier_material_request,elmokrif_chantier.group_chantier_manager,1,1,1,1
+access_chantier_material_request_line_user,chantier.material.request.line user,model_chantier_material_request_line,elmokrif_chantier.group_chantier_user,1,1,1,0
+access_chantier_material_request_line_manager,chantier.material.request.line manager,model_chantier_material_request_line,elmokrif_chantier.group_chantier_manager,1,1,1,1

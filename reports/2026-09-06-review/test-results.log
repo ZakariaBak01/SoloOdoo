@@ -1,0 +1,64 @@
+SoloOdoo review — 2026-09-06
+Fresh isolated PostgreSQL 15 database; Odoo 17.0-20260817; current workspace addons copied into disposable containers.
+Business database TestData was not used for tests.
+
+EXISTING ODOO SUITE (raw log tail)
+2026-09-06 18:33:27,855 1 INFO soloodoo_review_20260906 odoo.modules.loading: Loading module elmokrif_chantier_stock (42/42) 
+2026-09-06 18:33:27,930 1 INFO soloodoo_review_20260906 odoo.modules.registry: module elmokrif_chantier_stock: creating or updating database tables 
+2026-09-06 18:33:28,073 1 INFO soloodoo_review_20260906 odoo.modules.loading: loading elmokrif_chantier_stock/security/ir.model.access.csv 
+2026-09-06 18:33:28,088 1 INFO soloodoo_review_20260906 odoo.modules.loading: loading elmokrif_chantier_stock/data/stock_location_data.xml 
+2026-09-06 18:33:28,094 1 INFO soloodoo_review_20260906 odoo.modules.loading: loading elmokrif_chantier_stock/views/material_request_views.xml 
+2026-09-06 18:33:28,117 1 INFO soloodoo_review_20260906 odoo.modules.loading: loading elmokrif_chantier_stock/views/project_project_views.xml 
+2026-09-06 18:33:28,131 1 INFO soloodoo_review_20260906 odoo.modules.loading: loading elmokrif_chantier_stock/views/stock_picking_views.xml 
+2026-09-06 18:33:28,159 1 INFO soloodoo_review_20260906 odoo.modules.loading: Module elmokrif_chantier_stock loaded in 0.30s, 219 queries (+219 other) 
+2026-09-06 18:33:28,159 1 INFO soloodoo_review_20260906 odoo.modules.loading: 42 modules loaded in 26.84s, 26469 queries (+26470 extra) 
+2026-09-06 18:33:28,926 1 INFO soloodoo_review_20260906 odoo.modules.loading: Modules loaded. 
+2026-09-06 18:33:28,929 1 INFO soloodoo_review_20260906 odoo.modules.registry: Registry loaded in 37.612s 
+2026-09-06 18:33:28,929 1 INFO soloodoo_review_20260906 odoo.service.server: Starting post tests 
+2026-09-06 18:33:29,081 1 INFO soloodoo_review_20260906 odoo.addons.elmokrif_chantier.tests.test_chantier: Starting TestChantier.test_approval_requires_master_data ... 
+2026-09-06 18:33:29,150 1 INFO soloodoo_review_20260906 odoo.addons.elmokrif_chantier.tests.test_chantier: Starting TestChantier.test_chantier_requires_company_consistency ... 
+2026-09-06 18:33:29,880 1 INFO soloodoo_review_20260906 odoo.addons.elmokrif_chantier.tests.test_chantier: Starting TestChantier.test_chantier_uses_active_company_when_not_supplied ... 
+2026-09-06 18:33:29,909 1 INFO soloodoo_review_20260906 odoo.addons.elmokrif_chantier.tests.test_chantier: Starting TestChantier.test_initialization_requires_approval ... 
+2026-09-06 18:33:29,959 1 INFO soloodoo_review_20260906 odoo.addons.elmokrif_chantier.tests.test_chantier: Starting TestChantier.test_initialize_is_idempotent ... 
+2026-09-06 18:33:30,049 1 INFO soloodoo_review_20260906 odoo.addons.elmokrif_chantier.tests.test_chantier: Starting TestChantier.test_initialized_location_cannot_be_replaced_manually ... 
+2026-09-06 18:33:30,140 1 INFO soloodoo_review_20260906 odoo.addons.elmokrif_chantier.tests.test_chantier: Starting TestChantier.test_invalid_lifecycle_jump_is_rejected ... 
+2026-09-06 18:33:30,263 1 INFO soloodoo_review_20260906 odoo.addons.base.models.ir_attachment: filestore gc 17 checked, 0 removed 
+2026-09-06 18:33:30,335 1 INFO soloodoo_review_20260906 odoo.addons.elmokrif_chantier_stock.tests.test_material_request: Starting TestChantierMaterialRequest.test_consumption_uses_inventory_adjustment_location ... 
+2026-09-06 18:33:30,446 1 INFO soloodoo_review_20260906 odoo.addons.elmokrif_chantier_stock.tests.test_material_request: Starting TestChantierMaterialRequest.test_empty_request_cannot_be_submitted ... 
+2026-09-06 18:33:30,544 1 INFO soloodoo_review_20260906 odoo.addons.elmokrif_chantier_stock.tests.test_material_request: Starting TestChantierMaterialRequest.test_request_requires_chantier_in_progress ... 
+2026-09-06 18:33:30,641 1 INFO soloodoo_review_20260906 odoo.addons.elmokrif_chantier_stock.tests.test_material_request: Starting TestChantierMaterialRequest.test_submitted_request_creates_site_delivery ... 
+2026-09-06 18:33:30,768 1 INFO soloodoo_review_20260906 odoo.addons.base.models.ir_attachment: filestore gc 0 checked, 0 removed 
+2026-09-06 18:33:30,769 1 INFO soloodoo_review_20260906 odoo.service.server: 11 post-tests in 1.84s, 1815 queries 
+2026-09-06 18:33:30,769 1 INFO soloodoo_review_20260906 odoo.tests.stats: elmokrif_chantier: 9 tests 1.19s 1323 queries 
+2026-09-06 18:33:30,769 1 INFO soloodoo_review_20260906 odoo.tests.stats: elmokrif_chantier_stock: 6 tests 0.50s 492 queries 
+2026-09-06 18:33:30,769 1 INFO soloodoo_review_20260906 odoo.tests.result: 0 failed, 0 error(s) of 11 tests when loading database 'soloodoo_review_20260906' 
+2026-09-06 18:33:30,769 1 INFO soloodoo_review_20260906 odoo.service.server: Initiating shutdown 
+2026-09-06 18:33:30,769 1 INFO soloodoo_review_20260906 odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2026-09-06 18:33:30,939 1 INFO soloodoo_review_20260906 odoo.sql_db: ConnectionPool(used=0/count=0/max=64): Closed 1 connections  
+
+EXPLORATORY FOUNDATION / ACCESS / FORM CHECKS
+PROBE {"check": "complete lifecycle and reopen", "result": "PASS", "detail": {"state": "approved", "initialized": true}}
+PROBE {"check": "block Start before initialization", "result": "FAIL", "detail": {"state": "in_progress", "initialized": false, "initialization_error_after_start": "Approve the chantier before initializing it."}}
+PROBE {"check": "documented Chantier Manager can initialize", "result": "FAIL", "detail": {"is_inventory_manager": false, "error": "You are not allowed to create 'Inventory Locations' (stock.location) records.\n\nThis operation is allowed for the following groups:\n\t- Inventory/Administrator\n\nContact your administrator to request access if necessary."}}
+PROBE {"check": "master data required through ORM write", "result": "FAIL", "detail": {"state": "approved", "region": false, "warehouse": false}}
+PROBE {"check": "Close button rejects remaining stock", "result": "PASS", "detail": {"blocked": "Resolve these items before closing Review Villa:\n- remaining site stock"}}
+PROBE {"check": "ORM close rejects remaining stock", "result": "FAIL", "detail": {"state": "closed", "blockers": ["remaining site stock"]}}
+PROBE {"check": "new request form offers existing chantier", "result": "FAIL", "detail": {"new_form_company": false, "available_chantiers": [], "expected_chantier": 36, "domain": [["is_chantier", "=", true], ["company_id", "=", false]]}}
+PROBE {"check": "ordinary user cannot approve via button", "result": "PASS", "detail": {"blocked": "Only a chantier manager can approve material requests."}}
+PROBE {"check": "ordinary user cannot bypass approval or edit approved quantity", "result": "FAIL", "detail": {"state": "approved", "quantity": 999.0, "manager": false}}
+PROBE {"check": "negative material quantities rejected", "result": "FAIL", "detail": {"state": "approved", "quantity": -10.0}}
+PROBE {"check": "cross-company material requests inaccessible", "result": "FAIL", "detail": {"user_company": 4, "request_company": 1, "read_result": [{"id": 18, "name": "MR/2026/00018", "state": "draft"}]}}
+PROBE {"check": "consumption form onchange, save and Validate", "result": "PASS", "detail": {"state": "done", "source_matches_site": true, "destination_usage": "inventory", "site_remaining": 0.0}}
+PROBE {"check": "documented manager can read chantier material summary", "result": "FAIL", "detail": {"error": "You are not allowed to access 'Stock Move' (stock.move) records.\n\nThis operation is allowed for the following groups:\n\t- Inventory/Administrator\n\t- Inventory/User\n\nContact your administrator to request access if necessary."}}
+
+EXPLORATORY MATERIAL CHECKS
+MATERIAL_PROBE {"probe": "normal_100_80_10_10", "status": "pass", "checks": [{"check": "request delivered", "actual": "done", "expected": "done", "passed": true}, {"check": "received", "actual": 100.0, "expected": 100, "passed": true}, {"check": "consumed", "actual": 80.0, "expected": 80, "passed": true}, {"check": "returned", "actual": 10.0, "expected": 10, "passed": true}, {"check": "missing", "actual": 10.0, "expected": 10, "passed": true}, {"check": "site remaining", "actual": 0.0, "expected": 0, "passed": true}, {"check": "central warehouse remaining", "actual": 10.0, "expected": 10, "passed": true}, {"check": "material cost at unit cost 10", "actual": 900.0, "expected": 900, "passed": true}]}
+MATERIAL_PROBE {"probe": "two_requests_same_product", "status": "fail", "checks": [{"check": "first request received", "actual": 150.0, "expected": 100, "passed": false}, {"check": "second request received", "actual": 150.0, "expected": 50, "passed": false}, {"check": "site physical balance", "actual": 150.0, "expected": 150, "passed": true}]}
+MATERIAL_PROBE {"probe": "partial_delivery_and_backorder", "status": "fail", "checks": [{"check": "one backorder exists", "actual": 1, "expected": 1, "passed": true}, {"check": "request not fully delivered after 4 of 10", "actual": false, "expected": true, "passed": false}, {"check": "received after partial delivery", "actual": 4.0, "expected": 4, "passed": true}, {"check": "backorder retains chantier", "actual": false, "expected": 25, "passed": false}, {"check": "backorder retains request", "actual": false, "expected": 11, "passed": false}, {"check": "received after completing backorder", "actual": 4.0, "expected": 10, "passed": false}, {"check": "site physical balance after backorder", "actual": 10.0, "expected": 10, "passed": true}]}
+MATERIAL_PROBE {"probe": "dozen_uom_consumption", "status": "fail", "checks": [{"check": "consumed in request unit", "actual": 1.0, "expected": 12, "passed": false}, {"check": "site physical units remaining", "actual": 12.0, "expected": 12, "passed": true}, {"check": "cost of 12 units at 10", "actual": 10.0, "expected": 120, "passed": false}]}
+MATERIAL_PROBE {"probe": "historical_cost_change", "status": "fail", "note": "Historical-cost expectation; current implementation may intentionally provide only a current-price estimate.", "checks": [{"check": "original consumption value", "actual": 40.0, "expected": 40, "passed": true}, {"check": "posted consumption cost remains stable after product cost change", "actual": 80.0, "expected": 40, "passed": false}]}
+MATERIAL_PROBE {"probe": "cross_site_reservation", "status": "fail", "checks": [{"check": "central warehouse truly empty", "actual": 0, "expected": 0, "passed": true}, {"check": "other chantier stock must not be reserved", "actual": 10.0, "expected": 0, "passed": false}, {"check": "delivery must not become fully assigned without central stock", "actual": false, "expected": true, "passed": false}], "reservation_locations": [{"location": "WH/Stock/CH-2026-00028", "quantity": 10.0}]}
+
+The historical-cost expectation is a product-design limitation: current README explicitly describes current-cost pricing.
+Exploratory probes print observations and roll back; their process exit code is not a pass/fail signal.
+

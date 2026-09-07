@@ -6,7 +6,8 @@
         <field name="inherit_id" ref="project.view_task_form2"/>
         <field name="arch" type="xml">
             <xpath expr="//form/sheet/group/group/field[@name='project_id']" position="after">
-                <field name="chantier_work_type" invisible="not project_id"/>
+                <field name="is_chantier_project" invisible="1"/>
+                <field name="chantier_work_type" invisible="not is_chantier_project"/>
             </xpath>
         </field>
     </record>
