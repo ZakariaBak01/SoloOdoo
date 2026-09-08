@@ -14,18 +14,28 @@ if (-not (Test-Path -LiteralPath $docker)) {
     throw "Docker CLI was not found."
 }
 
-$modules = "elmokrif_chantier,elmokrif_chantier_stock,elmokrif_sale_chantier,elmokrif_integration_tests"
+$modules = "elmokrif_chantier,elmokrif_chantier_stock,elmokrif_sale_chantier,elmokrif_hr_extension,elmokrif_integration_tests"
 
 try {
     & $docker compose up -d db
     if ($LASTEXITCODE -ne 0) { throw "PostgreSQL failed to start." }
+    $healthy = $false
+    for ($attempt = 1; $attempt -le 30; $attempt++) {
+        $health = (& $docker inspect --format '{{.State.Health.Status}}' odoo17-db 2>$null | Out-String).Trim()
+        if ($health -eq "healthy") {
+            $healthy = $true
+            break
+        }
+        Start-Sleep -Seconds 2
+    }
+    if (-not $healthy) { throw "PostgreSQL did not become healthy." }
     & $docker exec odoo17-db psql -U odoo -d postgres -c "DROP DATABASE IF EXISTS $Database WITH (FORCE);"
     if ($LASTEXITCODE -ne 0) { throw "Could not reset the system-test database." }
     & $docker build -t soloodoo-odoo:17.0 .
     if ($LASTEXITCODE -ne 0) { throw "The Odoo image build failed." }
     & $docker compose run --rm --no-deps odoo odoo `
         -d $Database -i $modules --test-enable `
-        --test-tags /elmokrif_chantier,/elmokrif_chantier_stock,/elmokrif_sale_chantier,/elmokrif_integration_tests `
+        --test-tags /elmokrif_chantier,/elmokrif_chantier_stock,/elmokrif_sale_chantier,/elmokrif_hr_extension,/elmokrif_integration_tests `
         --stop-after-init --without-demo=all --max-cron-threads=0 --log-level=test
     if ($LASTEXITCODE -ne 0) { throw "Odoo system tests failed." }
 }

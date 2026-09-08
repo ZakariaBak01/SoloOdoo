@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="hr_contract_form_extension" model="ir.ui.view">
+        <field name="name">hr.contract.form.elmokrif.extension</field>
+        <field name="model">hr.contract</field>
+        <field name="inherit_id" ref="hr_contract.hr_contract_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='date_end']" position="after">
+                <field name="hr_expiry_activity_id" readonly="1"/>
+                <field name="hr_expiry_activity_created" readonly="1"/>
+            </xpath>
+            <xpath expr="//header" position="inside">
+                <button name="action_reset_expiry_activity"
+                        type="object"
+                        string="Reset Expiry Activity"
+                        class="btn-secondary"
+                        groups="elmokrif_hr_extension.group_hr_manager"
+                        invisible="not hr_expiry_activity_created"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="res_company_form_hr_extension" model="ir.ui.view">
+        <field name="name">res.company.form.elmokrif.hr.extension</field>
+        <field name="model">res.company</field>
+        <field name="inherit_id" ref="base.view_company_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='currency_id']" position="after">
+                <field name="hr_contract_expiry_lead_days"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
