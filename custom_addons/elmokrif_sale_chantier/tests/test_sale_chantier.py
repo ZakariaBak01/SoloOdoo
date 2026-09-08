@@ -45,7 +45,9 @@ class TestSaleChantier(TransactionCase):
                 "date": date(2026, 12, 31),
             }
         )
-        chantier = self.env["project.project"].create(values)
+        chantier = self.env["project.project"].with_context(
+            default_is_chantier=True
+        ).create(values)
         chantier.action_approve_chantier()
         chantier.action_initialize_chantier()
         chantier.action_start_chantier()
@@ -71,7 +73,9 @@ class TestSaleChantier(TransactionCase):
         )
 
     def test_confirmation_requires_initialized_in_progress_chantier(self):
-        chantier = self.env["project.project"].create(
+        chantier = self.env["project.project"].with_context(
+            default_is_chantier=True
+        ).create(
             {
                 "name": "Not Initialized",
                 "is_chantier": True,

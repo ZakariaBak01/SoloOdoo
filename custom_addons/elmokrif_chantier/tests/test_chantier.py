@@ -78,6 +78,21 @@ class TestChantier(TransactionCase):
 
         self.assertEqual(defaults["company_id"], self.env.company.id)
 
+    def test_public_context_cannot_replace_system_links(self):
+        chantier = self._create_chantier()
+        self._approve(chantier)
+        chantier.action_initialize_chantier()
+        other_location = self.env["stock.location"].create({
+            "name": "Forged Site",
+            "usage": "internal",
+            "location_id": self.warehouse.view_location_id.id,
+            "company_id": self.company.id,
+        })
+        with self.assertRaises(UserError):
+            chantier.with_context(chantier_initialization=True).write({
+                "site_location_id": other_location.id
+            })
+
     def test_initialize_is_idempotent(self):
         chantier = self._create_chantier()
 
@@ -336,6 +351,12 @@ class TestChantier(TransactionCase):
         with self.assertRaises(UserError):
             self._create_chantier(chantier_state="in_progress")
 
+        with self.assertRaises(UserError):
+            self.env["project.project"].with_context(
+                default_is_chantier=True,
+                default_chantier_state="approved",
+            ).create({"name": "Context-approved chantier"})
+
     def test_create_rejects_manual_system_links(self):
         analytic_account = self.env["account.analytic.account"].create({
             "name": "Manual Chantier Account",
@@ -386,6 +407,41 @@ class TestChantier(TransactionCase):
         self.assertEqual(chantier.analytic_account_id.chantier_id, chantier)
         chantier.action_approve_chantier()
         self.assertTrue(chantier.chantier_initialized)
+
+    def test_new_chantier_cannot_take_an_analytic_account_in_use(self):
+        existing = self.env["project.project"].create({"name": "Existing project"})
+        analytic_account = self.env["account.analytic.account"].create({
+            "name": "Existing Project Account",
+            "plan_id": self.env.ref("elmokrif_chantier.analytic_plan_chantier").id,
+            "company_id": self.company.id,
+        })
+        existing.write({"analytic_account_id": analytic_account.id})
+
+        with self.assertRaises(UserError):
+            self.env["project.project"].with_context(
+                default_is_chantier=True,
+                default_analytic_account_id=analytic_account.id,
+            ).create({"name": "Analytic account hijack"})
+
+    def test_context_defaults_cannot_create_foundation_links(self):
+        chantier = self._create_chantier()
+        with self.assertRaises(UserError):
+            self.env["account.analytic.account"].with_context(
+                default_chantier_id=chantier.id
+            ).create({
+                "name": "Forged linked account",
+                "plan_id": self.env.ref("elmokrif_chantier.analytic_plan_chantier").id,
+                "company_id": self.company.id,
+            })
+        with self.assertRaises(UserError):
+            self.env["stock.location"].with_context(
+                default_chantier_id=chantier.id
+            ).create({
+                "name": "Forged linked location",
+                "usage": "internal",
+                "location_id": self.warehouse.view_location_id.id,
+                "company_id": self.company.id,
+            })
 
     def test_chantiers_are_archived_instead_of_deleted(self):
         draft = self._create_chantier(name="Draft chantier")

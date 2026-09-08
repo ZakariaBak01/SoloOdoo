@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="action_report_elmokrif_cheque" model="ir.actions.report"><field name="name">Cheque</field><field name="model">account.payment</field><field name="report_type">qweb-pdf</field><field name="report_name">elmokrif_finance_operations.report_cheque</field><field name="report_file">elmokrif_finance_operations.report_cheque</field><field name="print_report_name">'Cheque - %s' % (object.elmokrif_cheque_number or object.name)</field></record>
+    <template id="report_cheque"><t t-call="web.html_container"><t t-foreach="docs" t-as="payment"><div class="page"><h2>Cheque <span t-esc="payment.elmokrif_cheque_number"/></h2><p><strong>Payee:</strong> <span t-esc="payment.partner_id.name"/></p><p><strong>Amount:</strong> <span t-esc="payment.amount"/> <span t-esc="payment.currency_id.name"/></p><p><strong>Date:</strong> <span t-esc="payment.date"/></p><p><strong>Reference:</strong> <span t-esc="payment.ref"/></p></div></t></t></template>
+</odoo>

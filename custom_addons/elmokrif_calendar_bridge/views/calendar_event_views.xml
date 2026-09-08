@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_calendar_event_form_elmokrif" model="ir.ui.view">
+        <field name="name">calendar.event.form.elmokrif</field>
+        <field name="model">calendar.event</field>
+        <field name="inherit_id" ref="calendar.view_calendar_event_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet/group/group[last()]" position="inside">
+                <field name="company_id"/>
+                <field name="chantier_id"/>
+                <field name="elmokrif_document_id"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

@@ -1,6 +1,7 @@
 """Move existing chantiers onto the dedicated analytic plan and repair links."""
 
 from odoo import SUPERUSER_ID, _, api
+from odoo.addons.elmokrif_chantier.models.workflow import CHANTIER_INITIALIZATION_TOKEN
 from odoo.exceptions import UserError
 
 
@@ -38,7 +39,7 @@ def migrate(cr, version):
                 )
             )
         if analytic_account and not analytic_account.chantier_id:
-            analytic_account.with_context(chantier_initialization=True).write(
+            analytic_account.with_context(_chantier_initialization_token=CHANTIER_INITIALIZATION_TOKEN).write(
                 {"chantier_id": project.id}
             )
         elif analytic_account and analytic_account.chantier_id != project:
@@ -51,7 +52,7 @@ def migrate(cr, version):
 
         site_location = project.site_location_id
         if site_location and not site_location.chantier_id:
-            site_location.with_context(chantier_initialization=True).write(
+            site_location.with_context(_chantier_initialization_token=CHANTIER_INITIALIZATION_TOKEN).write(
                 {"chantier_id": project.id}
             )
         elif site_location and site_location.chantier_id != project:

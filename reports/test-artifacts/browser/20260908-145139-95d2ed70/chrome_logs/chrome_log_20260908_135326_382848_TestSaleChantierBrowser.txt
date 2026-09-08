@@ -1,0 +1,52 @@
+[235:256:0908/135314.040500:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory
+[235:256:0908/135314.040620:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[235:256:0908/135314.046589:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory
+[235:256:0908/135314.047001:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory
+[235:256:0908/135314.047050:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[235:256:0908/135314.057481:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[235:235:0908/135314.061059:INFO:components/enterprise/browser/controller/chrome_browser_cloud_management_controller.cc:241] No machine level policy manager exists.
+[270:270:0908/135314.075751:WARNING:media/gpu/vaapi/vaapi_wrapper.cc:1660] drmGetDevices2() has not found any devices
+[270:270:0908/135314.079790:WARNING:sandbox/policy/linux/sandbox_linux.cc:405] InitializeSandbox() called with multiple threads in process gpu-process.
+[235:256:0908/135314.088156:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[235:235:0908/135314.176128:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[235:235:0908/135314.176307:WARNING:device/bluetooth/dbus/bluez_dbus_manager.cc:209] Floss manager service not available, cannot set Floss enable/disable.
+[235:235:0908/135314.176321:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[235:256:0908/135314.176329:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[235:256:0908/135314.176367:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[235:235:0908/135314.176509:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[235:235:0908/135314.178017:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[235:235:0908/135314.198993:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[235:256:0908/135314.199011:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory
+[235:256:0908/135314.199675:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory
+[235:235:0908/135314.200207:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[235:256:0908/135314.200333:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[235:235:0908/135314.217917:WARNING:dbus/property.cc:94] Failed to connect to PropertiesChangedsignal.
+[235:235:0908/135314.218213:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.Properties.GetAll: object_path= /org/freedesktop/UPower/devices/DisplayDevice: unknown error type: 
+[235:235:0908/135314.218257:WARNING:dbus/property.cc:174] GetAll request failed for: org.freedesktop.UPower.Device
+[235:235:0908/135314.218343:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[235:256:0908/135314.218562:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[235:235:0908/135314.230386:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[235:256:0908/135314.232141:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[235:235:0908/135314.244392:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[235:235:0908/135314.244436:WARNING:ui/base/idle/idle_linux.cc:111] None of the known D-Bus ScreenSaver services could be used.
+[235:235:0908/135316.097285:INFO:CONSOLE:11059] "Tour elmokrif_sale_chantier_confirm on step: 'The sent quotation still exposes line allocation (trigger: .o_field_one2many[name="order_line"] td[name="chantier_id"]:contains("Browser Site B"))'", source: http://127.0.0.1:8069/web/assets/9066c9a/web.assets_web.min.js (11059)
+[235:235:0908/135316.127297:INFO:CONSOLE:11059] "Tour elmokrif_sale_chantier_confirm on step: 'Confirm the quotation (trigger: .o_statusbar_buttons button[name="action_confirm"])'", source: http://127.0.0.1:8069/web/assets/9066c9a/web.assets_web.min.js (11059)
+[235:235:0908/135316.175636:INFO:CONSOLE:11059] "Tour elmokrif_sale_chantier_confirm on step: 'The sales order is confirmed (trigger: .o_statusbar_buttons button[name="action_create_invoice"])'", source: http://127.0.0.1:8069/web/assets/9066c9a/web.assets_web.min.js (11059)
+[235:235:0908/135326.177456:INFO:CONSOLE:11059] "Tour elmokrif_sale_chantier_confirm failed at step The sales order is confirmed (trigger: .o_statusbar_buttons button[name="action_create_invoice"])
+
+{
+  "content": "The sent quotation still exposes line allocation",
+  "trigger": ".o_field_one2many[name=\"order_line\"] td[name=\"chantier_id\"]:contains(\"Browser Site B\")"
+},
+{
+  "content": "Confirm the quotation",
+  "trigger": ".o_statusbar_buttons button[name=\"action_confirm\"]",
+  "run": "click"
+},
+----- FAILING STEP -----
+{
+  "content": "The sales order is confirmed",
+  "trigger": ".o_statusbar_buttons button[name=\"action_create_invoice\"]"
+},
+-----------------------", source: http://127.0.0.1:8069/web/assets/9066c9a/web.assets_web.min.js (11059)
+[235:235:0908/135326.177799:INFO:CONSOLE:11059] "Tour elmokrif_sale_chantier_confirm failed at step The sales order is confirmed (trigger: .o_statusbar_buttons button[name="action_create_invoice"])", source: http://127.0.0.1:8069/web/assets/9066c9a/web.assets_web.min.js (11059)

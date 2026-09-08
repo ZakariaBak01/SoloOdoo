@@ -1,0 +1,27 @@
+{
+    "name": "EL MOKRIF Purchase and Quality",
+    "summary": "Chantier procurement approval, receipt inspection, and quality release",
+    "version": "17.0.1.2.0",
+    "category": "Purchase/Purchase",
+    "author": "EL MOKRIF",
+    "license": "LGPL-3",
+    "depends": [
+        "purchase_stock",
+        "stock_account",
+        "elmokrif_chantier_stock",
+    ],
+    "data": [
+        "security/purchase_quality_groups.xml",
+        "security/ir.model.access.csv",
+        "security/purchase_quality_rules.xml",
+        "data/quality_sequence.xml",
+        "views/res_company_views.xml",
+        "views/material_request_views.xml",
+        "views/purchase_order_views.xml",
+        "views/quality_inspection_views.xml",
+        "views/stock_picking_views.xml",
+        "views/stock_warehouse_views.xml",
+    ],
+    "installable": True,
+    "application": True,
+}

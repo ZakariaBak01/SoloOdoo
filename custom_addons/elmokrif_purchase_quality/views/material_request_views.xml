@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="material_request_form_purchase_quality" model="ir.ui.view">
+        <field name="name">chantier.material.request.form.purchase.quality</field>
+        <field name="model">chantier.material.request</field>
+        <field name="inherit_id" ref="elmokrif_chantier_stock.view_material_request_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//button[@name='action_create_transfer']" position="attributes">
+                <attribute name="string">Plan / Reserve Available Stock</attribute>
+                <attribute name="invisible">state not in ['approved', 'partially_delivered']</attribute>
+            </xpath>
+            <xpath expr="//sheet" position="inside">
+                <div class="oe_button_box" name="button_box">
+                    <button name="action_view_transfers" type="object" class="oe_stat_button" icon="fa-exchange" invisible="not transfer_count">
+                        <field name="transfer_count" widget="statinfo" string="Site Transfers"/>
+                    </button>
+                    <button name="action_view_purchase_order" type="object" class="oe_stat_button" icon="fa-shopping-cart" invisible="not purchase_order_count">
+                        <field name="purchase_order_count" widget="statinfo" string="Purchase Order"/>
+                    </button>
+                </div>
+            </xpath>
+            <xpath expr="//field[@name='request_date']" position="after">
+                <field name="required_date" readonly="state != 'draft'"/>
+                <field name="priority" readonly="state != 'draft'"/>
+                <field name="vendor_id" readonly="state != 'draft'"/>
+                <field name="justification" readonly="state != 'draft'"/>
+            </xpath>
+            <xpath expr="//field[@name='picking_id']" position="after">
+                <field name="purchase_order_id" readonly="1"/>
+            </xpath>
+            <xpath expr="//field[@name='line_ids']/tree/field[@name='delivered_qty']" position="after">
+                <field name="central_available_qty" readonly="1" optional="show"/>
+                <field name="reserved_qty" readonly="1" optional="show"/>
+                <field name="procurement_qty" readonly="1" optional="show"/>
+                <field name="outstanding_qty" readonly="1" optional="show"/>
+                <field name="suggested_fulfillment" readonly="1" optional="show"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

@@ -1,3 +1,5 @@
+import math
+
 from odoo import _, api, fields, models
 from odoo.exceptions import AccessError, UserError, ValidationError
 from odoo.tools import float_compare
@@ -36,6 +38,10 @@ class ChantierMaterialRequest(models.Model):
     @api.model_create_multi
     def create(self, vals_list):
         for vals in vals_list:
+            if vals.get("state", self.env.context.get("default_state", "draft")) != "draft":
+                raise UserError(_("A new material request must start in Draft."))
+            if not self.env.su:
+                vals["requested_by"] = self.env.user.id
             # Requests created from a chantier use that chantier's company even
             # when the user has another allowed company active.  Requests opened
             # from the global menu still receive an independent company default.
@@ -47,6 +53,8 @@ class ChantierMaterialRequest(models.Model):
         return super().create(vals_list)
 
     def write(self, vals):
+        if "requested_by" in vals and any(request.requested_by.id != vals["requested_by"] for request in self):
+            raise UserError(_("The original material requester cannot be changed."))
         if "company_id" in vals:
             raise UserError(_("The request company is set from the selected chantier."))
         if "state" in vals:
@@ -56,6 +64,11 @@ class ChantierMaterialRequest(models.Model):
         ):
             raise UserError(_("Only draft material requests can be changed."))
         return super().write(vals)
+
+    def unlink(self):
+        if any(request.state != "draft" for request in self):
+            raise UserError(_("Only draft material requests can be deleted."))
+        return super().unlink()
 
     @api.constrains("chantier_id", "company_id")
     def _check_chantier_company(self):
@@ -181,17 +194,30 @@ class ChantierMaterialRequestLine(models.Model):
     @api.constrains("product_uom_qty", "product_id")
     def _check_positive_quantity(self):
         for line in self:
-            if float_compare(
+            if not math.isfinite(line.product_uom_qty) or float_compare(
                 line.product_uom_qty, 0, precision_rounding=line.product_uom_id.rounding
             ) <= 0:
                 raise ValidationError(_("Requested quantity must be greater than zero."))
 
+    @api.model_create_multi
+    def create(self, vals_list):
+        lines = super().create(vals_list)
+        if any(line.request_id.state != "draft" for line in lines):
+            raise UserError(_("Materials can only be added to a draft request."))
+        return lines
+
     def write(self, vals):
-        if any(field in vals for field in ("product_id", "product_uom_qty")) and any(
-            line.request_id.state != "draft" for line in self
-        ):
+        requests = self.mapped("request_id")
+        if vals.get("request_id"):
+            requests |= self.env["chantier.material.request"].browse(vals["request_id"])
+        if any(request.state != "draft" for request in requests):
             raise UserError(_("Only draft material request lines can be changed."))
         return super().write(vals)
+
+    def unlink(self):
+        if any(line.request_id.state != "draft" for line in self):
+            raise UserError(_("Only draft material request lines can be deleted."))
+        return super().unlink()
 
     @api.depends(
         "request_id.picking_ids.move_ids.state",

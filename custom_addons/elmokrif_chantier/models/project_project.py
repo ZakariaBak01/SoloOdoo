@@ -1,6 +1,8 @@
 from odoo import _, api, fields, models
 from odoo.exceptions import AccessError, UserError, ValidationError
 
+from .workflow import CHANTIER_FORM_CREATE_TOKEN, CHANTIER_INITIALIZATION_TOKEN
+
 
 WORK_TYPE_SELECTION = [
     ("construction", "Construction"),
@@ -162,19 +164,33 @@ class ProjectProject(models.Model):
                 )
             ):
                 raise AccessError(_("Only a chantier manager can create a chantier."))
-            if is_chantier and vals.get("chantier_state", "draft") != "draft":
+            requested_state = vals.get(
+                "chantier_state", self.env.context.get("default_chantier_state", "draft")
+            )
+            if is_chantier and requested_state != "draft":
                 raise UserError(_("A new chantier must start in Draft."))
-            if is_chantier and vals.get("chantier_reference"):
+            if is_chantier and (
+                vals.get("chantier_reference")
+                or self.env.context.get("default_chantier_reference")
+            ):
                 raise UserError(_("The chantier reference is generated automatically."))
             form_create = (
                 is_chantier
                 and self.env.context.get("default_is_chantier")
-                and not self.env.context.get("chantier_initialization")
+                and self.env.context.get("_chantier_initialization_token") is not CHANTIER_INITIALIZATION_TOKEN
             )
-            analytic_account_id = vals.get("analytic_account_id")
-            if is_chantier and vals.get("site_location_id"):
+            analytic_account_id = vals.get(
+                "analytic_account_id",
+                self.env.context.get("default_analytic_account_id"),
+            )
+            requested_site_location = vals.get(
+                "site_location_id", self.env.context.get("default_site_location_id")
+            )
+            if is_chantier and requested_site_location:
                 if form_create:
-                    vals.pop("site_location_id")
+                    # An invisible field default must not attach an existing
+                    # stock location to a new chantier.
+                    vals["site_location_id"] = False
                 else:
                     raise UserError(
                         _("Create chantier analytic and stock resources with Initialize Chantier.")
@@ -183,6 +199,36 @@ class ProjectProject(models.Model):
                 raise UserError(
                     _("Create chantier analytic and stock resources with Initialize Chantier.")
                 )
+            if form_create and analytic_account_id:
+                analytic_account = self.env["account.analytic.account"].browse(
+                    analytic_account_id
+                ).exists()
+                if not analytic_account:
+                    raise UserError(_("The proposed analytic account does not exist."))
+                analytic_account.check_access_rule("read")
+                company_id = vals.get(
+                    "company_id",
+                    self.env.context.get("default_company_id", self.env.company.id),
+                )
+                already_used = (
+                    analytic_account.chantier_id
+                    or self.env["project.project"].search_count(
+                        [("analytic_account_id", "=", analytic_account.id)], limit=1
+                    )
+                    or self.env["account.analytic.line"].search_count(
+                        [("account_id", "=", analytic_account.id)], limit=1
+                    )
+                )
+                if already_used or (
+                    analytic_account.company_id
+                    and analytic_account.company_id.id != company_id
+                ):
+                    raise UserError(
+                        _("The proposed analytic account is already in use or belongs to another company.")
+                    )
+                # Make a context default explicit so Odoo cannot apply it only
+                # after this security validation has run.
+                vals["analytic_account_id"] = analytic_account.id
             # hr_timesheet creates an analytic account before calling this
             # method when Timesheets are enabled.  Preserve that mandatory
             # account for the New Chantier form, then make it chantier-owned
@@ -195,6 +241,10 @@ class ProjectProject(models.Model):
             if is_chantier and not vals.get("company_id"):
                 vals["company_id"] = self.env.company.id
 
+            if is_chantier:
+                # Explicit safe values override any public default_* context.
+                vals["chantier_state"] = "draft"
+
             if is_chantier and not vals.get("chantier_reference"):
                 company = self.env["res.company"].browse(
                     vals.get("company_id")
@@ -206,7 +256,7 @@ class ProjectProject(models.Model):
                 )
         create_context = {}
         if any(form_analytic_account_ids):
-            create_context["chantier_form_create"] = True
+            create_context["_chantier_form_create_token"] = CHANTIER_FORM_CREATE_TOKEN
         projects = super(ProjectProject, self.with_context(**create_context)).create(vals_list)
         for project, analytic_account_id in zip(projects, form_analytic_account_ids):
             if analytic_account_id:
@@ -214,7 +264,7 @@ class ProjectProject(models.Model):
                     analytic_account_id
                 )
                 analytic_account.sudo().with_context(
-                    chantier_initialization=True
+                    _chantier_initialization_token=CHANTIER_INITIALIZATION_TOKEN
                 ).write({
                     "company_id": project.company_id.id,
                     "plan_id": project._get_chantier_analytic_plan().id,
@@ -240,7 +290,7 @@ class ProjectProject(models.Model):
             for project in self
         ):
             raise UserError(_("A chantier reference cannot be changed."))
-        system_link_write = self.env.context.get("chantier_initialization")
+        system_link_write = self.env.context.get("_chantier_initialization_token") is CHANTIER_INITIALIZATION_TOKEN
         if not system_link_write and "site_location_id" in vals and any(
             (project.is_chantier or becoming_chantier)
             and project.site_location_id.id != vals["site_location_id"]
@@ -486,9 +536,9 @@ class ProjectProject(models.Model):
                 raise ValidationError(
                     _("The chantier and site stock location must link to each other.")
                 )
-            if project.analytic_account_id and not self.env.context.get(
-                "chantier_form_create"
-            ):
+            if project.analytic_account_id and self.env.context.get(
+                "_chantier_form_create_token"
+            ) is not CHANTIER_FORM_CREATE_TOKEN:
                 chantier_plan = project._get_chantier_analytic_plan()
                 if project.analytic_account_id.plan_id != chantier_plan:
                     raise ValidationError(
@@ -527,7 +577,7 @@ class ProjectProject(models.Model):
     def _create_chantier_analytic_account(self):
         self.ensure_one()
         return self.env["account.analytic.account"].sudo().with_context(
-            chantier_initialization=True
+            _chantier_initialization_token=CHANTIER_INITIALIZATION_TOKEN
         ).create(
             {
                 "name": self.name,
@@ -569,7 +619,7 @@ class ProjectProject(models.Model):
                 # Once it becomes chantier-owned, give it the chantier company
                 # before establishing the reciprocal link.
                 analytic_account.sudo().with_context(
-                    chantier_initialization=True
+                    _chantier_initialization_token=CHANTIER_INITIALIZATION_TOKEN
                 ).write({"company_id": project.company_id.id})
             elif (
                 analytic_account
@@ -587,14 +637,14 @@ class ProjectProject(models.Model):
                 )
             if analytic_account and not analytic_account.chantier_id:
                 analytic_account.sudo().with_context(
-                    chantier_initialization=True
+                    _chantier_initialization_token=CHANTIER_INITIALIZATION_TOKEN
                 ).write({"chantier_id": project.id})
                 created_items.append(_("analytic account link"))
             if not analytic_account:
                 analytic_account = project._create_chantier_analytic_account()
                 super(
                     ProjectProject,
-                    project.with_context(chantier_initialization=True),
+                    project.with_context(_chantier_initialization_token=CHANTIER_INITIALIZATION_TOKEN),
                 ).write({"analytic_account_id": analytic_account.id})
                 created_items.append(_("analytic account"))
 
@@ -622,7 +672,7 @@ class ProjectProject(models.Model):
                 # A chantier manager should not need broad Inventory Administrator
                 # rights merely to create this system-owned location.
                 location = self.env["stock.location"].sudo().with_context(
-                    chantier_initialization=True
+                    _chantier_initialization_token=CHANTIER_INITIALIZATION_TOKEN
                 ).create(
                     {
                         "name": project.chantier_reference or project.name,
@@ -641,14 +691,14 @@ class ProjectProject(models.Model):
                     _("The site stock location belongs to another chantier.")
                 )
             elif not location.chantier_id:
-                location.sudo().with_context(chantier_initialization=True).write(
+                location.sudo().with_context(_chantier_initialization_token=CHANTIER_INITIALIZATION_TOKEN).write(
                     {"chantier_id": project.id}
                 )
                 created_items.append(_("site stock location link"))
             if project.site_location_id != location:
                 super(
                     ProjectProject,
-                    project.with_context(chantier_initialization=True),
+                    project.with_context(_chantier_initialization_token=CHANTIER_INITIALIZATION_TOKEN),
                 ).write({"site_location_id": location.id})
 
             if created_items:

@@ -1,0 +1,21 @@
+{
+    "name": "EL MOKRIF Finance Operations",
+    "summary": "Bank-import review, collection reminders and cheque controls",
+    "version": "17.0.1.0.0",
+    "category": "Accounting/Accounting",
+    "author": "EL MOKRIF",
+    "license": "LGPL-3",
+    "depends": ["account", "mail", "elmokrif_finance_readiness"],
+    "data": [
+        "security/ir.model.access.csv",
+        "security/finance_operations_rules.xml",
+        "views/account_move_views.xml",
+        "views/account_payment_views.xml",
+        "views/bank_import_views.xml",
+        "views/res_company_views.xml",
+        "report/cheque_report.xml",
+        "data/reminder_cron.xml",
+    ],
+    "installable": True,
+    "application": True,
+}
