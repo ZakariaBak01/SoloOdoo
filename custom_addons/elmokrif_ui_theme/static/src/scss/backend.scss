@@ -36,6 +36,22 @@ body.o_web_client {
             color: rgba(255, 255, 255, 0.9);
         }
 
+        .o_elmokrif_brand_mark {
+            align-items: center;
+            border-left: 1px solid rgba(255, 255, 255, 0.18);
+            display: flex;
+            height: 100%;
+            margin-left: 4px;
+            padding: 0 12px;
+
+            img {
+                display: block;
+                height: 28px;
+                object-fit: contain;
+                width: 92px;
+            }
+        }
+
         .o_menu_brand,
         .o_nav_entry,
         .dropdown-toggle {
@@ -427,6 +443,10 @@ body.oe_website_login {
         .o_main_navbar .o_menu_brand {
             min-width: 118px;
             background-size: 108px auto;
+        }
+
+        .o_main_navbar .o_elmokrif_brand_mark {
+            display: none;
         }
     }
 }

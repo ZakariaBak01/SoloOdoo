@@ -8,7 +8,9 @@
     "depends": ["web"],
     "assets": {
         "web.assets_backend": [
+            "elmokrif_ui_theme/static/src/js/brand_mark.js",
             "elmokrif_ui_theme/static/src/scss/backend.scss",
+            "elmokrif_ui_theme/static/src/xml/brand_mark.xml",
             "elmokrif_ui_theme/static/src/img/EL_MOKRIF_LOGO.jpeg",
             "elmokrif_ui_theme/static/src/img/EL_MOKRIF_LOGO_CROPPED.png",
         ],

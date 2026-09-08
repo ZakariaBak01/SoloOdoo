@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="elmokrif_ui_theme.ElMokriefBrandMark">
+        <div class="o_elmokrif_brand_mark"
+             role="img"
+             aria-label="EL MOKRIF Company"
+             title="EL MOKRIF Company">
+            <img src="/elmokrif_ui_theme/static/src/img/EL_MOKRIF_LOGO_CROPPED.png"
+                 alt="EL MOKRIF Company"/>
+        </div>
+    </t>
+</templates>

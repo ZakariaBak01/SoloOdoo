@@ -7,4 +7,5 @@ included in the navigation and login experience without changing models,
 actions, permissions, or standard Odoo behavior. Native forms, notebooks,
 lists, kanban cards, dialogs, dropdowns, badges, alerts, and focus states
 receive consistent spacing, hierarchy, interaction feedback, and responsive
-behavior.
+behavior. A small native OWL systray component reinforces the company identity
+without replacing or altering Odoo navigation.
