@@ -1,13 +1,13 @@
 :root {
-    --elmokrif-brand: #176b87;
-    --elmokrif-brand-dark: #124e67;
-    --elmokrif-accent: #e7a23b;
-    --elmokrif-ink: #22313f;
-    --elmokrif-muted: #6d7c89;
-    --elmokrif-border: #dfe7ec;
+    --elmokrif-brand: #b27a05;
+    --elmokrif-brand-dark: #825600;
+    --elmokrif-accent: #d6a63c;
+    --elmokrif-ink: #2e3033;
+    --elmokrif-muted: #747477;
+    --elmokrif-border: #e4e0d8;
     --elmokrif-surface: #ffffff;
-    --elmokrif-background: #f4f7f9;
-    --elmokrif-shadow: 0 8px 24px rgba(26, 52, 68, 0.08);
+    --elmokrif-background: #f7f5f1;
+    --elmokrif-shadow: 0 8px 24px rgba(46, 48, 51, 0.09);
     --elmokrif-radius: 12px;
 }
 
@@ -18,8 +18,20 @@ body.o_web_client {
 
 .o_web_client {
     .o_main_navbar {
-        background: linear-gradient(110deg, var(--elmokrif-brand-dark), var(--elmokrif-brand));
-        box-shadow: 0 2px 12px rgba(18, 78, 103, 0.22);
+        background: linear-gradient(110deg, #292a2d, #3c3d40);
+        box-shadow: 0 2px 12px rgba(46, 48, 51, 0.24);
+
+        .o_menu_brand {
+            background: url("/elmokrif_ui_theme/static/src/img/EL_MOKRIF_LOGO_CROPPED.png")
+                center / 132px auto no-repeat;
+            min-width: 150px;
+            text-indent: -9999px;
+        }
+
+        .o_menu_sections .o_nav_entry,
+        .o_menu_systray .dropdown-toggle {
+            color: rgba(255, 255, 255, 0.9);
+        }
 
         .o_menu_brand,
         .o_nav_entry,
@@ -80,9 +92,15 @@ body.o_web_client {
         }
 
         .o_form_statusbar {
-            background: rgba(244, 247, 249, 0.92);
+            background: rgba(247, 245, 241, 0.94);
             border-bottom: 1px solid var(--elmokrif-border);
             padding: 8px 12px;
+
+            .o_arrow_button_current {
+                background: var(--elmokrif-brand);
+                border-color: var(--elmokrif-brand);
+                color: #fff;
+            }
         }
 
         .o_form_label {
@@ -106,7 +124,7 @@ body.o_web_client {
         .o_input:focus,
         .o_field_widget .o_input:focus {
             border-color: var(--elmokrif-brand);
-            box-shadow: 0 0 0 3px rgba(23, 107, 135, 0.12);
+            box-shadow: 0 0 0 3px rgba(178, 122, 5, 0.16);
         }
 
         .oe_title h1,
@@ -163,7 +181,7 @@ body.o_web_client {
 
     .o_kanban_record:hover,
     .o_list_view .o_data_row:hover {
-        background-color: rgba(23, 107, 135, 0.045);
+        background-color: rgba(178, 122, 5, 0.055);
     }
 
     .o_kanban_record {
@@ -182,6 +200,48 @@ body.o_web_client {
     .o-mail-Chatter-topbar {
         border-radius: 10px;
     }
+
+    .o_form_view .o_field_image img {
+        border-radius: 10px;
+        object-fit: contain;
+    }
+}
+
+body.oe_website_login {
+    background:
+        linear-gradient(135deg, rgba(46, 48, 51, 0.94), rgba(46, 48, 51, 0.82)),
+        url("/elmokrif_ui_theme/static/src/img/EL_MOKRIF_LOGO.jpeg") center / cover no-repeat fixed;
+
+    .oe_login_form,
+    .o_database_list {
+        border: 1px solid rgba(255, 255, 255, 0.22);
+        border-radius: 16px;
+        box-shadow: 0 18px 48px rgba(0, 0, 0, 0.24);
+        overflow: hidden;
+        padding: 28px;
+    }
+
+    .oe_login_form::before,
+    .o_database_list::before {
+        background: url("/elmokrif_ui_theme/static/src/img/EL_MOKRIF_LOGO.jpeg")
+            center / contain no-repeat;
+        content: "";
+        display: block;
+        height: 112px;
+        margin: -8px auto 16px;
+    }
+
+    .oe_login_form .btn-primary,
+    .o_database_list .btn-primary {
+        background-color: var(--elmokrif-brand);
+        border-color: var(--elmokrif-brand);
+    }
+
+    .oe_login_form .form-control:focus,
+    .o_database_list .form-control:focus {
+        border-color: var(--elmokrif-brand);
+        box-shadow: 0 0 0 3px rgba(178, 122, 5, 0.18);
+    }
 }
 
 @media (max-width: 767.98px) {
@@ -196,6 +256,11 @@ body.o_web_client {
             border-radius: 0;
             margin: 8px 0;
             padding: 20px 16px;
+        }
+
+        .o_main_navbar .o_menu_brand {
+            min-width: 118px;
+            background-size: 108px auto;
         }
     }
 }

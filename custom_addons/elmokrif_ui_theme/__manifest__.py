@@ -9,6 +9,8 @@
     "assets": {
         "web.assets_backend": [
             "elmokrif_ui_theme/static/src/scss/backend.scss",
+            "elmokrif_ui_theme/static/src/img/EL_MOKRIF_LOGO.jpeg",
+            "elmokrif_ui_theme/static/src/img/EL_MOKRIF_LOGO_CROPPED.png",
         ],
     },
     "installable": True,
