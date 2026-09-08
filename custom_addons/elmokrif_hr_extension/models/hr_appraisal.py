@@ -106,9 +106,12 @@ class HrEmployeeAppraisal(models.Model):
                 _("Use the appraisal actions to change its workflow state.")
             )
         for appraisal in self:
+            identity_fields = {"employee_id", "manager_id"}
+            if identity_fields.intersection(vals) and not self._is_hr_manager():
+                raise AccessError(
+                    _("Only an HR manager can change appraisal ownership.")
+                )
             manager_only_fields = {
-                "employee_id",
-                "manager_id",
                 "period_start",
                 "period_end",
                 "due_date",
