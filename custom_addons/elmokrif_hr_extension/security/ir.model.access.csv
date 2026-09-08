@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_hr_appraisal_employee,elmokrif.hr.appraisal employee,model_elmokrif_hr_appraisal,elmokrif_hr_extension.group_hr_employee,1,1,1,0
+access_hr_appraisal_officer,elmokrif.hr.appraisal officer,model_elmokrif_hr_appraisal,elmokrif_hr_extension.group_hr_officer,1,1,1,0
+access_hr_appraisal_manager,elmokrif.hr.appraisal manager,model_elmokrif_hr_appraisal,elmokrif_hr_extension.group_hr_manager,1,1,1,1
