@@ -25,6 +25,7 @@ $modules = @(
     "elmokrif_documents_bridge",
     "elmokrif_calendar_bridge",
     "elmokrif_dashboard",
+    "elmokrif_ui_theme",
     "elmokrif_integration_tests",
     "elmokrif_browser_tests"
 ) -join ","
@@ -41,6 +42,7 @@ $testTags = @(
     "/elmokrif_documents_bridge",
     "/elmokrif_calendar_bridge",
     "/elmokrif_dashboard",
+    "/elmokrif_ui_theme",
     "/elmokrif_integration_tests",
     "/elmokrif_browser_tests"
 ) -join ","

@@ -1,0 +1,16 @@
+{
+    "name": "EL MOKRIF Modern Backend UI",
+    "summary": "A clean, modern visual layer for the Odoo backend",
+    "version": "17.0.1.0.0",
+    "category": "Hidden/Tools",
+    "author": "EL MOKRIF",
+    "license": "LGPL-3",
+    "depends": ["web"],
+    "assets": {
+        "web.assets_backend": [
+            "elmokrif_ui_theme/static/src/scss/backend.scss",
+        ],
+    },
+    "installable": True,
+    "application": False,
+}
