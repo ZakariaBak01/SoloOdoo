@@ -20,7 +20,14 @@ class AccountMove(models.Model):
     @api.constrains("chantier_id", "partner_id", "company_id")
     def _check_chantier_link(self):
         for move in self:
-            validate_chantier_link(move.chantier_id, move.company_id, move.partner_id)
+            validation_partner = (
+                move.partner_id
+                if move.move_type in ("out_invoice", "out_refund", "out_receipt")
+                else self.env["res.partner"]
+            )
+            validate_chantier_link(
+                move.chantier_id, move.company_id, validation_partner
+            )
 
     def write(self, vals):
         if "chantier_id" in vals:
@@ -29,7 +36,14 @@ class AccountMove(models.Model):
                     raise UserError(_("The chantier cannot be changed on a posted invoice."))
         result = super().write(vals)
         for move in self:
-            validate_chantier_link(move.chantier_id, move.company_id, move.partner_id)
+            validation_partner = (
+                move.partner_id
+                if move.move_type in ("out_invoice", "out_refund", "out_receipt")
+                else self.env["res.partner"]
+            )
+            validate_chantier_link(
+                move.chantier_id, move.company_id, validation_partner
+            )
         return result
 
 
@@ -94,8 +108,13 @@ class AccountMoveLine(models.Model):
         for line in self:
             move = line.move_id
             if line.chantier_id and move:
+                validation_partner = (
+                    move.partner_id or line.partner_id
+                    if move.move_type in ("out_invoice", "out_refund", "out_receipt")
+                    else self.env["res.partner"]
+                )
                 validate_chantier_link(
                     line.chantier_id,
                     move.company_id,
-                    move.partner_id or line.partner_id,
+                    validation_partner,
                 )

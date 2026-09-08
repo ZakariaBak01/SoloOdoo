@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="rule_chantier_finance_readiness_company" model="ir.rule">
+        <field name="name">Finance readiness: allowed companies</field>
+        <field name="model_id" ref="model_chantier_finance_readiness"/>
+        <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+        <field name="groups" eval="[(4, ref('account.group_account_invoice'))]"/>
+    </record>
+</odoo>

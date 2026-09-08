@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_crm_lead_form_chantier" model="ir.ui.view">
+        <field name="name">crm.lead.form.chantier</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_lead_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header" position="inside">
+                <button name="action_chantier_mark_qualified" type="object" string="Confirm Qualification" class="btn-secondary" invisible="type == 'lead'"/>
+                <button name="action_chantier_schedule_site_visit" type="object" string="Schedule Site Visit" class="btn-secondary" invisible="type == 'lead'"/>
+            </xpath>
+            <xpath expr="//sheet/notebook" position="inside">
+                <page string="Chantier Qualification" invisible="type == 'lead'">
+                    <group>
+                        <group>
+                            <field name="chantier_work_type"/>
+                            <field name="chantier_site_address"/>
+                            <field name="chantier_region"/>
+                            <field name="chantier_expected_start"/>
+                        </group>
+                        <group>
+                            <field name="chantier_contract_value"/>
+                            <field name="chantier_decision_maker_id"/>
+                            <field name="chantier_next_action"/>
+                            <field name="chantier_qualification_complete" readonly="1"/>
+                            <field name="chantier_id"/>
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

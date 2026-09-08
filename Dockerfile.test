@@ -1,0 +1,16 @@
+FROM odoo:17.0
+
+USER root
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends ca-certificates fonts-liberation wget \
+    && wget -q https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb \
+    && apt-get install -y --no-install-recommends ./google-chrome-stable_current_amd64.deb \
+    && rm -f google-chrome-stable_current_amd64.deb \
+    && rm -rf /var/lib/apt/lists/*
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends python3-websocket \
+    && rm -rf /var/lib/apt/lists/*
+
+COPY custom_addons /opt/elmokrif-addons
+RUN sed -i 's#addons_path = /mnt/extra-addons#addons_path = /mnt/extra-addons,/opt/elmokrif-addons#' /etc/odoo/odoo.conf
+USER odoo

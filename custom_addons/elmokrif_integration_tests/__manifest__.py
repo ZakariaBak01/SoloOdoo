@@ -8,6 +8,7 @@
     "depends": [
         "elmokrif_chantier",
         "elmokrif_chantier_stock",
+        "elmokrif_purchase_quality",
         "elmokrif_sale_chantier",
     ],
     "data": [],

@@ -1,6 +1,8 @@
 from odoo import _, api, fields, models
 from odoo.exceptions import UserError, ValidationError
 
+from .workflow import CHANTIER_INITIALIZATION_TOKEN
+
 
 class AccountAnalyticAccount(models.Model):
     _inherit = "account.analytic.account"
@@ -26,8 +28,9 @@ class AccountAnalyticAccount(models.Model):
 
     @api.model_create_multi
     def create(self, vals_list):
-        if not self.env.context.get("chantier_initialization") and any(
-            values.get("chantier_id") for values in vals_list
+        if self.env.context.get("_chantier_initialization_token") is not CHANTIER_INITIALIZATION_TOKEN and (
+            self.env.context.get("default_chantier_id")
+            or any(values.get("chantier_id") for values in vals_list)
         ):
             raise UserError(
                 _("Use Initialize Chantier to create and link an analytic account.")
@@ -37,7 +40,7 @@ class AccountAnalyticAccount(models.Model):
     def write(self, vals):
         if (
             "chantier_id" in vals
-            and not self.env.context.get("chantier_initialization")
+            and self.env.context.get("_chantier_initialization_token") is not CHANTIER_INITIALIZATION_TOKEN
             and any(account.chantier_id.id != vals["chantier_id"] for account in self)
         ):
             raise UserError(

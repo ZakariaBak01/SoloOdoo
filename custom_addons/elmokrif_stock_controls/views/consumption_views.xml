@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_chantier_material_consumption_tree" model="ir.ui.view">
+        <field name="name">chantier.material.consumption.tree</field><field name="model">chantier.material.consumption</field>
+        <field name="arch" type="xml"><tree><field name="name"/><field name="operation_date"/><field name="chantier_id"/><field name="work_type"/><field name="requested_by_id"/><field name="state" widget="badge"/></tree></field>
+    </record>
+    <record id="view_chantier_material_consumption_form" model="ir.ui.view">
+        <field name="name">chantier.material.consumption.form</field><field name="model">chantier.material.consumption</field>
+        <field name="arch" type="xml"><form><header><button name="action_submit" type="object" string="Submit" class="btn-primary" invisible="state != 'draft'"/><button name="action_approve_and_consume" type="object" string="Approve and Consume" class="btn-primary" invisible="state != 'submitted'"/><button name="action_cancel" type="object" string="Cancel" invisible="state not in ('draft', 'submitted')"/><field name="state" widget="statusbar" statusbar_visible="draft,submitted,approved,done,cancel"/></header><sheet><group><group><field name="company_id"/><field name="chantier_id"/><field name="operation_date"/><field name="work_type"/></group><group><field name="requested_by_id"/><field name="approved_by_id"/><field name="approved_at"/><field name="picking_id"/></group></group><field name="line_ids" readonly="state != 'draft'"><tree editable="bottom"><field name="product_id"/><field name="product_uom_qty"/><field name="product_uom_id" readonly="1"/><field name="stock_move_id" readonly="1"/></tree></field></sheet><chatter/></form></field>
+    </record>
+    <record id="action_chantier_material_consumption" model="ir.actions.act_window"><field name="name">Approved Consumptions</field><field name="res_model">chantier.material.consumption</field><field name="view_mode">tree,form</field></record>
+    <menuitem id="menu_chantier_material_consumption" name="Approved Consumptions" parent="elmokrif_chantier.menu_chantier_root" action="action_chantier_material_consumption" groups="elmokrif_stock_controls.group_chantier_consumption_user" sequence="30"/>
+</odoo>

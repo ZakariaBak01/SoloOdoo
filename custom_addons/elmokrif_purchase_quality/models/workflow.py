@@ -1,0 +1,1 @@
+QUALITY_WORKFLOW_TOKEN = object()

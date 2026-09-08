@@ -1,7 +1,7 @@
 {
     "name": "EL MOKRIF Sale Chantier",
     "summary": "Link sales and invoicing to existing chantiers",
-    "version": "17.0.1.0.0",
+    "version": "17.0.1.2.0",
     "category": "Sales/Sales",
     "author": "EL MOKRIF",
     "license": "LGPL-3",

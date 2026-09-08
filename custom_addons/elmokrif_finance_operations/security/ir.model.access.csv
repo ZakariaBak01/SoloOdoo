@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_elmokrif_bank_import_accountant,elmokrif.bank.import accountant,model_elmokrif_bank_import,account.group_account_manager,1,1,1,1
+access_elmokrif_bank_import_line_accountant,elmokrif.bank.import.line accountant,model_elmokrif_bank_import_line,account.group_account_manager,1,1,1,1
+access_elmokrif_payment_reminder_accountant,elmokrif.payment.reminder accountant,model_elmokrif_payment_reminder,account.group_account_manager,1,1,1,0
