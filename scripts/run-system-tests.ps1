@@ -12,7 +12,38 @@ if (-not (Test-Path -LiteralPath $docker)) {
     throw "Docker CLI was not found."
 }
 
-$modules = "elmokrif_chantier,elmokrif_chantier_stock,elmokrif_sale_chantier,elmokrif_hr_extension,elmokrif_integration_tests"
+$modules = @(
+    "elmokrif_chantier",
+    "elmokrif_chantier_stock",
+    "elmokrif_sale_chantier",
+    "elmokrif_hr_extension",
+    "elmokrif_purchase_quality",
+    "elmokrif_finance_readiness",
+    "elmokrif_finance_operations",
+    "elmokrif_stock_controls",
+    "elmokrif_crm",
+    "elmokrif_documents_bridge",
+    "elmokrif_calendar_bridge",
+    "elmokrif_dashboard",
+    "elmokrif_integration_tests",
+    "elmokrif_browser_tests"
+) -join ","
+$testTags = @(
+    "/elmokrif_chantier",
+    "/elmokrif_chantier_stock",
+    "/elmokrif_sale_chantier",
+    "/elmokrif_hr_extension",
+    "/elmokrif_purchase_quality",
+    "/elmokrif_finance_readiness",
+    "/elmokrif_finance_operations",
+    "/elmokrif_stock_controls",
+    "/elmokrif_crm",
+    "/elmokrif_documents_bridge",
+    "/elmokrif_calendar_bridge",
+    "/elmokrif_dashboard",
+    "/elmokrif_integration_tests",
+    "/elmokrif_browser_tests"
+) -join ","
 
 try {
     & $docker compose up -d db
@@ -33,7 +64,7 @@ try {
     if ($LASTEXITCODE -ne 0) { throw "The Odoo image build failed." }
     & $docker compose run --rm --no-deps odoo odoo `
         -d $Database -i $modules --test-enable `
-        --test-tags /elmokrif_chantier,/elmokrif_chantier_stock,/elmokrif_sale_chantier,/elmokrif_hr_extension,/elmokrif_integration_tests `
+        --test-tags $testTags `
         --stop-after-init --without-demo=all --max-cron-threads=0 --log-level=test
     if ($LASTEXITCODE -ne 0) { throw "Odoo system tests failed." }
 }
