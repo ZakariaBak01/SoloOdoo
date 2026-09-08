@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="account_move_form_finance_readiness" model="ir.ui.view">
+        <field name="name">account.move.form.finance.readiness</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet" position="before">
+                <field name="chantier_finance_readiness_state" invisible="1"/>
+                <div class="alert alert-danger" role="alert"
+                     invisible="not chantier_id or chantier_finance_readiness_state == 'approved' or state != 'draft'">
+                    Posting is blocked until an Accounting Administrator approves Chantier Finance Readiness.
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>

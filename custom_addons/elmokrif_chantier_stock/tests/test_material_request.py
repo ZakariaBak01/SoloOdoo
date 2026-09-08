@@ -22,11 +22,16 @@ class TestChantierMaterialRequest(TransactionCase):
                 }
             )
         cls.product = cls.env["product.product"].create(
-            {"name": "Test Cement", "type": "consu"}
+            {"name": "Test Cement", "type": "product"}
+        )
+        cls.env["stock.quant"]._update_available_quantity(
+            cls.product, cls.warehouse.lot_stock_id, 1000
         )
 
     def _create_in_progress_chantier(self):
-        chantier = self.env["project.project"].create(
+        chantier = self.env["project.project"].with_context(
+            default_is_chantier=True
+        ).create(
             {
                 "name": "Materials Test Chantier",
                 "is_chantier": True,
@@ -133,6 +138,38 @@ class TestChantierMaterialRequest(TransactionCase):
         with self.assertRaises(UserError):
             request.sudo().action_submit()
 
+    def test_create_cannot_skip_request_approval(self):
+        chantier = self._create_in_progress_chantier()
+        for state in ("submitted", "approved", "done"):
+            with self.subTest(state=state):
+                with self.assertRaises(UserError):
+                    self.env["chantier.material.request"].create({
+                        "chantier_id": chantier.id, "state": state,
+                    })
+                with self.assertRaises(UserError):
+                    self.env["chantier.material.request"].with_context(default_state=state).create({
+                        "chantier_id": chantier.id,
+                    })
+
+    def test_submitted_request_lines_cannot_be_added_moved_or_deleted(self):
+        chantier = self._create_in_progress_chantier()
+        submitted = self._create_request(chantier)
+        draft = self._create_request(chantier)
+        submitted.action_submit()
+        with self.assertRaises(UserError):
+            self.env["chantier.material.request.line"].create({
+                "request_id": submitted.id, "product_id": self.product.id,
+                "product_uom_qty": 100,
+            })
+        with self.assertRaises(UserError):
+            draft.line_ids.write({"request_id": submitted.id})
+        with self.assertRaises(UserError):
+            submitted.line_ids.write({"request_id": draft.id})
+        with self.assertRaises(UserError):
+            submitted.line_ids.unlink()
+        with self.assertRaises(UserError):
+            submitted.unlink()
+
     def test_request_requires_chantier_in_progress(self):
         chantier = self._create_in_progress_chantier()
         chantier.sudo().action_hold_chantier()
@@ -141,11 +178,10 @@ class TestChantierMaterialRequest(TransactionCase):
         with self.assertRaises(UserError):
             request.sudo().action_submit()
 
-    def test_consumption_uses_inventory_adjustment_location(self):
+    def test_consumption_uses_dedicated_valuation_location(self):
         chantier = self._create_in_progress_chantier()
-        loss_location = self.env["stock.location"].search(
-            [("usage", "=", "inventory")], limit=1
-        )
+        self.warehouse._ensure_chantier_operation_locations()
+        loss_location = self.warehouse.chantier_consumption_location_id
         picking = self.env["stock.picking"].create(
             {
                 "picking_type_id": self.warehouse.int_type_id.id,
@@ -321,7 +357,9 @@ class TestChantierMaterialRequest(TransactionCase):
             "code": "OCW",
             "company_id": other_company.id,
         })
-        other_chantier = self.env["project.project"].sudo().create({
+        other_chantier = self.env["project.project"].sudo().with_context(
+            default_is_chantier=True
+        ).create({
             "name": "Other-company chantier",
             "is_chantier": True,
             "company_id": other_company.id,
@@ -357,7 +395,9 @@ class TestChantierMaterialRequest(TransactionCase):
             "code": "CST",
             "company_id": other_company.id,
         })
-        chantier = other_env["project.project"].create({
+        chantier = other_env["project.project"].with_context(
+            default_is_chantier=True
+        ).create({
             "name": "Cost chantier",
             "is_chantier": True,
             "company_id": other_company.id,
@@ -388,9 +428,8 @@ class TestChantierMaterialRequest(TransactionCase):
         other_env["stock.quant"]._update_available_quantity(
             product, chantier.site_location_id, 12
         )
-        loss_location = other_env["stock.picking"]._get_chantier_loss_location(
-            other_company
-        )
+        other_warehouse._ensure_chantier_operation_locations()
+        loss_location = other_warehouse.chantier_consumption_location_id
         picking = other_env["stock.picking"].create({
             "picking_type_id": other_warehouse.int_type_id.id,
             "chantier_id": chantier.id,
@@ -411,3 +450,11 @@ class TestChantierMaterialRequest(TransactionCase):
 
         self.assertEqual(chantier.material_cost, 240)
         self.assertIn("12.00", str(chantier.material_summary))
+        self.assertEqual(picking.move_ids.chantier_valuation_status, "valued")
+
+        product.sudo().with_context(
+            allowed_company_ids=[self.company.id, other_company.id]
+        ).with_company(other_company).standard_price = 75
+        chantier.invalidate_recordset(["material_cost", "material_summary"])
+
+        self.assertEqual(chantier.material_cost, 240)

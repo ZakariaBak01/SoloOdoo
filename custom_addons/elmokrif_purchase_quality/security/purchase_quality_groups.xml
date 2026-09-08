@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="group_chantier_purchase_buyer" model="res.groups">
+        <field name="name">Chantier Buyer</field>
+        <field name="category_id" ref="base.module_category_inventory_purchase"/>
+        <field name="implied_ids" eval="[(4, ref('purchase.group_purchase_user')), (4, ref('elmokrif_chantier.group_chantier_user'))]"/>
+    </record>
+    <record id="group_chantier_purchase_approver" model="res.groups">
+        <field name="name">Chantier Purchase Approver</field>
+        <field name="category_id" ref="base.module_category_inventory_purchase"/>
+        <field name="implied_ids" eval="[(4, ref('purchase.group_purchase_manager')), (4, ref('elmokrif_chantier.group_chantier_user'))]"/>
+    </record>
+    <record id="group_chantier_quality_inspector" model="res.groups">
+        <field name="name">Chantier Quality Inspector</field>
+        <field name="category_id" ref="base.module_category_inventory_inventory"/>
+        <field name="implied_ids" eval="[(4, ref('stock.group_stock_user')), (4, ref('elmokrif_chantier.group_chantier_user'))]"/>
+    </record>
+</odoo>

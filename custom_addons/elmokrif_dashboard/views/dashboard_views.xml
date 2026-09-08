@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_elmokrif_dashboard_form" model="ir.ui.view"><field name="name">elmokrif.dashboard.form</field><field name="model">elmokrif.dashboard</field><field name="arch" type="xml"><form create="false" delete="false"><sheet><group><field name="company_id"/><field name="as_of_date"/></group><group string="Financial"><button name="action_open_revenue" type="object" class="oe_stat_button" icon="fa-line-chart"><field name="monthly_revenue" widget="monetary" string="Monthly Revenue"/></button><button name="action_open_unpaid" type="object" class="oe_stat_button" icon="fa-warning"><field name="unpaid_over_30" widget="monetary" string="Unpaid Over 30 Days"/></button><field name="current_stock_value" widget="monetary"/><field name="material_cost" widget="monetary"/></group><group string="Commercial"><field name="quotation_conversion" widget="percentage"/><button name="action_open_opportunities" type="object" class="oe_stat_button" icon="fa-bullseye"><field name="pipeline_opportunities"/></button><field name="pipeline_expected_value" widget="monetary"/><field name="pipeline_weighted_value" widget="monetary"/></group><group string="Operations"><button name="action_open_pending_purchase_orders" type="object" class="oe_stat_button" icon="fa-shopping-cart"><field name="pending_supplier_orders"/></button><field name="awaiting_purchase_approval"/><field name="todays_absences"/><button name="action_open_deliveries" type="object" class="oe_stat_button" icon="fa-truck"><field name="week_deliveries"/></button></group></sheet></form></field></record>
+    <record id="view_elmokrif_dashboard_tree" model="ir.ui.view"><field name="name">elmokrif.dashboard.tree</field><field name="model">elmokrif.dashboard</field><field name="arch" type="xml"><tree><field name="company_id"/><field name="as_of_date"/><field name="monthly_revenue"/><field name="unpaid_over_30"/><field name="pipeline_expected_value"/></tree></field></record>
+    <record id="action_elmokrif_dashboard" model="ir.actions.act_window"><field name="name">Management Dashboard</field><field name="res_model">elmokrif.dashboard</field><field name="view_mode">tree,form</field></record>
+    <menuitem id="menu_elmokrif_dashboard_root" name="Management Dashboard" action="action_elmokrif_dashboard" sequence="90" groups="elmokrif_dashboard.group_elmokrif_dashboard_user"/>
+    <record id="view_elmokrif_dashboard_access_notice" model="ir.ui.view">
+        <field name="name">elmokrif.dashboard.access.notice</field>
+        <field name="model">elmokrif.dashboard</field>
+        <field name="inherit_id" ref="view_elmokrif_dashboard_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet/group[1]" position="after">
+                <field name="currency_id" invisible="True"/>
+                <div class="alert alert-info" invisible="not access_notice">
+                    <field name="access_notice" nolabel="1"/>
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>

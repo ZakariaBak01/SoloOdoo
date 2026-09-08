@@ -1,6 +1,4 @@
-param(
-    [string]$Database = "soloodoo_system_test"
-)
+param([string]$Database = "soloodoo_system_test")
 
 $ErrorActionPreference = "Stop"
 if ($Database -notmatch '^[A-Za-z][A-Za-z0-9_]*$') {

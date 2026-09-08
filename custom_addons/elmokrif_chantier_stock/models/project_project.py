@@ -9,7 +9,17 @@ class ProjectProject(models.Model):
     material_request_ids = fields.One2many("chantier.material.request", "chantier_id", string="Material Requests")
     material_picking_ids = fields.One2many("stock.picking", "chantier_id", string="Material Transfers")
     material_request_count = fields.Integer(compute="_compute_material_request_count")
-    material_cost = fields.Monetary(compute="_compute_material_cost", currency_field="currency_id", string="Material Cost (Current Cost Estimate)", compute_sudo=True)
+    material_cost = fields.Monetary(
+        compute="_compute_material_cost",
+        currency_field="currency_id",
+        string="Historical Material Valuation",
+        compute_sudo=True,
+    )
+    unvalued_material_move_count = fields.Integer(
+        compute="_compute_material_cost",
+        string="Unvalued Material Moves",
+        compute_sudo=True,
+    )
     material_summary = fields.Html(
         compute="_compute_material_summary",
         string="Materials Summary",
@@ -23,10 +33,8 @@ class ProjectProject(models.Model):
 
     @api.depends(
         "material_picking_ids.move_ids.state",
-        "material_picking_ids.move_ids.quantity",
-        "material_picking_ids.move_ids.product_uom",
-        "material_picking_ids.move_ids.product_id",
-        "material_picking_ids.move_ids.product_id.standard_price",
+        "material_picking_ids.move_ids.chantier_valuation_amount",
+        "material_picking_ids.move_ids.chantier_valuation_status",
         "material_picking_ids.chantier_operation",
     )
     def _compute_material_cost(self):
@@ -36,10 +44,9 @@ class ProjectProject(models.Model):
                 ("picking_id.chantier_operation", "in", ("consumption", "missing")),
                 ("state", "=", "done"),
             ])
-            project.material_cost = sum(
-                move.product_uom._compute_quantity(move.quantity, move.product_id.uom_id)
-                * move.product_id.with_company(project.company_id).standard_price
-                for move in moves
+            project.material_cost = sum(moves.mapped("chantier_valuation_amount"))
+            project.unvalued_material_move_count = len(
+                moves.filtered(lambda move: move.chantier_valuation_status == "unvalued")
             )
 
     @api.depends(
@@ -47,7 +54,7 @@ class ProjectProject(models.Model):
         "material_picking_ids.move_ids.quantity",
         "material_picking_ids.move_ids.product_uom",
         "material_picking_ids.move_ids.product_id",
-        "material_picking_ids.move_ids.product_id.standard_price",
+        "material_picking_ids.move_ids.chantier_valuation_amount",
         "material_picking_ids.chantier_operation",
     )
     def _compute_material_summary(self):
@@ -69,11 +76,13 @@ class ProjectProject(models.Model):
                 product = move.product_id
                 quantities = totals.setdefault(product.id, {
                     "product": product,
+                    "valuation": 0.0,
                     **{operation: 0.0 for operation in operations},
                 })
                 quantities[move.picking_id.chantier_operation] += (
                     move.product_uom._compute_quantity(move.quantity, product.uom_id)
                 )
+                quantities["valuation"] += move.chantier_valuation_amount
 
             rows = []
             for values in totals.values():
@@ -83,9 +92,6 @@ class ProjectProject(models.Model):
                     - values["return"]
                     - values["missing"]
                 )
-                current_cost = (
-                    values["consumption"] + values["missing"]
-                ) * values["product"].with_company(project.company_id).standard_price
                 rows.append(Markup(
                     "<tr><td>{}</td><td>{}</td><td>{:.2f}</td><td>{:.2f}</td>"
                     "<td>{:.2f}</td><td>{:.2f}</td><td>{:.2f}</td><td>{:.2f}</td></tr>"
@@ -93,7 +99,7 @@ class ProjectProject(models.Model):
                     escape(values["product"].display_name),
                     escape(values["product"].uom_id.display_name),
                     values["delivery"], values["consumption"], values["return"],
-                    values["missing"], remaining, current_cost,
+                    values["missing"], remaining, values["valuation"],
                 ))
             header = Markup(
                 "<tr><th>{}</th><th>{}</th><th>{}</th><th>{}</th>"
@@ -101,7 +107,7 @@ class ProjectProject(models.Model):
             ).format(
                 escape(_("Product")), escape(_("Unit")), escape(headings["delivery"]),
                 escape(headings["consumption"]), escape(headings["return"]),
-                escape(headings["missing"]), escape(_("Remaining")), escape(_("Current Cost")),
+                escape(headings["missing"]), escape(_("Remaining")), escape(_("Stock Valuation")),
             )
             project.material_summary = Markup(
                 "<table class=\"table table-sm o_chantier_material_summary\"><thead>{}"

@@ -14,32 +14,19 @@ class StockPicking(models.Model):
         ("missing", "Missing Material"),
     ], string="Chantier Material Operation", default="delivery", tracking=True)
 
-    def _get_chantier_loss_location(self, company):
-        """Return the company's inventory-adjustment location for site losses."""
-        location = self.env["stock.location"].search(
-            [
-                ("usage", "=", "inventory"),
-                "|",
-                ("company_id", "=", False),
-                ("company_id", "=", company.id),
-            ],
-            limit=1,
-        )
-        if not location:
-            raise UserError(
-                _("Create an inventory adjustment location before recording material consumption or loss.")
-            )
-        return location
-
     def _get_chantier_operation_locations(self, chantier, operation):
         """Return the system-owned locations for one chantier operation."""
         if operation == "delivery":
             return chantier.warehouse_id.lot_stock_id, chantier.site_location_id
         if operation == "return":
             return chantier.site_location_id, chantier.warehouse_id.lot_stock_id
-        return chantier.site_location_id, self._get_chantier_loss_location(
-            chantier.company_id
+        chantier.warehouse_id._ensure_chantier_operation_locations()
+        destination = (
+            chantier.warehouse_id.chantier_consumption_location_id
+            if operation == "consumption"
+            else chantier.warehouse_id.chantier_missing_location_id
         )
+        return chantier.site_location_id, destination
 
     @api.model
     def _prepare_chantier_operation_values(self, vals):
@@ -130,6 +117,52 @@ class StockMove(models.Model):
         ondelete="set null",
         check_company=True,
     )
+    company_currency_id = fields.Many2one(
+        "res.currency",
+        string="Company Currency",
+        related="company_id.currency_id",
+        store=True,
+        readonly=True,
+    )
+    chantier_valuation_amount = fields.Monetary(
+        string="Chantier Stock Valuation",
+        currency_field="company_currency_id",
+        compute="_compute_chantier_valuation",
+        store=True,
+        copy=False,
+        help="Historical value from Odoo stock valuation layers for a completed chantier consumption or missing-material move.",
+    )
+    chantier_valuation_status = fields.Selection(
+        [
+            ("not_applicable", "Not Applicable"),
+            ("valued", "Valued"),
+            ("unvalued", "No Valuation Layer"),
+        ],
+        compute="_compute_chantier_valuation",
+        store=True,
+        copy=False,
+    )
+
+    @api.depends(
+        "state",
+        "picking_id.chantier_id",
+        "picking_id.chantier_operation",
+        "stock_valuation_layer_ids.value",
+    )
+    def _compute_chantier_valuation(self):
+        for move in self:
+            eligible = (
+                move.state == "done"
+                and move.picking_id.chantier_id
+                and move.picking_id.chantier_operation in ("consumption", "missing")
+            )
+            if not eligible:
+                move.chantier_valuation_amount = 0.0
+                move.chantier_valuation_status = "not_applicable"
+                continue
+            layers = move.stock_valuation_layer_ids
+            move.chantier_valuation_amount = -sum(layers.mapped("value"))
+            move.chantier_valuation_status = "valued" if layers else "unvalued"
 
     @api.model
     def _prepare_merge_moves_distinct_fields(self):

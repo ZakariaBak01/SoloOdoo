@@ -54,12 +54,16 @@ class TestChantierBusinessFlow(TransactionCase):
         self.assertEqual(picking.state, "done")
 
     def _site_operation(self, chantier, operation, quantity):
-        loss = self.env["stock.picking"]._get_chantier_loss_location(
-            self.company
-        )
+        self.warehouse._ensure_chantier_operation_locations()
         source, destination = {
-            "consumption": (chantier.site_location_id, loss),
-            "missing": (chantier.site_location_id, loss),
+            "consumption": (
+                chantier.site_location_id,
+                self.warehouse.chantier_consumption_location_id,
+            ),
+            "missing": (
+                chantier.site_location_id,
+                self.warehouse.chantier_missing_location_id,
+            ),
             "return": (chantier.site_location_id, self.warehouse.lot_stock_id),
         }[operation]
         picking = self.env["stock.picking"].create(
@@ -89,7 +93,9 @@ class TestChantierBusinessFlow(TransactionCase):
         return picking
 
     def test_quote_invoice_materials_and_closeout(self):
-        chantier = self.env["project.project"].create(
+        chantier = self.env["project.project"].with_context(
+            default_is_chantier=True
+        ).create(
             {
                 "name": "CH-TEST-001",
                 "is_chantier": True,

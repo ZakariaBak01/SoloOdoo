@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="stock_picking_form_chantier_quality" model="ir.ui.view">
+        <field name="name">stock.picking.form.chantier.quality</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.view_picking_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='origin']" position="after">
+                <field name="chantier_purchase_request_id"/>
+                <field name="chantier_quality_required" invisible="1"/>
+                <field name="chantier_quality_inspection_id"/>
+                <field name="chantier_quality_release_kind"/>
+                <field name="chantier_quality_transfer_id"/>
+                <field name="chantier_quality_source_receipt_id"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

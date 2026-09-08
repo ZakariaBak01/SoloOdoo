@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_chantier_quality_inspection_tree" model="ir.ui.view">
+        <field name="name">chantier.quality.inspection.tree</field>
+        <field name="model">chantier.quality.inspection</field>
+        <field name="arch" type="xml">
+            <tree><field name="name"/><field name="receipt_id"/><field name="purchase_order_id"/><field name="chantier_id"/><field name="inspector_id"/><field name="state"/></tree>
+        </field>
+    </record>
+    <record id="view_chantier_quality_inspection_form" model="ir.ui.view">
+        <field name="name">chantier.quality.inspection.form</field>
+        <field name="model">chantier.quality.inspection</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_approve_and_release" type="object" string="Approve and Release" class="oe_highlight" groups="elmokrif_purchase_quality.group_chantier_quality_inspector" invisible="state != 'draft'"/>
+                    <button name="action_create_supplier_return" type="object" string="Create Supplier Return" groups="elmokrif_purchase_quality.group_chantier_purchase_buyer,elmokrif_purchase_quality.group_chantier_purchase_approver" invisible="state != 'approved' or not rejected_picking_id or supplier_return_picking_id"/>
+                    <field name="state" widget="statusbar"/>
+                </header>
+                <sheet>
+                    <group>
+                        <group><field name="name"/><field name="receipt_id"/><field name="quality_transfer_id"/><field name="purchase_order_id"/><field name="chantier_id"/></group>
+                        <group><field name="company_id" invisible="1"/><field name="warehouse_id"/><field name="inspector_id"/><field name="inspected_at"/></group>
+                    </group>
+                    <field name="line_ids" readonly="state != 'draft'">
+                        <tree editable="bottom">
+                            <field name="move_id" column_invisible="True"/>
+                            <field name="move_line_id" column_invisible="True"/>
+                            <field name="product_id"/>
+                            <field name="lot_id" optional="show"/>
+                            <field name="received_qty"/>
+                            <field name="product_uom_id"/>
+                            <field name="accepted_qty"/>
+                            <field name="rejected_qty"/>
+                            <field name="condition_ok"/>
+                            <field name="specification_ok"/>
+                            <field name="certificate_reference" optional="show"/>
+                            <field name="rejection_reason" optional="show"/>
+                        </tree>
+                    </field>
+                    <group><field name="notes"/><field name="accepted_picking_id"/><field name="rejected_picking_id"/><field name="supplier_return_picking_id"/></group>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+    <record id="action_chantier_quality_inspection" model="ir.actions.act_window">
+        <field name="name">Quality Inspections</field>
+        <field name="res_model">chantier.quality.inspection</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem id="menu_chantier_quality_inspection" name="Quality Inspections" parent="elmokrif_chantier.menu_chantier_root" action="action_chantier_quality_inspection" sequence="20" groups="elmokrif_chantier.group_chantier_user"/>
+</odoo>
