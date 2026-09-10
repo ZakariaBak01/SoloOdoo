@@ -1,6 +1,8 @@
 from odoo import _, api, fields, models
 from odoo.exceptions import AccessError, UserError, ValidationError
 
+_HR_APPRAISAL_WORKFLOW_TOKEN = object()
+
 
 class HrEmployeeAppraisal(models.Model):
     _name = "elmokrif.hr.appraisal"
@@ -50,6 +52,14 @@ class HrEmployeeAppraisal(models.Model):
         copy=False,
     )
 
+    _sql_constraints = [
+        (
+            "employee_period_unique",
+            "unique(employee_id, period_start, period_end)",
+            "Only one appraisal is allowed for an employee and review period.",
+        ),
+    ]
+
     @api.constrains("period_start", "period_end", "due_date")
     def _check_dates(self):
         for appraisal in self:
@@ -61,11 +71,47 @@ class HrEmployeeAppraisal(models.Model):
             "elmokrif_hr_extension.group_hr_manager"
         )
 
+    def _is_hr_officer(self):
+        return self.env.su or self.env.user.has_group(
+            "elmokrif_hr_extension.group_hr_officer"
+        )
+
+    def _in_workflow(self):
+        return self.env.context.get("_hr_appraisal_workflow_token") is _HR_APPRAISAL_WORKFLOW_TOKEN
+
     def _is_manager(self, appraisal):
         return self._is_hr_manager() or appraisal.manager_id == self.env.user
 
     def _is_employee(self, appraisal):
         return appraisal.employee_id.user_id == self.env.user
+
+    @api.model_create_multi
+    def create(self, vals_list):
+        protected = {"state", "completed_at", "reopen_reason"}
+        default_protected = {
+            key[8:] for key in self.env.context if key.startswith("default_")
+        }
+        if protected.intersection(default_protected) or any(
+            protected.intersection(values) for values in vals_list
+        ):
+            raise AccessError(_("Appraisal workflow evidence is managed by the appraisal actions."))
+        if not self._is_hr_officer():
+            raise AccessError(_("Only an HR officer can create an appraisal."))
+        for values in vals_list:
+            employee = self.env["hr.employee"].browse(values.get("employee_id")).exists()
+            if not employee:
+                raise ValidationError(_("Select an existing employee for the appraisal."))
+            expected_manager = employee.parent_id.user_id
+            if not values.get("manager_id"):
+                if not expected_manager:
+                    raise ValidationError(_("Assign an employee manager before creating an appraisal."))
+                values["manager_id"] = expected_manager.id
+            elif not self._is_hr_manager() and values["manager_id"] != expected_manager.id:
+                raise AccessError(_("An HR officer must use the employee's assigned manager."))
+            values["state"] = "draft"
+            values["completed_at"] = False
+            values["reopen_reason"] = False
+        return super().create(vals_list)
 
     def _validate_state_change(self, target):
         transitions = {
@@ -101,7 +147,7 @@ class HrEmployeeAppraisal(models.Model):
         return True
 
     def write(self, vals):
-        if "state" in vals:
+        if "state" in vals and not self._in_workflow():
             raise UserError(
                 _("Use the appraisal actions to change its workflow state.")
             )
@@ -134,7 +180,9 @@ class HrEmployeeAppraisal(models.Model):
                 )
             if "reopen_reason" in vals and not self._is_hr_manager():
                 raise AccessError(_("Only an HR manager can set a reopening reason."))
-            if appraisal.state == "completed" and not (
+            if "completed_at" in vals and not self._in_workflow():
+                raise AccessError(_("Completion evidence is managed by the appraisal actions."))
+            if appraisal.state == "completed" and not self._in_workflow() and not (
                 set(vals).issubset({"reopen_reason"}) and self._is_hr_manager()
             ):
                 raise UserError(
@@ -144,15 +192,19 @@ class HrEmployeeAppraisal(models.Model):
 
     def action_start_self_assessment(self):
         self._validate_state_change("self_assessment")
-        super(HrEmployeeAppraisal, self).write({"state": "self_assessment"})
+        self.with_context(_hr_appraisal_workflow_token=_HR_APPRAISAL_WORKFLOW_TOKEN).write(
+            {"state": "self_assessment"}
+        )
 
     def action_submit_for_review(self):
         self._validate_state_change("manager_review")
-        super(HrEmployeeAppraisal, self).write({"state": "manager_review"})
+        self.with_context(_hr_appraisal_workflow_token=_HR_APPRAISAL_WORKFLOW_TOKEN).write(
+            {"state": "manager_review"}
+        )
 
     def action_complete(self):
         self._validate_state_change("completed")
-        super(HrEmployeeAppraisal, self).write(
+        self.with_context(_hr_appraisal_workflow_token=_HR_APPRAISAL_WORKFLOW_TOKEN).write(
             {
                 "state": "completed",
                 "completed_at": fields.Datetime.now(),
@@ -161,7 +213,9 @@ class HrEmployeeAppraisal(models.Model):
 
     def action_cancel(self):
         self._validate_state_change("cancelled")
-        super(HrEmployeeAppraisal, self).write({"state": "cancelled"})
+        self.with_context(_hr_appraisal_workflow_token=_HR_APPRAISAL_WORKFLOW_TOKEN).write(
+            {"state": "cancelled"}
+        )
 
     def action_reopen(self):
         if not self._is_hr_manager():
@@ -174,10 +228,18 @@ class HrEmployeeAppraisal(models.Model):
             appraisal.message_post(
                 body=_("Appraisal reopened. Reason: %s", appraisal.reopen_reason)
             )
-            super(HrEmployeeAppraisal, appraisal).write(
+            appraisal.with_context(
+                _hr_appraisal_workflow_token=_HR_APPRAISAL_WORKFLOW_TOKEN
+            ).write(
                 {
                     "state": "manager_review",
                     "reopen_reason": False,
                     "completed_at": False,
                 }
             )
+        return True
+
+    def unlink(self):
+        if not self._is_hr_manager() or any(appraisal.state != "draft" for appraisal in self):
+            raise UserError(_("Only an HR manager can delete a draft appraisal."))
+        return super().unlink()

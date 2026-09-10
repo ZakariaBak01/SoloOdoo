@@ -3,6 +3,8 @@ from datetime import timedelta
 from odoo import _, api, fields, models
 from odoo.exceptions import UserError
 
+_HR_CONTRACT_WORKFLOW_TOKEN = object()
+
 
 class HrContract(models.Model):
     _inherit = "hr.contract"
@@ -20,10 +22,38 @@ class HrContract(models.Model):
         readonly=True,
     )
 
+    def _in_expiry_workflow(self):
+        return self.env.context.get("_hr_contract_workflow_token") is _HR_CONTRACT_WORKFLOW_TOKEN
+
+    @api.model_create_multi
+    def create(self, vals_list):
+        protected = {"hr_expiry_activity_id", "hr_expiry_activity_created"}
+        default_protected = {
+            key[8:] for key in self.env.context if key.startswith("default_")
+        }
+        if protected.intersection(default_protected) or any(
+            protected.intersection(values) for values in vals_list
+        ):
+            raise UserError(_("Expiry activity metadata is managed by the HR workflow."))
+        return super().create(vals_list)
+
+    def _expiry_owner(self):
+        self.ensure_one()
+        manager = self.employee_id.parent_id.user_id
+        if manager:
+            return manager
+        managers = self.env.ref(
+            "elmokrif_hr_extension.group_hr_manager"
+        ).sudo().users.filtered(
+            lambda user: user.active and self.company_id in user.company_ids
+        )
+        return managers[:1] or self.env.user
+
     @api.model
     def _cron_create_contract_expiry_activities(self):
         today = fields.Date.context_today(self)
-        contracts = self.search(
+        company_ids = self.env["res.company"].sudo().search([]).ids
+        contracts = self.sudo().with_context(allowed_company_ids=company_ids).search(
             [
                 ("date_end", "!=", False),
                 ("date_end", ">=", today),
@@ -55,11 +85,7 @@ class HrContract(models.Model):
             lead_days = contract.company_id.hr_contract_expiry_lead_days
             if contract.date_end > today + timedelta(days=lead_days):
                 continue
-            owner = (
-                contract.employee_id.parent_id.user_id
-                or contract.employee_id.user_id
-                or self.env.user
-            )
+            owner = contract._expiry_owner()
             activity = contract.activity_schedule(
                 activity_type_id=activity_type.id,
                 date_deadline=contract.date_end,
@@ -72,7 +98,7 @@ class HrContract(models.Model):
                     date=contract.date_end,
                 ),
             )
-            super(HrContract, contract).write(
+            contract.with_context(_hr_contract_workflow_token=_HR_CONTRACT_WORKFLOW_TOKEN).write(
                 {
                     "hr_expiry_activity_id": activity.id,
                     "hr_expiry_activity_created": True,
@@ -82,7 +108,7 @@ class HrContract(models.Model):
         return created
 
     def write(self, vals):
-        if {
+        if not self._in_expiry_workflow() and {
             "hr_expiry_activity_id",
             "hr_expiry_activity_created",
         }.intersection(vals):
@@ -100,7 +126,7 @@ class HrContract(models.Model):
                 old_activity = old_activities[contract.id]
                 if old_activity:
                     old_activity.unlink()
-                super(HrContract, contract).write(
+                contract.with_context(_hr_contract_workflow_token=_HR_CONTRACT_WORKFLOW_TOKEN).write(
                     {
                         "hr_expiry_activity_id": False,
                         "hr_expiry_activity_created": False,
@@ -117,7 +143,7 @@ class HrContract(models.Model):
         for contract in self:
             if contract.hr_expiry_activity_id:
                 contract.hr_expiry_activity_id.unlink()
-            super(HrContract, contract).write(
+            contract.with_context(_hr_contract_workflow_token=_HR_CONTRACT_WORKFLOW_TOKEN).write(
                 {
                     "hr_expiry_activity_id": False,
                     "hr_expiry_activity_created": False,

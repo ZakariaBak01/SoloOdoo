@@ -1,0 +1,615 @@
+﻿2026-09-08 15:04:40,444 1 INFO ? odoo: Odoo version 17.0-20260817 
+2026-09-08 15:04:40,444 1 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2026-09-08 15:04:40,444 1 INFO ? odoo: addons paths: ['/usr/lib/python3/dist-packages/odoo/addons', '/var/lib/odoo/addons/17.0', '/mnt/extra-addons', '/opt/elmokrif-addons'] 
+2026-09-08 15:04:40,444 1 INFO ? odoo: database: odoo_test@test-db:5432 
+2026-09-08 15:04:40,580 1 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/local/bin/wkhtmltopdf 
+2026-09-08 15:04:40,719 1 INFO ? odoo.service.server: HTTP service (werkzeug) running on 7efdce5ef44c:8069 
+2026-09-08 15:04:40,727 1 INFO soloodoo_hr_test odoo.modules.loading: init db 
+2026-09-08 15:04:41,749 1 INFO soloodoo_hr_test odoo.modules.loading: loading 1 modules... 
+2026-09-08 15:04:41,749 1 INFO soloodoo_hr_test odoo.modules.loading: Loading module base (1/1) 
+2026-09-08 15:04:41,767 1 INFO soloodoo_hr_test odoo.modules.registry: module base: creating or updating database tables 
+2026-09-08 15:04:42,075 1 INFO soloodoo_hr_test odoo.models: Prepare computation of ir.module.module.menus_by_module 
+2026-09-08 15:04:42,075 1 INFO soloodoo_hr_test odoo.models: Prepare computation of ir.module.module.reports_by_module 
+2026-09-08 15:04:42,075 1 INFO soloodoo_hr_test odoo.models: Prepare computation of ir.module.module.views_by_module 
+2026-09-08 15:04:42,190 1 INFO soloodoo_hr_test odoo.models: Prepare computation of res.partner.user_id 
+2026-09-08 15:04:42,190 1 INFO soloodoo_hr_test odoo.models: Prepare computation of res.partner.commercial_partner_id 
+2026-09-08 15:04:42,190 1 INFO soloodoo_hr_test odoo.models: Prepare computation of res.partner.complete_name 
+2026-09-08 15:04:42,190 1 INFO soloodoo_hr_test odoo.models: Prepare computation of res.partner.company_registry 
+2026-09-08 15:04:42,190 1 INFO soloodoo_hr_test odoo.models: Prepare computation of res.partner.commercial_company_name 
+2026-09-08 15:04:42,190 1 INFO soloodoo_hr_test odoo.models: Prepare computation of res.partner.partner_share 
+2026-09-08 15:04:42,236 1 INFO soloodoo_hr_test odoo.models: Prepare computation of res.currency.decimal_places 
+2026-09-08 15:04:42,268 1 INFO soloodoo_hr_test odoo.models: Prepare computation of res.company.uses_default_logo 
+2026-09-08 15:04:42,269 1 INFO soloodoo_hr_test odoo.models: Prepare computation of res.company.logo_web 
+2026-09-08 15:04:42,271 1 INFO soloodoo_hr_test odoo.models: Computing parent_path for table res_company... 
+2026-09-08 15:04:42,297 1 INFO soloodoo_hr_test odoo.models: Prepare computation of res.users.signature 
+2026-09-08 15:04:42,298 1 INFO soloodoo_hr_test odoo.models: Prepare computation of res.users.share 
+2026-09-08 15:04:43,546 1 INFO soloodoo_hr_test odoo.modules.loading: loading base/data/res_bank.xml 
+2026-09-08 15:04:43,552 1 INFO soloodoo_hr_test odoo.modules.loading: loading base/data/res.lang.csv 
+2026-09-08 15:04:43,589 1 INFO soloodoo_hr_test odoo.modules.loading: loading base/data/res_lang_data.xml 
+2026-09-08 15:04:43,620 1 INFO soloodoo_hr_test odoo.modules.loading: loading base/data/res_partner_data.xml 
+2026-09-08 15:04:43,720 1 INFO soloodoo_hr_test odoo.modules.loading: loading base/data/res_currency_data.xml 
+2026-09-08 15:04:44,210 1 INFO soloodoo_hr_test odoo.modules.loading: loading base/data/res_company_data.xml 
+2026-09-08 15:04:44,220 1 INFO soloodoo_hr_test odoo.modules.loading: loading base/data/res_users_data.xml 
+2026-09-08 15:04:45,082 1 INFO soloodoo_hr_test odoo.modules.loading: loading base/data/report_paperformat_data.xml 
+2026-09-08 15:04:45,091 1 INFO soloodoo_hr_test odoo.modules.loading: loading base/data/res_country_data.xml 
+2026-09-08 15:04:45,501 1 INFO soloodoo_hr_test odoo.modules.loading: loading base/data/ir_demo_data.xml 
+2026-09-08 15:04:45,512 1 INFO soloodoo_hr_test odoo.modules.loading: loading base/security/base_groups.xml 
+2026-09-08 15:04:45,774 1 INFO soloodoo_hr_test odoo.modules.loading: loading base/security/base_security.xml 
+2026-09-08 15:04:45,886 1 INFO soloodoo_hr_test odoo.modules.loading: loading base/views/base_menus.xml 
+2026-09-08 15:04:45,948 1 INFO soloodoo_hr_test odoo.modules.loading: loading base/views/decimal_precision_views.xml 
+2026-09-08 15:04:45,961 1 INFO soloodoo_hr_test odoo.modules.loading: loading base/views/res_config_views.xml 
+2026-09-08 15:04:45,969 1 INFO soloodoo_hr_test odoo.modules.loading: loading base/data/res.country.state.csv 
+2026-09-08 15:04:46,345 1 INFO soloodoo_hr_test odoo.modules.loading: loading base/views/ir_actions_views.xml 
+2026-09-08 15:04:46,456 1 INFO soloodoo_hr_test odoo.modules.loading: loading base/views/ir_asset_views.xml 
+2026-09-08 15:04:46,475 1 INFO soloodoo_hr_test odoo.modules.loading: loading base/views/ir_config_parameter_views.xml 
+2026-09-08 15:04:46,490 1 INFO soloodoo_hr_test odoo.modules.loading: loading base/views/ir_cron_views.xml 
+2026-09-08 15:04:46,516 1 INFO soloodoo_hr_test odoo.modules.loading: loading base/views/ir_cron_trigger_views.xml 
+2026-09-08 15:04:46,532 1 INFO soloodoo_hr_test odoo.modules.loading: loading base/views/ir_filters_views.xml 
+2026-09-08 15:04:46,552 1 INFO soloodoo_hr_test odoo.modules.loading: loading base/views/ir_mail_server_views.xml 
+2026-09-08 15:04:46,569 1 INFO soloodoo_hr_test odoo.modules.loading: loading base/views/ir_model_views.xml 
+2026-09-08 15:04:46,709 1 INFO soloodoo_hr_test odoo.modules.loading: loading base/views/ir_attachment_views.xml 
+2026-09-08 15:04:46,729 1 INFO soloodoo_hr_test odoo.modules.loading: loading base/views/ir_rule_views.xml 
+2026-09-08 15:04:46,754 1 INFO soloodoo_hr_test odoo.modules.loading: loading base/views/ir_sequence_views.xml 
+2026-09-08 15:04:46,774 1 INFO soloodoo_hr_test odoo.modules.loading: loading base/views/ir_ui_menu_views.xml 
+2026-09-08 15:04:46,791 1 INFO soloodoo_hr_test odoo.modules.loading: loading base/views/ir_ui_view_views.xml 
+2026-09-08 15:04:46,834 1 INFO soloodoo_hr_test odoo.modules.loading: loading base/views/ir_default_views.xml 
+2026-09-08 15:04:46,852 1 INFO soloodoo_hr_test odoo.modules.loading: loading base/data/ir_cron_data.xml 
+2026-09-08 15:04:46,862 1 INFO soloodoo_hr_test odoo.modules.loading: loading base/report/ir_model_report.xml 
+2026-09-08 15:04:46,865 1 INFO soloodoo_hr_test odoo.modules.loading: loading base/report/ir_model_templates.xml 
+2026-09-08 15:04:46,872 1 INFO soloodoo_hr_test odoo.modules.loading: loading base/views/ir_logging_views.xml 
+2026-09-08 15:04:46,889 1 INFO soloodoo_hr_test odoo.modules.loading: loading base/views/ir_qweb_widget_templates.xml 
+2026-09-08 15:04:46,901 1 INFO soloodoo_hr_test odoo.modules.loading: loading base/views/ir_module_views.xml 
+2026-09-08 15:04:46,945 1 INFO soloodoo_hr_test odoo.modules.loading: loading base/data/ir_module_category_data.xml 
+2026-09-08 15:04:47,014 1 INFO soloodoo_hr_test odoo.modules.loading: loading base/data/ir_module_module.xml 
+2026-09-08 15:04:47,075 1 INFO soloodoo_hr_test odoo.modules.loading: loading base/report/ir_module_reports.xml 
+2026-09-08 15:04:47,079 1 INFO soloodoo_hr_test odoo.modules.loading: loading base/report/ir_module_report_templates.xml 
+2026-09-08 15:04:47,084 1 INFO soloodoo_hr_test odoo.modules.loading: loading base/wizard/base_module_update_views.xml 
+2026-09-08 15:04:47,096 1 INFO soloodoo_hr_test odoo.modules.loading: loading base/wizard/base_language_install_views.xml 
+2026-09-08 15:04:47,111 1 INFO soloodoo_hr_test odoo.modules.loading: loading base/wizard/base_import_language_views.xml 
+2026-09-08 15:04:47,121 1 INFO soloodoo_hr_test odoo.modules.loading: loading base/wizard/base_module_upgrade_views.xml 
+2026-09-08 15:04:47,138 1 INFO soloodoo_hr_test odoo.modules.loading: loading base/wizard/base_module_uninstall_views.xml 
+2026-09-08 15:04:47,144 1 INFO soloodoo_hr_test odoo.modules.loading: loading base/wizard/base_export_language_views.xml 
+2026-09-08 15:04:47,156 1 INFO soloodoo_hr_test odoo.modules.loading: loading base/wizard/base_partner_merge_views.xml 
+2026-09-08 15:04:47,168 1 INFO soloodoo_hr_test odoo.modules.loading: loading base/data/ir_demo_failure_data.xml 
+2026-09-08 15:04:47,181 1 INFO soloodoo_hr_test odoo.modules.loading: loading base/views/ir_profile_views.xml 
+2026-09-08 15:04:47,200 1 INFO soloodoo_hr_test odoo.modules.loading: loading base/views/res_company_views.xml 
+2026-09-08 15:04:47,219 1 INFO soloodoo_hr_test odoo.modules.loading: loading base/views/res_lang_views.xml 
+2026-09-08 15:04:47,239 1 INFO soloodoo_hr_test odoo.modules.loading: loading base/views/res_partner_views.xml 
+2026-09-08 15:04:47,337 1 INFO soloodoo_hr_test odoo.modules.loading: loading base/views/res_bank_views.xml 
+2026-09-08 15:04:47,366 1 INFO soloodoo_hr_test odoo.modules.loading: loading base/views/res_country_views.xml 
+2026-09-08 15:04:47,401 1 INFO soloodoo_hr_test odoo.modules.loading: loading base/views/res_currency_views.xml 
+2026-09-08 15:04:47,435 1 INFO soloodoo_hr_test odoo.modules.loading: loading base/views/res_users_views.xml 
+2026-09-08 15:04:47,535 1 INFO soloodoo_hr_test odoo.modules.loading: loading base/views/res_users_identitycheck_views.xml 
+2026-09-08 15:04:47,544 1 INFO soloodoo_hr_test odoo.modules.loading: loading base/views/ir_property_views.xml 
+2026-09-08 15:04:47,560 1 INFO soloodoo_hr_test odoo.modules.loading: loading base/views/res_config_settings_views.xml 
+2026-09-08 15:04:47,565 1 INFO soloodoo_hr_test odoo.modules.loading: loading base/views/report_paperformat_views.xml 
+2026-09-08 15:04:47,588 1 INFO soloodoo_hr_test odoo.modules.loading: loading base/security/ir.model.access.csv 
+2026-09-08 15:04:47,780 1 INFO soloodoo_hr_test odoo.modules.loading: Module base loaded in 6.03s, 7944 queries (+7944 other) 
+2026-09-08 15:04:47,780 1 INFO soloodoo_hr_test odoo.modules.loading: 1 modules loaded in 6.03s, 7944 queries (+7944 extra) 
+2026-09-08 15:04:47,793 1 INFO soloodoo_hr_test odoo.modules.loading: updating modules list 
+2026-09-08 15:04:47,794 1 INFO soloodoo_hr_test odoo.addons.base.models.ir_module: ALLOW access to module.update_list on [] to user __system__ #1 via n/a 
+2026-09-08 15:04:48,387 1 INFO soloodoo_hr_test odoo.addons.base.models.ir_module: ALLOW access to module.button_install on ['EL MOKRIF HR Extension'] to user __system__ #1 via n/a 
+2026-09-08 15:04:48,553 1 INFO soloodoo_hr_test odoo.modules.loading: loading 44 modules... 
+2026-09-08 15:04:48,553 1 INFO soloodoo_hr_test odoo.modules.loading: Loading module web (2/44) 
+2026-09-08 15:04:48,572 1 INFO soloodoo_hr_test odoo.modules.registry: module web: creating or updating database tables 
+2026-09-08 15:04:49,028 1 INFO soloodoo_hr_test odoo.modules.loading: loading web/security/ir.model.access.csv 
+2026-09-08 15:04:49,038 1 INFO soloodoo_hr_test odoo.modules.loading: loading web/views/webclient_templates.xml 
+2026-09-08 15:04:49,081 1 INFO soloodoo_hr_test odoo.modules.loading: loading web/views/report_templates.xml 
+2026-09-08 15:04:49,148 1 INFO soloodoo_hr_test odoo.modules.loading: loading web/views/base_document_layout_views.xml 
+2026-09-08 15:04:49,158 1 INFO soloodoo_hr_test odoo.modules.loading: loading web/views/partner_view.xml 
+2026-09-08 15:04:49,163 1 INFO soloodoo_hr_test odoo.modules.loading: loading web/views/speedscope_template.xml 
+2026-09-08 15:04:49,168 1 INFO soloodoo_hr_test odoo.modules.loading: loading web/views/neutralize_views.xml 
+2026-09-08 15:04:49,173 1 INFO soloodoo_hr_test odoo.modules.loading: loading web/data/ir_attachment.xml 
+2026-09-08 15:04:49,177 1 INFO soloodoo_hr_test odoo.modules.loading: loading web/data/report_layout.xml 
+2026-09-08 15:04:49,319 1 INFO soloodoo_hr_test odoo.modules.loading: Module web loaded in 0.77s, 996 queries (+996 other) 
+2026-09-08 15:04:49,319 1 INFO soloodoo_hr_test odoo.modules.loading: Loading module attachment_indexation (3/44) 
+2026-09-08 15:04:49,336 1 INFO soloodoo_hr_test odoo.modules.registry: module attachment_indexation: creating or updating database tables 
+2026-09-08 15:04:49,367 1 INFO soloodoo_hr_test odoo.modules.loading: Module attachment_indexation loaded in 0.05s, 29 queries (+29 other) 
+2026-09-08 15:04:49,367 1 INFO soloodoo_hr_test odoo.modules.loading: Loading module auth_totp (4/44) 
+2026-09-08 15:04:49,386 1 INFO soloodoo_hr_test odoo.modules.registry: module auth_totp: creating or updating database tables 
+2026-09-08 15:04:49,440 1 INFO soloodoo_hr_test odoo.modules.loading: loading auth_totp/security/security.xml 
+2026-09-08 15:04:49,465 1 INFO soloodoo_hr_test odoo.modules.loading: loading auth_totp/security/ir.model.access.csv 
+2026-09-08 15:04:49,474 1 INFO soloodoo_hr_test odoo.modules.loading: loading auth_totp/data/ir_action_data.xml 
+2026-09-08 15:04:49,479 1 INFO soloodoo_hr_test odoo.modules.loading: loading auth_totp/views/res_users_views.xml 
+2026-09-08 15:04:49,501 1 INFO soloodoo_hr_test odoo.modules.loading: loading auth_totp/views/templates.xml 
+2026-09-08 15:04:49,506 1 INFO soloodoo_hr_test odoo.modules.loading: loading auth_totp/wizard/auth_totp_wizard_views.xml 
+2026-09-08 15:04:49,527 1 INFO soloodoo_hr_test odoo.modules.loading: Module auth_totp loaded in 0.16s, 179 queries (+179 other) 
+2026-09-08 15:04:49,527 1 INFO soloodoo_hr_test odoo.modules.loading: Loading module base_import (5/44) 
+2026-09-08 15:04:49,558 1 INFO soloodoo_hr_test odoo.modules.registry: module base_import: creating or updating database tables 
+2026-09-08 15:04:49,975 1 INFO soloodoo_hr_test odoo.modules.loading: loading base_import/security/ir.model.access.csv 
+2026-09-08 15:04:49,995 1 INFO soloodoo_hr_test odoo.modules.loading: Module base_import loaded in 0.47s, 808 queries (+808 other) 
+2026-09-08 15:04:49,995 1 INFO soloodoo_hr_test odoo.modules.loading: Loading module base_import_module (6/44) 
+2026-09-08 15:04:50,011 1 INFO soloodoo_hr_test odoo.modules.registry: module base_import_module: creating or updating database tables 
+2026-09-08 15:04:50,071 1 INFO soloodoo_hr_test odoo.modules.loading: loading base_import_module/security/ir.model.access.csv 
+2026-09-08 15:04:50,082 1 INFO soloodoo_hr_test odoo.modules.loading: loading base_import_module/views/base_import_module_view.xml 
+2026-09-08 15:04:50,099 1 INFO soloodoo_hr_test odoo.modules.loading: loading base_import_module/views/ir_module_views.xml 
+2026-09-08 15:04:50,147 1 INFO soloodoo_hr_test odoo.modules.loading: Module base_import_module loaded in 0.15s, 154 queries (+154 other) 
+2026-09-08 15:04:50,148 1 INFO soloodoo_hr_test odoo.modules.loading: Loading module base_setup (7/44) 
+2026-09-08 15:04:50,166 1 INFO soloodoo_hr_test odoo.modules.registry: module base_setup: creating or updating database tables 
+2026-09-08 15:04:50,215 1 INFO soloodoo_hr_test odoo.modules.loading: loading base_setup/data/base_setup_data.xml 
+2026-09-08 15:04:50,220 1 INFO soloodoo_hr_test odoo.modules.loading: loading base_setup/views/res_config_settings_views.xml 
+2026-09-08 15:04:50,245 1 INFO soloodoo_hr_test odoo.modules.loading: loading base_setup/views/res_partner_views.xml 
+2026-09-08 15:04:50,265 1 INFO soloodoo_hr_test odoo.modules.loading: Module base_setup loaded in 0.12s, 143 queries (+143 other) 
+2026-09-08 15:04:50,265 1 INFO soloodoo_hr_test odoo.modules.loading: Loading module bus (8/44) 
+2026-09-08 15:04:50,278 1 INFO soloodoo_hr_test odoo.modules.registry: module bus: creating or updating database tables 
+2026-09-08 15:04:50,348 1 INFO soloodoo_hr_test odoo.modules.loading: loading bus/security/ir.model.access.csv 
+2026-09-08 15:04:50,416 1 INFO soloodoo_hr_test odoo.modules.loading: Module bus loaded in 0.15s, 119 queries (+119 other) 
+2026-09-08 15:04:50,416 1 INFO soloodoo_hr_test odoo.modules.loading: Loading module http_routing (9/44) 
+2026-09-08 15:04:50,430 1 INFO soloodoo_hr_test odoo.modules.registry: module http_routing: creating or updating database tables 
+2026-09-08 15:04:50,440 1 INFO soloodoo_hr_test odoo.modules.loading: loading http_routing/views/http_routing_template.xml 
+2026-09-08 15:04:50,469 1 INFO soloodoo_hr_test odoo.modules.loading: loading http_routing/views/res_lang_views.xml 
+2026-09-08 15:04:50,489 1 INFO soloodoo_hr_test odoo.modules.loading: Module http_routing loaded in 0.07s, 71 queries (+71 other) 
+2026-09-08 15:04:50,489 1 INFO soloodoo_hr_test odoo.modules.loading: Loading module onboarding (10/44) 
+2026-09-08 15:04:50,506 1 INFO soloodoo_hr_test odoo.modules.registry: module onboarding: creating or updating database tables 
+2026-09-08 15:04:50,621 1 INFO soloodoo_hr_test odoo.modules.loading: loading onboarding/views/onboarding_templates.xml 
+2026-09-08 15:04:50,636 1 INFO soloodoo_hr_test odoo.modules.loading: loading onboarding/views/onboarding_views.xml 
+2026-09-08 15:04:50,663 1 INFO soloodoo_hr_test odoo.modules.loading: loading onboarding/views/onboarding_menus.xml 
+2026-09-08 15:04:50,674 1 INFO soloodoo_hr_test odoo.modules.loading: loading onboarding/security/ir.model.access.csv 
+2026-09-08 15:04:50,722 1 INFO soloodoo_hr_test odoo.modules.loading: Module onboarding loaded in 0.23s, 237 queries (+237 other) 
+2026-09-08 15:04:50,722 1 INFO soloodoo_hr_test odoo.modules.loading: Loading module resource (11/44) 
+2026-09-08 15:04:50,746 1 INFO soloodoo_hr_test odoo.modules.registry: module resource: creating or updating database tables 
+2026-09-08 15:04:50,878 1 INFO soloodoo_hr_test odoo.modules.loading: loading resource/data/resource_data.xml 
+2026-09-08 15:04:50,900 1 INFO soloodoo_hr_test odoo.modules.loading: loading resource/security/ir.model.access.csv 
+2026-09-08 15:04:50,910 1 INFO soloodoo_hr_test odoo.modules.loading: loading resource/security/resource_security.xml 
+2026-09-08 15:04:50,934 1 INFO soloodoo_hr_test odoo.modules.loading: loading resource/views/resource_resource_views.xml 
+2026-09-08 15:04:50,954 1 INFO soloodoo_hr_test odoo.modules.loading: loading resource/views/resource_calendar_leaves_views.xml 
+2026-09-08 15:04:50,981 1 INFO soloodoo_hr_test odoo.modules.loading: loading resource/views/resource_calendar_attendance_views.xml 
+2026-09-08 15:04:50,990 1 INFO soloodoo_hr_test odoo.modules.loading: loading resource/views/resource_calendar_views.xml 
+2026-09-08 15:04:51,009 1 INFO soloodoo_hr_test odoo.modules.loading: loading resource/views/menuitems.xml 
+2026-09-08 15:04:51,037 1 INFO soloodoo_hr_test odoo.modules.loading: Module resource loaded in 0.32s, 407 queries (+407 other) 
+2026-09-08 15:04:51,038 1 INFO soloodoo_hr_test odoo.modules.loading: Loading module utm (12/44) 
+2026-09-08 15:04:51,058 1 INFO soloodoo_hr_test odoo.modules.registry: module utm: creating or updating database tables 
+2026-09-08 15:04:51,170 1 INFO soloodoo_hr_test odoo.modules.loading: loading utm/data/utm_medium_data.xml 
+2026-09-08 15:04:51,194 1 INFO soloodoo_hr_test odoo.modules.loading: loading utm/data/utm_source_data.xml 
+2026-09-08 15:04:51,213 1 INFO soloodoo_hr_test odoo.modules.loading: loading utm/data/utm_stage_data.xml 
+2026-09-08 15:04:51,217 1 INFO soloodoo_hr_test odoo.modules.loading: loading utm/data/utm_tag_data.xml 
+2026-09-08 15:04:51,220 1 INFO soloodoo_hr_test odoo.modules.loading: loading utm/views/utm_campaign_views.xml 
+2026-09-08 15:04:51,245 1 INFO soloodoo_hr_test odoo.modules.loading: loading utm/views/utm_medium_views.xml 
+2026-09-08 15:04:51,259 1 INFO soloodoo_hr_test odoo.modules.loading: loading utm/views/utm_source_views.xml 
+2026-09-08 15:04:51,270 1 INFO soloodoo_hr_test odoo.modules.loading: loading utm/views/utm_stage_views.xml 
+2026-09-08 15:04:51,284 1 INFO soloodoo_hr_test odoo.modules.loading: loading utm/views/utm_tag_views.xml 
+2026-09-08 15:04:51,292 1 INFO soloodoo_hr_test odoo.modules.loading: loading utm/views/utm_menus.xml 
+2026-09-08 15:04:51,317 1 INFO soloodoo_hr_test odoo.modules.loading: loading utm/security/ir.model.access.csv 
+2026-09-08 15:04:51,348 1 INFO soloodoo_hr_test odoo.modules.loading: Module utm loaded in 0.31s, 405 queries (+405 other) 
+2026-09-08 15:04:51,348 1 INFO soloodoo_hr_test odoo.modules.loading: Loading module web_hierarchy (13/44) 
+2026-09-08 15:04:51,371 1 INFO soloodoo_hr_test odoo.modules.registry: module web_hierarchy: creating or updating database tables 
+2026-09-08 15:04:51,851 1 INFO soloodoo_hr_test odoo.modules.loading: Module web_hierarchy loaded in 0.50s, 901 queries (+901 other) 
+2026-09-08 15:04:51,851 1 INFO soloodoo_hr_test odoo.modules.loading: Loading module web_tour (14/44) 
+2026-09-08 15:04:51,868 1 INFO soloodoo_hr_test odoo.modules.registry: module web_tour: creating or updating database tables 
+2026-09-08 15:04:51,897 1 INFO soloodoo_hr_test odoo.modules.loading: loading web_tour/security/ir.model.access.csv 
+2026-09-08 15:04:51,907 1 INFO soloodoo_hr_test odoo.modules.loading: loading web_tour/security/ir.rule.csv 
+2026-09-08 15:04:51,918 1 INFO soloodoo_hr_test odoo.modules.loading: loading web_tour/views/tour_views.xml 
+2026-09-08 15:04:51,952 1 INFO soloodoo_hr_test odoo.modules.loading: Module web_tour loaded in 0.10s, 104 queries (+104 other) 
+2026-09-08 15:04:51,952 1 INFO soloodoo_hr_test odoo.modules.loading: Loading module iap (15/44) 
+2026-09-08 15:04:51,968 1 INFO soloodoo_hr_test odoo.modules.registry: module iap: creating or updating database tables 
+2026-09-08 15:04:52,026 1 INFO soloodoo_hr_test odoo.modules.loading: loading iap/security/ir.model.access.csv 
+2026-09-08 15:04:52,036 1 INFO soloodoo_hr_test odoo.modules.loading: loading iap/security/ir_rule.xml 
+2026-09-08 15:04:52,044 1 INFO soloodoo_hr_test odoo.modules.loading: loading iap/views/iap_views.xml 
+2026-09-08 15:04:52,065 1 INFO soloodoo_hr_test odoo.modules.loading: loading iap/views/res_config_settings.xml 
+2026-09-08 15:04:52,091 1 INFO soloodoo_hr_test odoo.modules.loading: Module iap loaded in 0.14s, 151 queries (+151 other) 
+2026-09-08 15:04:52,091 1 INFO soloodoo_hr_test odoo.modules.loading: Loading module mail (16/44) 
+2026-09-08 15:04:52,129 1 INFO soloodoo_hr_test odoo.modules.registry: module mail: creating or updating database tables 
+2026-09-08 15:04:52,346 1 INFO soloodoo_hr_test odoo.models: Prepare computation of ir.actions.server.partner_ids 
+2026-09-08 15:04:52,347 1 INFO soloodoo_hr_test odoo.models: Prepare computation of ir.actions.server.template_id 
+2026-09-08 15:04:52,347 1 INFO soloodoo_hr_test odoo.models: Prepare computation of ir.actions.server.activity_type_id 
+2026-09-08 15:04:52,347 1 INFO soloodoo_hr_test odoo.models: Prepare computation of ir.actions.server.activity_date_deadline_range 
+2026-09-08 15:04:52,347 1 INFO soloodoo_hr_test odoo.models: Prepare computation of ir.actions.server.activity_user_id 
+2026-09-08 15:04:52,347 1 INFO soloodoo_hr_test odoo.models: Prepare computation of ir.actions.server.mail_post_method 
+2026-09-08 15:04:52,347 1 INFO soloodoo_hr_test odoo.models: Prepare computation of ir.actions.server.activity_summary 
+2026-09-08 15:04:52,347 1 INFO soloodoo_hr_test odoo.models: Prepare computation of ir.actions.server.activity_date_deadline_range_type 
+2026-09-08 15:04:52,347 1 INFO soloodoo_hr_test odoo.models: Prepare computation of ir.actions.server.activity_user_type 
+2026-09-08 15:04:52,347 1 INFO soloodoo_hr_test odoo.models: Prepare computation of ir.actions.server.activity_user_field_name 
+2026-09-08 15:04:52,347 1 INFO soloodoo_hr_test odoo.models: Prepare computation of ir.actions.server.activity_note 
+2026-09-08 15:04:52,348 1 INFO soloodoo_hr_test odoo.models: Prepare computation of ir.actions.server.mail_post_autofollow 
+2026-09-08 15:04:52,384 1 INFO soloodoo_hr_test odoo.models: Prepare computation of res.company.email_primary_color 
+2026-09-08 15:04:52,384 1 INFO soloodoo_hr_test odoo.models: Prepare computation of res.company.email_secondary_color 
+2026-09-08 15:04:52,398 1 INFO soloodoo_hr_test odoo.models: Prepare computation of res.users.notification_type 
+2026-09-08 15:04:52,476 1 INFO soloodoo_hr_test odoo.models: Prepare computation of res.partner.email_normalized 
+<string>:38: (ERROR/3) Unexpected indentation.
+<string>:43: (WARNING/2) Block quote ends without a blank line; unexpected unindent.
+2026-09-08 15:04:53,761 1 INFO soloodoo_hr_test odoo.modules.loading: loading mail/data/mail_groups.xml 
+2026-09-08 15:04:53,861 1 INFO soloodoo_hr_test odoo.modules.loading: loading mail/wizard/mail_activity_schedule_views.xml 
+2026-09-08 15:04:53,868 1 INFO soloodoo_hr_test odoo.modules.loading: loading mail/wizard/mail_blacklist_remove_views.xml 
+2026-09-08 15:04:53,873 1 INFO soloodoo_hr_test odoo.modules.loading: loading mail/wizard/mail_compose_message_views.xml 
+2026-09-08 15:04:53,891 1 INFO soloodoo_hr_test odoo.modules.loading: loading mail/wizard/mail_resend_message_views.xml 
+2026-09-08 15:04:53,902 1 INFO soloodoo_hr_test odoo.modules.loading: loading mail/wizard/mail_resend_partner_views.xml 
+2026-09-08 15:04:53,910 1 INFO soloodoo_hr_test odoo.modules.loading: loading mail/wizard/mail_template_preview_views.xml 
+2026-09-08 15:04:53,919 1 INFO soloodoo_hr_test odoo.modules.loading: loading mail/wizard/mail_wizard_invite_views.xml 
+2026-09-08 15:04:53,925 1 INFO soloodoo_hr_test odoo.modules.loading: loading mail/wizard/mail_template_reset_views.xml 
+2026-09-08 15:04:53,934 1 INFO soloodoo_hr_test odoo.modules.loading: loading mail/views/fetchmail_views.xml 
+2026-09-08 15:04:53,952 1 INFO soloodoo_hr_test odoo.modules.loading: loading mail/views/mail_message_subtype_views.xml 
+2026-09-08 15:04:53,964 1 INFO soloodoo_hr_test odoo.modules.loading: loading mail/views/mail_tracking_value_views.xml 
+2026-09-08 15:04:53,976 1 INFO soloodoo_hr_test odoo.modules.loading: loading mail/views/mail_notification_views.xml 
+2026-09-08 15:04:53,987 1 INFO soloodoo_hr_test odoo.modules.loading: loading mail/views/mail_message_views.xml 
+2026-09-08 15:04:54,014 1 INFO soloodoo_hr_test odoo.modules.loading: loading mail/views/mail_message_schedule_views.xml 
+2026-09-08 15:04:54,028 1 INFO soloodoo_hr_test odoo.modules.loading: loading mail/views/mail_mail_views.xml 
+2026-09-08 15:04:54,052 1 INFO soloodoo_hr_test odoo.modules.loading: loading mail/views/mail_followers_views.xml 
+2026-09-08 15:04:54,062 1 INFO soloodoo_hr_test odoo.modules.loading: loading mail/views/mail_ice_server_views.xml 
+2026-09-08 15:04:54,074 1 INFO soloodoo_hr_test odoo.modules.loading: loading mail/views/discuss_channel_member_views.xml 
+2026-09-08 15:04:54,084 1 INFO soloodoo_hr_test odoo.modules.loading: loading mail/views/discuss_channel_rtc_session_views.xml 
+2026-09-08 15:04:54,098 1 INFO soloodoo_hr_test odoo.modules.loading: loading mail/views/mail_link_preview_views.xml 
+2026-09-08 15:04:54,108 1 INFO soloodoo_hr_test odoo.modules.loading: loading mail/views/discuss/discuss_gif_favorite_views.xml 
+2026-09-08 15:04:54,119 1 INFO soloodoo_hr_test odoo.modules.loading: loading mail/views/discuss_channel_views.xml 
+2026-09-08 15:04:54,141 1 INFO soloodoo_hr_test odoo.modules.loading: loading mail/views/mail_shortcode_views.xml 
+2026-09-08 15:04:54,156 1 INFO soloodoo_hr_test odoo.modules.loading: loading mail/views/mail_activity_views.xml 
+2026-09-08 15:04:54,287 1 INFO soloodoo_hr_test odoo.modules.loading: loading mail/views/mail_activity_plan_views.xml 
+2026-09-08 15:04:54,312 1 INFO soloodoo_hr_test odoo.modules.loading: loading mail/views/mail_activity_plan_template_views.xml 
+2026-09-08 15:04:54,321 1 INFO soloodoo_hr_test odoo.modules.loading: loading mail/views/res_config_settings_views.xml 
+2026-09-08 15:04:54,342 1 INFO soloodoo_hr_test odoo.modules.loading: loading mail/data/ir_config_parameter_data.xml 
+2026-09-08 15:04:54,346 1 INFO soloodoo_hr_test odoo.modules.loading: loading mail/data/res_partner_data.xml 
+2026-09-08 15:04:54,414 1 INFO soloodoo_hr_test odoo.modules.loading: loading mail/data/mail_message_subtype_data.xml 
+2026-09-08 15:04:54,425 1 INFO soloodoo_hr_test odoo.modules.loading: loading mail/data/mail_templates_chatter.xml 
+2026-09-08 15:04:54,441 1 INFO soloodoo_hr_test odoo.modules.loading: loading mail/data/mail_templates_email_layouts.xml 
+2026-09-08 15:04:54,458 1 INFO soloodoo_hr_test odoo.modules.loading: loading mail/data/mail_templates_mailgateway.xml 
+2026-09-08 15:04:54,469 1 INFO soloodoo_hr_test odoo.modules.loading: loading mail/data/discuss_channel_data.xml 
+2026-09-08 15:04:54,500 1 INFO soloodoo_hr_test odoo.modules.loading: loading mail/data/mail_activity_data.xml 
+2026-09-08 15:04:54,522 1 INFO soloodoo_hr_test odoo.modules.loading: loading mail/data/security_notifications_templates.xml 
+2026-09-08 15:04:54,527 1 INFO soloodoo_hr_test odoo.modules.loading: loading mail/data/ir_cron_data.xml 
+2026-09-08 15:04:54,567 1 INFO soloodoo_hr_test odoo.modules.loading: loading mail/security/mail_security.xml 
+2026-09-08 15:04:54,707 1 INFO soloodoo_hr_test odoo.modules.loading: loading mail/security/ir.model.access.csv 
+2026-09-08 15:04:54,762 1 INFO soloodoo_hr_test odoo.modules.loading: loading mail/views/discuss_public_templates.xml 
+2026-09-08 15:04:54,768 1 INFO soloodoo_hr_test odoo.modules.loading: loading mail/views/mail_alias_domain_views.xml 
+2026-09-08 15:04:54,784 1 INFO soloodoo_hr_test odoo.modules.loading: loading mail/views/mail_alias_views.xml 
+2026-09-08 15:04:54,801 1 INFO soloodoo_hr_test odoo.modules.loading: loading mail/views/mail_gateway_allowed_views.xml 
+2026-09-08 15:04:54,811 1 INFO soloodoo_hr_test odoo.modules.loading: loading mail/views/mail_guest_views.xml 
+2026-09-08 15:04:54,823 1 INFO soloodoo_hr_test odoo.modules.loading: loading mail/views/mail_message_reaction_views.xml 
+2026-09-08 15:04:54,833 1 INFO soloodoo_hr_test odoo.modules.loading: loading mail/views/mail_templates_public.xml 
+2026-09-08 15:04:54,842 1 INFO soloodoo_hr_test odoo.modules.loading: loading mail/views/res_users_views.xml 
+2026-09-08 15:04:54,858 1 INFO soloodoo_hr_test odoo.modules.loading: loading mail/views/res_users_settings_views.xml 
+2026-09-08 15:04:54,868 1 INFO soloodoo_hr_test odoo.modules.loading: loading mail/views/mail_template_views.xml 
+2026-09-08 15:04:54,891 1 INFO soloodoo_hr_test odoo.modules.loading: loading mail/views/ir_actions_server_views.xml 
+2026-09-08 15:04:54,900 1 INFO soloodoo_hr_test odoo.modules.loading: loading mail/views/ir_model_views.xml 
+2026-09-08 15:04:54,921 1 INFO soloodoo_hr_test odoo.modules.loading: loading mail/views/res_partner_views.xml 
+2026-09-08 15:04:54,966 1 INFO soloodoo_hr_test odoo.modules.loading: loading mail/views/mail_blacklist_views.xml 
+2026-09-08 15:04:54,981 1 INFO soloodoo_hr_test odoo.modules.loading: loading mail/views/mail_menus.xml 
+2026-09-08 15:04:55,100 1 INFO soloodoo_hr_test odoo.modules.loading: loading mail/views/res_company_views.xml 
+2026-09-08 15:04:55,149 1 INFO soloodoo_hr_test odoo.modules.loading: Module mail loaded in 3.06s, 4174 queries (+4175 other) 
+2026-09-08 15:04:55,150 1 INFO soloodoo_hr_test odoo.modules.loading: Loading module web_editor (17/44) 
+2026-09-08 15:04:55,197 1 INFO soloodoo_hr_test odoo.modules.registry: module web_editor: creating or updating database tables 
+2026-09-08 15:04:55,921 1 INFO soloodoo_hr_test odoo.modules.loading: loading web_editor/security/ir.model.access.csv 
+2026-09-08 15:04:55,933 1 INFO soloodoo_hr_test odoo.modules.loading: loading web_editor/data/editor_assets.xml 
+2026-09-08 15:04:55,939 1 INFO soloodoo_hr_test odoo.modules.loading: loading web_editor/views/editor.xml 
+2026-09-08 15:04:55,953 1 INFO soloodoo_hr_test odoo.modules.loading: loading web_editor/views/snippets.xml 
+2026-09-08 15:04:56,001 1 INFO soloodoo_hr_test odoo.modules.loading: Module web_editor loaded in 0.85s, 1382 queries (+1382 other) 
+2026-09-08 15:04:56,001 1 INFO soloodoo_hr_test odoo.modules.loading: Loading module auth_signup (18/44) 
+2026-09-08 15:04:56,030 1 INFO soloodoo_hr_test odoo.modules.registry: module auth_signup: creating or updating database tables 
+2026-09-08 15:04:56,093 1 INFO soloodoo_hr_test odoo.modules.loading: loading auth_signup/data/ir_config_parameter_data.xml 
+2026-09-08 15:04:56,100 1 INFO soloodoo_hr_test odoo.modules.loading: loading auth_signup/data/ir_cron_data.xml 
+2026-09-08 15:04:56,108 1 INFO soloodoo_hr_test odoo.modules.loading: loading auth_signup/data/mail_template_data.xml 
+2026-09-08 15:04:56,119 1 INFO soloodoo_hr_test odoo.modules.loading: loading auth_signup/views/res_config_settings_views.xml 
+2026-09-08 15:04:56,131 1 INFO soloodoo_hr_test odoo.modules.loading: loading auth_signup/views/res_users_views.xml 
+2026-09-08 15:04:56,152 1 INFO soloodoo_hr_test odoo.modules.loading: loading auth_signup/views/auth_signup_login_templates.xml 
+2026-09-08 15:04:56,171 1 INFO soloodoo_hr_test odoo.modules.loading: loading auth_signup/views/auth_signup_templates_email.xml 
+2026-09-08 15:04:56,181 1 INFO soloodoo_hr_test odoo.modules.loading: loading auth_signup/views/webclient_templates.xml 
+2026-09-08 15:04:56,206 1 INFO soloodoo_hr_test odoo.modules.loading: Module auth_signup loaded in 0.21s, 202 queries (+202 other) 
+2026-09-08 15:04:56,206 1 INFO soloodoo_hr_test odoo.modules.loading: Loading module auth_totp_mail (19/44) 
+2026-09-08 15:04:56,236 1 INFO soloodoo_hr_test odoo.modules.registry: module auth_totp_mail: creating or updating database tables 
+2026-09-08 15:04:56,269 1 INFO soloodoo_hr_test odoo.modules.loading: loading auth_totp_mail/data/ir_action_data.xml 
+2026-09-08 15:04:56,287 1 INFO soloodoo_hr_test odoo.modules.loading: loading auth_totp_mail/data/mail_template_data.xml 
+2026-09-08 15:04:56,293 1 INFO soloodoo_hr_test odoo.modules.loading: loading auth_totp_mail/data/security_notifications_template.xml 
+2026-09-08 15:04:56,302 1 INFO soloodoo_hr_test odoo.modules.loading: loading auth_totp_mail/views/res_users_views.xml 
+2026-09-08 15:04:56,339 1 INFO soloodoo_hr_test odoo.modules.loading: Module auth_totp_mail loaded in 0.13s, 112 queries (+112 other) 
+2026-09-08 15:04:56,339 1 INFO soloodoo_hr_test odoo.modules.loading: Loading module base_install_request (20/44) 
+2026-09-08 15:04:56,368 1 INFO soloodoo_hr_test odoo.modules.registry: module base_install_request: creating or updating database tables 
+2026-09-08 15:04:56,430 1 INFO soloodoo_hr_test odoo.modules.loading: loading base_install_request/security/ir.model.access.csv 
+2026-09-08 15:04:56,445 1 INFO soloodoo_hr_test odoo.modules.loading: loading base_install_request/wizard/base_module_install_request_views.xml 
+2026-09-08 15:04:56,459 1 INFO soloodoo_hr_test odoo.modules.loading: loading base_install_request/data/mail_template_data.xml 
+2026-09-08 15:04:56,465 1 INFO soloodoo_hr_test odoo.modules.loading: loading base_install_request/data/mail_templates_module_install.xml 
+2026-09-08 15:04:56,474 1 INFO soloodoo_hr_test odoo.modules.loading: loading base_install_request/views/ir_module_module_views.xml 
+2026-09-08 15:04:56,515 1 INFO soloodoo_hr_test odoo.modules.loading: Module base_install_request loaded in 0.18s, 144 queries (+144 other) 
+2026-09-08 15:04:56,515 1 INFO soloodoo_hr_test odoo.modules.loading: Loading module calendar (21/44) 
+2026-09-08 15:04:56,564 1 INFO soloodoo_hr_test odoo.modules.registry: module calendar: creating or updating database tables 
+2026-09-08 15:04:56,871 1 INFO soloodoo_hr_test odoo.modules.loading: loading calendar/security/ir.model.access.csv 
+2026-09-08 15:04:56,892 1 INFO soloodoo_hr_test odoo.modules.loading: loading calendar/security/calendar_security.xml 
+2026-09-08 15:04:56,916 1 INFO soloodoo_hr_test odoo.modules.loading: loading calendar/data/calendar_cron.xml 
+2026-09-08 15:04:56,926 1 INFO soloodoo_hr_test odoo.modules.loading: loading calendar/data/mail_template_data.xml 
+2026-09-08 15:04:56,941 1 INFO soloodoo_hr_test odoo.modules.loading: loading calendar/data/calendar_data.xml 
+2026-09-08 15:04:56,959 1 INFO soloodoo_hr_test odoo.modules.loading: loading calendar/data/calendar_onboarding_data.xml 
+2026-09-08 15:04:56,977 1 INFO soloodoo_hr_test odoo.modules.loading: loading calendar/data/mail_activity_type_data.xml 
+2026-09-08 15:04:56,984 1 INFO soloodoo_hr_test odoo.modules.loading: loading calendar/data/mail_message_subtype_data.xml 
+2026-09-08 15:04:56,988 1 INFO soloodoo_hr_test odoo.modules.loading: loading calendar/views/mail_activity_views.xml 
+2026-09-08 15:04:57,001 1 INFO soloodoo_hr_test odoo.modules.loading: loading calendar/views/calendar_templates.xml 
+2026-09-08 15:04:57,008 1 INFO soloodoo_hr_test odoo.modules.loading: loading calendar/views/calendar_views.xml 
+2026-09-08 15:04:57,155 1 INFO soloodoo_hr_test odoo.modules.loading: loading calendar/views/res_config_settings_views.xml 
+2026-09-08 15:04:57,168 1 INFO soloodoo_hr_test odoo.modules.loading: loading calendar/views/res_partner_views.xml 
+2026-09-08 15:04:57,187 1 INFO soloodoo_hr_test odoo.modules.loading: loading calendar/wizard/calendar_provider_config.xml 
+2026-09-08 15:04:57,193 1 INFO soloodoo_hr_test odoo.modules.loading: loading calendar/wizard/calendar_popover_delete_wizard.xml 
+2026-09-08 15:04:57,198 1 INFO soloodoo_hr_test odoo.modules.loading: loading calendar/wizard/mail_activity_schedule_views.xml 
+2026-09-08 15:04:57,240 1 INFO soloodoo_hr_test odoo.modules.loading: Module calendar loaded in 0.73s, 759 queries (+759 other) 
+2026-09-08 15:04:57,241 1 INFO soloodoo_hr_test odoo.modules.loading: Loading module google_gmail (22/44) 
+2026-09-08 15:04:57,274 1 INFO soloodoo_hr_test odoo.modules.registry: module google_gmail: creating or updating database tables 
+2026-09-08 15:04:57,395 1 INFO soloodoo_hr_test odoo.modules.loading: loading google_gmail/views/fetchmail_server_views.xml 
+2026-09-08 15:04:57,408 1 INFO soloodoo_hr_test odoo.modules.loading: loading google_gmail/views/ir_mail_server_views.xml 
+2026-09-08 15:04:57,419 1 INFO soloodoo_hr_test odoo.modules.loading: loading google_gmail/views/res_config_settings_views.xml 
+2026-09-08 15:04:57,460 1 INFO soloodoo_hr_test odoo.modules.loading: Module google_gmail loaded in 0.22s, 118 queries (+118 other) 
+2026-09-08 15:04:57,461 1 INFO soloodoo_hr_test odoo.modules.loading: Loading module iap_mail (23/44) 
+2026-09-08 15:04:57,493 1 INFO soloodoo_hr_test odoo.modules.registry: module iap_mail: creating or updating database tables 
+2026-09-08 15:04:57,510 1 INFO soloodoo_hr_test odoo.modules.loading: loading iap_mail/data/mail_templates.xml 
+2026-09-08 15:04:57,541 1 INFO soloodoo_hr_test odoo.modules.loading: Module iap_mail loaded in 0.08s, 40 queries (+40 other) 
+2026-09-08 15:04:57,542 1 INFO soloodoo_hr_test odoo.modules.loading: Loading module mail_bot (24/44) 
+2026-09-08 15:04:57,574 1 INFO soloodoo_hr_test odoo.modules.registry: module mail_bot: creating or updating database tables 
+2026-09-08 15:04:57,655 1 INFO soloodoo_hr_test odoo.modules.loading: loading mail_bot/views/res_users_views.xml 
+2026-09-08 15:04:57,678 1 INFO soloodoo_hr_test odoo.modules.loading: loading mail_bot/data/mailbot_data.xml 
+2026-09-08 15:04:57,693 1 INFO soloodoo_hr_test odoo.modules.loading: Module mail_bot loaded in 0.15s, 165 queries (+165 other) 
+2026-09-08 15:04:57,693 1 INFO soloodoo_hr_test odoo.modules.loading: Loading module phone_validation (25/44) 
+2026-09-08 15:04:57,755 1 INFO soloodoo_hr_test odoo.modules.registry: module phone_validation: creating or updating database tables 
+2026-09-08 15:04:58,522 1 INFO soloodoo_hr_test odoo.modules.loading: loading phone_validation/security/ir.model.access.csv 
+2026-09-08 15:04:58,534 1 INFO soloodoo_hr_test odoo.modules.loading: loading phone_validation/views/phone_blacklist_views.xml 
+2026-09-08 15:04:58,561 1 INFO soloodoo_hr_test odoo.modules.loading: loading phone_validation/wizard/phone_blacklist_remove_view.xml 
+2026-09-08 15:04:58,582 1 INFO soloodoo_hr_test odoo.modules.loading: Module phone_validation loaded in 0.89s, 1479 queries (+1479 other) 
+2026-09-08 15:04:58,582 1 INFO soloodoo_hr_test odoo.modules.loading: Loading module privacy_lookup (26/44) 
+2026-09-08 15:04:58,615 1 INFO soloodoo_hr_test odoo.modules.registry: module privacy_lookup: creating or updating database tables 
+2026-09-08 15:04:58,718 1 INFO soloodoo_hr_test odoo.modules.loading: loading privacy_lookup/wizard/privacy_lookup_wizard_views.xml 
+2026-09-08 15:04:58,751 1 INFO soloodoo_hr_test odoo.modules.loading: loading privacy_lookup/views/privacy_log_views.xml 
+2026-09-08 15:04:58,773 1 INFO soloodoo_hr_test odoo.modules.loading: loading privacy_lookup/security/ir.model.access.csv 
+2026-09-08 15:04:58,791 1 INFO soloodoo_hr_test odoo.modules.loading: loading privacy_lookup/data/ir_actions_server_data.xml 
+2026-09-08 15:04:58,818 1 INFO soloodoo_hr_test odoo.modules.loading: Module privacy_lookup loaded in 0.24s, 247 queries (+247 other) 
+2026-09-08 15:04:58,819 1 INFO soloodoo_hr_test odoo.modules.loading: Loading module web_unsplash (27/44) 
+2026-09-08 15:04:58,852 1 INFO soloodoo_hr_test odoo.modules.registry: module web_unsplash: creating or updating database tables 
+2026-09-08 15:04:58,897 1 INFO soloodoo_hr_test odoo.modules.loading: loading web_unsplash/views/res_config_settings_view.xml 
+2026-09-08 15:04:58,931 1 INFO soloodoo_hr_test odoo.modules.loading: Module web_unsplash loaded in 0.11s, 98 queries (+98 other) 
+2026-09-08 15:04:58,931 1 INFO soloodoo_hr_test odoo.modules.loading: Loading module hr (28/44) 
+2026-09-08 15:04:58,992 1 INFO soloodoo_hr_test odoo.modules.registry: module hr: creating or updating database tables 
+<string>:49: (WARNING/2) Title underline too short.
+System.Management.Automation.RemoteException
+Time Off Management
+-----------------
+<string>:49: (WARNING/2) Title underline too short.
+System.Management.Automation.RemoteException
+Time Off Management
+-----------------
+2026-09-08 15:05:00,101 1 INFO soloodoo_hr_test odoo.modules.loading: loading hr/security/hr_security.xml 
+2026-09-08 15:05:00,270 1 INFO soloodoo_hr_test odoo.modules.loading: loading hr/security/ir.model.access.csv 
+2026-09-08 15:05:00,290 1 INFO soloodoo_hr_test odoo.modules.loading: loading hr/wizard/hr_departure_wizard_views.xml 
+2026-09-08 15:05:00,299 1 INFO soloodoo_hr_test odoo.modules.loading: loading hr/wizard/mail_activity_schedule_views.xml 
+2026-09-08 15:05:00,309 1 INFO soloodoo_hr_test odoo.modules.loading: loading hr/views/mail_activity_plan_views.xml 
+2026-09-08 15:05:00,352 1 INFO soloodoo_hr_test odoo.modules.loading: loading hr/views/hr_departure_reason_views.xml 
+2026-09-08 15:05:00,363 1 INFO soloodoo_hr_test odoo.modules.loading: loading hr/views/hr_contract_type_views.xml 
+2026-09-08 15:05:00,377 1 INFO soloodoo_hr_test odoo.modules.loading: loading hr/views/hr_job_views.xml 
+2026-09-08 15:05:00,399 1 INFO soloodoo_hr_test odoo.modules.loading: loading hr/views/hr_employee_category_views.xml 
+2026-09-08 15:05:00,411 1 INFO soloodoo_hr_test odoo.modules.loading: loading hr/views/hr_employee_public_views.xml 
+2026-09-08 15:05:00,435 1 INFO soloodoo_hr_test odoo.modules.loading: loading hr/report/hr_employee_badge.xml 
+2026-09-08 15:05:00,444 1 INFO soloodoo_hr_test odoo.modules.loading: loading hr/views/hr_employee_views.xml 
+2026-09-08 15:05:00,504 1 INFO soloodoo_hr_test odoo.modules.loading: loading hr/views/hr_department_views.xml 
+2026-09-08 15:05:00,533 1 INFO soloodoo_hr_test odoo.modules.loading: loading hr/views/hr_work_location_views.xml 
+2026-09-08 15:05:00,547 1 INFO soloodoo_hr_test odoo.modules.loading: loading hr/views/hr_views.xml 
+2026-09-08 15:05:00,625 1 INFO soloodoo_hr_test odoo.modules.loading: loading hr/views/res_config_settings_views.xml 
+2026-09-08 15:05:00,647 1 INFO soloodoo_hr_test odoo.modules.loading: loading hr/views/res_partner_views.xml 
+2026-09-08 15:05:00,658 1 INFO soloodoo_hr_test odoo.modules.loading: loading hr/views/discuss_channel_views.xml 
+2026-09-08 15:05:00,666 1 INFO soloodoo_hr_test odoo.modules.loading: loading hr/views/res_users.xml 
+2026-09-08 15:05:00,721 1 INFO soloodoo_hr_test odoo.modules.loading: loading hr/views/hr_templates.xml 
+2026-09-08 15:05:00,726 1 INFO soloodoo_hr_test odoo.modules.loading: loading hr/data/hr_data.xml 
+2026-09-08 15:05:00,874 1 INFO soloodoo_hr_test odoo.modules.loading: Module hr loaded in 1.94s, 2803 queries (+2803 other) 
+2026-09-08 15:05:00,874 1 INFO soloodoo_hr_test odoo.modules.loading: Loading module partner_autocomplete (29/44) 
+2026-09-08 15:05:00,914 1 INFO soloodoo_hr_test odoo.modules.registry: module partner_autocomplete: creating or updating database tables 
+2026-09-08 15:05:01,005 1 INFO soloodoo_hr_test odoo.modules.loading: loading partner_autocomplete/security/ir.model.access.csv 
+2026-09-08 15:05:01,017 1 INFO soloodoo_hr_test odoo.modules.loading: loading partner_autocomplete/views/res_partner_views.xml 
+2026-09-08 15:05:01,037 1 INFO soloodoo_hr_test odoo.modules.loading: loading partner_autocomplete/views/res_company_views.xml 
+2026-09-08 15:05:01,045 1 INFO soloodoo_hr_test odoo.modules.loading: loading partner_autocomplete/views/res_config_settings_views.xml 
+2026-09-08 15:05:01,056 1 INFO soloodoo_hr_test odoo.modules.loading: loading partner_autocomplete/data/cron.xml 
+2026-09-08 15:05:01,081 1 INFO soloodoo_hr_test odoo.modules.loading: Module partner_autocomplete loaded in 0.21s, 198 queries (+198 other) 
+2026-09-08 15:05:01,081 1 INFO soloodoo_hr_test odoo.modules.loading: Loading module portal (30/44) 
+2026-09-08 15:05:01,120 1 INFO soloodoo_hr_test odoo.modules.registry: module portal: creating or updating database tables 
+2026-09-08 15:05:01,324 1 INFO soloodoo_hr_test odoo.modules.loading: loading portal/security/ir.model.access.csv 
+2026-09-08 15:05:01,337 1 INFO soloodoo_hr_test odoo.modules.loading: loading portal/data/mail_template_data.xml 
+2026-09-08 15:05:01,345 1 INFO soloodoo_hr_test odoo.modules.loading: loading portal/data/mail_templates.xml 
+2026-09-08 15:05:01,352 1 INFO soloodoo_hr_test odoo.modules.loading: loading portal/views/mail_templates_public.xml 
+2026-09-08 15:05:01,359 1 INFO soloodoo_hr_test odoo.modules.loading: loading portal/views/portal_templates.xml 
+2026-09-08 15:05:01,464 1 INFO soloodoo_hr_test odoo.modules.loading: loading portal/views/res_config_settings_views.xml 
+2026-09-08 15:05:01,476 1 INFO soloodoo_hr_test odoo.modules.loading: loading portal/wizard/portal_share_views.xml 
+2026-09-08 15:05:01,485 1 INFO soloodoo_hr_test odoo.modules.loading: loading portal/wizard/portal_wizard_views.xml 
+2026-09-08 15:05:01,518 1 INFO soloodoo_hr_test odoo.modules.loading: Module portal loaded in 0.44s, 510 queries (+510 other) 
+2026-09-08 15:05:01,518 1 INFO soloodoo_hr_test odoo.modules.loading: Loading module sms (31/44) 
+2026-09-08 15:05:01,584 1 INFO soloodoo_hr_test odoo.modules.registry: module sms: creating or updating database tables 
+2026-09-08 15:05:01,591 1 INFO soloodoo_hr_test odoo.models: Prepare computation of ir.actions.server.sms_template_id 
+2026-09-08 15:05:01,591 1 INFO soloodoo_hr_test odoo.models: Prepare computation of ir.actions.server.sms_method 
+2026-09-08 15:05:01,621 1 INFO soloodoo_hr_test odoo.models: Prepare computation of res.partner.phone_sanitized 
+2026-09-08 15:05:02,594 1 INFO soloodoo_hr_test odoo.modules.loading: loading sms/data/ir_cron_data.xml 
+2026-09-08 15:05:02,605 1 INFO soloodoo_hr_test odoo.modules.loading: loading sms/wizard/sms_composer_views.xml 
+2026-09-08 15:05:02,617 1 INFO soloodoo_hr_test odoo.modules.loading: loading sms/wizard/sms_template_preview_views.xml 
+2026-09-08 15:05:02,625 1 INFO soloodoo_hr_test odoo.modules.loading: loading sms/wizard/sms_resend_views.xml 
+2026-09-08 15:05:02,635 1 INFO soloodoo_hr_test odoo.modules.loading: loading sms/wizard/sms_template_reset_views.xml 
+2026-09-08 15:05:02,644 1 INFO soloodoo_hr_test odoo.modules.loading: loading sms/views/ir_actions_server_views.xml 
+2026-09-08 15:05:02,655 1 INFO soloodoo_hr_test odoo.modules.loading: loading sms/views/mail_notification_views.xml 
+2026-09-08 15:05:02,668 1 INFO soloodoo_hr_test odoo.modules.loading: loading sms/views/res_config_settings_views.xml 
+2026-09-08 15:05:02,681 1 INFO soloodoo_hr_test odoo.modules.loading: loading sms/views/res_partner_views.xml 
+2026-09-08 15:05:02,709 1 INFO soloodoo_hr_test odoo.modules.loading: loading sms/views/sms_sms_views.xml 
+2026-09-08 15:05:02,732 1 INFO soloodoo_hr_test odoo.modules.loading: loading sms/views/sms_template_views.xml 
+2026-09-08 15:05:02,753 1 INFO soloodoo_hr_test odoo.modules.loading: loading sms/security/ir.model.access.csv 
+2026-09-08 15:05:02,775 1 INFO soloodoo_hr_test odoo.modules.loading: loading sms/security/sms_security.xml 
+2026-09-08 15:05:02,803 1 INFO soloodoo_hr_test odoo.modules.loading: Module sms loaded in 1.28s, 1963 queries (+1963 other) 
+2026-09-08 15:05:02,803 1 INFO soloodoo_hr_test odoo.modules.loading: Loading module snailmail (32/44) 
+2026-09-08 15:05:02,851 1 INFO soloodoo_hr_test odoo.modules.registry: module snailmail: creating or updating database tables 
+2026-09-08 15:05:03,164 1 INFO soloodoo_hr_test odoo.modules.loading: loading snailmail/data/snailmail_data.xml 
+2026-09-08 15:05:03,174 1 INFO soloodoo_hr_test odoo.modules.loading: loading snailmail/views/report_assets.xml 
+2026-09-08 15:05:03,187 1 INFO soloodoo_hr_test odoo.modules.loading: loading snailmail/views/snailmail_views.xml 
+2026-09-08 15:05:03,207 1 INFO soloodoo_hr_test odoo.modules.loading: loading snailmail/wizard/snailmail_letter_format_error_views.xml 
+2026-09-08 15:05:03,216 1 INFO soloodoo_hr_test odoo.modules.loading: loading snailmail/wizard/snailmail_letter_missing_required_fields_views.xml 
+2026-09-08 15:05:03,223 1 INFO soloodoo_hr_test odoo.modules.loading: loading snailmail/security/ir.model.access.csv 
+2026-09-08 15:05:03,256 1 INFO soloodoo_hr_test odoo.modules.loading: Module snailmail loaded in 0.45s, 451 queries (+451 other) 
+2026-09-08 15:05:03,256 1 INFO soloodoo_hr_test odoo.modules.loading: Loading module auth_totp_portal (33/44) 
+2026-09-08 15:05:03,296 1 INFO soloodoo_hr_test odoo.modules.registry: module auth_totp_portal: creating or updating database tables 
+2026-09-08 15:05:03,330 1 INFO soloodoo_hr_test odoo.modules.loading: loading auth_totp_portal/security/security.xml 
+2026-09-08 15:05:03,344 1 INFO soloodoo_hr_test odoo.modules.loading: loading auth_totp_portal/views/templates.xml 
+2026-09-08 15:05:03,364 1 INFO soloodoo_hr_test odoo.modules.loading: Module auth_totp_portal loaded in 0.11s, 66 queries (+66 other) 
+2026-09-08 15:05:03,365 1 INFO soloodoo_hr_test odoo.modules.loading: Loading module calendar_sms (34/44) 
+2026-09-08 15:05:03,409 1 INFO soloodoo_hr_test odoo.modules.registry: module calendar_sms: creating or updating database tables 
+2026-09-08 15:05:03,414 1 INFO soloodoo_hr_test odoo.models: Prepare computation of calendar.alarm.sms_template_id 
+2026-09-08 15:05:03,460 1 INFO soloodoo_hr_test odoo.modules.loading: loading calendar_sms/data/sms_data.xml 
+2026-09-08 15:05:03,467 1 INFO soloodoo_hr_test odoo.modules.loading: loading calendar_sms/views/calendar_views.xml 
+2026-09-08 15:05:03,502 1 INFO soloodoo_hr_test odoo.modules.loading: Module calendar_sms loaded in 0.14s, 96 queries (+96 other) 
+2026-09-08 15:05:03,502 1 INFO soloodoo_hr_test odoo.modules.loading: Loading module digest (35/44) 
+2026-09-08 15:05:03,546 1 INFO soloodoo_hr_test odoo.modules.registry: module digest: creating or updating database tables 
+2026-09-08 15:05:03,654 1 INFO soloodoo_hr_test odoo.modules.loading: loading digest/security/ir.model.access.csv 
+2026-09-08 15:05:03,668 1 INFO soloodoo_hr_test odoo.modules.loading: loading digest/data/digest_data.xml 
+2026-09-08 15:05:03,688 1 INFO soloodoo_hr_test odoo.modules.loading: loading digest/data/digest_tips_data.xml 
+2026-09-08 15:05:03,707 1 INFO soloodoo_hr_test odoo.modules.loading: loading digest/data/ir_cron_data.xml 
+2026-09-08 15:05:03,716 1 INFO soloodoo_hr_test odoo.modules.loading: loading digest/data/res_config_settings_data.xml 
+2026-09-08 15:05:03,723 1 INFO soloodoo_hr_test odoo.modules.loading: loading digest/views/digest_views.xml 
+2026-09-08 15:05:03,768 1 INFO soloodoo_hr_test odoo.modules.loading: loading digest/views/digest_templates.xml 
+2026-09-08 15:05:03,774 1 INFO soloodoo_hr_test odoo.modules.loading: loading digest/views/res_config_settings_views.xml 
+2026-09-08 15:05:03,811 1 INFO soloodoo_hr_test odoo.modules.loading: Module digest loaded in 0.31s, 296 queries (+296 other) 
+2026-09-08 15:05:03,811 1 INFO soloodoo_hr_test odoo.modules.loading: Loading module hr_contract (36/44) 
+2026-09-08 15:05:03,858 1 INFO soloodoo_hr_test odoo.modules.registry: module hr_contract: creating or updating database tables 
+2026-09-08 15:05:03,869 1 INFO soloodoo_hr_test odoo.models: Prepare computation of hr.employee.first_contract_date 
+2026-09-08 15:05:03,869 1 INFO soloodoo_hr_test odoo.models: Prepare computation of hr.employee.contract_warning 
+2026-09-08 15:05:04,048 1 INFO soloodoo_hr_test odoo.modules.loading: loading hr_contract/security/security.xml 
+2026-09-08 15:05:04,194 1 INFO soloodoo_hr_test odoo.modules.loading: loading hr_contract/security/ir.model.access.csv 
+2026-09-08 15:05:04,209 1 INFO soloodoo_hr_test odoo.modules.loading: loading hr_contract/data/hr_contract_data.xml 
+2026-09-08 15:05:04,234 1 INFO soloodoo_hr_test odoo.modules.loading: loading hr_contract/report/hr_contract_history_report_views.xml 
+2026-09-08 15:05:04,268 1 INFO soloodoo_hr_test odoo.modules.loading: loading hr_contract/views/hr_contract_views.xml 
+2026-09-08 15:05:04,351 1 INFO soloodoo_hr_test odoo.modules.loading: loading hr_contract/views/hr_employee_views.xml 
+2026-09-08 15:05:04,389 1 INFO soloodoo_hr_test odoo.modules.loading: loading hr_contract/views/resource_calendar_views.xml 
+2026-09-08 15:05:04,403 1 INFO soloodoo_hr_test odoo.modules.loading: loading hr_contract/views/res_config_settings_views.xml 
+2026-09-08 15:05:04,417 1 INFO soloodoo_hr_test odoo.modules.loading: loading hr_contract/wizard/hr_departure_wizard_views.xml 
+2026-09-08 15:05:04,450 1 INFO soloodoo_hr_test odoo.modules.loading: Module hr_contract loaded in 0.64s, 727 queries (+727 other) 
+2026-09-08 15:05:04,450 1 INFO soloodoo_hr_test odoo.modules.loading: Loading module hr_holidays (37/44) 
+2026-09-08 15:05:04,512 1 INFO soloodoo_hr_test odoo.modules.registry: module hr_holidays: creating or updating database tables 
+2026-09-08 15:05:04,526 1 INFO soloodoo_hr_test odoo.models: Prepare computation of hr.employee.leave_manager_id 
+<string>:3: (WARNING/2) Title underline too short.
+System.Management.Automation.RemoteException
+Manage time off requests and allocations
+=====================================
+2026-09-08 15:05:04,978 1 INFO soloodoo_hr_test odoo.modules.loading: loading hr_holidays/data/report_paperformat.xml 
+2026-09-08 15:05:04,984 1 INFO soloodoo_hr_test odoo.modules.loading: loading hr_holidays/data/mail_activity_type_data.xml 
+2026-09-08 15:05:04,999 1 INFO soloodoo_hr_test odoo.modules.loading: loading hr_holidays/data/mail_message_subtype_data.xml 
+2026-09-08 15:05:05,017 1 INFO soloodoo_hr_test odoo.modules.loading: loading hr_holidays/data/hr_holidays_data.xml 
+2026-09-08 15:05:05,089 1 INFO soloodoo_hr_test odoo.modules.loading: loading hr_holidays/data/ir_cron_data.xml 
+2026-09-08 15:05:05,103 1 INFO soloodoo_hr_test odoo.modules.loading: loading hr_holidays/security/hr_holidays_security.xml 
+2026-09-08 15:05:05,429 1 INFO soloodoo_hr_test odoo.modules.loading: loading hr_holidays/security/ir.model.access.csv 
+2026-09-08 15:05:05,456 1 INFO soloodoo_hr_test odoo.modules.loading: loading hr_holidays/views/resource_views.xml 
+2026-09-08 15:05:05,489 1 INFO soloodoo_hr_test odoo.modules.loading: loading hr_holidays/views/hr_leave_views.xml 
+2026-09-08 15:05:05,681 1 INFO soloodoo_hr_test odoo.modules.loading: loading hr_holidays/views/hr_leave_type_views.xml 
+2026-09-08 15:05:05,705 1 INFO soloodoo_hr_test odoo.modules.loading: loading hr_holidays/views/hr_leave_allocation_views.xml 
+2026-09-08 15:05:05,789 1 INFO soloodoo_hr_test odoo.modules.loading: loading hr_holidays/views/hr_leave_accrual_views.xml 
+2026-09-08 15:05:05,815 1 INFO soloodoo_hr_test odoo.modules.loading: loading hr_holidays/views/hr_leave_mandatory_day_views.xml 
+2026-09-08 15:05:05,832 1 INFO soloodoo_hr_test odoo.modules.loading: loading hr_holidays/views/mail_activity_views.xml 
+2026-09-08 15:05:05,837 1 INFO soloodoo_hr_test odoo.modules.loading: loading hr_holidays/wizard/hr_holidays_cancel_leave_views.xml 
+2026-09-08 15:05:05,842 1 INFO soloodoo_hr_test odoo.modules.loading: loading hr_holidays/wizard/hr_holidays_summary_employees_views.xml 
+2026-09-08 15:05:05,850 1 INFO soloodoo_hr_test odoo.modules.loading: loading hr_holidays/wizard/hr_departure_wizard_views.xml 
+2026-09-08 15:05:05,858 1 INFO soloodoo_hr_test odoo.modules.loading: loading hr_holidays/report/hr_holidays_templates.xml 
+2026-09-08 15:05:05,864 1 INFO soloodoo_hr_test odoo.modules.loading: loading hr_holidays/report/hr_holidays_reports.xml 
+2026-09-08 15:05:05,868 1 INFO soloodoo_hr_test odoo.modules.loading: loading hr_holidays/report/hr_leave_reports.xml 
+2026-09-08 15:05:05,887 1 INFO soloodoo_hr_test odoo.modules.loading: loading hr_holidays/report/hr_leave_report_calendar.xml 
+2026-09-08 15:05:05,904 1 INFO soloodoo_hr_test odoo.modules.loading: loading hr_holidays/report/hr_leave_employee_type_report.xml 
+2026-09-08 15:05:05,917 1 INFO soloodoo_hr_test odoo.modules.loading: loading hr_holidays/views/hr_views.xml 
+2026-09-08 15:05:05,989 1 INFO soloodoo_hr_test odoo.modules.loading: loading hr_holidays/views/hr_holidays_views.xml 
+2026-09-08 15:05:06,093 1 INFO soloodoo_hr_test odoo.modules.loading: Module hr_holidays loaded in 1.64s, 2030 queries (+2030 other) 
+2026-09-08 15:05:06,094 1 INFO soloodoo_hr_test odoo.modules.loading: Loading module hr_org_chart (38/44) 
+2026-09-08 15:05:06,141 1 INFO soloodoo_hr_test odoo.modules.registry: module hr_org_chart: creating or updating database tables 
+2026-09-08 15:05:06,192 1 INFO soloodoo_hr_test odoo.modules.loading: loading hr_org_chart/views/hr_department_views.xml 
+2026-09-08 15:05:06,207 1 INFO soloodoo_hr_test odoo.modules.loading: loading hr_org_chart/views/hr_views.xml 
+2026-09-08 15:05:06,248 1 INFO soloodoo_hr_test odoo.modules.loading: loading hr_org_chart/views/hr_employee_public_views.xml 
+2026-09-08 15:05:06,257 1 INFO soloodoo_hr_test odoo.modules.loading: loading hr_org_chart/views/hr_org_chart_menus.xml 
+2026-09-08 15:05:06,279 1 INFO soloodoo_hr_test odoo.modules.loading: Module hr_org_chart loaded in 0.19s, 162 queries (+162 other) 
+2026-09-08 15:05:06,280 1 INFO soloodoo_hr_test odoo.modules.loading: Loading module hr_skills (39/44) 
+2026-09-08 15:05:06,333 1 INFO soloodoo_hr_test odoo.modules.registry: module hr_skills: creating or updating database tables 
+2026-09-08 15:05:06,342 1 INFO soloodoo_hr_test odoo.models: Prepare computation of hr.employee.skill_ids 
+2026-09-08 15:05:06,578 1 INFO soloodoo_hr_test odoo.modules.loading: loading hr_skills/security/ir.model.access.csv 
+2026-09-08 15:05:06,598 1 INFO soloodoo_hr_test odoo.modules.loading: loading hr_skills/security/hr_skills_security.xml 
+2026-09-08 15:05:06,632 1 INFO soloodoo_hr_test odoo.modules.loading: loading hr_skills/views/hr_views.xml 
+2026-09-08 15:05:06,737 1 INFO soloodoo_hr_test odoo.modules.loading: loading hr_skills/views/hr_employee_skill_log_views.xml 
+2026-09-08 15:05:06,758 1 INFO soloodoo_hr_test odoo.modules.loading: loading hr_skills/data/hr_resume_data.xml 
+2026-09-08 15:05:06,763 1 INFO soloodoo_hr_test odoo.modules.loading: loading hr_skills/data/hr_skill_data.xml 
+2026-09-08 15:05:06,767 1 INFO soloodoo_hr_test odoo.modules.loading: loading hr_skills/data/ir_actions_server_data.xml 
+2026-09-08 15:05:06,776 1 INFO soloodoo_hr_test odoo.modules.loading: loading hr_skills/data/report_paperformat.xml 
+2026-09-08 15:05:06,780 1 INFO soloodoo_hr_test odoo.modules.loading: loading hr_skills/report/hr_employee_skill_report_views.xml 
+2026-09-08 15:05:06,800 1 INFO soloodoo_hr_test odoo.modules.loading: loading hr_skills/report/hr_employee_cv_report.xml 
+2026-09-08 15:05:06,806 1 INFO soloodoo_hr_test odoo.modules.loading: loading hr_skills/views/hr_department_views.xml 
+2026-09-08 15:05:06,816 1 INFO soloodoo_hr_test odoo.modules.loading: loading hr_skills/views/hr_employee_cv_templates.xml 
+2026-09-08 15:05:06,833 1 INFO soloodoo_hr_test odoo.modules.loading: loading hr_skills/wizard/hr_employee_cv_wizard_views.xml 
+2026-09-08 15:05:06,866 1 INFO soloodoo_hr_test odoo.modules.loading: Module hr_skills loaded in 0.59s, 669 queries (+669 other) 
+2026-09-08 15:05:06,866 1 INFO soloodoo_hr_test odoo.modules.loading: Loading module mail_bot_hr (40/44) 
+2026-09-08 15:05:06,924 1 INFO soloodoo_hr_test odoo.modules.loading: loading mail_bot_hr/views/res_users_views.xml 
+2026-09-08 15:05:06,984 1 INFO soloodoo_hr_test odoo.modules.loading: Module mail_bot_hr loaded in 0.12s, 56 queries (+56 other) 
+2026-09-08 15:05:06,984 1 INFO soloodoo_hr_test odoo.modules.loading: Loading module hr_recruitment (41/44) 
+2026-09-08 15:05:07,043 1 INFO soloodoo_hr_test odoo.modules.registry: module hr_recruitment: creating or updating database tables 
+2026-09-08 15:05:07,465 1 INFO soloodoo_hr_test odoo.modules.loading: loading hr_recruitment/security/hr_recruitment_security.xml 
+2026-09-08 15:05:07,686 1 INFO soloodoo_hr_test odoo.modules.loading: loading hr_recruitment/security/ir.model.access.csv 
+2026-09-08 15:05:07,710 1 INFO soloodoo_hr_test odoo.modules.loading: loading hr_recruitment/data/digest_data.xml 
+2026-09-08 15:05:07,719 1 INFO soloodoo_hr_test odoo.modules.loading: loading hr_recruitment/data/mail_message_subtype_data.xml 
+2026-09-08 15:05:07,738 1 INFO soloodoo_hr_test odoo.modules.loading: loading hr_recruitment/data/mail_template_data.xml 
+2026-09-08 15:05:07,753 1 INFO soloodoo_hr_test odoo.modules.loading: loading hr_recruitment/data/mail_templates.xml 
+2026-09-08 15:05:07,765 1 INFO soloodoo_hr_test odoo.modules.loading: loading hr_recruitment/data/hr_recruitment_data.xml 
+2026-09-08 15:05:07,820 1 INFO soloodoo_hr_test odoo.modules.loading: loading hr_recruitment/views/hr_recruitment_degree_views.xml 
+2026-09-08 15:05:07,833 1 INFO soloodoo_hr_test odoo.modules.loading: loading hr_recruitment/views/hr_recruitment_source_views.xml 
+2026-09-08 15:05:07,850 1 INFO soloodoo_hr_test odoo.modules.loading: loading hr_recruitment/views/hr_recruitment_stage_views.xml 
+2026-09-08 15:05:07,870 1 INFO soloodoo_hr_test odoo.modules.loading: loading hr_recruitment/views/ir_attachment_views.xml 
+2026-09-08 15:05:07,882 1 INFO soloodoo_hr_test odoo.modules.loading: loading hr_recruitment/views/hr_applicant_category_views.xml 
+2026-09-08 15:05:07,894 1 INFO soloodoo_hr_test odoo.modules.loading: loading hr_recruitment/views/hr_applicant_refuse_reason_views.xml 
+2026-09-08 15:05:07,906 1 INFO soloodoo_hr_test odoo.modules.loading: loading hr_recruitment/views/hr_applicant_views.xml 
+2026-09-08 15:05:08,095 1 INFO soloodoo_hr_test odoo.modules.loading: loading hr_recruitment/views/res_config_settings_views.xml 
+2026-09-08 15:05:08,117 1 INFO soloodoo_hr_test odoo.modules.loading: loading hr_recruitment/views/hr_department_views.xml 
+2026-09-08 15:05:08,135 1 INFO soloodoo_hr_test odoo.modules.loading: loading hr_recruitment/views/hr_job_views.xml 
+2026-09-08 15:05:08,205 1 INFO soloodoo_hr_test odoo.modules.loading: loading hr_recruitment/views/mail_activity_views.xml 
+2026-09-08 15:05:08,214 1 INFO soloodoo_hr_test odoo.modules.loading: loading hr_recruitment/views/digest_views.xml 
+2026-09-08 15:05:08,222 1 INFO soloodoo_hr_test odoo.modules.loading: loading hr_recruitment/wizard/applicant_refuse_reason_views.xml 
+2026-09-08 15:05:08,230 1 INFO soloodoo_hr_test odoo.modules.loading: loading hr_recruitment/wizard/applicant_send_mail_views.xml 
+2026-09-08 15:05:08,259 1 INFO soloodoo_hr_test odoo.modules.loading: Module hr_recruitment loaded in 1.27s, 1714 queries (+1714 other) 
+2026-09-08 15:05:08,259 1 INFO soloodoo_hr_test odoo.modules.loading: Loading module elmokrif_hr_extension (42/44) 
+2026-09-08 15:05:08,378 1 INFO soloodoo_hr_test odoo.modules.registry: module elmokrif_hr_extension: creating or updating database tables 
+2026-09-08 15:05:08,492 1 INFO soloodoo_hr_test odoo.modules.loading: loading elmokrif_hr_extension/security/hr_groups.xml 
+2026-09-08 15:05:08,545 1 INFO soloodoo_hr_test odoo.modules.loading: loading elmokrif_hr_extension/security/ir.model.access.csv 
+2026-09-08 15:05:08,559 1 INFO soloodoo_hr_test odoo.modules.loading: loading elmokrif_hr_extension/security/hr_rules.xml 
+2026-09-08 15:05:08,582 1 INFO soloodoo_hr_test odoo.modules.loading: loading elmokrif_hr_extension/data/hr_activity_data.xml 
+2026-09-08 15:05:08,590 1 INFO soloodoo_hr_test odoo.modules.loading: loading elmokrif_hr_extension/data/hr_cron.xml 
+2026-09-08 15:05:08,598 1 INFO soloodoo_hr_test odoo.modules.loading: loading elmokrif_hr_extension/views/hr_contract_views.xml 
+2026-09-08 15:05:08,614 1 INFO soloodoo_hr_test odoo.modules.loading: loading elmokrif_hr_extension/views/hr_leave_views.xml 
+2026-09-08 15:05:08,622 1 INFO soloodoo_hr_test odoo.modules.loading: loading elmokrif_hr_extension/views/hr_appraisal_views.xml 
+2026-09-08 15:05:08,667 1 INFO soloodoo_hr_test odoo.modules.loading: Module elmokrif_hr_extension loaded in 0.41s, 335 queries (+335 other) 
+2026-09-08 15:05:08,668 1 INFO soloodoo_hr_test odoo.modules.loading: Loading module hr_recruitment_skills (43/44) 
+2026-09-08 15:05:08,719 1 INFO soloodoo_hr_test odoo.modules.registry: module hr_recruitment_skills: creating or updating database tables 
+2026-09-08 15:05:08,803 1 INFO soloodoo_hr_test odoo.modules.loading: loading hr_recruitment_skills/security/hr_recruitment_skills_security.xml 
+2026-09-08 15:05:08,818 1 INFO soloodoo_hr_test odoo.modules.loading: loading hr_recruitment_skills/views/hr_applicant_views.xml 
+2026-09-08 15:05:08,840 1 INFO soloodoo_hr_test odoo.modules.loading: loading hr_recruitment_skills/views/hr_applicant_skill_views.xml 
+2026-09-08 15:05:08,853 1 INFO soloodoo_hr_test odoo.modules.loading: loading hr_recruitment_skills/security/ir.model.access.csv 
+2026-09-08 15:05:08,877 1 INFO soloodoo_hr_test odoo.modules.loading: Module hr_recruitment_skills loaded in 0.21s, 188 queries (+188 other) 
+2026-09-08 15:05:08,877 1 INFO soloodoo_hr_test odoo.modules.loading: Loading module hr_recruitment_sms (44/44) 
+2026-09-08 15:05:08,936 1 INFO soloodoo_hr_test odoo.modules.loading: loading hr_recruitment_sms/views/hr_applicant_views.xml 
+2026-09-08 15:05:08,965 1 INFO soloodoo_hr_test odoo.modules.loading: Module hr_recruitment_sms loaded in 0.09s, 19 queries (+19 other) 
+2026-09-08 15:05:08,965 1 INFO soloodoo_hr_test odoo.modules.loading: 44 modules loaded in 20.41s, 25907 queries (+25908 extra) 
+2026-09-08 15:05:09,562 1 INFO soloodoo_hr_test odoo.modules.loading: Modules loaded. 
+2026-09-08 15:05:09,566 1 INFO soloodoo_hr_test odoo.modules.registry: Registry loaded in 28.847s 
+2026-09-08 15:05:09,566 1 INFO soloodoo_hr_test odoo.service.server: Starting post tests 
+2026-09-08 15:05:10,116 1 INFO soloodoo_hr_test odoo.addons.elmokrif_hr_extension.tests.test_hr_extension: Starting TestHrExtension.test_appraisal_creation_and_completion_evidence_cannot_be_forged ... 
+2026-09-08 15:05:10,175 1 INFO soloodoo_hr_test odoo.addons.elmokrif_hr_extension.tests.test_hr_extension: Starting TestHrExtension.test_appraisal_identity_and_reopen_state_are_protected ... 
+2026-09-08 15:05:10,204 1 INFO soloodoo_hr_test odoo.addons.elmokrif_hr_extension.tests.test_hr_extension: Starting TestHrExtension.test_appraisal_workflow_protects_completion_and_requires_reopen_reason ... 
+2026-09-08 15:05:10,342 1 INFO soloodoo_hr_test odoo.addons.elmokrif_hr_extension.tests.test_hr_extension: Starting TestHrExtension.test_contract_expiry_activity_is_idempotent_and_configurable ... 
+2026-09-08 15:05:10,389 1 INFO soloodoo_hr_test odoo.models.unlink: User #1 deleted mail.activity records with IDs: [1] 
+2026-09-08 15:05:10,397 1 INFO soloodoo_hr_test odoo.addons.elmokrif_hr_extension.tests.test_hr_extension: Starting TestHrExtension.test_employee_can_only_create_own_leave ... 
+2026-09-08 15:05:10,612 1 INFO soloodoo_hr_test odoo.addons.mail.models.mail_mail: Mail (mail.mail) with ID 1 and Message-Id '<408083122874404.1788879910.546789646148682-openerp-1-hr.leave@7efdce5ef44c>' from 'hr-test-manager@example.test' to (redacted) 'h*************ee@example.test' successfully sent 
+2026-09-08 15:05:10,612 1 INFO soloodoo_hr_test odoo.addons.mail.models.mail_mail: Total emails tried by SMTP: 1 
+2026-09-08 15:05:10,625 1 INFO soloodoo_hr_test odoo.models.unlink: User #7 deleted mail.mail records with IDs: [1] 
+2026-09-08 15:05:10,625 1 INFO soloodoo_hr_test odoo.addons.mail.models.mail_mail: Sent batch 1 emails via mail server ID #False 
+2026-09-08 15:05:10,671 1 INFO soloodoo_hr_test odoo.addons.mail.models.mail_mail: Mail (mail.mail) with ID 2 and Message-Id '<806975055297584.1788879910.641183376312256-openerp-1-hr.leave@7efdce5ef44c>' from 'hr-test-manager@example.test' to (redacted) 'h*************ee@example.test' successfully sent 
+2026-09-08 15:05:10,671 1 INFO soloodoo_hr_test odoo.addons.mail.models.mail_mail: Total emails tried by SMTP: 1 
+2026-09-08 15:05:10,678 1 INFO soloodoo_hr_test odoo.models.unlink: User #7 deleted mail.mail records with IDs: [2] 
+2026-09-08 15:05:10,678 1 INFO soloodoo_hr_test odoo.addons.mail.models.mail_mail: Sent batch 1 emails via mail server ID #False 
+2026-09-08 15:05:10,705 1 INFO soloodoo_hr_test odoo.addons.base.models.ir_rule: Access Denied by record rules for operation: create on record ids: [2], uid: 6, model: hr.leave 
+2026-09-08 15:05:10,712 1 INFO soloodoo_hr_test odoo.addons.elmokrif_hr_extension.tests.test_hr_extension: Starting TestHrExtension.test_employee_cannot_see_another_employee_appraisal ... 
+2026-09-08 15:05:10,784 1 INFO soloodoo_hr_test odoo.addons.base.models.ir_rule: Access Denied by record rules for operation: read on record ids: [4], uid: 6, model: elmokrif.hr.appraisal 
+2026-09-08 15:05:10,790 1 INFO soloodoo_hr_test odoo.addons.elmokrif_hr_extension.tests.test_hr_extension: Starting TestHrExtension.test_hr_attachment_download_is_limited_to_custom_hr_officers ... 
+2026-09-08 15:05:10,820 1 INFO soloodoo_hr_test odoo.addons.elmokrif_hr_extension.tests.test_hr_extension: Starting TestHrExtension.test_leave_two_step_approval_refusal_and_cancellation ... 
+2026-09-08 15:05:10,939 1 INFO soloodoo_hr_test odoo.models.unlink: User #7 deleted mail.activity records with IDs: [2] 
+2026-09-08 15:05:11,036 1 INFO soloodoo_hr_test odoo.addons.mail.models.mail_mail: Mail (mail.mail) with ID 3 and Message-Id '<757140621290677.1788879910.985592842102051-openerp-3-hr.leave@7efdce5ef44c>' from 'hr-test-manager@example.test' to (redacted) 'h*************ee@example.test' successfully sent 
+2026-09-08 15:05:11,036 1 INFO soloodoo_hr_test odoo.addons.mail.models.mail_mail: Total emails tried by SMTP: 1 
+2026-09-08 15:05:11,045 1 INFO soloodoo_hr_test odoo.models.unlink: User #7 deleted mail.mail records with IDs: [3] 
+2026-09-08 15:05:11,046 1 INFO soloodoo_hr_test odoo.addons.mail.models.mail_mail: Sent batch 1 emails via mail server ID #False 
+2026-09-08 15:05:11,054 1 INFO soloodoo_hr_test odoo.addons.elmokrif_hr_extension.tests.test_hr_extension: ====================================================================== 
+2026-09-08 15:05:11,054 1 ERROR soloodoo_hr_test odoo.addons.elmokrif_hr_extension.tests.test_hr_extension: FAIL: TestHrExtension.test_leave_two_step_approval_refusal_and_cancellation
+Traceback (most recent call last):
+  File "/opt/elmokrif-addons/elmokrif_hr_extension/tests/test_hr_extension.py", line 267, in test_leave_two_step_approval_refusal_and_cancellation
+    self.assertEqual(leave.state, "cancel")
+AssertionError: 'validate' != 'cancel'
+- validate
++ cancel
+System.Management.Automation.RemoteException
+ 
+2026-09-08 15:05:11,056 1 INFO soloodoo_hr_test odoo.addons.elmokrif_hr_extension.tests.test_hr_extension: Starting TestHrExtension.test_recruitment_creates_an_employee_and_appraisal_stays_confidential ... 
+2026-09-08 15:05:11,230 1 INFO soloodoo_hr_test odoo.addons.base.models.ir_attachment: filestore gc 28 checked, 7 removed 
+2026-09-08 15:05:11,231 1 INFO soloodoo_hr_test odoo.service.server: 9 post-tests in 1.66s, 1702 queries 
+2026-09-08 15:05:11,231 1 INFO soloodoo_hr_test odoo.tests.stats: elmokrif_hr_extension: 11 tests 1.61s 1702 queries 
+2026-09-08 15:05:11,231 1 ERROR soloodoo_hr_test odoo.tests.result: 1 failed, 0 error(s) of 9 tests when loading database 'soloodoo_hr_test' 
+2026-09-08 15:05:11,231 1 INFO soloodoo_hr_test odoo.service.server: Initiating shutdown 
+2026-09-08 15:05:11,231 1 INFO soloodoo_hr_test odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2026-09-08 15:05:11,360 1 INFO soloodoo_hr_test odoo.sql_db: ConnectionPool(used=0/count=0/max=64): Closed 1 connections  

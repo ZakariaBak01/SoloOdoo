@@ -117,12 +117,18 @@ class ElMokrifDashboard(models.Model):
                     ("active", "=", True), ("probability", "<", 100),
                 ])
             leave_count = 0
-            if "hr.leave" in self.env.registry.models and can_read("hr.leave", _("Absences")):
-                leave_count = self.env["hr.leave"].search_count([
-                    ("company_id", "=", dashboard.company_id.id), ("state", "=", "validate"),
-                    ("request_date_from", "<=", dashboard.as_of_date),
-                    ("request_date_to", ">=", dashboard.as_of_date),
-                ])
+            if "hr.leave" in self.env.registry.models:
+                leaves = self.env["hr.leave"]
+                if hasattr(leaves, "_elmokrif_count_approved_absences"):
+                    leave_count = leaves._elmokrif_count_approved_absences(
+                        dashboard.company_id, dashboard.as_of_date
+                    )
+                elif can_read("hr.leave", _("Absences")):
+                    leave_count = len(set(leaves.search([
+                        ("company_id", "=", dashboard.company_id.id), ("state", "=", "validate"),
+                        ("request_date_from", "<=", dashboard.as_of_date),
+                        ("request_date_to", ">=", dashboard.as_of_date),
+                    ]).mapped("employee_id").ids))
             week_start, week_end = dashboard._week_bounds()
             deliveries = self.env["stock.picking"].search_count([
                 ("company_id", "=", dashboard.company_id.id), ("picking_type_code", "=", "outgoing"),

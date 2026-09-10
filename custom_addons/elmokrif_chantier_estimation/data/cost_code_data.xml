@@ -1,0 +1,10 @@
+<odoo noupdate="1">
+ <record id="cost_code_earthworks" model="chantier.cost.code"><field name="code">EARTH</field><field name="name">Earthworks</field></record>
+ <record id="cost_code_concrete" model="chantier.cost.code"><field name="code">CONC</field><field name="name">Concrete</field></record>
+ <record id="cost_code_rebar" model="chantier.cost.code"><field name="code">REBAR</field><field name="name">Rebar</field></record>
+ <record id="cost_code_masonry" model="chantier.cost.code"><field name="code">MASON</field><field name="name">Masonry</field></record>
+ <record id="cost_code_finishing" model="chantier.cost.code"><field name="code">FINISH</field><field name="name">Finishes</field></record>
+ <record id="cost_code_labor" model="chantier.cost.code"><field name="code">LABOR</field><field name="name">Labour</field></record>
+ <record id="cost_code_equipment" model="chantier.cost.code"><field name="code">EQUIP</field><field name="name">Equipment</field></record>
+ <record id="cost_code_subcontract" model="chantier.cost.code"><field name="code">SUBCON</field><field name="name">Subcontracting</field></record>
+</odoo>
