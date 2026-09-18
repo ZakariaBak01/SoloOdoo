@@ -40,12 +40,12 @@ class TestChantierMaterialRequest(TransactionCase):
                 "chantier_region": "Casablanca-Settat",
                 "work_type": "construction",
                 "partner_id": self.env["res.partner"].create(
-                    {"name": "Materials Test Customer"}
+                    {"name": "Materials Test Customer", "customer_rank": 1}
                 ).id,
                 "date_start": date(2026, 1, 1),
                 "date": date(2026, 12, 31),
                 "site_partner_id": self.env["res.partner"].create(
-                    {"name": "Materials Test Site"}
+                    {"name": "Materials Test Site", "type": "other"}
                 ).id,
             }
         )
@@ -221,7 +221,7 @@ class TestChantierMaterialRequest(TransactionCase):
         chantier = self._create_in_progress_chantier()
         request = self._create_request(chantier)
         user = self._create_chantier_user()
-        chantier.sudo().write({"favorite_user_ids": [(4, user.id)]})
+        chantier.sudo().write({"chantier_member_ids": [(4, user.id)]})
 
         request.with_user(user).action_submit()
         with self.assertRaises(AccessError):
@@ -367,7 +367,7 @@ class TestChantierMaterialRequest(TransactionCase):
             "chantier_region": "Rabat-Salé-Kénitra",
             "work_type": "construction",
             "site_partner_id": self.env["res.partner"].create({
-                "name": "Other-company site"
+                "name": "Other-company site", "type": "other"
             }).id,
         })
 
@@ -405,12 +405,12 @@ class TestChantierMaterialRequest(TransactionCase):
             "chantier_region": "Marrakesh-Safi",
             "work_type": "construction",
             "partner_id": other_env["res.partner"].create({
-                "name": "Cost customer"
+                "name": "Cost customer", "customer_rank": 1
             }).id,
             "date_start": date(2026, 1, 1),
             "date": date(2026, 12, 31),
             "site_partner_id": other_env["res.partner"].create({
-                "name": "Cost site"
+                "name": "Cost site", "type": "other"
             }).id,
         })
         chantier.action_approve_chantier()

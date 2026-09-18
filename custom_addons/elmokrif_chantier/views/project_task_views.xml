@@ -8,6 +8,53 @@
             <xpath expr="//form/sheet/group/group/field[@name='project_id']" position="after">
                 <field name="is_chantier_project" invisible="1"/>
                 <field name="chantier_work_type" invisible="not is_chantier_project"/>
+                <field name="chantier_bundle"
+                       invisible="not is_chantier_project"
+                       required="is_chantier_project"
+                       placeholder="e.g. Foundations, Electrical, Finishing"/>
+                <field name="date_deadline"
+                       invisible="not is_chantier_project"
+                       required="is_chantier_project"/>
+                <field name="priority"
+                       widget="priority"
+                       invisible="not is_chantier_project"
+                       required="is_chantier_project"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="project_task_kanban_chantier_actions" model="ir.ui.view">
+        <field name="name">project.task.kanban.chantier.actions</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.view_task_kanban"/>
+        <field name="arch" type="xml">
+            <xpath expr="//kanban" position="attributes">
+                <attribute name="js_class">chantier_task_kanban</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- My Tasks is still filtered to the signed-in user's assignments, but it
+         uses the same project-stage board as the chantier task page. -->
+    <record id="project_task_kanban_my_tasks_by_stage" model="ir.ui.view">
+        <field name="name">project.task.kanban.my.tasks.by.stage</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.view_task_kanban_inherit_my_task"/>
+        <field name="arch" type="xml">
+            <xpath expr="//kanban" position="attributes">
+                <attribute name="default_group_by">stage_id</attribute>
+            </xpath>
+        </field>
+    </record>
+
+
+    <record id="project_task_search_chantier_bundle" model="ir.ui.view">
+        <field name="name">project.task.search.chantier.bundle</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.view_task_search_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group" position="inside">
+                <filter string="Work Bundle" name="chantier_bundle" context="{'group_by': 'chantier_bundle'}"/>
             </xpath>
         </field>
     </record>

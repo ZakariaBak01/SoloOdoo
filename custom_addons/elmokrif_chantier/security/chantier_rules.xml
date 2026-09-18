@@ -7,9 +7,9 @@
         rules are ANDed with local rules, so this keeps the native rules for
         ordinary projects while enforcing site assignment for chantiers.
 
-        A user is assigned to a chantier when they are its native Project
-        Manager or one of its native Project Members.  No parallel membership
-        model is needed.
+        A user is assigned to a chantier when they are its Chantier Manager or
+        one of its dedicated Chantier Team members. Project favorites remain a
+        personal UI preference and do not grant business-record access.
     -->
     <record id="rule_chantier_project_assignment" model="ir.rule">
         <field name="name">Chantiers: assigned team or customer only</field>
@@ -17,9 +17,10 @@
         <field name="domain_force">[
             '|',
                 ('is_chantier', '=', False),
-                '|', '|',
+                '|', '|', '|',
                     ('user_id', '=', user.id),
-                    ('favorite_user_ids', 'in', [user.id]),
+                    ('chantier_member_ids', 'in', [user.id]),
+                    ('sales_user_ids', 'in', [user.id]),
                     ('partner_id', 'child_of', [user.partner_id.commercial_partner_id.id])
         ]</field>
     </record>
@@ -35,7 +36,7 @@
                     ('project_id.is_chantier', '=', False),
                     '|', '|',
                         ('project_id.user_id', '=', user.id),
-                        ('project_id.favorite_user_ids', 'in', [user.id]),
+                        ('project_id.chantier_member_ids', 'in', [user.id]),
                         ('project_id.partner_id', 'child_of', [user.partner_id.commercial_partner_id.id])
         ]</field>
     </record>
@@ -47,9 +48,10 @@
         <field name="domain_force">[
             '|',
                 ('chantier_id', '=', False),
-                '|',
+                '|', '|',
                     ('chantier_id.user_id', '=', user.id),
-                    ('chantier_id.favorite_user_ids', 'in', [user.id])
+                    ('chantier_id.chantier_member_ids', 'in', [user.id]),
+                    ('chantier_id.sales_user_ids', 'in', [user.id])
         ]</field>
     </record>
 
@@ -62,7 +64,7 @@
                 ('chantier_id', '=', False),
                 '|',
                     ('chantier_id.user_id', '=', user.id),
-                    ('chantier_id.favorite_user_ids', 'in', [user.id])
+                    ('chantier_id.chantier_member_ids', 'in', [user.id])
         ]</field>
     </record>
 </odoo>

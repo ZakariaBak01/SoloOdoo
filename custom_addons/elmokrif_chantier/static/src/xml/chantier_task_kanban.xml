@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="elmokrif_chantier.ChantierTaskKanbanView"
+       t-inherit="web.KanbanView"
+       t-inherit-mode="primary">
+        <xpath expr="//t[@t-set-slot='control-panel-create-button']/t/button" position="replace">
+            <t t-if="canCreate and props.showButtons">
+                <t t-if="isChantierTaskBoard">
+                    <div class="btn-group" role="group" aria-label="Create chantier task">
+                        <button type="button"
+                                class="btn btn-primary o-kanban-button-new"
+                                accesskey="c"
+                                t-on-click="() => this.createRecord()"
+                                data-bounce-button="">
+                            New
+                        </button>
+                        <button type="button"
+                                class="btn btn-primary dropdown-toggle dropdown-toggle-split"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                                title="More task creation options">
+                            <span class="visually-hidden">More task creation options</span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <button type="button"
+                                        class="dropdown-item"
+                                        t-on-click="onNewDetailedTask">
+                                    <i class="fa fa-list-alt me-2"/>
+                                    New Detailed Task
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                    <button type="button"
+                            class="btn btn-outline-secondary ms-2 px-2"
+                            t-on-click="onRefreshChantierHealth"
+                            title="Refresh chantier health"
+                            aria-label="Refresh chantier health">
+                        <i class="fa fa-refresh"/>
+                    </button>
+                </t>
+                <button t-else=""
+                        type="button"
+                        class="btn btn-primary o-kanban-button-new"
+                        accesskey="c"
+                        t-on-click="() => this.createRecord()"
+                        data-bounce-button="">
+                    New
+                </button>
+            </t>
+        </xpath>
+    </t>
+</templates>

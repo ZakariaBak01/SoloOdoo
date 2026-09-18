@@ -13,7 +13,10 @@ class TestChantierBusinessFlow(TransactionCase):
         super().setUpClass()
         cls.company = cls.env.company
         cls.customer = cls.env["res.partner"].create(
-            {"name": "EL MOKRIF System Test Customer"}
+            {
+                "name": "EL MOKRIF System Test Customer",
+                "customer_rank": 1,
+            }
         )
         cls.site = cls.env["res.partner"].create(
             {

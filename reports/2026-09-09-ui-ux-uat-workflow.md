@@ -1,4 +1,4 @@
-# EL MOKRIF Odoo 17 UI, UX and Business-Flow UAT Playbook
+e# EL MOKRIF Odoo 17 UI, UX and Business-Flow UAT Playbook
 
 **Purpose:** Validate that the application is usable, secure and operationally correct for real EL MOKRIF users.
 
@@ -117,18 +117,24 @@ Expected:
 
 1. As U2, attempt to create a chantier.
 2. As U1, create `CH-UAT-001` with Company A but leave one required field empty.
-3. Try **Approve and Initialize** and read the validation message.
-4. Complete customer, manager, site address, dates, region, work type and warehouse.
-5. Approve and initialize.
-6. Confirm exactly one analytic account and one internal site location were created.
-7. Run initialization again.
-8. Open all smart buttons and compare counts with their lists.
-9. As U14, try the copied direct URL for `CH-UAT-001`.
+3. Confirm Customer lists registered customers only and Site Address lists physical Delivery/Other addresses only.
+4. Confirm Chantier Manager lists U1 only for Company A. Confirm Chantier Team lists the same-company chantier workflow users U2, U3, U4 and U6, with no unrelated internal or Company B accounts.
+5. Confirm the chantier Settings page does not show the inbound-email alias control; task responsibility is assigned on tasks and through the chantier team.
+6. Try **Approve and Initialize** and read the validation message.
+7. Complete customer, manager, site address, dates, region, work type and warehouse.
+8. Approve and initialize.
+9. Confirm exactly one analytic account and one internal site location were created and the chatter contains the internal initialization audit note. The account and plan names are verification-only values for U1 and must not open accounting records.
+10. Run initialization again.
+11. Open all smart buttons and compare counts with their lists.
+12. As U14, try the copied direct URL for `CH-UAT-001`.
 
 Expected:
 
 - only U1 can create/approve;
+- manager and team selectors are limited by chantier role and active company;
+- project favorites never grant chantier or linked-record access;
 - the incomplete dossier is blocked with missing fields listed;
+- approval/initialization succeeds even when outbound mail is not configured;
 - repeated initialization creates no duplicate account or location;
 - links use Company A and remain visible to assigned users only;
 - U14 receives access denied and no identifying data is exposed.
@@ -460,6 +466,93 @@ Expected:
 - child lines and attachments inherit the parent security boundary;
 - managers receive intended broader access without bypassing company boundaries.
 
+### UAT-18 — Work-package planning and field execution
+
+1. As U1, open **Chantier > Project Control > Work Packages** and create a package for `CH-UAT-001`.
+2. Select the current BOQ, WBS section and BOQ scope lines; assign a manager, responsible user, planned dates, quantity, unit and resource budgets.
+3. Attempt **Confirm Readiness** while method statement, drawings, permits or materials are not ready.
+4. Complete every readiness check and attach the approved method/drawing/permit evidence.
+5. Confirm readiness, release the package and start it.
+6. Create package tasks and confirm the chantier, bundle, assignee, deadline and priority default correctly.
+7. Enter an installed quantity above the planned quantity, then correct it and complete the quantity.
+8. Submit completed work for inspection, accept it as U1 and close the package.
+9. Create a second package dependent on the first and attempt release before its predecessor closes.
+
+Expected:
+
+- work cannot be released with missing readiness evidence or an open predecessor;
+- installed quantity cannot exceed planned scope;
+- task and work-package links are reciprocal and retain the same chantier context;
+- inspected work follows `Draft → Ready → Released → In Progress → Awaiting Inspection → Accepted → Closed`;
+- overdue open packages affect chantier health and block chantier closure.
+
+### UAT-19 — Site issue, RFI and submittal control
+
+1. As U2, record a High site issue with location, responsible user, due date, description and photos.
+2. Assign and resolve it; attempt to close it without manager verification.
+3. Create an RFI from the issue and confirm the question, chantier, owner and deadline carry across.
+4. Submit, review and answer the RFI; record its cost and schedule impact and close it.
+5. Create a change event from the answered RFI and confirm source links remain reciprocal.
+6. Create a material submittal with specification reference, BOQ line, supplier/contractor, reviewer, deadline and revision file.
+7. Try submitting without a file, then submit with evidence.
+8. Record **Approved as Noted**, create a revision and confirm the decided revision becomes immutable/superseded.
+9. Make an RFI and submittal overdue and refresh chantier health.
+
+Expected:
+
+- field observations can become RFIs or commercial change events without re-entering their origin;
+- only verified issues close and every transition is recorded in chatter;
+- RFI submitted/answered/closed timestamps cannot be edited directly;
+- submittal decisions require comments and approved revisions remain immutable;
+- overdue RFIs mark the chantier Off Track and overdue submittals mark it At Risk.
+
+### UAT-20 — Change event and formal variation order
+
+1. Create a change event from the RFI with reason, responsibility, evidence, estimated cost, estimated revenue and schedule days.
+2. Attempt submission without evidence.
+3. Submit, estimate, commercially review and accept it for variation.
+4. Create its variation order twice and confirm only one variation is produced.
+5. Add priced variation lines linked to the affected BOQ lines.
+6. Submit for internal review and request customer approval.
+7. Attempt approval without the customer approval reference and signed evidence.
+8. As U1, record the customer reference, approve and compare current budget/current contract with the original values.
+9. Select the current approved BOQ and prepare a BOQ revision.
+10. Confirm manual quantity deltas appear only on the new Draft BOQ revision; the approved baseline remains unchanged.
+11. Approve the BOQ revision through the existing estimator/reviewer/approver segregation and mark the variation implemented.
+
+Expected:
+
+- approved change cost increases Current Budget and approved change revenue increases Current Contract;
+- customer and internal approvals retain user, time, reference and evidence;
+- an accepted change event converts once and no longer remains in pending-change exposure;
+- take-off based BOQ quantities require their take-off evidence to be revised explicitly;
+- Draft, rejected or customer-pending variations do not alter approved project totals;
+- unimplemented variations block chantier closure.
+
+### UAT-21 — BOQ progress certification, invoicing and project-control dashboard
+
+1. Create a client-contract BOQ with contract rates and approve it through the BOQ workflow.
+2. As U1, create a Progress Certificate for a period and load its BOQ lines.
+3. Enter previous and current measured quantities; attempt a cumulative quantity above the contract quantity.
+4. Set retention and advance recovery, then compare gross, deductions and net current value manually.
+5. Attach measurement evidence and submit.
+6. Attempt verification as the submitter; verify as a different authorized user.
+7. Record the customer certificate reference and approve as a third authorized manager.
+8. Create the invoice and confirm one Draft customer invoice is linked to the certificate, chantier and analytic account.
+9. Repeat invoice creation and confirm no duplicate invoice is created.
+10. Open the chantier **Project Control** tab and reconcile original budget, approved changes, current budget, actual cost, forecast cost, contract value, certified revenue and forecast margin.
+11. Open Management Dashboard and reconcile active/At Risk/Off Track chantiers, critical issues, overdue RFIs, pending change exposure, approved variation cost and certified revenue.
+12. Switch to Company B and verify every project-control total is isolated.
+
+Expected:
+
+- cumulative certification cannot exceed contracted quantities;
+- retention and advance recovery are transparent deductions rather than hidden invoice adjustments;
+- submitter, verifier and approver segregation is enforced;
+- approved certificates are immutable and create at most one linked invoice;
+- project and portfolio figures drill back to the same controlled source records;
+- open work packages, RFIs, submittals, changes, variations and certificates participate in closeout checks.
+
 ## 5. Exploratory UX session
 
 After scripted testing, give each operational user 30 minutes without instructions and ask them to complete their normal flow. Observe rather than guide them.
@@ -494,6 +587,17 @@ Prioritize UX defects that cause incorrect records or off-system work above cosm
 | Recovery | Backup/restore and failed-action recovery are demonstrated separately. |
 
 Critical and High defects block the affected workflow. Medium defects require an owner, workaround and agreed resolution date. Low defects may be accepted by the process owner.
+
+## 6.1 Current automated evidence
+
+The isolated Odoo regression harness was run on 16 September 2026 after the UAT-05 fulfillment guard was added:
+
+| Scope | Result | Evidence |
+| --- | --- | --- |
+| Chantier, stock and purchase/quality workflows | 71 tests passed; 0 failed; 0 errors | `reports/test-artifacts/system/20260916-145857-38b2bd55/odoo.log` |
+| Chantier, estimation, tender/BOQ and construction-control workflows | 48 tests passed; 0 failed; 0 errors | `reports/test-artifacts/system/20260916-150118-c734f403/odoo.log` |
+
+These are automated regression results; named-role UI, mobile, attachment and exploratory checks still require execution in the acceptance database.
 
 ## 7. Final sign-off
 

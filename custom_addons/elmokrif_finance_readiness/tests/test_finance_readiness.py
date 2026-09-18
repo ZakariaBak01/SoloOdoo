@@ -33,7 +33,15 @@ class TestFinanceReadiness(TransactionCase):
                 "elmokrif_chantier.group_chantier_user",
             ],
         )
-        cls.customer = cls.env["res.partner"].create({"name": "Finance Gate Customer"})
+        cls.customer = cls.env["res.partner"].create({
+            "name": "Finance Gate Customer",
+            "customer_rank": 1,
+        })
+        cls.site = cls.env["res.partner"].create({
+            "name": "Finance Gate Site",
+            "parent_id": cls.customer.id,
+            "type": "delivery",
+        })
         cls.warehouse = cls.env["stock.warehouse"].search([
             ("company_id", "=", cls.company.id)
         ], limit=1)
@@ -45,9 +53,9 @@ class TestFinanceReadiness(TransactionCase):
             "company_id": cls.company.id,
             "warehouse_id": cls.warehouse.id,
             "partner_id": cls.customer.id,
-            "site_partner_id": cls.customer.id,
-            "user_id": cls.manager.id,
-            "favorite_user_ids": [Command.set([cls.manager.id, cls.preparer.id])],
+            "site_partner_id": cls.site.id,
+            "user_id": cls.env.user.id,
+            "chantier_member_ids": [Command.set([cls.manager.id, cls.preparer.id])],
             "chantier_region": "Casablanca-Settat",
             "work_type": "construction",
             "date_start": date(2026, 1, 1),

@@ -1,4 +1,4 @@
-from datetime import date
+from datetime import date, timedelta
 
 from odoo.exceptions import AccessError, UserError, ValidationError
 from odoo.tests import TransactionCase, tagged
@@ -27,6 +27,7 @@ class TestChantier(TransactionCase):
         if "partner_id" not in values:
             values["partner_id"] = self.env["res.partner"].create({
                 "name": "Test Customer",
+                "customer_rank": 1,
             }).id
         values.setdefault("user_id", self.env.user.id)
         values.setdefault("date_start", date(2026, 1, 1))
@@ -36,8 +37,225 @@ class TestChantier(TransactionCase):
         if "site_partner_id" not in values:
             values["site_partner_id"] = self.env["res.partner"].create({
                 "name": "Test Site Address",
+                "type": "other",
             }).id
         return self.env["project.project"].create(values)
+
+    def test_site_address_accepts_only_address_records(self):
+        contact = self.env["res.partner"].create({
+            "name": "Not a Site Address",
+            "type": "contact",
+        })
+        with self.assertRaisesRegex(ValidationError, "Site Address must be"):
+            self._create_chantier(site_partner_id=contact.id)
+
+        for address_type in ("delivery", "other"):
+            site = self.env["res.partner"].create({
+                "name": f"{address_type.title()} Site Address",
+                "type": address_type,
+            })
+            chantier = self._create_chantier(site_partner_id=site.id)
+            self.assertEqual(chantier.site_partner_id, site)
+
+    def test_chantier_accepts_only_registered_customers(self):
+        for invalid_partner in (
+            self.env.user.partner_id,
+            self.env.company.partner_id,
+            self.env["res.partner"].create({
+                "name": "Supplier-only Contact",
+                "supplier_rank": 1,
+            }),
+        ):
+            with self.assertRaisesRegex(ValidationError, "registered customer"):
+                self._create_chantier(partner_id=invalid_partner.id)
+
+        customer = self.env["res.partner"].create({
+            "name": "Registered Customer",
+            "customer_rank": 1,
+        })
+        chantier = self._create_chantier(partner_id=customer.id)
+        self.assertEqual(chantier.partner_id, customer)
+
+    def test_inline_customer_defaults_to_registered_customer(self):
+        customer = self.env["res.partner"].with_context(
+            default_customer_rank=1,
+            default_company_type="company",
+        ).create({"name": "Inline Customer"})
+
+        self.assertGreater(customer.customer_rank, 0)
+        self.assertTrue(customer.is_company)
+
+    def test_chantier_manager_can_create_site_addresses(self):
+        manager = self.env["res.users"].with_context(no_reset_password=True).create({
+            "name": "Site address manager",
+            "login": "site_address_manager@example.test",
+            "groups_id": [(6, 0, [
+                self.env.ref("base.group_user").id,
+                self.env.ref("elmokrif_chantier.group_chantier_manager").id,
+            ])],
+        })
+
+        self.assertTrue(manager.has_group("base.group_partner_manager"))
+        site = self.env["res.partner"].with_user(manager).create({
+            "name": "Manager-created Site Address",
+            "type": "other",
+        })
+        self.assertEqual(site.type, "other")
+
+    def test_site_address_uses_dedicated_creation_form(self):
+        site_form = self.env.ref("elmokrif_chantier.view_chantier_site_partner_form")
+        self.assertEqual(site_form.model, "res.partner")
+        self.assertIn('string="Site Name"', site_form.arch_db)
+        self.assertIn('string="Physical Address"', site_form.arch_db)
+        self.assertNotIn('name="company_type"', site_form.arch_db)
+        self.assertNotIn('name="function"', site_form.arch_db)
+
+        chantier_form = self.env.ref(
+            "elmokrif_chantier.project_project_form_chantier"
+        )
+        self.assertIn(
+            "elmokrif_chantier.view_chantier_site_partner_form",
+            chantier_form.arch_db,
+        )
+
+    def test_customer_uses_dedicated_creation_form(self):
+        customer_form = self.env.ref(
+            "elmokrif_chantier.view_chantier_customer_partner_form"
+        )
+        self.assertEqual(customer_form.model, "res.partner")
+        self.assertIn('string="Customer Name"', customer_form.arch_db)
+        self.assertIn('string="Primary Address"', customer_form.arch_db)
+        self.assertNotIn('name="function"', customer_form.arch_db)
+
+        chantier_form = self.env.ref(
+            "elmokrif_chantier.project_project_form_chantier"
+        )
+        self.assertIn("customer_rank", chantier_form.arch_db)
+        self.assertIn(
+            "elmokrif_chantier.view_chantier_customer_partner_form",
+            chantier_form.arch_db,
+        )
+
+    def test_chantier_team_candidates_are_role_and_company_scoped(self):
+        manager = self.env["res.users"].with_context(no_reset_password=True).create({
+            "name": "Eligible chantier manager",
+            "login": "eligible_chantier_manager@example.test",
+            "company_id": self.company.id,
+            "company_ids": [(6, 0, [self.company.id])],
+            "groups_id": [(6, 0, [
+                self.env.ref("base.group_user").id,
+                self.env.ref("elmokrif_chantier.group_chantier_manager").id,
+            ])],
+        })
+        member = self.env["res.users"].with_context(no_reset_password=True).create({
+            "name": "Eligible chantier member",
+            "login": "eligible_chantier_member@example.test",
+            "company_id": self.company.id,
+            "company_ids": [(6, 0, [self.company.id])],
+            "groups_id": [(6, 0, [
+                self.env.ref("base.group_user").id,
+                self.env.ref("elmokrif_chantier.group_chantier_user").id,
+            ])],
+        })
+        unrelated = self.env["res.users"].with_context(no_reset_password=True).create({
+            "name": "Unrelated internal user",
+            "login": "unrelated_internal_user@example.test",
+            "company_id": self.company.id,
+            "company_ids": [(6, 0, [self.company.id])],
+            "groups_id": [(6, 0, [self.env.ref("base.group_user").id])],
+        })
+        other_company = self.env["res.company"].create({"name": "Other company"})
+        other_company_member = self.env["res.users"].with_context(
+            no_reset_password=True
+        ).create({
+            "name": "Other-company chantier member",
+            "login": "other_company_chantier_member@example.test",
+            "company_id": other_company.id,
+            "company_ids": [(6, 0, [other_company.id])],
+            "groups_id": [(6, 0, [
+                self.env.ref("base.group_user").id,
+                self.env.ref("elmokrif_chantier.group_chantier_user").id,
+            ])],
+        })
+
+        chantier = self._create_chantier(
+            user_id=manager.id,
+            chantier_member_ids=[(6, 0, [member.id])],
+        )
+
+        self.assertIn(manager, chantier.eligible_chantier_manager_ids)
+        self.assertNotIn(member, chantier.eligible_chantier_manager_ids)
+        self.assertIn(member, chantier.eligible_chantier_member_ids)
+        self.assertNotIn(unrelated, chantier.eligible_chantier_member_ids)
+        self.assertNotIn(other_company_member, chantier.eligible_chantier_member_ids)
+
+        with self.assertRaisesRegex(ValidationError, "lack the Chantier User role"):
+            chantier.write({"chantier_member_ids": [(4, unrelated.id)]})
+
+    def test_chantier_manager_must_have_manager_role_and_company_access(self):
+        chantier_user = self.env["res.users"].with_context(
+            no_reset_password=True
+        ).create({
+            "name": "Non-manager chantier user",
+            "login": "non_manager_chantier_user@example.test",
+            "company_id": self.company.id,
+            "company_ids": [(6, 0, [self.company.id])],
+            "groups_id": [(6, 0, [
+                self.env.ref("base.group_user").id,
+                self.env.ref("elmokrif_chantier.group_chantier_user").id,
+            ])],
+        })
+
+        with self.assertRaisesRegex(ValidationError, "Chantier Manager must be"):
+            self._create_chantier(user_id=chantier_user.id)
+
+    def test_chantier_hides_inbound_email_alias_settings(self):
+        chantier_form = self.env.ref(
+            "elmokrif_chantier.project_project_form_chantier"
+        )
+
+        self.assertIn("//page[@name='settings']//div[@name='alias_def']", chantier_form.arch_db)
+        self.assertIn("//page[@name='settings']//field[@name='alias_contact']", chantier_form.arch_db)
+
+    def test_chantier_manager_can_review_generated_analytic_links(self):
+        chantier_form = self.env.ref(
+            "elmokrif_chantier.project_project_form_chantier"
+        )
+
+        self.assertIn(
+            'groups="elmokrif_chantier.group_chantier_manager"',
+            chantier_form.arch_db,
+        )
+        self.assertNotIn(
+            'groups="analytic.group_analytic_accounting"',
+            chantier_form.arch_db,
+        )
+        self.assertEqual(
+            chantier_form.arch_db.count("'no_open': True"),
+            2,
+        )
+
+    def test_initialization_does_not_require_sender_email(self):
+        manager = self.env["res.users"].with_context(no_reset_password=True).create({
+            "name": "Manager without email",
+            "login": "manager_without_email",
+            "email": False,
+            "company_id": self.company.id,
+            "company_ids": [(6, 0, [self.company.id])],
+            "groups_id": [(6, 0, [
+                self.env.ref("base.group_user").id,
+                self.env.ref("elmokrif_chantier.group_chantier_manager").id,
+            ])],
+        })
+        chantier = self._create_chantier(user_id=manager.id)
+
+        chantier.with_user(manager).action_approve_chantier()
+
+        self.assertTrue(chantier.chantier_initialized)
+        self.assertTrue(any(
+            "Chantier initialized" in str(message.body)
+            for message in chantier.message_ids
+        ))
 
     def _approve(self, chantier):
         chantier.action_approve_chantier()
@@ -141,6 +359,8 @@ class TestChantier(TransactionCase):
             "name": "Chantier work package",
             "project_id": chantier.id,
             "chantier_work_type": "carpentry",
+            "chantier_bundle": "Carpentry package",
+            "date_deadline": date(2026, 6, 1),
         })
         self.assertEqual(task.chantier_work_type, "carpentry")
 
@@ -387,6 +607,7 @@ class TestChantier(TransactionCase):
             "warehouse_id": self.warehouse.id,
             "partner_id": self.env["res.partner"].create({
                 "name": "New Form Customer",
+                "customer_rank": 1,
             }).id,
             "user_id": self.env.user.id,
             "date_start": date(2026, 1, 1),
@@ -395,6 +616,7 @@ class TestChantier(TransactionCase):
             "work_type": "construction",
             "site_partner_id": self.env["res.partner"].create({
                 "name": "New Form Site",
+                "type": "other",
             }).id,
             "analytic_account_id": analytic_account.id,
         })
@@ -465,6 +687,9 @@ class TestChantier(TransactionCase):
         chantier.action_start_chantier()
         chantier.action_complete_chantier()
         chantier.action_close_chantier()
+        chantier.action_archive_chantier()
+
+        self.assertFalse(chantier.active)
 
         with self.assertRaises(ValidationError):
             chantier.action_reopen_chantier()
@@ -473,6 +698,7 @@ class TestChantier(TransactionCase):
         chantier.action_reopen_chantier()
 
         self.assertEqual(chantier.chantier_state, "approved")
+        self.assertTrue(chantier.active)
         self.assertFalse(chantier.reopen_reason)
         self.assertTrue(any(
             "Customer requested corrective work" in str(message.body)
@@ -490,18 +716,53 @@ class TestChantier(TransactionCase):
             ])],
         })
         chantier = self._create_chantier(
-            favorite_user_ids=[(6, 0, [user.id])],
+            chantier_member_ids=[(6, 0, [user.id])],
             privacy_visibility="followers",
         )
         self._approve(chantier)
 
         self.assertIn(user.partner_id, chantier.message_partner_ids)
+        self.assertEqual(chantier.last_update_status, "at_risk")
         chantier.with_user(user).action_start_chantier()
+        self.assertEqual(chantier.last_update_status, "at_risk")
         chantier.with_user(user).action_hold_chantier()
+        self.assertEqual(chantier.last_update_status, "on_hold")
         chantier.with_user(user).action_start_chantier()
+        self.assertEqual(chantier.last_update_status, "at_risk")
         chantier.with_user(user).action_complete_chantier()
 
         self.assertEqual(chantier.chantier_state, "completed")
+        self.assertEqual(chantier.last_update_status, "done")
+
+    def test_health_checker_uses_schedule_and_task_evidence(self):
+        today = date.today()
+        chantier = self._create_chantier(
+            date_start=today - timedelta(days=10),
+            date=today + timedelta(days=10),
+        )
+        self._approve(chantier)
+        chantier.action_start_chantier()
+        self.assertEqual(chantier.last_update_status, "at_risk")
+        self.assertIn("No active tasks", chantier.health_check_reason)
+
+        task = self.env["project.task"].create({
+            "name": "Late construction task",
+            "project_id": chantier.id,
+            "date_deadline": today - timedelta(days=1),
+            "chantier_bundle": "Construction package",
+            "priority": "1",
+        })
+        self.assertEqual(chantier.last_update_status, "off_track")
+        self.assertIn("past their deadline", chantier.health_check_reason)
+
+        task.write({"date_deadline": today + timedelta(days=5)})
+        self.assertEqual(chantier.last_update_status, "at_risk")
+        self.assertIn("Task completion", chantier.health_check_reason)
+
+        chantier.action_hold_chantier()
+        self.assertEqual(chantier.last_update_status, "on_hold")
+        chantier.action_complete_chantier()
+        self.assertEqual(chantier.last_update_status, "done")
 
     def test_chantier_user_cannot_access_unassigned_chantier_or_edit_project(self):
         user = self.env["res.users"].with_context(no_reset_password=True).create({
@@ -526,6 +787,29 @@ class TestChantier(TransactionCase):
         with self.assertRaises(AccessError):
             ordinary_project.with_user(user).write({"name": "Forbidden edit"})
 
+    def test_sales_contact_can_read_only_their_quotation_chantier_reference(self):
+        salesperson = self.env["res.users"].with_context(no_reset_password=True).create({
+            "name": "Chantier sales reference user",
+            "login": "chantier_sales_reference_user",
+            "email": "chantier_sales_reference_user@example.test",
+            "groups_id": [(6, 0, [
+                self.env.ref("base.group_user").id,
+                self.env.ref("elmokrif_chantier.group_chantier_sales_reader").id,
+            ])],
+        })
+        accessible = self._create_chantier(
+            name="Sales quotation chantier",
+            sales_user_ids=[(6, 0, [salesperson.id])],
+        )
+        restricted = self._create_chantier(name="Restricted commercial chantier")
+
+        visible = self.env["project.project"].with_user(salesperson).search([
+            ("id", "in", [accessible.id, restricted.id]),
+        ])
+        self.assertEqual(visible, accessible)
+        with self.assertRaises(AccessError):
+            accessible.with_user(salesperson).write({"name": "Forbidden commercial edit"})
+
     def test_open_tasks_block_closure(self):
         chantier = self._create_chantier()
         self._approve(chantier)
@@ -534,6 +818,8 @@ class TestChantier(TransactionCase):
         self.env["project.task"].create({
             "name": "Incomplete work package",
             "project_id": chantier.id,
+            "chantier_bundle": "Closure package",
+            "date_deadline": date.today() + timedelta(days=1),
         })
 
         with self.assertRaises(UserError):

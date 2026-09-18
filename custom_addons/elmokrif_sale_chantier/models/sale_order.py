@@ -44,7 +44,7 @@ class SaleOrder(models.Model):
         partner = self.env["res.partner"].browse(partner_id).exists()
         if not partner:
             return self.env["project.project"]
-        return self._find_chantier_for_partner(partner, self.env.company)
+        return partner.default_chantier_id
 
     @api.model
     def _find_chantier_for_partner(self, partner, company):
@@ -57,7 +57,7 @@ class SaleOrder(models.Model):
             [
                 ("is_chantier", "=", True),
                 ("company_id", "=", company.id),
-                ("site_partner_id", "in", partner_ids),
+                ("partner_id", "in", partner_ids),
             ],
             limit=2,
         )
@@ -66,15 +66,6 @@ class SaleOrder(models.Model):
     @api.model_create_multi
     def create(self, vals_list):
         for vals in vals_list:
-            if not vals.get("chantier_id") and vals.get("partner_id"):
-                partner = self.env["res.partner"].browse(vals["partner_id"]).exists()
-                company = self.env["res.company"].browse(
-                    vals.get("company_id")
-                ) or self.env.company
-                if partner:
-                    chantier = self._find_chantier_for_partner(partner, company)
-                    if chantier:
-                        vals["chantier_id"] = chantier.id
             if vals.get("order_line") and not vals.get("chantier_id"):
                 for command in vals["order_line"]:
                     if command[0] == 0 and isinstance(command[2], dict):
@@ -111,10 +102,12 @@ class SaleOrder(models.Model):
             if not order.partner_id:
                 order.chantier_id = False
                 continue
-            if not order.chantier_id or order.chantier_id.site_partner_id.commercial_partner_id != order.partner_id.commercial_partner_id:
-                order.chantier_id = self._find_chantier_for_partner(
-                    order.partner_id, order.company_id or self.env.company
-                )
+            if (
+                order.chantier_id
+                and order.chantier_id.partner_id.commercial_partner_id
+                != order.partner_id.commercial_partner_id
+            ):
+                order.chantier_id = False
 
     @api.constrains("chantier_id", "partner_id", "company_id")
     def _check_chantier_link(self):
@@ -135,7 +128,7 @@ class SaleOrder(models.Model):
         for order in self:
             chantiers = order._linked_chantiers()
             if not chantiers:
-                raise UserError(_("A chantier is required before confirming the order."))
+                continue
             order._validate_all_chantier_links()
             for chantier in chantiers:
                 if not chantier.chantier_initialized:
@@ -302,7 +295,10 @@ class SaleOrderLine(models.Model):
         if "analytic_distribution" not in self._fields:
             return
         for line in self:
-            distribution = chantier_analytic_distribution(line.chantier_id)
+            distribution = chantier_analytic_distribution(
+                line.chantier_id,
+                line.analytic_distribution,
+            )
             if distribution:
                 line.analytic_distribution = distribution
 
@@ -316,7 +312,10 @@ class SaleOrderLine(models.Model):
                     "sale_line_id": self.id,
                 }
             )
-            distribution = chantier_analytic_distribution(self.chantier_id)
+            distribution = chantier_analytic_distribution(
+                self.chantier_id,
+                vals.get("analytic_distribution"),
+            )
             if distribution:
                 vals["analytic_distribution"] = distribution
         return vals

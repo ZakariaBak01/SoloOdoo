@@ -7,12 +7,19 @@ from odoo.tests import TransactionCase, tagged
 @tagged("post_install", "-at_install")
 class TestChantierCrm(TransactionCase):
     def test_quotation_keeps_explicit_opportunity_chantier(self):
-        customer = self.env["res.partner"].create({"name": "Customer with multiple sites"})
+        customer = self.env["res.partner"].create({
+            "name": "Customer with multiple sites",
+            "customer_rank": 1,
+        })
+        site_addresses = self.env["res.partner"].create([
+            {"name": "Site A Address", "parent_id": customer.id, "type": "delivery"},
+            {"name": "Site B Address", "parent_id": customer.id, "type": "delivery"},
+        ])
         sites = self.env["project.project"].create([
             {"name": "Site A", "is_chantier": True, "company_id": self.env.company.id,
-             "site_partner_id": customer.id},
+             "partner_id": customer.id, "site_partner_id": site_addresses[0].id},
             {"name": "Site B", "is_chantier": True, "company_id": self.env.company.id,
-             "site_partner_id": customer.id},
+             "partner_id": customer.id, "site_partner_id": site_addresses[1].id},
         ])
         lead = self.env["crm.lead"].create({
             "name": "Quotation for Site B", "partner_id": customer.id,

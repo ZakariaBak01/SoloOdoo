@@ -110,6 +110,11 @@ class ChantierMaterialRequest(models.Model):
     def action_plan_fulfillment(self):
         self._check_manager()
         self.ensure_one()
+        # A request may have been approved while the chantier was active and
+        # later placed on hold.  Recheck the commitment gate at the moment the
+        # transfer or purchase order is created so an already approved request
+        # cannot create new stock or procurement commitments during the hold.
+        self.chantier_id._ensure_chantier_accepts_commitments()
         self.env.cr.execute(
             "SELECT id FROM chantier_material_request WHERE id = %s FOR UPDATE",
             [self.id],

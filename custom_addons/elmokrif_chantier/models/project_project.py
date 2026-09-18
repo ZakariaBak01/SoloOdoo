@@ -41,6 +41,18 @@ class ProjectProject(models.Model):
         tracking=True,
         index=True,
     )
+    health_check_reason = fields.Char(
+        string="Health Assessment",
+        readonly=True,
+        copy=False,
+        tracking=True,
+    )
+    health_check_date = fields.Date(
+        string="Health Checked On",
+        readonly=True,
+        copy=False,
+    )
+    health_signal_count = fields.Integer(string="Open Health Signals", readonly=True, copy=False)
     chantier_region = fields.Char(string="Region", tracking=True)
     work_type = fields.Selection(
         WORK_TYPE_SELECTION,
@@ -85,6 +97,41 @@ class ProjectProject(models.Model):
     chantier_initialized = fields.Boolean(
         string="Chantier Initialized",
         compute="_compute_chantier_initialized",
+    )
+    chantier_member_ids = fields.Many2many(
+        "res.users",
+        "project_chantier_user_rel",
+        "project_id",
+        "user_id",
+        string="Chantier Team",
+        copy=False,
+        check_company=True,
+    )
+    sales_user_ids = fields.Many2many(
+        "res.users",
+        "project_chantier_sales_user_rel",
+        "project_id",
+        "user_id",
+        string="Sales Contacts",
+        copy=False,
+        check_company=True,
+        help="Salespeople who may select this chantier on quotations. They receive read-only access to this chantier reference only.",
+    )
+    eligible_chantier_manager_ids = fields.Many2many(
+        "res.users",
+        "project_eligible_chantier_manager_rel",
+        "project_id",
+        "user_id",
+        compute="_compute_eligible_chantier_users",
+        compute_sudo=True,
+    )
+    eligible_chantier_member_ids = fields.Many2many(
+        "res.users",
+        "project_eligible_chantier_member_rel",
+        "project_id",
+        "user_id",
+        compute="_compute_eligible_chantier_users",
+        compute_sudo=True,
     )
     can_manage_chantier = fields.Boolean(
         string="Can Manage Chantier",
@@ -135,6 +182,108 @@ class ProjectProject(models.Model):
         )
         for project in self:
             project.can_manage_chantier = can_manage
+
+    @api.depends("company_id")
+    def _compute_eligible_chantier_users(self):
+        """Offer only chantier-role users who can work in the site company."""
+        manager_users = self.env.ref(
+            "elmokrif_chantier.group_chantier_manager"
+        ).sudo().users
+        member_users = self.env.ref(
+            "elmokrif_chantier.group_chantier_user"
+        ).sudo().users
+        for project in self:
+            company = project.company_id or self.env.company
+            eligible = lambda user: (
+                user.active
+                and not user.share
+                and company in user.company_ids
+            )
+            project.eligible_chantier_manager_ids = manager_users.filtered(eligible)
+            project.eligible_chantier_member_ids = member_users.filtered(eligible)
+
+    @api.constrains("is_chantier", "site_partner_id")
+    def _check_chantier_site_address_type(self):
+        for project in self.filtered(lambda item: item.is_chantier and item.site_partner_id):
+            if project.site_partner_id.type not in ("delivery", "other"):
+                raise ValidationError(
+                    _(
+                        "Site Address must be an Other Address or Delivery Address, "
+                        "not a customer, company, or user contact."
+                    )
+                )
+
+    @api.constrains("is_chantier", "partner_id")
+    def _check_chantier_customer(self):
+        for project in self.filtered(lambda item: item.is_chantier and item.partner_id):
+            if project.partner_id.customer_rank <= 0:
+                raise ValidationError(
+                    _(
+                        "Customer must be a registered customer, not an internal user, "
+                        "company profile, site address, or supplier-only contact."
+                    )
+                )
+
+    @api.constrains(
+        "is_chantier",
+        "company_id",
+        "user_id",
+        "chantier_member_ids",
+        "sales_user_ids",
+    )
+    def _check_chantier_team(self):
+        manager_users = self.env.ref(
+            "elmokrif_chantier.group_chantier_manager"
+        ).sudo().users
+        member_users = self.env.ref(
+            "elmokrif_chantier.group_chantier_user"
+        ).sudo().users
+        root_user = self.env.ref("base.user_root")
+        for project in self.filtered("is_chantier"):
+            if project.user_id and project.user_id != root_user and (
+                project.user_id.share
+                or project.user_id not in manager_users
+                or project.company_id not in project.user_id.company_ids
+            ):
+                raise ValidationError(
+                    _(
+                        "Chantier Manager must be an internal Chantier Manager "
+                        "with access to the chantier company."
+                    )
+                )
+            invalid_members = project.chantier_member_ids.filtered(
+                lambda user: (
+                    user.share
+                    or user not in member_users
+                    or project.company_id not in user.company_ids
+                )
+            )
+            if invalid_members:
+                raise ValidationError(
+                    _(
+                        "These users cannot join the chantier team because they "
+                        "lack the Chantier User role or company access: %s",
+                        ", ".join(invalid_members.mapped("display_name")),
+                    )
+                )
+            invalid_sales_contacts = project.sales_user_ids.filtered(
+                lambda user: (
+                    user.share
+                    or not user.has_group("elmokrif_chantier.group_chantier_sales_reader")
+                    or project.company_id not in user.company_ids
+                )
+            )
+            if invalid_sales_contacts:
+                raise ValidationError(
+                    _(
+                        "Sales Contacts must be internal sales-reference users with access to the chantier company: %s",
+                        ", ".join(invalid_sales_contacts.mapped("display_name")),
+                    )
+                )
+            if project.user_id in project.chantier_member_ids:
+                raise ValidationError(
+                    _("The Chantier Manager must not also be listed as a team member.")
+                )
 
     @api.model
     def default_get(self, fields_list):
@@ -333,6 +482,9 @@ class ProjectProject(models.Model):
 
         result = super().write(vals)
 
+        if "chantier_state" in vals:
+            self.filtered("is_chantier")._refresh_chantier_health()
+
         for project in self.filtered(lambda item: item.is_chantier and not item.chantier_reference):
             reference = (
                 self.env["ir.sequence"]
@@ -341,7 +493,7 @@ class ProjectProject(models.Model):
             )
             super(ProjectProject, project).write({"chantier_reference": reference})
 
-        if {"is_chantier", "user_id", "favorite_user_ids"}.intersection(vals):
+        if {"is_chantier", "user_id", "chantier_member_ids"}.intersection(vals):
             self.filtered("is_chantier")._subscribe_chantier_assignees()
 
         if vals.get("chantier_state") == "approved":
@@ -352,10 +504,139 @@ class ProjectProject(models.Model):
 
         return result
 
+    def _get_chantier_health(self):
+        """Return the project-health status and the fact that supports it."""
+        self.ensure_one()
+        today = fields.Date.context_today(self)
+        if self.chantier_state in {"completed", "closed"}:
+            return "done", _("The chantier lifecycle is complete.")
+        if self.chantier_state == "on_hold":
+            return "on_hold", _("The chantier is on hold.")
+        if self.chantier_state == "draft":
+            return "on_track", _("The chantier is still being planned.")
+
+        critical_signals = []
+        risk_signals = []
+        if "chantier.material.request" in self.env:
+            requests = self.env["chantier.material.request"].search([
+                ("chantier_id", "=", self.id),
+                ("state", "in", ["submitted", "approved", "partially_delivered"]),
+            ])
+            for request in requests:
+                age = (today - request.request_date).days
+                if age > 7:
+                    critical_signals.append(_("Material request %(name)s has been open for %(days)s days.", name=request.name, days=age))
+                elif age > 3:
+                    risk_signals.append(_("Material request %(name)s has been awaiting delivery for %(days)s days.", name=request.name, days=age))
+        if "chantier.quality.inspection" in self.env:
+            inspections = self.env["chantier.quality.inspection"].search([
+                ("chantier_id", "=", self.id), ("state", "=", "draft"),
+            ])
+            for inspection in inspections:
+                age = (today - fields.Date.to_date(inspection.create_date)).days
+                if age > 3:
+                    critical_signals.append(_("Quality inspection %(name)s has been awaiting release for %(days)s days.", name=inspection.name, days=age))
+                else:
+                    risk_signals.append(_("Quality inspection %(name)s is awaiting release.", name=inspection.name))
+        if critical_signals:
+            return "off_track", " ".join(critical_signals)
+        if risk_signals:
+            return "at_risk", " ".join(risk_signals)
+
+        tasks = self.env["project.task"].search([
+            ("project_id", "=", self.id),
+            ("active", "=", True),
+        ])
+        open_tasks = tasks.filtered(lambda task: not task.stage_id.fold)
+        overdue_tasks = open_tasks.filtered(
+            lambda task: task.date_deadline
+            and fields.Date.to_date(task.date_deadline) < today
+        )
+        undated_tasks = open_tasks.filtered(lambda task: not task.date_deadline)
+        if undated_tasks:
+            return "at_risk", _(
+                "%(count)s open task(s) have no deadline yet.",
+                count=len(undated_tasks),
+            )
+        critical_overdue_tasks = overdue_tasks.filtered(
+            lambda task: task.priority == "1"
+        )
+        if critical_overdue_tasks:
+            return "off_track", _(
+                "%(count)s high-priority task(s) are past their deadline.",
+                count=len(critical_overdue_tasks),
+            )
+        if overdue_tasks:
+            return "at_risk", _(
+                "%(count)s task(s) are past their deadline.",
+                count=len(overdue_tasks),
+            )
+        if self.date and self.date < today:
+            return "off_track", _("The planned end date has passed.")
+        if self.date_start and today < self.date_start:
+            return "on_track", _("The planned start date has not been reached.")
+        if not tasks:
+            return "at_risk", _("No active tasks are planned to measure progress.")
+        if self.date_start and self.date and self.date > self.date_start:
+            duration = (self.date - self.date_start).days
+            elapsed = max(0, min((today - self.date_start).days, duration))
+            expected_progress = elapsed * 100 / duration
+            actual_progress = (len(tasks - open_tasks) * 100) / len(tasks)
+            if actual_progress + 20 < expected_progress:
+                return "at_risk", _(
+                    "Task completion is %(actual).0f%% versus %(expected).0f%% planned progress.",
+                    actual=actual_progress,
+                    expected=expected_progress,
+                )
+        return "on_track", _("Task progress is consistent with the planned schedule.")
+
+    def _refresh_chantier_health(self):
+        """Update the native project-health badge from measurable chantier data."""
+        for project in self.filtered("is_chantier"):
+            status, reason = project._get_chantier_health()
+            values = {
+                "last_update_status": status,
+                "health_check_reason": reason,
+                "health_check_date": fields.Date.context_today(project),
+                "health_signal_count": 0 if status in {"on_track", "done"} else 1,
+            }
+            project.sudo().write(values)
+        return True
+
+    def action_refresh_chantier_health(self):
+        self._ensure_chantier_user()
+        return self._refresh_chantier_health()
+
+    def action_create_detailed_task(self):
+        self.ensure_one()
+        self._ensure_chantier_user()
+        return {
+            "type": "ir.actions.act_window",
+            "name": _("New Detailed Task"),
+            "res_model": "project.task",
+            "view_mode": "form",
+            "views": [(self.env.ref("project.view_task_form2").id, "form")],
+            "target": "current",
+            "context": {"default_project_id": self.id},
+        }
+
+    def action_view_tasks(self):
+        """Open Tasks with chantier UI context available before first render."""
+        self.ensure_one()
+        action = super().action_view_tasks()
+        action_context = dict(action.get("context") or {})
+        action_context["is_chantier_task_board"] = self.is_chantier
+        action["context"] = action_context
+        return action
+
+    @api.model
+    def _cron_refresh_chantier_health(self):
+        self.sudo().search([("is_chantier", "=", True), ("active", "=", True)])._refresh_chantier_health()
+
     def _subscribe_chantier_assignees(self):
         """Keep standard private-project visibility aligned with site assignment."""
         for project in self:
-            assigned_users = project.user_id | project.favorite_user_ids
+            assigned_users = project.user_id | project.chantier_member_ids
             if assigned_users:
                 project.sudo().message_subscribe(
                     partner_ids=assigned_users.partner_id.ids
@@ -400,7 +681,8 @@ class ProjectProject(models.Model):
                 "company_id",
                 "date",
                 "date_start",
-                "favorite_user_ids",
+                "chantier_member_ids",
+                "sales_user_ids",
                 "name",
                 "partner_id",
                 "site_location_id",
@@ -702,7 +984,7 @@ class ProjectProject(models.Model):
                 ).write({"site_location_id": location.id})
 
             if created_items:
-                project.message_post(
+                project._message_log(
                     body=_("Chantier initialized. Created: %s", ", ".join(created_items))
                 )
 
@@ -808,9 +1090,12 @@ class ProjectProject(models.Model):
             reason = project.reopen_reason
             project.write({
                 "chantier_state": "approved",
+                # A reopened chantier is operational again. Restoring `active`
+                # also removes Odoo's archived ribbon from the form.
+                "active": True,
                 "reopen_reason": reason,
             })
-            project.message_post(
+            project._message_log(
                 body=_("Chantier reopened. Reason: %s", reason)
             )
             super(ProjectProject, project).write({"reopen_reason": False})

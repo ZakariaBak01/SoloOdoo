@@ -1,3 +1,4 @@
+from odoo.exceptions import AccessError
 from odoo.tests import TransactionCase, tagged
 
 
@@ -17,3 +18,64 @@ class TestChantierEstimation(TransactionCase):
         self.assertEqual(estimate.actual_labor_cost, 300)
         self.assertEqual(estimate.actual_cost, 700)
         self.assertGreater(estimate.budget_consumed_percent, 0)
+
+    def test_creating_revision_opens_a_new_draft(self):
+        chantier = self.env["project.project"].create({
+            "name": "Revision site",
+            "is_chantier": True,
+            "company_id": self.env.company.id,
+        })
+        estimate = self.env["chantier.estimation"].create({
+            "name": "Approved baseline",
+            "chantier_id": chantier.id,
+            "length": 10,
+            "width": 5,
+            "depth": 0.2,
+        })
+        estimate.action_submit()
+        estimate.action_approve()
+
+        action = estimate.action_new_revision()
+        revision = self.env["chantier.estimation"].browse(action["res_id"])
+
+        self.assertEqual(action["type"], "ir.actions.act_window")
+        self.assertEqual(action["res_model"], "chantier.estimation")
+        self.assertEqual(action["target"], "current")
+        self.assertTrue(revision.exists())
+        self.assertEqual(revision.state, "draft")
+        self.assertEqual(revision.revision_of_id, estimate)
+        self.assertEqual(estimate.state, "approved")
+
+        repeated_action = estimate.action_new_revision()
+        self.assertEqual(repeated_action["res_id"], revision.id)
+
+        revision.action_submit()
+        revision.action_approve()
+        self.assertEqual(revision.state, "approved")
+        self.assertEqual(estimate.state, "superseded")
+
+    def test_workflow_evidence_cannot_be_forged(self):
+        chantier = self.env["project.project"].create({
+            "name": "Protected estimate site",
+            "is_chantier": True,
+            "company_id": self.env.company.id,
+        })
+        estimate = self.env["chantier.estimation"].create({
+            "name": "Protected baseline",
+            "chantier_id": chantier.id,
+            "length": 10,
+            "width": 5,
+            "depth": 0.2,
+        })
+        with self.assertRaises(AccessError):
+            estimate.write({"state": "approved"})
+        with self.assertRaises(AccessError):
+            self.env["chantier.estimation"].create({
+                "name": "Forged approved estimate",
+                "chantier_id": chantier.id,
+                "length": 10,
+                "width": 5,
+                "depth": 0.2,
+                "state": "approved",
+                "approved_by_id": self.env.user.id,
+            })

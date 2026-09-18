@@ -1,0 +1,1168 @@
+﻿2026-09-12 13:40:10,037 1 INFO ? odoo: Odoo version 17.0-20260817 
+2026-09-12 13:40:10,038 1 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2026-09-12 13:40:10,038 1 INFO ? odoo: addons paths: ['/usr/lib/python3/dist-packages/odoo/addons', '/var/lib/odoo/addons/17.0', '/mnt/extra-addons', '/opt/elmokrif-addons'] 
+2026-09-12 13:40:10,038 1 INFO ? odoo: database: odoo_test@test-db:5432 
+2026-09-12 13:40:10,415 1 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/local/bin/wkhtmltopdf 
+2026-09-12 13:40:10,778 1 INFO ? odoo.service.server: HTTP service (werkzeug) running on d3c0494e8198:8069 
+2026-09-12 13:40:10,791 1 INFO soloodoo_construction_control_test odoo.modules.loading: init db 
+2026-09-12 13:40:12,977 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading 1 modules... 
+2026-09-12 13:40:12,977 1 INFO soloodoo_construction_control_test odoo.modules.loading: Loading module base (1/1) 
+2026-09-12 13:40:12,996 1 INFO soloodoo_construction_control_test odoo.modules.registry: module base: creating or updating database tables 
+2026-09-12 13:40:13,400 1 INFO soloodoo_construction_control_test odoo.models: Prepare computation of ir.module.module.menus_by_module 
+2026-09-12 13:40:13,401 1 INFO soloodoo_construction_control_test odoo.models: Prepare computation of ir.module.module.reports_by_module 
+2026-09-12 13:40:13,401 1 INFO soloodoo_construction_control_test odoo.models: Prepare computation of ir.module.module.views_by_module 
+2026-09-12 13:40:13,549 1 INFO soloodoo_construction_control_test odoo.models: Prepare computation of res.partner.user_id 
+2026-09-12 13:40:13,550 1 INFO soloodoo_construction_control_test odoo.models: Prepare computation of res.partner.commercial_partner_id 
+2026-09-12 13:40:13,550 1 INFO soloodoo_construction_control_test odoo.models: Prepare computation of res.partner.complete_name 
+2026-09-12 13:40:13,550 1 INFO soloodoo_construction_control_test odoo.models: Prepare computation of res.partner.company_registry 
+2026-09-12 13:40:13,550 1 INFO soloodoo_construction_control_test odoo.models: Prepare computation of res.partner.commercial_company_name 
+2026-09-12 13:40:13,550 1 INFO soloodoo_construction_control_test odoo.models: Prepare computation of res.partner.partner_share 
+2026-09-12 13:40:13,604 1 INFO soloodoo_construction_control_test odoo.models: Prepare computation of res.currency.decimal_places 
+2026-09-12 13:40:13,641 1 INFO soloodoo_construction_control_test odoo.models: Prepare computation of res.company.uses_default_logo 
+2026-09-12 13:40:13,641 1 INFO soloodoo_construction_control_test odoo.models: Prepare computation of res.company.logo_web 
+2026-09-12 13:40:13,645 1 INFO soloodoo_construction_control_test odoo.models: Computing parent_path for table res_company... 
+2026-09-12 13:40:13,681 1 INFO soloodoo_construction_control_test odoo.models: Prepare computation of res.users.signature 
+2026-09-12 13:40:13,681 1 INFO soloodoo_construction_control_test odoo.models: Prepare computation of res.users.share 
+2026-09-12 13:40:15,424 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading base/data/res_bank.xml 
+2026-09-12 13:40:15,440 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading base/data/res.lang.csv 
+2026-09-12 13:40:15,488 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading base/data/res_lang_data.xml 
+2026-09-12 13:40:15,537 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading base/data/res_partner_data.xml 
+2026-09-12 13:40:15,655 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading base/data/res_currency_data.xml 
+2026-09-12 13:40:16,345 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading base/data/res_company_data.xml 
+2026-09-12 13:40:16,357 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading base/data/res_users_data.xml 
+2026-09-12 13:40:17,427 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading base/data/report_paperformat_data.xml 
+2026-09-12 13:40:17,438 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading base/data/res_country_data.xml 
+2026-09-12 13:40:18,131 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading base/data/ir_demo_data.xml 
+2026-09-12 13:40:18,147 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading base/security/base_groups.xml 
+2026-09-12 13:40:19,242 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading base/security/base_security.xml 
+2026-09-12 13:40:19,481 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading base/views/base_menus.xml 
+2026-09-12 13:40:19,615 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading base/views/decimal_precision_views.xml 
+2026-09-12 13:40:19,642 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading base/views/res_config_views.xml 
+2026-09-12 13:40:19,655 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading base/data/res.country.state.csv 
+2026-09-12 13:40:20,165 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading base/views/ir_actions_views.xml 
+2026-09-12 13:40:20,313 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading base/views/ir_asset_views.xml 
+2026-09-12 13:40:20,335 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading base/views/ir_config_parameter_views.xml 
+2026-09-12 13:40:20,356 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading base/views/ir_cron_views.xml 
+2026-09-12 13:40:20,391 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading base/views/ir_cron_trigger_views.xml 
+2026-09-12 13:40:20,412 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading base/views/ir_filters_views.xml 
+2026-09-12 13:40:20,435 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading base/views/ir_mail_server_views.xml 
+2026-09-12 13:40:20,459 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading base/views/ir_model_views.xml 
+2026-09-12 13:40:20,623 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading base/views/ir_attachment_views.xml 
+2026-09-12 13:40:20,648 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading base/views/ir_rule_views.xml 
+2026-09-12 13:40:20,679 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading base/views/ir_sequence_views.xml 
+2026-09-12 13:40:20,701 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading base/views/ir_ui_menu_views.xml 
+2026-09-12 13:40:20,726 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading base/views/ir_ui_view_views.xml 
+2026-09-12 13:40:20,780 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading base/views/ir_default_views.xml 
+2026-09-12 13:40:20,801 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading base/data/ir_cron_data.xml 
+2026-09-12 13:40:20,814 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading base/report/ir_model_report.xml 
+2026-09-12 13:40:20,821 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading base/report/ir_model_templates.xml 
+2026-09-12 13:40:20,830 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading base/views/ir_logging_views.xml 
+2026-09-12 13:40:20,852 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading base/views/ir_qweb_widget_templates.xml 
+2026-09-12 13:40:20,865 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading base/views/ir_module_views.xml 
+2026-09-12 13:40:20,920 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading base/data/ir_module_category_data.xml 
+2026-09-12 13:40:21,007 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading base/data/ir_module_module.xml 
+2026-09-12 13:40:21,086 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading base/report/ir_module_reports.xml 
+2026-09-12 13:40:21,091 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading base/report/ir_module_report_templates.xml 
+2026-09-12 13:40:21,099 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading base/wizard/base_module_update_views.xml 
+2026-09-12 13:40:21,115 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading base/wizard/base_language_install_views.xml 
+2026-09-12 13:40:21,131 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading base/wizard/base_import_language_views.xml 
+2026-09-12 13:40:21,147 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading base/wizard/base_module_upgrade_views.xml 
+2026-09-12 13:40:21,174 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading base/wizard/base_module_uninstall_views.xml 
+2026-09-12 13:40:21,184 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading base/wizard/base_export_language_views.xml 
+2026-09-12 13:40:21,206 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading base/wizard/base_partner_merge_views.xml 
+2026-09-12 13:40:21,238 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading base/data/ir_demo_failure_data.xml 
+2026-09-12 13:40:21,265 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading base/views/ir_profile_views.xml 
+2026-09-12 13:40:21,308 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading base/views/res_company_views.xml 
+2026-09-12 13:40:21,341 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading base/views/res_lang_views.xml 
+2026-09-12 13:40:21,373 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading base/views/res_partner_views.xml 
+2026-09-12 13:40:21,535 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading base/views/res_bank_views.xml 
+2026-09-12 13:40:21,578 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading base/views/res_country_views.xml 
+2026-09-12 13:40:21,627 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading base/views/res_currency_views.xml 
+2026-09-12 13:40:21,677 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading base/views/res_users_views.xml 
+2026-09-12 13:40:21,826 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading base/views/res_users_identitycheck_views.xml 
+2026-09-12 13:40:21,844 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading base/views/ir_property_views.xml 
+2026-09-12 13:40:21,873 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading base/views/res_config_settings_views.xml 
+2026-09-12 13:40:21,890 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading base/views/report_paperformat_views.xml 
+2026-09-12 13:40:21,931 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading base/security/ir.model.access.csv 
+2026-09-12 13:40:22,343 1 INFO soloodoo_construction_control_test odoo.modules.loading: Module base loaded in 9.37s, 7944 queries (+7944 other) 
+2026-09-12 13:40:22,343 1 INFO soloodoo_construction_control_test odoo.modules.loading: 1 modules loaded in 9.37s, 7944 queries (+7944 extra) 
+2026-09-12 13:40:22,359 1 INFO soloodoo_construction_control_test odoo.modules.loading: updating modules list 
+2026-09-12 13:40:22,361 1 INFO soloodoo_construction_control_test odoo.addons.base.models.ir_module: ALLOW access to module.update_list on [] to user __system__ #1 via n/a 
+2026-09-12 13:40:23,613 1 INFO soloodoo_construction_control_test odoo.addons.base.models.ir_module: ALLOW access to module.button_install on ['EL MOKRIF Construction Control'] to user __system__ #1 via n/a 
+2026-09-12 13:40:23,948 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading 93 modules... 
+2026-09-12 13:40:23,949 1 INFO soloodoo_construction_control_test odoo.modules.loading: Loading module uom (2/93) 
+2026-09-12 13:40:23,970 1 INFO soloodoo_construction_control_test odoo.modules.registry: module uom: creating or updating database tables 
+2026-09-12 13:40:24,060 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading uom/data/uom_data.xml 
+2026-09-12 13:40:24,183 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading uom/security/uom_security.xml 
+2026-09-12 13:40:24,205 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading uom/security/ir.model.access.csv 
+2026-09-12 13:40:24,220 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading uom/views/uom_uom_views.xml 
+2026-09-12 13:40:24,289 1 INFO soloodoo_construction_control_test odoo.modules.loading: Module uom loaded in 0.34s, 287 queries (+287 other) 
+2026-09-12 13:40:24,290 1 INFO soloodoo_construction_control_test odoo.modules.loading: Loading module web (3/93) 
+2026-09-12 13:40:24,315 1 INFO soloodoo_construction_control_test odoo.modules.registry: module web: creating or updating database tables 
+2026-09-12 13:40:24,958 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading web/security/ir.model.access.csv 
+2026-09-12 13:40:24,974 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading web/views/webclient_templates.xml 
+2026-09-12 13:40:25,037 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading web/views/report_templates.xml 
+2026-09-12 13:40:25,144 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading web/views/base_document_layout_views.xml 
+2026-09-12 13:40:25,160 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading web/views/partner_view.xml 
+2026-09-12 13:40:25,167 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading web/views/speedscope_template.xml 
+2026-09-12 13:40:25,173 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading web/views/neutralize_views.xml 
+2026-09-12 13:40:25,181 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading web/data/ir_attachment.xml 
+2026-09-12 13:40:25,188 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading web/data/report_layout.xml 
+2026-09-12 13:40:25,512 1 INFO soloodoo_construction_control_test odoo.modules.loading: Module web loaded in 1.22s, 1018 queries (+1018 other) 
+2026-09-12 13:40:25,513 1 INFO soloodoo_construction_control_test odoo.modules.loading: Loading module auth_totp (4/93) 
+2026-09-12 13:40:25,554 1 INFO soloodoo_construction_control_test odoo.modules.registry: module auth_totp: creating or updating database tables 
+2026-09-12 13:40:25,621 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading auth_totp/security/security.xml 
+2026-09-12 13:40:25,653 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading auth_totp/security/ir.model.access.csv 
+2026-09-12 13:40:25,666 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading auth_totp/data/ir_action_data.xml 
+2026-09-12 13:40:25,675 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading auth_totp/views/res_users_views.xml 
+2026-09-12 13:40:25,703 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading auth_totp/views/templates.xml 
+2026-09-12 13:40:25,710 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading auth_totp/wizard/auth_totp_wizard_views.xml 
+2026-09-12 13:40:25,742 1 INFO soloodoo_construction_control_test odoo.modules.loading: Module auth_totp loaded in 0.23s, 179 queries (+179 other) 
+2026-09-12 13:40:25,742 1 INFO soloodoo_construction_control_test odoo.modules.loading: Loading module barcodes (5/93) 
+2026-09-12 13:40:25,766 1 INFO soloodoo_construction_control_test odoo.modules.registry: module barcodes: creating or updating database tables 
+2026-09-12 13:40:25,851 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading barcodes/data/barcodes_data.xml 
+2026-09-12 13:40:25,864 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading barcodes/views/barcodes_view.xml 
+2026-09-12 13:40:25,891 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading barcodes/security/ir.model.access.csv 
+2026-09-12 13:40:25,926 1 INFO soloodoo_construction_control_test odoo.modules.loading: Module barcodes loaded in 0.18s, 135 queries (+135 other) 
+2026-09-12 13:40:25,926 1 INFO soloodoo_construction_control_test odoo.modules.loading: Loading module base_import (6/93) 
+2026-09-12 13:40:25,998 1 INFO soloodoo_construction_control_test odoo.modules.registry: module base_import: creating or updating database tables 
+2026-09-12 13:40:26,559 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading base_import/security/ir.model.access.csv 
+2026-09-12 13:40:26,582 1 INFO soloodoo_construction_control_test odoo.modules.loading: Module base_import loaded in 0.66s, 843 queries (+843 other) 
+2026-09-12 13:40:26,582 1 INFO soloodoo_construction_control_test odoo.modules.loading: Loading module base_import_module (7/93) 
+2026-09-12 13:40:26,609 1 INFO soloodoo_construction_control_test odoo.modules.registry: module base_import_module: creating or updating database tables 
+2026-09-12 13:40:26,679 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading base_import_module/security/ir.model.access.csv 
+2026-09-12 13:40:26,692 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading base_import_module/views/base_import_module_view.xml 
+2026-09-12 13:40:26,711 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading base_import_module/views/ir_module_views.xml 
+2026-09-12 13:40:26,764 1 INFO soloodoo_construction_control_test odoo.modules.loading: Module base_import_module loaded in 0.18s, 154 queries (+154 other) 
+2026-09-12 13:40:26,764 1 INFO soloodoo_construction_control_test odoo.modules.loading: Loading module base_setup (8/93) 
+2026-09-12 13:40:26,787 1 INFO soloodoo_construction_control_test odoo.modules.registry: module base_setup: creating or updating database tables 
+2026-09-12 13:40:26,843 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading base_setup/data/base_setup_data.xml 
+2026-09-12 13:40:26,849 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading base_setup/views/res_config_settings_views.xml 
+2026-09-12 13:40:26,880 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading base_setup/views/res_partner_views.xml 
+2026-09-12 13:40:26,908 1 INFO soloodoo_construction_control_test odoo.modules.loading: Module base_setup loaded in 0.14s, 143 queries (+143 other) 
+2026-09-12 13:40:26,909 1 INFO soloodoo_construction_control_test odoo.modules.loading: Loading module bus (9/93) 
+2026-09-12 13:40:26,924 1 INFO soloodoo_construction_control_test odoo.modules.registry: module bus: creating or updating database tables 
+2026-09-12 13:40:27,060 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading bus/security/ir.model.access.csv 
+2026-09-12 13:40:27,096 1 INFO soloodoo_construction_control_test odoo.modules.loading: Module bus loaded in 0.19s, 119 queries (+119 other) 
+2026-09-12 13:40:27,096 1 INFO soloodoo_construction_control_test odoo.modules.loading: Loading module http_routing (10/93) 
+2026-09-12 13:40:27,113 1 INFO soloodoo_construction_control_test odoo.modules.registry: module http_routing: creating or updating database tables 
+2026-09-12 13:40:27,123 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading http_routing/views/http_routing_template.xml 
+2026-09-12 13:40:27,159 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading http_routing/views/res_lang_views.xml 
+2026-09-12 13:40:27,185 1 INFO soloodoo_construction_control_test odoo.modules.loading: Module http_routing loaded in 0.09s, 71 queries (+71 other) 
+2026-09-12 13:40:27,185 1 INFO soloodoo_construction_control_test odoo.modules.loading: Loading module onboarding (11/93) 
+2026-09-12 13:40:27,212 1 INFO soloodoo_construction_control_test odoo.modules.registry: module onboarding: creating or updating database tables 
+2026-09-12 13:40:27,349 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading onboarding/views/onboarding_templates.xml 
+2026-09-12 13:40:27,367 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading onboarding/views/onboarding_views.xml 
+2026-09-12 13:40:27,394 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading onboarding/views/onboarding_menus.xml 
+2026-09-12 13:40:27,410 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading onboarding/security/ir.model.access.csv 
+2026-09-12 13:40:27,485 1 INFO soloodoo_construction_control_test odoo.modules.loading: Module onboarding loaded in 0.30s, 237 queries (+237 other) 
+2026-09-12 13:40:27,485 1 INFO soloodoo_construction_control_test odoo.modules.loading: Loading module resource (12/93) 
+2026-09-12 13:40:27,529 1 INFO soloodoo_construction_control_test odoo.modules.registry: module resource: creating or updating database tables 
+2026-09-12 13:40:27,686 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading resource/data/resource_data.xml 
+2026-09-12 13:40:27,710 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading resource/security/ir.model.access.csv 
+2026-09-12 13:40:27,723 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading resource/security/resource_security.xml 
+2026-09-12 13:40:27,757 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading resource/views/resource_resource_views.xml 
+2026-09-12 13:40:27,784 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading resource/views/resource_calendar_leaves_views.xml 
+2026-09-12 13:40:27,816 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading resource/views/resource_calendar_attendance_views.xml 
+2026-09-12 13:40:27,830 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading resource/views/resource_calendar_views.xml 
+2026-09-12 13:40:27,853 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading resource/views/menuitems.xml 
+2026-09-12 13:40:27,893 1 INFO soloodoo_construction_control_test odoo.modules.loading: Module resource loaded in 0.41s, 407 queries (+407 other) 
+2026-09-12 13:40:27,894 1 INFO soloodoo_construction_control_test odoo.modules.loading: Loading module utm (13/93) 
+2026-09-12 13:40:27,920 1 INFO soloodoo_construction_control_test odoo.modules.registry: module utm: creating or updating database tables 
+2026-09-12 13:40:28,050 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading utm/data/utm_medium_data.xml 
+2026-09-12 13:40:28,079 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading utm/data/utm_source_data.xml 
+2026-09-12 13:40:28,106 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading utm/data/utm_stage_data.xml 
+2026-09-12 13:40:28,112 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading utm/data/utm_tag_data.xml 
+2026-09-12 13:40:28,117 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading utm/views/utm_campaign_views.xml 
+2026-09-12 13:40:28,150 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading utm/views/utm_medium_views.xml 
+2026-09-12 13:40:28,167 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading utm/views/utm_source_views.xml 
+2026-09-12 13:40:28,180 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading utm/views/utm_stage_views.xml 
+2026-09-12 13:40:28,201 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading utm/views/utm_tag_views.xml 
+2026-09-12 13:40:28,211 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading utm/views/utm_menus.xml 
+2026-09-12 13:40:28,242 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading utm/security/ir.model.access.csv 
+2026-09-12 13:40:28,278 1 INFO soloodoo_construction_control_test odoo.modules.loading: Module utm loaded in 0.38s, 405 queries (+405 other) 
+2026-09-12 13:40:28,278 1 INFO soloodoo_construction_control_test odoo.modules.loading: Loading module web_tour (14/93) 
+2026-09-12 13:40:28,299 1 INFO soloodoo_construction_control_test odoo.modules.registry: module web_tour: creating or updating database tables 
+2026-09-12 13:40:28,331 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading web_tour/security/ir.model.access.csv 
+2026-09-12 13:40:28,345 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading web_tour/security/ir.rule.csv 
+2026-09-12 13:40:28,356 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading web_tour/views/tour_views.xml 
+2026-09-12 13:40:28,396 1 INFO soloodoo_construction_control_test odoo.modules.loading: Module web_tour loaded in 0.12s, 104 queries (+104 other) 
+2026-09-12 13:40:28,396 1 INFO soloodoo_construction_control_test odoo.modules.loading: Loading module barcodes_gs1_nomenclature (15/93) 
+2026-09-12 13:40:28,420 1 INFO soloodoo_construction_control_test odoo.modules.registry: module barcodes_gs1_nomenclature: creating or updating database tables 
+2026-09-12 13:40:28,459 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading barcodes_gs1_nomenclature/data/barcodes_gs1_rules.xml 
+2026-09-12 13:40:28,529 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading barcodes_gs1_nomenclature/views/barcodes_view.xml 
+2026-09-12 13:40:28,568 1 INFO soloodoo_construction_control_test odoo.modules.loading: Module barcodes_gs1_nomenclature loaded in 0.17s, 189 queries (+189 other) 
+2026-09-12 13:40:28,568 1 INFO soloodoo_construction_control_test odoo.modules.loading: Loading module iap (16/93) 
+2026-09-12 13:40:28,586 1 INFO soloodoo_construction_control_test odoo.modules.registry: module iap: creating or updating database tables 
+2026-09-12 13:40:28,655 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading iap/security/ir.model.access.csv 
+2026-09-12 13:40:28,670 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading iap/security/ir_rule.xml 
+2026-09-12 13:40:28,679 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading iap/views/iap_views.xml 
+2026-09-12 13:40:28,705 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading iap/views/res_config_settings.xml 
+2026-09-12 13:40:28,736 1 INFO soloodoo_construction_control_test odoo.modules.loading: Module iap loaded in 0.17s, 151 queries (+151 other) 
+2026-09-12 13:40:28,736 1 INFO soloodoo_construction_control_test odoo.modules.loading: Loading module mail (17/93) 
+2026-09-12 13:40:28,777 1 INFO soloodoo_construction_control_test odoo.modules.registry: module mail: creating or updating database tables 
+2026-09-12 13:40:29,050 1 INFO soloodoo_construction_control_test odoo.models: Prepare computation of ir.actions.server.partner_ids 
+2026-09-12 13:40:29,051 1 INFO soloodoo_construction_control_test odoo.models: Prepare computation of ir.actions.server.template_id 
+2026-09-12 13:40:29,051 1 INFO soloodoo_construction_control_test odoo.models: Prepare computation of ir.actions.server.activity_type_id 
+2026-09-12 13:40:29,051 1 INFO soloodoo_construction_control_test odoo.models: Prepare computation of ir.actions.server.activity_date_deadline_range 
+2026-09-12 13:40:29,051 1 INFO soloodoo_construction_control_test odoo.models: Prepare computation of ir.actions.server.activity_user_id 
+2026-09-12 13:40:29,051 1 INFO soloodoo_construction_control_test odoo.models: Prepare computation of ir.actions.server.mail_post_method 
+2026-09-12 13:40:29,051 1 INFO soloodoo_construction_control_test odoo.models: Prepare computation of ir.actions.server.activity_summary 
+2026-09-12 13:40:29,051 1 INFO soloodoo_construction_control_test odoo.models: Prepare computation of ir.actions.server.activity_date_deadline_range_type 
+2026-09-12 13:40:29,051 1 INFO soloodoo_construction_control_test odoo.models: Prepare computation of ir.actions.server.activity_user_type 
+2026-09-12 13:40:29,051 1 INFO soloodoo_construction_control_test odoo.models: Prepare computation of ir.actions.server.activity_user_field_name 
+2026-09-12 13:40:29,051 1 INFO soloodoo_construction_control_test odoo.models: Prepare computation of ir.actions.server.activity_note 
+2026-09-12 13:40:29,051 1 INFO soloodoo_construction_control_test odoo.models: Prepare computation of ir.actions.server.mail_post_autofollow 
+2026-09-12 13:40:29,091 1 INFO soloodoo_construction_control_test odoo.models: Prepare computation of res.company.email_primary_color 
+2026-09-12 13:40:29,092 1 INFO soloodoo_construction_control_test odoo.models: Prepare computation of res.company.email_secondary_color 
+2026-09-12 13:40:29,107 1 INFO soloodoo_construction_control_test odoo.models: Prepare computation of res.users.notification_type 
+2026-09-12 13:40:29,203 1 INFO soloodoo_construction_control_test odoo.models: Prepare computation of res.partner.email_normalized 
+<string>:38: (ERROR/3) Unexpected indentation.
+<string>:43: (WARNING/2) Block quote ends without a blank line; unexpected unindent.
+2026-09-12 13:40:30,886 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading mail/data/mail_groups.xml 
+2026-09-12 13:40:30,998 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading mail/wizard/mail_activity_schedule_views.xml 
+2026-09-12 13:40:31,007 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading mail/wizard/mail_blacklist_remove_views.xml 
+2026-09-12 13:40:31,013 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading mail/wizard/mail_compose_message_views.xml 
+2026-09-12 13:40:31,033 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading mail/wizard/mail_resend_message_views.xml 
+2026-09-12 13:40:31,046 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading mail/wizard/mail_resend_partner_views.xml 
+2026-09-12 13:40:31,055 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading mail/wizard/mail_template_preview_views.xml 
+2026-09-12 13:40:31,066 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading mail/wizard/mail_wizard_invite_views.xml 
+2026-09-12 13:40:31,073 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading mail/wizard/mail_template_reset_views.xml 
+2026-09-12 13:40:31,083 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading mail/views/fetchmail_views.xml 
+2026-09-12 13:40:31,104 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading mail/views/mail_message_subtype_views.xml 
+2026-09-12 13:40:31,119 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading mail/views/mail_tracking_value_views.xml 
+2026-09-12 13:40:31,142 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading mail/views/mail_notification_views.xml 
+2026-09-12 13:40:31,162 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading mail/views/mail_message_views.xml 
+2026-09-12 13:40:31,207 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading mail/views/mail_message_schedule_views.xml 
+2026-09-12 13:40:31,230 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading mail/views/mail_mail_views.xml 
+2026-09-12 13:40:31,280 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading mail/views/mail_followers_views.xml 
+2026-09-12 13:40:31,299 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading mail/views/mail_ice_server_views.xml 
+2026-09-12 13:40:31,313 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading mail/views/discuss_channel_member_views.xml 
+2026-09-12 13:40:31,329 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading mail/views/discuss_channel_rtc_session_views.xml 
+2026-09-12 13:40:31,349 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading mail/views/mail_link_preview_views.xml 
+2026-09-12 13:40:31,363 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading mail/views/discuss/discuss_gif_favorite_views.xml 
+2026-09-12 13:40:31,376 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading mail/views/discuss_channel_views.xml 
+2026-09-12 13:40:31,407 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading mail/views/mail_shortcode_views.xml 
+2026-09-12 13:40:31,429 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading mail/views/mail_activity_views.xml 
+2026-09-12 13:40:31,530 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading mail/views/mail_activity_plan_views.xml 
+2026-09-12 13:40:31,566 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading mail/views/mail_activity_plan_template_views.xml 
+2026-09-12 13:40:31,579 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading mail/views/res_config_settings_views.xml 
+2026-09-12 13:40:31,606 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading mail/data/ir_config_parameter_data.xml 
+2026-09-12 13:40:31,612 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading mail/data/res_partner_data.xml 
+2026-09-12 13:40:31,702 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading mail/data/mail_message_subtype_data.xml 
+2026-09-12 13:40:31,715 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading mail/data/mail_templates_chatter.xml 
+2026-09-12 13:40:31,739 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading mail/data/mail_templates_email_layouts.xml 
+2026-09-12 13:40:31,772 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading mail/data/mail_templates_mailgateway.xml 
+2026-09-12 13:40:31,798 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading mail/data/discuss_channel_data.xml 
+2026-09-12 13:40:31,904 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading mail/data/mail_activity_data.xml 
+2026-09-12 13:40:31,932 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading mail/data/security_notifications_templates.xml 
+2026-09-12 13:40:31,943 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading mail/data/ir_cron_data.xml 
+2026-09-12 13:40:32,009 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading mail/security/mail_security.xml 
+2026-09-12 13:40:32,188 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading mail/security/ir.model.access.csv 
+2026-09-12 13:40:32,255 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading mail/views/discuss_public_templates.xml 
+2026-09-12 13:40:32,262 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading mail/views/mail_alias_domain_views.xml 
+2026-09-12 13:40:32,282 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading mail/views/mail_alias_views.xml 
+2026-09-12 13:40:32,304 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading mail/views/mail_gateway_allowed_views.xml 
+2026-09-12 13:40:32,317 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading mail/views/mail_guest_views.xml 
+2026-09-12 13:40:32,332 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading mail/views/mail_message_reaction_views.xml 
+2026-09-12 13:40:32,346 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading mail/views/mail_templates_public.xml 
+2026-09-12 13:40:32,357 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading mail/views/res_users_views.xml 
+2026-09-12 13:40:32,376 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading mail/views/res_users_settings_views.xml 
+2026-09-12 13:40:32,392 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading mail/views/mail_template_views.xml 
+2026-09-12 13:40:32,420 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading mail/views/ir_actions_server_views.xml 
+2026-09-12 13:40:32,434 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading mail/views/ir_model_views.xml 
+2026-09-12 13:40:32,459 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading mail/views/res_partner_views.xml 
+2026-09-12 13:40:32,515 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading mail/views/mail_blacklist_views.xml 
+2026-09-12 13:40:32,535 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading mail/views/mail_menus.xml 
+2026-09-12 13:40:32,709 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading mail/views/res_company_views.xml 
+2026-09-12 13:40:32,803 1 INFO soloodoo_construction_control_test odoo.modules.loading: Module mail loaded in 4.07s, 4209 queries (+4210 other) 
+2026-09-12 13:40:32,803 1 INFO soloodoo_construction_control_test odoo.modules.loading: Loading module web_editor (18/93) 
+2026-09-12 13:40:32,882 1 INFO soloodoo_construction_control_test odoo.modules.registry: module web_editor: creating or updating database tables 
+2026-09-12 13:40:33,898 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading web_editor/security/ir.model.access.csv 
+2026-09-12 13:40:33,915 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading web_editor/data/editor_assets.xml 
+2026-09-12 13:40:33,922 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading web_editor/views/editor.xml 
+2026-09-12 13:40:33,940 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading web_editor/views/snippets.xml 
+2026-09-12 13:40:34,014 1 INFO soloodoo_construction_control_test odoo.modules.loading: Module web_editor loaded in 1.21s, 1417 queries (+1417 other) 
+2026-09-12 13:40:34,014 1 INFO soloodoo_construction_control_test odoo.modules.loading: Loading module analytic (19/93) 
+2026-09-12 13:40:34,064 1 INFO soloodoo_construction_control_test odoo.modules.registry: module analytic: creating or updating database tables 
+2026-09-12 13:40:34,320 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading analytic/security/analytic_security.xml 
+2026-09-12 13:40:34,369 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading analytic/security/ir.model.access.csv 
+2026-09-12 13:40:34,389 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading analytic/views/analytic_line_views.xml 
+2026-09-12 13:40:34,445 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading analytic/views/analytic_account_views.xml 
+2026-09-12 13:40:34,491 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading analytic/views/analytic_plan_views.xml 
+2026-09-12 13:40:34,523 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading analytic/views/analytic_distribution_model_views.xml 
+2026-09-12 13:40:34,542 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading analytic/data/analytic_data.xml 
+2026-09-12 13:40:34,632 1 INFO soloodoo_construction_control_test odoo.modules.loading: Module analytic loaded in 0.62s, 410 queries (+410 other) 
+2026-09-12 13:40:34,632 1 INFO soloodoo_construction_control_test odoo.modules.loading: Loading module auth_signup (20/93) 
+2026-09-12 13:40:34,680 1 INFO soloodoo_construction_control_test odoo.modules.registry: module auth_signup: creating or updating database tables 
+2026-09-12 13:40:34,758 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading auth_signup/data/ir_config_parameter_data.xml 
+2026-09-12 13:40:34,767 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading auth_signup/data/ir_cron_data.xml 
+2026-09-12 13:40:34,783 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading auth_signup/data/mail_template_data.xml 
+2026-09-12 13:40:34,805 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading auth_signup/views/res_config_settings_views.xml 
+2026-09-12 13:40:34,826 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading auth_signup/views/res_users_views.xml 
+2026-09-12 13:40:34,861 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading auth_signup/views/auth_signup_login_templates.xml 
+2026-09-12 13:40:34,885 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading auth_signup/views/auth_signup_templates_email.xml 
+2026-09-12 13:40:34,898 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading auth_signup/views/webclient_templates.xml 
+2026-09-12 13:40:34,935 1 INFO soloodoo_construction_control_test odoo.modules.loading: Module auth_signup loaded in 0.30s, 202 queries (+202 other) 
+2026-09-12 13:40:34,935 1 INFO soloodoo_construction_control_test odoo.modules.loading: Loading module auth_totp_mail (21/93) 
+2026-09-12 13:40:34,971 1 INFO soloodoo_construction_control_test odoo.modules.registry: module auth_totp_mail: creating or updating database tables 
+2026-09-12 13:40:35,010 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading auth_totp_mail/data/ir_action_data.xml 
+2026-09-12 13:40:35,033 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading auth_totp_mail/data/mail_template_data.xml 
+2026-09-12 13:40:35,041 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading auth_totp_mail/data/security_notifications_template.xml 
+2026-09-12 13:40:35,051 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading auth_totp_mail/views/res_users_views.xml 
+2026-09-12 13:40:35,097 1 INFO soloodoo_construction_control_test odoo.modules.loading: Module auth_totp_mail loaded in 0.16s, 112 queries (+112 other) 
+2026-09-12 13:40:35,097 1 INFO soloodoo_construction_control_test odoo.modules.loading: Loading module base_install_request (22/93) 
+2026-09-12 13:40:35,145 1 INFO soloodoo_construction_control_test odoo.modules.registry: module base_install_request: creating or updating database tables 
+2026-09-12 13:40:35,238 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading base_install_request/security/ir.model.access.csv 
+2026-09-12 13:40:35,260 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading base_install_request/wizard/base_module_install_request_views.xml 
+2026-09-12 13:40:35,278 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading base_install_request/data/mail_template_data.xml 
+2026-09-12 13:40:35,288 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading base_install_request/data/mail_templates_module_install.xml 
+2026-09-12 13:40:35,296 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading base_install_request/views/ir_module_module_views.xml 
+2026-09-12 13:40:35,334 1 INFO soloodoo_construction_control_test odoo.modules.loading: Module base_install_request loaded in 0.24s, 144 queries (+144 other) 
+2026-09-12 13:40:35,334 1 INFO soloodoo_construction_control_test odoo.modules.loading: Loading module calendar (23/93) 
+2026-09-12 13:40:35,424 1 INFO soloodoo_construction_control_test odoo.modules.registry: module calendar: creating or updating database tables 
+2026-09-12 13:40:35,829 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading calendar/security/ir.model.access.csv 
+2026-09-12 13:40:35,863 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading calendar/security/calendar_security.xml 
+2026-09-12 13:40:35,895 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading calendar/data/calendar_cron.xml 
+2026-09-12 13:40:35,906 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading calendar/data/mail_template_data.xml 
+2026-09-12 13:40:35,924 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading calendar/data/calendar_data.xml 
+2026-09-12 13:40:35,944 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading calendar/data/calendar_onboarding_data.xml 
+2026-09-12 13:40:35,964 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading calendar/data/mail_activity_type_data.xml 
+2026-09-12 13:40:35,970 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading calendar/data/mail_message_subtype_data.xml 
+2026-09-12 13:40:35,975 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading calendar/views/mail_activity_views.xml 
+2026-09-12 13:40:35,988 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading calendar/views/calendar_templates.xml 
+2026-09-12 13:40:35,997 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading calendar/views/calendar_views.xml 
+2026-09-12 13:40:36,177 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading calendar/views/res_config_settings_views.xml 
+2026-09-12 13:40:36,195 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading calendar/views/res_partner_views.xml 
+2026-09-12 13:40:36,220 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading calendar/wizard/calendar_provider_config.xml 
+2026-09-12 13:40:36,229 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading calendar/wizard/calendar_popover_delete_wizard.xml 
+2026-09-12 13:40:36,238 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading calendar/wizard/mail_activity_schedule_views.xml 
+2026-09-12 13:40:36,295 1 INFO soloodoo_construction_control_test odoo.modules.loading: Module calendar loaded in 0.96s, 759 queries (+759 other) 
+2026-09-12 13:40:36,295 1 INFO soloodoo_construction_control_test odoo.modules.loading: Loading module contacts (24/93) 
+2026-09-12 13:40:36,333 1 INFO soloodoo_construction_control_test odoo.modules.registry: module contacts: creating or updating database tables 
+2026-09-12 13:40:36,367 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading contacts/views/contact_views.xml 
+2026-09-12 13:40:36,480 1 INFO soloodoo_construction_control_test odoo.modules.loading: Module contacts loaded in 0.18s, 221 queries (+221 other) 
+2026-09-12 13:40:36,480 1 INFO soloodoo_construction_control_test odoo.modules.loading: Loading module google_gmail (25/93) 
+2026-09-12 13:40:36,521 1 INFO soloodoo_construction_control_test odoo.modules.registry: module google_gmail: creating or updating database tables 
+2026-09-12 13:40:36,642 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading google_gmail/views/fetchmail_server_views.xml 
+2026-09-12 13:40:36,657 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading google_gmail/views/ir_mail_server_views.xml 
+2026-09-12 13:40:36,667 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading google_gmail/views/res_config_settings_views.xml 
+2026-09-12 13:40:36,705 1 INFO soloodoo_construction_control_test odoo.modules.loading: Module google_gmail loaded in 0.23s, 118 queries (+118 other) 
+2026-09-12 13:40:36,705 1 INFO soloodoo_construction_control_test odoo.modules.loading: Loading module iap_mail (26/93) 
+2026-09-12 13:40:36,750 1 INFO soloodoo_construction_control_test odoo.modules.registry: module iap_mail: creating or updating database tables 
+2026-09-12 13:40:36,768 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading iap_mail/data/mail_templates.xml 
+2026-09-12 13:40:36,802 1 INFO soloodoo_construction_control_test odoo.modules.loading: Module iap_mail loaded in 0.10s, 40 queries (+40 other) 
+2026-09-12 13:40:36,802 1 INFO soloodoo_construction_control_test odoo.modules.loading: Loading module mail_bot (27/93) 
+2026-09-12 13:40:36,842 1 INFO soloodoo_construction_control_test odoo.modules.registry: module mail_bot: creating or updating database tables 
+2026-09-12 13:40:36,941 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading mail_bot/views/res_users_views.xml 
+2026-09-12 13:40:36,967 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading mail_bot/data/mailbot_data.xml 
+2026-09-12 13:40:36,986 1 INFO soloodoo_construction_control_test odoo.modules.loading: Module mail_bot loaded in 0.18s, 170 queries (+170 other) 
+2026-09-12 13:40:36,986 1 INFO soloodoo_construction_control_test odoo.modules.loading: Loading module phone_validation (28/93) 
+2026-09-12 13:40:37,090 1 INFO soloodoo_construction_control_test odoo.modules.registry: module phone_validation: creating or updating database tables 
+2026-09-12 13:40:38,061 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading phone_validation/security/ir.model.access.csv 
+2026-09-12 13:40:38,080 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading phone_validation/views/phone_blacklist_views.xml 
+2026-09-12 13:40:38,115 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading phone_validation/wizard/phone_blacklist_remove_view.xml 
+2026-09-12 13:40:38,145 1 INFO soloodoo_construction_control_test odoo.modules.loading: Module phone_validation loaded in 1.16s, 1549 queries (+1549 other) 
+2026-09-12 13:40:38,145 1 INFO soloodoo_construction_control_test odoo.modules.loading: Loading module privacy_lookup (29/93) 
+2026-09-12 13:40:38,188 1 INFO soloodoo_construction_control_test odoo.modules.registry: module privacy_lookup: creating or updating database tables 
+2026-09-12 13:40:38,310 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading privacy_lookup/wizard/privacy_lookup_wizard_views.xml 
+2026-09-12 13:40:38,349 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading privacy_lookup/views/privacy_log_views.xml 
+2026-09-12 13:40:38,375 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading privacy_lookup/security/ir.model.access.csv 
+2026-09-12 13:40:38,393 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading privacy_lookup/data/ir_actions_server_data.xml 
+2026-09-12 13:40:38,427 1 INFO soloodoo_construction_control_test odoo.modules.loading: Module privacy_lookup loaded in 0.28s, 247 queries (+247 other) 
+2026-09-12 13:40:38,427 1 INFO soloodoo_construction_control_test odoo.modules.loading: Loading module product (30/93) 
+2026-09-12 13:40:38,573 1 INFO soloodoo_construction_control_test odoo.modules.registry: module product: creating or updating database tables 
+2026-09-12 13:40:39,349 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading product/data/product_data.xml 
+2026-09-12 13:40:39,378 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading product/security/product_security.xml 
+2026-09-12 13:40:39,513 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading product/security/ir.model.access.csv 
+2026-09-12 13:40:39,548 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading product/wizard/product_label_layout_views.xml 
+2026-09-12 13:40:39,564 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading product/views/product_tag_views.xml 
+2026-09-12 13:40:39,580 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading product/views/product_views.xml 
+2026-09-12 13:40:39,689 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading product/views/res_config_settings_views.xml 
+2026-09-12 13:40:39,715 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading product/views/product_attribute_views.xml 
+2026-09-12 13:40:39,746 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading product/views/product_attribute_value_views.xml 
+2026-09-12 13:40:39,752 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading product/views/product_category_views.xml 
+2026-09-12 13:40:39,770 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading product/views/product_document_views.xml 
+2026-09-12 13:40:39,791 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading product/views/product_packaging_views.xml 
+2026-09-12 13:40:39,818 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading product/views/product_pricelist_item_views.xml 
+2026-09-12 13:40:39,845 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading product/views/product_pricelist_views.xml 
+2026-09-12 13:40:39,874 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading product/views/product_supplierinfo_views.xml 
+2026-09-12 13:40:39,900 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading product/views/product_template_views.xml 
+2026-09-12 13:40:39,942 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading product/views/res_country_group_views.xml 
+2026-09-12 13:40:39,950 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading product/views/res_partner_views.xml 
+2026-09-12 13:40:39,963 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading product/report/product_reports.xml 
+2026-09-12 13:40:39,994 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading product/report/product_product_templates.xml 
+2026-09-12 13:40:40,030 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading product/report/product_template_templates.xml 
+2026-09-12 13:40:40,049 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading product/report/product_packaging.xml 
+2026-09-12 13:40:40,055 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading product/report/product_pricelist_report_templates.xml 
+2026-09-12 13:40:40,107 1 INFO soloodoo_construction_control_test odoo.modules.loading: Module product loaded in 1.68s, 1498 queries (+1498 other) 
+2026-09-12 13:40:40,107 1 INFO soloodoo_construction_control_test odoo.modules.loading: Loading module rating (31/93) 
+2026-09-12 13:40:40,162 1 INFO soloodoo_construction_control_test odoo.modules.registry: module rating: creating or updating database tables 
+2026-09-12 13:40:40,375 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading rating/views/rating_rating_views.xml 
+2026-09-12 13:40:40,443 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading rating/views/rating_templates.xml 
+2026-09-12 13:40:40,453 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading rating/views/mail_message_views.xml 
+2026-09-12 13:40:40,462 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading rating/security/ir.model.access.csv 
+2026-09-12 13:40:40,498 1 INFO soloodoo_construction_control_test odoo.modules.loading: Module rating loaded in 0.39s, 372 queries (+372 other) 
+2026-09-12 13:40:40,498 1 INFO soloodoo_construction_control_test odoo.modules.loading: Loading module sales_team (32/93) 
+2026-09-12 13:40:40,549 1 INFO soloodoo_construction_control_test odoo.modules.registry: module sales_team: creating or updating database tables 
+2026-09-12 13:40:40,591 1 INFO soloodoo_construction_control_test odoo.models: Prepare computation of res.users.sale_team_id 
+2026-09-12 13:40:40,717 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sales_team/security/sales_team_security.xml 
+2026-09-12 13:40:40,874 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sales_team/security/ir.model.access.csv 
+2026-09-12 13:40:40,891 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sales_team/data/crm_team_data.xml 
+2026-09-12 13:40:40,949 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sales_team/views/crm_tag_views.xml 
+2026-09-12 13:40:40,965 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sales_team/views/crm_team_views.xml 
+2026-09-12 13:40:41,006 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sales_team/views/crm_team_member_views.xml 
+2026-09-12 13:40:41,046 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sales_team/views/mail_activity_views.xml 
+2026-09-12 13:40:41,053 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sales_team/views/res_partner_views.xml 
+2026-09-12 13:40:41,111 1 INFO soloodoo_construction_control_test odoo.modules.loading: Module sales_team loaded in 0.61s, 543 queries (+543 other) 
+2026-09-12 13:40:41,111 1 INFO soloodoo_construction_control_test odoo.modules.loading: Loading module web_unsplash (33/93) 
+2026-09-12 13:40:41,170 1 INFO soloodoo_construction_control_test odoo.modules.registry: module web_unsplash: creating or updating database tables 
+2026-09-12 13:40:41,276 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading web_unsplash/views/res_config_settings_view.xml 
+2026-09-12 13:40:41,329 1 INFO soloodoo_construction_control_test odoo.modules.loading: Module web_unsplash loaded in 0.22s, 98 queries (+98 other) 
+2026-09-12 13:40:41,329 1 INFO soloodoo_construction_control_test odoo.modules.loading: Loading module partner_autocomplete (34/93) 
+2026-09-12 13:40:41,428 1 INFO soloodoo_construction_control_test odoo.modules.registry: module partner_autocomplete: creating or updating database tables 
+2026-09-12 13:40:41,548 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading partner_autocomplete/security/ir.model.access.csv 
+2026-09-12 13:40:41,564 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading partner_autocomplete/views/res_partner_views.xml 
+2026-09-12 13:40:41,587 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading partner_autocomplete/views/res_company_views.xml 
+2026-09-12 13:40:41,600 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading partner_autocomplete/views/res_config_settings_views.xml 
+2026-09-12 13:40:41,617 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading partner_autocomplete/data/cron.xml 
+2026-09-12 13:40:41,660 1 INFO soloodoo_construction_control_test odoo.modules.loading: Module partner_autocomplete loaded in 0.33s, 198 queries (+198 other) 
+2026-09-12 13:40:41,660 1 INFO soloodoo_construction_control_test odoo.modules.loading: Loading module portal (35/93) 
+2026-09-12 13:40:41,713 1 INFO soloodoo_construction_control_test odoo.modules.registry: module portal: creating or updating database tables 
+2026-09-12 13:40:41,993 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading portal/security/ir.model.access.csv 
+2026-09-12 13:40:42,012 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading portal/data/mail_template_data.xml 
+2026-09-12 13:40:42,021 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading portal/data/mail_templates.xml 
+2026-09-12 13:40:42,030 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading portal/views/mail_templates_public.xml 
+2026-09-12 13:40:42,042 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading portal/views/portal_templates.xml 
+2026-09-12 13:40:42,195 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading portal/views/res_config_settings_views.xml 
+2026-09-12 13:40:42,218 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading portal/wizard/portal_share_views.xml 
+2026-09-12 13:40:42,237 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading portal/wizard/portal_wizard_views.xml 
+2026-09-12 13:40:42,297 1 INFO soloodoo_construction_control_test odoo.modules.loading: Module portal loaded in 0.64s, 518 queries (+518 other) 
+2026-09-12 13:40:42,297 1 INFO soloodoo_construction_control_test odoo.modules.loading: Loading module sms (36/93) 
+2026-09-12 13:40:42,477 1 INFO soloodoo_construction_control_test odoo.modules.registry: module sms: creating or updating database tables 
+2026-09-12 13:40:42,487 1 INFO soloodoo_construction_control_test odoo.models: Prepare computation of ir.actions.server.sms_template_id 
+2026-09-12 13:40:42,487 1 INFO soloodoo_construction_control_test odoo.models: Prepare computation of ir.actions.server.sms_method 
+2026-09-12 13:40:42,527 1 INFO soloodoo_construction_control_test odoo.models: Prepare computation of res.partner.phone_sanitized 
+2026-09-12 13:40:43,944 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sms/data/ir_cron_data.xml 
+2026-09-12 13:40:43,956 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sms/wizard/sms_composer_views.xml 
+2026-09-12 13:40:43,973 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sms/wizard/sms_template_preview_views.xml 
+2026-09-12 13:40:43,985 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sms/wizard/sms_resend_views.xml 
+2026-09-12 13:40:44,002 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sms/wizard/sms_template_reset_views.xml 
+2026-09-12 13:40:44,020 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sms/views/ir_actions_server_views.xml 
+2026-09-12 13:40:44,037 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sms/views/mail_notification_views.xml 
+2026-09-12 13:40:44,053 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sms/views/res_config_settings_views.xml 
+2026-09-12 13:40:44,073 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sms/views/res_partner_views.xml 
+2026-09-12 13:40:44,118 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sms/views/sms_sms_views.xml 
+2026-09-12 13:40:44,151 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sms/views/sms_template_views.xml 
+2026-09-12 13:40:44,182 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sms/security/ir.model.access.csv 
+2026-09-12 13:40:44,221 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sms/security/sms_security.xml 
+2026-09-12 13:40:44,259 1 INFO soloodoo_construction_control_test odoo.modules.loading: Module sms loaded in 1.96s, 2151 queries (+2151 other) 
+2026-09-12 13:40:44,259 1 INFO soloodoo_construction_control_test odoo.modules.loading: Loading module snailmail (37/93) 
+2026-09-12 13:40:44,325 1 INFO soloodoo_construction_control_test odoo.modules.registry: module snailmail: creating or updating database tables 
+2026-09-12 13:40:44,626 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading snailmail/data/snailmail_data.xml 
+2026-09-12 13:40:44,642 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading snailmail/views/report_assets.xml 
+2026-09-12 13:40:44,660 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading snailmail/views/snailmail_views.xml 
+2026-09-12 13:40:44,685 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading snailmail/wizard/snailmail_letter_format_error_views.xml 
+2026-09-12 13:40:44,699 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading snailmail/wizard/snailmail_letter_missing_required_fields_views.xml 
+2026-09-12 13:40:44,711 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading snailmail/security/ir.model.access.csv 
+2026-09-12 13:40:44,763 1 INFO soloodoo_construction_control_test odoo.modules.loading: Module snailmail loaded in 0.50s, 459 queries (+459 other) 
+2026-09-12 13:40:44,763 1 INFO soloodoo_construction_control_test odoo.modules.loading: Loading module auth_totp_portal (38/93) 
+2026-09-12 13:40:44,826 1 INFO soloodoo_construction_control_test odoo.modules.registry: module auth_totp_portal: creating or updating database tables 
+2026-09-12 13:40:44,866 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading auth_totp_portal/security/security.xml 
+2026-09-12 13:40:44,883 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading auth_totp_portal/views/templates.xml 
+2026-09-12 13:40:44,916 1 INFO soloodoo_construction_control_test odoo.modules.loading: Module auth_totp_portal loaded in 0.15s, 66 queries (+66 other) 
+2026-09-12 13:40:44,916 1 INFO soloodoo_construction_control_test odoo.modules.loading: Loading module calendar_sms (39/93) 
+2026-09-12 13:40:44,993 1 INFO soloodoo_construction_control_test odoo.modules.registry: module calendar_sms: creating or updating database tables 
+2026-09-12 13:40:44,999 1 INFO soloodoo_construction_control_test odoo.models: Prepare computation of calendar.alarm.sms_template_id 
+2026-09-12 13:40:45,051 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading calendar_sms/data/sms_data.xml 
+2026-09-12 13:40:45,060 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading calendar_sms/views/calendar_views.xml 
+2026-09-12 13:40:45,112 1 INFO soloodoo_construction_control_test odoo.modules.loading: Module calendar_sms loaded in 0.20s, 96 queries (+96 other) 
+2026-09-12 13:40:45,113 1 INFO soloodoo_construction_control_test odoo.modules.loading: Loading module digest (40/93) 
+2026-09-12 13:40:45,179 1 INFO soloodoo_construction_control_test odoo.modules.registry: module digest: creating or updating database tables 
+2026-09-12 13:40:45,373 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading digest/security/ir.model.access.csv 
+2026-09-12 13:40:45,388 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading digest/data/digest_data.xml 
+2026-09-12 13:40:45,412 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading digest/data/digest_tips_data.xml 
+2026-09-12 13:40:45,433 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading digest/data/ir_cron_data.xml 
+2026-09-12 13:40:45,444 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading digest/data/res_config_settings_data.xml 
+2026-09-12 13:40:45,453 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading digest/views/digest_views.xml 
+2026-09-12 13:40:45,503 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading digest/views/digest_templates.xml 
+2026-09-12 13:40:45,510 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading digest/views/res_config_settings_views.xml 
+2026-09-12 13:40:45,557 1 INFO soloodoo_construction_control_test odoo.modules.loading: Module digest loaded in 0.44s, 296 queries (+296 other) 
+2026-09-12 13:40:45,557 1 INFO soloodoo_construction_control_test odoo.modules.loading: Loading module payment (41/93) 
+2026-09-12 13:40:45,632 1 INFO soloodoo_construction_control_test odoo.modules.registry: module payment: creating or updating database tables 
+2026-09-12 13:40:46,059 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading payment/data/onboarding_data.xml 
+2026-09-12 13:40:46,066 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading payment/data/payment_method_data.xml 
+2026-09-12 13:40:47,916 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading payment/data/payment_provider_data.xml 
+2026-09-12 13:40:48,101 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading payment/data/payment_cron.xml 
+2026-09-12 13:40:48,768 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading payment/views/express_checkout_templates.xml 
+2026-09-12 13:40:48,776 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading payment/views/payment_form_templates.xml 
+2026-09-12 13:40:48,805 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading payment/views/portal_templates.xml 
+2026-09-12 13:40:48,855 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading payment/views/payment_provider_views.xml 
+2026-09-12 13:40:48,885 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading payment/views/payment_method_views.xml 
+2026-09-12 13:40:48,911 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading payment/views/payment_transaction_views.xml 
+2026-09-12 13:40:48,940 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading payment/views/payment_token_views.xml 
+2026-09-12 13:40:48,965 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading payment/views/res_partner_views.xml 
+2026-09-12 13:40:48,981 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading payment/security/ir.model.access.csv 
+2026-09-12 13:40:49,003 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading payment/security/payment_security.xml 
+2026-09-12 13:40:49,035 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading payment/wizards/payment_capture_wizard_views.xml 
+2026-09-12 13:40:49,043 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading payment/wizards/payment_link_wizard_views.xml 
+2026-09-12 13:40:49,050 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading payment/wizards/payment_onboarding_views.xml 
+2026-09-12 13:40:49,085 1 INFO soloodoo_construction_control_test odoo.modules.loading: Module payment loaded in 3.53s, 2224 queries (+2224 other) 
+2026-09-12 13:40:49,085 1 INFO soloodoo_construction_control_test odoo.modules.loading: Loading module portal_rating (42/93) 
+2026-09-12 13:40:49,142 1 INFO soloodoo_construction_control_test odoo.modules.registry: module portal_rating: creating or updating database tables 
+2026-09-12 13:40:49,212 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading portal_rating/views/rating_rating_views.xml 
+2026-09-12 13:40:49,225 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading portal_rating/views/portal_templates.xml 
+2026-09-12 13:40:49,233 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading portal_rating/views/rating_templates.xml 
+2026-09-12 13:40:49,256 1 INFO soloodoo_construction_control_test odoo.modules.loading: Module portal_rating loaded in 0.17s, 105 queries (+105 other) 
+2026-09-12 13:40:49,257 1 INFO soloodoo_construction_control_test odoo.modules.loading: Loading module spreadsheet (43/93) 
+2026-09-12 13:40:49,314 1 INFO soloodoo_construction_control_test odoo.modules.registry: module spreadsheet: creating or updating database tables 
+2026-09-12 13:40:49,373 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading spreadsheet/views/public_readonly_spreadsheet_templates.xml 
+2026-09-12 13:40:49,398 1 INFO soloodoo_construction_control_test odoo.modules.loading: Module spreadsheet loaded in 0.14s, 83 queries (+83 other) 
+2026-09-12 13:40:49,398 1 INFO soloodoo_construction_control_test odoo.modules.loading: Loading module account (44/93) 
+2026-09-12 13:40:49,623 1 INFO soloodoo_construction_control_test odoo.modules.registry: module account: creating or updating database tables 
+2026-09-12 13:40:50,074 1 INFO soloodoo_construction_control_test odoo.models: Prepare computation of res.company.account_fiscal_country_id 
+2026-09-12 13:40:50,074 1 INFO soloodoo_construction_control_test odoo.models: Prepare computation of res.company.invoice_terms_html 
+2026-09-12 13:40:52,109 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading account/security/account_security.xml 
+2026-09-12 13:40:52,579 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading account/security/ir.model.access.csv 
+2026-09-12 13:40:52,666 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading account/data/account_data.xml 
+2026-09-12 13:40:52,755 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading account/data/digest_data.xml 
+2026-09-12 13:40:52,764 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading account/views/account_report.xml 
+2026-09-12 13:40:52,790 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading account/data/mail_template_data.xml 
+2026-09-12 13:40:52,809 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading account/data/onboarding_data.xml 
+2026-09-12 13:40:52,865 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading account/views/account_payment_view.xml 
+2026-09-12 13:40:52,946 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading account/wizard/account_automatic_entry_wizard_views.xml 
+2026-09-12 13:40:52,960 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading account/wizard/account_unreconcile_view.xml 
+2026-09-12 13:40:52,972 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading account/wizard/account_move_reversal_view.xml 
+2026-09-12 13:40:52,983 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading account/wizard/account_resequence_views.xml 
+2026-09-12 13:40:52,995 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading account/wizard/account_payment_register_views.xml 
+2026-09-12 13:40:53,007 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading account/views/account_move_views.xml 
+2026-09-12 13:40:53,404 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading account/wizard/setup_wizards_view.xml 
+2026-09-12 13:40:53,423 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading account/views/account_account_views.xml 
+2026-09-12 13:40:53,452 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading account/views/account_group_views.xml 
+2026-09-12 13:40:53,467 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading account/views/account_journal_views.xml 
+2026-09-12 13:40:53,515 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading account/views/account_account_tag_views.xml 
+2026-09-12 13:40:53,531 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading account/views/account_bank_statement_views.xml 
+2026-09-12 13:40:53,560 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading account/views/account_reconcile_model_views.xml 
+2026-09-12 13:40:53,593 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading account/views/account_tax_views.xml 
+2026-09-12 13:40:53,668 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading account/views/account_full_reconcile_views.xml 
+2026-09-12 13:40:53,675 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading account/views/account_payment_term_views.xml 
+2026-09-12 13:40:53,699 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading account/views/account_payment_method.xml 
+2026-09-12 13:40:53,709 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading account/views/res_partner_bank_views.xml 
+2026-09-12 13:40:53,736 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading account/views/report_statement.xml 
+2026-09-12 13:40:53,753 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading account/views/terms_template.xml 
+2026-09-12 13:40:53,766 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading account/wizard/account_validate_move_view.xml 
+2026-09-12 13:40:53,777 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading account/views/res_company_views.xml 
+2026-09-12 13:40:53,807 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading account/views/product_view.xml 
+2026-09-12 13:40:53,839 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading account/views/account_analytic_plan_views.xml 
+2026-09-12 13:40:53,848 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading account/views/account_analytic_account_views.xml 
+2026-09-12 13:40:53,866 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading account/views/account_analytic_distribution_model_views.xml 
+2026-09-12 13:40:53,882 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading account/views/account_analytic_line_views.xml 
+2026-09-12 13:40:53,922 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading account/views/report_invoice.xml 
+2026-09-12 13:40:53,965 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading account/report/account_invoice_report_view.xml 
+2026-09-12 13:40:54,018 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading account/views/account_cash_rounding_view.xml 
+2026-09-12 13:40:54,036 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading account/views/ir_module_views.xml 
+2026-09-12 13:40:54,049 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading account/views/res_config_settings_views.xml 
+2026-09-12 13:40:54,084 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading account/views/partner_view.xml 
+2026-09-12 13:40:54,161 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading account/views/account_journal_dashboard_view.xml 
+2026-09-12 13:40:54,183 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading account/views/account_portal_templates.xml 
+2026-09-12 13:40:54,228 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading account/views/report_payment_receipt_templates.xml 
+2026-09-12 13:40:54,239 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading account/data/service_cron.xml 
+2026-09-12 13:40:54,256 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading account/views/account_incoterms_view.xml 
+2026-09-12 13:40:54,275 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading account/data/account_incoterms_data.xml 
+2026-09-12 13:40:54,298 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading account/views/digest_views.xml 
+2026-09-12 13:40:54,311 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading account/wizard/account_move_send_views.xml 
+2026-09-12 13:40:54,326 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading account/report/account_hash_integrity_templates.xml 
+2026-09-12 13:40:54,335 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading account/views/res_currency.xml 
+2026-09-12 13:40:54,344 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading account/views/account_menuitem.xml 
+2026-09-12 13:40:54,621 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading account/wizard/account_tour_upload_bill.xml 
+2026-09-12 13:40:54,638 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading account/wizard/accrued_orders.xml 
+2026-09-12 13:40:54,648 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading account/views/bill_preview_template.xml 
+2026-09-12 13:40:54,664 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading account/data/account_reports_data.xml 
+2026-09-12 13:40:55,438 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading account/views/uom_uom_views.xml 
+2026-09-12 13:40:55,447 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading account/data/ir_config_parameter_data.xml 
+2026-09-12 13:40:55,624 1 INFO soloodoo_construction_control_test odoo.modules.loading: Module account loaded in 6.23s, 5706 queries (+5706 other) 
+2026-09-12 13:40:55,624 1 INFO soloodoo_construction_control_test odoo.modules.loading: Loading module crm (45/93) 
+2026-09-12 13:40:55,739 1 INFO soloodoo_construction_control_test odoo.modules.registry: module crm: creating or updating database tables 
+2026-09-12 13:40:56,153 1 INFO soloodoo_construction_control_test odoo.addons.mail.models.mail_alias_mixin: Mail alias created for crm.team Sales (id 1) 
+2026-09-12 13:40:56,155 1 INFO soloodoo_construction_control_test odoo.addons.mail.models.mail_alias_mixin: Mail alias created for crm.team eBay (id 4) 
+2026-09-12 13:40:56,157 1 INFO soloodoo_construction_control_test odoo.addons.mail.models.mail_alias_mixin: Mail alias created for crm.team Point of Sale (id 3) 
+2026-09-12 13:40:56,158 1 INFO soloodoo_construction_control_test odoo.addons.mail.models.mail_alias_mixin: Mail alias created for crm.team Website (id 2) 
+2026-09-12 13:40:56,528 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading crm/security/crm_security.xml 
+2026-09-12 13:40:56,627 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading crm/security/ir.model.access.csv 
+2026-09-12 13:40:56,669 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading crm/data/crm_lead_merge_template.xml 
+2026-09-12 13:40:56,683 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading crm/data/crm_lead_prediction_data.xml 
+2026-09-12 13:40:56,823 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading crm/data/crm_lost_reason_data.xml 
+2026-09-12 13:40:56,832 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading crm/data/crm_stage_data.xml 
+2026-09-12 13:40:56,843 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading crm/data/crm_team_data.xml 
+2026-09-12 13:40:56,873 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading crm/data/digest_data.xml 
+2026-09-12 13:40:56,892 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading crm/data/ir_action_data.xml 
+2026-09-12 13:40:56,905 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading crm/data/ir_cron_data.xml 
+2026-09-12 13:40:56,914 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading crm/data/mail_message_subtype_data.xml 
+2026-09-12 13:40:56,943 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading crm/data/crm_recurring_plan_data.xml 
+2026-09-12 13:40:56,954 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading crm/wizard/crm_lead_lost_views.xml 
+2026-09-12 13:40:56,969 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading crm/wizard/crm_lead_to_opportunity_views.xml 
+2026-09-12 13:40:56,980 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading crm/wizard/crm_lead_to_opportunity_mass_views.xml 
+2026-09-12 13:40:56,991 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading crm/wizard/crm_merge_opportunities_views.xml 
+2026-09-12 13:40:57,001 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading crm/wizard/crm_lead_pls_update_views.xml 
+2026-09-12 13:40:57,011 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading crm/views/calendar_views.xml 
+2026-09-12 13:40:57,023 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading crm/views/crm_recurring_plan_views.xml 
+2026-09-12 13:40:57,040 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading crm/views/crm_lost_reason_views.xml 
+2026-09-12 13:40:57,061 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading crm/views/crm_stage_views.xml 
+2026-09-12 13:40:57,083 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading crm/views/crm_lead_views.xml 
+2026-09-12 13:40:57,311 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading crm/views/crm_team_member_views.xml 
+2026-09-12 13:40:57,343 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading crm/views/digest_views.xml 
+2026-09-12 13:40:57,355 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading crm/views/mail_activity_plan_views.xml 
+2026-09-12 13:40:57,363 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading crm/views/mail_activity_views.xml 
+2026-09-12 13:40:57,368 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading crm/views/res_config_settings_views.xml 
+2026-09-12 13:40:57,395 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading crm/views/res_partner_views.xml 
+2026-09-12 13:40:57,430 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading crm/views/utm_campaign_views.xml 
+2026-09-12 13:40:57,448 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading crm/report/crm_activity_report_views.xml 
+2026-09-12 13:40:57,477 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading crm/report/crm_opportunity_report_views.xml 
+2026-09-12 13:40:57,532 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading crm/views/crm_team_views.xml 
+2026-09-12 13:40:57,604 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading crm/views/crm_menu_views.xml 
+2026-09-12 13:40:57,753 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading crm/views/crm_helper_templates.xml 
+2026-09-12 13:40:57,841 1 INFO soloodoo_construction_control_test odoo.modules.loading: Module crm loaded in 2.22s, 2018 queries (+2018 other) 
+2026-09-12 13:40:57,841 1 INFO soloodoo_construction_control_test odoo.modules.loading: Loading module project (46/93) 
+2026-09-12 13:40:57,968 1 INFO soloodoo_construction_control_test odoo.modules.registry: module project: creating or updating database tables 
+2026-09-12 13:40:58,702 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading project/security/project_security.xml 
+2026-09-12 13:40:59,107 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading project/security/ir.model.access.csv 
+2026-09-12 13:40:59,151 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading project/security/ir.model.access.xml 
+2026-09-12 13:40:59,158 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading project/data/digest_data.xml 
+2026-09-12 13:40:59,172 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading project/report/project_task_burndown_chart_report_views.xml 
+2026-09-12 13:40:59,191 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading project/views/account_analytic_account_views.xml 
+2026-09-12 13:40:59,204 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading project/views/digest_digest_views.xml 
+2026-09-12 13:40:59,217 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading project/views/rating_rating_views.xml 
+2026-09-12 13:40:59,392 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading project/views/project_update_views.xml 
+2026-09-12 13:40:59,417 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading project/views/project_update_templates.xml 
+2026-09-12 13:40:59,429 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading project/views/project_project_stage_views.xml 
+2026-09-12 13:40:59,473 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading project/wizard/project_share_wizard_views.xml 
+2026-09-12 13:40:59,489 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading project/views/project_collaborator_views.xml 
+2026-09-12 13:40:59,507 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading project/views/project_task_type_views.xml 
+2026-09-12 13:40:59,554 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading project/views/project_project_views.xml 
+2026-09-12 13:40:59,737 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading project/views/project_task_views.xml 
+2026-09-12 13:41:00,039 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading project/views/project_tags_views.xml 
+2026-09-12 13:41:00,058 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading project/views/project_milestone_views.xml 
+2026-09-12 13:41:00,074 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading project/views/res_partner_views.xml 
+2026-09-12 13:41:00,091 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading project/views/res_config_settings_views.xml 
+2026-09-12 13:41:00,120 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading project/views/mail_activity_plan_views.xml 
+2026-09-12 13:41:00,144 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading project/views/mail_activity_type_views.xml 
+2026-09-12 13:41:00,151 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading project/views/project_sharing_project_task_views.xml 
+2026-09-12 13:41:00,218 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading project/views/project_portal_project_project_templates.xml 
+2026-09-12 13:41:00,250 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading project/views/project_portal_project_task_templates.xml 
+2026-09-12 13:41:00,302 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading project/views/project_task_templates.xml 
+2026-09-12 13:41:00,308 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading project/views/project_sharing_project_task_templates.xml 
+2026-09-12 13:41:00,323 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading project/report/project_report_views.xml 
+2026-09-12 13:41:00,349 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading project/data/ir_cron_data.xml 
+2026-09-12 13:41:00,359 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading project/data/mail_message_subtype_data.xml 
+2026-09-12 13:41:00,422 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading project/data/mail_template_data.xml 
+2026-09-12 13:41:00,441 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading project/data/project_data.xml 
+2026-09-12 13:41:00,454 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading project/wizard/project_task_type_delete_views.xml 
+2026-09-12 13:41:00,471 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading project/wizard/project_project_stage_delete_views.xml 
+2026-09-12 13:41:00,482 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading project/views/project_menus.xml 
+2026-09-12 13:41:00,662 1 INFO soloodoo_construction_control_test odoo.modules.loading: Module project loaded in 2.82s, 2607 queries (+2607 other) 
+2026-09-12 13:41:00,662 1 INFO soloodoo_construction_control_test odoo.modules.loading: Loading module spreadsheet_dashboard (47/93) 
+2026-09-12 13:41:00,757 1 INFO soloodoo_construction_control_test odoo.modules.registry: module spreadsheet_dashboard: creating or updating database tables 
+2026-09-12 13:41:00,871 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading spreadsheet_dashboard/security/security.xml 
+2026-09-12 13:41:00,940 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading spreadsheet_dashboard/security/ir.model.access.csv 
+2026-09-12 13:41:00,958 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading spreadsheet_dashboard/views/spreadsheet_dashboard_views.xml 
+2026-09-12 13:41:00,979 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading spreadsheet_dashboard/views/menu_views.xml 
+2026-09-12 13:41:01,016 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading spreadsheet_dashboard/data/dashboard.xml 
+2026-09-12 13:41:01,056 1 INFO soloodoo_construction_control_test odoo.modules.loading: Module spreadsheet_dashboard loaded in 0.39s, 271 queries (+271 other) 
+2026-09-12 13:41:01,056 1 INFO soloodoo_construction_control_test odoo.modules.loading: Loading module stock (48/93) 
+2026-09-12 13:41:01,242 1 INFO soloodoo_construction_control_test odoo.modules.registry: module stock: creating or updating database tables 
+2026-09-12 13:41:03,502 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading stock/security/stock_security.xml 
+2026-09-12 13:41:03,927 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading stock/security/ir.model.access.csv 
+2026-09-12 13:41:04,002 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading stock/data/digest_data.xml 
+2026-09-12 13:41:04,009 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading stock/data/mail_templates.xml 
+2026-09-12 13:41:04,023 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading stock/data/default_barcode_patterns.xml 
+2026-09-12 13:41:04,036 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading stock/data/stock_data.xml 
+2026-09-12 13:41:04,295 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading stock/data/stock_sequence_data.xml 
+2026-09-12 13:41:04,320 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading stock/data/stock_traceability_report_data.xml 
+2026-09-12 13:41:04,326 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading stock/report/report_stock_quantity.xml 
+2026-09-12 13:41:04,333 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading stock/report/report_stock_reception.xml 
+2026-09-12 13:41:04,353 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading stock/report/stock_report_views.xml 
+2026-09-12 13:41:04,409 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading stock/report/report_package_barcode.xml 
+2026-09-12 13:41:04,426 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading stock/report/report_lot_barcode.xml 
+2026-09-12 13:41:04,433 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading stock/report/report_location_barcode.xml 
+2026-09-12 13:41:04,443 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading stock/report/report_stockpicking_operations.xml 
+2026-09-12 13:41:04,456 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading stock/report/report_deliveryslip.xml 
+2026-09-12 13:41:04,486 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading stock/report/report_stockinventory.xml 
+2026-09-12 13:41:04,493 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading stock/report/report_stock_rule.xml 
+2026-09-12 13:41:04,519 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading stock/report/package_templates.xml 
+2026-09-12 13:41:04,527 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading stock/report/picking_templates.xml 
+2026-09-12 13:41:04,542 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading stock/report/product_templates.xml 
+2026-09-12 13:41:04,552 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading stock/report/product_packaging.xml 
+2026-09-12 13:41:04,558 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading stock/report/report_return_slip.xml 
+2026-09-12 13:41:04,568 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading stock/data/mail_template_data.xml 
+2026-09-12 13:41:04,578 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading stock/views/stock_menu_views.xml 
+2026-09-12 13:41:04,677 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading stock/wizard/stock_assign_serial_views.xml 
+2026-09-12 13:41:04,691 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading stock/wizard/stock_change_product_qty_views.xml 
+2026-09-12 13:41:04,703 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading stock/wizard/stock_picking_return_views.xml 
+2026-09-12 13:41:04,715 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading stock/wizard/stock_scheduler_compute_views.xml 
+2026-09-12 13:41:04,729 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading stock/wizard/stock_inventory_conflict.xml 
+2026-09-12 13:41:04,741 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading stock/wizard/stock_backorder_confirmation_views.xml 
+2026-09-12 13:41:04,747 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading stock/wizard/stock_quantity_history.xml 
+2026-09-12 13:41:04,756 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading stock/wizard/stock_request_count.xml 
+2026-09-12 13:41:04,767 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading stock/wizard/stock_replenishment_info.xml 
+2026-09-12 13:41:04,787 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading stock/wizard/stock_rules_report_views.xml 
+2026-09-12 13:41:04,797 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading stock/wizard/stock_warn_insufficient_qty_views.xml 
+2026-09-12 13:41:04,813 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading stock/wizard/product_replenish_views.xml 
+2026-09-12 13:41:04,824 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading stock/wizard/product_label_layout_views.xml 
+2026-09-12 13:41:04,834 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading stock/wizard/stock_track_confirmation_views.xml 
+2026-09-12 13:41:04,842 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading stock/wizard/stock_orderpoint_snooze_views.xml 
+2026-09-12 13:41:04,852 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading stock/wizard/stock_package_destination_views.xml 
+2026-09-12 13:41:04,861 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading stock/wizard/stock_inventory_adjustment_name.xml 
+2026-09-12 13:41:04,870 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading stock/wizard/stock_inventory_warning.xml 
+2026-09-12 13:41:04,880 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading stock/wizard/stock_label_type.xml 
+2026-09-12 13:41:04,887 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading stock/wizard/stock_lot_label_layout.xml 
+2026-09-12 13:41:04,894 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading stock/wizard/stock_quant_relocate.xml 
+2026-09-12 13:41:04,903 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading stock/views/res_partner_views.xml 
+2026-09-12 13:41:04,931 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading stock/views/product_strategy_views.xml 
+2026-09-12 13:41:04,966 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading stock/views/stock_lot_views.xml 
+2026-09-12 13:41:05,011 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading stock/views/stock_scrap_views.xml 
+2026-09-12 13:41:05,057 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading stock/views/stock_quant_views.xml 
+2026-09-12 13:41:05,273 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading stock/views/stock_warehouse_views.xml 
+2026-09-12 13:41:05,301 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading stock/views/stock_move_line_views.xml 
+2026-09-12 13:41:05,364 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading stock/views/stock_picking_views.xml 
+2026-09-12 13:41:05,501 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading stock/views/stock_picking_type_views.xml 
+2026-09-12 13:41:05,549 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading stock/views/stock_move_views.xml 
+2026-09-12 13:41:05,642 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading stock/views/product_views.xml 
+2026-09-12 13:41:05,841 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading stock/views/stock_location_views.xml 
+2026-09-12 13:41:05,925 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading stock/views/stock_orderpoint_views.xml 
+2026-09-12 13:41:05,990 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading stock/views/stock_storage_category_views.xml 
+2026-09-12 13:41:06,024 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading stock/views/res_config_settings_views.xml 
+2026-09-12 13:41:06,070 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading stock/views/report_stock_traceability.xml 
+2026-09-12 13:41:06,083 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading stock/views/stock_template.xml 
+2026-09-12 13:41:06,097 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading stock/views/stock_rule_views.xml 
+2026-09-12 13:41:06,142 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading stock/views/stock_package_level_views.xml 
+2026-09-12 13:41:06,168 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading stock/views/stock_package_type_view.xml 
+2026-09-12 13:41:06,199 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading stock/views/stock_forecasted.xml 
+2026-09-12 13:41:06,314 1 INFO soloodoo_construction_control_test odoo.modules.loading: Module stock loaded in 5.26s, 5122 queries (+5122 other) 
+2026-09-12 13:41:06,314 1 INFO soloodoo_construction_control_test odoo.modules.loading: Loading module account_add_gln (49/93) 
+2026-09-12 13:41:06,431 1 INFO soloodoo_construction_control_test odoo.modules.registry: module account_add_gln: creating or updating database tables 
+2026-09-12 13:41:06,537 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading account_add_gln/views/res_partner_views.xml 
+2026-09-12 13:41:06,578 1 INFO soloodoo_construction_control_test odoo.modules.loading: Module account_add_gln loaded in 0.26s, 99 queries (+99 other) 
+2026-09-12 13:41:06,578 1 INFO soloodoo_construction_control_test odoo.modules.loading: Loading module account_edi_ubl_cii (50/93) 
+2026-09-12 13:41:06,800 1 INFO soloodoo_construction_control_test odoo.modules.registry: module account_edi_ubl_cii: creating or updating database tables 
+2026-09-12 13:41:06,832 1 INFO soloodoo_construction_control_test odoo.models: Prepare computation of res.partner.ubl_cii_format 
+2026-09-12 13:41:06,832 1 INFO soloodoo_construction_control_test odoo.models: Prepare computation of res.partner.peppol_endpoint 
+2026-09-12 13:41:06,832 1 INFO soloodoo_construction_control_test odoo.models: Prepare computation of res.partner.peppol_eas 
+2026-09-12 13:41:07,104 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading account_edi_ubl_cii/data/cii_22_templates.xml 
+2026-09-12 13:41:07,134 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading account_edi_ubl_cii/data/ubl_20_templates.xml 
+2026-09-12 13:41:07,241 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading account_edi_ubl_cii/data/ubl_21_templates.xml 
+2026-09-12 13:41:07,282 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading account_edi_ubl_cii/views/account_move_views.xml 
+2026-09-12 13:41:07,293 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading account_edi_ubl_cii/views/res_config_settings_views.xml 
+2026-09-12 13:41:07,315 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading account_edi_ubl_cii/views/res_partner_views.xml 
+2026-09-12 13:41:07,349 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading account_edi_ubl_cii/wizard/account_move_send_views.xml 
+2026-09-12 13:41:07,397 1 INFO soloodoo_construction_control_test odoo.modules.loading: Module account_edi_ubl_cii loaded in 0.82s, 441 queries (+441 other) 
+2026-09-12 13:41:07,397 1 INFO soloodoo_construction_control_test odoo.modules.loading: Loading module account_payment (51/93) 
+2026-09-12 13:41:07,519 1 INFO soloodoo_construction_control_test odoo.modules.registry: module account_payment: creating or updating database tables 
+2026-09-12 13:41:07,730 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading account_payment/data/ir_config_parameter.xml 
+2026-09-12 13:41:07,740 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading account_payment/data/onboarding_data.xml 
+2026-09-12 13:41:07,757 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading account_payment/security/ir.model.access.csv 
+2026-09-12 13:41:07,773 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading account_payment/security/ir_rules.xml 
+2026-09-12 13:41:07,784 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading account_payment/views/account_payment_menus.xml 
+2026-09-12 13:41:07,816 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading account_payment/views/account_portal_templates.xml 
+2026-09-12 13:41:07,857 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading account_payment/views/account_move_views.xml 
+2026-09-12 13:41:07,872 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading account_payment/views/account_journal_views.xml 
+2026-09-12 13:41:07,886 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading account_payment/views/account_payment_views.xml 
+2026-09-12 13:41:07,898 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading account_payment/views/payment_provider_views.xml 
+2026-09-12 13:41:07,908 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading account_payment/views/payment_transaction_views.xml 
+2026-09-12 13:41:07,918 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading account_payment/wizards/account_payment_register_views.xml 
+2026-09-12 13:41:07,929 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading account_payment/wizards/payment_link_wizard_views.xml 
+2026-09-12 13:41:07,938 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading account_payment/wizards/payment_refund_wizard_views.xml 
+2026-09-12 13:41:07,946 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading account_payment/wizards/res_config_settings_views.xml 
+2026-09-12 13:41:08,022 1 INFO soloodoo_construction_control_test odoo.modules.loading: Module account_payment loaded in 0.62s, 487 queries (+487 other) 
+2026-09-12 13:41:08,022 1 INFO soloodoo_construction_control_test odoo.modules.loading: Loading module account_payment_term (52/93) 
+2026-09-12 13:41:08,133 1 INFO soloodoo_construction_control_test odoo.modules.registry: module account_payment_term: creating or updating database tables 
+2026-09-12 13:41:08,213 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading account_payment_term/views/account_payment_term_views.xml 
+2026-09-12 13:41:08,248 1 INFO soloodoo_construction_control_test odoo.modules.loading: Module account_payment_term loaded in 0.23s, 53 queries (+53 other) 
+2026-09-12 13:41:08,248 1 INFO soloodoo_construction_control_test odoo.modules.loading: Loading module crm_sms (53/93) 
+2026-09-12 13:41:08,360 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading crm_sms/views/crm_lead_views.xml 
+2026-09-12 13:41:08,517 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading crm_sms/security/ir.model.access.csv 
+2026-09-12 13:41:08,529 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading crm_sms/security/sms_security.xml 
+2026-09-12 13:41:08,559 1 INFO soloodoo_construction_control_test odoo.modules.loading: Module crm_sms loaded in 0.31s, 85 queries (+85 other) 
+2026-09-12 13:41:08,559 1 INFO soloodoo_construction_control_test odoo.modules.loading: Loading module elmokrif_chantier (54/93) 
+2026-09-12 13:41:08,675 1 INFO soloodoo_construction_control_test odoo.modules.registry: module elmokrif_chantier: creating or updating database tables 
+2026-09-12 13:41:08,850 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading elmokrif_chantier/security/chantier_groups.xml 
+2026-09-12 13:41:08,894 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading elmokrif_chantier/security/ir.model.access.csv 
+2026-09-12 13:41:08,908 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading elmokrif_chantier/security/chantier_rules.xml 
+2026-09-12 13:41:08,938 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading elmokrif_chantier/data/analytic_plan_data.xml 
+2026-09-12 13:41:09,232 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading elmokrif_chantier/data/chantier_sequence.xml 
+2026-09-12 13:41:09,260 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading elmokrif_chantier/data/chantier_health_cron.xml 
+2026-09-12 13:41:09,276 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading elmokrif_chantier/views/project_project_views.xml 
+2026-09-12 13:41:09,375 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading elmokrif_chantier/views/project_task_views.xml 
+2026-09-12 13:41:09,455 1 INFO soloodoo_construction_control_test odoo.modules.loading: Module elmokrif_chantier loaded in 0.90s, 542 queries (+542 other) 
+2026-09-12 13:41:09,455 1 INFO soloodoo_construction_control_test odoo.modules.loading: Loading module iap_crm (55/93) 
+2026-09-12 13:41:09,560 1 INFO soloodoo_construction_control_test odoo.modules.registry: module iap_crm: creating or updating database tables 
+2026-09-12 13:41:09,756 1 INFO soloodoo_construction_control_test odoo.modules.loading: Module iap_crm loaded in 0.30s, 61 queries (+61 other) 
+2026-09-12 13:41:09,757 1 INFO soloodoo_construction_control_test odoo.modules.loading: Loading module project_account (56/93) 
+2026-09-12 13:41:09,861 1 INFO soloodoo_construction_control_test odoo.modules.registry: module project_account: creating or updating database tables 
+2026-09-12 13:41:09,918 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading project_account/views/account_analytic_line_views.xml 
+2026-09-12 13:41:09,962 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading project_account/views/project_project_views.xml 
+2026-09-12 13:41:09,990 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading project_account/views/project_task_views.xml 
+2026-09-12 13:41:10,016 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading project_account/views/project_sharing_project_task_views.xml 
+2026-09-12 13:41:10,047 1 INFO soloodoo_construction_control_test odoo.modules.loading: Module project_account loaded in 0.29s, 134 queries (+134 other) 
+2026-09-12 13:41:10,048 1 INFO soloodoo_construction_control_test odoo.modules.loading: Loading module project_sms (57/93) 
+2026-09-12 13:41:10,156 1 INFO soloodoo_construction_control_test odoo.modules.registry: module project_sms: creating or updating database tables 
+2026-09-12 13:41:10,277 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading project_sms/views/project_stage_views.xml 
+2026-09-12 13:41:10,310 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading project_sms/views/project_task_type_views.xml 
+2026-09-12 13:41:10,342 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading project_sms/views/project_project_views.xml 
+2026-09-12 13:41:10,350 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading project_sms/views/project_task_views.xml 
+2026-09-12 13:41:10,359 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading project_sms/security/ir.model.access.csv 
+2026-09-12 13:41:10,380 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading project_sms/security/project_sms_security.xml 
+2026-09-12 13:41:10,416 1 INFO soloodoo_construction_control_test odoo.modules.loading: Module project_sms loaded in 0.37s, 208 queries (+208 other) 
+2026-09-12 13:41:10,416 1 INFO soloodoo_construction_control_test odoo.modules.loading: Loading module project_todo (58/93) 
+2026-09-12 13:41:10,546 1 INFO soloodoo_construction_control_test odoo.modules.registry: module project_todo: creating or updating database tables 
+2026-09-12 13:41:10,648 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading project_todo/security/ir.model.access.csv 
+2026-09-12 13:41:10,664 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading project_todo/security/project_todo_security.xml 
+2026-09-12 13:41:10,712 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading project_todo/data/mail_activity_type_data.xml 
+2026-09-12 13:41:10,725 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading project_todo/data/todo_template.xml 
+2026-09-12 13:41:10,735 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading project_todo/views/project_task_views.xml 
+2026-09-12 13:41:10,799 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading project_todo/views/project_todo_menus.xml 
+2026-09-12 13:41:10,814 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading project_todo/wizard/mail_activity_todo_create.xml 
+2026-09-12 13:41:10,849 1 INFO soloodoo_construction_control_test odoo.modules.loading: Module project_todo loaded in 0.43s, 268 queries (+268 other) 
+2026-09-12 13:41:10,849 1 INFO soloodoo_construction_control_test odoo.modules.loading: Loading module purchase (59/93) 
+2026-09-12 13:41:11,082 1 INFO soloodoo_construction_control_test odoo.modules.registry: module purchase: creating or updating database tables 
+2026-09-12 13:41:11,530 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading purchase/security/purchase_security.xml 
+2026-09-12 13:41:11,800 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading purchase/security/ir.model.access.csv 
+2026-09-12 13:41:11,843 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading purchase/data/digest_data.xml 
+2026-09-12 13:41:11,853 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading purchase/views/account_move_views.xml 
+2026-09-12 13:41:11,874 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading purchase/data/purchase_data.xml 
+2026-09-12 13:41:11,910 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading purchase/data/ir_cron_data.xml 
+2026-09-12 13:41:11,920 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading purchase/report/purchase_reports.xml 
+2026-09-12 13:41:11,930 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading purchase/views/purchase_views.xml 
+2026-09-12 13:41:12,172 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading purchase/views/res_config_settings_views.xml 
+2026-09-12 13:41:12,210 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading purchase/views/product_views.xml 
+2026-09-12 13:41:12,316 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading purchase/views/res_partner_views.xml 
+2026-09-12 13:41:12,388 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading purchase/report/purchase_bill_views.xml 
+2026-09-12 13:41:12,401 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading purchase/report/purchase_report_views.xml 
+2026-09-12 13:41:12,435 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading purchase/data/mail_templates.xml 
+2026-09-12 13:41:12,447 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading purchase/data/mail_template_data.xml 
+2026-09-12 13:41:12,464 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading purchase/views/portal_templates.xml 
+2026-09-12 13:41:12,520 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading purchase/report/purchase_order_templates.xml 
+2026-09-12 13:41:12,539 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading purchase/report/purchase_quotation_templates.xml 
+2026-09-12 13:41:12,553 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading purchase/views/product_packaging_views.xml 
+2026-09-12 13:41:12,573 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading purchase/views/analytic_account_views.xml 
+2026-09-12 13:41:12,630 1 INFO soloodoo_construction_control_test odoo.modules.loading: Module purchase loaded in 1.78s, 1600 queries (+1600 other) 
+2026-09-12 13:41:12,630 1 INFO soloodoo_construction_control_test odoo.modules.loading: Loading module snailmail_account (60/93) 
+2026-09-12 13:41:12,743 1 INFO soloodoo_construction_control_test odoo.modules.registry: module snailmail_account: creating or updating database tables 
+2026-09-12 13:41:12,865 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading snailmail_account/views/res_config_settings_views.xml 
+2026-09-12 13:41:12,893 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading snailmail_account/wizard/account_move_send_views.xml 
+2026-09-12 13:41:12,928 1 INFO soloodoo_construction_control_test odoo.modules.loading: Module snailmail_account loaded in 0.30s, 133 queries (+133 other) 
+2026-09-12 13:41:12,928 1 INFO soloodoo_construction_control_test odoo.modules.loading: Loading module spreadsheet_account (61/93) 
+2026-09-12 13:41:13,036 1 INFO soloodoo_construction_control_test odoo.modules.registry: module spreadsheet_account: creating or updating database tables 
+2026-09-12 13:41:13,223 1 INFO soloodoo_construction_control_test odoo.modules.loading: Module spreadsheet_account loaded in 0.30s, 56 queries (+56 other) 
+2026-09-12 13:41:13,224 1 INFO soloodoo_construction_control_test odoo.modules.loading: Loading module spreadsheet_dashboard_account (62/93) 
+2026-09-12 13:41:13,338 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading spreadsheet_dashboard_account/data/dashboards.xml 
+2026-09-12 13:41:13,417 1 INFO soloodoo_construction_control_test odoo.modules.loading: Module spreadsheet_dashboard_account loaded in 0.19s, 30 queries (+30 other) 
+2026-09-12 13:41:13,417 1 INFO soloodoo_construction_control_test odoo.modules.loading: Loading module stock_account (63/93) 
+2026-09-12 13:41:13,553 1 INFO soloodoo_construction_control_test odoo.modules.registry: module stock_account: creating or updating database tables 
+2026-09-12 13:41:13,911 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading stock_account/security/stock_account_security.xml 
+2026-09-12 13:41:13,960 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading stock_account/security/ir.model.access.csv 
+2026-09-12 13:41:13,985 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading stock_account/data/stock_account_data.xml 
+2026-09-12 13:41:13,994 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading stock_account/views/stock_account_views.xml 
+2026-09-12 13:41:14,113 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading stock_account/views/res_config_settings_views.xml 
+2026-09-12 13:41:14,138 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading stock_account/data/product_data.xml 
+2026-09-12 13:41:14,149 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading stock_account/views/report_invoice.xml 
+2026-09-12 13:41:14,161 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading stock_account/views/stock_valuation_layer_views.xml 
+2026-09-12 13:41:14,259 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading stock_account/views/stock_quant_views.xml 
+2026-09-12 13:41:14,284 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading stock_account/views/product_views.xml 
+2026-09-12 13:41:14,328 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading stock_account/wizard/stock_request_count.xml 
+2026-09-12 13:41:14,337 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading stock_account/wizard/stock_valuation_layer_revaluation_views.xml 
+2026-09-12 13:41:14,344 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading stock_account/wizard/stock_quantity_history.xml 
+2026-09-12 13:41:14,354 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading stock_account/report/account_invoice_report_view.xml 
+2026-09-12 13:41:14,398 1 INFO soloodoo_construction_control_test odoo.modules.loading: Module stock_account loaded in 0.98s, 738 queries (+738 other) 
+2026-09-12 13:41:14,398 1 INFO soloodoo_construction_control_test odoo.modules.loading: Loading module stock_sms (64/93) 
+2026-09-12 13:41:14,521 1 INFO soloodoo_construction_control_test odoo.modules.registry: module stock_sms: creating or updating database tables 
+2026-09-12 13:41:14,733 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading stock_sms/data/sms_data.xml 
+2026-09-12 13:41:14,751 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading stock_sms/views/res_config_settings_views.xml 
+2026-09-12 13:41:14,803 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading stock_sms/wizard/confirm_stock_sms_views.xml 
+2026-09-12 13:41:14,810 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading stock_sms/security/ir.model.access.csv 
+2026-09-12 13:41:14,825 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading stock_sms/security/sms_security.xml 
+2026-09-12 13:41:14,864 1 INFO soloodoo_construction_control_test odoo.modules.loading: Module stock_sms loaded in 0.47s, 206 queries (+206 other) 
+2026-09-12 13:41:14,864 1 INFO soloodoo_construction_control_test odoo.modules.loading: Loading module crm_iap_enrich (65/93) 
+2026-09-12 13:41:14,991 1 INFO soloodoo_construction_control_test odoo.modules.registry: module crm_iap_enrich: creating or updating database tables 
+2026-09-12 13:41:15,074 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading crm_iap_enrich/data/ir_cron.xml 
+2026-09-12 13:41:15,086 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading crm_iap_enrich/data/ir_action.xml 
+2026-09-12 13:41:15,093 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading crm_iap_enrich/data/mail_templates.xml 
+2026-09-12 13:41:15,105 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading crm_iap_enrich/views/crm_lead_views.xml 
+2026-09-12 13:41:15,119 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading crm_iap_enrich/views/res_config_settings_view.xml 
+2026-09-12 13:41:15,172 1 INFO soloodoo_construction_control_test odoo.modules.loading: Module crm_iap_enrich loaded in 0.31s, 125 queries (+125 other) 
+2026-09-12 13:41:15,172 1 INFO soloodoo_construction_control_test odoo.modules.loading: Loading module crm_iap_mine (66/93) 
+2026-09-12 13:41:15,289 1 INFO soloodoo_construction_control_test odoo.modules.registry: module crm_iap_mine: creating or updating database tables 
+2026-09-12 13:41:15,543 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading crm_iap_mine/data/crm.iap.lead.industry.csv 
+2026-09-12 13:41:15,557 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading crm_iap_mine/data/crm.iap.lead.role.csv 
+2026-09-12 13:41:15,565 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading crm_iap_mine/data/crm.iap.lead.seniority.csv 
+2026-09-12 13:41:15,572 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading crm_iap_mine/data/mail_template_data.xml 
+2026-09-12 13:41:15,580 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading crm_iap_mine/data/ir_sequence_data.xml 
+2026-09-12 13:41:15,586 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading crm_iap_mine/security/ir.model.access.csv 
+2026-09-12 13:41:15,604 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading crm_iap_mine/views/crm_lead_views.xml 
+2026-09-12 13:41:15,644 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading crm_iap_mine/views/crm_iap_lead_mining_request_views.xml 
+2026-09-12 13:41:15,668 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading crm_iap_mine/views/res_config_settings_views.xml 
+2026-09-12 13:41:15,694 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading crm_iap_mine/views/mail_templates.xml 
+2026-09-12 13:41:15,706 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading crm_iap_mine/views/crm_menus.xml 
+2026-09-12 13:41:15,746 1 INFO soloodoo_construction_control_test odoo.modules.loading: Module crm_iap_mine loaded in 0.57s, 395 queries (+395 other) 
+2026-09-12 13:41:15,746 1 INFO soloodoo_construction_control_test odoo.modules.loading: Loading module elmokrif_chantier_stock (67/93) 
+2026-09-12 13:41:15,866 1 INFO soloodoo_construction_control_test odoo.modules.registry: module elmokrif_chantier_stock: creating or updating database tables 
+2026-09-12 13:41:16,166 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading elmokrif_chantier_stock/security/chantier_security.xml 
+2026-09-12 13:41:16,189 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading elmokrif_chantier_stock/security/ir.model.access.csv 
+2026-09-12 13:41:16,203 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading elmokrif_chantier_stock/data/stock_location_data.xml 
+2026-09-12 13:41:16,209 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading elmokrif_chantier_stock/views/material_request_views.xml 
+2026-09-12 13:41:16,242 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading elmokrif_chantier_stock/views/project_project_views.xml 
+2026-09-12 13:41:16,267 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading elmokrif_chantier_stock/views/stock_picking_views.xml 
+2026-09-12 13:41:16,286 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading elmokrif_chantier_stock/views/stock_warehouse_views.xml 
+2026-09-12 13:41:16,334 1 INFO soloodoo_construction_control_test odoo.modules.loading: Module elmokrif_chantier_stock loaded in 0.59s, 325 queries (+325 other) 
+2026-09-12 13:41:16,334 1 INFO soloodoo_construction_control_test odoo.modules.loading: Loading module elmokrif_documents_bridge (68/93) 
+2026-09-12 13:41:16,485 1 INFO soloodoo_construction_control_test odoo.modules.registry: module elmokrif_documents_bridge: creating or updating database tables 
+2026-09-12 13:41:16,653 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading elmokrif_documents_bridge/security/document_groups.xml 
+2026-09-12 13:41:16,704 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading elmokrif_documents_bridge/security/ir.model.access.csv 
+2026-09-12 13:41:16,722 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading elmokrif_documents_bridge/security/document_rules.xml 
+2026-09-12 13:41:16,733 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading elmokrif_documents_bridge/views/document_views.xml 
+2026-09-12 13:41:16,768 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading elmokrif_documents_bridge/data/document_cron.xml 
+2026-09-12 13:41:16,831 1 INFO soloodoo_construction_control_test odoo.modules.loading: Module elmokrif_documents_bridge loaded in 0.50s, 220 queries (+220 other) 
+2026-09-12 13:41:16,831 1 INFO soloodoo_construction_control_test odoo.modules.loading: Loading module project_purchase (69/93) 
+2026-09-12 13:41:16,965 1 INFO soloodoo_construction_control_test odoo.modules.registry: module project_purchase: creating or updating database tables 
+2026-09-12 13:41:17,092 1 INFO soloodoo_construction_control_test odoo.modules.loading: Module project_purchase loaded in 0.26s, 84 queries (+84 other) 
+2026-09-12 13:41:17,092 1 INFO soloodoo_construction_control_test odoo.modules.loading: Loading module purchase_stock (70/93) 
+2026-09-12 13:41:17,248 1 INFO soloodoo_construction_control_test odoo.modules.registry: module purchase_stock: creating or updating database tables 
+2026-09-12 13:41:17,790 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading purchase_stock/security/ir.model.access.csv 
+2026-09-12 13:41:17,823 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading purchase_stock/data/purchase_stock_data.xml 
+2026-09-12 13:41:17,919 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading purchase_stock/data/mail_templates.xml 
+2026-09-12 13:41:17,928 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading purchase_stock/report/vendor_delay_report.xml 
+2026-09-12 13:41:17,949 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading purchase_stock/views/purchase_views.xml 
+2026-09-12 13:41:17,996 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading purchase_stock/views/stock_views.xml 
+2026-09-12 13:41:18,039 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading purchase_stock/views/stock_rule_views.xml 
+2026-09-12 13:41:18,051 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading purchase_stock/views/res_config_settings_views.xml 
+2026-09-12 13:41:18,128 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading purchase_stock/views/res_partner_views.xml 
+2026-09-12 13:41:18,149 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading purchase_stock/views/stock_lot_views.xml 
+2026-09-12 13:41:18,161 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading purchase_stock/views/product_views.xml 
+2026-09-12 13:41:18,199 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading purchase_stock/report/purchase_report_views.xml 
+2026-09-12 13:41:18,210 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading purchase_stock/report/purchase_report_templates.xml 
+2026-09-12 13:41:18,228 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading purchase_stock/report/report_stock_rule.xml 
+2026-09-12 13:41:18,239 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading purchase_stock/wizard/stock_replenishment_info.xml 
+2026-09-12 13:41:18,258 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading purchase_stock/wizard/product_replenish_views.xml 
+2026-09-12 13:41:18,318 1 INFO soloodoo_construction_control_test odoo.modules.loading: Module purchase_stock loaded in 1.23s, 865 queries (+865 other) 
+2026-09-12 13:41:18,318 1 INFO soloodoo_construction_control_test odoo.modules.loading: Loading module sale (71/93) 
+2026-09-12 13:41:18,472 1 INFO soloodoo_construction_control_test odoo.modules.registry: module sale: creating or updating database tables 
+2026-09-12 13:41:19,430 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sale/security/ir.model.access.csv 
+2026-09-12 13:41:19,490 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sale/security/res_groups.xml 
+2026-09-12 13:41:19,547 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sale/security/ir_rules.xml 
+2026-09-12 13:41:19,767 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sale/report/account_invoice_report_views.xml 
+2026-09-12 13:41:19,805 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sale/report/ir_actions_report_templates.xml 
+2026-09-12 13:41:19,837 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sale/report/ir_actions_report.xml 
+2026-09-12 13:41:19,850 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sale/report/sale_report_views.xml 
+2026-09-12 13:41:19,935 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sale/data/ir_cron.xml 
+2026-09-12 13:41:19,949 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sale/data/ir_sequence_data.xml 
+2026-09-12 13:41:19,957 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sale/data/mail_activity_type_data.xml 
+2026-09-12 13:41:19,968 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sale/data/mail_message_subtype_data.xml 
+2026-09-12 13:41:19,989 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sale/data/mail_template_data.xml 
+2026-09-12 13:41:20,012 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sale/data/ir_config_parameter.xml 
+2026-09-12 13:41:20,020 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sale/data/onboarding_data.xml 
+2026-09-12 13:41:20,050 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sale/wizard/account_accrued_orders_wizard_views.xml 
+2026-09-12 13:41:20,060 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sale/wizard/mass_cancel_orders_views.xml 
+2026-09-12 13:41:20,071 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sale/wizard/payment_link_wizard_views.xml 
+2026-09-12 13:41:20,085 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sale/wizard/res_config_settings_views.xml 
+2026-09-12 13:41:20,123 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sale/wizard/sale_make_invoice_advance_views.xml 
+2026-09-12 13:41:20,136 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sale/wizard/sale_order_cancel_views.xml 
+2026-09-12 13:41:20,145 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sale/wizard/sale_order_discount_views.xml 
+2026-09-12 13:41:20,154 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sale/views/sale_order_views.xml 
+2026-09-12 13:41:20,327 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sale/views/account_views.xml 
+2026-09-12 13:41:20,377 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sale/views/crm_team_views.xml 
+2026-09-12 13:41:20,424 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sale/views/mail_activity_views.xml 
+2026-09-12 13:41:20,429 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sale/views/mail_activity_plan_views.xml 
+2026-09-12 13:41:20,436 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sale/views/payment_views.xml 
+2026-09-12 13:41:20,459 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sale/views/product_document_views.xml 
+2026-09-12 13:41:20,495 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sale/views/product_packaging_views.xml 
+2026-09-12 13:41:20,516 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sale/views/product_views.xml 
+2026-09-12 13:41:20,590 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sale/views/res_partner_views.xml 
+2026-09-12 13:41:20,657 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sale/views/sale_order_line_views.xml 
+2026-09-12 13:41:20,681 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sale/views/sale_portal_templates.xml 
+2026-09-12 13:41:20,740 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sale/views/utm_campaign_views.xml 
+2026-09-12 13:41:20,762 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sale/views/sale_menus.xml 
+2026-09-12 13:41:21,034 1 INFO soloodoo_construction_control_test odoo.modules.loading: Module sale loaded in 2.72s, 2524 queries (+2524 other) 
+2026-09-12 13:41:21,034 1 INFO soloodoo_construction_control_test odoo.modules.loading: Loading module spreadsheet_dashboard_purchase (72/93) 
+2026-09-12 13:41:21,271 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading spreadsheet_dashboard_purchase/data/dashboards.xml 
+2026-09-12 13:41:21,348 1 INFO soloodoo_construction_control_test odoo.modules.loading: Module spreadsheet_dashboard_purchase loaded in 0.31s, 29 queries (+29 other) 
+2026-09-12 13:41:21,348 1 INFO soloodoo_construction_control_test odoo.modules.loading: Loading module spreadsheet_dashboard_stock_account (73/93) 
+2026-09-12 13:41:21,491 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading spreadsheet_dashboard_stock_account/data/dashboards.xml 
+2026-09-12 13:41:21,548 1 INFO soloodoo_construction_control_test odoo.modules.loading: Module spreadsheet_dashboard_stock_account loaded in 0.20s, 29 queries (+29 other) 
+2026-09-12 13:41:21,548 1 INFO soloodoo_construction_control_test odoo.modules.loading: Loading module elmokrif_purchase_quality (74/93) 
+2026-09-12 13:41:21,682 1 INFO soloodoo_construction_control_test odoo.modules.registry: module elmokrif_purchase_quality: creating or updating database tables 
+2026-09-12 13:41:22,019 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading elmokrif_purchase_quality/security/purchase_quality_groups.xml 
+2026-09-12 13:41:22,099 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading elmokrif_purchase_quality/security/ir.model.access.csv 
+2026-09-12 13:41:22,122 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading elmokrif_purchase_quality/security/purchase_quality_rules.xml 
+2026-09-12 13:41:22,145 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading elmokrif_purchase_quality/data/quality_sequence.xml 
+2026-09-12 13:41:22,154 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading elmokrif_purchase_quality/views/res_company_views.xml 
+2026-09-12 13:41:22,172 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading elmokrif_purchase_quality/views/material_request_views.xml 
+2026-09-12 13:41:22,189 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading elmokrif_purchase_quality/views/purchase_order_views.xml 
+2026-09-12 13:41:22,212 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading elmokrif_purchase_quality/views/quality_inspection_views.xml 
+2026-09-12 13:41:22,235 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading elmokrif_purchase_quality/views/stock_picking_views.xml 
+2026-09-12 13:41:22,254 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading elmokrif_purchase_quality/views/stock_warehouse_views.xml 
+2026-09-12 13:41:22,295 1 INFO soloodoo_construction_control_test odoo.modules.loading: Module elmokrif_purchase_quality loaded in 0.75s, 541 queries (+541 other) 
+2026-09-12 13:41:22,295 1 INFO soloodoo_construction_control_test odoo.modules.loading: Loading module sale_async_emails (75/93) 
+2026-09-12 13:41:22,424 1 INFO soloodoo_construction_control_test odoo.modules.registry: module sale_async_emails: creating or updating database tables 
+2026-09-12 13:41:22,593 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sale_async_emails/data/ir_config_parameter.xml 
+2026-09-12 13:41:22,601 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sale_async_emails/data/ir_cron.xml 
+2026-09-12 13:41:22,635 1 INFO soloodoo_construction_control_test odoo.modules.loading: Module sale_async_emails loaded in 0.34s, 79 queries (+79 other) 
+2026-09-12 13:41:22,636 1 INFO soloodoo_construction_control_test odoo.modules.loading: Loading module sale_crm (76/93) 
+2026-09-12 13:41:22,760 1 INFO soloodoo_construction_control_test odoo.modules.registry: module sale_crm: creating or updating database tables 
+2026-09-12 13:41:22,908 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sale_crm/security/ir.model.access.csv 
+2026-09-12 13:41:22,922 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sale_crm/data/crm_lead_merge_template.xml 
+2026-09-12 13:41:22,935 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sale_crm/views/partner_views.xml 
+2026-09-12 13:41:22,956 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sale_crm/views/sale_order_views.xml 
+2026-09-12 13:41:22,982 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sale_crm/views/crm_lead_views.xml 
+2026-09-12 13:41:23,004 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sale_crm/views/crm_team_views.xml 
+2026-09-12 13:41:23,018 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sale_crm/wizard/crm_opportunity_to_quotation_views.xml 
+2026-09-12 13:41:23,057 1 INFO soloodoo_construction_control_test odoo.modules.loading: Module sale_crm loaded in 0.42s, 250 queries (+250 other) 
+2026-09-12 13:41:23,058 1 INFO soloodoo_construction_control_test odoo.modules.loading: Loading module sale_management (77/93) 
+2026-09-12 13:41:23,328 1 INFO soloodoo_construction_control_test odoo.modules.registry: module sale_management: creating or updating database tables 
+2026-09-12 13:41:23,597 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sale_management/data/digest_data.xml 
+2026-09-12 13:41:23,610 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sale_management/security/ir.model.access.csv 
+2026-09-12 13:41:23,633 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sale_management/security/sale_management_security.xml 
+2026-09-12 13:41:23,661 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sale_management/report/sale_report_templates.xml 
+2026-09-12 13:41:23,674 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sale_management/views/sale_order_template_views.xml 
+2026-09-12 13:41:23,699 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sale_management/views/digest_views.xml 
+2026-09-12 13:41:23,712 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sale_management/views/res_config_settings_views.xml 
+2026-09-12 13:41:23,745 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sale_management/views/sale_order_views.xml 
+2026-09-12 13:41:23,764 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sale_management/views/sale_portal_templates.xml 
+2026-09-12 13:41:23,777 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sale_management/views/sale_management_menus.xml 
+2026-09-12 13:41:23,815 1 INFO soloodoo_construction_control_test odoo.modules.loading: Module sale_management loaded in 0.76s, 447 queries (+447 other) 
+2026-09-12 13:41:23,815 1 INFO soloodoo_construction_control_test odoo.modules.loading: Loading module sale_product_configurator (78/93) 
+2026-09-12 13:41:24,034 1 INFO soloodoo_construction_control_test odoo.modules.registry: module sale_product_configurator: creating or updating database tables 
+2026-09-12 13:41:24,137 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sale_product_configurator/views/product_template_views.xml 
+2026-09-12 13:41:24,155 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sale_product_configurator/views/sale_order_views.xml 
+2026-09-12 13:41:24,192 1 INFO soloodoo_construction_control_test odoo.modules.loading: Module sale_product_configurator loaded in 0.38s, 123 queries (+123 other) 
+2026-09-12 13:41:24,192 1 INFO soloodoo_construction_control_test odoo.modules.loading: Loading module sale_purchase (79/93) 
+2026-09-12 13:41:24,320 1 INFO soloodoo_construction_control_test odoo.modules.registry: module sale_purchase: creating or updating database tables 
+2026-09-12 13:41:24,461 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sale_purchase/data/mail_templates.xml 
+2026-09-12 13:41:24,482 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sale_purchase/views/product_views.xml 
+2026-09-12 13:41:24,499 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sale_purchase/views/sale_order_views.xml 
+2026-09-12 13:41:24,515 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sale_purchase/views/purchase_order_views.xml 
+2026-09-12 13:41:24,531 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sale_purchase/wizards/sale_order_cancel_views.xml 
+2026-09-12 13:41:24,563 1 INFO soloodoo_construction_control_test odoo.modules.loading: Module sale_purchase loaded in 0.37s, 215 queries (+215 other) 
+2026-09-12 13:41:24,563 1 INFO soloodoo_construction_control_test odoo.modules.loading: Loading module sale_sms (80/93) 
+2026-09-12 13:41:24,692 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sale_sms/security/ir.model.access.csv 
+2026-09-12 13:41:24,729 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sale_sms/security/security.xml 
+2026-09-12 13:41:24,754 1 INFO soloodoo_construction_control_test odoo.modules.loading: Module sale_sms loaded in 0.19s, 44 queries (+44 other) 
+2026-09-12 13:41:24,755 1 INFO soloodoo_construction_control_test odoo.modules.loading: Loading module sale_stock (81/93) 
+2026-09-12 13:41:24,990 1 INFO soloodoo_construction_control_test odoo.modules.registry: module sale_stock: creating or updating database tables 
+2026-09-12 13:41:25,330 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sale_stock/security/sale_stock_security.xml 
+2026-09-12 13:41:25,341 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sale_stock/security/ir.model.access.csv 
+2026-09-12 13:41:25,366 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sale_stock/views/sale_order_views.xml 
+2026-09-12 13:41:25,446 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sale_stock/views/stock_route_views.xml 
+2026-09-12 13:41:25,456 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sale_stock/views/res_config_settings_views.xml 
+2026-09-12 13:41:25,512 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sale_stock/views/sale_stock_portal_template.xml 
+2026-09-12 13:41:25,527 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sale_stock/views/stock_lot_views.xml 
+2026-09-12 13:41:25,541 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sale_stock/views/res_users_views.xml 
+2026-09-12 13:41:25,573 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sale_stock/report/sale_order_report_templates.xml 
+2026-09-12 13:41:25,586 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sale_stock/report/stock_report_deliveryslip.xml 
+2026-09-12 13:41:25,597 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sale_stock/data/mail_templates.xml 
+2026-09-12 13:41:25,608 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sale_stock/data/sale_stock_data.xml 
+2026-09-12 13:41:25,613 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sale_stock/wizard/stock_rules_report_views.xml 
+2026-09-12 13:41:25,624 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sale_stock/wizard/sale_order_cancel_views.xml 
+2026-09-12 13:41:25,673 1 INFO soloodoo_construction_control_test odoo.modules.loading: Module sale_stock loaded in 0.92s, 667 queries (+667 other) 
+2026-09-12 13:41:25,673 1 INFO soloodoo_construction_control_test odoo.modules.loading: Loading module spreadsheet_dashboard_purchase_stock (82/93) 
+2026-09-12 13:41:25,801 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading spreadsheet_dashboard_purchase_stock/data/dashboards.xml 
+2026-09-12 13:41:25,860 1 INFO soloodoo_construction_control_test odoo.modules.loading: Module spreadsheet_dashboard_purchase_stock loaded in 0.19s, 29 queries (+29 other) 
+2026-09-12 13:41:25,861 1 INFO soloodoo_construction_control_test odoo.modules.loading: Loading module spreadsheet_dashboard_sale (83/93) 
+2026-09-12 13:41:25,991 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading spreadsheet_dashboard_sale/data/dashboards.xml 
+2026-09-12 13:41:26,159 1 INFO soloodoo_construction_control_test odoo.modules.loading: Module spreadsheet_dashboard_sale loaded in 0.30s, 34 queries (+34 other) 
+2026-09-12 13:41:26,159 1 INFO soloodoo_construction_control_test odoo.modules.loading: Loading module elmokrif_dashboard (84/93) 
+2026-09-12 13:41:26,304 1 INFO soloodoo_construction_control_test odoo.modules.registry: module elmokrif_dashboard: creating or updating database tables 
+2026-09-12 13:41:26,438 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading elmokrif_dashboard/security/dashboard_groups.xml 
+2026-09-12 13:41:26,466 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading elmokrif_dashboard/security/ir.model.access.csv 
+2026-09-12 13:41:26,480 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading elmokrif_dashboard/security/dashboard_rules.xml 
+2026-09-12 13:41:26,492 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading elmokrif_dashboard/views/dashboard_views.xml 
+2026-09-12 13:41:26,524 1 WARNING soloodoo_construction_control_test odoo.addons.base.models.ir_ui_view: An alert (class alert-*) must have an alert, alertdialog or status role or an alert-link class. Please use alert and alertdialog only for what expects to stop any activity to be read immediately.
+View error context:
+{'file': '/opt/elmokrif-addons/elmokrif_dashboard/views/dashboard_views.xml',
+ 'line': 4,
+ 'name': 'elmokrif.dashboard.access.notice',
+ 'view': ir.ui.view(1507,),
+ 'view.model': 'elmokrif.dashboard',
+ 'view.parent': ir.ui.view(1505,),
+ 'xmlid': 'view_elmokrif_dashboard_access_notice'} 
+2026-09-12 13:41:26,556 1 INFO soloodoo_construction_control_test odoo.modules.loading: Module elmokrif_dashboard loaded in 0.40s, 170 queries (+170 other) 
+2026-09-12 13:41:26,556 1 INFO soloodoo_construction_control_test odoo.modules.loading: Loading module elmokrif_sale_chantier (85/93) 
+2026-09-12 13:41:26,724 1 INFO soloodoo_construction_control_test odoo.modules.registry: module elmokrif_sale_chantier: creating or updating database tables 
+2026-09-12 13:41:27,157 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading elmokrif_sale_chantier/views/res_company_views.xml 
+2026-09-12 13:41:27,178 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading elmokrif_sale_chantier/views/res_partner_views.xml 
+2026-09-12 13:41:27,204 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading elmokrif_sale_chantier/views/sale_order_views.xml 
+2026-09-12 13:41:27,263 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading elmokrif_sale_chantier/views/account_move_views.xml 
+2026-09-12 13:41:27,291 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading elmokrif_sale_chantier/views/project_project_views.xml 
+2026-09-12 13:41:27,314 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading elmokrif_sale_chantier/views/sale_order_report.xml 
+2026-09-12 13:41:27,350 1 INFO soloodoo_construction_control_test odoo.modules.loading: Module elmokrif_sale_chantier loaded in 0.79s, 410 queries (+410 other) 
+2026-09-12 13:41:27,351 1 INFO soloodoo_construction_control_test odoo.modules.loading: Loading module sale_pdf_quote_builder (86/93) 
+2026-09-12 13:41:27,496 1 INFO soloodoo_construction_control_test odoo.modules.registry: module sale_pdf_quote_builder: creating or updating database tables 
+2026-09-12 13:41:27,761 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sale_pdf_quote_builder/report/ir_actions_report.xml 
+2026-09-12 13:41:27,778 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sale_pdf_quote_builder/views/sale_order_template_views.xml 
+2026-09-12 13:41:27,800 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sale_pdf_quote_builder/wizards/res_config_settings_views.xml 
+2026-09-12 13:41:27,916 1 INFO soloodoo_construction_control_test odoo.modules.loading: Module sale_pdf_quote_builder loaded in 0.57s, 187 queries (+187 other) 
+2026-09-12 13:41:27,916 1 INFO soloodoo_construction_control_test odoo.modules.loading: Loading module sale_purchase_stock (87/93) 
+2026-09-12 13:41:28,069 1 INFO soloodoo_construction_control_test odoo.modules.registry: module sale_purchase_stock: creating or updating database tables 
+2026-09-12 13:41:28,180 1 INFO soloodoo_construction_control_test odoo.modules.loading: Module sale_purchase_stock loaded in 0.26s, 59 queries (+59 other) 
+2026-09-12 13:41:28,181 1 INFO soloodoo_construction_control_test odoo.modules.loading: Loading module sale_service (88/93) 
+2026-09-12 13:41:28,311 1 INFO soloodoo_construction_control_test odoo.modules.registry: module sale_service: creating or updating database tables 
+2026-09-12 13:41:28,402 1 INFO soloodoo_construction_control_test odoo.modules.loading: Module sale_service loaded in 0.22s, 59 queries (+59 other) 
+2026-09-12 13:41:28,402 1 INFO soloodoo_construction_control_test odoo.modules.loading: Loading module elmokrif_chantier_estimation (89/93) 
+2026-09-12 13:41:28,548 1 INFO soloodoo_construction_control_test odoo.modules.registry: module elmokrif_chantier_estimation: creating or updating database tables 
+2026-09-12 13:41:28,981 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading elmokrif_chantier_estimation/security/ir.model.access.csv 
+2026-09-12 13:41:29,002 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading elmokrif_chantier_estimation/data/cost_code_data.xml 
+2026-09-12 13:41:29,029 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading elmokrif_chantier_estimation/security/estimation_rules.xml 
+2026-09-12 13:41:29,056 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading elmokrif_chantier_estimation/views/estimation_views.xml 
+2026-09-12 13:41:29,132 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading elmokrif_chantier_estimation/views/daily_report_views.xml 
+2026-09-12 13:41:29,170 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading elmokrif_chantier_estimation/views/project_project_views.xml 
+2026-09-12 13:41:29,211 1 INFO soloodoo_construction_control_test odoo.modules.loading: Module elmokrif_chantier_estimation loaded in 0.81s, 449 queries (+449 other) 
+2026-09-12 13:41:29,211 1 INFO soloodoo_construction_control_test odoo.modules.loading: Loading module sale_project (90/93) 
+2026-09-12 13:41:29,366 1 INFO soloodoo_construction_control_test odoo.modules.registry: module sale_project: creating or updating database tables 
+2026-09-12 13:41:29,784 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sale_project/security/ir.model.access.csv 
+2026-09-12 13:41:29,823 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sale_project/security/sale_project_security.xml 
+2026-09-12 13:41:29,846 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sale_project/views/product_views.xml 
+2026-09-12 13:41:29,892 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sale_project/views/project_task_views.xml 
+2026-09-12 13:41:30,233 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sale_project/views/sale_order_line_views.xml 
+2026-09-12 13:41:30,285 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sale_project/views/sale_order_views.xml 
+2026-09-12 13:41:30,337 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sale_project/views/sale_project_portal_templates.xml 
+2026-09-12 13:41:30,359 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sale_project/views/project_sharing_views.xml 
+2026-09-12 13:41:30,388 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sale_project/views/project_views.xml 
+2026-09-12 13:41:30,510 1 INFO soloodoo_construction_control_test odoo.modules.loading: Module sale_project loaded in 1.30s, 555 queries (+555 other) 
+2026-09-12 13:41:30,510 1 INFO soloodoo_construction_control_test odoo.modules.loading: Loading module elmokrif_tender_boq (91/93) 
+2026-09-12 13:41:30,740 1 INFO soloodoo_construction_control_test odoo.modules.registry: module elmokrif_tender_boq: creating or updating database tables 
+2026-09-12 13:41:31,832 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading elmokrif_tender_boq/security/tender_boq_groups.xml 
+2026-09-12 13:41:32,072 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading elmokrif_tender_boq/security/ir.model.access.csv 
+2026-09-12 13:41:32,202 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading elmokrif_tender_boq/security/tender_boq_rules.xml 
+2026-09-12 13:41:32,343 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading elmokrif_tender_boq/data/tender_boq_sequences.xml 
+2026-09-12 13:41:32,358 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading elmokrif_tender_boq/views/boq_views.xml 
+2026-09-12 13:41:32,389 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading elmokrif_tender_boq/views/tender_views.xml 
+2026-09-12 13:41:32,446 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading elmokrif_tender_boq/views/integration_views.xml 
+2026-09-12 13:41:32,486 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading elmokrif_tender_boq/wizard/boq_workflow_wizard_views.xml 
+2026-09-12 13:41:32,495 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading elmokrif_tender_boq/views/tender_boq_menus.xml 
+2026-09-12 13:41:32,561 1 INFO soloodoo_construction_control_test odoo.modules.loading: Module elmokrif_tender_boq loaded in 2.05s, 1635 queries (+1635 other) 
+2026-09-12 13:41:32,561 1 INFO soloodoo_construction_control_test odoo.modules.loading: Loading module sale_project_stock (92/93) 
+2026-09-12 13:41:32,675 1 INFO soloodoo_construction_control_test odoo.modules.registry: module sale_project_stock: creating or updating database tables 
+2026-09-12 13:41:32,718 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading sale_project_stock/views/stock_move_views.xml 
+2026-09-12 13:41:32,782 1 INFO soloodoo_construction_control_test odoo.modules.loading: Module sale_project_stock loaded in 0.22s, 59 queries (+59 other) 
+2026-09-12 13:41:32,782 1 INFO soloodoo_construction_control_test odoo.modules.loading: Loading module elmokrif_construction_control (93/93) 
+2026-09-12 13:41:32,927 1 INFO soloodoo_construction_control_test odoo.modules.registry: module elmokrif_construction_control: creating or updating database tables 
+2026-09-12 13:41:33,677 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading elmokrif_construction_control/security/construction_control_groups.xml 
+2026-09-12 13:41:33,822 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading elmokrif_construction_control/security/ir.model.access.csv 
+2026-09-12 13:41:33,850 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading elmokrif_construction_control/security/construction_control_rules.xml 
+2026-09-12 13:41:33,903 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading elmokrif_construction_control/data/construction_control_sequences.xml 
+2026-09-12 13:41:33,929 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading elmokrif_construction_control/views/construction_control_views.xml 
+2026-09-12 13:41:34,049 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading elmokrif_construction_control/views/integration_views.xml 
+2026-09-12 13:41:34,104 1 INFO soloodoo_construction_control_test odoo.modules.loading: loading elmokrif_construction_control/views/construction_control_menus.xml 
+2026-09-12 13:41:34,177 1 INFO soloodoo_construction_control_test odoo.modules.loading: Module elmokrif_construction_control loaded in 1.39s, 1155 queries (+1155 other) 
+2026-09-12 13:41:34,177 1 INFO soloodoo_construction_control_test odoo.modules.loading: 93 modules loaded in 70.23s, 55375 queries (+55376 extra) 
+2026-09-12 13:41:37,480 1 INFO soloodoo_construction_control_test odoo.modules.loading: Modules loaded. 
+2026-09-12 13:41:40,251 1 INFO soloodoo_construction_control_test odoo.modules.registry: Registry loaded in 89.474s 
+2026-09-12 13:41:40,252 1 INFO soloodoo_construction_control_test odoo.service.server: Starting post tests 
+2026-09-12 13:41:40,613 1 INFO soloodoo_construction_control_test odoo.addons.elmokrif_construction_control.tests.test_construction_control: Starting TestConstructionControl.test_change_event_creates_one_variation_with_live_project_impact ... 
+2026-09-12 13:41:40,798 1 INFO soloodoo_construction_control_test odoo.addons.elmokrif_construction_control.tests.test_construction_control: Starting TestConstructionControl.test_rfi_has_controlled_auditable_lifecycle ... 
+2026-09-12 13:41:40,828 1 INFO soloodoo_construction_control_test odoo.addons.elmokrif_construction_control.tests.test_construction_control: Starting TestConstructionControl.test_work_package_requires_readiness_and_closes_after_acceptance ... 
+2026-09-12 13:41:41,517 1 INFO soloodoo_construction_control_test odoo.addons.base.models.ir_attachment: filestore gc 396 checked, 1 removed 
+2026-09-12 13:41:41,518 1 INFO soloodoo_construction_control_test odoo.service.server: 3 post-tests in 1.27s, 299 queries 
+2026-09-12 13:41:41,519 1 INFO soloodoo_construction_control_test odoo.tests.stats: elmokrif_construction_control: 5 tests 1.01s 299 queries 
+2026-09-12 13:41:41,519 1 INFO soloodoo_construction_control_test odoo.tests.result: 0 failed, 0 error(s) of 3 tests when loading database 'soloodoo_construction_control_test' 
+2026-09-12 13:41:41,519 1 INFO soloodoo_construction_control_test odoo.service.server: Initiating shutdown 
+2026-09-12 13:41:41,519 1 INFO soloodoo_construction_control_test odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2026-09-12 13:41:41,820 1 INFO soloodoo_construction_control_test odoo.sql_db: ConnectionPool(used=0/count=0/max=64): Closed 1 connections  

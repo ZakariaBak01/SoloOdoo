@@ -1,7 +1,10 @@
 import math
 
 from odoo import _, api, fields, models
-from odoo.exceptions import ValidationError
+from odoo.exceptions import AccessError, ValidationError
+
+
+ESTIMATION_WORKFLOW_TOKEN = object()
 
 
 class ChantierEstimation(models.Model):
@@ -13,11 +16,22 @@ class ChantierEstimation(models.Model):
 
     name = fields.Char(required=True, default="New Estimate", tracking=True)
     state = fields.Selection([("draft", "Draft"), ("submitted", "Submitted"), ("approved", "Approved"), ("superseded", "Superseded")], default="draft", required=True, tracking=True, copy=False)
-    revision_of_id = fields.Many2one("chantier.estimation", copy=False, readonly=True)
+    revision_of_id = fields.Many2one(
+        "chantier.estimation",
+        string="Current approved baseline",
+        copy=False,
+        readonly=True,
+    )
     approved_by_id = fields.Many2one("res.users", readonly=True, copy=False)
     approved_at = fields.Datetime(readonly=True, copy=False)
     variance_approved_by_id = fields.Many2one("res.users", readonly=True, copy=False)
-    chantier_id = fields.Many2one("project.project", required=True, check_company=True, domain="[('is_chantier', '=', True), ('company_id', '=', company_id)]", tracking=True)
+    chantier_id = fields.Many2one(
+        "project.project",
+        required=True,
+        check_company=True,
+        domain="[('is_chantier', '=', True), ('company_id', 'in', allowed_company_ids)]",
+        tracking=True,
+    )
     company_id = fields.Many2one(related="chantier_id.company_id", store=True, readonly=True)
     currency_id = fields.Many2one(related="company_id.currency_id", readonly=True)
     structure_type = fields.Selection([
@@ -140,10 +154,23 @@ class ChantierEstimation(models.Model):
     def _is_manager(self):
         return self.env.su or self.env.user.has_group("elmokrif_chantier.group_chantier_manager")
 
+    @api.model_create_multi
+    def create(self, vals_list):
+        workflow_fields = {
+            "state", "revision_of_id", "approved_by_id", "approved_at",
+            "variance_approved_by_id",
+        }
+        if (
+            any(workflow_fields.intersection(vals) for vals in vals_list)
+            and self.env.context.get("_estimation_workflow_token") is not ESTIMATION_WORKFLOW_TOKEN
+        ):
+            raise AccessError(_("Estimate workflow evidence is managed by workflow actions."))
+        return super().create(vals_list)
+
     def action_submit(self):
         if any(item.state != "draft" for item in self):
             raise ValidationError(_("Only draft estimates can be submitted."))
-        self.write({"state": "submitted"})
+        self.with_context(_estimation_workflow_token=ESTIMATION_WORKFLOW_TOKEN).write({"state": "submitted"})
 
     def action_approve(self):
         if not self._is_manager():
@@ -151,22 +178,57 @@ class ChantierEstimation(models.Model):
         for item in self:
             if item.state != "submitted":
                 raise ValidationError(_("Only submitted estimates can be approved."))
-            self.search([("chantier_id", "=", item.chantier_id.id), ("state", "=", "approved"), ("id", "!=", item.id)]).write({"state": "superseded"})
-            item.write({"state": "approved", "approved_by_id": self.env.user.id, "approved_at": fields.Datetime.now()})
+            self.search([("chantier_id", "=", item.chantier_id.id), ("state", "=", "approved"), ("id", "!=", item.id)]).with_context(
+                _estimation_workflow_token=ESTIMATION_WORKFLOW_TOKEN
+            ).write({"state": "superseded"})
+            item.with_context(_estimation_workflow_token=ESTIMATION_WORKFLOW_TOKEN).write({
+                "state": "approved",
+                "approved_by_id": self.env.user.id,
+                "approved_at": fields.Datetime.now(),
+            })
 
     def action_new_revision(self):
         self.ensure_one()
         if self.state != "approved":
             raise ValidationError(_("Create a revision from an approved estimate."))
+        open_revision = self.search([
+            ("revision_of_id", "=", self.id),
+            ("state", "in", ("draft", "submitted")),
+        ], limit=1)
+        if open_revision:
+            return open_revision._revision_form_action()
         values = self.copy_data({"state": "draft", "revision_of_id": self.id, "approved_by_id": False, "approved_at": False})[0]
-        return self.create(values)
+        revision = self.with_context(_estimation_workflow_token=ESTIMATION_WORKFLOW_TOKEN).create(values)
+        self.message_post(body=_("Draft revision %s was created.") % revision.display_name)
+        return revision._revision_form_action()
+
+    def _revision_form_action(self):
+        self.ensure_one()
+        return {
+            "type": "ir.actions.act_window",
+            "name": _("Estimate Revision"),
+            "res_model": "chantier.estimation",
+            "views": [(False, "form")],
+            "res_id": self.id,
+            "target": "current",
+        }
 
     def action_approve_variance(self):
         if not self._is_manager():
             raise ValidationError(_("Only a chantier manager can approve a variance."))
-        self.write({"variance_approved_by_id": self.env.user.id})
+        self.with_context(_estimation_workflow_token=ESTIMATION_WORKFLOW_TOKEN).write({
+            "variance_approved_by_id": self.env.user.id,
+        })
 
     def write(self, vals):
+        workflow_fields = {
+            "state", "revision_of_id", "approved_by_id", "approved_at",
+            "variance_approved_by_id",
+        }
+        if workflow_fields.intersection(vals) and self.env.context.get(
+            "_estimation_workflow_token"
+        ) is not ESTIMATION_WORKFLOW_TOKEN:
+            raise AccessError(_("Estimate workflow evidence is managed by workflow actions."))
         protected = {"length", "width", "depth", "material_cost", "labor_cost", "machinery_cost", "logistics_cost", "subtotal", "total_cost"}
         if protected.intersection(vals) and any(item.state == "approved" for item in self):
             raise ValidationError(_("An approved estimate is immutable. Create a revision instead."))

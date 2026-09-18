@@ -57,14 +57,20 @@ class TestPurchaseQuality(TransactionCase):
             "is_chantier": True,
             "company_id": cls.company.id,
             "warehouse_id": cls.warehouse.id,
-            "partner_id": cls.env["res.partner"].create({"name": "Pilot Customer"}).id,
+            "partner_id": cls.env["res.partner"].create({
+                "name": "Pilot Customer",
+                "customer_rank": 1,
+            }).id,
             "user_id": cls.env.user.id,
-            "favorite_user_ids": [Command.set([cls.buyer.id, cls.approver.id, cls.inspector.id])],
+            "chantier_member_ids": [Command.set([cls.buyer.id, cls.approver.id, cls.inspector.id])],
             "date_start": date(2026, 1, 1),
             "date": date(2026, 12, 31),
             "chantier_region": "Marrakech-Safi",
             "work_type": "construction",
-            "site_partner_id": cls.env["res.partner"].create({"name": "Pilot Site"}).id,
+            "site_partner_id": cls.env["res.partner"].create({
+                "name": "Pilot Site",
+                "type": "other",
+            }).id,
         })
         cls.chantier.action_approve_chantier()
         cls.chantier.action_initialize_chantier()
@@ -257,6 +263,16 @@ class TestPurchaseQuality(TransactionCase):
             (request.picking_ids - request.picking_id).move_ids.product_uom_qty,
             50,
         )
+
+    def test_approved_request_cannot_create_commitment_while_chantier_on_hold(self):
+        request = self._request(quantity=1)
+        request.action_submit()
+        request.action_approve()
+        self.chantier.sudo().action_hold_chantier()
+        with self.assertRaises(UserError):
+            request.action_plan_fulfillment()
+        self.assertFalse(request.picking_ids)
+        self.assertFalse(request.purchase_order_id)
 
     def test_quality_partial_release_and_direct_bypass(self):
         order = self._order(500)

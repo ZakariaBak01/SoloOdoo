@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="module_category_construction_tendering" model="ir.module.category">
+        <field name="name">Construction Tendering</field>
+        <field name="sequence">36</field>
+    </record>
+
+    <record id="group_boq_user" model="res.groups">
+        <field name="name">BOQ Viewer</field>
+        <field name="category_id" ref="module_category_construction_tendering"/>
+        <field name="implied_ids" eval="[(4, ref('elmokrif_chantier.group_chantier_user'))]"/>
+    </record>
+    <record id="group_boq_estimator" model="res.groups">
+        <field name="name">BOQ Estimator</field>
+        <field name="category_id" ref="module_category_construction_tendering"/>
+        <field name="implied_ids" eval="[(4, ref('group_boq_user'))]"/>
+    </record>
+    <record id="group_boq_reviewer" model="res.groups">
+        <field name="name">BOQ Reviewer</field>
+        <field name="category_id" ref="module_category_construction_tendering"/>
+        <field name="implied_ids" eval="[(4, ref('group_boq_user'))]"/>
+    </record>
+    <record id="group_boq_approver" model="res.groups">
+        <field name="name">BOQ Approver</field>
+        <field name="category_id" ref="module_category_construction_tendering"/>
+        <field name="implied_ids" eval="[(4, ref('group_boq_user'))]"/>
+    </record>
+    <record id="group_tender_buyer" model="res.groups">
+        <field name="name">Tender Buyer</field>
+        <field name="category_id" ref="module_category_construction_tendering"/>
+        <field name="implied_ids" eval="[(4, ref('group_boq_user')), (4, ref('purchase.group_purchase_user'))]"/>
+    </record>
+    <record id="group_tender_evaluator" model="res.groups">
+        <field name="name">Tender Evaluator</field>
+        <field name="category_id" ref="module_category_construction_tendering"/>
+        <field name="implied_ids" eval="[(4, ref('group_boq_user'))]"/>
+    </record>
+    <record id="group_tender_manager" model="res.groups">
+        <field name="name">Tender Manager</field>
+        <field name="category_id" ref="module_category_construction_tendering"/>
+        <field name="implied_ids" eval="[(4, ref('group_tender_buyer')), (4, ref('group_tender_evaluator'))]"/>
+    </record>
+    <record id="group_tender_award_approver" model="res.groups">
+        <field name="name">Tender Award Approver</field>
+        <field name="category_id" ref="module_category_construction_tendering"/>
+        <field name="implied_ids" eval="[(4, ref('group_boq_user'))]"/>
+    </record>
+
+    <!-- Existing UAT job roles receive the corresponding tender responsibilities. -->
+    <record id="elmokrif_chantier.group_chantier_manager" model="res.groups">
+        <field name="implied_ids" eval="[(4, ref('group_boq_approver')), (4, ref('group_tender_manager')), (4, ref('group_tender_award_approver'))]"/>
+    </record>
+    <record id="elmokrif_purchase_quality.group_chantier_purchase_buyer" model="res.groups">
+        <field name="implied_ids" eval="[(4, ref('group_tender_buyer'))]"/>
+    </record>
+    <record id="elmokrif_purchase_quality.group_chantier_purchase_approver" model="res.groups">
+        <field name="implied_ids" eval="[(4, ref('group_boq_reviewer')), (4, ref('group_tender_evaluator')), (4, ref('group_tender_award_approver'))]"/>
+    </record>
+</odoo>

@@ -14,6 +14,12 @@ class TestSaleChantierBrowser(HttpCase):
         cls.customer = cls.env["res.partner"].create({
             "name": "Browser Acceptance Customer",
             "email": "browser.customer@example.test",
+            "customer_rank": 1,
+        })
+        cls.site = cls.env["res.partner"].create({
+            "name": "Browser Acceptance Site",
+            "parent_id": cls.customer.id,
+            "type": "delivery",
         })
         cls.salesperson = cls._create_user(
             "Browser Chantier Salesperson",
@@ -90,9 +96,9 @@ class TestSaleChantierBrowser(HttpCase):
             "company_id": cls.company.id,
             "warehouse_id": cls.warehouse.id,
             "partner_id": cls.customer.id,
-            "site_partner_id": cls.customer.id,
-            "user_id": cls.salesperson.id,
-            "favorite_user_ids": [Command.set([
+            "site_partner_id": cls.site.id,
+            "user_id": cls.env.user.id,
+            "chantier_member_ids": [Command.set([
                 cls.salesperson.id,
                 cls.accountant.id,
             ])],

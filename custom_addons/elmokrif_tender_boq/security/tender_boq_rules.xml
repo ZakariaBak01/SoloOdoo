@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="rule_boq_chantier_scope" model="ir.rule">
+        <field name="name">BOQ: assigned chantier and company</field><field name="model_id" ref="model_construction_boq"/>
+        <field name="global" eval="True"/>
+        <field name="domain_force">[('company_id', 'in', company_ids), '|', ('chantier_id.user_id', '=', user.id), ('chantier_id.chantier_member_ids', 'in', [user.id])]</field>
+    </record>
+    <record id="rule_boq_wbs_scope" model="ir.rule"><field name="name">BOQ WBS scope</field><field name="model_id" ref="model_construction_boq_wbs"/><field name="global" eval="True"/><field name="domain_force">[('company_id', 'in', company_ids), '|', ('boq_id.chantier_id.user_id', '=', user.id), ('boq_id.chantier_id.chantier_member_ids', 'in', [user.id])]</field></record>
+    <record id="rule_boq_line_scope" model="ir.rule"><field name="name">BOQ line scope</field><field name="model_id" ref="model_construction_boq_line"/><field name="global" eval="True"/><field name="domain_force">[('company_id', 'in', company_ids), '|', ('boq_id.chantier_id.user_id', '=', user.id), ('boq_id.chantier_id.chantier_member_ids', 'in', [user.id])]</field></record>
+    <record id="rule_boq_takeoff_scope" model="ir.rule"><field name="name">BOQ takeoff scope</field><field name="model_id" ref="model_construction_boq_takeoff"/><field name="global" eval="True"/><field name="domain_force">[('boq_line_id.company_id', 'in', company_ids), '|', ('boq_line_id.boq_id.chantier_id.user_id', '=', user.id), ('boq_line_id.boq_id.chantier_id.chantier_member_ids', 'in', [user.id])]</field></record>
+    <record id="rule_boq_rate_scope" model="ir.rule"><field name="name">BOQ rate scope</field><field name="model_id" ref="model_construction_boq_rate_component"/><field name="global" eval="True"/><field name="domain_force">[('company_id', 'in', company_ids), '|', ('boq_line_id.boq_id.chantier_id.user_id', '=', user.id), ('boq_line_id.boq_id.chantier_id.chantier_member_ids', 'in', [user.id])]</field></record>
+    <record id="rule_boq_delta_scope" model="ir.rule"><field name="name">BOQ delta scope</field><field name="model_id" ref="model_construction_boq_revision_delta"/><field name="global" eval="True"/><field name="domain_force">[('boq_id.company_id', 'in', company_ids), '|', ('boq_id.chantier_id.user_id', '=', user.id), ('boq_id.chantier_id.chantier_member_ids', 'in', [user.id])]</field></record>
+    <record id="rule_tender_scope" model="ir.rule"><field name="name">Tender: assigned chantier and company</field><field name="model_id" ref="model_construction_tender"/><field name="global" eval="True"/><field name="domain_force">[('company_id', 'in', company_ids), '|', ('chantier_id.user_id', '=', user.id), ('chantier_id.chantier_member_ids', 'in', [user.id])]</field></record>
+    <record id="rule_tender_criterion_scope" model="ir.rule"><field name="name">Tender criterion scope</field><field name="model_id" ref="model_construction_tender_criterion"/><field name="global" eval="True"/><field name="domain_force">[('tender_id.company_id', 'in', company_ids), '|', ('tender_id.chantier_id.user_id', '=', user.id), ('tender_id.chantier_id.chantier_member_ids', 'in', [user.id])]</field></record>
+    <record id="rule_bid_scope" model="ir.rule"><field name="name">Tender bid scope</field><field name="model_id" ref="model_construction_tender_bid"/><field name="global" eval="True"/><field name="domain_force">[('company_id', 'in', company_ids), '|', ('tender_id.chantier_id.user_id', '=', user.id), ('tender_id.chantier_id.chantier_member_ids', 'in', [user.id])]</field></record>
+    <record id="rule_bid_line_scope" model="ir.rule"><field name="name">Tender bid line scope</field><field name="model_id" ref="model_construction_tender_bid_line"/><field name="global" eval="True"/><field name="domain_force">[('bid_id.company_id', 'in', company_ids), '|', ('bid_id.tender_id.chantier_id.user_id', '=', user.id), ('bid_id.tender_id.chantier_id.chantier_member_ids', 'in', [user.id])]</field></record>
+    <record id="rule_bid_score_scope" model="ir.rule"><field name="name">Tender score scope</field><field name="model_id" ref="model_construction_tender_bid_score"/><field name="global" eval="True"/><field name="domain_force">[('bid_id.company_id', 'in', company_ids), '|', ('bid_id.tender_id.chantier_id.user_id', '=', user.id), ('bid_id.tender_id.chantier_id.chantier_member_ids', 'in', [user.id])]</field></record>
+    <record id="rule_comparison_scope" model="ir.rule"><field name="name">Tender comparison scope</field><field name="model_id" ref="model_construction_tender_comparison"/><field name="global" eval="True"/><field name="domain_force">[('tender_id.company_id', 'in', company_ids), '|', ('tender_id.chantier_id.user_id', '=', user.id), ('tender_id.chantier_id.chantier_member_ids', 'in', [user.id])]</field></record>
+    <record id="rule_comparison_line_scope" model="ir.rule"><field name="name">Tender comparison line scope</field><field name="model_id" ref="model_construction_tender_comparison_line"/><field name="global" eval="True"/><field name="domain_force">[('comparison_id.tender_id.company_id', 'in', company_ids), '|', ('comparison_id.tender_id.chantier_id.user_id', '=', user.id), ('comparison_id.tender_id.chantier_id.chantier_member_ids', 'in', [user.id])]</field></record>
+    <record id="rule_award_scope" model="ir.rule"><field name="name">Tender award scope</field><field name="model_id" ref="model_construction_tender_award"/><field name="global" eval="True"/><field name="domain_force">[('company_id', 'in', company_ids), '|', ('tender_id.chantier_id.user_id', '=', user.id), ('tender_id.chantier_id.chantier_member_ids', 'in', [user.id])]</field></record>
+    <record id="rule_award_line_scope" model="ir.rule"><field name="name">Tender award line scope</field><field name="model_id" ref="model_construction_tender_award_line"/><field name="global" eval="True"/><field name="domain_force">[('award_id.company_id', 'in', company_ids), '|', ('award_id.tender_id.chantier_id.user_id', '=', user.id), ('award_id.tender_id.chantier_id.chantier_member_ids', 'in', [user.id])]</field></record>
+
+    <record id="rule_bid_evaluator_visibility" model="ir.rule">
+        <field name="name">Evaluators: committee bids after opening</field><field name="model_id" ref="model_construction_tender_bid"/>
+        <field name="groups" eval="[(4, ref('group_tender_evaluator'))]"/>
+        <field name="domain_force">[('tender_id.evaluation_committee_ids', 'in', [user.id]), ('tender_id.state', 'in', ['technical', 'commercial', 'recommendation', 'awarded'])]</field>
+    </record>
+    <record id="rule_bid_buyer_visibility" model="ir.rule">
+        <field name="name">Buyers: their tender bids</field><field name="model_id" ref="model_construction_tender_bid"/>
+        <field name="groups" eval="[(4, ref('group_tender_buyer'))]"/>
+        <field name="domain_force">['|', ('tender_id.buyer_id', '=', user.id), ('tender_id.tender_manager_id', '=', user.id)]</field>
+    </record>
+    <record id="rule_bid_line_evaluator_visibility" model="ir.rule">
+        <field name="name">Evaluators: committee bid lines after opening</field><field name="model_id" ref="model_construction_tender_bid_line"/>
+        <field name="groups" eval="[(4, ref('group_tender_evaluator'))]"/>
+        <field name="domain_force">[('bid_id.tender_id.evaluation_committee_ids', 'in', [user.id]), ('bid_id.tender_id.state', 'in', ['technical', 'commercial', 'recommendation', 'awarded'])]</field>
+    </record>
+    <record id="rule_bid_line_buyer_visibility" model="ir.rule">
+        <field name="name">Buyers: their tender bid lines</field><field name="model_id" ref="model_construction_tender_bid_line"/>
+        <field name="groups" eval="[(4, ref('group_tender_buyer'))]"/>
+        <field name="domain_force">['|', ('bid_id.tender_id.buyer_id', '=', user.id), ('bid_id.tender_id.tender_manager_id', '=', user.id)]</field>
+    </record>
+    <record id="rule_bid_score_evaluator_ownership" model="ir.rule">
+        <field name="name">Evaluators: own committee scores</field><field name="model_id" ref="model_construction_tender_bid_score"/>
+        <field name="groups" eval="[(4, ref('group_tender_evaluator'))]"/>
+        <field name="domain_force">[('evaluator_id', '=', user.id), ('bid_id.tender_id.evaluation_committee_ids', 'in', [user.id])]</field>
+    </record>
+    <record id="rule_comparison_evaluator_visibility" model="ir.rule">
+        <field name="name">Evaluators: committee comparisons</field><field name="model_id" ref="model_construction_tender_comparison"/>
+        <field name="groups" eval="[(4, ref('group_tender_evaluator'))]"/>
+        <field name="domain_force">[('tender_id.evaluation_committee_ids', 'in', [user.id])]</field>
+    </record>
+    <record id="rule_comparison_manager_visibility" model="ir.rule">
+        <field name="name">Tender managers: managed comparisons</field><field name="model_id" ref="model_construction_tender_comparison"/>
+        <field name="groups" eval="[(4, ref('group_tender_manager'))]"/>
+        <field name="domain_force">[('tender_id.tender_manager_id', '=', user.id)]</field>
+    </record>
+    <record id="rule_comparison_buyer_visibility" model="ir.rule">
+        <field name="name">Buyers: their tender comparisons</field><field name="model_id" ref="model_construction_tender_comparison"/>
+        <field name="groups" eval="[(4, ref('group_tender_buyer'))]"/>
+        <field name="domain_force">['|', ('tender_id.buyer_id', '=', user.id), ('tender_id.tender_manager_id', '=', user.id)]</field>
+    </record>
+    <record id="rule_comparison_line_evaluator_visibility" model="ir.rule">
+        <field name="name">Evaluators: committee comparison lines</field><field name="model_id" ref="model_construction_tender_comparison_line"/>
+        <field name="groups" eval="[(4, ref('group_tender_evaluator'))]"/>
+        <field name="domain_force">[('comparison_id.tender_id.evaluation_committee_ids', 'in', [user.id])]</field>
+    </record>
+    <record id="rule_comparison_line_manager_visibility" model="ir.rule">
+        <field name="name">Tender managers: managed comparison lines</field><field name="model_id" ref="model_construction_tender_comparison_line"/>
+        <field name="groups" eval="[(4, ref('group_tender_manager'))]"/>
+        <field name="domain_force">[('comparison_id.tender_id.tender_manager_id', '=', user.id)]</field>
+    </record>
+    <record id="rule_comparison_line_buyer_visibility" model="ir.rule">
+        <field name="name">Buyers: their tender comparison lines</field><field name="model_id" ref="model_construction_tender_comparison_line"/>
+        <field name="groups" eval="[(4, ref('group_tender_buyer'))]"/>
+        <field name="domain_force">['|', ('comparison_id.tender_id.buyer_id', '=', user.id), ('comparison_id.tender_id.tender_manager_id', '=', user.id)]</field>
+    </record>
+</odoo>

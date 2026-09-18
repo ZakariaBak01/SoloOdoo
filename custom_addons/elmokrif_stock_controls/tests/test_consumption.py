@@ -14,12 +14,19 @@ class TestApprovedConsumption(TransactionCase):
         cls.warehouse = cls.env["stock.warehouse"].search([("company_id", "=", cls.company.id)], limit=1)
         cls.requester = cls._user("Consumption Requester", "consumption.requester@example.test", "elmokrif_stock_controls.group_chantier_consumption_user")
         cls.approver = cls._user("Consumption Approver", "consumption.approver@example.test", "elmokrif_stock_controls.group_chantier_consumption_approver")
-        partner = cls.env["res.partner"].create({"name": "Consumption Customer"})
+        partner = cls.env["res.partner"].create({
+            "name": "Consumption Customer",
+            "customer_rank": 1,
+        })
+        site = cls.env["res.partner"].create({
+            "name": "Consumption Site Address",
+            "type": "other",
+        })
         cls.chantier = cls.env["project.project"].with_context(default_is_chantier=True).create({
             "name": "Consumption Site", "is_chantier": True, "company_id": cls.company.id,
             "warehouse_id": cls.warehouse.id, "partner_id": partner.id,
-            "site_partner_id": partner.id, "user_id": cls.approver.id,
-            "favorite_user_ids": [Command.set([cls.requester.id, cls.approver.id])],
+            "site_partner_id": site.id, "user_id": cls.approver.id,
+            "chantier_member_ids": [Command.set([cls.requester.id])],
             "chantier_region": "Casablanca-Settat", "work_type": "construction",
             "date_start": date(2026, 1, 1), "date": date(2026, 12, 31),
         })

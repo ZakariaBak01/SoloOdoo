@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_construction_control_root" name="Project Control" parent="elmokrif_chantier.menu_chantier_root" sequence="15" groups="elmokrif_construction_control.group_construction_control_user"/>
+    <menuitem id="menu_construction_work_package" name="Work Packages" parent="menu_construction_control_root" action="action_construction_work_package" sequence="10"/>
+    <menuitem id="menu_construction_site_issue" name="Site Issues" parent="menu_construction_control_root" action="action_construction_site_issue" sequence="20"/>
+    <menuitem id="menu_construction_rfi" name="RFIs" parent="menu_construction_control_root" action="action_construction_rfi" sequence="30"/>
+    <menuitem id="menu_construction_submittal" name="Submittals" parent="menu_construction_control_root" action="action_construction_submittal" sequence="40"/>
+    <menuitem id="menu_construction_change_event" name="Change Events" parent="menu_construction_control_root" action="action_construction_change_event" sequence="50"/>
+    <menuitem id="menu_construction_variation_order" name="Variation Orders" parent="menu_construction_control_root" action="action_construction_variation_order" sequence="60" groups="elmokrif_construction_control.group_construction_control_manager"/>
+    <menuitem id="menu_construction_progress_certificate" name="Progress Certificates" parent="menu_construction_control_root" action="action_construction_progress_certificate" sequence="70" groups="elmokrif_construction_control.group_progress_certifier"/>
+</odoo>

@@ -1,0 +1,36 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_boq_user,BOQ viewer,model_construction_boq,group_boq_user,1,0,0,0
+access_boq_estimator,BOQ estimator,model_construction_boq,group_boq_estimator,1,1,1,1
+access_boq_reviewer,BOQ reviewer,model_construction_boq,group_boq_reviewer,1,1,0,0
+access_boq_approver,BOQ approver,model_construction_boq,group_boq_approver,1,1,0,0
+access_boq_wbs_user,BOQ WBS viewer,model_construction_boq_wbs,group_boq_user,1,0,0,0
+access_boq_wbs_estimator,BOQ WBS estimator,model_construction_boq_wbs,group_boq_estimator,1,1,1,1
+access_boq_line_user,BOQ line viewer,model_construction_boq_line,group_boq_user,1,0,0,0
+access_boq_line_estimator,BOQ line estimator,model_construction_boq_line,group_boq_estimator,1,1,1,1
+access_boq_takeoff_user,Takeoff viewer,model_construction_boq_takeoff,group_boq_user,1,0,0,0
+access_boq_takeoff_estimator,Takeoff estimator,model_construction_boq_takeoff,group_boq_estimator,1,1,1,1
+access_boq_rate_user,Rate analysis viewer,model_construction_boq_rate_component,group_boq_user,1,0,0,0
+access_boq_rate_estimator,Rate analysis estimator,model_construction_boq_rate_component,group_boq_estimator,1,1,1,1
+access_boq_delta_user,BOQ delta viewer,model_construction_boq_revision_delta,group_boq_user,1,0,0,0
+access_boq_delta_approver,BOQ delta approver,model_construction_boq_revision_delta,group_boq_approver,1,1,1,1
+access_tender_buyer,Tender buyer,model_construction_tender,group_tender_buyer,1,1,1,0
+access_tender_manager,Tender manager,model_construction_tender,group_tender_manager,1,1,1,1
+access_tender_evaluator,Tender evaluator,model_construction_tender,group_tender_evaluator,1,0,0,0
+access_tender_criterion_buyer,Tender criterion buyer,model_construction_tender_criterion,group_tender_buyer,1,1,1,1
+access_tender_criterion_eval,Tender criterion evaluator,model_construction_tender_criterion,group_tender_evaluator,1,0,0,0
+access_bid_buyer,Tender bid buyer,model_construction_tender_bid,group_tender_buyer,1,1,1,0
+access_bid_manager,Tender bid manager,model_construction_tender_bid,group_tender_manager,1,1,1,1
+access_bid_evaluator,Tender bid evaluator,model_construction_tender_bid,group_tender_evaluator,1,1,0,0
+access_bid_line_buyer,Tender bid line buyer,model_construction_tender_bid_line,group_tender_buyer,1,1,1,1
+access_bid_line_evaluator,Tender bid line evaluator,model_construction_tender_bid_line,group_tender_evaluator,1,0,0,0
+access_bid_score_evaluator,Tender score evaluator,model_construction_tender_bid_score,group_tender_evaluator,1,1,1,1
+access_comparison_eval,Tender comparison evaluator,model_construction_tender_comparison,group_tender_evaluator,1,1,1,0
+access_comparison_buyer,Tender comparison buyer,model_construction_tender_comparison,group_tender_buyer,1,0,0,0
+access_comparison_line_eval,Tender comparison line evaluator,model_construction_tender_comparison_line,group_tender_evaluator,1,0,1,0
+access_comparison_line_buyer,Tender comparison line buyer,model_construction_tender_comparison_line,group_tender_buyer,1,0,0,0
+access_award_buyer,Tender award buyer,model_construction_tender_award,group_tender_buyer,1,1,1,0
+access_award_approver,Tender award approver,model_construction_tender_award,group_tender_award_approver,1,1,0,0
+access_award_line_buyer,Tender award line buyer,model_construction_tender_award_line,group_tender_buyer,1,1,1,1
+access_award_line_approver,Tender award line approver,model_construction_tender_award_line,group_tender_award_approver,1,0,0,0
+access_boq_return_wizard,BOQ return wizard,model_construction_boq_return_wizard,group_boq_reviewer,1,1,1,1
+access_boq_revision_wizard,BOQ revision wizard,model_construction_boq_revision_wizard,group_boq_estimator,1,1,1,1

@@ -1,0 +1,760 @@
+﻿2026-09-14 17:57:41,459 1 INFO ? odoo: Odoo version 17.0-20260817 
+2026-09-14 17:57:41,460 1 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2026-09-14 17:57:41,460 1 INFO ? odoo: addons paths: ['/usr/lib/python3/dist-packages/odoo/addons', '/var/lib/odoo/addons/17.0', '/mnt/extra-addons', '/opt/elmokrif-addons'] 
+2026-09-14 17:57:41,460 1 INFO ? odoo: database: odoo_test@test-db:5432 
+2026-09-14 17:57:42,171 1 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/local/bin/wkhtmltopdf 
+2026-09-14 17:57:43,043 1 INFO ? odoo.service.server: HTTP service (werkzeug) running on 010df724262e:8069 
+2026-09-14 17:57:43,057 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: init db 
+2026-09-14 17:57:46,153 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading 1 modules... 
+2026-09-14 17:57:46,153 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: Loading module base (1/1) 
+2026-09-14 17:57:46,183 1 INFO soloodoo_sales_chantier_access_test odoo.modules.registry: module base: creating or updating database tables 
+2026-09-14 17:57:46,773 1 INFO soloodoo_sales_chantier_access_test odoo.models: Prepare computation of ir.module.module.menus_by_module 
+2026-09-14 17:57:46,775 1 INFO soloodoo_sales_chantier_access_test odoo.models: Prepare computation of ir.module.module.reports_by_module 
+2026-09-14 17:57:46,775 1 INFO soloodoo_sales_chantier_access_test odoo.models: Prepare computation of ir.module.module.views_by_module 
+2026-09-14 17:57:46,997 1 INFO soloodoo_sales_chantier_access_test odoo.models: Prepare computation of res.partner.user_id 
+2026-09-14 17:57:46,997 1 INFO soloodoo_sales_chantier_access_test odoo.models: Prepare computation of res.partner.commercial_partner_id 
+2026-09-14 17:57:46,997 1 INFO soloodoo_sales_chantier_access_test odoo.models: Prepare computation of res.partner.complete_name 
+2026-09-14 17:57:46,997 1 INFO soloodoo_sales_chantier_access_test odoo.models: Prepare computation of res.partner.company_registry 
+2026-09-14 17:57:46,997 1 INFO soloodoo_sales_chantier_access_test odoo.models: Prepare computation of res.partner.commercial_company_name 
+2026-09-14 17:57:46,997 1 INFO soloodoo_sales_chantier_access_test odoo.models: Prepare computation of res.partner.partner_share 
+2026-09-14 17:57:47,067 1 INFO soloodoo_sales_chantier_access_test odoo.models: Prepare computation of res.currency.decimal_places 
+2026-09-14 17:57:47,107 1 INFO soloodoo_sales_chantier_access_test odoo.models: Prepare computation of res.company.uses_default_logo 
+2026-09-14 17:57:47,108 1 INFO soloodoo_sales_chantier_access_test odoo.models: Prepare computation of res.company.logo_web 
+2026-09-14 17:57:47,111 1 INFO soloodoo_sales_chantier_access_test odoo.models: Computing parent_path for table res_company... 
+2026-09-14 17:57:47,150 1 INFO soloodoo_sales_chantier_access_test odoo.models: Prepare computation of res.users.signature 
+2026-09-14 17:57:47,150 1 INFO soloodoo_sales_chantier_access_test odoo.models: Prepare computation of res.users.share 
+2026-09-14 17:57:48,968 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading base/data/res_bank.xml 
+2026-09-14 17:57:48,984 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading base/data/res.lang.csv 
+2026-09-14 17:57:49,032 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading base/data/res_lang_data.xml 
+2026-09-14 17:57:49,088 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading base/data/res_partner_data.xml 
+2026-09-14 17:57:49,208 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading base/data/res_currency_data.xml 
+2026-09-14 17:57:49,946 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading base/data/res_company_data.xml 
+2026-09-14 17:57:49,960 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading base/data/res_users_data.xml 
+2026-09-14 17:57:50,987 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading base/data/report_paperformat_data.xml 
+2026-09-14 17:57:50,996 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading base/data/res_country_data.xml 
+2026-09-14 17:57:51,627 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading base/data/ir_demo_data.xml 
+2026-09-14 17:57:51,648 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading base/security/base_groups.xml 
+2026-09-14 17:57:52,721 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading base/security/base_security.xml 
+2026-09-14 17:57:52,888 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading base/views/base_menus.xml 
+2026-09-14 17:57:52,982 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading base/views/decimal_precision_views.xml 
+2026-09-14 17:57:53,007 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading base/views/res_config_views.xml 
+2026-09-14 17:57:53,019 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading base/data/res.country.state.csv 
+2026-09-14 17:57:53,578 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading base/views/ir_actions_views.xml 
+2026-09-14 17:57:53,880 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading base/views/ir_asset_views.xml 
+2026-09-14 17:57:53,914 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading base/views/ir_config_parameter_views.xml 
+2026-09-14 17:57:53,939 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading base/views/ir_cron_views.xml 
+2026-09-14 17:57:53,974 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading base/views/ir_cron_trigger_views.xml 
+2026-09-14 17:57:53,996 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading base/views/ir_filters_views.xml 
+2026-09-14 17:57:54,017 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading base/views/ir_mail_server_views.xml 
+2026-09-14 17:57:54,041 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading base/views/ir_model_views.xml 
+2026-09-14 17:57:54,269 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading base/views/ir_attachment_views.xml 
+2026-09-14 17:57:54,304 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading base/views/ir_rule_views.xml 
+2026-09-14 17:57:54,345 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading base/views/ir_sequence_views.xml 
+2026-09-14 17:57:54,384 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading base/views/ir_ui_menu_views.xml 
+2026-09-14 17:57:54,406 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading base/views/ir_ui_view_views.xml 
+2026-09-14 17:57:54,452 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading base/views/ir_default_views.xml 
+2026-09-14 17:57:54,471 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading base/data/ir_cron_data.xml 
+2026-09-14 17:57:54,485 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading base/report/ir_model_report.xml 
+2026-09-14 17:57:54,490 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading base/report/ir_model_templates.xml 
+2026-09-14 17:57:54,500 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading base/views/ir_logging_views.xml 
+2026-09-14 17:57:54,519 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading base/views/ir_qweb_widget_templates.xml 
+2026-09-14 17:57:54,531 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading base/views/ir_module_views.xml 
+2026-09-14 17:57:54,583 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading base/data/ir_module_category_data.xml 
+2026-09-14 17:57:54,672 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading base/data/ir_module_module.xml 
+2026-09-14 17:57:54,751 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading base/report/ir_module_reports.xml 
+2026-09-14 17:57:54,756 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading base/report/ir_module_report_templates.xml 
+2026-09-14 17:57:54,762 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading base/wizard/base_module_update_views.xml 
+2026-09-14 17:57:54,780 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading base/wizard/base_language_install_views.xml 
+2026-09-14 17:57:54,796 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading base/wizard/base_import_language_views.xml 
+2026-09-14 17:57:54,813 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading base/wizard/base_module_upgrade_views.xml 
+2026-09-14 17:57:54,836 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading base/wizard/base_module_uninstall_views.xml 
+2026-09-14 17:57:54,844 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading base/wizard/base_export_language_views.xml 
+2026-09-14 17:57:54,859 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading base/wizard/base_partner_merge_views.xml 
+2026-09-14 17:57:54,875 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading base/data/ir_demo_failure_data.xml 
+2026-09-14 17:57:54,892 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading base/views/ir_profile_views.xml 
+2026-09-14 17:57:54,922 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading base/views/res_company_views.xml 
+2026-09-14 17:57:54,953 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading base/views/res_lang_views.xml 
+2026-09-14 17:57:54,985 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading base/views/res_partner_views.xml 
+2026-09-14 17:57:55,130 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading base/views/res_bank_views.xml 
+2026-09-14 17:57:55,170 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading base/views/res_country_views.xml 
+2026-09-14 17:57:55,216 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading base/views/res_currency_views.xml 
+2026-09-14 17:57:55,264 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading base/views/res_users_views.xml 
+2026-09-14 17:57:55,402 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading base/views/res_users_identitycheck_views.xml 
+2026-09-14 17:57:55,414 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading base/views/ir_property_views.xml 
+2026-09-14 17:57:55,439 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading base/views/res_config_settings_views.xml 
+2026-09-14 17:57:55,447 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading base/views/report_paperformat_views.xml 
+2026-09-14 17:57:55,484 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading base/security/ir.model.access.csv 
+2026-09-14 17:57:55,839 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: Module base loaded in 9.69s, 7944 queries (+7944 other) 
+2026-09-14 17:57:55,839 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: 1 modules loaded in 9.69s, 7944 queries (+7944 extra) 
+2026-09-14 17:57:55,854 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: updating modules list 
+2026-09-14 17:57:55,856 1 INFO soloodoo_sales_chantier_access_test odoo.addons.base.models.ir_module: ALLOW access to module.update_list on [] to user __system__ #1 via n/a 
+2026-09-14 17:57:56,981 1 INFO soloodoo_sales_chantier_access_test odoo.addons.base.models.ir_module: ALLOW access to module.button_install on ['EL MOKRIF Chantier', 'EL MOKRIF Sale Chantier'] to user __system__ #1 via n/a 
+2026-09-14 17:57:57,261 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading 70 modules... 
+2026-09-14 17:57:57,262 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: Loading module uom (2/70) 
+2026-09-14 17:57:57,282 1 INFO soloodoo_sales_chantier_access_test odoo.modules.registry: module uom: creating or updating database tables 
+2026-09-14 17:57:57,408 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading uom/data/uom_data.xml 
+2026-09-14 17:57:57,511 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading uom/security/uom_security.xml 
+2026-09-14 17:57:57,529 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading uom/security/ir.model.access.csv 
+2026-09-14 17:57:57,541 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading uom/views/uom_uom_views.xml 
+2026-09-14 17:57:57,598 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: Module uom loaded in 0.34s, 287 queries (+287 other) 
+2026-09-14 17:57:57,598 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: Loading module web (3/70) 
+2026-09-14 17:57:57,617 1 INFO soloodoo_sales_chantier_access_test odoo.modules.registry: module web: creating or updating database tables 
+2026-09-14 17:57:58,301 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading web/security/ir.model.access.csv 
+2026-09-14 17:57:58,315 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading web/views/webclient_templates.xml 
+2026-09-14 17:57:58,379 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading web/views/report_templates.xml 
+2026-09-14 17:57:58,471 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading web/views/base_document_layout_views.xml 
+2026-09-14 17:57:58,484 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading web/views/partner_view.xml 
+2026-09-14 17:57:58,490 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading web/views/speedscope_template.xml 
+2026-09-14 17:57:58,496 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading web/views/neutralize_views.xml 
+2026-09-14 17:57:58,505 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading web/data/ir_attachment.xml 
+2026-09-14 17:57:58,510 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading web/data/report_layout.xml 
+2026-09-14 17:57:58,917 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: Module web loaded in 1.32s, 1018 queries (+1018 other) 
+2026-09-14 17:57:58,917 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: Loading module auth_totp (4/70) 
+2026-09-14 17:57:58,986 1 INFO soloodoo_sales_chantier_access_test odoo.modules.registry: module auth_totp: creating or updating database tables 
+2026-09-14 17:57:59,074 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading auth_totp/security/security.xml 
+2026-09-14 17:57:59,104 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading auth_totp/security/ir.model.access.csv 
+2026-09-14 17:57:59,118 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading auth_totp/data/ir_action_data.xml 
+2026-09-14 17:57:59,126 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading auth_totp/views/res_users_views.xml 
+2026-09-14 17:57:59,166 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading auth_totp/views/templates.xml 
+2026-09-14 17:57:59,174 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading auth_totp/wizard/auth_totp_wizard_views.xml 
+2026-09-14 17:57:59,344 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: Module auth_totp loaded in 0.43s, 179 queries (+179 other) 
+2026-09-14 17:57:59,344 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: Loading module barcodes (5/70) 
+2026-09-14 17:57:59,519 1 INFO soloodoo_sales_chantier_access_test odoo.modules.registry: module barcodes: creating or updating database tables 
+2026-09-14 17:57:59,756 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading barcodes/data/barcodes_data.xml 
+2026-09-14 17:57:59,767 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading barcodes/views/barcodes_view.xml 
+2026-09-14 17:57:59,799 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading barcodes/security/ir.model.access.csv 
+2026-09-14 17:57:59,850 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: Module barcodes loaded in 0.51s, 135 queries (+135 other) 
+2026-09-14 17:57:59,850 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: Loading module base_import (6/70) 
+2026-09-14 17:57:59,918 1 INFO soloodoo_sales_chantier_access_test odoo.modules.registry: module base_import: creating or updating database tables 
+2026-09-14 17:58:00,657 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading base_import/security/ir.model.access.csv 
+2026-09-14 17:58:00,681 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: Module base_import loaded in 0.83s, 843 queries (+843 other) 
+2026-09-14 17:58:00,681 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: Loading module base_import_module (7/70) 
+2026-09-14 17:58:00,706 1 INFO soloodoo_sales_chantier_access_test odoo.modules.registry: module base_import_module: creating or updating database tables 
+2026-09-14 17:58:00,773 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading base_import_module/security/ir.model.access.csv 
+2026-09-14 17:58:00,784 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading base_import_module/views/base_import_module_view.xml 
+2026-09-14 17:58:00,803 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading base_import_module/views/ir_module_views.xml 
+2026-09-14 17:58:00,862 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: Module base_import_module loaded in 0.18s, 154 queries (+154 other) 
+2026-09-14 17:58:00,862 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: Loading module base_setup (8/70) 
+2026-09-14 17:58:00,937 1 INFO soloodoo_sales_chantier_access_test odoo.modules.registry: module base_setup: creating or updating database tables 
+2026-09-14 17:58:00,992 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading base_setup/data/base_setup_data.xml 
+2026-09-14 17:58:00,999 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading base_setup/views/res_config_settings_views.xml 
+2026-09-14 17:58:01,034 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading base_setup/views/res_partner_views.xml 
+2026-09-14 17:58:01,062 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: Module base_setup loaded in 0.20s, 143 queries (+143 other) 
+2026-09-14 17:58:01,062 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: Loading module bus (9/70) 
+2026-09-14 17:58:01,080 1 INFO soloodoo_sales_chantier_access_test odoo.modules.registry: module bus: creating or updating database tables 
+2026-09-14 17:58:01,228 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading bus/security/ir.model.access.csv 
+2026-09-14 17:58:01,302 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: Module bus loaded in 0.24s, 119 queries (+119 other) 
+2026-09-14 17:58:01,302 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: Loading module http_routing (10/70) 
+2026-09-14 17:58:01,333 1 INFO soloodoo_sales_chantier_access_test odoo.modules.registry: module http_routing: creating or updating database tables 
+2026-09-14 17:58:01,368 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading http_routing/views/http_routing_template.xml 
+2026-09-14 17:58:01,410 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading http_routing/views/res_lang_views.xml 
+2026-09-14 17:58:01,449 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: Module http_routing loaded in 0.15s, 71 queries (+71 other) 
+2026-09-14 17:58:01,449 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: Loading module onboarding (11/70) 
+2026-09-14 17:58:01,485 1 INFO soloodoo_sales_chantier_access_test odoo.modules.registry: module onboarding: creating or updating database tables 
+2026-09-14 17:58:01,693 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading onboarding/views/onboarding_templates.xml 
+2026-09-14 17:58:01,722 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading onboarding/views/onboarding_views.xml 
+2026-09-14 17:58:01,758 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading onboarding/views/onboarding_menus.xml 
+2026-09-14 17:58:01,783 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading onboarding/security/ir.model.access.csv 
+2026-09-14 17:58:01,942 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: Module onboarding loaded in 0.49s, 237 queries (+237 other) 
+2026-09-14 17:58:01,942 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: Loading module resource (12/70) 
+2026-09-14 17:58:02,019 1 INFO soloodoo_sales_chantier_access_test odoo.modules.registry: module resource: creating or updating database tables 
+2026-09-14 17:58:02,356 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading resource/data/resource_data.xml 
+2026-09-14 17:58:02,441 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading resource/security/ir.model.access.csv 
+2026-09-14 17:58:02,472 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading resource/security/resource_security.xml 
+2026-09-14 17:58:02,512 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading resource/views/resource_resource_views.xml 
+2026-09-14 17:58:02,548 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading resource/views/resource_calendar_leaves_views.xml 
+2026-09-14 17:58:02,606 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading resource/views/resource_calendar_attendance_views.xml 
+2026-09-14 17:58:02,627 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading resource/views/resource_calendar_views.xml 
+2026-09-14 17:58:02,666 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading resource/views/menuitems.xml 
+2026-09-14 17:58:02,726 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: Module resource loaded in 0.78s, 407 queries (+407 other) 
+2026-09-14 17:58:02,726 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: Loading module utm (13/70) 
+2026-09-14 17:58:02,770 1 INFO soloodoo_sales_chantier_access_test odoo.modules.registry: module utm: creating or updating database tables 
+2026-09-14 17:58:02,929 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading utm/data/utm_medium_data.xml 
+2026-09-14 17:58:02,964 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading utm/data/utm_source_data.xml 
+2026-09-14 17:58:02,989 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading utm/data/utm_stage_data.xml 
+2026-09-14 17:58:02,994 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading utm/data/utm_tag_data.xml 
+2026-09-14 17:58:03,000 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading utm/views/utm_campaign_views.xml 
+2026-09-14 17:58:03,050 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading utm/views/utm_medium_views.xml 
+2026-09-14 17:58:03,071 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading utm/views/utm_source_views.xml 
+2026-09-14 17:58:03,089 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading utm/views/utm_stage_views.xml 
+2026-09-14 17:58:03,113 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading utm/views/utm_tag_views.xml 
+2026-09-14 17:58:03,131 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading utm/views/utm_menus.xml 
+2026-09-14 17:58:03,180 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading utm/security/ir.model.access.csv 
+2026-09-14 17:58:03,231 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: Module utm loaded in 0.51s, 405 queries (+405 other) 
+2026-09-14 17:58:03,232 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: Loading module web_tour (14/70) 
+2026-09-14 17:58:03,267 1 INFO soloodoo_sales_chantier_access_test odoo.modules.registry: module web_tour: creating or updating database tables 
+2026-09-14 17:58:03,308 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading web_tour/security/ir.model.access.csv 
+2026-09-14 17:58:03,321 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading web_tour/security/ir.rule.csv 
+2026-09-14 17:58:03,333 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading web_tour/views/tour_views.xml 
+2026-09-14 17:58:03,378 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: Module web_tour loaded in 0.15s, 104 queries (+104 other) 
+2026-09-14 17:58:03,378 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: Loading module barcodes_gs1_nomenclature (15/70) 
+2026-09-14 17:58:03,416 1 INFO soloodoo_sales_chantier_access_test odoo.modules.registry: module barcodes_gs1_nomenclature: creating or updating database tables 
+2026-09-14 17:58:03,475 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading barcodes_gs1_nomenclature/data/barcodes_gs1_rules.xml 
+2026-09-14 17:58:03,580 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading barcodes_gs1_nomenclature/views/barcodes_view.xml 
+2026-09-14 17:58:03,623 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: Module barcodes_gs1_nomenclature loaded in 0.24s, 189 queries (+189 other) 
+2026-09-14 17:58:03,623 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: Loading module iap (16/70) 
+2026-09-14 17:58:03,644 1 INFO soloodoo_sales_chantier_access_test odoo.modules.registry: module iap: creating or updating database tables 
+2026-09-14 17:58:03,713 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading iap/security/ir.model.access.csv 
+2026-09-14 17:58:03,732 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading iap/security/ir_rule.xml 
+2026-09-14 17:58:03,743 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading iap/views/iap_views.xml 
+2026-09-14 17:58:03,776 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading iap/views/res_config_settings.xml 
+2026-09-14 17:58:03,810 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: Module iap loaded in 0.19s, 151 queries (+151 other) 
+2026-09-14 17:58:03,810 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: Loading module mail (17/70) 
+2026-09-14 17:58:03,854 1 INFO soloodoo_sales_chantier_access_test odoo.modules.registry: module mail: creating or updating database tables 
+2026-09-14 17:58:04,138 1 INFO soloodoo_sales_chantier_access_test odoo.models: Prepare computation of ir.actions.server.partner_ids 
+2026-09-14 17:58:04,139 1 INFO soloodoo_sales_chantier_access_test odoo.models: Prepare computation of ir.actions.server.template_id 
+2026-09-14 17:58:04,139 1 INFO soloodoo_sales_chantier_access_test odoo.models: Prepare computation of ir.actions.server.activity_type_id 
+2026-09-14 17:58:04,139 1 INFO soloodoo_sales_chantier_access_test odoo.models: Prepare computation of ir.actions.server.activity_date_deadline_range 
+2026-09-14 17:58:04,139 1 INFO soloodoo_sales_chantier_access_test odoo.models: Prepare computation of ir.actions.server.activity_user_id 
+2026-09-14 17:58:04,139 1 INFO soloodoo_sales_chantier_access_test odoo.models: Prepare computation of ir.actions.server.mail_post_method 
+2026-09-14 17:58:04,139 1 INFO soloodoo_sales_chantier_access_test odoo.models: Prepare computation of ir.actions.server.activity_summary 
+2026-09-14 17:58:04,139 1 INFO soloodoo_sales_chantier_access_test odoo.models: Prepare computation of ir.actions.server.activity_date_deadline_range_type 
+2026-09-14 17:58:04,139 1 INFO soloodoo_sales_chantier_access_test odoo.models: Prepare computation of ir.actions.server.activity_user_type 
+2026-09-14 17:58:04,140 1 INFO soloodoo_sales_chantier_access_test odoo.models: Prepare computation of ir.actions.server.activity_user_field_name 
+2026-09-14 17:58:04,140 1 INFO soloodoo_sales_chantier_access_test odoo.models: Prepare computation of ir.actions.server.activity_note 
+2026-09-14 17:58:04,140 1 INFO soloodoo_sales_chantier_access_test odoo.models: Prepare computation of ir.actions.server.mail_post_autofollow 
+2026-09-14 17:58:04,192 1 INFO soloodoo_sales_chantier_access_test odoo.models: Prepare computation of res.company.email_primary_color 
+2026-09-14 17:58:04,192 1 INFO soloodoo_sales_chantier_access_test odoo.models: Prepare computation of res.company.email_secondary_color 
+2026-09-14 17:58:04,213 1 INFO soloodoo_sales_chantier_access_test odoo.models: Prepare computation of res.users.notification_type 
+2026-09-14 17:58:04,325 1 INFO soloodoo_sales_chantier_access_test odoo.models: Prepare computation of res.partner.email_normalized 
+<string>:38: (ERROR/3) Unexpected indentation.
+<string>:43: (WARNING/2) Block quote ends without a blank line; unexpected unindent.
+2026-09-14 17:58:06,116 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading mail/data/mail_groups.xml 
+2026-09-14 17:58:06,234 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading mail/wizard/mail_activity_schedule_views.xml 
+2026-09-14 17:58:06,245 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading mail/wizard/mail_blacklist_remove_views.xml 
+2026-09-14 17:58:06,252 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading mail/wizard/mail_compose_message_views.xml 
+2026-09-14 17:58:06,273 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading mail/wizard/mail_resend_message_views.xml 
+2026-09-14 17:58:06,287 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading mail/wizard/mail_resend_partner_views.xml 
+2026-09-14 17:58:06,301 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading mail/wizard/mail_template_preview_views.xml 
+2026-09-14 17:58:06,315 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading mail/wizard/mail_wizard_invite_views.xml 
+2026-09-14 17:58:06,324 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading mail/wizard/mail_template_reset_views.xml 
+2026-09-14 17:58:06,337 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading mail/views/fetchmail_views.xml 
+2026-09-14 17:58:06,361 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading mail/views/mail_message_subtype_views.xml 
+2026-09-14 17:58:06,374 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading mail/views/mail_tracking_value_views.xml 
+2026-09-14 17:58:06,390 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading mail/views/mail_notification_views.xml 
+2026-09-14 17:58:06,406 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading mail/views/mail_message_views.xml 
+2026-09-14 17:58:06,437 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading mail/views/mail_message_schedule_views.xml 
+2026-09-14 17:58:06,455 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading mail/views/mail_mail_views.xml 
+2026-09-14 17:58:06,484 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading mail/views/mail_followers_views.xml 
+2026-09-14 17:58:06,499 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading mail/views/mail_ice_server_views.xml 
+2026-09-14 17:58:06,515 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading mail/views/discuss_channel_member_views.xml 
+2026-09-14 17:58:06,529 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading mail/views/discuss_channel_rtc_session_views.xml 
+2026-09-14 17:58:06,547 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading mail/views/mail_link_preview_views.xml 
+2026-09-14 17:58:06,561 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading mail/views/discuss/discuss_gif_favorite_views.xml 
+2026-09-14 17:58:06,574 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading mail/views/discuss_channel_views.xml 
+2026-09-14 17:58:06,603 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading mail/views/mail_shortcode_views.xml 
+2026-09-14 17:58:06,625 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading mail/views/mail_activity_views.xml 
+2026-09-14 17:58:06,719 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading mail/views/mail_activity_plan_views.xml 
+2026-09-14 17:58:06,753 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading mail/views/mail_activity_plan_template_views.xml 
+2026-09-14 17:58:06,767 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading mail/views/res_config_settings_views.xml 
+2026-09-14 17:58:06,793 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading mail/data/ir_config_parameter_data.xml 
+2026-09-14 17:58:06,803 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading mail/data/res_partner_data.xml 
+2026-09-14 17:58:06,888 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading mail/data/mail_message_subtype_data.xml 
+2026-09-14 17:58:06,900 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading mail/data/mail_templates_chatter.xml 
+2026-09-14 17:58:06,920 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading mail/data/mail_templates_email_layouts.xml 
+2026-09-14 17:58:06,943 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading mail/data/mail_templates_mailgateway.xml 
+2026-09-14 17:58:06,957 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading mail/data/discuss_channel_data.xml 
+2026-09-14 17:58:07,098 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading mail/data/mail_activity_data.xml 
+2026-09-14 17:58:07,122 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading mail/data/security_notifications_templates.xml 
+2026-09-14 17:58:07,130 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading mail/data/ir_cron_data.xml 
+2026-09-14 17:58:07,188 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading mail/security/mail_security.xml 
+2026-09-14 17:58:07,369 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading mail/security/ir.model.access.csv 
+2026-09-14 17:58:07,443 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading mail/views/discuss_public_templates.xml 
+2026-09-14 17:58:07,450 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading mail/views/mail_alias_domain_views.xml 
+2026-09-14 17:58:07,469 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading mail/views/mail_alias_views.xml 
+2026-09-14 17:58:07,489 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading mail/views/mail_gateway_allowed_views.xml 
+2026-09-14 17:58:07,502 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading mail/views/mail_guest_views.xml 
+2026-09-14 17:58:07,519 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading mail/views/mail_message_reaction_views.xml 
+2026-09-14 17:58:07,536 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading mail/views/mail_templates_public.xml 
+2026-09-14 17:58:07,548 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading mail/views/res_users_views.xml 
+2026-09-14 17:58:07,571 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading mail/views/res_users_settings_views.xml 
+2026-09-14 17:58:07,586 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading mail/views/mail_template_views.xml 
+2026-09-14 17:58:07,616 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading mail/views/ir_actions_server_views.xml 
+2026-09-14 17:58:07,628 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading mail/views/ir_model_views.xml 
+2026-09-14 17:58:07,660 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading mail/views/res_partner_views.xml 
+2026-09-14 17:58:07,724 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading mail/views/mail_blacklist_views.xml 
+2026-09-14 17:58:07,747 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading mail/views/mail_menus.xml 
+2026-09-14 17:58:07,935 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading mail/views/res_company_views.xml 
+2026-09-14 17:58:08,057 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: Module mail loaded in 4.25s, 4209 queries (+4210 other) 
+2026-09-14 17:58:08,057 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: Loading module web_editor (18/70) 
+2026-09-14 17:58:08,121 1 INFO soloodoo_sales_chantier_access_test odoo.modules.registry: module web_editor: creating or updating database tables 
+2026-09-14 17:58:09,030 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading web_editor/security/ir.model.access.csv 
+2026-09-14 17:58:09,042 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading web_editor/data/editor_assets.xml 
+2026-09-14 17:58:09,049 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading web_editor/views/editor.xml 
+2026-09-14 17:58:09,063 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading web_editor/views/snippets.xml 
+2026-09-14 17:58:09,126 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: Module web_editor loaded in 1.07s, 1417 queries (+1417 other) 
+2026-09-14 17:58:09,126 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: Loading module analytic (19/70) 
+2026-09-14 17:58:09,167 1 INFO soloodoo_sales_chantier_access_test odoo.modules.registry: module analytic: creating or updating database tables 
+2026-09-14 17:58:09,373 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading analytic/security/analytic_security.xml 
+2026-09-14 17:58:09,416 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading analytic/security/ir.model.access.csv 
+2026-09-14 17:58:09,436 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading analytic/views/analytic_line_views.xml 
+2026-09-14 17:58:09,477 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading analytic/views/analytic_account_views.xml 
+2026-09-14 17:58:09,516 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading analytic/views/analytic_plan_views.xml 
+2026-09-14 17:58:09,536 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading analytic/views/analytic_distribution_model_views.xml 
+2026-09-14 17:58:09,554 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading analytic/data/analytic_data.xml 
+2026-09-14 17:58:09,635 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: Module analytic loaded in 0.51s, 410 queries (+410 other) 
+2026-09-14 17:58:09,636 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: Loading module auth_signup (20/70) 
+2026-09-14 17:58:09,680 1 INFO soloodoo_sales_chantier_access_test odoo.modules.registry: module auth_signup: creating or updating database tables 
+2026-09-14 17:58:09,748 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading auth_signup/data/ir_config_parameter_data.xml 
+2026-09-14 17:58:09,755 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading auth_signup/data/ir_cron_data.xml 
+2026-09-14 17:58:09,769 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading auth_signup/data/mail_template_data.xml 
+2026-09-14 17:58:09,784 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading auth_signup/views/res_config_settings_views.xml 
+2026-09-14 17:58:09,800 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading auth_signup/views/res_users_views.xml 
+2026-09-14 17:58:09,824 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading auth_signup/views/auth_signup_login_templates.xml 
+2026-09-14 17:58:09,844 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading auth_signup/views/auth_signup_templates_email.xml 
+2026-09-14 17:58:09,855 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading auth_signup/views/webclient_templates.xml 
+2026-09-14 17:58:09,891 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: Module auth_signup loaded in 0.26s, 202 queries (+202 other) 
+2026-09-14 17:58:09,891 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: Loading module auth_totp_mail (21/70) 
+2026-09-14 17:58:09,925 1 INFO soloodoo_sales_chantier_access_test odoo.modules.registry: module auth_totp_mail: creating or updating database tables 
+2026-09-14 17:58:09,962 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading auth_totp_mail/data/ir_action_data.xml 
+2026-09-14 17:58:09,987 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading auth_totp_mail/data/mail_template_data.xml 
+2026-09-14 17:58:09,996 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading auth_totp_mail/data/security_notifications_template.xml 
+2026-09-14 17:58:10,007 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading auth_totp_mail/views/res_users_views.xml 
+2026-09-14 17:58:10,062 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: Module auth_totp_mail loaded in 0.17s, 112 queries (+112 other) 
+2026-09-14 17:58:10,062 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: Loading module base_install_request (22/70) 
+2026-09-14 17:58:10,103 1 INFO soloodoo_sales_chantier_access_test odoo.modules.registry: module base_install_request: creating or updating database tables 
+2026-09-14 17:58:10,168 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading base_install_request/security/ir.model.access.csv 
+2026-09-14 17:58:10,187 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading base_install_request/wizard/base_module_install_request_views.xml 
+2026-09-14 17:58:10,203 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading base_install_request/data/mail_template_data.xml 
+2026-09-14 17:58:10,213 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading base_install_request/data/mail_templates_module_install.xml 
+2026-09-14 17:58:10,219 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading base_install_request/views/ir_module_module_views.xml 
+2026-09-14 17:58:10,251 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: Module base_install_request loaded in 0.19s, 144 queries (+144 other) 
+2026-09-14 17:58:10,251 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: Loading module google_gmail (23/70) 
+2026-09-14 17:58:10,352 1 INFO soloodoo_sales_chantier_access_test odoo.modules.registry: module google_gmail: creating or updating database tables 
+2026-09-14 17:58:10,404 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading google_gmail/views/fetchmail_server_views.xml 
+2026-09-14 17:58:10,418 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading google_gmail/views/ir_mail_server_views.xml 
+2026-09-14 17:58:10,428 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading google_gmail/views/res_config_settings_views.xml 
+2026-09-14 17:58:10,466 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: Module google_gmail loaded in 0.21s, 118 queries (+118 other) 
+2026-09-14 17:58:10,466 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: Loading module iap_mail (24/70) 
+2026-09-14 17:58:10,500 1 INFO soloodoo_sales_chantier_access_test odoo.modules.registry: module iap_mail: creating or updating database tables 
+2026-09-14 17:58:10,519 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading iap_mail/data/mail_templates.xml 
+2026-09-14 17:58:10,553 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: Module iap_mail loaded in 0.09s, 40 queries (+40 other) 
+2026-09-14 17:58:10,553 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: Loading module mail_bot (25/70) 
+2026-09-14 17:58:10,592 1 INFO soloodoo_sales_chantier_access_test odoo.modules.registry: module mail_bot: creating or updating database tables 
+2026-09-14 17:58:10,683 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading mail_bot/views/res_users_views.xml 
+2026-09-14 17:58:10,712 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading mail_bot/data/mailbot_data.xml 
+2026-09-14 17:58:10,738 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: Module mail_bot loaded in 0.19s, 157 queries (+157 other) 
+2026-09-14 17:58:10,738 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: Loading module phone_validation (26/70) 
+2026-09-14 17:58:10,876 1 INFO soloodoo_sales_chantier_access_test odoo.modules.registry: module phone_validation: creating or updating database tables 
+2026-09-14 17:58:12,229 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading phone_validation/security/ir.model.access.csv 
+2026-09-14 17:58:12,247 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading phone_validation/views/phone_blacklist_views.xml 
+2026-09-14 17:58:12,279 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading phone_validation/wizard/phone_blacklist_remove_view.xml 
+2026-09-14 17:58:12,305 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: Module phone_validation loaded in 1.57s, 1486 queries (+1486 other) 
+2026-09-14 17:58:12,305 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: Loading module privacy_lookup (27/70) 
+2026-09-14 17:58:12,345 1 INFO soloodoo_sales_chantier_access_test odoo.modules.registry: module privacy_lookup: creating or updating database tables 
+2026-09-14 17:58:12,468 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading privacy_lookup/wizard/privacy_lookup_wizard_views.xml 
+2026-09-14 17:58:12,514 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading privacy_lookup/views/privacy_log_views.xml 
+2026-09-14 17:58:12,544 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading privacy_lookup/security/ir.model.access.csv 
+2026-09-14 17:58:12,568 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading privacy_lookup/data/ir_actions_server_data.xml 
+2026-09-14 17:58:12,610 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: Module privacy_lookup loaded in 0.30s, 245 queries (+245 other) 
+2026-09-14 17:58:12,610 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: Loading module product (28/70) 
+2026-09-14 17:58:12,781 1 INFO soloodoo_sales_chantier_access_test odoo.modules.registry: module product: creating or updating database tables 
+2026-09-14 17:58:13,627 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading product/data/product_data.xml 
+2026-09-14 17:58:13,652 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading product/security/product_security.xml 
+2026-09-14 17:58:13,773 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading product/security/ir.model.access.csv 
+2026-09-14 17:58:13,807 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading product/wizard/product_label_layout_views.xml 
+2026-09-14 17:58:13,820 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading product/views/product_tag_views.xml 
+2026-09-14 17:58:13,837 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading product/views/product_views.xml 
+2026-09-14 17:58:13,954 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading product/views/res_config_settings_views.xml 
+2026-09-14 17:58:13,985 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading product/views/product_attribute_views.xml 
+2026-09-14 17:58:14,025 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading product/views/product_attribute_value_views.xml 
+2026-09-14 17:58:14,034 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading product/views/product_category_views.xml 
+2026-09-14 17:58:14,058 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading product/views/product_document_views.xml 
+2026-09-14 17:58:14,090 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading product/views/product_packaging_views.xml 
+2026-09-14 17:58:14,129 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading product/views/product_pricelist_item_views.xml 
+2026-09-14 17:58:14,164 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading product/views/product_pricelist_views.xml 
+2026-09-14 17:58:14,200 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading product/views/product_supplierinfo_views.xml 
+2026-09-14 17:58:14,231 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading product/views/product_template_views.xml 
+2026-09-14 17:58:14,274 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading product/views/res_country_group_views.xml 
+2026-09-14 17:58:14,283 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading product/views/res_partner_views.xml 
+2026-09-14 17:58:14,296 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading product/report/product_reports.xml 
+2026-09-14 17:58:14,326 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading product/report/product_product_templates.xml 
+2026-09-14 17:58:14,359 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading product/report/product_template_templates.xml 
+2026-09-14 17:58:14,382 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading product/report/product_packaging.xml 
+2026-09-14 17:58:14,392 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading product/report/product_pricelist_report_templates.xml 
+2026-09-14 17:58:14,443 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: Module product loaded in 1.83s, 1491 queries (+1491 other) 
+2026-09-14 17:58:14,443 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: Loading module rating (29/70) 
+2026-09-14 17:58:14,499 1 INFO soloodoo_sales_chantier_access_test odoo.modules.registry: module rating: creating or updating database tables 
+2026-09-14 17:58:14,704 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading rating/views/rating_rating_views.xml 
+2026-09-14 17:58:14,786 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading rating/views/rating_templates.xml 
+2026-09-14 17:58:14,800 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading rating/views/mail_message_views.xml 
+2026-09-14 17:58:14,809 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading rating/security/ir.model.access.csv 
+2026-09-14 17:58:14,850 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: Module rating loaded in 0.41s, 359 queries (+359 other) 
+2026-09-14 17:58:14,850 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: Loading module sales_team (30/70) 
+2026-09-14 17:58:14,899 1 INFO soloodoo_sales_chantier_access_test odoo.modules.registry: module sales_team: creating or updating database tables 
+2026-09-14 17:58:14,938 1 INFO soloodoo_sales_chantier_access_test odoo.models: Prepare computation of res.users.sale_team_id 
+2026-09-14 17:58:15,072 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading sales_team/security/sales_team_security.xml 
+2026-09-14 17:58:15,240 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading sales_team/security/ir.model.access.csv 
+2026-09-14 17:58:15,258 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading sales_team/data/crm_team_data.xml 
+2026-09-14 17:58:15,317 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading sales_team/views/crm_tag_views.xml 
+2026-09-14 17:58:15,333 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading sales_team/views/crm_team_views.xml 
+2026-09-14 17:58:15,375 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading sales_team/views/crm_team_member_views.xml 
+2026-09-14 17:58:15,420 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading sales_team/views/mail_activity_views.xml 
+2026-09-14 17:58:15,426 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading sales_team/views/res_partner_views.xml 
+2026-09-14 17:58:15,463 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: Module sales_team loaded in 0.61s, 538 queries (+538 other) 
+2026-09-14 17:58:15,463 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: Loading module web_unsplash (31/70) 
+2026-09-14 17:58:15,513 1 INFO soloodoo_sales_chantier_access_test odoo.modules.registry: module web_unsplash: creating or updating database tables 
+2026-09-14 17:58:15,578 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading web_unsplash/views/res_config_settings_view.xml 
+2026-09-14 17:58:15,626 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: Module web_unsplash loaded in 0.16s, 98 queries (+98 other) 
+2026-09-14 17:58:15,626 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: Loading module partner_autocomplete (32/70) 
+2026-09-14 17:58:15,686 1 INFO soloodoo_sales_chantier_access_test odoo.modules.registry: module partner_autocomplete: creating or updating database tables 
+2026-09-14 17:58:15,775 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading partner_autocomplete/security/ir.model.access.csv 
+2026-09-14 17:58:15,789 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading partner_autocomplete/views/res_partner_views.xml 
+2026-09-14 17:58:15,812 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading partner_autocomplete/views/res_company_views.xml 
+2026-09-14 17:58:15,826 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading partner_autocomplete/views/res_config_settings_views.xml 
+2026-09-14 17:58:15,842 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading partner_autocomplete/data/cron.xml 
+2026-09-14 17:58:15,882 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: Module partner_autocomplete loaded in 0.26s, 196 queries (+196 other) 
+2026-09-14 17:58:15,882 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: Loading module portal (33/70) 
+2026-09-14 17:58:15,929 1 INFO soloodoo_sales_chantier_access_test odoo.modules.registry: module portal: creating or updating database tables 
+2026-09-14 17:58:16,280 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading portal/security/ir.model.access.csv 
+2026-09-14 17:58:16,292 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading portal/data/mail_template_data.xml 
+2026-09-14 17:58:16,301 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading portal/data/mail_templates.xml 
+2026-09-14 17:58:16,309 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading portal/views/mail_templates_public.xml 
+2026-09-14 17:58:16,319 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading portal/views/portal_templates.xml 
+2026-09-14 17:58:16,440 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading portal/views/res_config_settings_views.xml 
+2026-09-14 17:58:16,457 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading portal/wizard/portal_share_views.xml 
+2026-09-14 17:58:16,469 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading portal/wizard/portal_wizard_views.xml 
+2026-09-14 17:58:16,516 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: Module portal loaded in 0.63s, 505 queries (+505 other) 
+2026-09-14 17:58:16,516 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: Loading module sms (34/70) 
+2026-09-14 17:58:16,665 1 INFO soloodoo_sales_chantier_access_test odoo.modules.registry: module sms: creating or updating database tables 
+2026-09-14 17:58:16,673 1 INFO soloodoo_sales_chantier_access_test odoo.models: Prepare computation of ir.actions.server.sms_template_id 
+2026-09-14 17:58:16,673 1 INFO soloodoo_sales_chantier_access_test odoo.models: Prepare computation of ir.actions.server.sms_method 
+2026-09-14 17:58:16,707 1 INFO soloodoo_sales_chantier_access_test odoo.models: Prepare computation of res.partner.phone_sanitized 
+2026-09-14 17:58:17,925 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading sms/data/ir_cron_data.xml 
+2026-09-14 17:58:17,937 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading sms/wizard/sms_composer_views.xml 
+2026-09-14 17:58:17,950 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading sms/wizard/sms_template_preview_views.xml 
+2026-09-14 17:58:17,961 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading sms/wizard/sms_resend_views.xml 
+2026-09-14 17:58:17,972 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading sms/wizard/sms_template_reset_views.xml 
+2026-09-14 17:58:17,983 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading sms/views/ir_actions_server_views.xml 
+2026-09-14 17:58:17,997 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading sms/views/mail_notification_views.xml 
+2026-09-14 17:58:18,011 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading sms/views/res_config_settings_views.xml 
+2026-09-14 17:58:18,029 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading sms/views/res_partner_views.xml 
+2026-09-14 17:58:18,066 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading sms/views/sms_sms_views.xml 
+2026-09-14 17:58:18,097 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading sms/views/sms_template_views.xml 
+2026-09-14 17:58:18,121 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading sms/security/ir.model.access.csv 
+2026-09-14 17:58:18,151 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading sms/security/sms_security.xml 
+2026-09-14 17:58:18,209 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: Module sms loaded in 1.69s, 2088 queries (+2088 other) 
+2026-09-14 17:58:18,209 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: Loading module snailmail (35/70) 
+2026-09-14 17:58:18,263 1 INFO soloodoo_sales_chantier_access_test odoo.modules.registry: module snailmail: creating or updating database tables 
+2026-09-14 17:58:18,545 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading snailmail/data/snailmail_data.xml 
+2026-09-14 17:58:18,556 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading snailmail/views/report_assets.xml 
+2026-09-14 17:58:18,574 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading snailmail/views/snailmail_views.xml 
+2026-09-14 17:58:18,596 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading snailmail/wizard/snailmail_letter_format_error_views.xml 
+2026-09-14 17:58:18,609 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading snailmail/wizard/snailmail_letter_missing_required_fields_views.xml 
+2026-09-14 17:58:18,619 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading snailmail/security/ir.model.access.csv 
+2026-09-14 17:58:18,659 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: Module snailmail loaded in 0.45s, 446 queries (+446 other) 
+2026-09-14 17:58:18,659 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: Loading module auth_totp_portal (36/70) 
+2026-09-14 17:58:18,705 1 INFO soloodoo_sales_chantier_access_test odoo.modules.registry: module auth_totp_portal: creating or updating database tables 
+2026-09-14 17:58:18,736 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading auth_totp_portal/security/security.xml 
+2026-09-14 17:58:18,758 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading auth_totp_portal/views/templates.xml 
+2026-09-14 17:58:18,789 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: Module auth_totp_portal loaded in 0.13s, 66 queries (+66 other) 
+2026-09-14 17:58:18,789 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: Loading module digest (37/70) 
+2026-09-14 17:58:18,840 1 INFO soloodoo_sales_chantier_access_test odoo.modules.registry: module digest: creating or updating database tables 
+2026-09-14 17:58:18,958 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading digest/security/ir.model.access.csv 
+2026-09-14 17:58:18,975 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading digest/data/digest_data.xml 
+2026-09-14 17:58:19,002 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading digest/data/digest_tips_data.xml 
+2026-09-14 17:58:19,022 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading digest/data/ir_cron_data.xml 
+2026-09-14 17:58:19,034 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading digest/data/res_config_settings_data.xml 
+2026-09-14 17:58:19,041 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading digest/views/digest_views.xml 
+2026-09-14 17:58:19,092 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading digest/views/digest_templates.xml 
+2026-09-14 17:58:19,099 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading digest/views/res_config_settings_views.xml 
+2026-09-14 17:58:19,143 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: Module digest loaded in 0.35s, 296 queries (+296 other) 
+2026-09-14 17:58:19,144 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: Loading module payment (38/70) 
+2026-09-14 17:58:19,211 1 INFO soloodoo_sales_chantier_access_test odoo.modules.registry: module payment: creating or updating database tables 
+2026-09-14 17:58:19,639 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading payment/data/onboarding_data.xml 
+2026-09-14 17:58:19,648 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading payment/data/payment_method_data.xml 
+2026-09-14 17:58:21,682 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading payment/data/payment_provider_data.xml 
+2026-09-14 17:58:21,913 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading payment/data/payment_cron.xml 
+2026-09-14 17:58:22,795 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading payment/views/express_checkout_templates.xml 
+2026-09-14 17:58:22,836 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading payment/views/payment_form_templates.xml 
+2026-09-14 17:58:22,924 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading payment/views/portal_templates.xml 
+2026-09-14 17:58:23,023 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading payment/views/payment_provider_views.xml 
+2026-09-14 17:58:23,054 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading payment/views/payment_method_views.xml 
+2026-09-14 17:58:23,080 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading payment/views/payment_transaction_views.xml 
+2026-09-14 17:58:23,107 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading payment/views/payment_token_views.xml 
+2026-09-14 17:58:23,132 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading payment/views/res_partner_views.xml 
+2026-09-14 17:58:23,147 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading payment/security/ir.model.access.csv 
+2026-09-14 17:58:23,166 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading payment/security/payment_security.xml 
+2026-09-14 17:58:23,198 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading payment/wizards/payment_capture_wizard_views.xml 
+2026-09-14 17:58:23,207 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading payment/wizards/payment_link_wizard_views.xml 
+2026-09-14 17:58:23,214 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading payment/wizards/payment_onboarding_views.xml 
+2026-09-14 17:58:23,260 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: Module payment loaded in 4.12s, 2222 queries (+2222 other) 
+2026-09-14 17:58:23,261 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: Loading module portal_rating (39/70) 
+2026-09-14 17:58:23,319 1 INFO soloodoo_sales_chantier_access_test odoo.modules.registry: module portal_rating: creating or updating database tables 
+2026-09-14 17:58:23,399 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading portal_rating/views/rating_rating_views.xml 
+2026-09-14 17:58:23,412 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading portal_rating/views/portal_templates.xml 
+2026-09-14 17:58:23,422 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading portal_rating/views/rating_templates.xml 
+2026-09-14 17:58:23,448 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: Module portal_rating loaded in 0.19s, 105 queries (+105 other) 
+2026-09-14 17:58:23,449 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: Loading module spreadsheet (40/70) 
+2026-09-14 17:58:23,536 1 INFO soloodoo_sales_chantier_access_test odoo.modules.registry: module spreadsheet: creating or updating database tables 
+2026-09-14 17:58:23,591 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading spreadsheet/views/public_readonly_spreadsheet_templates.xml 
+2026-09-14 17:58:23,618 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: Module spreadsheet loaded in 0.17s, 83 queries (+83 other) 
+2026-09-14 17:58:23,618 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: Loading module account (41/70) 
+2026-09-14 17:58:23,790 1 INFO soloodoo_sales_chantier_access_test odoo.modules.registry: module account: creating or updating database tables 
+2026-09-14 17:58:24,310 1 INFO soloodoo_sales_chantier_access_test odoo.models: Prepare computation of res.company.account_fiscal_country_id 
+2026-09-14 17:58:24,310 1 INFO soloodoo_sales_chantier_access_test odoo.models: Prepare computation of res.company.invoice_terms_html 
+2026-09-14 17:58:26,763 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading account/security/account_security.xml 
+2026-09-14 17:58:27,255 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading account/security/ir.model.access.csv 
+2026-09-14 17:58:27,340 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading account/data/account_data.xml 
+2026-09-14 17:58:27,438 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading account/data/digest_data.xml 
+2026-09-14 17:58:27,453 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading account/views/account_report.xml 
+2026-09-14 17:58:27,492 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading account/data/mail_template_data.xml 
+2026-09-14 17:58:27,516 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading account/data/onboarding_data.xml 
+2026-09-14 17:58:27,586 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading account/views/account_payment_view.xml 
+2026-09-14 17:58:27,674 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading account/wizard/account_automatic_entry_wizard_views.xml 
+2026-09-14 17:58:27,688 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading account/wizard/account_unreconcile_view.xml 
+2026-09-14 17:58:27,700 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading account/wizard/account_move_reversal_view.xml 
+2026-09-14 17:58:27,712 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading account/wizard/account_resequence_views.xml 
+2026-09-14 17:58:27,724 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading account/wizard/account_payment_register_views.xml 
+2026-09-14 17:58:27,735 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading account/views/account_move_views.xml 
+2026-09-14 17:58:28,112 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading account/wizard/setup_wizards_view.xml 
+2026-09-14 17:58:28,132 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading account/views/account_account_views.xml 
+2026-09-14 17:58:28,164 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading account/views/account_group_views.xml 
+2026-09-14 17:58:28,184 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading account/views/account_journal_views.xml 
+2026-09-14 17:58:28,245 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading account/views/account_account_tag_views.xml 
+2026-09-14 17:58:28,263 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading account/views/account_bank_statement_views.xml 
+2026-09-14 17:58:28,297 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading account/views/account_reconcile_model_views.xml 
+2026-09-14 17:58:28,333 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading account/views/account_tax_views.xml 
+2026-09-14 17:58:28,404 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading account/views/account_full_reconcile_views.xml 
+2026-09-14 17:58:28,411 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading account/views/account_payment_term_views.xml 
+2026-09-14 17:58:28,434 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading account/views/account_payment_method.xml 
+2026-09-14 17:58:28,446 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading account/views/res_partner_bank_views.xml 
+2026-09-14 17:58:28,478 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading account/views/report_statement.xml 
+2026-09-14 17:58:28,495 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading account/views/terms_template.xml 
+2026-09-14 17:58:28,511 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading account/wizard/account_validate_move_view.xml 
+2026-09-14 17:58:28,523 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading account/views/res_company_views.xml 
+2026-09-14 17:58:28,554 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading account/views/product_view.xml 
+2026-09-14 17:58:28,582 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading account/views/account_analytic_plan_views.xml 
+2026-09-14 17:58:28,590 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading account/views/account_analytic_account_views.xml 
+2026-09-14 17:58:28,606 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading account/views/account_analytic_distribution_model_views.xml 
+2026-09-14 17:58:28,622 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading account/views/account_analytic_line_views.xml 
+2026-09-14 17:58:28,658 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading account/views/report_invoice.xml 
+2026-09-14 17:58:28,699 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading account/report/account_invoice_report_view.xml 
+2026-09-14 17:58:28,746 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading account/views/account_cash_rounding_view.xml 
+2026-09-14 17:58:28,767 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading account/views/ir_module_views.xml 
+2026-09-14 17:58:28,777 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading account/views/res_config_settings_views.xml 
+2026-09-14 17:58:28,813 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading account/views/partner_view.xml 
+2026-09-14 17:58:28,883 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading account/views/account_journal_dashboard_view.xml 
+2026-09-14 17:58:28,905 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading account/views/account_portal_templates.xml 
+2026-09-14 17:58:28,949 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading account/views/report_payment_receipt_templates.xml 
+2026-09-14 17:58:28,962 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading account/data/service_cron.xml 
+2026-09-14 17:58:28,978 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading account/views/account_incoterms_view.xml 
+2026-09-14 17:58:28,998 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading account/data/account_incoterms_data.xml 
+2026-09-14 17:58:29,022 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading account/views/digest_views.xml 
+2026-09-14 17:58:29,032 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading account/wizard/account_move_send_views.xml 
+2026-09-14 17:58:29,048 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading account/report/account_hash_integrity_templates.xml 
+2026-09-14 17:58:29,056 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading account/views/res_currency.xml 
+2026-09-14 17:58:29,066 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading account/views/account_menuitem.xml 
+2026-09-14 17:58:29,362 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading account/wizard/account_tour_upload_bill.xml 
+2026-09-14 17:58:29,374 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading account/wizard/accrued_orders.xml 
+2026-09-14 17:58:29,382 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading account/views/bill_preview_template.xml 
+2026-09-14 17:58:29,390 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading account/data/account_reports_data.xml 
+2026-09-14 17:58:30,386 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading account/views/uom_uom_views.xml 
+2026-09-14 17:58:30,396 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading account/data/ir_config_parameter_data.xml 
+2026-09-14 17:58:30,673 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: Module account loaded in 7.05s, 5694 queries (+5694 other) 
+2026-09-14 17:58:30,673 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: Loading module project (42/70) 
+2026-09-14 17:58:30,806 1 INFO soloodoo_sales_chantier_access_test odoo.modules.registry: module project: creating or updating database tables 
+2026-09-14 17:58:31,643 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading project/security/project_security.xml 
+2026-09-14 17:58:32,025 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading project/security/ir.model.access.csv 
+2026-09-14 17:58:32,065 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading project/security/ir.model.access.xml 
+2026-09-14 17:58:32,072 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading project/data/digest_data.xml 
+2026-09-14 17:58:32,084 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading project/report/project_task_burndown_chart_report_views.xml 
+2026-09-14 17:58:32,100 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading project/views/account_analytic_account_views.xml 
+2026-09-14 17:58:32,116 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading project/views/digest_digest_views.xml 
+2026-09-14 17:58:32,128 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading project/views/rating_rating_views.xml 
+2026-09-14 17:58:32,232 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading project/views/project_update_views.xml 
+2026-09-14 17:58:32,266 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading project/views/project_update_templates.xml 
+2026-09-14 17:58:32,279 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading project/views/project_project_stage_views.xml 
+2026-09-14 17:58:32,322 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading project/wizard/project_share_wizard_views.xml 
+2026-09-14 17:58:32,341 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading project/views/project_collaborator_views.xml 
+2026-09-14 17:58:32,359 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading project/views/project_task_type_views.xml 
+2026-09-14 17:58:32,402 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading project/views/project_project_views.xml 
+2026-09-14 17:58:32,565 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading project/views/project_task_views.xml 
+2026-09-14 17:58:32,837 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading project/views/project_tags_views.xml 
+2026-09-14 17:58:32,856 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading project/views/project_milestone_views.xml 
+2026-09-14 17:58:32,870 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading project/views/res_partner_views.xml 
+2026-09-14 17:58:32,887 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading project/views/res_config_settings_views.xml 
+2026-09-14 17:58:32,911 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading project/views/mail_activity_plan_views.xml 
+2026-09-14 17:58:32,934 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading project/views/mail_activity_type_views.xml 
+2026-09-14 17:58:32,941 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading project/views/project_sharing_project_task_views.xml 
+2026-09-14 17:58:33,002 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading project/views/project_portal_project_project_templates.xml 
+2026-09-14 17:58:33,032 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading project/views/project_portal_project_task_templates.xml 
+2026-09-14 17:58:33,081 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading project/views/project_task_templates.xml 
+2026-09-14 17:58:33,087 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading project/views/project_sharing_project_task_templates.xml 
+2026-09-14 17:58:33,102 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading project/report/project_report_views.xml 
+2026-09-14 17:58:33,127 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading project/data/ir_cron_data.xml 
+2026-09-14 17:58:33,135 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading project/data/mail_message_subtype_data.xml 
+2026-09-14 17:58:33,194 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading project/data/mail_template_data.xml 
+2026-09-14 17:58:33,210 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading project/data/project_data.xml 
+2026-09-14 17:58:33,223 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading project/wizard/project_task_type_delete_views.xml 
+2026-09-14 17:58:33,239 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading project/wizard/project_project_stage_delete_views.xml 
+2026-09-14 17:58:33,250 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading project/views/project_menus.xml 
+2026-09-14 17:58:33,462 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: Module project loaded in 2.79s, 2597 queries (+2597 other) 
+2026-09-14 17:58:33,462 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: Loading module spreadsheet_dashboard (43/70) 
+2026-09-14 17:58:33,547 1 INFO soloodoo_sales_chantier_access_test odoo.modules.registry: module spreadsheet_dashboard: creating or updating database tables 
+2026-09-14 17:58:33,676 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading spreadsheet_dashboard/security/security.xml 
+2026-09-14 17:58:33,740 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading spreadsheet_dashboard/security/ir.model.access.csv 
+2026-09-14 17:58:33,755 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading spreadsheet_dashboard/views/spreadsheet_dashboard_views.xml 
+2026-09-14 17:58:33,774 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading spreadsheet_dashboard/views/menu_views.xml 
+2026-09-14 17:58:33,808 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading spreadsheet_dashboard/data/dashboard.xml 
+2026-09-14 17:58:33,855 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: Module spreadsheet_dashboard loaded in 0.39s, 269 queries (+269 other) 
+2026-09-14 17:58:33,855 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: Loading module stock (44/70) 
+2026-09-14 17:58:34,073 1 INFO soloodoo_sales_chantier_access_test odoo.modules.registry: module stock: creating or updating database tables 
+2026-09-14 17:58:36,619 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading stock/security/stock_security.xml 
+2026-09-14 17:58:37,125 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading stock/security/ir.model.access.csv 
+2026-09-14 17:58:37,255 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading stock/data/digest_data.xml 
+2026-09-14 17:58:37,282 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading stock/data/mail_templates.xml 
+2026-09-14 17:58:37,315 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading stock/data/default_barcode_patterns.xml 
+2026-09-14 17:58:37,334 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading stock/data/stock_data.xml 
+2026-09-14 17:58:37,746 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading stock/data/stock_sequence_data.xml 
+2026-09-14 17:58:37,768 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading stock/data/stock_traceability_report_data.xml 
+2026-09-14 17:58:37,775 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading stock/report/report_stock_quantity.xml 
+2026-09-14 17:58:37,782 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading stock/report/report_stock_reception.xml 
+2026-09-14 17:58:37,801 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading stock/report/stock_report_views.xml 
+2026-09-14 17:58:37,842 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading stock/report/report_package_barcode.xml 
+2026-09-14 17:58:37,858 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading stock/report/report_lot_barcode.xml 
+2026-09-14 17:58:37,865 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading stock/report/report_location_barcode.xml 
+2026-09-14 17:58:37,875 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading stock/report/report_stockpicking_operations.xml 
+2026-09-14 17:58:37,888 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading stock/report/report_deliveryslip.xml 
+2026-09-14 17:58:37,917 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading stock/report/report_stockinventory.xml 
+2026-09-14 17:58:37,925 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading stock/report/report_stock_rule.xml 
+2026-09-14 17:58:37,952 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading stock/report/package_templates.xml 
+2026-09-14 17:58:37,959 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading stock/report/picking_templates.xml 
+2026-09-14 17:58:37,973 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading stock/report/product_templates.xml 
+2026-09-14 17:58:37,982 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading stock/report/product_packaging.xml 
+2026-09-14 17:58:37,987 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading stock/report/report_return_slip.xml 
+2026-09-14 17:58:38,002 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading stock/data/mail_template_data.xml 
+2026-09-14 17:58:38,012 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading stock/views/stock_menu_views.xml 
+2026-09-14 17:58:38,117 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading stock/wizard/stock_assign_serial_views.xml 
+2026-09-14 17:58:38,132 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading stock/wizard/stock_change_product_qty_views.xml 
+2026-09-14 17:58:38,162 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading stock/wizard/stock_picking_return_views.xml 
+2026-09-14 17:58:38,174 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading stock/wizard/stock_scheduler_compute_views.xml 
+2026-09-14 17:58:38,189 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading stock/wizard/stock_inventory_conflict.xml 
+2026-09-14 17:58:38,203 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading stock/wizard/stock_backorder_confirmation_views.xml 
+2026-09-14 17:58:38,213 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading stock/wizard/stock_quantity_history.xml 
+2026-09-14 17:58:38,219 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading stock/wizard/stock_request_count.xml 
+2026-09-14 17:58:38,235 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading stock/wizard/stock_replenishment_info.xml 
+2026-09-14 17:58:38,254 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading stock/wizard/stock_rules_report_views.xml 
+2026-09-14 17:58:38,264 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading stock/wizard/stock_warn_insufficient_qty_views.xml 
+2026-09-14 17:58:38,278 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading stock/wizard/product_replenish_views.xml 
+2026-09-14 17:58:38,290 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading stock/wizard/product_label_layout_views.xml 
+2026-09-14 17:58:38,300 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading stock/wizard/stock_track_confirmation_views.xml 
+2026-09-14 17:58:38,315 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading stock/wizard/stock_orderpoint_snooze_views.xml 
+2026-09-14 17:58:38,327 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading stock/wizard/stock_package_destination_views.xml 
+2026-09-14 17:58:38,338 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading stock/wizard/stock_inventory_adjustment_name.xml 
+2026-09-14 17:58:38,347 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading stock/wizard/stock_inventory_warning.xml 
+2026-09-14 17:58:38,360 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading stock/wizard/stock_label_type.xml 
+2026-09-14 17:58:38,368 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading stock/wizard/stock_lot_label_layout.xml 
+2026-09-14 17:58:38,376 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading stock/wizard/stock_quant_relocate.xml 
+2026-09-14 17:58:38,386 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading stock/views/res_partner_views.xml 
+2026-09-14 17:58:38,483 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading stock/views/product_strategy_views.xml 
+2026-09-14 17:58:38,526 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading stock/views/stock_lot_views.xml 
+2026-09-14 17:58:38,579 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading stock/views/stock_scrap_views.xml 
+2026-09-14 17:58:38,627 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading stock/views/stock_quant_views.xml 
+2026-09-14 17:58:38,818 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading stock/views/stock_warehouse_views.xml 
+2026-09-14 17:58:38,848 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading stock/views/stock_move_line_views.xml 
+2026-09-14 17:58:38,912 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading stock/views/stock_picking_views.xml 
+2026-09-14 17:58:39,039 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading stock/views/stock_picking_type_views.xml 
+2026-09-14 17:58:39,100 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading stock/views/stock_move_views.xml 
+2026-09-14 17:58:39,197 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading stock/views/product_views.xml 
+2026-09-14 17:58:39,387 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading stock/views/stock_location_views.xml 
+2026-09-14 17:58:39,465 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading stock/views/stock_orderpoint_views.xml 
+2026-09-14 17:58:39,523 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading stock/views/stock_storage_category_views.xml 
+2026-09-14 17:58:39,554 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading stock/views/res_config_settings_views.xml 
+2026-09-14 17:58:39,598 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading stock/views/report_stock_traceability.xml 
+2026-09-14 17:58:39,610 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading stock/views/stock_template.xml 
+2026-09-14 17:58:39,620 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading stock/views/stock_rule_views.xml 
+2026-09-14 17:58:39,661 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading stock/views/stock_package_level_views.xml 
+2026-09-14 17:58:39,682 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading stock/views/stock_package_type_view.xml 
+2026-09-14 17:58:39,709 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading stock/views/stock_forecasted.xml 
+2026-09-14 17:58:39,804 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: Module stock loaded in 5.95s, 5103 queries (+5103 other) 
+2026-09-14 17:58:39,805 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: Loading module account_add_gln (45/70) 
+2026-09-14 17:58:39,917 1 INFO soloodoo_sales_chantier_access_test odoo.modules.registry: module account_add_gln: creating or updating database tables 
+2026-09-14 17:58:40,213 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading account_add_gln/views/res_partner_views.xml 
+2026-09-14 17:58:40,279 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: Module account_add_gln loaded in 0.47s, 96 queries (+96 other) 
+2026-09-14 17:58:40,279 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: Loading module account_edi_ubl_cii (46/70) 
+2026-09-14 17:58:40,470 1 INFO soloodoo_sales_chantier_access_test odoo.modules.registry: module account_edi_ubl_cii: creating or updating database tables 
+2026-09-14 17:58:40,494 1 INFO soloodoo_sales_chantier_access_test odoo.models: Prepare computation of res.partner.ubl_cii_format 
+2026-09-14 17:58:40,494 1 INFO soloodoo_sales_chantier_access_test odoo.models: Prepare computation of res.partner.peppol_endpoint 
+2026-09-14 17:58:40,494 1 INFO soloodoo_sales_chantier_access_test odoo.models: Prepare computation of res.partner.peppol_eas 
+2026-09-14 17:58:40,668 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading account_edi_ubl_cii/data/cii_22_templates.xml 
+2026-09-14 17:58:40,698 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading account_edi_ubl_cii/data/ubl_20_templates.xml 
+2026-09-14 17:58:40,840 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading account_edi_ubl_cii/data/ubl_21_templates.xml 
+2026-09-14 17:58:40,959 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading account_edi_ubl_cii/views/account_move_views.xml 
+2026-09-14 17:58:40,968 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading account_edi_ubl_cii/views/res_config_settings_views.xml 
+2026-09-14 17:58:40,989 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading account_edi_ubl_cii/views/res_partner_views.xml 
+2026-09-14 17:58:41,026 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading account_edi_ubl_cii/wizard/account_move_send_views.xml 
+2026-09-14 17:58:41,067 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: Module account_edi_ubl_cii loaded in 0.79s, 438 queries (+438 other) 
+2026-09-14 17:58:41,067 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: Loading module account_payment (47/70) 
+2026-09-14 17:58:41,171 1 INFO soloodoo_sales_chantier_access_test odoo.modules.registry: module account_payment: creating or updating database tables 
+2026-09-14 17:58:41,384 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading account_payment/data/ir_config_parameter.xml 
+2026-09-14 17:58:41,393 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading account_payment/data/onboarding_data.xml 
+2026-09-14 17:58:41,411 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading account_payment/security/ir.model.access.csv 
+2026-09-14 17:58:41,431 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading account_payment/security/ir_rules.xml 
+2026-09-14 17:58:41,444 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading account_payment/views/account_payment_menus.xml 
+2026-09-14 17:58:41,478 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading account_payment/views/account_portal_templates.xml 
+2026-09-14 17:58:41,520 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading account_payment/views/account_move_views.xml 
+2026-09-14 17:58:41,535 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading account_payment/views/account_journal_views.xml 
+2026-09-14 17:58:41,550 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading account_payment/views/account_payment_views.xml 
+2026-09-14 17:58:41,564 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading account_payment/views/payment_provider_views.xml 
+2026-09-14 17:58:41,575 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading account_payment/views/payment_transaction_views.xml 
+2026-09-14 17:58:41,586 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading account_payment/wizards/account_payment_register_views.xml 
+2026-09-14 17:58:41,598 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading account_payment/wizards/payment_link_wizard_views.xml 
+2026-09-14 17:58:41,606 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading account_payment/wizards/payment_refund_wizard_views.xml 
+2026-09-14 17:58:41,614 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading account_payment/wizards/res_config_settings_views.xml 
+2026-09-14 17:58:41,689 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: Module account_payment loaded in 0.62s, 481 queries (+481 other) 
+2026-09-14 17:58:41,690 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: Loading module account_payment_term (48/70) 
+2026-09-14 17:58:41,787 1 INFO soloodoo_sales_chantier_access_test odoo.modules.registry: module account_payment_term: creating or updating database tables 
+2026-09-14 17:58:41,834 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: loading account_payment_term/views/account_payment_term_views.xml 
+2026-09-14 17:58:41,868 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: Module account_payment_term loaded in 0.18s, 52 queries (+52 other) 
+2026-09-14 17:58:41,868 1 INFO soloodoo_sales_chantier_access_test odoo.modules.loading: Loading module elmokrif_chantier (49/70) 
+2026-09-14 17:58:41,876 1 CRITICAL soloodoo_sales_chantier_access_test odoo.modules.module: Couldn't load module elmokrif_chantier 
+2026-09-14 17:58:41,879 1 WARNING soloodoo_sales_chantier_access_test odoo.modules.loading: Transient module states were reset 
+2026-09-14 17:58:41,880 1 ERROR soloodoo_sales_chantier_access_test odoo.modules.registry: Failed to load registry 
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/modules/registry.py", line 99, in new
+    odoo.modules.load_modules(registry, force_demo, status, update_module)
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 485, in load_modules
+    processed_modules += load_marked_modules(env, graph,
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 366, in load_marked_modules
+    loaded, processed = load_module_graph(
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 187, in load_module_graph
+    load_openerp_module(package.name)
+  File "/usr/lib/python3/dist-packages/odoo/modules/module.py", line 424, in load_openerp_module
+    __import__(qualname)
+  File "/opt/elmokrif-addons/elmokrif_chantier/__init__.py", line 1, in <module>
+    from . import models
+  File "/opt/elmokrif-addons/elmokrif_chantier/models/__init__.py", line 2, in <module>
+    from . import project_project
+  File "/opt/elmokrif-addons/elmokrif_chantier/models/project_project.py", line 256
+    user.share
+    ^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+2026-09-14 17:58:41,884 1 CRITICAL soloodoo_sales_chantier_access_test odoo.service.server: Failed to initialize database `soloodoo_sales_chantier_access_test`. 
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/service/server.py", line 1422, in preload_registries
+    registry = Registry.new(dbname, update_module=update_module)
+  File "<decorator-gen-16>", line 2, in new
+  File "/usr/lib/python3/dist-packages/odoo/tools/func.py", line 87, in locked
+    return func(inst, *args, **kwargs)
+  File "/usr/lib/python3/dist-packages/odoo/modules/registry.py", line 99, in new
+    odoo.modules.load_modules(registry, force_demo, status, update_module)
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 485, in load_modules
+    processed_modules += load_marked_modules(env, graph,
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 366, in load_marked_modules
+    loaded, processed = load_module_graph(
+  File "/usr/lib/python3/dist-packages/odoo/modules/loading.py", line 187, in load_module_graph
+    load_openerp_module(package.name)
+  File "/usr/lib/python3/dist-packages/odoo/modules/module.py", line 424, in load_openerp_module
+    __import__(qualname)
+  File "/opt/elmokrif-addons/elmokrif_chantier/__init__.py", line 1, in <module>
+    from . import models
+  File "/opt/elmokrif-addons/elmokrif_chantier/models/__init__.py", line 2, in <module>
+    from . import project_project
+  File "/opt/elmokrif-addons/elmokrif_chantier/models/project_project.py", line 256
+    user.share
+    ^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+2026-09-14 17:58:41,887 1 INFO soloodoo_sales_chantier_access_test odoo.service.server: Initiating shutdown 
+2026-09-14 17:58:41,887 1 INFO soloodoo_sales_chantier_access_test odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2026-09-14 17:58:42,279 1 INFO soloodoo_sales_chantier_access_test odoo.sql_db: ConnectionPool(used=0/count=0/max=64): Closed 1 connections  
