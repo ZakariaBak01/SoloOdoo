@@ -145,7 +145,7 @@ Expected: only the approved workflow creates an approved baseline; approved esti
 ## WF-12: Daily site reports, live progress, and forecast
 
 1. Create chantier tasks with a mix of open and folded/completed stages.
-2. Add daily reports with quantities, labour hours, equipment hours/costs, weather, blockers, notes, photos, and cost codes.
+2. Add daily reports with quantities, labour hours, equipment hours/costs, weather, oblockers, notes, photos, and cost codes.
 3. Open the estimate **Live Cost Control** tab.
 4. Add actual stock consumption, then refresh the estimate.
 5. Confirm actual material cost, labour/equipment/other costs, actual total, progress, expected cost at progress, budget consumed, variance, and forecast final cost.

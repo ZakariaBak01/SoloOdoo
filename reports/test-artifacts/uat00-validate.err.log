@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "C:\Users\zakar\PycharmProjects\SoloOdoo\scripts\uat00_validate_site_user.py", line 49, in <module>
+    assert "UAT Site User" not in denied
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

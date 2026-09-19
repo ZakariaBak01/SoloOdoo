@@ -1,0 +1,4 @@
+from playwright.sync_api import sync_playwright
+with sync_playwright() as p:
+ b=p.chromium.launch(headless=True); page=b.new_page(viewport={"width":1440,"height":1000}); page.set_default_timeout(60000)
+ page.goto('http://localhost:8070/web/login?db=soloodoo_uat_ui',wait_until='domcontentloaded'); page.locator('input[name=login]').fill('uat.admin@example.test'); page.locator('input[name=password]').fill('UatAdminPassword!2026'); page.get_by_role('button',name='Log in',exact=True).click(no_wait_after=True); page.locator('.o_navbar_apps_menu').wait_for(); page.locator('.o_navbar_apps_menu').click(); page.wait_for_timeout(3000); print(page.locator('body').inner_text()[:2500]); print('APPS', page.locator('.o_app').count()); print(page.locator('.o_app').evaluate_all("els=>els.map(e=>({text:e.innerText,html:e.outerHTML.slice(0,300)}))")); page.screenshot(path='reports/test-artifacts/admin-launcher-diagnostic.png',full_page=True); b.close()

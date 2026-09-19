@@ -8,6 +8,7 @@
     "depends": ["project", "analytic", "stock", "mail", "account"],
     "data": [
         "security/chantier_groups.xml",
+        "security/menu_security.xml",
         "security/ir.model.access.csv",
         "security/chantier_rules.xml",
         "data/analytic_plan_data.xml",

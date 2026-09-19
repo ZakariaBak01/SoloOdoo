@@ -1,0 +1,1 @@
+{"cookies": [{"name": "tz", "value": "Africa/Casablanca", "domain": "localhost", "path": "/", "expires": -1, "httpOnly": false, "secure": false, "sameSite": "Lax"}, {"name": "session_id", "value": "c255215bb847c8db1491a062d00d8c3aaa5786f6", "domain": "localhost", "path": "/", "expires": 1790434266.064207, "httpOnly": true, "secure": false, "sameSite": "Lax"}], "origins": []}
