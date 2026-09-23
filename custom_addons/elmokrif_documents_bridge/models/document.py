@@ -52,6 +52,16 @@ class ElMokrifDocument(models.Model):
     expiry_activity_id = fields.Many2one(
         "mail.activity", copy=False, readonly=True, ondelete="set null",
     )
+    reviewed_by_id = fields.Many2one(
+        "res.users", string="Last Reviewed By", copy=False, readonly=True,
+        tracking=True,
+    )
+    reviewed_at = fields.Datetime(
+        string="Last Reviewed On", copy=False, readonly=True, tracking=True,
+    )
+    decision_reason = fields.Text(
+        string="Last Decision Reason", copy=False, readonly=True, tracking=True,
+    )
 
     _sql_constraints = [
         ("previous_revision_unique", "unique(previous_revision_id)",
@@ -68,7 +78,8 @@ class ElMokrifDocument(models.Model):
     def create(self, values_list):
         workflow_fields = {
             "state", "revision", "previous_revision_id", "successor_revision_id",
-            "expiry_activity_id",
+            "expiry_activity_id", "reviewed_by_id", "reviewed_at",
+            "decision_reason",
         }
         in_workflow = self.env.context.get("_elmokrif_document_workflow_token") is _DOCUMENT_WORKFLOW_TOKEN
         if not in_workflow and (
@@ -135,7 +146,8 @@ class ElMokrifDocument(models.Model):
         in_workflow = self.env.context.get("_elmokrif_document_workflow_token") is _DOCUMENT_WORKFLOW_TOKEN
         workflow_fields = {
             "state", "revision", "previous_revision_id", "successor_revision_id",
-            "expiry_activity_id",
+            "expiry_activity_id", "reviewed_by_id", "reviewed_at",
+            "decision_reason",
         }
         if workflow_fields.intersection(values) and not in_workflow:
             raise UserError(_("Document workflow evidence is managed by the document actions."))
@@ -167,23 +179,84 @@ class ElMokrifDocument(models.Model):
         if any(document.state not in ("draft", "rejected") for document in self):
             raise UserError(_("Only a draft or rejected document can be submitted for review."))
         self._workflow_write({"state": "in_review"})
+        for document in self:
+            document._message_log(body=_("Revision %s was submitted for review.") % document.revision)
         return True
 
     def action_approve(self):
         self._ensure_manager()
-        self._lock_for_workflow()
+        documents_to_lock = self | self.mapped("previous_revision_id")
+        documents_to_lock._lock_for_workflow()
         for document in self:
             if document.state != "in_review":
                 raise UserError(_("Only a document in review can be approved."))
-        self._workflow_write({"state": "approved"})
+            predecessor = document.previous_revision_id
+            if predecessor and predecessor.state != "approved":
+                raise UserError(
+                    _("The preceding revision must still be approved before this revision can replace it.")
+                )
+        decision_time = fields.Datetime.now()
+        for document in self:
+            predecessor = document.previous_revision_id
+            if predecessor:
+                predecessor._workflow_write({"state": "superseded"})
+                predecessor._message_log(
+                    body=_("Superseded by approved revision %s.") % document.revision
+                )
+            document._workflow_write({
+                "state": "approved",
+                "reviewed_by_id": self.env.user.id,
+                "reviewed_at": decision_time,
+                "decision_reason": False,
+            })
+            document._message_log(
+                body=_("Revision %(revision)s approved by %(reviewer)s on %(date)s.") % {
+                    "revision": document.revision,
+                    "reviewer": self.env.user.display_name,
+                    "date": fields.Datetime.to_string(decision_time),
+                }
+            )
         return True
 
-    def action_reject(self):
+    def action_open_reject_wizard(self):
         self._ensure_manager()
         self._lock_for_workflow()
         if any(document.state != "in_review" for document in self):
             raise UserError(_("Only a document in review can be rejected."))
-        self._workflow_write({"state": "rejected"})
+        self.ensure_one()
+        return {
+            "type": "ir.actions.act_window",
+            "name": _("Reject Controlled Document"),
+            "res_model": "elmokrif.document.reject.wizard",
+            "view_mode": "form",
+            "target": "new",
+            "context": {"default_document_id": self.id},
+        }
+
+    def _action_reject(self, reason):
+        self._ensure_manager()
+        reason = (reason or "").strip()
+        if not reason:
+            raise ValidationError(_("A rejection reason is required."))
+        self._lock_for_workflow()
+        if any(document.state != "in_review" for document in self):
+            raise UserError(_("Only a document in review can be rejected."))
+        decision_time = fields.Datetime.now()
+        for document in self:
+            document._workflow_write({
+                "state": "rejected",
+                "reviewed_by_id": self.env.user.id,
+                "reviewed_at": decision_time,
+                "decision_reason": reason,
+            })
+            document._message_log(
+                body=_("Revision %(revision)s rejected by %(reviewer)s on %(date)s. Reason: %(reason)s") % {
+                    "revision": document.revision,
+                    "reviewer": self.env.user.display_name,
+                    "date": fields.Datetime.to_string(decision_time),
+                    "reason": reason,
+                }
+            )
         return True
 
     def action_create_revision(self):
@@ -192,6 +265,11 @@ class ElMokrifDocument(models.Model):
         self._lock_for_workflow()
         if self.state != "approved":
             raise UserError(_("Only an approved document can be revised."))
+        if self.successor_revision_id:
+            return {
+                "type": "ir.actions.act_window", "res_model": "elmokrif.document",
+                "view_mode": "form", "res_id": self.successor_revision_id.id,
+            }
         revision = self.with_context(
             _elmokrif_document_workflow_token=_DOCUMENT_WORKFLOW_TOKEN
         ).copy({
@@ -200,10 +278,15 @@ class ElMokrifDocument(models.Model):
             "previous_revision_id": self.id,
             "successor_revision_id": False,
             "expiry_activity_id": False,
+            "reviewed_by_id": False,
+            "reviewed_at": False,
+            "decision_reason": False,
         })
-        self._workflow_write({
-            "state": "superseded", "successor_revision_id": revision.id,
-        })
+        self._workflow_write({"successor_revision_id": revision.id})
+        self._message_log(
+            body=_("Draft revision %s was created; this approved revision remains current until approval.")
+            % revision.revision
+        )
         return {
             "type": "ir.actions.act_window", "res_model": "elmokrif.document",
             "view_mode": "form", "res_id": revision.id,
@@ -222,7 +305,7 @@ class ElMokrifDocument(models.Model):
         deadline = fields.Date.today() + timedelta(days=30)
         documents = self.search([
             ("state", "=", "approved"), ("expiry_date", "!=", False),
-            ("expiry_date", "<=", deadline), ("expiry_date", ">=", fields.Date.today()),
+            ("expiry_date", "<=", deadline),
             ("expiry_activity_id", "=", False),
         ])
         activity_type = self.env.ref("mail.mail_activity_data_todo")

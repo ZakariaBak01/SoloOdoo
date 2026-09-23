@@ -7,7 +7,7 @@
     <record id="group_elmokrif_document_user" model="res.groups">
         <field name="name">Document User</field>
         <field name="category_id" ref="module_category_elmokrif_documents"/>
-        <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        <field name="implied_ids" eval="[(4, ref('base.group_user')), (4, ref('elmokrif_chantier.group_chantier_user'))]"/>
     </record>
     <record id="group_elmokrif_document_manager" model="res.groups">
         <field name="name">Document Manager</field>

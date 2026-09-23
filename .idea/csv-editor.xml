@@ -10,6 +10,34 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\reports\uat-step-by-step\fixtures\uat-11\01-valid-exact-match.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\reports\uat-step-by-step\fixtures\uat-11\02-missing-reference-header.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\reports\uat-step-by-step\fixtures\uat-11\03-invalid-date.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\reports\uat-step-by-step\fixtures\uat-11\04-invalid-amount.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
       </map>
     </option>
   </component>

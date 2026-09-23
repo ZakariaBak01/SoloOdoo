@@ -95,7 +95,18 @@ uat_customer_a = upsert_partner(
         "country_id": morocco.id,
     },
 )
-upsert_partner(
+uat_customer_site = upsert_partner(
+    "UAT Customer A Site",
+    {
+        "parent_id": uat_customer_a.id,
+        "type": "delivery",
+        "company_id": company_a.id,
+        "country_id": morocco.id,
+        "street": "UAT Construction Site",
+        "city": "Casablanca",
+    },
+)
+uat_supplier_a = upsert_partner(
     "UAT Supplier A",
     {
         "supplier_rank": 1,
@@ -103,6 +114,59 @@ upsert_partner(
         "country_id": morocco.id,
     },
 )
+uat_supplier_b = upsert_partner(
+    "UAT Supplier B",
+    {
+        "supplier_rank": 1,
+        "company_id": company_a.id,
+        "country_id": morocco.id,
+    },
+)
+
+company_b_customer = env["res.partner"].with_context(active_test=False).search(
+    [("name", "=", "UAT Company B Customer"), ("company_id", "=", company_b.id)],
+    limit=1,
+)
+company_b_customer_values = {
+    "name": "UAT Company B Customer",
+    "customer_rank": 1,
+    "company_id": company_b.id,
+    "country_id": morocco.id,
+    "active": True,
+}
+if company_b_customer:
+    company_b_customer.write(company_b_customer_values)
+else:
+    company_b_customer = env["res.partner"].create(company_b_customer_values)
+
+# Keep the disposable environment deterministic and aligned with the UAT
+# workbook.  Both warehouses are useful for company-isolation checks.
+warehouse_a = env["stock.warehouse"].search(
+    [("company_id", "=", company_a.id)], limit=1
+)
+if warehouse_a:
+    warehouse_a.write({"name": "WH-A", "code": "WHA"})
+else:
+    warehouse_a = env["stock.warehouse"].create({
+        "name": "WH-A", "code": "WHA", "company_id": company_a.id,
+    })
+warehouse_b = env["stock.warehouse"].search(
+    [("company_id", "=", company_b.id)], limit=1
+)
+if warehouse_b:
+    warehouse_b.write({"name": "WH-B", "code": "WHB"})
+else:
+    warehouse_b = env["stock.warehouse"].create({
+        "name": "WH-B", "code": "WHB", "company_id": company_b.id,
+    })
+
+company_a.write({
+    "chantier_purchase_approval_threshold": 10000.0,
+    "chantier_purchase_two_person": True,
+    "chantier_quality_required": True,
+    "chantier_consumption_control_required": True,
+    "sale_chantier_followup_delay_days": 3,
+})
 
 weight_category = ref("uom.product_uom_categ_kgm")
 bag_uom = env["uom.uom"].with_context(active_test=False).search(

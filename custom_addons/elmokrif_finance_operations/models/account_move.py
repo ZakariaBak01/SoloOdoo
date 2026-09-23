@@ -8,6 +8,26 @@ class AccountMove(models.Model):
     elmokrif_collection_hold = fields.Boolean(string="Collection Hold", copy=False, tracking=True)
     elmokrif_collection_hold_reason = fields.Text(string="Collection Hold / Dispute Reason", copy=False, tracking=True)
     elmokrif_collector_id = fields.Many2one("res.users", string="Collector", tracking=True)
+    elmokrif_reminder_ids = fields.One2many(
+        "elmokrif.payment.reminder", "invoice_id", string="Payment Reminders", readonly=True,
+    )
+    elmokrif_reminder_count = fields.Integer(
+        string="Payment Reminder Count", compute="_compute_elmokrif_reminder_count",
+    )
+
+    @api.depends("elmokrif_reminder_ids")
+    def _compute_elmokrif_reminder_count(self):
+        for move in self:
+            move.elmokrif_reminder_count = len(move.elmokrif_reminder_ids)
+
+    def action_view_elmokrif_reminders(self):
+        self.ensure_one()
+        action = self.env["ir.actions.actions"]._for_xml_id(
+            "elmokrif_finance_operations.action_elmokrif_payment_reminder"
+        )
+        action["domain"] = [("invoice_id", "=", self.id)]
+        action["context"] = {"default_invoice_id": self.id}
+        return action
 
     @api.model_create_multi
     def create(self, values_list):

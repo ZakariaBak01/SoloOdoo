@@ -11,6 +11,7 @@
         "security/ir.model.access.csv",
         "security/document_rules.xml",
         "views/document_views.xml",
+        "views/reject_wizard_views.xml",
         "data/document_cron.xml",
     ],
     "installable": True,

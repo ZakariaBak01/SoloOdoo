@@ -1,6 +1,7 @@
 import base64
+from datetime import timedelta
 
-from odoo import Command
+from odoo import Command, fields
 from odoo.exceptions import AccessError, UserError
 from odoo.tests import TransactionCase, tagged
 
@@ -38,11 +39,51 @@ class TestControlledDocument(TransactionCase):
         document.with_user(self.manager).action_approve()
         action = document.with_user(self.manager).action_create_revision()
         revision = self.env["elmokrif.document"].browse(action["res_id"])
-        self.assertEqual(document.state, "superseded")
+        self.assertEqual(document.state, "approved")
         self.assertEqual(revision.revision, 2)
         self.assertEqual(revision.previous_revision_id, document)
         self.assertNotEqual(revision.attachment_id, document.attachment_id)
         self.assertEqual(revision.attachment_id.raw, document.attachment_id.raw)
+        revision.with_user(self.user).action_submit_for_review()
+        revision.with_user(self.manager).action_approve()
+        self.assertEqual(document.state, "superseded")
+        self.assertEqual(revision.state, "approved")
+        self.assertEqual(revision.reviewed_by_id, self.manager)
+        self.assertTrue(revision.reviewed_at)
+
+    def test_rejection_requires_reason_and_retains_review_evidence(self):
+        document = self._document()
+        document.with_user(self.user).action_submit_for_review()
+        with self.assertRaises(UserError):
+            document.with_user(self.manager)._action_reject("  ")
+        document.with_user(self.manager)._action_reject("Missing signature")
+        self.assertEqual(document.state, "rejected")
+        self.assertEqual(document.reviewed_by_id, self.manager)
+        self.assertTrue(document.reviewed_at)
+        self.assertEqual(document.decision_reason, "Missing signature")
+
+    def test_expiry_job_includes_past_due_and_is_idempotent(self):
+        document = self._document()
+        document.with_user(self.user).write({
+            "issue_date": fields.Date.today() - timedelta(days=30),
+            "expiry_date": fields.Date.today() - timedelta(days=1),
+        })
+        document.with_user(self.user).action_submit_for_review()
+        document.with_user(self.manager).action_approve()
+
+        self.env["elmokrif.document"]._cron_schedule_expiry_activities()
+        first_activity = document.expiry_activity_id
+        self.assertTrue(first_activity)
+        self.assertEqual(first_activity.user_id, self.user)
+        self.assertEqual(first_activity.date_deadline, document.expiry_date)
+
+        self.env["elmokrif.document"]._cron_schedule_expiry_activities()
+        self.assertEqual(document.expiry_activity_id, first_activity)
+        self.assertEqual(self.env["mail.activity"].search_count([
+            ("res_model", "=", "elmokrif.document"),
+            ("res_id", "=", document.id),
+            ("summary", "=", "Document expiry"),
+        ]), 1)
 
     def test_create_cannot_forge_document_workflow(self):
         attachment = self.env["ir.attachment"].create({
@@ -105,5 +146,5 @@ class TestControlledDocument(TransactionCase):
         revision.attachment_id.with_user(self.user).write({"datas": base64.b64encode(b"new evidence")})
         self.assertEqual(document.attachment_id.raw, b"original evidence")
         self.assertEqual(revision.attachment_id.raw, b"new evidence")
-        with self.assertRaises(UserError):
-            document.with_user(self.manager).action_create_revision()
+        repeated_action = document.with_user(self.manager).action_create_revision()
+        self.assertEqual(repeated_action["res_id"], revision.id)

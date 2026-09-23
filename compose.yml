@@ -27,7 +27,9 @@ services:
         condition: service_healthy
     ports:
       - "${ODOO_PORT:-8069}:8069"
-    command: odoo -d test --db-filter=^test$
+    # Serve the default local database and disposable UAT/test databases.
+    # Production databases should use a deployment-specific exact filter.
+    command: ["odoo", "-d", "test", "--db-filter=^(test|soloodoo_.*test.*)$"]
     environment:
       HOST: db
       USER: ${POSTGRES_USER:?POSTGRES_USER must be set in .env}

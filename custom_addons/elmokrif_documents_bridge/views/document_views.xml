@@ -7,6 +7,29 @@
             <tree><field name="name"/><field name="category"/><field name="chantier_id"/><field name="revision"/><field name="expiry_date"/><field name="state" widget="badge"/></tree>
         </field>
     </record>
+    <record id="view_elmokrif_document_search" model="ir.ui.view">
+        <field name="name">elmokrif.document.search</field>
+        <field name="model">elmokrif.document</field>
+        <field name="arch" type="xml">
+            <search string="Controlled Documents">
+                <field name="name"/>
+                <field name="chantier_id"/>
+                <field name="category"/>
+                <field name="owner_id"/>
+                <field name="state"/>
+                <field name="expiry_date"/>
+                <filter name="current_approved" string="Current Approved" domain="[('state', '=', 'approved')]"/>
+                <filter name="expiring" string="Has Expiry Date" domain="[('expiry_date', '!=', False)]"/>
+                <group expand="0" string="Group By">
+                    <filter name="group_chantier" string="Chantier" context="{'group_by': 'chantier_id'}"/>
+                    <filter name="group_category" string="Category" context="{'group_by': 'category'}"/>
+                    <filter name="group_owner" string="Owner" context="{'group_by': 'owner_id'}"/>
+                    <filter name="group_state" string="State" context="{'group_by': 'state'}"/>
+                    <filter name="group_expiry" string="Expiry Date" context="{'group_by': 'expiry_date'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
     <record id="view_elmokrif_document_form" model="ir.ui.view">
         <field name="name">elmokrif.document.form</field>
         <field name="model">elmokrif.document</field>
@@ -14,19 +37,19 @@
             <form>
                 <header>
                     <button name="action_submit_for_review" type="object" string="Submit for Review" invisible="state not in ('draft', 'rejected')"/>
-                    <button name="action_approve" type="object" string="Approve" class="btn-primary" invisible="state != 'in_review'"/>
-                    <button name="action_reject" type="object" string="Reject" invisible="state != 'in_review'"/>
-                    <button name="action_create_revision" type="object" string="Create Revision" invisible="state != 'approved'"/>
-                    <button name="action_archive" type="object" string="Archive" invisible="state not in ('approved', 'superseded')"/>
+                    <button name="action_approve" type="object" string="Approve" class="btn-primary" groups="elmokrif_documents_bridge.group_elmokrif_document_manager" invisible="state != 'in_review'"/>
+                    <button name="action_open_reject_wizard" type="object" string="Reject" groups="elmokrif_documents_bridge.group_elmokrif_document_manager" invisible="state != 'in_review'"/>
+                    <button name="action_create_revision" type="object" string="Create Revision" groups="elmokrif_documents_bridge.group_elmokrif_document_manager" invisible="state != 'approved'"/>
+                    <button name="action_archive" type="object" string="Archive" groups="elmokrif_documents_bridge.group_elmokrif_document_manager" invisible="state not in ('approved', 'superseded')"/>
                     <field name="state" widget="statusbar" statusbar_visible="draft,in_review,approved,rejected,superseded,archived"/>
                 </header>
-                <sheet><group><group><field name="name"/><field name="category"/><field name="company_id"/><field name="chantier_id"/><field name="owner_id"/></group><group><field name="issue_date"/><field name="expiry_date"/><field name="revision"/><field name="attachment_id"/><field name="previous_revision_id" readonly="1"/><field name="successor_revision_id" readonly="1"/></group></group></sheet>
+                <sheet><group><group><field name="name"/><field name="category"/><field name="company_id"/><field name="chantier_id"/><field name="owner_id"/></group><group><field name="issue_date"/><field name="expiry_date"/><field name="revision"/><field name="attachment_id"/><field name="previous_revision_id" readonly="1"/><field name="successor_revision_id" readonly="1"/></group></group><group string="Review Evidence" invisible="not reviewed_by_id"><field name="reviewed_by_id"/><field name="reviewed_at"/><field name="decision_reason" invisible="not decision_reason"/></group></sheet>
                 <chatter/>
             </form>
         </field>
     </record>
     <record id="action_elmokrif_document" model="ir.actions.act_window">
-        <field name="name">Controlled Documents</field><field name="res_model">elmokrif.document</field><field name="view_mode">tree,form</field>
+        <field name="name">Controlled Documents</field><field name="res_model">elmokrif.document</field><field name="view_mode">tree,form</field><field name="search_view_id" ref="view_elmokrif_document_search"/>
     </record>
     <menuitem id="menu_elmokrif_documents_root" name="Documents" sequence="70" groups="elmokrif_documents_bridge.group_elmokrif_document_user"/>
     <menuitem id="menu_elmokrif_document" name="Controlled Documents" parent="menu_elmokrif_documents_root" action="action_elmokrif_document"/>

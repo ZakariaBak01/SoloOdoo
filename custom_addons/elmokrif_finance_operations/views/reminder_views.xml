@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_elmokrif_payment_reminder_tree" model="ir.ui.view">
+        <field name="name">elmokrif.payment.reminder.tree</field>
+        <field name="model">elmokrif.payment.reminder</field>
+        <field name="arch" type="xml">
+            <tree create="false" delete="false" decoration-danger="state == 'failed'" decoration-muted="state == 'suppressed'" decoration-success="state == 'sent'">
+                <field name="invoice_id"/>
+                <field name="level" widget="badge"/>
+                <field name="due_date"/>
+                <field name="collector_id"/>
+                <field name="state" widget="badge"/>
+                <field name="mail_state" widget="badge"/>
+                <field name="mail_subject"/>
+                <button name="action_retry" type="object" string="Retry" icon="fa-refresh" invisible="state != 'failed'"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_elmokrif_payment_reminder_form" model="ir.ui.view">
+        <field name="name">elmokrif.payment.reminder.form</field>
+        <field name="model">elmokrif.payment.reminder</field>
+        <field name="arch" type="xml">
+            <form create="false" edit="false" delete="false">
+                <header>
+                    <button name="action_retry" type="object" string="Retry" class="btn-primary" invisible="state != 'failed'"/>
+                    <field name="state" widget="statusbar" statusbar_visible="queued,sent,failed,suppressed"/>
+                </header>
+                <sheet>
+                    <div class="oe_title"><h1><field name="invoice_id"/></h1></div>
+                    <group>
+                        <group>
+                            <field name="level"/>
+                            <field name="due_date"/>
+                            <field name="collector_id"/>
+                            <field name="company_id"/>
+                        </group>
+                        <group string="Delivery Evidence">
+                            <field name="mail_state"/>
+                            <field name="mail_subject"/>
+                            <field name="mail_recipient"/>
+                            <field name="mail_failure_reason" invisible="not mail_failure_reason"/>
+                        </group>
+                    </group>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_elmokrif_payment_reminder_search" model="ir.ui.view">
+        <field name="name">elmokrif.payment.reminder.search</field>
+        <field name="model">elmokrif.payment.reminder</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="invoice_id"/>
+                <field name="collector_id"/>
+                <field name="state"/>
+                <field name="level"/>
+                <filter name="failed" string="Failed" domain="[('state', '=', 'failed')]"/>
+                <filter name="suppressed" string="Suppressed" domain="[('state', '=', 'suppressed')]"/>
+                <group expand="0" string="Group By">
+                    <filter name="group_invoice" string="Invoice" context="{'group_by': 'invoice_id'}"/>
+                    <filter name="group_state" string="Status" context="{'group_by': 'state'}"/>
+                    <filter name="group_level" string="Level" context="{'group_by': 'level'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_elmokrif_payment_reminder" model="ir.actions.act_window">
+        <field name="name">Payment Reminders</field>
+        <field name="res_model">elmokrif.payment.reminder</field>
+        <field name="view_mode">tree,form</field>
+        <field name="search_view_id" ref="view_elmokrif_payment_reminder_search"/>
+    </record>
+
+    <menuitem id="menu_elmokrif_payment_reminder" name="Payment Reminders" parent="account.menu_finance" action="action_elmokrif_payment_reminder" groups="account.group_account_manager" sequence="52"/>
+</odoo>

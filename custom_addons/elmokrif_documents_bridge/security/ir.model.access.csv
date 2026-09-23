@@ -1,3 +1,4 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_elmokrif_document_user,elmokrif.document user,model_elmokrif_document,elmokrif_documents_bridge.group_elmokrif_document_user,1,1,1,0
 access_elmokrif_document_manager,elmokrif.document manager,model_elmokrif_document,elmokrif_documents_bridge.group_elmokrif_document_manager,1,1,1,1
+access_elmokrif_document_reject_wizard,elmokrif.document.reject.wizard,model_elmokrif_document_reject_wizard,elmokrif_documents_bridge.group_elmokrif_document_manager,1,1,1,1

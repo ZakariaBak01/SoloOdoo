@@ -6,7 +6,7 @@ from odoo import Command, fields
 from odoo.addons.account.tests.common import AccountTestInvoicingCommon
 from odoo.addons.mail.models.mail_mail import MailMail as BaseMailMail
 from odoo.exceptions import AccessError, UserError, ValidationError
-from odoo.tests import TransactionCase, tagged
+from odoo.tests import TransactionCase, new_test_user, tagged
 
 
 @tagged("post_install", "-at_install")
@@ -33,6 +33,11 @@ class TestFinanceOperations(TransactionCase):
         statement.action_import_file()
         self.assertEqual(statement.state, "imported")
         self.assertEqual(len(statement.line_ids), 1)
+        self.assertEqual(len(statement.native_statement_id.line_ids), 1)
+        self.assertEqual(
+            statement.line_ids.native_statement_line_id,
+            statement.native_statement_id.line_ids,
+        )
         line = statement.line_ids
         with self.assertRaises(AccessError):
             line.write({"amount": 999})
@@ -42,6 +47,25 @@ class TestFinanceOperations(TransactionCase):
         duplicate = self._statement(content)
         with self.assertRaises(UserError):
             duplicate.action_import_file()
+
+    def test_account_manager_can_import_through_native_accounting_bridge(self):
+        accountant = new_test_user(
+            self.env,
+            login="bank-accountant",
+            groups="account.group_account_manager",
+            company_id=self.company.id,
+        )
+        self.assertFalse(
+            self.env["account.bank.statement"].with_user(accountant).check_access_rights(
+                "create", raise_exception=False,
+            )
+        )
+        statement = self._statement(
+            "date,amount,reference,partner\n2026-09-03,225.00,ROLE-ACCESS-1,Customer\n"
+        )
+        statement.with_user(accountant).action_import_file()
+        self.assertTrue(statement.native_statement_id)
+        self.assertEqual(len(statement.native_statement_id.line_ids), 1)
 
     def test_create_cannot_forge_finance_workflow_evidence(self):
         with self.assertRaises(UserError):
@@ -118,11 +142,27 @@ class TestFinanceWorkflowSafety(AccountTestInvoicingCommon):
         with self.assertRaises(ValidationError):
             line.matched_payment_id = foreign
         inbound = self._payment()
-        line.action_suggest_payment()
+        accountant = new_test_user(
+            self.env,
+            login="reconciliation-accountant",
+            groups="account.group_account_manager",
+            company_id=self.company.id,
+        )
+        result = line.with_user(accountant).action_suggest_payment()
         self.assertEqual(line.matched_payment_id, inbound)
-        line.action_confirm_match()
+        self.assertEqual(result["tag"], "display_notification")
+        line.with_user(accountant).action_confirm_match()
         self.assertEqual(line.state, "matched")
+        self.assertTrue(line.native_statement_line_id.is_reconciled)
+        self.assertTrue(line.native_reconciliation_ref)
+        payment_outstanding_line = inbound.move_id.line_ids.filtered(
+            lambda move_line: move_line.account_id.account_type
+            not in ("asset_receivable", "liability_payable")
+        )
+        self.assertTrue(payment_outstanding_line.reconciled)
         other_line = self._bank_line(date="2026-09-02")
+        with self.assertRaisesRegex(UserError, "No exact posted payment"):
+            other_line.action_suggest_payment()
         with self.assertRaises(ValidationError):
             other_line.matched_payment_id = inbound
         with self.assertRaises(UserError):
@@ -140,6 +180,7 @@ class TestFinanceWorkflowSafety(AccountTestInvoicingCommon):
         line.matched_payment_id = payment
         line.action_confirm_match()
         self.assertEqual(line.state, "matched")
+        self.assertTrue(line.native_statement_line_id.is_reconciled)
 
     def test_bank_csv_rejects_overflow_and_bad_columns(self):
         with self.assertRaises(ValidationError):
@@ -163,6 +204,26 @@ class TestFinanceWorkflowSafety(AccountTestInvoicingCommon):
         reminder.invoice_id.write({"elmokrif_collection_hold": True, "elmokrif_collection_hold_reason": "Later dispute"})
         self.env["elmokrif.payment.reminder"]._cron_refresh_reminder_statuses()
         self.assertEqual(reminder.state, "sent")
+
+    def test_account_manager_can_discover_and_retry_failed_reminder(self):
+        reminder = self._reminder()
+        reminder.mail_id.write({"state": "exception", "failure_reason": "Test delivery failure"})
+        self.env["elmokrif.payment.reminder"]._cron_refresh_reminder_statuses()
+        self.assertEqual(reminder.state, "failed")
+        self.assertEqual(reminder.mail_state, "exception")
+        accountant = new_test_user(
+            self.env,
+            login="reminder-accountant",
+            groups="account.group_account_manager",
+            company_id=self.company.id,
+        )
+        action = reminder.invoice_id.with_user(accountant).action_view_elmokrif_reminders()
+        self.assertEqual(action["domain"], [("invoice_id", "=", reminder.invoice_id.id)])
+        result = reminder.with_user(accountant).action_retry()
+        reminder.invalidate_recordset()
+        self.assertEqual(result["tag"], "display_notification")
+        self.assertEqual(reminder.state, "queued")
+        self.assertEqual(reminder.mail_state, "outgoing")
 
     def test_cheque_report_and_voided_evidence_are_guarded(self):
         payment = self._payment("outbound", elmokrif_cheque_number="CHQ-0001")

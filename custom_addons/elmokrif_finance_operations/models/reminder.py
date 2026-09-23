@@ -24,6 +24,18 @@ class ElMokrifPaymentReminder(models.Model):
         ("suppressed", "Suppressed"),
     ], default="queued", required=True, readonly=True, tracking=True)
     mail_id = fields.Many2one("mail.mail", readonly=True, copy=False, ondelete="set null")
+    mail_state = fields.Selection(
+        related="mail_id.state", string="Mail Status", store=True, readonly=True,
+    )
+    mail_subject = fields.Char(
+        related="mail_id.subject", string="Mail Subject", store=True, readonly=True,
+    )
+    mail_recipient = fields.Text(
+        related="mail_id.email_to", string="Recipient", store=True, readonly=True,
+    )
+    mail_failure_reason = fields.Text(
+        related="mail_id.failure_reason", string="Delivery Failure", store=True, readonly=True,
+    )
     collector_id = fields.Many2one(related="invoice_id.elmokrif_collector_id", readonly=True)
     due_date = fields.Date(related="invoice_id.invoice_date_due", readonly=True)
 
@@ -143,7 +155,17 @@ class ElMokrifPaymentReminder(models.Model):
             reminder._workflow_write({
                 "mail_id": mail_id, "state": "queued",
             })
-        return True
+        return {
+            "type": "ir.actions.client",
+            "tag": "display_notification",
+            "params": {
+                "title": _("Reminder queued"),
+                "message": _("The reminder email was queued for another delivery attempt."),
+                "type": "success",
+                "sticky": False,
+                "next": {"type": "ir.actions.client", "tag": "reload"},
+            },
+        }
 
     def write(self, values):
         protected = {"invoice_id", "level", "state", "mail_id"}
