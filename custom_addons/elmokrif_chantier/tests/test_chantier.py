@@ -847,6 +847,29 @@ class TestChantier(TransactionCase):
         with self.assertRaises(AccessError):
             accessible.with_user(salesperson).write({"name": "Forbidden commercial edit"})
 
+    def test_accountant_can_read_unassigned_chantier_analytic_accounts(self):
+        accountant = self.env["res.users"].with_context(no_reset_password=True).create({
+            "name": "Chantier accountant",
+            "login": "chantier_accountant",
+            "email": "chantier_accountant@example.test",
+            "groups_id": [(6, 0, [
+                self.env.ref("base.group_user").id,
+                self.env.ref("account.group_account_manager").id,
+            ])],
+        })
+        chantiers = (
+            self._create_chantier(name="First accountant chantier")
+            | self._create_chantier(name="Second accountant chantier")
+        )
+
+        visible_analytic_accounts = self.env[
+            "account.analytic.account"
+        ].with_user(accountant).search([
+            ("id", "in", chantiers.analytic_account_id.ids),
+        ])
+
+        self.assertEqual(visible_analytic_accounts, chantiers.analytic_account_id)
+
     def test_open_tasks_block_closure(self):
         chantier = self._create_chantier()
         self._approve(chantier)

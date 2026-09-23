@@ -37,7 +37,7 @@
                     </div>
                     <group string="Live Technical Checks">
                         <field name="technical_ready" invisible="1"/>
-                        <field name="technical_status" nolabel="1" readonly="1"/>
+                        <field name="technical_status" nolabel="1" readonly="1" colspan="2"/>
                     </group>
                     <group string="Accountant Checklist">
                         <group>

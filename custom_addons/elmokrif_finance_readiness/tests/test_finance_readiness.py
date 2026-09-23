@@ -144,6 +144,21 @@ class TestFinanceReadiness(TransactionCase):
         invoice.with_user(self.manager).action_post()
         self.assertEqual(invoice.state, "posted")
 
+    def test_unassigned_accounting_manager_can_post_approved_chantier_invoice(self):
+        accountant = self._create_user(
+            "Unassigned Accounting Manager",
+            "unassigned_accounting_manager@example.test",
+            ["account.group_account_manager"],
+        )
+        invoice = self._draft_invoice()
+        self.readiness.with_user(self.manager).write(self._complete_checklist())
+        with patch.object(type(self.readiness), "_get_technical_errors", return_value=[]):
+            self.readiness.with_user(self.manager).action_approve()
+
+        invoice.with_user(accountant).action_post()
+
+        self.assertEqual(invoice.state, "posted")
+
     def test_direct_posting_path_also_requires_finance_approval(self):
         invoice = self._draft_invoice()
         with self.assertRaises(UserError):

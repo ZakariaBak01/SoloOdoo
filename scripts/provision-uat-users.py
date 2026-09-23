@@ -280,6 +280,7 @@ personas = [
             "elmokrif_chantier.group_chantier_manager",
             "elmokrif_stock_controls.group_chantier_consumption_approver",
             "elmokrif_dashboard.group_elmokrif_dashboard_user",
+            "sales_team.group_sale_salesman_all_leads",
         ],
         [company_a],
     ),
@@ -340,7 +341,10 @@ personas = [
         "U8",
         "Accountant",
         "uat.u8.accountant",
-        ["account.group_account_manager"],
+        [
+            "account.group_account_manager",
+            "analytic.group_analytic_accounting",
+        ],
         [company_a],
     ),
     (

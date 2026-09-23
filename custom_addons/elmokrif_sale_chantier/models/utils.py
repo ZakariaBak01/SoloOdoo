@@ -40,6 +40,10 @@ def validate_chantier_link(chantier, company, partner):
     """Validate the company and customer side of any commercial chantier link."""
     if not chantier:
         return
+    # The caller's access to the commercial document is checked separately.
+    # Read the stored chantier link as the system so accountants can validate
+    # and post invoices without joining the operational chantier team.
+    chantier = chantier.sudo()
     if not chantier.is_chantier:
         raise ValidationError(_("Only projects marked as chantiers can be linked."))
     if not company or chantier.company_id != company:

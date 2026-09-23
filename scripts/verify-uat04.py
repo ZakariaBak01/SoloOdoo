@@ -14,9 +14,17 @@ def require(record, message):
 
 
 try:
+    u1 = require(
+        env["res.users"].search([("login", "=", "uat.u1.manager")], limit=1),
+        "U1 is missing.",
+    )
     u7 = require(
         env["res.users"].search([("login", "=", "uat.u7.sales")], limit=1),
         "U7 is missing.",
+    )
+    u8 = require(
+        env["res.users"].search([("login", "=", "uat.u8.accountant")], limit=1),
+        "U8 is missing.",
     )
     customer = require(
         env["res.partner"].search([("name", "=", "UAT Customer A")], limit=1),
@@ -51,6 +59,14 @@ try:
         ], limit=1),
         "The second analytic dimension is missing.",
     )
+    if not u8.has_group("analytic.group_analytic_accounting"):
+        raise RuntimeError("U8 cannot access Analytic Accounting.")
+    if region_account not in env["account.analytic.account"].with_user(u8).search([
+        ("id", "=", region_account.id),
+    ]):
+        raise RuntimeError("U8 cannot read the Casablanca Sales analytic account.")
+    if not u1.has_group("sales_team.group_sale_salesman_all_leads"):
+        raise RuntimeError("U1 cannot inspect all chantier sales.")
 
     if chantier.partner_id.commercial_partner_id != customer.commercial_partner_id:
         raise RuntimeError("CH-UAT-001 is not assigned to UAT Customer A.")
@@ -118,6 +134,8 @@ try:
     order.action_confirm()
     if activities.exists() or order.chantier_followup_activity_id:
         raise RuntimeError("The follow-up activity remained open after confirmation.")
+    if order not in env["sale.order"].with_user(u1).search([("id", "=", order.id)]):
+        raise RuntimeError("U1 cannot inspect the confirmed chantier order.")
 
     env["sale.order"].with_user(u7).create({
         "partner_id": customer.id,

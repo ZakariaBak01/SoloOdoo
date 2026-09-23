@@ -60,13 +60,18 @@
     <record id="rule_chantier_analytic_account_assignment" model="ir.rule">
         <field name="name">Chantier analytic accounts: assigned users only</field>
         <field name="model_id" ref="analytic.model_account_analytic_account"/>
-        <field name="domain_force">[
-            '|',
-                ('chantier_id', '=', False),
-                '|', '|',
-                    ('chantier_id.user_id', '=', user.id),
-                    ('chantier_id.chantier_member_ids', 'in', [user.id]),
-                    ('chantier_id.sales_user_ids', 'in', [user.id])
-        ]</field>
+        <field name="domain_force">
+            [(1, '=', 1)] if (
+                user.has_group('account.group_account_user')
+                or user.has_group('account.group_account_manager')
+            ) else [
+                '|',
+                    ('chantier_id', '=', False),
+                    '|', '|',
+                        ('chantier_id.user_id', '=', user.id),
+                        ('chantier_id.chantier_member_ids', 'in', [user.id]),
+                        ('chantier_id.sales_user_ids', 'in', [user.id])
+            ]
+        </field>
     </record>
 </odoo>

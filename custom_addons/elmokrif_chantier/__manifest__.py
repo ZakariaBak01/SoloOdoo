@@ -1,7 +1,7 @@
 {
     "name": "EL MOKRIF Chantier",
     "summary": "Chantier lifecycle and stock-location foundation",
-    "version": "17.0.1.14.2",
+    "version": "17.0.1.14.3",
     "category": "Services/Project",
     "author": "EL MOKRIF",
     "license": "LGPL-3",
