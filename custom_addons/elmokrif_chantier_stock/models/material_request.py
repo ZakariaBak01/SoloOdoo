@@ -232,7 +232,11 @@ class ChantierMaterialRequestLine(models.Model):
             # retains readable quantities for legacy moves created before that
             # link existed; old duplicate-product lines remain inherently
             # ambiguous and should be reconciled during migration.
-            moves = self.env["stock.move"].search([
+            # Requesters are allowed to see their request's aggregate received
+            # quantity, but they are not Inventory users and cannot read stock
+            # moves directly.  Read only the linked moves with sudo so the
+            # computed field remains usable without broadening their access.
+            moves = self.env["stock.move"].sudo().search([
                 ("state", "=", "done"),
                 "|",
                 ("material_request_line_id", "=", line.id),

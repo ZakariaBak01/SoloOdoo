@@ -1,0 +1,13 @@
+# UAT-07 — Receipt, quality inspection, and supplier return
+
+**Users:** U2 requests, U1 approves, U3 buys/creates return, U4 approves PO, U5 receives, U6 inspects. **Input:** a confirmed PO for 100 `Paint Bucket` units, first receipt 60 units, 50 accepted and 10 rejected. **Prerequisite:** UAT-06 and Company A quality required.
+
+1. U2: create a new `CH-UAT-001` material request for `Paint Bucket` quantity `100` with vendor `UAT Supplier A`; **Save → Submit**. U1: **Approve → Plan / Reserve Available Stock**; verify zero central stock so a PO for 100 is generated. U3: open the PO, enter vendor/rationale, click **Confirm Order**; U4 clicks **Approve Order** if threshold requires it. U5: open **Purchase → Orders → Purchase Orders → [UAT PO] → Receipt**. On the receipt enter **Done** quantity `60` of `100` ordered; click **Validate** and choose **Create Backorder** in the standard Odoo dialog. Record first receipt and backorder numbers.
+2. Open **Inventory → Operations → Transfers** for the validated receipt. Verify 60 units arrived in the configured Input/Quality location and are not available as usable chantier stock. Check that **Chantier**, material request and PO references remain.
+3. U5: open **EL MOKRIF → Quality Inspections** and the new draft inspection. Verify U5 cannot use **Approve and Release**. Do not change the destination to bypass quality; record any ability to do so as a defect.
+4. U6: open the inspection. For its line enter **Received Qty** `60`, **Accepted Qty** `50`, **Rejected Qty** `10`, **Condition OK** and **Specification OK** according to the sample evidence, **Certificate Reference** `UAT-CERT-01`, and **Rejection Reason** `10 damaged units`. Save.
+5. Click **Approve and Release**. Open the linked accepted and rejected pickings. Verify 50 entered usable stock and 10 entered quarantine, with the original lot/source links. Repeat the action if shown; there must be no extra moves.
+6. U5: open the backorder, enter its remaining done quantity `40`, click **Validate**. Check a second inspection is created and references the same PO/request/chantier. U6: inspect and release those 40 using the same form.
+7. U3: on the approved first inspection click **Create Supplier Return**. U5: open the generated return picking, verify 10 rejected units and correct supplier/source, click **Validate**. Record the return and compare usable, quarantine, and vendor-return quantities.
+
+**Pass:** accepted + rejected = received on each inspection; U5 cannot approve quality; rejected stock never becomes usable; partial receipt and backorder preserve source links.

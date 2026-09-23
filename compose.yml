@@ -27,6 +27,7 @@ services:
         condition: service_healthy
     ports:
       - "${ODOO_PORT:-8069}:8069"
+    command: odoo -d test --db-filter=^test$
     environment:
       HOST: db
       USER: ${POSTGRES_USER:?POSTGRES_USER must be set in .env}

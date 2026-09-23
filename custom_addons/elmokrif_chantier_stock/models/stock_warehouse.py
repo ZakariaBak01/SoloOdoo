@@ -24,6 +24,8 @@ class StockWarehouse(models.Model):
     def _ensure_chantier_operation_locations(self):
         """Create dedicated valuation destinations instead of using a generic loss bin."""
         for warehouse in self:
+            if warehouse.int_type_id and not warehouse.int_type_id.active:
+                warehouse.int_type_id.sudo().active = True
             values = {}
             for field_name, location_name in (
                 ("chantier_consumption_location_id", _("Chantier Consumption")),

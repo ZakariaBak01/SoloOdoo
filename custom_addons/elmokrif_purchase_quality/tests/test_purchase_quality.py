@@ -50,6 +50,11 @@ class TestPurchaseQuality(TransactionCase):
             "pilot_quality@example.test",
             ["elmokrif_purchase_quality.group_chantier_quality_inspector"],
         )
+        cls.storekeeper = cls._create_user(
+            "Pilot Storekeeper",
+            "pilot_storekeeper@example.test",
+            ["stock.group_stock_user"],
+        )
         cls.chantier = cls.env["project.project"].with_context(
             default_is_chantier=True
         ).create({
@@ -118,6 +123,31 @@ class TestPurchaseQuality(TransactionCase):
                 "chantier_material_request_line_id": request.line_ids.id,
             })],
         })
+
+    def test_chantier_user_can_read_fulfillment_totals_after_submit(self):
+        requester = self._create_user(
+            "Restricted Requester",
+            "restricted_requester@example.test",
+            ["elmokrif_chantier.group_chantier_user"],
+        )
+        self.chantier.write({"chantier_member_ids": [Command.link(requester.id)]})
+        request = self._request()
+
+        request.with_user(requester).action_submit()
+        line_values = request.with_user(requester).line_ids.read([
+            "delivered_qty",
+            "central_available_qty",
+            "reserved_qty",
+            "procurement_qty",
+            "outstanding_qty",
+            "suggested_fulfillment",
+        ])[0]
+
+        self.assertEqual(request.state, "submitted")
+        self.assertEqual(line_values["delivered_qty"], 0.0)
+        self.assertEqual(line_values["reserved_qty"], 0.0)
+        self.assertEqual(line_values["procurement_qty"], 0.0)
+        self.assertEqual(line_values["outstanding_qty"], 10.0)
 
     def test_purchase_threshold_inclusive_and_two_person_approval(self):
         below = self._order(9999)
@@ -287,6 +317,16 @@ class TestPurchaseQuality(TransactionCase):
 
         inspection = receipt.chantier_quality_inspection_id
         self.assertTrue(inspection)
+        self.assertEqual(
+            inspection.with_user(self.storekeeper).read(["state"])[0]["state"],
+            "draft",
+        )
+        self.assertEqual(
+            inspection.with_user(self.storekeeper).line_ids.read(["received_qty"])[0]["received_qty"],
+            1,
+        )
+        with self.assertRaises(AccessError):
+            inspection.with_user(self.storekeeper).action_approve_and_release()
         self.assertEqual(receipt.chantier_quality_transfer_id.state, "done")
         self.assertEqual(
             receipt.chantier_quality_transfer_id.location_id,

@@ -45,6 +45,7 @@
     <record id="rule_chantier_site_location_assignment" model="ir.rule">
         <field name="name">Chantier site locations: assigned manager or member only</field>
         <field name="model_id" ref="stock.model_stock_location"/>
+        <field name="groups" eval="[(4, ref('elmokrif_chantier.group_chantier_user'))]"/>
         <field name="domain_force">[
             '|',
                 ('chantier_id', '=', False),

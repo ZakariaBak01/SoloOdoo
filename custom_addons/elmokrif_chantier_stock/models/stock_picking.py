@@ -31,14 +31,26 @@ class StockPicking(models.Model):
     @api.model
     def _prepare_chantier_operation_values(self, vals):
         """Normalize a manual chantier move that started from a stock action."""
-        chantier = self.env["project.project"].browse(vals.get("chantier_id"))
-        if not chantier or vals.get("material_request_id"):
-            return vals
-        operation = vals.get("chantier_operation", "delivery")
+        values = dict(vals)
+        returned_picking = self.sudo().browse(values.get("return_id"))
+        if returned_picking.chantier_id:
+            reverse_operation = {
+                "delivery": "return",
+                "return": "delivery",
+            }.get(returned_picking.chantier_operation)
+            if reverse_operation:
+                values.update({
+                    "chantier_id": returned_picking.chantier_id.id,
+                    "chantier_operation": reverse_operation,
+                    "material_request_id": False,
+                })
+        chantier = self.env["project.project"].sudo().browse(values.get("chantier_id"))
+        if not chantier or values.get("material_request_id"):
+            return values
+        operation = values.get("chantier_operation", "delivery")
         source, destination = self._get_chantier_operation_locations(
             chantier, operation
         )
-        values = dict(vals)
         values.update({
             "picking_type_id": chantier.warehouse_id.int_type_id.id,
             "location_id": source.id,
@@ -92,7 +104,7 @@ class StockPicking(models.Model):
     @api.constrains("chantier_id", "chantier_operation", "location_id", "location_dest_id")
     def _check_chantier_operation_locations(self):
         for picking in self.filtered("chantier_id"):
-            chantier = picking.chantier_id
+            chantier = picking.sudo().chantier_id
             expected = picking._get_chantier_operation_locations(
                 chantier, picking.chantier_operation
             )
@@ -101,7 +113,7 @@ class StockPicking(models.Model):
 
     def _action_done(self):
         result = super()._action_done()
-        self.mapped("material_request_id")._update_delivery_state()
+        self.sudo().mapped("material_request_id")._update_delivery_state()
         return result
 
 

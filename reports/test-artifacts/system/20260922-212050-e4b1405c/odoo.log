@@ -1,0 +1,803 @@
+﻿2026-09-22 21:21:03,127 1 INFO ? odoo: Odoo version 17.0-20260817 
+2026-09-22 21:21:03,127 1 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2026-09-22 21:21:03,127 1 INFO ? odoo: addons paths: ['/usr/lib/python3/dist-packages/odoo/addons', '/var/lib/odoo/addons/17.0', '/mnt/extra-addons', '/opt/elmokrif-addons'] 
+2026-09-22 21:21:03,127 1 INFO ? odoo: database: odoo_test@test-db:5432 
+2026-09-22 21:21:03,739 1 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/local/bin/wkhtmltopdf 
+2026-09-22 21:21:04,752 1 INFO ? odoo.service.server: HTTP service (werkzeug) running on 7971cc3c47e4:8069 
+2026-09-22 21:21:04,769 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: init db 
+2026-09-22 21:21:09,367 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading 1 modules... 
+2026-09-22 21:21:09,367 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Loading module base (1/1) 
+2026-09-22 21:21:09,395 1 INFO soloodoo_material_request_submit_test odoo.modules.registry: module base: creating or updating database tables 
+2026-09-22 21:21:09,899 1 INFO soloodoo_material_request_submit_test odoo.models: Prepare computation of ir.module.module.menus_by_module 
+2026-09-22 21:21:09,900 1 INFO soloodoo_material_request_submit_test odoo.models: Prepare computation of ir.module.module.reports_by_module 
+2026-09-22 21:21:09,900 1 INFO soloodoo_material_request_submit_test odoo.models: Prepare computation of ir.module.module.views_by_module 
+2026-09-22 21:21:10,055 1 INFO soloodoo_material_request_submit_test odoo.models: Prepare computation of res.partner.user_id 
+2026-09-22 21:21:10,056 1 INFO soloodoo_material_request_submit_test odoo.models: Prepare computation of res.partner.commercial_partner_id 
+2026-09-22 21:21:10,056 1 INFO soloodoo_material_request_submit_test odoo.models: Prepare computation of res.partner.complete_name 
+2026-09-22 21:21:10,056 1 INFO soloodoo_material_request_submit_test odoo.models: Prepare computation of res.partner.company_registry 
+2026-09-22 21:21:10,056 1 INFO soloodoo_material_request_submit_test odoo.models: Prepare computation of res.partner.commercial_company_name 
+2026-09-22 21:21:10,056 1 INFO soloodoo_material_request_submit_test odoo.models: Prepare computation of res.partner.partner_share 
+2026-09-22 21:21:10,113 1 INFO soloodoo_material_request_submit_test odoo.models: Prepare computation of res.currency.decimal_places 
+2026-09-22 21:21:10,150 1 INFO soloodoo_material_request_submit_test odoo.models: Prepare computation of res.company.uses_default_logo 
+2026-09-22 21:21:10,150 1 INFO soloodoo_material_request_submit_test odoo.models: Prepare computation of res.company.logo_web 
+2026-09-22 21:21:10,153 1 INFO soloodoo_material_request_submit_test odoo.models: Computing parent_path for table res_company... 
+2026-09-22 21:21:10,188 1 INFO soloodoo_material_request_submit_test odoo.models: Prepare computation of res.users.signature 
+2026-09-22 21:21:10,189 1 INFO soloodoo_material_request_submit_test odoo.models: Prepare computation of res.users.share 
+2026-09-22 21:21:12,129 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading base/data/res_bank.xml 
+2026-09-22 21:21:12,147 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading base/data/res.lang.csv 
+2026-09-22 21:21:12,188 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading base/data/res_lang_data.xml 
+2026-09-22 21:21:12,232 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading base/data/res_partner_data.xml 
+2026-09-22 21:21:12,349 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading base/data/res_currency_data.xml 
+2026-09-22 21:21:13,013 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading base/data/res_company_data.xml 
+2026-09-22 21:21:13,025 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading base/data/res_users_data.xml 
+2026-09-22 21:21:13,977 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading base/data/report_paperformat_data.xml 
+2026-09-22 21:21:14,007 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading base/data/res_country_data.xml 
+2026-09-22 21:21:14,491 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading base/data/ir_demo_data.xml 
+2026-09-22 21:21:14,507 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading base/security/base_groups.xml 
+2026-09-22 21:21:15,255 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading base/security/base_security.xml 
+2026-09-22 21:21:15,419 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading base/views/base_menus.xml 
+2026-09-22 21:21:15,520 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading base/views/decimal_precision_views.xml 
+2026-09-22 21:21:15,544 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading base/views/res_config_views.xml 
+2026-09-22 21:21:15,555 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading base/data/res.country.state.csv 
+2026-09-22 21:21:16,012 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading base/views/ir_actions_views.xml 
+2026-09-22 21:21:16,245 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading base/views/ir_asset_views.xml 
+2026-09-22 21:21:16,265 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading base/views/ir_config_parameter_views.xml 
+2026-09-22 21:21:16,284 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading base/views/ir_cron_views.xml 
+2026-09-22 21:21:16,322 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading base/views/ir_cron_trigger_views.xml 
+2026-09-22 21:21:16,344 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading base/views/ir_filters_views.xml 
+2026-09-22 21:21:16,370 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading base/views/ir_mail_server_views.xml 
+2026-09-22 21:21:16,395 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading base/views/ir_model_views.xml 
+2026-09-22 21:21:16,537 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading base/views/ir_attachment_views.xml 
+2026-09-22 21:21:16,558 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading base/views/ir_rule_views.xml 
+2026-09-22 21:21:16,587 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading base/views/ir_sequence_views.xml 
+2026-09-22 21:21:16,610 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading base/views/ir_ui_menu_views.xml 
+2026-09-22 21:21:16,636 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading base/views/ir_ui_view_views.xml 
+2026-09-22 21:21:16,707 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading base/views/ir_default_views.xml 
+2026-09-22 21:21:16,740 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading base/data/ir_cron_data.xml 
+2026-09-22 21:21:16,756 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading base/report/ir_model_report.xml 
+2026-09-22 21:21:16,763 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading base/report/ir_model_templates.xml 
+2026-09-22 21:21:16,773 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading base/views/ir_logging_views.xml 
+2026-09-22 21:21:16,795 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading base/views/ir_qweb_widget_templates.xml 
+2026-09-22 21:21:16,808 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading base/views/ir_module_views.xml 
+2026-09-22 21:21:16,881 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading base/data/ir_module_category_data.xml 
+2026-09-22 21:21:16,985 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading base/data/ir_module_module.xml 
+2026-09-22 21:21:17,073 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading base/report/ir_module_reports.xml 
+2026-09-22 21:21:17,081 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading base/report/ir_module_report_templates.xml 
+2026-09-22 21:21:17,089 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading base/wizard/base_module_update_views.xml 
+2026-09-22 21:21:17,107 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading base/wizard/base_language_install_views.xml 
+2026-09-22 21:21:17,121 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading base/wizard/base_import_language_views.xml 
+2026-09-22 21:21:17,138 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading base/wizard/base_module_upgrade_views.xml 
+2026-09-22 21:21:17,161 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading base/wizard/base_module_uninstall_views.xml 
+2026-09-22 21:21:17,172 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading base/wizard/base_export_language_views.xml 
+2026-09-22 21:21:17,194 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading base/wizard/base_partner_merge_views.xml 
+2026-09-22 21:21:17,213 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading base/data/ir_demo_failure_data.xml 
+2026-09-22 21:21:17,233 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading base/views/ir_profile_views.xml 
+2026-09-22 21:21:17,265 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading base/views/res_company_views.xml 
+2026-09-22 21:21:17,295 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading base/views/res_lang_views.xml 
+2026-09-22 21:21:17,321 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading base/views/res_partner_views.xml 
+2026-09-22 21:21:17,497 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading base/views/res_bank_views.xml 
+2026-09-22 21:21:17,549 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading base/views/res_country_views.xml 
+2026-09-22 21:21:17,610 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading base/views/res_currency_views.xml 
+2026-09-22 21:21:17,653 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading base/views/res_users_views.xml 
+2026-09-22 21:21:17,797 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading base/views/res_users_identitycheck_views.xml 
+2026-09-22 21:21:17,813 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading base/views/ir_property_views.xml 
+2026-09-22 21:21:17,843 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading base/views/res_config_settings_views.xml 
+2026-09-22 21:21:17,859 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading base/views/report_paperformat_views.xml 
+2026-09-22 21:21:17,901 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading base/security/ir.model.access.csv 
+2026-09-22 21:21:18,338 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Module base loaded in 8.97s, 7944 queries (+7944 other) 
+2026-09-22 21:21:18,339 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: 1 modules loaded in 8.97s, 7944 queries (+7944 extra) 
+2026-09-22 21:21:18,357 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: updating modules list 
+2026-09-22 21:21:18,359 1 INFO soloodoo_material_request_submit_test odoo.addons.base.models.ir_module: ALLOW access to module.update_list on [] to user __system__ #1 via n/a 
+2026-09-22 21:21:19,697 1 INFO soloodoo_material_request_submit_test odoo.addons.base.models.ir_module: ALLOW access to module.button_install on ['EL MOKRIF Chantier Materials'] to user __system__ #1 via n/a 
+2026-09-22 21:21:20,126 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading 57 modules... 
+2026-09-22 21:21:20,126 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Loading module uom (2/57) 
+2026-09-22 21:21:20,149 1 INFO soloodoo_material_request_submit_test odoo.modules.registry: module uom: creating or updating database tables 
+2026-09-22 21:21:20,245 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading uom/data/uom_data.xml 
+2026-09-22 21:21:20,564 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading uom/security/uom_security.xml 
+2026-09-22 21:21:20,587 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading uom/security/ir.model.access.csv 
+2026-09-22 21:21:20,612 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading uom/views/uom_uom_views.xml 
+2026-09-22 21:21:20,718 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Module uom loaded in 0.59s, 287 queries (+287 other) 
+2026-09-22 21:21:20,718 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Loading module web (3/57) 
+2026-09-22 21:21:20,740 1 INFO soloodoo_material_request_submit_test odoo.modules.registry: module web: creating or updating database tables 
+2026-09-22 21:21:21,313 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading web/security/ir.model.access.csv 
+2026-09-22 21:21:21,358 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading web/views/webclient_templates.xml 
+2026-09-22 21:21:21,527 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading web/views/report_templates.xml 
+2026-09-22 21:21:21,623 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading web/views/base_document_layout_views.xml 
+2026-09-22 21:21:21,634 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading web/views/partner_view.xml 
+2026-09-22 21:21:21,646 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading web/views/speedscope_template.xml 
+2026-09-22 21:21:21,657 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading web/views/neutralize_views.xml 
+2026-09-22 21:21:21,666 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading web/data/ir_attachment.xml 
+2026-09-22 21:21:21,672 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading web/data/report_layout.xml 
+2026-09-22 21:21:22,001 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Module web loaded in 1.28s, 1018 queries (+1018 other) 
+2026-09-22 21:21:22,001 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Loading module auth_totp (4/57) 
+2026-09-22 21:21:22,033 1 INFO soloodoo_material_request_submit_test odoo.modules.registry: module auth_totp: creating or updating database tables 
+2026-09-22 21:21:22,106 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading auth_totp/security/security.xml 
+2026-09-22 21:21:22,137 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading auth_totp/security/ir.model.access.csv 
+2026-09-22 21:21:22,186 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading auth_totp/data/ir_action_data.xml 
+2026-09-22 21:21:22,199 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading auth_totp/views/res_users_views.xml 
+2026-09-22 21:21:22,245 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading auth_totp/views/templates.xml 
+2026-09-22 21:21:22,255 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading auth_totp/wizard/auth_totp_wizard_views.xml 
+2026-09-22 21:21:22,297 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Module auth_totp loaded in 0.30s, 179 queries (+179 other) 
+2026-09-22 21:21:22,297 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Loading module barcodes (5/57) 
+2026-09-22 21:21:22,326 1 INFO soloodoo_material_request_submit_test odoo.modules.registry: module barcodes: creating or updating database tables 
+2026-09-22 21:21:22,465 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading barcodes/data/barcodes_data.xml 
+2026-09-22 21:21:22,481 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading barcodes/views/barcodes_view.xml 
+2026-09-22 21:21:22,539 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading barcodes/security/ir.model.access.csv 
+2026-09-22 21:21:22,585 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Module barcodes loaded in 0.29s, 135 queries (+135 other) 
+2026-09-22 21:21:22,585 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Loading module base_import (6/57) 
+2026-09-22 21:21:22,656 1 INFO soloodoo_material_request_submit_test odoo.modules.registry: module base_import: creating or updating database tables 
+2026-09-22 21:21:23,275 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading base_import/security/ir.model.access.csv 
+2026-09-22 21:21:23,300 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Module base_import loaded in 0.72s, 843 queries (+843 other) 
+2026-09-22 21:21:23,301 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Loading module base_import_module (7/57) 
+2026-09-22 21:21:23,327 1 INFO soloodoo_material_request_submit_test odoo.modules.registry: module base_import_module: creating or updating database tables 
+2026-09-22 21:21:23,401 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading base_import_module/security/ir.model.access.csv 
+2026-09-22 21:21:23,419 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading base_import_module/views/base_import_module_view.xml 
+2026-09-22 21:21:23,442 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading base_import_module/views/ir_module_views.xml 
+2026-09-22 21:21:23,496 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Module base_import_module loaded in 0.20s, 154 queries (+154 other) 
+2026-09-22 21:21:23,496 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Loading module base_setup (8/57) 
+2026-09-22 21:21:23,518 1 INFO soloodoo_material_request_submit_test odoo.modules.registry: module base_setup: creating or updating database tables 
+2026-09-22 21:21:23,627 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading base_setup/data/base_setup_data.xml 
+2026-09-22 21:21:23,634 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading base_setup/views/res_config_settings_views.xml 
+2026-09-22 21:21:23,668 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading base_setup/views/res_partner_views.xml 
+2026-09-22 21:21:23,698 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Module base_setup loaded in 0.20s, 143 queries (+143 other) 
+2026-09-22 21:21:23,699 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Loading module bus (9/57) 
+2026-09-22 21:21:23,718 1 INFO soloodoo_material_request_submit_test odoo.modules.registry: module bus: creating or updating database tables 
+2026-09-22 21:21:23,810 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading bus/security/ir.model.access.csv 
+2026-09-22 21:21:23,845 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Module bus loaded in 0.15s, 119 queries (+119 other) 
+2026-09-22 21:21:23,845 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Loading module http_routing (10/57) 
+2026-09-22 21:21:23,860 1 INFO soloodoo_material_request_submit_test odoo.modules.registry: module http_routing: creating or updating database tables 
+2026-09-22 21:21:23,871 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading http_routing/views/http_routing_template.xml 
+2026-09-22 21:21:23,912 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading http_routing/views/res_lang_views.xml 
+2026-09-22 21:21:23,941 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Module http_routing loaded in 0.10s, 71 queries (+71 other) 
+2026-09-22 21:21:23,941 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Loading module onboarding (11/57) 
+2026-09-22 21:21:23,971 1 INFO soloodoo_material_request_submit_test odoo.modules.registry: module onboarding: creating or updating database tables 
+2026-09-22 21:21:24,113 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading onboarding/views/onboarding_templates.xml 
+2026-09-22 21:21:24,131 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading onboarding/views/onboarding_views.xml 
+2026-09-22 21:21:24,158 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading onboarding/views/onboarding_menus.xml 
+2026-09-22 21:21:24,171 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading onboarding/security/ir.model.access.csv 
+2026-09-22 21:21:24,248 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Module onboarding loaded in 0.31s, 237 queries (+237 other) 
+2026-09-22 21:21:24,248 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Loading module resource (12/57) 
+2026-09-22 21:21:24,289 1 INFO soloodoo_material_request_submit_test odoo.modules.registry: module resource: creating or updating database tables 
+2026-09-22 21:21:24,451 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading resource/data/resource_data.xml 
+2026-09-22 21:21:24,475 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading resource/security/ir.model.access.csv 
+2026-09-22 21:21:24,488 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading resource/security/resource_security.xml 
+2026-09-22 21:21:24,519 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading resource/views/resource_resource_views.xml 
+2026-09-22 21:21:24,546 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading resource/views/resource_calendar_leaves_views.xml 
+2026-09-22 21:21:24,578 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading resource/views/resource_calendar_attendance_views.xml 
+2026-09-22 21:21:24,596 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading resource/views/resource_calendar_views.xml 
+2026-09-22 21:21:24,622 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading resource/views/menuitems.xml 
+2026-09-22 21:21:24,665 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Module resource loaded in 0.42s, 407 queries (+407 other) 
+2026-09-22 21:21:24,665 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Loading module web_tour (13/57) 
+2026-09-22 21:21:24,691 1 INFO soloodoo_material_request_submit_test odoo.modules.registry: module web_tour: creating or updating database tables 
+2026-09-22 21:21:24,731 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading web_tour/security/ir.model.access.csv 
+2026-09-22 21:21:24,743 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading web_tour/security/ir.rule.csv 
+2026-09-22 21:21:24,754 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading web_tour/views/tour_views.xml 
+2026-09-22 21:21:24,793 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Module web_tour loaded in 0.13s, 104 queries (+104 other) 
+2026-09-22 21:21:24,793 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Loading module barcodes_gs1_nomenclature (14/57) 
+2026-09-22 21:21:24,816 1 INFO soloodoo_material_request_submit_test odoo.modules.registry: module barcodes_gs1_nomenclature: creating or updating database tables 
+2026-09-22 21:21:24,855 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading barcodes_gs1_nomenclature/data/barcodes_gs1_rules.xml 
+2026-09-22 21:21:24,929 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading barcodes_gs1_nomenclature/views/barcodes_view.xml 
+2026-09-22 21:21:24,969 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Module barcodes_gs1_nomenclature loaded in 0.18s, 189 queries (+189 other) 
+2026-09-22 21:21:24,969 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Loading module iap (15/57) 
+2026-09-22 21:21:24,985 1 INFO soloodoo_material_request_submit_test odoo.modules.registry: module iap: creating or updating database tables 
+2026-09-22 21:21:25,054 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading iap/security/ir.model.access.csv 
+2026-09-22 21:21:25,067 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading iap/security/ir_rule.xml 
+2026-09-22 21:21:25,076 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading iap/views/iap_views.xml 
+2026-09-22 21:21:25,101 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading iap/views/res_config_settings.xml 
+2026-09-22 21:21:25,136 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Module iap loaded in 0.17s, 151 queries (+151 other) 
+2026-09-22 21:21:25,136 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Loading module mail (16/57) 
+2026-09-22 21:21:25,178 1 INFO soloodoo_material_request_submit_test odoo.modules.registry: module mail: creating or updating database tables 
+2026-09-22 21:21:25,486 1 INFO soloodoo_material_request_submit_test odoo.models: Prepare computation of ir.actions.server.partner_ids 
+2026-09-22 21:21:25,486 1 INFO soloodoo_material_request_submit_test odoo.models: Prepare computation of ir.actions.server.template_id 
+2026-09-22 21:21:25,486 1 INFO soloodoo_material_request_submit_test odoo.models: Prepare computation of ir.actions.server.activity_type_id 
+2026-09-22 21:21:25,486 1 INFO soloodoo_material_request_submit_test odoo.models: Prepare computation of ir.actions.server.activity_date_deadline_range 
+2026-09-22 21:21:25,486 1 INFO soloodoo_material_request_submit_test odoo.models: Prepare computation of ir.actions.server.activity_user_id 
+2026-09-22 21:21:25,486 1 INFO soloodoo_material_request_submit_test odoo.models: Prepare computation of ir.actions.server.mail_post_method 
+2026-09-22 21:21:25,486 1 INFO soloodoo_material_request_submit_test odoo.models: Prepare computation of ir.actions.server.activity_summary 
+2026-09-22 21:21:25,486 1 INFO soloodoo_material_request_submit_test odoo.models: Prepare computation of ir.actions.server.activity_date_deadline_range_type 
+2026-09-22 21:21:25,486 1 INFO soloodoo_material_request_submit_test odoo.models: Prepare computation of ir.actions.server.activity_user_type 
+2026-09-22 21:21:25,486 1 INFO soloodoo_material_request_submit_test odoo.models: Prepare computation of ir.actions.server.activity_user_field_name 
+2026-09-22 21:21:25,486 1 INFO soloodoo_material_request_submit_test odoo.models: Prepare computation of ir.actions.server.activity_note 
+2026-09-22 21:21:25,487 1 INFO soloodoo_material_request_submit_test odoo.models: Prepare computation of ir.actions.server.mail_post_autofollow 
+2026-09-22 21:21:25,527 1 INFO soloodoo_material_request_submit_test odoo.models: Prepare computation of res.company.email_primary_color 
+2026-09-22 21:21:25,527 1 INFO soloodoo_material_request_submit_test odoo.models: Prepare computation of res.company.email_secondary_color 
+2026-09-22 21:21:25,545 1 INFO soloodoo_material_request_submit_test odoo.models: Prepare computation of res.users.notification_type 
+2026-09-22 21:21:25,654 1 INFO soloodoo_material_request_submit_test odoo.models: Prepare computation of res.partner.email_normalized 
+<string>:38: (ERROR/3) Unexpected indentation.
+<string>:43: (WARNING/2) Block quote ends without a blank line; unexpected unindent.
+2026-09-22 21:21:27,382 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading mail/data/mail_groups.xml 
+2026-09-22 21:21:27,529 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading mail/wizard/mail_activity_schedule_views.xml 
+2026-09-22 21:21:27,537 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading mail/wizard/mail_blacklist_remove_views.xml 
+2026-09-22 21:21:27,544 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading mail/wizard/mail_compose_message_views.xml 
+2026-09-22 21:21:27,564 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading mail/wizard/mail_resend_message_views.xml 
+2026-09-22 21:21:27,577 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading mail/wizard/mail_resend_partner_views.xml 
+2026-09-22 21:21:27,587 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading mail/wizard/mail_template_preview_views.xml 
+2026-09-22 21:21:27,598 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading mail/wizard/mail_wizard_invite_views.xml 
+2026-09-22 21:21:27,607 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading mail/wizard/mail_template_reset_views.xml 
+2026-09-22 21:21:27,617 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading mail/views/fetchmail_views.xml 
+2026-09-22 21:21:27,639 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading mail/views/mail_message_subtype_views.xml 
+2026-09-22 21:21:27,653 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading mail/views/mail_tracking_value_views.xml 
+2026-09-22 21:21:27,669 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading mail/views/mail_notification_views.xml 
+2026-09-22 21:21:27,685 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading mail/views/mail_message_views.xml 
+2026-09-22 21:21:27,717 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading mail/views/mail_message_schedule_views.xml 
+2026-09-22 21:21:27,740 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading mail/views/mail_mail_views.xml 
+2026-09-22 21:21:27,776 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading mail/views/mail_followers_views.xml 
+2026-09-22 21:21:27,789 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading mail/views/mail_ice_server_views.xml 
+2026-09-22 21:21:27,803 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading mail/views/discuss_channel_member_views.xml 
+2026-09-22 21:21:27,817 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading mail/views/discuss_channel_rtc_session_views.xml 
+2026-09-22 21:21:27,836 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading mail/views/mail_link_preview_views.xml 
+2026-09-22 21:21:27,850 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading mail/views/discuss/discuss_gif_favorite_views.xml 
+2026-09-22 21:21:27,922 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading mail/views/discuss_channel_views.xml 
+2026-09-22 21:21:27,951 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading mail/views/mail_shortcode_views.xml 
+2026-09-22 21:21:27,970 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading mail/views/mail_activity_views.xml 
+2026-09-22 21:21:28,057 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading mail/views/mail_activity_plan_views.xml 
+2026-09-22 21:21:28,092 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading mail/views/mail_activity_plan_template_views.xml 
+2026-09-22 21:21:28,102 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading mail/views/res_config_settings_views.xml 
+2026-09-22 21:21:28,133 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading mail/data/ir_config_parameter_data.xml 
+2026-09-22 21:21:28,139 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading mail/data/res_partner_data.xml 
+2026-09-22 21:21:28,241 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading mail/data/mail_message_subtype_data.xml 
+2026-09-22 21:21:28,262 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading mail/data/mail_templates_chatter.xml 
+2026-09-22 21:21:28,285 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading mail/data/mail_templates_email_layouts.xml 
+2026-09-22 21:21:28,314 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading mail/data/mail_templates_mailgateway.xml 
+2026-09-22 21:21:28,328 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading mail/data/discuss_channel_data.xml 
+2026-09-22 21:21:28,383 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading mail/data/mail_activity_data.xml 
+2026-09-22 21:21:28,406 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading mail/data/security_notifications_templates.xml 
+2026-09-22 21:21:28,412 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading mail/data/ir_cron_data.xml 
+2026-09-22 21:21:28,460 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading mail/security/mail_security.xml 
+2026-09-22 21:21:28,639 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading mail/security/ir.model.access.csv 
+2026-09-22 21:21:28,703 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading mail/views/discuss_public_templates.xml 
+2026-09-22 21:21:28,711 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading mail/views/mail_alias_domain_views.xml 
+2026-09-22 21:21:28,728 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading mail/views/mail_alias_views.xml 
+2026-09-22 21:21:28,749 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading mail/views/mail_gateway_allowed_views.xml 
+2026-09-22 21:21:28,763 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading mail/views/mail_guest_views.xml 
+2026-09-22 21:21:28,778 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading mail/views/mail_message_reaction_views.xml 
+2026-09-22 21:21:28,793 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading mail/views/mail_templates_public.xml 
+2026-09-22 21:21:28,806 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading mail/views/res_users_views.xml 
+2026-09-22 21:21:28,824 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading mail/views/res_users_settings_views.xml 
+2026-09-22 21:21:28,839 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading mail/views/mail_template_views.xml 
+2026-09-22 21:21:28,868 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading mail/views/ir_actions_server_views.xml 
+2026-09-22 21:21:28,881 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading mail/views/ir_model_views.xml 
+2026-09-22 21:21:28,915 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading mail/views/res_partner_views.xml 
+2026-09-22 21:21:28,999 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading mail/views/mail_blacklist_views.xml 
+2026-09-22 21:21:29,033 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading mail/views/mail_menus.xml 
+2026-09-22 21:21:29,251 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading mail/views/res_company_views.xml 
+2026-09-22 21:21:29,339 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Module mail loaded in 4.20s, 4160 queries (+4161 other) 
+2026-09-22 21:21:29,339 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Loading module web_editor (17/57) 
+2026-09-22 21:21:29,404 1 INFO soloodoo_material_request_submit_test odoo.modules.registry: module web_editor: creating or updating database tables 
+2026-09-22 21:21:30,338 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading web_editor/security/ir.model.access.csv 
+2026-09-22 21:21:30,377 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading web_editor/data/editor_assets.xml 
+2026-09-22 21:21:30,383 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading web_editor/views/editor.xml 
+2026-09-22 21:21:30,404 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading web_editor/views/snippets.xml 
+2026-09-22 21:21:30,472 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Module web_editor loaded in 1.13s, 1368 queries (+1368 other) 
+2026-09-22 21:21:30,472 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Loading module analytic (18/57) 
+2026-09-22 21:21:30,519 1 INFO soloodoo_material_request_submit_test odoo.modules.registry: module analytic: creating or updating database tables 
+2026-09-22 21:21:30,734 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading analytic/security/analytic_security.xml 
+2026-09-22 21:21:30,781 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading analytic/security/ir.model.access.csv 
+2026-09-22 21:21:30,801 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading analytic/views/analytic_line_views.xml 
+2026-09-22 21:21:30,860 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading analytic/views/analytic_account_views.xml 
+2026-09-22 21:21:30,898 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading analytic/views/analytic_plan_views.xml 
+2026-09-22 21:21:30,920 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading analytic/views/analytic_distribution_model_views.xml 
+2026-09-22 21:21:30,937 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading analytic/data/analytic_data.xml 
+2026-09-22 21:21:31,012 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Module analytic loaded in 0.54s, 410 queries (+410 other) 
+2026-09-22 21:21:31,012 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Loading module auth_signup (19/57) 
+2026-09-22 21:21:31,053 1 INFO soloodoo_material_request_submit_test odoo.modules.registry: module auth_signup: creating or updating database tables 
+2026-09-22 21:21:31,122 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading auth_signup/data/ir_config_parameter_data.xml 
+2026-09-22 21:21:31,129 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading auth_signup/data/ir_cron_data.xml 
+2026-09-22 21:21:31,139 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading auth_signup/data/mail_template_data.xml 
+2026-09-22 21:21:31,152 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading auth_signup/views/res_config_settings_views.xml 
+2026-09-22 21:21:31,167 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading auth_signup/views/res_users_views.xml 
+2026-09-22 21:21:31,188 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading auth_signup/views/auth_signup_login_templates.xml 
+2026-09-22 21:21:31,213 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading auth_signup/views/auth_signup_templates_email.xml 
+2026-09-22 21:21:31,225 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading auth_signup/views/webclient_templates.xml 
+2026-09-22 21:21:31,256 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Module auth_signup loaded in 0.24s, 202 queries (+202 other) 
+2026-09-22 21:21:31,256 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Loading module auth_totp_mail (20/57) 
+2026-09-22 21:21:31,288 1 INFO soloodoo_material_request_submit_test odoo.modules.registry: module auth_totp_mail: creating or updating database tables 
+2026-09-22 21:21:31,330 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading auth_totp_mail/data/ir_action_data.xml 
+2026-09-22 21:21:31,348 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading auth_totp_mail/data/mail_template_data.xml 
+2026-09-22 21:21:31,356 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading auth_totp_mail/data/security_notifications_template.xml 
+2026-09-22 21:21:31,366 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading auth_totp_mail/views/res_users_views.xml 
+2026-09-22 21:21:31,412 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Module auth_totp_mail loaded in 0.16s, 112 queries (+112 other) 
+2026-09-22 21:21:31,412 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Loading module base_install_request (21/57) 
+2026-09-22 21:21:31,449 1 INFO soloodoo_material_request_submit_test odoo.modules.registry: module base_install_request: creating or updating database tables 
+2026-09-22 21:21:31,532 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading base_install_request/security/ir.model.access.csv 
+2026-09-22 21:21:31,558 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading base_install_request/wizard/base_module_install_request_views.xml 
+2026-09-22 21:21:31,580 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading base_install_request/data/mail_template_data.xml 
+2026-09-22 21:21:31,591 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading base_install_request/data/mail_templates_module_install.xml 
+2026-09-22 21:21:31,599 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading base_install_request/views/ir_module_module_views.xml 
+2026-09-22 21:21:31,638 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Module base_install_request loaded in 0.23s, 144 queries (+144 other) 
+2026-09-22 21:21:31,639 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Loading module google_gmail (22/57) 
+2026-09-22 21:21:31,701 1 INFO soloodoo_material_request_submit_test odoo.modules.registry: module google_gmail: creating or updating database tables 
+2026-09-22 21:21:31,818 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading google_gmail/views/fetchmail_server_views.xml 
+2026-09-22 21:21:31,833 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading google_gmail/views/ir_mail_server_views.xml 
+2026-09-22 21:21:31,846 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading google_gmail/views/res_config_settings_views.xml 
+2026-09-22 21:21:31,887 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Module google_gmail loaded in 0.25s, 118 queries (+118 other) 
+2026-09-22 21:21:31,887 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Loading module iap_mail (23/57) 
+2026-09-22 21:21:31,920 1 INFO soloodoo_material_request_submit_test odoo.modules.registry: module iap_mail: creating or updating database tables 
+2026-09-22 21:21:31,943 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading iap_mail/data/mail_templates.xml 
+2026-09-22 21:21:31,981 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Module iap_mail loaded in 0.09s, 40 queries (+40 other) 
+2026-09-22 21:21:31,981 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Loading module mail_bot (24/57) 
+2026-09-22 21:21:32,020 1 INFO soloodoo_material_request_submit_test odoo.modules.registry: module mail_bot: creating or updating database tables 
+2026-09-22 21:21:32,121 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading mail_bot/views/res_users_views.xml 
+2026-09-22 21:21:32,159 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading mail_bot/data/mailbot_data.xml 
+2026-09-22 21:21:32,181 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Module mail_bot loaded in 0.20s, 157 queries (+157 other) 
+2026-09-22 21:21:32,181 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Loading module phone_validation (25/57) 
+2026-09-22 21:21:32,305 1 INFO soloodoo_material_request_submit_test odoo.modules.registry: module phone_validation: creating or updating database tables 
+2026-09-22 21:21:33,275 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading phone_validation/security/ir.model.access.csv 
+2026-09-22 21:21:33,292 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading phone_validation/views/phone_blacklist_views.xml 
+2026-09-22 21:21:33,319 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading phone_validation/wizard/phone_blacklist_remove_view.xml 
+2026-09-22 21:21:33,350 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Module phone_validation loaded in 1.17s, 1437 queries (+1437 other) 
+2026-09-22 21:21:33,350 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Loading module privacy_lookup (26/57) 
+2026-09-22 21:21:33,385 1 INFO soloodoo_material_request_submit_test odoo.modules.registry: module privacy_lookup: creating or updating database tables 
+2026-09-22 21:21:33,526 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading privacy_lookup/wizard/privacy_lookup_wizard_views.xml 
+2026-09-22 21:21:33,579 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading privacy_lookup/views/privacy_log_views.xml 
+2026-09-22 21:21:33,610 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading privacy_lookup/security/ir.model.access.csv 
+2026-09-22 21:21:33,639 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading privacy_lookup/data/ir_actions_server_data.xml 
+2026-09-22 21:21:33,681 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Module privacy_lookup loaded in 0.33s, 245 queries (+245 other) 
+2026-09-22 21:21:33,682 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Loading module product (27/57) 
+2026-09-22 21:21:33,827 1 INFO soloodoo_material_request_submit_test odoo.modules.registry: module product: creating or updating database tables 
+2026-09-22 21:21:34,776 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading product/data/product_data.xml 
+2026-09-22 21:21:34,805 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading product/security/product_security.xml 
+2026-09-22 21:21:34,953 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading product/security/ir.model.access.csv 
+2026-09-22 21:21:35,001 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading product/wizard/product_label_layout_views.xml 
+2026-09-22 21:21:35,021 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading product/views/product_tag_views.xml 
+2026-09-22 21:21:35,045 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading product/views/product_views.xml 
+2026-09-22 21:21:35,150 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading product/views/res_config_settings_views.xml 
+2026-09-22 21:21:35,172 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading product/views/product_attribute_views.xml 
+2026-09-22 21:21:35,205 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading product/views/product_attribute_value_views.xml 
+2026-09-22 21:21:35,211 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading product/views/product_category_views.xml 
+2026-09-22 21:21:35,226 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading product/views/product_document_views.xml 
+2026-09-22 21:21:35,246 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading product/views/product_packaging_views.xml 
+2026-09-22 21:21:35,277 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading product/views/product_pricelist_item_views.xml 
+2026-09-22 21:21:35,302 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading product/views/product_pricelist_views.xml 
+2026-09-22 21:21:35,334 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading product/views/product_supplierinfo_views.xml 
+2026-09-22 21:21:35,373 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading product/views/product_template_views.xml 
+2026-09-22 21:21:35,423 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading product/views/res_country_group_views.xml 
+2026-09-22 21:21:35,434 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading product/views/res_partner_views.xml 
+2026-09-22 21:21:35,451 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading product/report/product_reports.xml 
+2026-09-22 21:21:35,499 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading product/report/product_product_templates.xml 
+2026-09-22 21:21:35,539 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading product/report/product_template_templates.xml 
+2026-09-22 21:21:35,566 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading product/report/product_packaging.xml 
+2026-09-22 21:21:35,575 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading product/report/product_pricelist_report_templates.xml 
+2026-09-22 21:21:35,633 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Module product loaded in 1.95s, 1491 queries (+1491 other) 
+2026-09-22 21:21:35,633 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Loading module rating (28/57) 
+2026-09-22 21:21:35,691 1 INFO soloodoo_material_request_submit_test odoo.modules.registry: module rating: creating or updating database tables 
+2026-09-22 21:21:35,897 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading rating/views/rating_rating_views.xml 
+2026-09-22 21:21:35,957 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading rating/views/rating_templates.xml 
+2026-09-22 21:21:35,966 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading rating/views/mail_message_views.xml 
+2026-09-22 21:21:35,976 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading rating/security/ir.model.access.csv 
+2026-09-22 21:21:36,010 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Module rating loaded in 0.38s, 359 queries (+359 other) 
+2026-09-22 21:21:36,010 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Loading module web_unsplash (29/57) 
+2026-09-22 21:21:36,053 1 INFO soloodoo_material_request_submit_test odoo.modules.registry: module web_unsplash: creating or updating database tables 
+2026-09-22 21:21:36,106 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading web_unsplash/views/res_config_settings_view.xml 
+2026-09-22 21:21:36,146 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Module web_unsplash loaded in 0.14s, 98 queries (+98 other) 
+2026-09-22 21:21:36,146 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Loading module partner_autocomplete (30/57) 
+2026-09-22 21:21:36,196 1 INFO soloodoo_material_request_submit_test odoo.modules.registry: module partner_autocomplete: creating or updating database tables 
+2026-09-22 21:21:36,292 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading partner_autocomplete/security/ir.model.access.csv 
+2026-09-22 21:21:36,309 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading partner_autocomplete/views/res_partner_views.xml 
+2026-09-22 21:21:36,328 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading partner_autocomplete/views/res_company_views.xml 
+2026-09-22 21:21:36,339 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading partner_autocomplete/views/res_config_settings_views.xml 
+2026-09-22 21:21:36,352 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading partner_autocomplete/data/cron.xml 
+2026-09-22 21:21:36,384 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Module partner_autocomplete loaded in 0.24s, 196 queries (+196 other) 
+2026-09-22 21:21:36,384 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Loading module portal (31/57) 
+2026-09-22 21:21:36,428 1 INFO soloodoo_material_request_submit_test odoo.modules.registry: module portal: creating or updating database tables 
+2026-09-22 21:21:36,706 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading portal/security/ir.model.access.csv 
+2026-09-22 21:21:36,726 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading portal/data/mail_template_data.xml 
+2026-09-22 21:21:36,822 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading portal/data/mail_templates.xml 
+2026-09-22 21:21:36,859 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading portal/views/mail_templates_public.xml 
+2026-09-22 21:21:36,868 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading portal/views/portal_templates.xml 
+2026-09-22 21:21:37,006 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading portal/views/res_config_settings_views.xml 
+2026-09-22 21:21:37,023 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading portal/wizard/portal_share_views.xml 
+2026-09-22 21:21:37,032 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading portal/wizard/portal_wizard_views.xml 
+2026-09-22 21:21:37,076 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Module portal loaded in 0.69s, 493 queries (+493 other) 
+2026-09-22 21:21:37,076 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Loading module sms (32/57) 
+2026-09-22 21:21:37,177 1 INFO soloodoo_material_request_submit_test odoo.modules.registry: module sms: creating or updating database tables 
+2026-09-22 21:21:37,187 1 INFO soloodoo_material_request_submit_test odoo.models: Prepare computation of ir.actions.server.sms_template_id 
+2026-09-22 21:21:37,187 1 INFO soloodoo_material_request_submit_test odoo.models: Prepare computation of ir.actions.server.sms_method 
+2026-09-22 21:21:37,234 1 INFO soloodoo_material_request_submit_test odoo.models: Prepare computation of res.partner.phone_sanitized 
+2026-09-22 21:21:40,479 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading sms/data/ir_cron_data.xml 
+2026-09-22 21:21:40,497 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading sms/wizard/sms_composer_views.xml 
+2026-09-22 21:21:40,516 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading sms/wizard/sms_template_preview_views.xml 
+2026-09-22 21:21:40,537 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading sms/wizard/sms_resend_views.xml 
+2026-09-22 21:21:40,591 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading sms/wizard/sms_template_reset_views.xml 
+2026-09-22 21:21:40,610 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading sms/views/ir_actions_server_views.xml 
+2026-09-22 21:21:40,634 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading sms/views/mail_notification_views.xml 
+2026-09-22 21:21:40,659 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading sms/views/res_config_settings_views.xml 
+2026-09-22 21:21:40,679 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading sms/views/res_partner_views.xml 
+2026-09-22 21:21:40,761 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading sms/views/sms_sms_views.xml 
+2026-09-22 21:21:40,797 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading sms/views/sms_template_views.xml 
+2026-09-22 21:21:40,830 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading sms/security/ir.model.access.csv 
+2026-09-22 21:21:40,875 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading sms/security/sms_security.xml 
+2026-09-22 21:21:40,926 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Module sms loaded in 3.85s, 2018 queries (+2018 other) 
+2026-09-22 21:21:40,926 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Loading module snailmail (33/57) 
+2026-09-22 21:21:41,011 1 INFO soloodoo_material_request_submit_test odoo.modules.registry: module snailmail: creating or updating database tables 
+2026-09-22 21:21:41,405 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading snailmail/data/snailmail_data.xml 
+2026-09-22 21:21:41,421 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading snailmail/views/report_assets.xml 
+2026-09-22 21:21:41,444 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading snailmail/views/snailmail_views.xml 
+2026-09-22 21:21:41,473 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading snailmail/wizard/snailmail_letter_format_error_views.xml 
+2026-09-22 21:21:41,488 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading snailmail/wizard/snailmail_letter_missing_required_fields_views.xml 
+2026-09-22 21:21:41,501 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading snailmail/security/ir.model.access.csv 
+2026-09-22 21:21:41,544 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Module snailmail loaded in 0.62s, 434 queries (+434 other) 
+2026-09-22 21:21:41,544 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Loading module auth_totp_portal (34/57) 
+2026-09-22 21:21:41,610 1 INFO soloodoo_material_request_submit_test odoo.modules.registry: module auth_totp_portal: creating or updating database tables 
+2026-09-22 21:21:41,653 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading auth_totp_portal/security/security.xml 
+2026-09-22 21:21:41,671 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading auth_totp_portal/views/templates.xml 
+2026-09-22 21:21:41,703 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Module auth_totp_portal loaded in 0.16s, 66 queries (+66 other) 
+2026-09-22 21:21:41,703 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Loading module digest (35/57) 
+2026-09-22 21:21:41,784 1 INFO soloodoo_material_request_submit_test odoo.modules.registry: module digest: creating or updating database tables 
+2026-09-22 21:21:41,980 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading digest/security/ir.model.access.csv 
+2026-09-22 21:21:42,005 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading digest/data/digest_data.xml 
+2026-09-22 21:21:42,043 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading digest/data/digest_tips_data.xml 
+2026-09-22 21:21:42,076 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading digest/data/ir_cron_data.xml 
+2026-09-22 21:21:42,092 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading digest/data/res_config_settings_data.xml 
+2026-09-22 21:21:42,103 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading digest/views/digest_views.xml 
+2026-09-22 21:21:42,167 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading digest/views/digest_templates.xml 
+2026-09-22 21:21:42,176 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading digest/views/res_config_settings_views.xml 
+2026-09-22 21:21:42,364 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Module digest loaded in 0.66s, 296 queries (+296 other) 
+2026-09-22 21:21:42,364 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Loading module payment (36/57) 
+2026-09-22 21:21:42,451 1 INFO soloodoo_material_request_submit_test odoo.modules.registry: module payment: creating or updating database tables 
+2026-09-22 21:21:42,837 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading payment/data/onboarding_data.xml 
+2026-09-22 21:21:42,845 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading payment/data/payment_method_data.xml 
+2026-09-22 21:21:44,606 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading payment/data/payment_provider_data.xml 
+2026-09-22 21:21:44,993 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading payment/data/payment_cron.xml 
+2026-09-22 21:21:45,803 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading payment/views/express_checkout_templates.xml 
+2026-09-22 21:21:45,810 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading payment/views/payment_form_templates.xml 
+2026-09-22 21:21:45,842 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading payment/views/portal_templates.xml 
+2026-09-22 21:21:45,891 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading payment/views/payment_provider_views.xml 
+2026-09-22 21:21:45,929 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading payment/views/payment_method_views.xml 
+2026-09-22 21:21:45,960 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading payment/views/payment_transaction_views.xml 
+2026-09-22 21:21:45,994 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading payment/views/payment_token_views.xml 
+2026-09-22 21:21:46,020 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading payment/views/res_partner_views.xml 
+2026-09-22 21:21:46,036 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading payment/security/ir.model.access.csv 
+2026-09-22 21:21:46,057 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading payment/security/payment_security.xml 
+2026-09-22 21:21:46,092 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading payment/wizards/payment_capture_wizard_views.xml 
+2026-09-22 21:21:46,100 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading payment/wizards/payment_link_wizard_views.xml 
+2026-09-22 21:21:46,107 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading payment/wizards/payment_onboarding_views.xml 
+2026-09-22 21:21:46,155 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Module payment loaded in 3.79s, 2222 queries (+2222 other) 
+2026-09-22 21:21:46,156 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Loading module portal_rating (37/57) 
+2026-09-22 21:21:46,219 1 INFO soloodoo_material_request_submit_test odoo.modules.registry: module portal_rating: creating or updating database tables 
+2026-09-22 21:21:46,355 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading portal_rating/views/rating_rating_views.xml 
+2026-09-22 21:21:46,367 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading portal_rating/views/portal_templates.xml 
+2026-09-22 21:21:46,377 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading portal_rating/views/rating_templates.xml 
+2026-09-22 21:21:46,400 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Module portal_rating loaded in 0.24s, 105 queries (+105 other) 
+2026-09-22 21:21:46,401 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Loading module spreadsheet (38/57) 
+2026-09-22 21:21:46,461 1 INFO soloodoo_material_request_submit_test odoo.modules.registry: module spreadsheet: creating or updating database tables 
+2026-09-22 21:21:46,530 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading spreadsheet/views/public_readonly_spreadsheet_templates.xml 
+2026-09-22 21:21:46,567 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Module spreadsheet loaded in 0.17s, 83 queries (+83 other) 
+2026-09-22 21:21:46,567 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Loading module account (39/57) 
+2026-09-22 21:21:46,762 1 INFO soloodoo_material_request_submit_test odoo.modules.registry: module account: creating or updating database tables 
+2026-09-22 21:21:47,322 1 INFO soloodoo_material_request_submit_test odoo.models: Prepare computation of res.company.account_fiscal_country_id 
+2026-09-22 21:21:47,322 1 INFO soloodoo_material_request_submit_test odoo.models: Prepare computation of res.company.invoice_terms_html 
+2026-09-22 21:21:49,500 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading account/security/account_security.xml 
+2026-09-22 21:21:50,012 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading account/security/ir.model.access.csv 
+2026-09-22 21:21:50,085 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading account/data/account_data.xml 
+2026-09-22 21:21:50,175 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading account/data/digest_data.xml 
+2026-09-22 21:21:50,184 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading account/views/account_report.xml 
+2026-09-22 21:21:50,209 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading account/data/mail_template_data.xml 
+2026-09-22 21:21:50,225 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading account/data/onboarding_data.xml 
+2026-09-22 21:21:50,286 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading account/views/account_payment_view.xml 
+2026-09-22 21:21:50,383 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading account/wizard/account_automatic_entry_wizard_views.xml 
+2026-09-22 21:21:50,395 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading account/wizard/account_unreconcile_view.xml 
+2026-09-22 21:21:50,408 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading account/wizard/account_move_reversal_view.xml 
+2026-09-22 21:21:50,419 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading account/wizard/account_resequence_views.xml 
+2026-09-22 21:21:50,430 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading account/wizard/account_payment_register_views.xml 
+2026-09-22 21:21:50,441 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading account/views/account_move_views.xml 
+2026-09-22 21:21:50,827 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading account/wizard/setup_wizards_view.xml 
+2026-09-22 21:21:50,845 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading account/views/account_account_views.xml 
+2026-09-22 21:21:50,872 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading account/views/account_group_views.xml 
+2026-09-22 21:21:50,886 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading account/views/account_journal_views.xml 
+2026-09-22 21:21:50,936 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading account/views/account_account_tag_views.xml 
+2026-09-22 21:21:50,948 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading account/views/account_bank_statement_views.xml 
+2026-09-22 21:21:50,976 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading account/views/account_reconcile_model_views.xml 
+2026-09-22 21:21:51,008 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading account/views/account_tax_views.xml 
+2026-09-22 21:21:51,067 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading account/views/account_full_reconcile_views.xml 
+2026-09-22 21:21:51,073 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading account/views/account_payment_term_views.xml 
+2026-09-22 21:21:51,095 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading account/views/account_payment_method.xml 
+2026-09-22 21:21:51,105 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading account/views/res_partner_bank_views.xml 
+2026-09-22 21:21:51,128 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading account/views/report_statement.xml 
+2026-09-22 21:21:51,146 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading account/views/terms_template.xml 
+2026-09-22 21:21:51,159 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading account/wizard/account_validate_move_view.xml 
+2026-09-22 21:21:51,169 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading account/views/res_company_views.xml 
+2026-09-22 21:21:51,196 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading account/views/product_view.xml 
+2026-09-22 21:21:51,226 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading account/views/account_analytic_plan_views.xml 
+2026-09-22 21:21:51,235 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading account/views/account_analytic_account_views.xml 
+2026-09-22 21:21:51,250 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading account/views/account_analytic_distribution_model_views.xml 
+2026-09-22 21:21:51,266 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading account/views/account_analytic_line_views.xml 
+2026-09-22 21:21:51,302 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading account/views/report_invoice.xml 
+2026-09-22 21:21:51,345 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading account/report/account_invoice_report_view.xml 
+2026-09-22 21:21:51,387 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading account/views/account_cash_rounding_view.xml 
+2026-09-22 21:21:51,407 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading account/views/ir_module_views.xml 
+2026-09-22 21:21:51,417 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading account/views/res_config_settings_views.xml 
+2026-09-22 21:21:51,447 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading account/views/partner_view.xml 
+2026-09-22 21:21:51,513 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading account/views/account_journal_dashboard_view.xml 
+2026-09-22 21:21:51,536 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading account/views/account_portal_templates.xml 
+2026-09-22 21:21:51,577 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading account/views/report_payment_receipt_templates.xml 
+2026-09-22 21:21:51,590 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading account/data/service_cron.xml 
+2026-09-22 21:21:51,604 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading account/views/account_incoterms_view.xml 
+2026-09-22 21:21:51,620 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading account/data/account_incoterms_data.xml 
+2026-09-22 21:21:51,642 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading account/views/digest_views.xml 
+2026-09-22 21:21:51,653 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading account/wizard/account_move_send_views.xml 
+2026-09-22 21:21:51,666 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading account/report/account_hash_integrity_templates.xml 
+2026-09-22 21:21:51,673 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading account/views/res_currency.xml 
+2026-09-22 21:21:51,682 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading account/views/account_menuitem.xml 
+2026-09-22 21:21:51,955 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading account/wizard/account_tour_upload_bill.xml 
+2026-09-22 21:21:51,969 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading account/wizard/accrued_orders.xml 
+2026-09-22 21:21:51,978 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading account/views/bill_preview_template.xml 
+2026-09-22 21:21:51,988 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading account/data/account_reports_data.xml 
+2026-09-22 21:21:52,849 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading account/views/uom_uom_views.xml 
+2026-09-22 21:21:52,858 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading account/data/ir_config_parameter_data.xml 
+2026-09-22 21:21:53,035 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Module account loaded in 6.47s, 5694 queries (+5694 other) 
+2026-09-22 21:21:53,035 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Loading module project (40/57) 
+2026-09-22 21:21:53,135 1 INFO soloodoo_material_request_submit_test odoo.modules.registry: module project: creating or updating database tables 
+2026-09-22 21:21:53,863 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading project/security/project_security.xml 
+2026-09-22 21:21:54,324 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading project/security/ir.model.access.csv 
+2026-09-22 21:21:54,373 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading project/security/ir.model.access.xml 
+2026-09-22 21:21:54,381 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading project/data/digest_data.xml 
+2026-09-22 21:21:54,397 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading project/report/project_task_burndown_chart_report_views.xml 
+2026-09-22 21:21:54,419 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading project/views/account_analytic_account_views.xml 
+2026-09-22 21:21:54,434 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading project/views/digest_digest_views.xml 
+2026-09-22 21:21:54,448 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading project/views/rating_rating_views.xml 
+2026-09-22 21:21:54,568 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading project/views/project_update_views.xml 
+2026-09-22 21:21:54,607 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading project/views/project_update_templates.xml 
+2026-09-22 21:21:54,624 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading project/views/project_project_stage_views.xml 
+2026-09-22 21:21:54,675 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading project/wizard/project_share_wizard_views.xml 
+2026-09-22 21:21:54,691 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading project/views/project_collaborator_views.xml 
+2026-09-22 21:21:54,706 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading project/views/project_task_type_views.xml 
+2026-09-22 21:21:54,751 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading project/views/project_project_views.xml 
+2026-09-22 21:21:54,905 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading project/views/project_task_views.xml 
+2026-09-22 21:21:55,155 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading project/views/project_tags_views.xml 
+2026-09-22 21:21:55,176 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading project/views/project_milestone_views.xml 
+2026-09-22 21:21:55,193 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading project/views/res_partner_views.xml 
+2026-09-22 21:21:55,210 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading project/views/res_config_settings_views.xml 
+2026-09-22 21:21:55,237 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading project/views/mail_activity_plan_views.xml 
+2026-09-22 21:21:55,267 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading project/views/mail_activity_type_views.xml 
+2026-09-22 21:21:55,274 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading project/views/project_sharing_project_task_views.xml 
+2026-09-22 21:21:55,339 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading project/views/project_portal_project_project_templates.xml 
+2026-09-22 21:21:55,372 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading project/views/project_portal_project_task_templates.xml 
+2026-09-22 21:21:55,437 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading project/views/project_task_templates.xml 
+2026-09-22 21:21:55,444 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading project/views/project_sharing_project_task_templates.xml 
+2026-09-22 21:21:55,461 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading project/report/project_report_views.xml 
+2026-09-22 21:21:55,488 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading project/data/ir_cron_data.xml 
+2026-09-22 21:21:55,498 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading project/data/mail_message_subtype_data.xml 
+2026-09-22 21:21:55,559 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading project/data/mail_template_data.xml 
+2026-09-22 21:21:55,577 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading project/data/project_data.xml 
+2026-09-22 21:21:55,590 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading project/wizard/project_task_type_delete_views.xml 
+2026-09-22 21:21:55,606 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading project/wizard/project_project_stage_delete_views.xml 
+2026-09-22 21:21:55,618 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading project/views/project_menus.xml 
+2026-09-22 21:21:55,794 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Module project loaded in 2.76s, 2597 queries (+2597 other) 
+2026-09-22 21:21:55,794 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Loading module spreadsheet_dashboard (41/57) 
+2026-09-22 21:21:55,874 1 INFO soloodoo_material_request_submit_test odoo.modules.registry: module spreadsheet_dashboard: creating or updating database tables 
+2026-09-22 21:21:56,046 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading spreadsheet_dashboard/security/security.xml 
+2026-09-22 21:21:56,114 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading spreadsheet_dashboard/security/ir.model.access.csv 
+2026-09-22 21:21:56,128 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading spreadsheet_dashboard/views/spreadsheet_dashboard_views.xml 
+2026-09-22 21:21:56,148 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading spreadsheet_dashboard/views/menu_views.xml 
+2026-09-22 21:21:56,177 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading spreadsheet_dashboard/data/dashboard.xml 
+2026-09-22 21:21:56,226 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Module spreadsheet_dashboard loaded in 0.43s, 269 queries (+269 other) 
+2026-09-22 21:21:56,226 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Loading module stock (42/57) 
+2026-09-22 21:21:56,411 1 INFO soloodoo_material_request_submit_test odoo.modules.registry: module stock: creating or updating database tables 
+2026-09-22 21:21:58,998 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading stock/security/stock_security.xml 
+2026-09-22 21:21:59,470 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading stock/security/ir.model.access.csv 
+2026-09-22 21:21:59,543 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading stock/data/digest_data.xml 
+2026-09-22 21:21:59,550 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading stock/data/mail_templates.xml 
+2026-09-22 21:21:59,560 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading stock/data/default_barcode_patterns.xml 
+2026-09-22 21:21:59,573 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading stock/data/stock_data.xml 
+2026-09-22 21:21:59,808 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading stock/data/stock_sequence_data.xml 
+2026-09-22 21:21:59,834 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading stock/data/stock_traceability_report_data.xml 
+2026-09-22 21:21:59,840 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading stock/report/report_stock_quantity.xml 
+2026-09-22 21:21:59,847 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading stock/report/report_stock_reception.xml 
+2026-09-22 21:21:59,866 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading stock/report/stock_report_views.xml 
+2026-09-22 21:21:59,918 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading stock/report/report_package_barcode.xml 
+2026-09-22 21:21:59,933 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading stock/report/report_lot_barcode.xml 
+2026-09-22 21:21:59,939 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading stock/report/report_location_barcode.xml 
+2026-09-22 21:21:59,948 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading stock/report/report_stockpicking_operations.xml 
+2026-09-22 21:21:59,963 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading stock/report/report_deliveryslip.xml 
+2026-09-22 21:21:59,989 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading stock/report/report_stockinventory.xml 
+2026-09-22 21:21:59,996 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading stock/report/report_stock_rule.xml 
+2026-09-22 21:22:00,032 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading stock/report/package_templates.xml 
+2026-09-22 21:22:00,038 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading stock/report/picking_templates.xml 
+2026-09-22 21:22:00,050 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading stock/report/product_templates.xml 
+2026-09-22 21:22:00,060 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading stock/report/product_packaging.xml 
+2026-09-22 21:22:00,066 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading stock/report/report_return_slip.xml 
+2026-09-22 21:22:00,075 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading stock/data/mail_template_data.xml 
+2026-09-22 21:22:00,086 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading stock/views/stock_menu_views.xml 
+2026-09-22 21:22:00,169 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading stock/wizard/stock_assign_serial_views.xml 
+2026-09-22 21:22:00,179 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading stock/wizard/stock_change_product_qty_views.xml 
+2026-09-22 21:22:00,189 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading stock/wizard/stock_picking_return_views.xml 
+2026-09-22 21:22:00,201 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading stock/wizard/stock_scheduler_compute_views.xml 
+2026-09-22 21:22:00,216 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading stock/wizard/stock_inventory_conflict.xml 
+2026-09-22 21:22:00,227 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading stock/wizard/stock_backorder_confirmation_views.xml 
+2026-09-22 21:22:00,233 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading stock/wizard/stock_quantity_history.xml 
+2026-09-22 21:22:00,239 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading stock/wizard/stock_request_count.xml 
+2026-09-22 21:22:00,247 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading stock/wizard/stock_replenishment_info.xml 
+2026-09-22 21:22:00,267 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading stock/wizard/stock_rules_report_views.xml 
+2026-09-22 21:22:00,275 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading stock/wizard/stock_warn_insufficient_qty_views.xml 
+2026-09-22 21:22:00,289 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading stock/wizard/product_replenish_views.xml 
+2026-09-22 21:22:00,299 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading stock/wizard/product_label_layout_views.xml 
+2026-09-22 21:22:00,309 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading stock/wizard/stock_track_confirmation_views.xml 
+2026-09-22 21:22:00,316 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading stock/wizard/stock_orderpoint_snooze_views.xml 
+2026-09-22 21:22:00,329 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading stock/wizard/stock_package_destination_views.xml 
+2026-09-22 21:22:00,342 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading stock/wizard/stock_inventory_adjustment_name.xml 
+2026-09-22 21:22:00,355 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading stock/wizard/stock_inventory_warning.xml 
+2026-09-22 21:22:00,367 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading stock/wizard/stock_label_type.xml 
+2026-09-22 21:22:00,373 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading stock/wizard/stock_lot_label_layout.xml 
+2026-09-22 21:22:00,380 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading stock/wizard/stock_quant_relocate.xml 
+2026-09-22 21:22:00,387 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading stock/views/res_partner_views.xml 
+2026-09-22 21:22:00,414 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading stock/views/product_strategy_views.xml 
+2026-09-22 21:22:00,451 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading stock/views/stock_lot_views.xml 
+2026-09-22 21:22:00,495 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading stock/views/stock_scrap_views.xml 
+2026-09-22 21:22:00,537 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading stock/views/stock_quant_views.xml 
+2026-09-22 21:22:00,741 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading stock/views/stock_warehouse_views.xml 
+2026-09-22 21:22:00,772 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading stock/views/stock_move_line_views.xml 
+2026-09-22 21:22:00,839 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading stock/views/stock_picking_views.xml 
+2026-09-22 21:22:00,994 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading stock/views/stock_picking_type_views.xml 
+2026-09-22 21:22:01,047 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading stock/views/stock_move_views.xml 
+2026-09-22 21:22:01,130 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading stock/views/product_views.xml 
+2026-09-22 21:22:01,312 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading stock/views/stock_location_views.xml 
+2026-09-22 21:22:01,391 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading stock/views/stock_orderpoint_views.xml 
+2026-09-22 21:22:01,446 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading stock/views/stock_storage_category_views.xml 
+2026-09-22 21:22:01,474 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading stock/views/res_config_settings_views.xml 
+2026-09-22 21:22:01,514 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading stock/views/report_stock_traceability.xml 
+2026-09-22 21:22:01,524 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading stock/views/stock_template.xml 
+2026-09-22 21:22:01,534 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading stock/views/stock_rule_views.xml 
+2026-09-22 21:22:01,570 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading stock/views/stock_package_level_views.xml 
+2026-09-22 21:22:01,591 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading stock/views/stock_package_type_view.xml 
+2026-09-22 21:22:01,613 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading stock/views/stock_forecasted.xml 
+2026-09-22 21:22:01,708 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Module stock loaded in 5.48s, 5103 queries (+5103 other) 
+2026-09-22 21:22:01,708 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Loading module account_add_gln (43/57) 
+2026-09-22 21:22:01,884 1 INFO soloodoo_material_request_submit_test odoo.modules.registry: module account_add_gln: creating or updating database tables 
+2026-09-22 21:22:01,968 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading account_add_gln/views/res_partner_views.xml 
+2026-09-22 21:22:02,000 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Module account_add_gln loaded in 0.29s, 96 queries (+96 other) 
+2026-09-22 21:22:02,000 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Loading module account_edi_ubl_cii (44/57) 
+2026-09-22 21:22:02,200 1 INFO soloodoo_material_request_submit_test odoo.modules.registry: module account_edi_ubl_cii: creating or updating database tables 
+2026-09-22 21:22:02,226 1 INFO soloodoo_material_request_submit_test odoo.models: Prepare computation of res.partner.ubl_cii_format 
+2026-09-22 21:22:02,226 1 INFO soloodoo_material_request_submit_test odoo.models: Prepare computation of res.partner.peppol_endpoint 
+2026-09-22 21:22:02,226 1 INFO soloodoo_material_request_submit_test odoo.models: Prepare computation of res.partner.peppol_eas 
+2026-09-22 21:22:02,412 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading account_edi_ubl_cii/data/cii_22_templates.xml 
+2026-09-22 21:22:02,458 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading account_edi_ubl_cii/data/ubl_20_templates.xml 
+2026-09-22 21:22:02,701 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading account_edi_ubl_cii/data/ubl_21_templates.xml 
+2026-09-22 21:22:02,789 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading account_edi_ubl_cii/views/account_move_views.xml 
+2026-09-22 21:22:02,830 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading account_edi_ubl_cii/views/res_config_settings_views.xml 
+2026-09-22 21:22:02,881 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading account_edi_ubl_cii/views/res_partner_views.xml 
+2026-09-22 21:22:03,010 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading account_edi_ubl_cii/wizard/account_move_send_views.xml 
+2026-09-22 21:22:03,201 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Module account_edi_ubl_cii loaded in 1.20s, 438 queries (+438 other) 
+2026-09-22 21:22:03,201 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Loading module account_payment (45/57) 
+2026-09-22 21:22:03,439 1 INFO soloodoo_material_request_submit_test odoo.modules.registry: module account_payment: creating or updating database tables 
+2026-09-22 21:22:03,652 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading account_payment/data/ir_config_parameter.xml 
+2026-09-22 21:22:03,659 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading account_payment/data/onboarding_data.xml 
+2026-09-22 21:22:03,675 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading account_payment/security/ir.model.access.csv 
+2026-09-22 21:22:03,690 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading account_payment/security/ir_rules.xml 
+2026-09-22 21:22:03,701 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading account_payment/views/account_payment_menus.xml 
+2026-09-22 21:22:03,732 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading account_payment/views/account_portal_templates.xml 
+2026-09-22 21:22:03,769 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading account_payment/views/account_move_views.xml 
+2026-09-22 21:22:03,785 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading account_payment/views/account_journal_views.xml 
+2026-09-22 21:22:03,798 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading account_payment/views/account_payment_views.xml 
+2026-09-22 21:22:03,817 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading account_payment/views/payment_provider_views.xml 
+2026-09-22 21:22:03,833 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading account_payment/views/payment_transaction_views.xml 
+2026-09-22 21:22:03,872 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading account_payment/wizards/account_payment_register_views.xml 
+2026-09-22 21:22:03,940 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading account_payment/wizards/payment_link_wizard_views.xml 
+2026-09-22 21:22:04,030 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading account_payment/wizards/payment_refund_wizard_views.xml 
+2026-09-22 21:22:04,068 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading account_payment/wizards/res_config_settings_views.xml 
+2026-09-22 21:22:04,295 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Module account_payment loaded in 1.09s, 481 queries (+481 other) 
+2026-09-22 21:22:04,295 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Loading module account_payment_term (46/57) 
+2026-09-22 21:22:04,716 1 INFO soloodoo_material_request_submit_test odoo.modules.registry: module account_payment_term: creating or updating database tables 
+2026-09-22 21:22:04,821 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading account_payment_term/views/account_payment_term_views.xml 
+2026-09-22 21:22:04,909 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Module account_payment_term loaded in 0.61s, 52 queries (+52 other) 
+2026-09-22 21:22:04,909 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Loading module elmokrif_chantier (47/57) 
+2026-09-22 21:22:05,037 1 INFO soloodoo_material_request_submit_test odoo.modules.registry: module elmokrif_chantier: creating or updating database tables 
+2026-09-22 21:22:05,260 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading elmokrif_chantier/security/chantier_groups.xml 
+2026-09-22 21:22:05,335 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading elmokrif_chantier/security/menu_security.xml 
+2026-09-22 21:22:05,350 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading elmokrif_chantier/security/ir.model.access.csv 
+2026-09-22 21:22:05,366 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading elmokrif_chantier/security/chantier_rules.xml 
+2026-09-22 21:22:05,407 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading elmokrif_chantier/data/analytic_plan_data.xml 
+2026-09-22 21:22:05,703 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading elmokrif_chantier/data/chantier_sequence.xml 
+2026-09-22 21:22:05,734 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading elmokrif_chantier/data/chantier_health_cron.xml 
+2026-09-22 21:22:05,750 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading elmokrif_chantier/views/project_project_views.xml 
+2026-09-22 21:22:05,850 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading elmokrif_chantier/views/project_task_views.xml 
+2026-09-22 21:22:05,954 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Module elmokrif_chantier loaded in 1.05s, 589 queries (+589 other) 
+2026-09-22 21:22:05,955 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Loading module project_account (48/57) 
+2026-09-22 21:22:06,138 1 INFO soloodoo_material_request_submit_test odoo.modules.registry: module project_account: creating or updating database tables 
+2026-09-22 21:22:06,181 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading project_account/views/account_analytic_line_views.xml 
+2026-09-22 21:22:06,222 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading project_account/views/project_project_views.xml 
+2026-09-22 21:22:06,249 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading project_account/views/project_task_views.xml 
+2026-09-22 21:22:06,278 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading project_account/views/project_sharing_project_task_views.xml 
+2026-09-22 21:22:06,307 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Module project_account loaded in 0.35s, 135 queries (+135 other) 
+2026-09-22 21:22:06,307 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Loading module project_sms (49/57) 
+2026-09-22 21:22:06,415 1 INFO soloodoo_material_request_submit_test odoo.modules.registry: module project_sms: creating or updating database tables 
+2026-09-22 21:22:06,534 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading project_sms/views/project_stage_views.xml 
+2026-09-22 21:22:06,561 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading project_sms/views/project_task_type_views.xml 
+2026-09-22 21:22:06,587 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading project_sms/views/project_project_views.xml 
+2026-09-22 21:22:06,596 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading project_sms/views/project_task_views.xml 
+2026-09-22 21:22:06,605 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading project_sms/security/ir.model.access.csv 
+2026-09-22 21:22:06,622 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading project_sms/security/project_sms_security.xml 
+2026-09-22 21:22:06,661 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Module project_sms loaded in 0.35s, 209 queries (+209 other) 
+2026-09-22 21:22:06,661 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Loading module project_todo (50/57) 
+2026-09-22 21:22:06,780 1 INFO soloodoo_material_request_submit_test odoo.modules.registry: module project_todo: creating or updating database tables 
+2026-09-22 21:22:06,880 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading project_todo/security/ir.model.access.csv 
+2026-09-22 21:22:06,903 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading project_todo/security/project_todo_security.xml 
+2026-09-22 21:22:06,953 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading project_todo/data/mail_activity_type_data.xml 
+2026-09-22 21:22:06,969 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading project_todo/data/todo_template.xml 
+2026-09-22 21:22:06,978 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading project_todo/views/project_task_views.xml 
+2026-09-22 21:22:07,047 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading project_todo/views/project_todo_menus.xml 
+2026-09-22 21:22:07,063 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading project_todo/wizard/mail_activity_todo_create.xml 
+2026-09-22 21:22:07,101 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Module project_todo loaded in 0.44s, 266 queries (+266 other) 
+2026-09-22 21:22:07,101 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Loading module snailmail_account (51/57) 
+2026-09-22 21:22:07,200 1 INFO soloodoo_material_request_submit_test odoo.modules.registry: module snailmail_account: creating or updating database tables 
+2026-09-22 21:22:07,414 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading snailmail_account/views/res_config_settings_views.xml 
+2026-09-22 21:22:07,439 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading snailmail_account/wizard/account_move_send_views.xml 
+2026-09-22 21:22:07,476 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Module snailmail_account loaded in 0.37s, 132 queries (+132 other) 
+2026-09-22 21:22:07,476 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Loading module spreadsheet_account (52/57) 
+2026-09-22 21:22:07,567 1 INFO soloodoo_material_request_submit_test odoo.modules.registry: module spreadsheet_account: creating or updating database tables 
+2026-09-22 21:22:07,657 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Module spreadsheet_account loaded in 0.18s, 55 queries (+55 other) 
+2026-09-22 21:22:07,658 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Loading module spreadsheet_dashboard_account (53/57) 
+2026-09-22 21:22:07,764 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading spreadsheet_dashboard_account/data/dashboards.xml 
+2026-09-22 21:22:07,862 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Module spreadsheet_dashboard_account loaded in 0.20s, 29 queries (+29 other) 
+2026-09-22 21:22:07,863 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Loading module stock_account (54/57) 
+2026-09-22 21:22:07,980 1 INFO soloodoo_material_request_submit_test odoo.modules.registry: module stock_account: creating or updating database tables 
+2026-09-22 21:22:08,467 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading stock_account/security/stock_account_security.xml 
+2026-09-22 21:22:08,513 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading stock_account/security/ir.model.access.csv 
+2026-09-22 21:22:08,536 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading stock_account/data/stock_account_data.xml 
+2026-09-22 21:22:08,544 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading stock_account/views/stock_account_views.xml 
+2026-09-22 21:22:08,659 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading stock_account/views/res_config_settings_views.xml 
+2026-09-22 21:22:08,684 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading stock_account/data/product_data.xml 
+2026-09-22 21:22:08,697 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading stock_account/views/report_invoice.xml 
+2026-09-22 21:22:08,710 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading stock_account/views/stock_valuation_layer_views.xml 
+2026-09-22 21:22:08,823 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading stock_account/views/stock_quant_views.xml 
+2026-09-22 21:22:08,854 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading stock_account/views/product_views.xml 
+2026-09-22 21:22:08,905 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading stock_account/wizard/stock_request_count.xml 
+2026-09-22 21:22:08,919 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading stock_account/wizard/stock_valuation_layer_revaluation_views.xml 
+2026-09-22 21:22:08,928 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading stock_account/wizard/stock_quantity_history.xml 
+2026-09-22 21:22:08,940 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading stock_account/report/account_invoice_report_view.xml 
+2026-09-22 21:22:08,993 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Module stock_account loaded in 1.13s, 735 queries (+735 other) 
+2026-09-22 21:22:08,993 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Loading module stock_sms (55/57) 
+2026-09-22 21:22:09,490 1 INFO soloodoo_material_request_submit_test odoo.modules.registry: module stock_sms: creating or updating database tables 
+2026-09-22 21:22:09,672 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading stock_sms/data/sms_data.xml 
+2026-09-22 21:22:09,684 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading stock_sms/views/res_config_settings_views.xml 
+2026-09-22 21:22:09,744 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading stock_sms/wizard/confirm_stock_sms_views.xml 
+2026-09-22 21:22:09,751 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading stock_sms/security/ir.model.access.csv 
+2026-09-22 21:22:09,772 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading stock_sms/security/sms_security.xml 
+2026-09-22 21:22:09,829 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Module stock_sms loaded in 0.84s, 199 queries (+199 other) 
+2026-09-22 21:22:09,830 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Loading module elmokrif_chantier_stock (56/57) 
+2026-09-22 21:22:10,013 1 INFO soloodoo_material_request_submit_test odoo.modules.registry: module elmokrif_chantier_stock: creating or updating database tables 
+2026-09-22 21:22:10,403 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading elmokrif_chantier_stock/security/chantier_security.xml 
+2026-09-22 21:22:10,431 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading elmokrif_chantier_stock/security/ir.model.access.csv 
+2026-09-22 21:22:10,444 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading elmokrif_chantier_stock/data/stock_location_data.xml 
+2026-09-22 21:22:10,453 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading elmokrif_chantier_stock/views/material_request_views.xml 
+2026-09-22 21:22:10,494 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading elmokrif_chantier_stock/views/project_project_views.xml 
+2026-09-22 21:22:10,512 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading elmokrif_chantier_stock/views/stock_picking_views.xml 
+2026-09-22 21:22:10,528 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading elmokrif_chantier_stock/views/stock_warehouse_views.xml 
+2026-09-22 21:22:10,575 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Module elmokrif_chantier_stock loaded in 0.75s, 333 queries (+333 other) 
+2026-09-22 21:22:10,575 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Loading module spreadsheet_dashboard_stock_account (57/57) 
+2026-09-22 21:22:10,708 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: loading spreadsheet_dashboard_stock_account/data/dashboards.xml 
+2026-09-22 21:22:10,779 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Module spreadsheet_dashboard_stock_account loaded in 0.20s, 28 queries (+28 other) 
+2026-09-22 21:22:10,779 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: 57 modules loaded in 50.65s, 37731 queries (+37732 extra) 
+2026-09-22 21:22:12,129 1 INFO soloodoo_material_request_submit_test odoo.modules.loading: Modules loaded. 
+2026-09-22 21:22:12,796 1 INFO soloodoo_material_request_submit_test odoo.modules.registry: Registry loaded in 68.046s 
+2026-09-22 21:22:12,796 1 INFO soloodoo_material_request_submit_test odoo.service.server: Starting post tests 
+2026-09-22 21:22:13,005 1 INFO soloodoo_material_request_submit_test odoo.addons.elmokrif_chantier_stock.tests.test_material_request: Starting TestChantierMaterialRequest.test_assignment_rule_hides_another_chantiers_request ... 
+2026-09-22 21:22:13,353 1 INFO soloodoo_material_request_submit_test odoo.addons.base.models.ir_rule: Access Denied by record rules for operation: write on record ids: [1], uid: 6, model: chantier.material.request 
+2026-09-22 21:22:13,362 1 INFO soloodoo_material_request_submit_test odoo.addons.elmokrif_chantier_stock.tests.test_material_request: Starting TestChantierMaterialRequest.test_backorder_keeps_material_request_link ... 
+2026-09-22 21:22:13,937 1 INFO soloodoo_material_request_submit_test odoo.addons.elmokrif_chantier_stock.tests.test_material_request: Starting TestChantierMaterialRequest.test_chantier_user_can_read_draft_request_line_quantities_without_stock_access ... 
+2026-09-22 21:22:14,219 1 INFO soloodoo_material_request_submit_test odoo.addons.elmokrif_chantier_stock.tests.test_material_request: Starting TestChantierMaterialRequest.test_chantier_user_can_submit_a_material_request_without_stock_access ... 
+2026-09-22 21:22:14,518 1 INFO soloodoo_material_request_submit_test odoo.addons.elmokrif_chantier_stock.tests.test_material_request: Starting TestChantierMaterialRequest.test_company_rule_hides_requests_from_other_companies ... 
+2026-09-22 21:22:15,486 1 INFO soloodoo_material_request_submit_test odoo.addons.base.models.ir_rule: Access Denied by record rules for operation: write on record ids: [5], uid: 9, model: chantier.material.request 
+2026-09-22 21:22:15,494 1 INFO soloodoo_material_request_submit_test odoo.addons.elmokrif_chantier_stock.tests.test_material_request: Starting TestChantierMaterialRequest.test_consumption_uses_dedicated_valuation_location ... 
+2026-09-22 21:22:15,689 1 INFO soloodoo_material_request_submit_test odoo.addons.elmokrif_chantier_stock.tests.test_material_request: Starting TestChantierMaterialRequest.test_create_cannot_skip_request_approval ... 
+2026-09-22 21:22:15,862 1 INFO soloodoo_material_request_submit_test odoo.addons.elmokrif_chantier_stock.tests.test_material_request: Starting TestChantierMaterialRequest.test_duplicate_product_lines_keep_exact_move_allocation ... 
+2026-09-22 21:22:16,216 1 INFO soloodoo_material_request_submit_test odoo.addons.elmokrif_chantier_stock.tests.test_material_request: Starting TestChantierMaterialRequest.test_empty_request_cannot_be_submitted ... 
+2026-09-22 21:22:16,387 1 INFO soloodoo_material_request_submit_test odoo.addons.elmokrif_chantier_stock.tests.test_material_request: Starting TestChantierMaterialRequest.test_global_request_defaults_company_and_accepts_its_chantier ... 
+2026-09-22 21:22:16,552 1 INFO soloodoo_material_request_submit_test odoo.addons.elmokrif_chantier_stock.tests.test_material_request: Starting TestChantierMaterialRequest.test_manual_chantier_transfer_normalizes_delivery_order_defaults ... 
+2026-09-22 21:22:16,703 1 INFO soloodoo_material_request_submit_test odoo.addons.elmokrif_chantier_stock.tests.test_material_request: Starting TestChantierMaterialRequest.test_negative_requested_quantity_is_rejected ... 
+2026-09-22 21:22:16,864 1 INFO soloodoo_material_request_submit_test odoo.addons.elmokrif_chantier_stock.tests.test_material_request: Starting TestChantierMaterialRequest.test_preselected_chantier_sets_its_company ... 
+2026-09-22 21:22:18,347 1 INFO soloodoo_material_request_submit_test odoo.addons.elmokrif_chantier_stock.tests.test_material_request: Starting TestChantierMaterialRequest.test_received_quantity_is_limited_to_its_request ... 
+2026-09-22 21:22:18,695 1 INFO soloodoo_material_request_submit_test odoo.addons.elmokrif_chantier_stock.tests.test_material_request: Starting TestChantierMaterialRequest.test_request_requires_chantier_in_progress ... 
+2026-09-22 21:22:18,916 1 INFO soloodoo_material_request_submit_test odoo.addons.elmokrif_chantier_stock.tests.test_material_request: Starting TestChantierMaterialRequest.test_request_state_and_lines_cannot_be_bypassed ... 
+2026-09-22 21:22:19,523 1 INFO soloodoo_material_request_submit_test odoo.addons.elmokrif_chantier_stock.tests.test_material_request: Starting TestChantierMaterialRequest.test_short_delivery_without_backorder_remains_partial ... 
+2026-09-22 21:22:19,939 1 INFO soloodoo_material_request_submit_test odoo.addons.elmokrif_chantier_stock.tests.test_material_request: Starting TestChantierMaterialRequest.test_submitted_request_creates_site_delivery ... 
+2026-09-22 21:22:20,154 1 INFO soloodoo_material_request_submit_test odoo.addons.elmokrif_chantier_stock.tests.test_material_request: Starting TestChantierMaterialRequest.test_submitted_request_lines_cannot_be_added_moved_or_deleted ... 
+2026-09-22 21:22:20,342 1 INFO soloodoo_material_request_submit_test odoo.addons.elmokrif_chantier_stock.tests.test_material_request: Starting TestChantierMaterialRequest.test_uom_summary_and_cost_use_the_chantier_company_price ... 
+2026-09-22 21:22:22,342 1 INFO soloodoo_material_request_submit_test odoo.addons.base.models.ir_attachment: filestore gc 384 checked, 1 removed 
+2026-09-22 21:22:22,345 1 INFO soloodoo_material_request_submit_test odoo.service.server: 20 post-tests in 9.55s, 9201 queries 
+2026-09-22 21:22:22,345 1 INFO soloodoo_material_request_submit_test odoo.tests.stats: elmokrif_chantier_stock: 22 tests 9.41s 9201 queries 
+2026-09-22 21:22:22,345 1 INFO soloodoo_material_request_submit_test odoo.tests.result: 0 failed, 0 error(s) of 20 tests when loading database 'soloodoo_material_request_submit_test' 
+2026-09-22 21:22:22,345 1 INFO soloodoo_material_request_submit_test odoo.service.server: Initiating shutdown 
+2026-09-22 21:22:22,345 1 INFO soloodoo_material_request_submit_test odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2026-09-22 21:22:22,425 1 INFO soloodoo_material_request_submit_test odoo.sql_db: ConnectionPool(used=0/count=0/max=64): Closed 1 connections  

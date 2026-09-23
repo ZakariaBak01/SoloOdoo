@@ -248,7 +248,10 @@ personas = [
         "U5",
         "Storekeeper",
         "uat.u5.storekeeper",
-        ["stock.group_stock_user"],
+        [
+            "stock.group_stock_user",
+            "elmokrif_chantier.group_chantier_user",
+        ],
         [company_a],
     ),
     (
@@ -403,6 +406,22 @@ uat_chantier = env["project.project"].search(
 )
 if uat_chantier and user_u7:
     uat_chantier.write({"sales_user_ids": [(4, user_u7.id)]})
+
+# The operational personas must be explicitly assigned to the controlled UAT
+# chantier.  Record rules intentionally hide chantiers from unassigned users.
+if uat_chantier:
+    uat_operational_users = env["res.users"].search([
+        ("login", "in", [
+            "uat.u2.chantier",
+            "uat.u3.buyer",
+            "uat.u4.purchase.approver",
+            "uat.u5.storekeeper",
+            "uat.u6.quality",
+        ]),
+    ])
+    uat_chantier.write({
+        "chantier_member_ids": [(4, user.id) for user in uat_operational_users],
+    })
 
 env.cr.commit()
 print(f"UAT_COMPANY|A|{company_a.id}|{company_a.name}")

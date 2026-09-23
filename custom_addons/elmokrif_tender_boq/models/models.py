@@ -483,6 +483,11 @@ class ConstructionBOQLine(models.Model):
     cost_variance_amount = fields.Monetary(compute="_compute_control_amounts")
     tax_ids = fields.Many2many("account.tax", check_company=True)
     analytic_distribution = fields.Json()
+    analytic_precision = fields.Integer(
+        default=lambda self: self.env["decimal.precision"].precision_get(
+            "Percentage Analytic"
+        ),
+    )
     planned_start = fields.Date()
     planned_finish = fields.Date()
 
@@ -1183,7 +1188,7 @@ class ConstructionTenderBidLine(models.Model):
         ("bid_boq_line_alternative_unique", "unique(bid_id, boq_line_id, alternative_no)", "A bidder can quote a BOQ line only once per alternative."),
     ]
 
-    @api.depends("quoted_quantity", "quoted_unit_rate", "discount_percent", "freight_amount", "exclusion_adjustment", "commercial_adjustment", "no_bid", "bid_id.locked_company_rate", "boq_line_id.quantity", "boq_line_id.internal_unit_cost")
+    @api.depends("quoted_quantity", "quoted_unit_rate", "discount_percent", "freight_amount", "exclusion_adjustment", "commercial_adjustment", "no_bid", "uom_id", "bid_id.locked_company_rate", "boq_line_id.quantity", "boq_line_id.uom_id", "boq_line_id.internal_unit_cost")
     def _compute_amounts(self):
         for line in self:
             if line.no_bid:
@@ -1191,6 +1196,9 @@ class ConstructionTenderBidLine(models.Model):
                 continue
             discounted_rate = line.quoted_unit_rate * (1.0 - line.discount_percent / 100.0)
             line.quoted_amount = line.quoted_quantity * discounted_rate
+            if not line.uom_id or not line.boq_line_id or not line.boq_line_id.uom_id:
+                line.normalized_unit_rate = line.normalized_amount = line.variance_percent = 0.0
+                continue
             baseline_uom_rate = line.uom_id._compute_price(discounted_rate, line.boq_line_id.uom_id)
             normalized_bid_currency = line.boq_line_id.quantity * baseline_uom_rate + line.freight_amount + line.exclusion_adjustment + line.commercial_adjustment
             rate = line.bid_id.locked_company_rate or 1.0

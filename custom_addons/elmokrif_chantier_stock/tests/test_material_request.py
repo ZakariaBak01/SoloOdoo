@@ -129,6 +129,65 @@ class TestChantierMaterialRequest(TransactionCase):
         self.assertEqual(request.picking_id.move_ids.product_id, self.product)
         self.assertEqual(request.picking_id.move_ids.product_uom_qty, 10)
 
+    def test_storekeeper_can_validate_request_delivery_without_request_access(self):
+        chantier = self._create_in_progress_chantier()
+        request = self._create_request(chantier)
+        picking = self._create_and_approve_transfer(request)
+        storekeeper = self.env["res.users"].with_context(no_reset_password=True).create({
+            "name": "Material request storekeeper",
+            "login": "material_request_storekeeper",
+            "email": "material_request_storekeeper@example.test",
+            "groups_id": [(6, 0, [
+                self.env.ref("base.group_user").id,
+                self.env.ref("stock.group_stock_user").id,
+            ])],
+        })
+        picking.action_confirm()
+        picking.action_assign()
+        picking.move_ids.quantity = 10
+        picking.move_ids.picked = True
+
+        self.assertFalse(
+            self.env["chantier.material.request"].with_user(
+                storekeeper
+            ).check_access_rights(
+                "read", raise_exception=False
+            )
+        )
+        picking.with_user(storekeeper).button_validate()
+
+        self.assertEqual(picking.state, "done")
+        self.assertEqual(request.state, "done")
+
+    def test_storekeeper_can_create_linked_return_for_chantier_delivery(self):
+        chantier = self._create_in_progress_chantier()
+        request = self._create_request(chantier)
+        picking = self._create_and_approve_transfer(request)
+        self._validate_picking(picking, 10)
+        storekeeper = self.env["res.users"].with_context(no_reset_password=True).create({
+            "name": "Linked return storekeeper",
+            "login": "linked_return_storekeeper",
+            "email": "linked_return_storekeeper@example.test",
+            "groups_id": [(6, 0, [
+                self.env.ref("base.group_user").id,
+                self.env.ref("stock.group_stock_user").id,
+            ])],
+        })
+        wizard = self.env["stock.return.picking"].with_user(storekeeper).with_context(
+            active_model="stock.picking", active_id=picking.id
+        ).create({})
+        wizard.product_return_moves.quantity = 5
+
+        action = wizard.create_returns()
+        returned = self.env["stock.picking"].browse(action["res_id"])
+
+        self.assertEqual(returned.return_id, picking)
+        self.assertEqual(returned.chantier_id, chantier)
+        self.assertEqual(returned.chantier_operation, "return")
+        self.assertFalse(returned.material_request_id)
+        self.assertEqual(returned.location_id, chantier.site_location_id)
+        self.assertEqual(returned.location_dest_id, self.warehouse.lot_stock_id)
+
     def test_empty_request_cannot_be_submitted(self):
         chantier = self._create_in_progress_chantier()
         request = self.env["chantier.material.request"].create(
@@ -137,6 +196,33 @@ class TestChantierMaterialRequest(TransactionCase):
 
         with self.assertRaises(UserError):
             request.sudo().action_submit()
+
+    def test_chantier_setup_reactivates_internal_transfer_operation(self):
+        self.warehouse.int_type_id.active = False
+
+        self.warehouse._ensure_chantier_operation_locations()
+
+        self.assertTrue(self.warehouse.int_type_id.active)
+
+    def test_chantier_user_can_read_draft_request_line_quantities_without_stock_access(self):
+        chantier = self._create_in_progress_chantier()
+        user = self._create_chantier_user()
+        chantier.write({"chantier_member_ids": [(4, user.id)]})
+        request = self._create_request(chantier)
+
+        line = request.with_user(user).line_ids
+
+        self.assertEqual(line.delivered_qty, 0.0)
+
+    def test_chantier_user_can_submit_a_material_request_without_stock_access(self):
+        chantier = self._create_in_progress_chantier()
+        user = self._create_chantier_user()
+        chantier.write({"chantier_member_ids": [(4, user.id)]})
+        request = self._create_request(chantier)
+
+        request.with_user(user).action_submit()
+
+        self.assertEqual(request.state, "submitted")
 
     def test_create_cannot_skip_request_approval(self):
         chantier = self._create_in_progress_chantier()

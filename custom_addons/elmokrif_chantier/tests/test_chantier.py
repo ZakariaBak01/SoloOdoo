@@ -787,6 +787,31 @@ class TestChantier(TransactionCase):
         with self.assertRaises(AccessError):
             ordinary_project.with_user(user).write({"name": "Forbidden edit"})
 
+        self.assertFalse(
+            self.env["stock.location"].with_user(user).search([
+                ("id", "=", chantier.site_location_id.id),
+            ])
+        )
+
+    def test_storekeeper_can_access_unassigned_chantier_location(self):
+        storekeeper = self.env["res.users"].with_context(no_reset_password=True).create({
+            "name": "Chantier stock storekeeper",
+            "login": "chantier_stock_storekeeper",
+            "email": "chantier_stock_storekeeper@example.test",
+            "groups_id": [(6, 0, [
+                self.env.ref("base.group_user").id,
+                self.env.ref("stock.group_stock_user").id,
+            ])],
+        })
+        chantier = self._create_chantier(name="Storekeeper destination chantier")
+        self._approve(chantier)
+
+        location = self.env["stock.location"].with_user(storekeeper).search([
+            ("id", "=", chantier.site_location_id.id),
+        ])
+
+        self.assertEqual(location, chantier.site_location_id)
+
     def test_sales_contact_can_read_only_their_quotation_chantier_reference(self):
         salesperson = self.env["res.users"].with_context(no_reset_password=True).create({
             "name": "Chantier sales reference user",

@@ -1,0 +1,805 @@
+﻿2026-09-22 22:29:09,560 1 INFO ? odoo: Odoo version 17.0-20260817 
+2026-09-22 22:29:09,560 1 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2026-09-22 22:29:09,560 1 INFO ? odoo: addons paths: ['/usr/lib/python3/dist-packages/odoo/addons', '/var/lib/odoo/addons/17.0', '/mnt/extra-addons', '/opt/elmokrif-addons'] 
+2026-09-22 22:29:09,561 1 INFO ? odoo: database: odoo_test@test-db:5432 
+2026-09-22 22:29:10,011 1 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/local/bin/wkhtmltopdf 
+2026-09-22 22:29:10,679 1 INFO ? odoo.service.server: HTTP service (werkzeug) running on fe0808931fce:8069 
+2026-09-22 22:29:10,692 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: init db 
+2026-09-22 22:29:13,690 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading 1 modules... 
+2026-09-22 22:29:13,691 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Loading module base (1/1) 
+2026-09-22 22:29:13,722 1 INFO soloodoo_storekeeper_validate_test odoo.modules.registry: module base: creating or updating database tables 
+2026-09-22 22:29:14,227 1 INFO soloodoo_storekeeper_validate_test odoo.models: Prepare computation of ir.module.module.menus_by_module 
+2026-09-22 22:29:14,229 1 INFO soloodoo_storekeeper_validate_test odoo.models: Prepare computation of ir.module.module.reports_by_module 
+2026-09-22 22:29:14,229 1 INFO soloodoo_storekeeper_validate_test odoo.models: Prepare computation of ir.module.module.views_by_module 
+2026-09-22 22:29:14,432 1 INFO soloodoo_storekeeper_validate_test odoo.models: Prepare computation of res.partner.user_id 
+2026-09-22 22:29:14,433 1 INFO soloodoo_storekeeper_validate_test odoo.models: Prepare computation of res.partner.commercial_partner_id 
+2026-09-22 22:29:14,433 1 INFO soloodoo_storekeeper_validate_test odoo.models: Prepare computation of res.partner.complete_name 
+2026-09-22 22:29:14,433 1 INFO soloodoo_storekeeper_validate_test odoo.models: Prepare computation of res.partner.company_registry 
+2026-09-22 22:29:14,433 1 INFO soloodoo_storekeeper_validate_test odoo.models: Prepare computation of res.partner.commercial_company_name 
+2026-09-22 22:29:14,433 1 INFO soloodoo_storekeeper_validate_test odoo.models: Prepare computation of res.partner.partner_share 
+2026-09-22 22:29:14,503 1 INFO soloodoo_storekeeper_validate_test odoo.models: Prepare computation of res.currency.decimal_places 
+2026-09-22 22:29:14,547 1 INFO soloodoo_storekeeper_validate_test odoo.models: Prepare computation of res.company.uses_default_logo 
+2026-09-22 22:29:14,547 1 INFO soloodoo_storekeeper_validate_test odoo.models: Prepare computation of res.company.logo_web 
+2026-09-22 22:29:14,551 1 INFO soloodoo_storekeeper_validate_test odoo.models: Computing parent_path for table res_company... 
+2026-09-22 22:29:14,603 1 INFO soloodoo_storekeeper_validate_test odoo.models: Prepare computation of res.users.signature 
+2026-09-22 22:29:14,603 1 INFO soloodoo_storekeeper_validate_test odoo.models: Prepare computation of res.users.share 
+2026-09-22 22:29:16,673 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading base/data/res_bank.xml 
+2026-09-22 22:29:16,689 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading base/data/res.lang.csv 
+2026-09-22 22:29:16,732 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading base/data/res_lang_data.xml 
+2026-09-22 22:29:16,780 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading base/data/res_partner_data.xml 
+2026-09-22 22:29:16,907 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading base/data/res_currency_data.xml 
+2026-09-22 22:29:17,784 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading base/data/res_company_data.xml 
+2026-09-22 22:29:17,797 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading base/data/res_users_data.xml 
+2026-09-22 22:29:18,739 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading base/data/report_paperformat_data.xml 
+2026-09-22 22:29:18,750 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading base/data/res_country_data.xml 
+2026-09-22 22:29:19,318 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading base/data/ir_demo_data.xml 
+2026-09-22 22:29:19,335 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading base/security/base_groups.xml 
+2026-09-22 22:29:20,025 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading base/security/base_security.xml 
+2026-09-22 22:29:20,225 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading base/views/base_menus.xml 
+2026-09-22 22:29:20,310 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading base/views/decimal_precision_views.xml 
+2026-09-22 22:29:20,332 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading base/views/res_config_views.xml 
+2026-09-22 22:29:20,343 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading base/data/res.country.state.csv 
+2026-09-22 22:29:20,761 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading base/views/ir_actions_views.xml 
+2026-09-22 22:29:20,899 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading base/views/ir_asset_views.xml 
+2026-09-22 22:29:20,919 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading base/views/ir_config_parameter_views.xml 
+2026-09-22 22:29:20,941 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading base/views/ir_cron_views.xml 
+2026-09-22 22:29:20,972 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading base/views/ir_cron_trigger_views.xml 
+2026-09-22 22:29:20,993 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading base/views/ir_filters_views.xml 
+2026-09-22 22:29:21,014 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading base/views/ir_mail_server_views.xml 
+2026-09-22 22:29:21,043 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading base/views/ir_model_views.xml 
+2026-09-22 22:29:21,205 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading base/views/ir_attachment_views.xml 
+2026-09-22 22:29:21,234 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading base/views/ir_rule_views.xml 
+2026-09-22 22:29:21,264 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading base/views/ir_sequence_views.xml 
+2026-09-22 22:29:21,290 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading base/views/ir_ui_menu_views.xml 
+2026-09-22 22:29:21,312 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading base/views/ir_ui_view_views.xml 
+2026-09-22 22:29:21,366 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading base/views/ir_default_views.xml 
+2026-09-22 22:29:21,390 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading base/data/ir_cron_data.xml 
+2026-09-22 22:29:21,403 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading base/report/ir_model_report.xml 
+2026-09-22 22:29:21,409 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading base/report/ir_model_templates.xml 
+2026-09-22 22:29:21,417 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading base/views/ir_logging_views.xml 
+2026-09-22 22:29:21,441 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading base/views/ir_qweb_widget_templates.xml 
+2026-09-22 22:29:21,457 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading base/views/ir_module_views.xml 
+2026-09-22 22:29:21,515 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading base/data/ir_module_category_data.xml 
+2026-09-22 22:29:21,614 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading base/data/ir_module_module.xml 
+2026-09-22 22:29:21,691 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading base/report/ir_module_reports.xml 
+2026-09-22 22:29:21,697 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading base/report/ir_module_report_templates.xml 
+2026-09-22 22:29:21,705 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading base/wizard/base_module_update_views.xml 
+2026-09-22 22:29:21,719 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading base/wizard/base_language_install_views.xml 
+2026-09-22 22:29:21,732 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading base/wizard/base_import_language_views.xml 
+2026-09-22 22:29:21,747 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading base/wizard/base_module_upgrade_views.xml 
+2026-09-22 22:29:21,769 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading base/wizard/base_module_uninstall_views.xml 
+2026-09-22 22:29:21,777 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading base/wizard/base_export_language_views.xml 
+2026-09-22 22:29:21,791 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading base/wizard/base_partner_merge_views.xml 
+2026-09-22 22:29:21,807 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading base/data/ir_demo_failure_data.xml 
+2026-09-22 22:29:21,824 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading base/views/ir_profile_views.xml 
+2026-09-22 22:29:21,853 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading base/views/res_company_views.xml 
+2026-09-22 22:29:21,879 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading base/views/res_lang_views.xml 
+2026-09-22 22:29:21,903 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading base/views/res_partner_views.xml 
+2026-09-22 22:29:22,020 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading base/views/res_bank_views.xml 
+2026-09-22 22:29:22,085 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading base/views/res_country_views.xml 
+2026-09-22 22:29:22,141 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading base/views/res_currency_views.xml 
+2026-09-22 22:29:22,183 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading base/views/res_users_views.xml 
+2026-09-22 22:29:22,305 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading base/views/res_users_identitycheck_views.xml 
+2026-09-22 22:29:22,318 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading base/views/ir_property_views.xml 
+2026-09-22 22:29:22,340 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading base/views/res_config_settings_views.xml 
+2026-09-22 22:29:22,350 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading base/views/report_paperformat_views.xml 
+2026-09-22 22:29:22,380 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading base/security/ir.model.access.csv 
+2026-09-22 22:29:22,680 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Module base loaded in 8.99s, 7944 queries (+7944 other) 
+2026-09-22 22:29:22,681 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: 1 modules loaded in 8.99s, 7944 queries (+7944 extra) 
+2026-09-22 22:29:22,694 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: updating modules list 
+2026-09-22 22:29:22,696 1 INFO soloodoo_storekeeper_validate_test odoo.addons.base.models.ir_module: ALLOW access to module.update_list on [] to user __system__ #1 via n/a 
+2026-09-22 22:29:23,675 1 INFO soloodoo_storekeeper_validate_test odoo.addons.base.models.ir_module: ALLOW access to module.button_install on ['EL MOKRIF Chantier Materials'] to user __system__ #1 via n/a 
+2026-09-22 22:29:23,921 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading 57 modules... 
+2026-09-22 22:29:23,921 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Loading module uom (2/57) 
+2026-09-22 22:29:23,939 1 INFO soloodoo_storekeeper_validate_test odoo.modules.registry: module uom: creating or updating database tables 
+2026-09-22 22:29:24,025 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading uom/data/uom_data.xml 
+2026-09-22 22:29:24,205 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading uom/security/uom_security.xml 
+2026-09-22 22:29:24,228 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading uom/security/ir.model.access.csv 
+2026-09-22 22:29:24,244 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading uom/views/uom_uom_views.xml 
+2026-09-22 22:29:24,309 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Module uom loaded in 0.39s, 287 queries (+287 other) 
+2026-09-22 22:29:24,309 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Loading module web (3/57) 
+2026-09-22 22:29:24,331 1 INFO soloodoo_storekeeper_validate_test odoo.modules.registry: module web: creating or updating database tables 
+2026-09-22 22:29:24,905 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading web/security/ir.model.access.csv 
+2026-09-22 22:29:24,918 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading web/views/webclient_templates.xml 
+2026-09-22 22:29:24,974 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading web/views/report_templates.xml 
+2026-09-22 22:29:25,073 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading web/views/base_document_layout_views.xml 
+2026-09-22 22:29:25,088 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading web/views/partner_view.xml 
+2026-09-22 22:29:25,096 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading web/views/speedscope_template.xml 
+2026-09-22 22:29:25,103 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading web/views/neutralize_views.xml 
+2026-09-22 22:29:25,112 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading web/data/ir_attachment.xml 
+2026-09-22 22:29:25,118 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading web/data/report_layout.xml 
+2026-09-22 22:29:25,572 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Module web loaded in 1.26s, 1018 queries (+1018 other) 
+2026-09-22 22:29:25,572 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Loading module auth_totp (4/57) 
+2026-09-22 22:29:25,715 1 INFO soloodoo_storekeeper_validate_test odoo.modules.registry: module auth_totp: creating or updating database tables 
+2026-09-22 22:29:25,864 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading auth_totp/security/security.xml 
+2026-09-22 22:29:25,903 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading auth_totp/security/ir.model.access.csv 
+2026-09-22 22:29:25,917 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading auth_totp/data/ir_action_data.xml 
+2026-09-22 22:29:25,930 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading auth_totp/views/res_users_views.xml 
+2026-09-22 22:29:25,967 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading auth_totp/views/templates.xml 
+2026-09-22 22:29:25,973 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading auth_totp/wizard/auth_totp_wizard_views.xml 
+2026-09-22 22:29:26,014 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Module auth_totp loaded in 0.44s, 179 queries (+179 other) 
+2026-09-22 22:29:26,014 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Loading module barcodes (5/57) 
+2026-09-22 22:29:26,039 1 INFO soloodoo_storekeeper_validate_test odoo.modules.registry: module barcodes: creating or updating database tables 
+2026-09-22 22:29:26,174 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading barcodes/data/barcodes_data.xml 
+2026-09-22 22:29:26,187 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading barcodes/views/barcodes_view.xml 
+2026-09-22 22:29:26,207 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading barcodes/security/ir.model.access.csv 
+2026-09-22 22:29:26,237 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Module barcodes loaded in 0.22s, 135 queries (+135 other) 
+2026-09-22 22:29:26,237 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Loading module base_import (6/57) 
+2026-09-22 22:29:26,314 1 INFO soloodoo_storekeeper_validate_test odoo.modules.registry: module base_import: creating or updating database tables 
+2026-09-22 22:29:27,047 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading base_import/security/ir.model.access.csv 
+2026-09-22 22:29:27,076 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Module base_import loaded in 0.84s, 843 queries (+843 other) 
+2026-09-22 22:29:27,076 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Loading module base_import_module (7/57) 
+2026-09-22 22:29:27,104 1 INFO soloodoo_storekeeper_validate_test odoo.modules.registry: module base_import_module: creating or updating database tables 
+2026-09-22 22:29:27,188 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading base_import_module/security/ir.model.access.csv 
+2026-09-22 22:29:27,202 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading base_import_module/views/base_import_module_view.xml 
+2026-09-22 22:29:27,221 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading base_import_module/views/ir_module_views.xml 
+2026-09-22 22:29:27,282 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Module base_import_module loaded in 0.21s, 154 queries (+154 other) 
+2026-09-22 22:29:27,283 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Loading module base_setup (8/57) 
+2026-09-22 22:29:27,308 1 INFO soloodoo_storekeeper_validate_test odoo.modules.registry: module base_setup: creating or updating database tables 
+2026-09-22 22:29:27,425 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading base_setup/data/base_setup_data.xml 
+2026-09-22 22:29:27,434 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading base_setup/views/res_config_settings_views.xml 
+2026-09-22 22:29:27,471 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading base_setup/views/res_partner_views.xml 
+2026-09-22 22:29:27,505 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Module base_setup loaded in 0.22s, 143 queries (+143 other) 
+2026-09-22 22:29:27,505 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Loading module bus (9/57) 
+2026-09-22 22:29:27,520 1 INFO soloodoo_storekeeper_validate_test odoo.modules.registry: module bus: creating or updating database tables 
+2026-09-22 22:29:27,642 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading bus/security/ir.model.access.csv 
+2026-09-22 22:29:27,696 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Module bus loaded in 0.19s, 119 queries (+119 other) 
+2026-09-22 22:29:27,696 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Loading module http_routing (10/57) 
+2026-09-22 22:29:27,711 1 INFO soloodoo_storekeeper_validate_test odoo.modules.registry: module http_routing: creating or updating database tables 
+2026-09-22 22:29:27,726 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading http_routing/views/http_routing_template.xml 
+2026-09-22 22:29:27,763 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading http_routing/views/res_lang_views.xml 
+2026-09-22 22:29:27,791 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Module http_routing loaded in 0.09s, 71 queries (+71 other) 
+2026-09-22 22:29:27,791 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Loading module onboarding (11/57) 
+2026-09-22 22:29:27,819 1 INFO soloodoo_storekeeper_validate_test odoo.modules.registry: module onboarding: creating or updating database tables 
+2026-09-22 22:29:27,961 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading onboarding/views/onboarding_templates.xml 
+2026-09-22 22:29:27,981 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading onboarding/views/onboarding_views.xml 
+2026-09-22 22:29:28,005 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading onboarding/views/onboarding_menus.xml 
+2026-09-22 22:29:28,019 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading onboarding/security/ir.model.access.csv 
+2026-09-22 22:29:28,110 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Module onboarding loaded in 0.32s, 237 queries (+237 other) 
+2026-09-22 22:29:28,110 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Loading module resource (12/57) 
+2026-09-22 22:29:28,152 1 INFO soloodoo_storekeeper_validate_test odoo.modules.registry: module resource: creating or updating database tables 
+2026-09-22 22:29:28,320 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading resource/data/resource_data.xml 
+2026-09-22 22:29:28,351 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading resource/security/ir.model.access.csv 
+2026-09-22 22:29:28,366 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading resource/security/resource_security.xml 
+2026-09-22 22:29:28,400 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading resource/views/resource_resource_views.xml 
+2026-09-22 22:29:28,427 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading resource/views/resource_calendar_leaves_views.xml 
+2026-09-22 22:29:28,459 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading resource/views/resource_calendar_attendance_views.xml 
+2026-09-22 22:29:28,469 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading resource/views/resource_calendar_views.xml 
+2026-09-22 22:29:28,497 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading resource/views/menuitems.xml 
+2026-09-22 22:29:28,545 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Module resource loaded in 0.43s, 407 queries (+407 other) 
+2026-09-22 22:29:28,545 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Loading module web_tour (13/57) 
+2026-09-22 22:29:28,567 1 INFO soloodoo_storekeeper_validate_test odoo.modules.registry: module web_tour: creating or updating database tables 
+2026-09-22 22:29:28,602 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading web_tour/security/ir.model.access.csv 
+2026-09-22 22:29:28,617 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading web_tour/security/ir.rule.csv 
+2026-09-22 22:29:28,629 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading web_tour/views/tour_views.xml 
+2026-09-22 22:29:28,671 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Module web_tour loaded in 0.13s, 104 queries (+104 other) 
+2026-09-22 22:29:28,671 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Loading module barcodes_gs1_nomenclature (14/57) 
+2026-09-22 22:29:28,694 1 INFO soloodoo_storekeeper_validate_test odoo.modules.registry: module barcodes_gs1_nomenclature: creating or updating database tables 
+2026-09-22 22:29:28,738 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading barcodes_gs1_nomenclature/data/barcodes_gs1_rules.xml 
+2026-09-22 22:29:28,817 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading barcodes_gs1_nomenclature/views/barcodes_view.xml 
+2026-09-22 22:29:28,856 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Module barcodes_gs1_nomenclature loaded in 0.18s, 189 queries (+189 other) 
+2026-09-22 22:29:28,856 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Loading module iap (15/57) 
+2026-09-22 22:29:28,872 1 INFO soloodoo_storekeeper_validate_test odoo.modules.registry: module iap: creating or updating database tables 
+2026-09-22 22:29:28,939 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading iap/security/ir.model.access.csv 
+2026-09-22 22:29:28,955 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading iap/security/ir_rule.xml 
+2026-09-22 22:29:28,964 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading iap/views/iap_views.xml 
+2026-09-22 22:29:28,994 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading iap/views/res_config_settings.xml 
+2026-09-22 22:29:29,033 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Module iap loaded in 0.18s, 151 queries (+151 other) 
+2026-09-22 22:29:29,033 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Loading module mail (16/57) 
+2026-09-22 22:29:29,081 1 INFO soloodoo_storekeeper_validate_test odoo.modules.registry: module mail: creating or updating database tables 
+2026-09-22 22:29:29,354 1 INFO soloodoo_storekeeper_validate_test odoo.models: Prepare computation of ir.actions.server.partner_ids 
+2026-09-22 22:29:29,354 1 INFO soloodoo_storekeeper_validate_test odoo.models: Prepare computation of ir.actions.server.template_id 
+2026-09-22 22:29:29,354 1 INFO soloodoo_storekeeper_validate_test odoo.models: Prepare computation of ir.actions.server.activity_type_id 
+2026-09-22 22:29:29,354 1 INFO soloodoo_storekeeper_validate_test odoo.models: Prepare computation of ir.actions.server.activity_date_deadline_range 
+2026-09-22 22:29:29,355 1 INFO soloodoo_storekeeper_validate_test odoo.models: Prepare computation of ir.actions.server.activity_user_id 
+2026-09-22 22:29:29,355 1 INFO soloodoo_storekeeper_validate_test odoo.models: Prepare computation of ir.actions.server.mail_post_method 
+2026-09-22 22:29:29,355 1 INFO soloodoo_storekeeper_validate_test odoo.models: Prepare computation of ir.actions.server.activity_summary 
+2026-09-22 22:29:29,355 1 INFO soloodoo_storekeeper_validate_test odoo.models: Prepare computation of ir.actions.server.activity_date_deadline_range_type 
+2026-09-22 22:29:29,355 1 INFO soloodoo_storekeeper_validate_test odoo.models: Prepare computation of ir.actions.server.activity_user_type 
+2026-09-22 22:29:29,355 1 INFO soloodoo_storekeeper_validate_test odoo.models: Prepare computation of ir.actions.server.activity_user_field_name 
+2026-09-22 22:29:29,355 1 INFO soloodoo_storekeeper_validate_test odoo.models: Prepare computation of ir.actions.server.activity_note 
+2026-09-22 22:29:29,355 1 INFO soloodoo_storekeeper_validate_test odoo.models: Prepare computation of ir.actions.server.mail_post_autofollow 
+2026-09-22 22:29:29,397 1 INFO soloodoo_storekeeper_validate_test odoo.models: Prepare computation of res.company.email_primary_color 
+2026-09-22 22:29:29,397 1 INFO soloodoo_storekeeper_validate_test odoo.models: Prepare computation of res.company.email_secondary_color 
+2026-09-22 22:29:29,412 1 INFO soloodoo_storekeeper_validate_test odoo.models: Prepare computation of res.users.notification_type 
+2026-09-22 22:29:29,521 1 INFO soloodoo_storekeeper_validate_test odoo.models: Prepare computation of res.partner.email_normalized 
+<string>:38: (ERROR/3) Unexpected indentation.
+<string>:43: (WARNING/2) Block quote ends without a blank line; unexpected unindent.
+2026-09-22 22:29:32,267 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading mail/data/mail_groups.xml 
+2026-09-22 22:29:32,544 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading mail/wizard/mail_activity_schedule_views.xml 
+2026-09-22 22:29:32,577 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading mail/wizard/mail_blacklist_remove_views.xml 
+2026-09-22 22:29:32,623 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading mail/wizard/mail_compose_message_views.xml 
+2026-09-22 22:29:32,694 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading mail/wizard/mail_resend_message_views.xml 
+2026-09-22 22:29:32,781 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading mail/wizard/mail_resend_partner_views.xml 
+2026-09-22 22:29:32,831 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading mail/wizard/mail_template_preview_views.xml 
+2026-09-22 22:29:32,886 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading mail/wizard/mail_wizard_invite_views.xml 
+2026-09-22 22:29:32,906 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading mail/wizard/mail_template_reset_views.xml 
+2026-09-22 22:29:32,946 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading mail/views/fetchmail_views.xml 
+2026-09-22 22:29:33,012 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading mail/views/mail_message_subtype_views.xml 
+2026-09-22 22:29:33,039 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading mail/views/mail_tracking_value_views.xml 
+2026-09-22 22:29:33,065 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading mail/views/mail_notification_views.xml 
+2026-09-22 22:29:33,090 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading mail/views/mail_message_views.xml 
+2026-09-22 22:29:33,152 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading mail/views/mail_message_schedule_views.xml 
+2026-09-22 22:29:33,185 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading mail/views/mail_mail_views.xml 
+2026-09-22 22:29:33,234 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading mail/views/mail_followers_views.xml 
+2026-09-22 22:29:33,259 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading mail/views/mail_ice_server_views.xml 
+2026-09-22 22:29:33,281 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading mail/views/discuss_channel_member_views.xml 
+2026-09-22 22:29:33,302 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading mail/views/discuss_channel_rtc_session_views.xml 
+2026-09-22 22:29:33,328 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading mail/views/mail_link_preview_views.xml 
+2026-09-22 22:29:33,347 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading mail/views/discuss/discuss_gif_favorite_views.xml 
+2026-09-22 22:29:33,587 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading mail/views/discuss_channel_views.xml 
+2026-09-22 22:29:33,657 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading mail/views/mail_shortcode_views.xml 
+2026-09-22 22:29:33,728 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading mail/views/mail_activity_views.xml 
+2026-09-22 22:29:33,967 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading mail/views/mail_activity_plan_views.xml 
+2026-09-22 22:29:34,016 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading mail/views/mail_activity_plan_template_views.xml 
+2026-09-22 22:29:34,033 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading mail/views/res_config_settings_views.xml 
+2026-09-22 22:29:34,114 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading mail/data/ir_config_parameter_data.xml 
+2026-09-22 22:29:34,123 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading mail/data/res_partner_data.xml 
+2026-09-22 22:29:34,213 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading mail/data/mail_message_subtype_data.xml 
+2026-09-22 22:29:34,225 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading mail/data/mail_templates_chatter.xml 
+2026-09-22 22:29:34,244 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading mail/data/mail_templates_email_layouts.xml 
+2026-09-22 22:29:34,265 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading mail/data/mail_templates_mailgateway.xml 
+2026-09-22 22:29:34,279 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading mail/data/discuss_channel_data.xml 
+2026-09-22 22:29:34,328 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading mail/data/mail_activity_data.xml 
+2026-09-22 22:29:34,350 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading mail/data/security_notifications_templates.xml 
+2026-09-22 22:29:34,357 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading mail/data/ir_cron_data.xml 
+2026-09-22 22:29:34,403 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading mail/security/mail_security.xml 
+2026-09-22 22:29:34,574 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading mail/security/ir.model.access.csv 
+2026-09-22 22:29:34,687 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading mail/views/discuss_public_templates.xml 
+2026-09-22 22:29:34,700 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading mail/views/mail_alias_domain_views.xml 
+2026-09-22 22:29:34,740 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading mail/views/mail_alias_views.xml 
+2026-09-22 22:29:34,767 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading mail/views/mail_gateway_allowed_views.xml 
+2026-09-22 22:29:34,789 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading mail/views/mail_guest_views.xml 
+2026-09-22 22:29:34,808 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading mail/views/mail_message_reaction_views.xml 
+2026-09-22 22:29:34,830 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading mail/views/mail_templates_public.xml 
+2026-09-22 22:29:34,849 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading mail/views/res_users_views.xml 
+2026-09-22 22:29:34,881 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading mail/views/res_users_settings_views.xml 
+2026-09-22 22:29:34,900 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading mail/views/mail_template_views.xml 
+2026-09-22 22:29:34,938 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading mail/views/ir_actions_server_views.xml 
+2026-09-22 22:29:34,957 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading mail/views/ir_model_views.xml 
+2026-09-22 22:29:34,990 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading mail/views/res_partner_views.xml 
+2026-09-22 22:29:35,057 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading mail/views/mail_blacklist_views.xml 
+2026-09-22 22:29:35,081 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading mail/views/mail_menus.xml 
+2026-09-22 22:29:35,268 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading mail/views/res_company_views.xml 
+2026-09-22 22:29:35,350 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Module mail loaded in 6.32s, 4160 queries (+4161 other) 
+2026-09-22 22:29:35,350 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Loading module web_editor (17/57) 
+2026-09-22 22:29:35,421 1 INFO soloodoo_storekeeper_validate_test odoo.modules.registry: module web_editor: creating or updating database tables 
+2026-09-22 22:29:36,481 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading web_editor/security/ir.model.access.csv 
+2026-09-22 22:29:36,495 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading web_editor/data/editor_assets.xml 
+2026-09-22 22:29:36,502 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading web_editor/views/editor.xml 
+2026-09-22 22:29:36,521 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading web_editor/views/snippets.xml 
+2026-09-22 22:29:36,584 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Module web_editor loaded in 1.23s, 1368 queries (+1368 other) 
+2026-09-22 22:29:36,584 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Loading module analytic (18/57) 
+2026-09-22 22:29:36,629 1 INFO soloodoo_storekeeper_validate_test odoo.modules.registry: module analytic: creating or updating database tables 
+2026-09-22 22:29:36,846 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading analytic/security/analytic_security.xml 
+2026-09-22 22:29:36,893 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading analytic/security/ir.model.access.csv 
+2026-09-22 22:29:36,912 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading analytic/views/analytic_line_views.xml 
+2026-09-22 22:29:36,957 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading analytic/views/analytic_account_views.xml 
+2026-09-22 22:29:37,002 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading analytic/views/analytic_plan_views.xml 
+2026-09-22 22:29:37,022 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading analytic/views/analytic_distribution_model_views.xml 
+2026-09-22 22:29:37,037 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading analytic/data/analytic_data.xml 
+2026-09-22 22:29:37,122 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Module analytic loaded in 0.54s, 410 queries (+410 other) 
+2026-09-22 22:29:37,123 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Loading module auth_signup (19/57) 
+2026-09-22 22:29:37,172 1 INFO soloodoo_storekeeper_validate_test odoo.modules.registry: module auth_signup: creating or updating database tables 
+2026-09-22 22:29:37,246 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading auth_signup/data/ir_config_parameter_data.xml 
+2026-09-22 22:29:37,253 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading auth_signup/data/ir_cron_data.xml 
+2026-09-22 22:29:37,266 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading auth_signup/data/mail_template_data.xml 
+2026-09-22 22:29:37,282 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading auth_signup/views/res_config_settings_views.xml 
+2026-09-22 22:29:37,299 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading auth_signup/views/res_users_views.xml 
+2026-09-22 22:29:37,323 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading auth_signup/views/auth_signup_login_templates.xml 
+2026-09-22 22:29:37,345 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading auth_signup/views/auth_signup_templates_email.xml 
+2026-09-22 22:29:37,361 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading auth_signup/views/webclient_templates.xml 
+2026-09-22 22:29:37,399 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Module auth_signup loaded in 0.28s, 202 queries (+202 other) 
+2026-09-22 22:29:37,399 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Loading module auth_totp_mail (20/57) 
+2026-09-22 22:29:37,434 1 INFO soloodoo_storekeeper_validate_test odoo.modules.registry: module auth_totp_mail: creating or updating database tables 
+2026-09-22 22:29:37,475 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading auth_totp_mail/data/ir_action_data.xml 
+2026-09-22 22:29:37,495 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading auth_totp_mail/data/mail_template_data.xml 
+2026-09-22 22:29:37,503 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading auth_totp_mail/data/security_notifications_template.xml 
+2026-09-22 22:29:37,514 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading auth_totp_mail/views/res_users_views.xml 
+2026-09-22 22:29:37,572 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Module auth_totp_mail loaded in 0.17s, 112 queries (+112 other) 
+2026-09-22 22:29:37,572 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Loading module base_install_request (21/57) 
+2026-09-22 22:29:37,612 1 INFO soloodoo_storekeeper_validate_test odoo.modules.registry: module base_install_request: creating or updating database tables 
+2026-09-22 22:29:37,717 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading base_install_request/security/ir.model.access.csv 
+2026-09-22 22:29:37,740 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading base_install_request/wizard/base_module_install_request_views.xml 
+2026-09-22 22:29:37,758 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading base_install_request/data/mail_template_data.xml 
+2026-09-22 22:29:37,767 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading base_install_request/data/mail_templates_module_install.xml 
+2026-09-22 22:29:37,775 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading base_install_request/views/ir_module_module_views.xml 
+2026-09-22 22:29:37,815 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Module base_install_request loaded in 0.24s, 144 queries (+144 other) 
+2026-09-22 22:29:37,815 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Loading module google_gmail (22/57) 
+2026-09-22 22:29:37,860 1 INFO soloodoo_storekeeper_validate_test odoo.modules.registry: module google_gmail: creating or updating database tables 
+2026-09-22 22:29:37,999 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading google_gmail/views/fetchmail_server_views.xml 
+2026-09-22 22:29:38,016 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading google_gmail/views/ir_mail_server_views.xml 
+2026-09-22 22:29:38,028 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading google_gmail/views/res_config_settings_views.xml 
+2026-09-22 22:29:38,073 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Module google_gmail loaded in 0.26s, 118 queries (+118 other) 
+2026-09-22 22:29:38,073 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Loading module iap_mail (23/57) 
+2026-09-22 22:29:38,110 1 INFO soloodoo_storekeeper_validate_test odoo.modules.registry: module iap_mail: creating or updating database tables 
+2026-09-22 22:29:38,133 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading iap_mail/data/mail_templates.xml 
+2026-09-22 22:29:38,174 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Module iap_mail loaded in 0.10s, 40 queries (+40 other) 
+2026-09-22 22:29:38,174 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Loading module mail_bot (24/57) 
+2026-09-22 22:29:38,213 1 INFO soloodoo_storekeeper_validate_test odoo.modules.registry: module mail_bot: creating or updating database tables 
+2026-09-22 22:29:38,306 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading mail_bot/views/res_users_views.xml 
+2026-09-22 22:29:38,339 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading mail_bot/data/mailbot_data.xml 
+2026-09-22 22:29:38,361 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Module mail_bot loaded in 0.19s, 157 queries (+157 other) 
+2026-09-22 22:29:38,361 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Loading module phone_validation (25/57) 
+2026-09-22 22:29:38,472 1 INFO soloodoo_storekeeper_validate_test odoo.modules.registry: module phone_validation: creating or updating database tables 
+2026-09-22 22:29:39,976 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading phone_validation/security/ir.model.access.csv 
+2026-09-22 22:29:40,012 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading phone_validation/views/phone_blacklist_views.xml 
+2026-09-22 22:29:40,075 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading phone_validation/wizard/phone_blacklist_remove_view.xml 
+2026-09-22 22:29:40,124 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Module phone_validation loaded in 1.76s, 1437 queries (+1437 other) 
+2026-09-22 22:29:40,124 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Loading module privacy_lookup (26/57) 
+2026-09-22 22:29:40,180 1 INFO soloodoo_storekeeper_validate_test odoo.modules.registry: module privacy_lookup: creating or updating database tables 
+2026-09-22 22:29:40,297 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading privacy_lookup/wizard/privacy_lookup_wizard_views.xml 
+2026-09-22 22:29:40,344 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading privacy_lookup/views/privacy_log_views.xml 
+2026-09-22 22:29:40,376 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading privacy_lookup/security/ir.model.access.csv 
+2026-09-22 22:29:40,397 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading privacy_lookup/data/ir_actions_server_data.xml 
+2026-09-22 22:29:40,446 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Module privacy_lookup loaded in 0.32s, 245 queries (+245 other) 
+2026-09-22 22:29:40,446 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Loading module product (27/57) 
+2026-09-22 22:29:40,627 1 INFO soloodoo_storekeeper_validate_test odoo.modules.registry: module product: creating or updating database tables 
+2026-09-22 22:29:41,497 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading product/data/product_data.xml 
+2026-09-22 22:29:41,533 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading product/security/product_security.xml 
+2026-09-22 22:29:41,698 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading product/security/ir.model.access.csv 
+2026-09-22 22:29:41,742 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading product/wizard/product_label_layout_views.xml 
+2026-09-22 22:29:41,760 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading product/views/product_tag_views.xml 
+2026-09-22 22:29:41,782 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading product/views/product_views.xml 
+2026-09-22 22:29:41,923 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading product/views/res_config_settings_views.xml 
+2026-09-22 22:29:41,951 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading product/views/product_attribute_views.xml 
+2026-09-22 22:29:41,989 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading product/views/product_attribute_value_views.xml 
+2026-09-22 22:29:41,995 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading product/views/product_category_views.xml 
+2026-09-22 22:29:42,018 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading product/views/product_document_views.xml 
+2026-09-22 22:29:42,057 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading product/views/product_packaging_views.xml 
+2026-09-22 22:29:42,103 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading product/views/product_pricelist_item_views.xml 
+2026-09-22 22:29:42,133 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading product/views/product_pricelist_views.xml 
+2026-09-22 22:29:42,167 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading product/views/product_supplierinfo_views.xml 
+2026-09-22 22:29:42,197 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading product/views/product_template_views.xml 
+2026-09-22 22:29:42,242 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading product/views/res_country_group_views.xml 
+2026-09-22 22:29:42,252 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading product/views/res_partner_views.xml 
+2026-09-22 22:29:42,263 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading product/report/product_reports.xml 
+2026-09-22 22:29:42,293 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading product/report/product_product_templates.xml 
+2026-09-22 22:29:42,327 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading product/report/product_template_templates.xml 
+2026-09-22 22:29:42,348 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading product/report/product_packaging.xml 
+2026-09-22 22:29:42,357 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading product/report/product_pricelist_report_templates.xml 
+2026-09-22 22:29:42,416 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Module product loaded in 1.97s, 1491 queries (+1491 other) 
+2026-09-22 22:29:42,416 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Loading module rating (28/57) 
+2026-09-22 22:29:42,481 1 INFO soloodoo_storekeeper_validate_test odoo.modules.registry: module rating: creating or updating database tables 
+2026-09-22 22:29:42,684 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading rating/views/rating_rating_views.xml 
+2026-09-22 22:29:42,757 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading rating/views/rating_templates.xml 
+2026-09-22 22:29:42,769 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading rating/views/mail_message_views.xml 
+2026-09-22 22:29:42,780 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading rating/security/ir.model.access.csv 
+2026-09-22 22:29:42,818 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Module rating loaded in 0.40s, 359 queries (+359 other) 
+2026-09-22 22:29:42,818 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Loading module web_unsplash (29/57) 
+2026-09-22 22:29:42,870 1 INFO soloodoo_storekeeper_validate_test odoo.modules.registry: module web_unsplash: creating or updating database tables 
+2026-09-22 22:29:42,933 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading web_unsplash/views/res_config_settings_view.xml 
+2026-09-22 22:29:42,980 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Module web_unsplash loaded in 0.16s, 98 queries (+98 other) 
+2026-09-22 22:29:42,980 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Loading module partner_autocomplete (30/57) 
+2026-09-22 22:29:43,037 1 INFO soloodoo_storekeeper_validate_test odoo.modules.registry: module partner_autocomplete: creating or updating database tables 
+2026-09-22 22:29:43,146 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading partner_autocomplete/security/ir.model.access.csv 
+2026-09-22 22:29:43,163 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading partner_autocomplete/views/res_partner_views.xml 
+2026-09-22 22:29:43,186 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading partner_autocomplete/views/res_company_views.xml 
+2026-09-22 22:29:43,200 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading partner_autocomplete/views/res_config_settings_views.xml 
+2026-09-22 22:29:43,216 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading partner_autocomplete/data/cron.xml 
+2026-09-22 22:29:43,250 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Module partner_autocomplete loaded in 0.27s, 196 queries (+196 other) 
+2026-09-22 22:29:43,250 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Loading module portal (31/57) 
+2026-09-22 22:29:43,292 1 INFO soloodoo_storekeeper_validate_test odoo.modules.registry: module portal: creating or updating database tables 
+2026-09-22 22:29:43,542 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading portal/security/ir.model.access.csv 
+2026-09-22 22:29:43,557 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading portal/data/mail_template_data.xml 
+2026-09-22 22:29:43,565 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading portal/data/mail_templates.xml 
+2026-09-22 22:29:43,572 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading portal/views/mail_templates_public.xml 
+2026-09-22 22:29:43,581 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading portal/views/portal_templates.xml 
+2026-09-22 22:29:43,732 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading portal/views/res_config_settings_views.xml 
+2026-09-22 22:29:43,752 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading portal/wizard/portal_share_views.xml 
+2026-09-22 22:29:43,765 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading portal/wizard/portal_wizard_views.xml 
+2026-09-22 22:29:43,811 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Module portal loaded in 0.56s, 493 queries (+493 other) 
+2026-09-22 22:29:43,812 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Loading module sms (32/57) 
+2026-09-22 22:29:43,902 1 INFO soloodoo_storekeeper_validate_test odoo.modules.registry: module sms: creating or updating database tables 
+2026-09-22 22:29:43,912 1 INFO soloodoo_storekeeper_validate_test odoo.models: Prepare computation of ir.actions.server.sms_template_id 
+2026-09-22 22:29:43,912 1 INFO soloodoo_storekeeper_validate_test odoo.models: Prepare computation of ir.actions.server.sms_method 
+2026-09-22 22:29:43,951 1 INFO soloodoo_storekeeper_validate_test odoo.models: Prepare computation of res.partner.phone_sanitized 
+2026-09-22 22:29:45,401 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading sms/data/ir_cron_data.xml 
+2026-09-22 22:29:45,413 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading sms/wizard/sms_composer_views.xml 
+2026-09-22 22:29:45,428 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading sms/wizard/sms_template_preview_views.xml 
+2026-09-22 22:29:45,442 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading sms/wizard/sms_resend_views.xml 
+2026-09-22 22:29:45,460 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading sms/wizard/sms_template_reset_views.xml 
+2026-09-22 22:29:45,473 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading sms/views/ir_actions_server_views.xml 
+2026-09-22 22:29:45,490 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading sms/views/mail_notification_views.xml 
+2026-09-22 22:29:45,507 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading sms/views/res_config_settings_views.xml 
+2026-09-22 22:29:45,522 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading sms/views/res_partner_views.xml 
+2026-09-22 22:29:45,560 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading sms/views/sms_sms_views.xml 
+2026-09-22 22:29:45,590 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading sms/views/sms_template_views.xml 
+2026-09-22 22:29:45,619 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading sms/security/ir.model.access.csv 
+2026-09-22 22:29:45,659 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading sms/security/sms_security.xml 
+2026-09-22 22:29:45,700 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Module sms loaded in 1.89s, 2018 queries (+2018 other) 
+2026-09-22 22:29:45,700 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Loading module snailmail (33/57) 
+2026-09-22 22:29:45,763 1 INFO soloodoo_storekeeper_validate_test odoo.modules.registry: module snailmail: creating or updating database tables 
+2026-09-22 22:29:46,071 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading snailmail/data/snailmail_data.xml 
+2026-09-22 22:29:46,084 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading snailmail/views/report_assets.xml 
+2026-09-22 22:29:46,104 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading snailmail/views/snailmail_views.xml 
+2026-09-22 22:29:46,129 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading snailmail/wizard/snailmail_letter_format_error_views.xml 
+2026-09-22 22:29:46,142 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading snailmail/wizard/snailmail_letter_missing_required_fields_views.xml 
+2026-09-22 22:29:46,153 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading snailmail/security/ir.model.access.csv 
+2026-09-22 22:29:46,197 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Module snailmail loaded in 0.50s, 434 queries (+434 other) 
+2026-09-22 22:29:46,197 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Loading module auth_totp_portal (34/57) 
+2026-09-22 22:29:46,247 1 INFO soloodoo_storekeeper_validate_test odoo.modules.registry: module auth_totp_portal: creating or updating database tables 
+2026-09-22 22:29:46,283 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading auth_totp_portal/security/security.xml 
+2026-09-22 22:29:46,298 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading auth_totp_portal/views/templates.xml 
+2026-09-22 22:29:46,327 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Module auth_totp_portal loaded in 0.13s, 66 queries (+66 other) 
+2026-09-22 22:29:46,327 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Loading module digest (35/57) 
+2026-09-22 22:29:46,383 1 INFO soloodoo_storekeeper_validate_test odoo.modules.registry: module digest: creating or updating database tables 
+2026-09-22 22:29:46,515 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading digest/security/ir.model.access.csv 
+2026-09-22 22:29:46,533 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading digest/data/digest_data.xml 
+2026-09-22 22:29:46,565 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading digest/data/digest_tips_data.xml 
+2026-09-22 22:29:46,590 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading digest/data/ir_cron_data.xml 
+2026-09-22 22:29:46,602 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading digest/data/res_config_settings_data.xml 
+2026-09-22 22:29:46,612 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading digest/views/digest_views.xml 
+2026-09-22 22:29:46,684 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading digest/views/digest_templates.xml 
+2026-09-22 22:29:46,694 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading digest/views/res_config_settings_views.xml 
+2026-09-22 22:29:46,921 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Module digest loaded in 0.59s, 296 queries (+296 other) 
+2026-09-22 22:29:46,922 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Loading module payment (36/57) 
+2026-09-22 22:29:46,992 1 INFO soloodoo_storekeeper_validate_test odoo.modules.registry: module payment: creating or updating database tables 
+2026-09-22 22:29:47,416 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading payment/data/onboarding_data.xml 
+2026-09-22 22:29:47,425 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading payment/data/payment_method_data.xml 
+2026-09-22 22:29:49,483 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading payment/data/payment_provider_data.xml 
+2026-09-22 22:29:49,677 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading payment/data/payment_cron.xml 
+2026-09-22 22:29:50,675 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading payment/views/express_checkout_templates.xml 
+2026-09-22 22:29:50,685 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading payment/views/payment_form_templates.xml 
+2026-09-22 22:29:50,722 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading payment/views/portal_templates.xml 
+2026-09-22 22:29:50,782 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading payment/views/payment_provider_views.xml 
+2026-09-22 22:29:50,820 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading payment/views/payment_method_views.xml 
+2026-09-22 22:29:50,859 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading payment/views/payment_transaction_views.xml 
+2026-09-22 22:29:50,894 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading payment/views/payment_token_views.xml 
+2026-09-22 22:29:50,919 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading payment/views/res_partner_views.xml 
+2026-09-22 22:29:50,933 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading payment/security/ir.model.access.csv 
+2026-09-22 22:29:50,958 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading payment/security/payment_security.xml 
+2026-09-22 22:29:50,992 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading payment/wizards/payment_capture_wizard_views.xml 
+2026-09-22 22:29:51,003 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading payment/wizards/payment_link_wizard_views.xml 
+2026-09-22 22:29:51,012 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading payment/wizards/payment_onboarding_views.xml 
+2026-09-22 22:29:51,059 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Module payment loaded in 4.14s, 2222 queries (+2222 other) 
+2026-09-22 22:29:51,059 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Loading module portal_rating (37/57) 
+2026-09-22 22:29:51,112 1 INFO soloodoo_storekeeper_validate_test odoo.modules.registry: module portal_rating: creating or updating database tables 
+2026-09-22 22:29:51,257 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading portal_rating/views/rating_rating_views.xml 
+2026-09-22 22:29:51,271 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading portal_rating/views/portal_templates.xml 
+2026-09-22 22:29:51,279 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading portal_rating/views/rating_templates.xml 
+2026-09-22 22:29:51,305 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Module portal_rating loaded in 0.25s, 105 queries (+105 other) 
+2026-09-22 22:29:51,305 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Loading module spreadsheet (38/57) 
+2026-09-22 22:29:51,363 1 INFO soloodoo_storekeeper_validate_test odoo.modules.registry: module spreadsheet: creating or updating database tables 
+2026-09-22 22:29:51,421 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading spreadsheet/views/public_readonly_spreadsheet_templates.xml 
+2026-09-22 22:29:51,451 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Module spreadsheet loaded in 0.15s, 83 queries (+83 other) 
+2026-09-22 22:29:51,451 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Loading module account (39/57) 
+2026-09-22 22:29:51,738 1 INFO soloodoo_storekeeper_validate_test odoo.modules.registry: module account: creating or updating database tables 
+2026-09-22 22:29:52,229 1 INFO soloodoo_storekeeper_validate_test odoo.models: Prepare computation of res.company.account_fiscal_country_id 
+2026-09-22 22:29:52,229 1 INFO soloodoo_storekeeper_validate_test odoo.models: Prepare computation of res.company.invoice_terms_html 
+2026-09-22 22:29:54,711 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading account/security/account_security.xml 
+2026-09-22 22:29:55,300 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading account/security/ir.model.access.csv 
+2026-09-22 22:29:55,393 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading account/data/account_data.xml 
+2026-09-22 22:29:55,499 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading account/data/digest_data.xml 
+2026-09-22 22:29:55,511 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading account/views/account_report.xml 
+2026-09-22 22:29:55,544 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading account/data/mail_template_data.xml 
+2026-09-22 22:29:55,565 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading account/data/onboarding_data.xml 
+2026-09-22 22:29:55,642 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading account/views/account_payment_view.xml 
+2026-09-22 22:29:55,731 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading account/wizard/account_automatic_entry_wizard_views.xml 
+2026-09-22 22:29:55,745 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading account/wizard/account_unreconcile_view.xml 
+2026-09-22 22:29:55,757 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading account/wizard/account_move_reversal_view.xml 
+2026-09-22 22:29:55,769 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading account/wizard/account_resequence_views.xml 
+2026-09-22 22:29:55,782 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading account/wizard/account_payment_register_views.xml 
+2026-09-22 22:29:55,796 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading account/views/account_move_views.xml 
+2026-09-22 22:29:56,223 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading account/wizard/setup_wizards_view.xml 
+2026-09-22 22:29:56,245 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading account/views/account_account_views.xml 
+2026-09-22 22:29:56,280 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading account/views/account_group_views.xml 
+2026-09-22 22:29:56,298 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading account/views/account_journal_views.xml 
+2026-09-22 22:29:56,352 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading account/views/account_account_tag_views.xml 
+2026-09-22 22:29:56,370 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading account/views/account_bank_statement_views.xml 
+2026-09-22 22:29:56,409 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading account/views/account_reconcile_model_views.xml 
+2026-09-22 22:29:56,444 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading account/views/account_tax_views.xml 
+2026-09-22 22:29:56,524 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading account/views/account_full_reconcile_views.xml 
+2026-09-22 22:29:56,532 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading account/views/account_payment_term_views.xml 
+2026-09-22 22:29:56,559 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading account/views/account_payment_method.xml 
+2026-09-22 22:29:56,571 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading account/views/res_partner_bank_views.xml 
+2026-09-22 22:29:56,604 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading account/views/report_statement.xml 
+2026-09-22 22:29:56,624 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading account/views/terms_template.xml 
+2026-09-22 22:29:56,641 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading account/wizard/account_validate_move_view.xml 
+2026-09-22 22:29:56,653 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading account/views/res_company_views.xml 
+2026-09-22 22:29:56,685 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading account/views/product_view.xml 
+2026-09-22 22:29:56,719 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading account/views/account_analytic_plan_views.xml 
+2026-09-22 22:29:56,728 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading account/views/account_analytic_account_views.xml 
+2026-09-22 22:29:56,749 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading account/views/account_analytic_distribution_model_views.xml 
+2026-09-22 22:29:56,768 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading account/views/account_analytic_line_views.xml 
+2026-09-22 22:29:56,806 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading account/views/report_invoice.xml 
+2026-09-22 22:29:56,850 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading account/report/account_invoice_report_view.xml 
+2026-09-22 22:29:56,906 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading account/views/account_cash_rounding_view.xml 
+2026-09-22 22:29:56,927 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading account/views/ir_module_views.xml 
+2026-09-22 22:29:56,937 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading account/views/res_config_settings_views.xml 
+2026-09-22 22:29:56,977 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading account/views/partner_view.xml 
+2026-09-22 22:29:57,058 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading account/views/account_journal_dashboard_view.xml 
+2026-09-22 22:29:57,083 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading account/views/account_portal_templates.xml 
+2026-09-22 22:29:57,138 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading account/views/report_payment_receipt_templates.xml 
+2026-09-22 22:29:57,157 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading account/data/service_cron.xml 
+2026-09-22 22:29:57,182 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading account/views/account_incoterms_view.xml 
+2026-09-22 22:29:57,206 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading account/data/account_incoterms_data.xml 
+2026-09-22 22:29:57,238 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading account/views/digest_views.xml 
+2026-09-22 22:29:57,250 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading account/wizard/account_move_send_views.xml 
+2026-09-22 22:29:57,265 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading account/report/account_hash_integrity_templates.xml 
+2026-09-22 22:29:57,275 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading account/views/res_currency.xml 
+2026-09-22 22:29:57,284 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading account/views/account_menuitem.xml 
+2026-09-22 22:29:57,882 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading account/wizard/account_tour_upload_bill.xml 
+2026-09-22 22:29:57,899 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading account/wizard/accrued_orders.xml 
+2026-09-22 22:29:57,910 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading account/views/bill_preview_template.xml 
+2026-09-22 22:29:57,923 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading account/data/account_reports_data.xml 
+2026-09-22 22:29:59,304 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading account/views/uom_uom_views.xml 
+2026-09-22 22:29:59,324 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading account/data/ir_config_parameter_data.xml 
+2026-09-22 22:29:59,735 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Module account loaded in 8.28s, 5694 queries (+5694 other) 
+2026-09-22 22:29:59,736 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Loading module project (40/57) 
+2026-09-22 22:30:00,080 1 INFO soloodoo_storekeeper_validate_test odoo.modules.registry: module project: creating or updating database tables 
+2026-09-22 22:30:00,939 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading project/security/project_security.xml 
+2026-09-22 22:30:01,394 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading project/security/ir.model.access.csv 
+2026-09-22 22:30:01,440 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading project/security/ir.model.access.xml 
+2026-09-22 22:30:01,448 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading project/data/digest_data.xml 
+2026-09-22 22:30:01,462 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading project/report/project_task_burndown_chart_report_views.xml 
+2026-09-22 22:30:01,480 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading project/views/account_analytic_account_views.xml 
+2026-09-22 22:30:01,495 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading project/views/digest_digest_views.xml 
+2026-09-22 22:30:01,509 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading project/views/rating_rating_views.xml 
+2026-09-22 22:30:01,614 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading project/views/project_update_views.xml 
+2026-09-22 22:30:01,643 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading project/views/project_update_templates.xml 
+2026-09-22 22:30:01,656 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading project/views/project_project_stage_views.xml 
+2026-09-22 22:30:01,701 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading project/wizard/project_share_wizard_views.xml 
+2026-09-22 22:30:01,717 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading project/views/project_collaborator_views.xml 
+2026-09-22 22:30:01,736 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading project/views/project_task_type_views.xml 
+2026-09-22 22:30:01,786 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading project/views/project_project_views.xml 
+2026-09-22 22:30:01,970 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading project/views/project_task_views.xml 
+2026-09-22 22:30:02,293 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading project/views/project_tags_views.xml 
+2026-09-22 22:30:02,316 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading project/views/project_milestone_views.xml 
+2026-09-22 22:30:02,332 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading project/views/res_partner_views.xml 
+2026-09-22 22:30:02,350 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading project/views/res_config_settings_views.xml 
+2026-09-22 22:30:02,379 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading project/views/mail_activity_plan_views.xml 
+2026-09-22 22:30:02,409 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading project/views/mail_activity_type_views.xml 
+2026-09-22 22:30:02,417 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading project/views/project_sharing_project_task_views.xml 
+2026-09-22 22:30:02,488 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading project/views/project_portal_project_project_templates.xml 
+2026-09-22 22:30:02,529 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading project/views/project_portal_project_task_templates.xml 
+2026-09-22 22:30:02,590 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading project/views/project_task_templates.xml 
+2026-09-22 22:30:02,598 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading project/views/project_sharing_project_task_templates.xml 
+2026-09-22 22:30:02,614 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading project/report/project_report_views.xml 
+2026-09-22 22:30:02,642 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading project/data/ir_cron_data.xml 
+2026-09-22 22:30:02,652 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading project/data/mail_message_subtype_data.xml 
+2026-09-22 22:30:02,717 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading project/data/mail_template_data.xml 
+2026-09-22 22:30:02,733 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading project/data/project_data.xml 
+2026-09-22 22:30:02,746 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading project/wizard/project_task_type_delete_views.xml 
+2026-09-22 22:30:02,762 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading project/wizard/project_project_stage_delete_views.xml 
+2026-09-22 22:30:02,777 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading project/views/project_menus.xml 
+2026-09-22 22:30:02,953 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Module project loaded in 3.22s, 2597 queries (+2597 other) 
+2026-09-22 22:30:02,954 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Loading module spreadsheet_dashboard (41/57) 
+2026-09-22 22:30:03,045 1 INFO soloodoo_storekeeper_validate_test odoo.modules.registry: module spreadsheet_dashboard: creating or updating database tables 
+2026-09-22 22:30:03,250 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading spreadsheet_dashboard/security/security.xml 
+2026-09-22 22:30:03,340 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading spreadsheet_dashboard/security/ir.model.access.csv 
+2026-09-22 22:30:03,360 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading spreadsheet_dashboard/views/spreadsheet_dashboard_views.xml 
+2026-09-22 22:30:03,382 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading spreadsheet_dashboard/views/menu_views.xml 
+2026-09-22 22:30:03,423 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading spreadsheet_dashboard/data/dashboard.xml 
+2026-09-22 22:30:03,480 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Module spreadsheet_dashboard loaded in 0.53s, 269 queries (+269 other) 
+2026-09-22 22:30:03,480 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Loading module stock (42/57) 
+2026-09-22 22:30:04,319 1 INFO soloodoo_storekeeper_validate_test odoo.modules.registry: module stock: creating or updating database tables 
+2026-09-22 22:30:07,036 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading stock/security/stock_security.xml 
+2026-09-22 22:30:07,551 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading stock/security/ir.model.access.csv 
+2026-09-22 22:30:07,648 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading stock/data/digest_data.xml 
+2026-09-22 22:30:07,656 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading stock/data/mail_templates.xml 
+2026-09-22 22:30:07,669 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading stock/data/default_barcode_patterns.xml 
+2026-09-22 22:30:07,684 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading stock/data/stock_data.xml 
+2026-09-22 22:30:08,012 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading stock/data/stock_sequence_data.xml 
+2026-09-22 22:30:08,047 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading stock/data/stock_traceability_report_data.xml 
+2026-09-22 22:30:08,054 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading stock/report/report_stock_quantity.xml 
+2026-09-22 22:30:08,070 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading stock/report/report_stock_reception.xml 
+2026-09-22 22:30:08,100 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading stock/report/stock_report_views.xml 
+2026-09-22 22:30:08,175 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading stock/report/report_package_barcode.xml 
+2026-09-22 22:30:08,197 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading stock/report/report_lot_barcode.xml 
+2026-09-22 22:30:08,204 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading stock/report/report_location_barcode.xml 
+2026-09-22 22:30:08,217 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading stock/report/report_stockpicking_operations.xml 
+2026-09-22 22:30:08,233 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading stock/report/report_deliveryslip.xml 
+2026-09-22 22:30:08,266 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading stock/report/report_stockinventory.xml 
+2026-09-22 22:30:08,275 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading stock/report/report_stock_rule.xml 
+2026-09-22 22:30:08,305 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading stock/report/package_templates.xml 
+2026-09-22 22:30:08,313 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading stock/report/picking_templates.xml 
+2026-09-22 22:30:08,333 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading stock/report/product_templates.xml 
+2026-09-22 22:30:08,347 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading stock/report/product_packaging.xml 
+2026-09-22 22:30:08,354 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading stock/report/report_return_slip.xml 
+2026-09-22 22:30:08,368 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading stock/data/mail_template_data.xml 
+2026-09-22 22:30:08,382 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading stock/views/stock_menu_views.xml 
+2026-09-22 22:30:08,511 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading stock/wizard/stock_assign_serial_views.xml 
+2026-09-22 22:30:08,527 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading stock/wizard/stock_change_product_qty_views.xml 
+2026-09-22 22:30:08,542 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading stock/wizard/stock_picking_return_views.xml 
+2026-09-22 22:30:08,557 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading stock/wizard/stock_scheduler_compute_views.xml 
+2026-09-22 22:30:08,577 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading stock/wizard/stock_inventory_conflict.xml 
+2026-09-22 22:30:08,593 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading stock/wizard/stock_backorder_confirmation_views.xml 
+2026-09-22 22:30:08,602 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading stock/wizard/stock_quantity_history.xml 
+2026-09-22 22:30:08,611 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading stock/wizard/stock_request_count.xml 
+2026-09-22 22:30:08,624 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading stock/wizard/stock_replenishment_info.xml 
+2026-09-22 22:30:08,657 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading stock/wizard/stock_rules_report_views.xml 
+2026-09-22 22:30:08,669 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading stock/wizard/stock_warn_insufficient_qty_views.xml 
+2026-09-22 22:30:08,689 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading stock/wizard/product_replenish_views.xml 
+2026-09-22 22:30:08,704 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading stock/wizard/product_label_layout_views.xml 
+2026-09-22 22:30:08,715 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading stock/wizard/stock_track_confirmation_views.xml 
+2026-09-22 22:30:08,724 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading stock/wizard/stock_orderpoint_snooze_views.xml 
+2026-09-22 22:30:08,734 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading stock/wizard/stock_package_destination_views.xml 
+2026-09-22 22:30:08,746 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading stock/wizard/stock_inventory_adjustment_name.xml 
+2026-09-22 22:30:08,758 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading stock/wizard/stock_inventory_warning.xml 
+2026-09-22 22:30:08,769 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading stock/wizard/stock_label_type.xml 
+2026-09-22 22:30:08,777 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading stock/wizard/stock_lot_label_layout.xml 
+2026-09-22 22:30:08,785 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading stock/wizard/stock_quant_relocate.xml 
+2026-09-22 22:30:08,796 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading stock/views/res_partner_views.xml 
+2026-09-22 22:30:08,826 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading stock/views/product_strategy_views.xml 
+2026-09-22 22:30:08,860 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading stock/views/stock_lot_views.xml 
+2026-09-22 22:30:08,903 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading stock/views/stock_scrap_views.xml 
+2026-09-22 22:30:08,949 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading stock/views/stock_quant_views.xml 
+2026-09-22 22:30:09,216 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading stock/views/stock_warehouse_views.xml 
+2026-09-22 22:30:09,247 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading stock/views/stock_move_line_views.xml 
+2026-09-22 22:30:09,326 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading stock/views/stock_picking_views.xml 
+2026-09-22 22:30:09,523 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading stock/views/stock_picking_type_views.xml 
+2026-09-22 22:30:09,575 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading stock/views/stock_move_views.xml 
+2026-09-22 22:30:09,655 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading stock/views/product_views.xml 
+2026-09-22 22:30:09,891 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading stock/views/stock_location_views.xml 
+2026-09-22 22:30:10,173 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading stock/views/stock_orderpoint_views.xml 
+2026-09-22 22:30:10,339 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading stock/views/stock_storage_category_views.xml 
+2026-09-22 22:30:10,380 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading stock/views/res_config_settings_views.xml 
+2026-09-22 22:30:10,435 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading stock/views/report_stock_traceability.xml 
+2026-09-22 22:30:10,450 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading stock/views/stock_template.xml 
+2026-09-22 22:30:10,464 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading stock/views/stock_rule_views.xml 
+2026-09-22 22:30:10,513 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading stock/views/stock_package_level_views.xml 
+2026-09-22 22:30:10,542 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading stock/views/stock_package_type_view.xml 
+2026-09-22 22:30:10,572 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading stock/views/stock_forecasted.xml 
+2026-09-22 22:30:10,720 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Module stock loaded in 7.24s, 5103 queries (+5103 other) 
+2026-09-22 22:30:10,720 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Loading module account_add_gln (43/57) 
+2026-09-22 22:30:10,934 1 INFO soloodoo_storekeeper_validate_test odoo.modules.registry: module account_add_gln: creating or updating database tables 
+2026-09-22 22:30:11,074 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading account_add_gln/views/res_partner_views.xml 
+2026-09-22 22:30:11,117 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Module account_add_gln loaded in 0.40s, 96 queries (+96 other) 
+2026-09-22 22:30:11,117 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Loading module account_edi_ubl_cii (44/57) 
+2026-09-22 22:30:11,347 1 INFO soloodoo_storekeeper_validate_test odoo.modules.registry: module account_edi_ubl_cii: creating or updating database tables 
+2026-09-22 22:30:11,374 1 INFO soloodoo_storekeeper_validate_test odoo.models: Prepare computation of res.partner.ubl_cii_format 
+2026-09-22 22:30:11,374 1 INFO soloodoo_storekeeper_validate_test odoo.models: Prepare computation of res.partner.peppol_endpoint 
+2026-09-22 22:30:11,374 1 INFO soloodoo_storekeeper_validate_test odoo.models: Prepare computation of res.partner.peppol_eas 
+2026-09-22 22:30:11,621 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading account_edi_ubl_cii/data/cii_22_templates.xml 
+2026-09-22 22:30:11,665 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading account_edi_ubl_cii/data/ubl_20_templates.xml 
+2026-09-22 22:30:11,847 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading account_edi_ubl_cii/data/ubl_21_templates.xml 
+2026-09-22 22:30:11,900 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading account_edi_ubl_cii/views/account_move_views.xml 
+2026-09-22 22:30:11,912 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading account_edi_ubl_cii/views/res_config_settings_views.xml 
+2026-09-22 22:30:11,940 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading account_edi_ubl_cii/views/res_partner_views.xml 
+2026-09-22 22:30:11,980 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading account_edi_ubl_cii/wizard/account_move_send_views.xml 
+2026-09-22 22:30:12,025 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Module account_edi_ubl_cii loaded in 0.91s, 438 queries (+438 other) 
+2026-09-22 22:30:12,025 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Loading module account_payment (45/57) 
+2026-09-22 22:30:12,157 1 INFO soloodoo_storekeeper_validate_test odoo.modules.registry: module account_payment: creating or updating database tables 
+2026-09-22 22:30:12,405 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading account_payment/data/ir_config_parameter.xml 
+2026-09-22 22:30:12,413 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading account_payment/data/onboarding_data.xml 
+2026-09-22 22:30:12,433 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading account_payment/security/ir.model.access.csv 
+2026-09-22 22:30:12,451 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading account_payment/security/ir_rules.xml 
+2026-09-22 22:30:12,463 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading account_payment/views/account_payment_menus.xml 
+2026-09-22 22:30:12,497 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading account_payment/views/account_portal_templates.xml 
+2026-09-22 22:30:12,543 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading account_payment/views/account_move_views.xml 
+2026-09-22 22:30:12,563 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading account_payment/views/account_journal_views.xml 
+2026-09-22 22:30:12,579 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading account_payment/views/account_payment_views.xml 
+2026-09-22 22:30:12,594 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading account_payment/views/payment_provider_views.xml 
+2026-09-22 22:30:12,606 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading account_payment/views/payment_transaction_views.xml 
+2026-09-22 22:30:12,616 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading account_payment/wizards/account_payment_register_views.xml 
+2026-09-22 22:30:12,631 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading account_payment/wizards/payment_link_wizard_views.xml 
+2026-09-22 22:30:12,642 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading account_payment/wizards/payment_refund_wizard_views.xml 
+2026-09-22 22:30:12,649 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading account_payment/wizards/res_config_settings_views.xml 
+2026-09-22 22:30:12,725 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Module account_payment loaded in 0.70s, 481 queries (+481 other) 
+2026-09-22 22:30:12,726 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Loading module account_payment_term (46/57) 
+2026-09-22 22:30:12,917 1 INFO soloodoo_storekeeper_validate_test odoo.modules.registry: module account_payment_term: creating or updating database tables 
+2026-09-22 22:30:12,966 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading account_payment_term/views/account_payment_term_views.xml 
+2026-09-22 22:30:13,001 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Module account_payment_term loaded in 0.28s, 52 queries (+52 other) 
+2026-09-22 22:30:13,001 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Loading module elmokrif_chantier (47/57) 
+2026-09-22 22:30:13,115 1 INFO soloodoo_storekeeper_validate_test odoo.modules.registry: module elmokrif_chantier: creating or updating database tables 
+2026-09-22 22:30:13,313 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading elmokrif_chantier/security/chantier_groups.xml 
+2026-09-22 22:30:13,392 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading elmokrif_chantier/security/menu_security.xml 
+2026-09-22 22:30:13,407 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading elmokrif_chantier/security/ir.model.access.csv 
+2026-09-22 22:30:13,423 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading elmokrif_chantier/security/chantier_rules.xml 
+2026-09-22 22:30:13,464 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading elmokrif_chantier/data/analytic_plan_data.xml 
+2026-09-22 22:30:13,751 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading elmokrif_chantier/data/chantier_sequence.xml 
+2026-09-22 22:30:13,784 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading elmokrif_chantier/data/chantier_health_cron.xml 
+2026-09-22 22:30:13,807 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading elmokrif_chantier/views/project_project_views.xml 
+2026-09-22 22:30:13,919 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading elmokrif_chantier/views/project_task_views.xml 
+2026-09-22 22:30:14,039 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Module elmokrif_chantier loaded in 1.04s, 591 queries (+591 other) 
+2026-09-22 22:30:14,040 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Loading module project_account (48/57) 
+2026-09-22 22:30:14,227 1 INFO soloodoo_storekeeper_validate_test odoo.modules.registry: module project_account: creating or updating database tables 
+2026-09-22 22:30:14,277 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading project_account/views/account_analytic_line_views.xml 
+2026-09-22 22:30:14,329 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading project_account/views/project_project_views.xml 
+2026-09-22 22:30:14,361 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading project_account/views/project_task_views.xml 
+2026-09-22 22:30:14,391 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading project_account/views/project_sharing_project_task_views.xml 
+2026-09-22 22:30:14,429 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Module project_account loaded in 0.39s, 135 queries (+135 other) 
+2026-09-22 22:30:14,429 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Loading module project_sms (49/57) 
+2026-09-22 22:30:14,549 1 INFO soloodoo_storekeeper_validate_test odoo.modules.registry: module project_sms: creating or updating database tables 
+2026-09-22 22:30:14,651 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading project_sms/views/project_stage_views.xml 
+2026-09-22 22:30:14,682 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading project_sms/views/project_task_type_views.xml 
+2026-09-22 22:30:14,714 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading project_sms/views/project_project_views.xml 
+2026-09-22 22:30:14,724 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading project_sms/views/project_task_views.xml 
+2026-09-22 22:30:14,733 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading project_sms/security/ir.model.access.csv 
+2026-09-22 22:30:14,748 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading project_sms/security/project_sms_security.xml 
+2026-09-22 22:30:14,788 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Module project_sms loaded in 0.36s, 209 queries (+209 other) 
+2026-09-22 22:30:14,788 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Loading module project_todo (50/57) 
+2026-09-22 22:30:14,895 1 INFO soloodoo_storekeeper_validate_test odoo.modules.registry: module project_todo: creating or updating database tables 
+2026-09-22 22:30:15,000 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading project_todo/security/ir.model.access.csv 
+2026-09-22 22:30:15,016 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading project_todo/security/project_todo_security.xml 
+2026-09-22 22:30:15,061 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading project_todo/data/mail_activity_type_data.xml 
+2026-09-22 22:30:15,075 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading project_todo/data/todo_template.xml 
+2026-09-22 22:30:15,084 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading project_todo/views/project_task_views.xml 
+2026-09-22 22:30:15,147 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading project_todo/views/project_todo_menus.xml 
+2026-09-22 22:30:15,161 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading project_todo/wizard/mail_activity_todo_create.xml 
+2026-09-22 22:30:15,197 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Module project_todo loaded in 0.41s, 266 queries (+266 other) 
+2026-09-22 22:30:15,197 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Loading module snailmail_account (51/57) 
+2026-09-22 22:30:15,298 1 INFO soloodoo_storekeeper_validate_test odoo.modules.registry: module snailmail_account: creating or updating database tables 
+2026-09-22 22:30:15,522 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading snailmail_account/views/res_config_settings_views.xml 
+2026-09-22 22:30:15,552 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading snailmail_account/wizard/account_move_send_views.xml 
+2026-09-22 22:30:15,587 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Module snailmail_account loaded in 0.39s, 132 queries (+132 other) 
+2026-09-22 22:30:15,588 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Loading module spreadsheet_account (52/57) 
+2026-09-22 22:30:15,693 1 INFO soloodoo_storekeeper_validate_test odoo.modules.registry: module spreadsheet_account: creating or updating database tables 
+2026-09-22 22:30:15,785 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Module spreadsheet_account loaded in 0.20s, 55 queries (+55 other) 
+2026-09-22 22:30:15,785 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Loading module spreadsheet_dashboard_account (53/57) 
+2026-09-22 22:30:15,892 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading spreadsheet_dashboard_account/data/dashboards.xml 
+2026-09-22 22:30:16,002 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Module spreadsheet_dashboard_account loaded in 0.22s, 29 queries (+29 other) 
+2026-09-22 22:30:16,002 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Loading module stock_account (54/57) 
+2026-09-22 22:30:16,165 1 INFO soloodoo_storekeeper_validate_test odoo.modules.registry: module stock_account: creating or updating database tables 
+2026-09-22 22:30:16,636 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading stock_account/security/stock_account_security.xml 
+2026-09-22 22:30:16,689 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading stock_account/security/ir.model.access.csv 
+2026-09-22 22:30:16,717 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading stock_account/data/stock_account_data.xml 
+2026-09-22 22:30:16,727 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading stock_account/views/stock_account_views.xml 
+2026-09-22 22:30:16,860 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading stock_account/views/res_config_settings_views.xml 
+2026-09-22 22:30:16,884 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading stock_account/data/product_data.xml 
+2026-09-22 22:30:16,897 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading stock_account/views/report_invoice.xml 
+2026-09-22 22:30:16,909 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading stock_account/views/stock_valuation_layer_views.xml 
+2026-09-22 22:30:17,011 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading stock_account/views/stock_quant_views.xml 
+2026-09-22 22:30:17,039 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading stock_account/views/product_views.xml 
+2026-09-22 22:30:17,088 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading stock_account/wizard/stock_request_count.xml 
+2026-09-22 22:30:17,099 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading stock_account/wizard/stock_valuation_layer_revaluation_views.xml 
+2026-09-22 22:30:17,109 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading stock_account/wizard/stock_quantity_history.xml 
+2026-09-22 22:30:17,121 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading stock_account/report/account_invoice_report_view.xml 
+2026-09-22 22:30:17,166 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Module stock_account loaded in 1.16s, 735 queries (+735 other) 
+2026-09-22 22:30:17,166 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Loading module stock_sms (55/57) 
+2026-09-22 22:30:17,383 1 INFO soloodoo_storekeeper_validate_test odoo.modules.registry: module stock_sms: creating or updating database tables 
+2026-09-22 22:30:17,531 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading stock_sms/data/sms_data.xml 
+2026-09-22 22:30:17,543 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading stock_sms/views/res_config_settings_views.xml 
+2026-09-22 22:30:17,597 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading stock_sms/wizard/confirm_stock_sms_views.xml 
+2026-09-22 22:30:17,607 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading stock_sms/security/ir.model.access.csv 
+2026-09-22 22:30:17,624 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading stock_sms/security/sms_security.xml 
+2026-09-22 22:30:17,664 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Module stock_sms loaded in 0.50s, 199 queries (+199 other) 
+2026-09-22 22:30:17,664 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Loading module elmokrif_chantier_stock (56/57) 
+2026-09-22 22:30:17,778 1 INFO soloodoo_storekeeper_validate_test odoo.modules.registry: module elmokrif_chantier_stock: creating or updating database tables 
+2026-09-22 22:30:18,002 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading elmokrif_chantier_stock/security/chantier_security.xml 
+2026-09-22 22:30:18,025 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading elmokrif_chantier_stock/security/ir.model.access.csv 
+2026-09-22 22:30:18,039 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading elmokrif_chantier_stock/data/stock_location_data.xml 
+2026-09-22 22:30:18,046 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading elmokrif_chantier_stock/views/material_request_views.xml 
+2026-09-22 22:30:18,078 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading elmokrif_chantier_stock/views/project_project_views.xml 
+2026-09-22 22:30:18,099 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading elmokrif_chantier_stock/views/stock_picking_views.xml 
+2026-09-22 22:30:18,120 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading elmokrif_chantier_stock/views/stock_warehouse_views.xml 
+2026-09-22 22:30:18,172 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Module elmokrif_chantier_stock loaded in 0.51s, 326 queries (+326 other) 
+2026-09-22 22:30:18,172 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Loading module spreadsheet_dashboard_stock_account (57/57) 
+2026-09-22 22:30:18,324 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: loading spreadsheet_dashboard_stock_account/data/dashboards.xml 
+2026-09-22 22:30:18,389 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Module spreadsheet_dashboard_stock_account loaded in 0.22s, 28 queries (+28 other) 
+2026-09-22 22:30:18,389 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: 57 modules loaded in 54.47s, 37726 queries (+37727 extra) 
+2026-09-22 22:30:19,714 1 INFO soloodoo_storekeeper_validate_test odoo.modules.loading: Modules loaded. 
+2026-09-22 22:30:20,707 1 INFO soloodoo_storekeeper_validate_test odoo.modules.registry: Registry loaded in 70.029s 
+2026-09-22 22:30:20,708 1 INFO soloodoo_storekeeper_validate_test odoo.service.server: Starting post tests 
+2026-09-22 22:30:20,925 1 INFO soloodoo_storekeeper_validate_test odoo.addons.elmokrif_chantier_stock.tests.test_material_request: Starting TestChantierMaterialRequest.test_assignment_rule_hides_another_chantiers_request ... 
+2026-09-22 22:30:21,267 1 INFO soloodoo_storekeeper_validate_test odoo.addons.base.models.ir_rule: Access Denied by record rules for operation: write on record ids: [1], uid: 6, model: chantier.material.request 
+2026-09-22 22:30:21,272 1 INFO soloodoo_storekeeper_validate_test odoo.addons.elmokrif_chantier_stock.tests.test_material_request: Starting TestChantierMaterialRequest.test_backorder_keeps_material_request_link ... 
+2026-09-22 22:30:21,798 1 INFO soloodoo_storekeeper_validate_test odoo.addons.elmokrif_chantier_stock.tests.test_material_request: Starting TestChantierMaterialRequest.test_chantier_setup_reactivates_internal_transfer_operation ... 
+2026-09-22 22:30:21,844 1 INFO soloodoo_storekeeper_validate_test odoo.addons.elmokrif_chantier_stock.tests.test_material_request: Starting TestChantierMaterialRequest.test_chantier_user_can_read_draft_request_line_quantities_without_stock_access ... 
+2026-09-22 22:30:22,310 1 INFO soloodoo_storekeeper_validate_test odoo.addons.elmokrif_chantier_stock.tests.test_material_request: Starting TestChantierMaterialRequest.test_chantier_user_can_submit_a_material_request_without_stock_access ... 
+2026-09-22 22:30:22,927 1 INFO soloodoo_storekeeper_validate_test odoo.addons.elmokrif_chantier_stock.tests.test_material_request: Starting TestChantierMaterialRequest.test_company_rule_hides_requests_from_other_companies ... 
+2026-09-22 22:30:24,047 1 INFO soloodoo_storekeeper_validate_test odoo.addons.base.models.ir_rule: Access Denied by record rules for operation: write on record ids: [5], uid: 9, model: chantier.material.request 
+2026-09-22 22:30:24,061 1 INFO soloodoo_storekeeper_validate_test odoo.addons.elmokrif_chantier_stock.tests.test_material_request: Starting TestChantierMaterialRequest.test_consumption_uses_dedicated_valuation_location ... 
+2026-09-22 22:30:24,277 1 INFO soloodoo_storekeeper_validate_test odoo.addons.elmokrif_chantier_stock.tests.test_material_request: Starting TestChantierMaterialRequest.test_create_cannot_skip_request_approval ... 
+2026-09-22 22:30:24,474 1 INFO soloodoo_storekeeper_validate_test odoo.addons.elmokrif_chantier_stock.tests.test_material_request: Starting TestChantierMaterialRequest.test_duplicate_product_lines_keep_exact_move_allocation ... 
+2026-09-22 22:30:24,855 1 INFO soloodoo_storekeeper_validate_test odoo.addons.elmokrif_chantier_stock.tests.test_material_request: Starting TestChantierMaterialRequest.test_empty_request_cannot_be_submitted ... 
+2026-09-22 22:30:25,037 1 INFO soloodoo_storekeeper_validate_test odoo.addons.elmokrif_chantier_stock.tests.test_material_request: Starting TestChantierMaterialRequest.test_global_request_defaults_company_and_accepts_its_chantier ... 
+2026-09-22 22:30:25,207 1 INFO soloodoo_storekeeper_validate_test odoo.addons.elmokrif_chantier_stock.tests.test_material_request: Starting TestChantierMaterialRequest.test_manual_chantier_transfer_normalizes_delivery_order_defaults ... 
+2026-09-22 22:30:25,382 1 INFO soloodoo_storekeeper_validate_test odoo.addons.elmokrif_chantier_stock.tests.test_material_request: Starting TestChantierMaterialRequest.test_negative_requested_quantity_is_rejected ... 
+2026-09-22 22:30:25,577 1 INFO soloodoo_storekeeper_validate_test odoo.addons.elmokrif_chantier_stock.tests.test_material_request: Starting TestChantierMaterialRequest.test_preselected_chantier_sets_its_company ... 
+2026-09-22 22:30:27,037 1 INFO soloodoo_storekeeper_validate_test odoo.addons.elmokrif_chantier_stock.tests.test_material_request: Starting TestChantierMaterialRequest.test_received_quantity_is_limited_to_its_request ... 
+2026-09-22 22:30:27,389 1 INFO soloodoo_storekeeper_validate_test odoo.addons.elmokrif_chantier_stock.tests.test_material_request: Starting TestChantierMaterialRequest.test_request_requires_chantier_in_progress ... 
+2026-09-22 22:30:27,589 1 INFO soloodoo_storekeeper_validate_test odoo.addons.elmokrif_chantier_stock.tests.test_material_request: Starting TestChantierMaterialRequest.test_request_state_and_lines_cannot_be_bypassed ... 
+2026-09-22 22:30:27,914 1 INFO soloodoo_storekeeper_validate_test odoo.addons.elmokrif_chantier_stock.tests.test_material_request: Starting TestChantierMaterialRequest.test_short_delivery_without_backorder_remains_partial ... 
+2026-09-22 22:30:28,286 1 INFO soloodoo_storekeeper_validate_test odoo.addons.elmokrif_chantier_stock.tests.test_material_request: Starting TestChantierMaterialRequest.test_storekeeper_can_validate_request_delivery_without_request_access ... 
+2026-09-22 22:30:28,695 1 INFO soloodoo_storekeeper_validate_test odoo.addons.elmokrif_chantier_stock.tests.test_material_request: Starting TestChantierMaterialRequest.test_submitted_request_creates_site_delivery ... 
+2026-09-22 22:30:28,898 1 INFO soloodoo_storekeeper_validate_test odoo.addons.elmokrif_chantier_stock.tests.test_material_request: Starting TestChantierMaterialRequest.test_submitted_request_lines_cannot_be_added_moved_or_deleted ... 
+2026-09-22 22:30:29,190 1 INFO soloodoo_storekeeper_validate_test odoo.addons.elmokrif_chantier_stock.tests.test_material_request: Starting TestChantierMaterialRequest.test_uom_summary_and_cost_use_the_chantier_company_price ... 
+2026-09-22 22:30:31,456 1 INFO soloodoo_storekeeper_validate_test odoo.addons.base.models.ir_attachment: filestore gc 385 checked, 2 removed 
+2026-09-22 22:30:31,457 1 INFO soloodoo_storekeeper_validate_test odoo.service.server: 22 post-tests in 10.75s, 9648 queries 
+2026-09-22 22:30:31,457 1 INFO soloodoo_storekeeper_validate_test odoo.tests.stats: elmokrif_chantier_stock: 24 tests 10.61s 9648 queries 
+2026-09-22 22:30:31,457 1 INFO soloodoo_storekeeper_validate_test odoo.tests.result: 0 failed, 0 error(s) of 22 tests when loading database 'soloodoo_storekeeper_validate_test' 
+2026-09-22 22:30:31,457 1 INFO soloodoo_storekeeper_validate_test odoo.service.server: Initiating shutdown 
+2026-09-22 22:30:31,457 1 INFO soloodoo_storekeeper_validate_test odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2026-09-22 22:30:31,554 1 INFO soloodoo_storekeeper_validate_test odoo.sql_db: ConnectionPool(used=0/count=0/max=64): Closed 1 connections  

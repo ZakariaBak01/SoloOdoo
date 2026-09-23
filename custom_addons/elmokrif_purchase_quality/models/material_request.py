@@ -29,7 +29,9 @@ class ChantierMaterialRequest(models.Model):
 
     def _compute_transfer_count(self):
         for request in self:
-            request.transfer_count = len(request.picking_ids)
+            # Requesters can see the aggregate count, but not the Inventory
+            # transfer records themselves.
+            request.transfer_count = len(request.sudo().picking_ids)
 
     def _create_available_stock_transfer(self, quantities):
         self.ensure_one()
@@ -243,7 +245,9 @@ class ChantierMaterialRequestLine(models.Model):
     )
     def _compute_fulfillment_status(self):
         for line in self:
-            pending_moves = line.request_id.picking_ids.move_ids.filtered(
+            # Chantier requesters may read fulfillment totals without having
+            # access to the underlying Inventory and Purchase documents.
+            pending_moves = line.request_id.sudo().picking_ids.move_ids.filtered(
                 lambda move: move.state not in ("done", "cancel")
                 and move.material_request_line_id == line
             )
@@ -253,7 +257,7 @@ class ChantierMaterialRequestLine(models.Model):
                 )
                 for move in pending_moves
             )
-            purchase_lines = line.purchase_order_line_ids.filtered(
+            purchase_lines = line.sudo().purchase_order_line_ids.filtered(
                 lambda purchase_line: purchase_line.order_id.state != "cancel"
             )
             line.procurement_qty = sum(
@@ -266,7 +270,7 @@ class ChantierMaterialRequestLine(models.Model):
                 0.0, line.product_uom_qty - line.delivered_qty
             )
             line.central_available_qty = (
-                self.env["stock.quant"]._get_available_quantity(
+                self.env["stock.quant"].sudo()._get_available_quantity(
                     line.product_id,
                     line.request_id.warehouse_id.lot_stock_id,
                     strict=False,

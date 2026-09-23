@@ -6,6 +6,24 @@ from odoo.exceptions import AccessError, ValidationError
 
 ESTIMATION_WORKFLOW_TOKEN = object()
 
+ESTIMATION_BASELINE_FIELDS = frozenset({
+    "name", "chantier_id", "structure_type",
+    "length", "width", "depth", "net_volume",
+    "expansion_percent", "compaction_percent", "wastage_percent",
+    "adjusted_volume", "cement_kg_per_m3", "bag_weight_kg", "sand_ratio",
+    "gravel_ratio", "water_l_per_m3", "cement_kg", "cement_bags",
+    "sand_volume", "gravel_volume", "water_litres", "cement_bag_cost",
+    "sand_cost_m3", "gravel_cost_m3", "water_cost_litre",
+    "labor_hourly_cost", "productivity_m3_per_day", "hours_per_day",
+    "machinery_daily_cost", "truck_capacity_m3", "truck_trip_cost",
+    "truck_trips", "labor_hours", "team_days", "material_cost",
+    "labor_cost", "machinery_cost", "logistics_cost", "subtotal",
+    "contingency_percent", "contingency_amount", "tax_id", "tax_amount",
+    "total_cost", "foundation_percent", "superstructure_percent",
+    "finishing_percent", "foundation_cost", "superstructure_cost",
+    "finishing_cost",
+})
+
 
 class ChantierEstimation(models.Model):
     _name = "chantier.estimation"
@@ -161,7 +179,14 @@ class ChantierEstimation(models.Model):
             "variance_approved_by_id",
         }
         if (
-            any(workflow_fields.intersection(vals) for vals in vals_list)
+            any(
+                workflow_fields.intersection(vals)
+                and (
+                    workflow_fields.intersection(vals) != {"state"}
+                    or vals.get("state") != "draft"
+                )
+                for vals in vals_list
+            )
             and self.env.context.get("_estimation_workflow_token") is not ESTIMATION_WORKFLOW_TOKEN
         ):
             raise AccessError(_("Estimate workflow evidence is managed by workflow actions."))
@@ -225,13 +250,23 @@ class ChantierEstimation(models.Model):
             "state", "revision_of_id", "approved_by_id", "approved_at",
             "variance_approved_by_id",
         }
-        if workflow_fields.intersection(vals) and self.env.context.get(
-            "_estimation_workflow_token"
-        ) is not ESTIMATION_WORKFLOW_TOKEN:
+        workflow_update_is_draft_save = (
+            workflow_fields.intersection(vals) == {"state"}
+            and vals.get("state") == "draft"
+            and all(item.state == "draft" for item in self)
+        )
+        if (
+            not workflow_update_is_draft_save
+            and workflow_fields.intersection(vals)
+            and self.env.context.get("_estimation_workflow_token") is not ESTIMATION_WORKFLOW_TOKEN
+        ):
             raise AccessError(_("Estimate workflow evidence is managed by workflow actions."))
-        protected = {"length", "width", "depth", "material_cost", "labor_cost", "machinery_cost", "logistics_cost", "subtotal", "total_cost"}
-        if protected.intersection(vals) and any(item.state == "approved" for item in self):
-            raise ValidationError(_("An approved estimate is immutable. Create a revision instead."))
+        if ESTIMATION_BASELINE_FIELDS.intersection(vals) and any(
+            item.state in ("approved", "superseded") for item in self
+        ):
+            raise ValidationError(
+                _("An approved or superseded estimate is immutable. Create a revision instead.")
+            )
         return super().write(vals)
 
     @api.constrains("length", "width", "depth", "wastage_percent", "expansion_percent", "compaction_percent", "productivity_m3_per_day", "hours_per_day", "truck_capacity_m3", "foundation_percent", "superstructure_percent", "finishing_percent")
