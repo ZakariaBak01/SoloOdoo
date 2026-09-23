@@ -102,7 +102,63 @@
    </form>
   </field>
  </record>
- <record id="view_chantier_estimation_live_control" model="ir.ui.view"><field name="name">chantier.estimation.live.control</field><field name="model">chantier.estimation</field><field name="inherit_id" ref="view_chantier_estimation_form"/><field name="arch" type="xml"><xpath expr="//notebook" position="inside"><page string="Live Cost Control"><group><group string="Progress"><field name="task_count" readonly="1"/><field name="completed_task_count" readonly="1"/><field name="manual_progress_percent" invisible="task_count != 0"/><field name="progress_percent" readonly="1" widget="percentage"/><field name="expected_cost_at_progress" readonly="1"/></group><group string="Actual Costs"><field name="actual_material_cost" readonly="1"/><field name="actual_labor_hours"/><field name="actual_labor_cost" readonly="1"/><field name="actual_machinery_cost"/><field name="actual_other_cost"/></group></group><group string="Live Variance"><field name="actual_cost" readonly="1"/><field name="cost_variance" readonly="1"/><field name="budget_consumed_percent" readonly="1" widget="percentage"/><field name="schedule_variance_percent" readonly="1" widget="percentage"/></group><div class="alert alert-warning" role="alert" invisible="budget_consumed_percent &lt;= progress_percent">Cost consumption is ahead of recorded chantier progress. Review purchases, labour, and scope.</div></page></xpath></field></record>
+ <record id="view_chantier_estimation_live_control" model="ir.ui.view">
+  <field name="name">chantier.estimation.live.control</field>
+  <field name="model">chantier.estimation</field>
+  <field name="inherit_id" ref="view_chantier_estimation_form"/>
+  <field name="arch" type="xml">
+   <xpath expr="//sheet/*[1]" position="before">
+    <div class="oe_button_box" name="button_box">
+     <button name="action_view_daily_reports"
+             type="object"
+             class="oe_stat_button"
+             icon="fa-calendar-check-o">
+      <field name="daily_report_count" widget="statinfo" string="Daily Reports"/>
+     </button>
+     <button name="action_view_material_cost_moves"
+             type="object"
+             class="oe_stat_button"
+             icon="fa-cubes"
+             groups="stock.group_stock_user">
+      <field name="material_cost_move_count" widget="statinfo" string="Material Cost Moves"/>
+     </button>
+    </div>
+   </xpath>
+   <xpath expr="//notebook" position="inside">
+    <page string="Live Cost Control">
+     <div class="alert alert-info" role="status">
+      Labour hours, machinery cost, and other cost come from Daily Site Reports.
+      Material cost comes from completed consumption and missing-stock movements.
+     </div>
+     <group>
+      <group string="Progress">
+       <field name="task_count" readonly="1"/>
+       <field name="completed_task_count" readonly="1"/>
+       <field name="manual_progress_percent" invisible="task_count != 0"/>
+       <field name="progress_percent" readonly="1" widget="percentage"/>
+       <field name="expected_cost_at_progress" readonly="1"/>
+      </group>
+      <group string="Actual Costs">
+       <field name="actual_material_cost" readonly="1"/>
+       <field name="actual_labor_hours" readonly="1"/>
+       <field name="actual_labor_cost" readonly="1"/>
+       <field name="actual_machinery_cost" readonly="1"/>
+       <field name="actual_other_cost" readonly="1"/>
+      </group>
+     </group>
+     <group string="Live Variance">
+      <field name="actual_cost" readonly="1"/>
+      <field name="cost_variance" readonly="1"/>
+      <field name="budget_consumed_percent" readonly="1" widget="percentage"/>
+      <field name="schedule_variance_percent" readonly="1" widget="percentage"/>
+     </group>
+     <div class="alert alert-warning" role="alert" invisible="budget_consumed_percent &lt;= progress_percent">
+      Cost consumption is ahead of recorded chantier progress. Review purchases, labour, and scope.
+     </div>
+    </page>
+   </xpath>
+  </field>
+ </record>
 <record id="view_chantier_estimation_workflow" model="ir.ui.view"><field name="name">chantier.estimation.workflow</field><field name="model">chantier.estimation</field><field name="inherit_id" ref="view_chantier_estimation_form"/><field name="arch" type="xml"><xpath expr="//form" position="inside"><header><button name="action_submit" type="object" string="Submit" invisible="state != 'draft'"/><button name="action_approve" type="object" string="Approve" groups="elmokrif_chantier.group_chantier_manager" invisible="state != 'submitted'"/><button name="action_new_revision" type="object" string="Create Revision" invisible="state != 'approved'"/><button name="action_approve_variance" type="object" string="Approve Variance" groups="elmokrif_chantier.group_chantier_manager" invisible="variance_approved_by_id"/><field name="state" widget="statusbar" statusbar_visible="draft,submitted,approved,superseded"/></header></xpath><xpath expr="//sheet" position="inside"><group invisible="not revision_of_id"><field name="revision_of_id" readonly="1"/><field name="approved_by_id" readonly="1"/><field name="approved_at" readonly="1"/><field name="variance_approved_by_id" readonly="1"/></group></xpath></field></record>
   <record id="view_chantier_estimation_workflow_flags" model="ir.ui.view"><field name="name">chantier.estimation.workflow.flags</field><field name="model">chantier.estimation</field><field name="inherit_id" ref="view_chantier_estimation_workflow"/><field name="arch" type="xml"><xpath expr="//sheet" position="inside"><field name="over_budget" invisible="1"/></xpath></field></record>
   <record id="view_chantier_estimation_form_usability" model="ir.ui.view">

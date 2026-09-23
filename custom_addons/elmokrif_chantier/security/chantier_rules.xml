@@ -63,9 +63,10 @@
         <field name="domain_force">[
             '|',
                 ('chantier_id', '=', False),
-                '|',
+                '|', '|',
                     ('chantier_id.user_id', '=', user.id),
-                    ('chantier_id.chantier_member_ids', 'in', [user.id])
+                    ('chantier_id.chantier_member_ids', 'in', [user.id]),
+                    ('chantier_id.sales_user_ids', 'in', [user.id])
         ]</field>
     </record>
 </odoo>

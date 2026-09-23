@@ -249,7 +249,7 @@ personas = [
         "Storekeeper",
         "uat.u5.storekeeper",
         [
-            "stock.group_stock_user",
+            "stock.group_stock_manager",
             "elmokrif_chantier.group_chantier_user",
         ],
         [company_a],

@@ -1,7 +1,7 @@
 {
     "name": "EL MOKRIF Chantier Estimation",
     "summary": "Construction quantities, resource costs, logistics, and phased cash flow",
-    "version": "17.0.1.1.4",
+    "version": "17.0.1.1.5",
     "category": "Construction",
     "author": "EL MOKRIF",
     "license": "LGPL-3",

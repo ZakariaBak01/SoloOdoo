@@ -832,6 +832,18 @@ class TestChantier(TransactionCase):
             ("id", "in", [accessible.id, restricted.id]),
         ])
         self.assertEqual(visible, accessible)
+        visible_analytic_accounts = self.env[
+            "account.analytic.account"
+        ].with_user(salesperson).search([
+            ("id", "in", [
+                accessible.analytic_account_id.id,
+                restricted.analytic_account_id.id,
+            ]),
+        ])
+        self.assertEqual(
+            visible_analytic_accounts,
+            accessible.analytic_account_id,
+        )
         with self.assertRaises(AccessError):
             accessible.with_user(salesperson).write({"name": "Forbidden commercial edit"})
 

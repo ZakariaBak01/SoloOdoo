@@ -1,4 +1,7 @@
-from odoo import api, fields, models
+import math
+
+from odoo import _, api, fields, models
+from odoo.exceptions import ValidationError
 
 
 class ChantierCostCode(models.Model):
@@ -36,6 +39,29 @@ class ChantierDailyReport(models.Model):
     note = fields.Text()
     attachment_ids = fields.Many2many("ir.attachment", "chantier_daily_report_attachment_rel", "report_id", "attachment_id", string="Photos and evidence")
     currency_id = fields.Many2one(related="company_id.currency_id", readonly=True)
+
+    @api.constrains(
+        "work_quantity",
+        "labor_hours",
+        "equipment_hours",
+        "equipment_cost",
+        "other_cost",
+    )
+    def _check_nonnegative_values(self):
+        labels = {
+            "work_quantity": _("Completed quantity"),
+            "labor_hours": _("Labour hours"),
+            "equipment_hours": _("Equipment hours"),
+            "equipment_cost": _("Equipment cost"),
+            "other_cost": _("Other cost"),
+        }
+        for report in self:
+            for field_name, label in labels.items():
+                value = report[field_name]
+                if not math.isfinite(value) or value < 0:
+                    raise ValidationError(
+                        _("%(field)s must be zero or greater.", field=label)
+                    )
 
 
 class ProjectProject(models.Model):

@@ -104,12 +104,23 @@ class ChantierEstimation(models.Model):
     foundation_cost = fields.Monetary(compute="_compute_costs", store=True)
     superstructure_cost = fields.Monetary(compute="_compute_costs", store=True)
     finishing_cost = fields.Monetary(compute="_compute_costs", store=True)
-    actual_labor_hours = fields.Float(string="Actual labour hours", tracking=True)
-    actual_machinery_cost = fields.Monetary(string="Actual machinery cost", tracking=True)
-    actual_other_cost = fields.Monetary(string="Actual other cost", tracking=True)
+    actual_labor_hours = fields.Float(
+        compute="_compute_live_control",
+        string="Actual labour hours",
+    )
+    actual_machinery_cost = fields.Monetary(
+        compute="_compute_live_control",
+        string="Actual machinery cost",
+    )
+    actual_other_cost = fields.Monetary(
+        compute="_compute_live_control",
+        string="Actual other cost",
+    )
     manual_progress_percent = fields.Float(string="Manual progress %", tracking=True)
     task_count = fields.Integer(compute="_compute_live_control")
     completed_task_count = fields.Integer(compute="_compute_live_control")
+    daily_report_count = fields.Integer(compute="_compute_live_control")
+    material_cost_move_count = fields.Integer(compute="_compute_live_control")
     progress_percent = fields.Float(compute="_compute_live_control", string="Live progress %")
     actual_material_cost = fields.Monetary(compute="_compute_live_control", string="Actual stock valuation")
     actual_labor_cost = fields.Monetary(compute="_compute_live_control")
@@ -152,22 +163,82 @@ class ChantierEstimation(models.Model):
             item.superstructure_cost = item.total_cost * item.superstructure_percent / 100
             item.finishing_cost = item.total_cost * item.finishing_percent / 100
 
-    @api.depends("chantier_id.material_cost", "chantier_id.task_ids.stage_id.fold", "actual_labor_hours", "labor_hourly_cost", "actual_machinery_cost", "actual_other_cost", "manual_progress_percent", "subtotal")
+    @api.depends(
+        "chantier_id",
+        "chantier_id.material_cost",
+        "chantier_id.task_ids.state",
+        "chantier_id.task_ids.stage_id.fold",
+        "chantier_id.daily_report_ids.labor_hours",
+        "chantier_id.daily_report_ids.equipment_cost",
+        "chantier_id.daily_report_ids.other_cost",
+        "labor_hourly_cost",
+        "manual_progress_percent",
+        "total_cost",
+    )
     def _compute_live_control(self):
+        Task = self.env["project.task"].sudo().with_context(active_test=False)
+        DailyReport = self.env["chantier.daily.report"].sudo()
+        StockMove = self.env["stock.move"].sudo()
         for item in self:
-            tasks = item.chantier_id.task_ids
+            tasks = Task.search([
+                ("project_id", "=", item.chantier_id.id),
+                ("state", "!=", "1_canceled"),
+            ])
+            completed_tasks = tasks.filtered(
+                lambda task: task.state == "1_done" or task.stage_id.fold
+            )
+            reports = DailyReport.search([
+                ("chantier_id", "=", item.chantier_id.id),
+            ])
+            material_moves = StockMove.search([
+                ("picking_id.chantier_id", "=", item.chantier_id.id),
+                ("picking_id.chantier_operation", "in", ("consumption", "missing")),
+                ("state", "=", "done"),
+            ])
             item.task_count = len(tasks)
-            item.completed_task_count = len(tasks.filtered(lambda task: task.stage_id.fold))
+            item.completed_task_count = len(completed_tasks)
             item.progress_percent = item.completed_task_count * 100 / item.task_count if item.task_count else item.manual_progress_percent
+            item.daily_report_count = len(reports)
+            item.material_cost_move_count = len(material_moves)
             item.actual_material_cost = item.chantier_id.material_cost
+            item.actual_labor_hours = sum(reports.mapped("labor_hours"))
             item.actual_labor_cost = item.actual_labor_hours * item.labor_hourly_cost
+            item.actual_machinery_cost = sum(reports.mapped("equipment_cost"))
+            item.actual_other_cost = sum(reports.mapped("other_cost"))
             item.actual_cost = item.actual_material_cost + item.actual_labor_cost + item.actual_machinery_cost + item.actual_other_cost
-            item.cost_variance = item.actual_cost - item.subtotal
-            item.budget_consumed_percent = item.actual_cost * 100 / item.subtotal if item.subtotal else 0
-            item.expected_cost_at_progress = item.subtotal * item.progress_percent / 100
+            item.cost_variance = item.actual_cost - item.total_cost
+            item.budget_consumed_percent = item.actual_cost * 100 / item.total_cost if item.total_cost else 0
+            item.expected_cost_at_progress = item.total_cost * item.progress_percent / 100
             item.schedule_variance_percent = item.budget_consumed_percent - item.progress_percent
             item.forecast_final_cost = item.actual_cost / item.progress_percent * 100 if item.progress_percent else item.actual_cost
             item.over_budget = item.forecast_final_cost > item.total_cost
+
+    def action_view_daily_reports(self):
+        self.ensure_one()
+        return {
+            "type": "ir.actions.act_window",
+            "name": _("Daily Site Reports"),
+            "res_model": "chantier.daily.report",
+            "view_mode": "tree,form",
+            "domain": [("chantier_id", "=", self.chantier_id.id)],
+            "context": {
+                "default_chantier_id": self.chantier_id.id,
+            },
+        }
+
+    def action_view_material_cost_moves(self):
+        self.ensure_one()
+        return {
+            "type": "ir.actions.act_window",
+            "name": _("Material Cost Moves"),
+            "res_model": "stock.move",
+            "view_mode": "tree,form",
+            "domain": [
+                ("picking_id.chantier_id", "=", self.chantier_id.id),
+                ("picking_id.chantier_operation", "in", ("consumption", "missing")),
+                ("state", "=", "done"),
+            ],
+        }
 
     def _is_manager(self):
         return self.env.su or self.env.user.has_group("elmokrif_chantier.group_chantier_manager")
