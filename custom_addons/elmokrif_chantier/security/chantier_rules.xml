@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--
+        These rules are deliberately global.  Odoo's native Project Manager
+        group has a local ``see all projects`` rule.  A local chantier rule
+        would be ORed with that rule and would not restrict managers.  Global
+        rules are ANDed with local rules, so this keeps the native rules for
+        ordinary projects while enforcing site assignment for chantiers.
+
+        A user is assigned to a chantier when they are its Chantier Manager or
+        one of its dedicated Chantier Team members. Project favorites remain a
+        personal UI preference and do not grant business-record access.
+    -->
+    <record id="rule_chantier_project_assignment" model="ir.rule">
+        <field name="name">Chantiers: assigned team or customer only</field>
+        <field name="model_id" ref="project.model_project_project"/>
+        <field name="domain_force">[
+            '|',
+                ('is_chantier', '=', False),
+                '|', '|', '|',
+                    ('user_id', '=', user.id),
+                    ('chantier_member_ids', 'in', [user.id]),
+                    ('sales_user_ids', 'in', [user.id]),
+                    ('partner_id', 'child_of', [user.partner_id.commercial_partner_id.id])
+        ]</field>
+    </record>
+
+    <!-- Keep chantier task access aligned with its parent chantier. -->
+    <record id="rule_chantier_task_assignment" model="ir.rule">
+        <field name="name">Chantier tasks: assigned team or customer only</field>
+        <field name="model_id" ref="project.model_project_task"/>
+        <field name="domain_force">[
+            '|',
+                ('project_id', '=', False),
+                '|',
+                    ('project_id.is_chantier', '=', False),
+                    '|', '|',
+                        ('project_id.user_id', '=', user.id),
+                        ('project_id.chantier_member_ids', 'in', [user.id]),
+                        ('project_id.partner_id', 'child_of', [user.partner_id.commercial_partner_id.id])
+        ]</field>
+    </record>
+
+    <!-- Do not expose a site stock location through direct location searches. -->
+    <record id="rule_chantier_site_location_assignment" model="ir.rule">
+        <field name="name">Chantier site locations: assigned manager or member only</field>
+        <field name="model_id" ref="stock.model_stock_location"/>
+        <field name="groups" eval="[(4, ref('elmokrif_chantier.group_chantier_user'))]"/>
+        <field name="domain_force">[
+            '|',
+                ('chantier_id', '=', False),
+                '|', '|',
+                    ('chantier_id.user_id', '=', user.id),
+                    ('chantier_id.chantier_member_ids', 'in', [user.id]),
+                    ('chantier_id.sales_user_ids', 'in', [user.id])
+        ]</field>
+    </record>
+
+    <!-- Apply the same boundary to the dedicated chantier analytic account. -->
+    <record id="rule_chantier_analytic_account_assignment" model="ir.rule">
+        <field name="name">Chantier analytic accounts: assigned users only</field>
+        <field name="model_id" ref="analytic.model_account_analytic_account"/>
+        <field name="domain_force">
+            [(1, '=', 1)] if (
+                user.has_group('account.group_account_user')
+                or user.has_group('account.group_account_manager')
+            ) else [
+                '|',
+                    ('chantier_id', '=', False),
+                    '|', '|',
+                        ('chantier_id.user_id', '=', user.id),
+                        ('chantier_id.chantier_member_ids', 'in', [user.id]),
+                        ('chantier_id.sales_user_ids', 'in', [user.id])
+            ]
+        </field>
+    </record>
+</odoo>

@@ -1,5 +1,7 @@
 from odoo import _, api, fields, models
-from odoo.exceptions import ValidationError
+from odoo.exceptions import UserError, ValidationError
+
+from .workflow import CHANTIER_INITIALIZATION_TOKEN
 
 
 class StockLocation(models.Model):
@@ -23,6 +25,28 @@ class StockLocation(models.Model):
             "A chantier can have only one site stock location.",
         ),
     ]
+
+    @api.model_create_multi
+    def create(self, vals_list):
+        if self.env.context.get("_chantier_initialization_token") is not CHANTIER_INITIALIZATION_TOKEN and (
+            self.env.context.get("default_chantier_id")
+            or any(values.get("chantier_id") for values in vals_list)
+        ):
+            raise UserError(
+                _("Use Initialize Chantier to create and link a site location.")
+            )
+        return super().create(vals_list)
+
+    def write(self, vals):
+        if (
+            "chantier_id" in vals
+            and self.env.context.get("_chantier_initialization_token") is not CHANTIER_INITIALIZATION_TOKEN
+            and any(location.chantier_id.id != vals["chantier_id"] for location in self)
+        ):
+            raise UserError(
+                _("Use Initialize Chantier to change a site-location link.")
+            )
+        return super().write(vals)
 
     @api.constrains("chantier_id", "usage", "company_id")
     def _check_chantier_location(self):

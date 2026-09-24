@@ -1,0 +1,39 @@
+[16:38:0908/135306.459476:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory
+[16:38:0908/135306.506659:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[16:38:0908/135306.506877:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory
+[16:38:0908/135306.510793:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory
+[16:38:0908/135306.510829:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[54:54:0908/135306.622551:WARNING:media/gpu/vaapi/vaapi_wrapper.cc:1660] drmGetDevices2() has not found any devices
+[54:54:0908/135306.660707:WARNING:sandbox/policy/linux/sandbox_linux.cc:405] InitializeSandbox() called with multiple threads in process gpu-process.
+[16:38:0908/135307.300623:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[16:16:0908/135307.307745:INFO:components/enterprise/browser/controller/chrome_browser_cloud_management_controller.cc:241] No machine level policy manager exists.
+[16:38:0908/135307.357918:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[16:16:0908/135307.743098:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[16:38:0908/135307.743287:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[16:16:0908/135307.747713:WARNING:device/bluetooth/dbus/bluez_dbus_manager.cc:209] Floss manager service not available, cannot set Floss enable/disable.
+[16:16:0908/135307.747787:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[16:38:0908/135307.747908:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[16:16:0908/135307.753160:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[16:16:0908/135307.759510:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[16:38:0908/135307.841449:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory
+[16:16:0908/135307.841438:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[16:38:0908/135307.843333:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory
+[16:16:0908/135307.843819:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[16:38:0908/135307.843890:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[16:16:0908/135307.908908:WARNING:dbus/property.cc:94] Failed to connect to PropertiesChangedsignal.
+[16:16:0908/135307.909436:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.Properties.GetAll: object_path= /org/freedesktop/UPower/devices/DisplayDevice: unknown error type: 
+[16:16:0908/135307.909496:WARNING:dbus/property.cc:174] GetAll request failed for: org.freedesktop.UPower.Device
+[16:16:0908/135307.910119:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[16:38:0908/135307.910316:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[16:16:0908/135307.934023:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[16:38:0908/135307.934343:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[16:16:0908/135307.970609:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[16:16:0908/135307.970643:WARNING:ui/base/idle/idle_linux.cc:111] None of the known D-Bus ScreenSaver services could be used.
+[16:16:0908/135310.807175:INFO:CONSOLE:11059] "Tour elmokrif_sale_chantier_send on step: 'The salesperson can see the quotation's header chantier (trigger: .o_form_view:contains("Browser Site A"))'", source: http://127.0.0.1:8069/web/assets/9066c9a/web.assets_web.min.js (11059)
+[16:16:0908/135310.821671:INFO:CONSOLE:11059] "Tour elmokrif_sale_chantier_send on step: 'The first quotation line is allocated to Site A (trigger: .o_field_one2many[name="order_line"] .o_data_row td[name="chantier_id"]:contains("Browser Site A"))'", source: http://127.0.0.1:8069/web/assets/9066c9a/web.assets_web.min.js (11059)
+[16:16:0908/135310.853004:INFO:CONSOLE:11059] "Tour elmokrif_sale_chantier_send on step: 'The second quotation line is allocated to Site B (trigger: .o_field_one2many[name="order_line"] .o_data_row td[name="chantier_id"]:contains("Browser Site B"))'", source: http://127.0.0.1:8069/web/assets/9066c9a/web.assets_web.min.js (11059)
+[16:16:0908/135310.913632:INFO:CONSOLE:11059] "Tour elmokrif_sale_chantier_send on step: 'Open the quotation email composer (trigger: .o_statusbar_buttons button[name="action_quotation_send"])'", source: http://127.0.0.1:8069/web/assets/9066c9a/web.assets_web.min.js (11059)
+[16:16:0908/135310.960146:INFO:CONSOLE:11059] "Tour elmokrif_sale_chantier_send on step: 'Send the quotation from the composer (trigger: .modal-footer button[name="action_send_mail"])'", source: http://127.0.0.1:8069/web/assets/9066c9a/web.assets_web.min.js (11059)
+[16:16:0908/135312.585579:INFO:CONSOLE:11059] "Tour elmokrif_sale_chantier_send on step: 'The quotation is now sent (trigger: .o_statusbar_buttons > button[name="action_confirm"]:first-child)'", source: http://127.0.0.1:8069/web/assets/9066c9a/web.assets_web.min.js (11059)
+[16:16:0908/135313.787694:INFO:CONSOLE:11064] "Tour %s: ignoring action (auto) of last step elmokrif_sale_chantier_send", source: http://127.0.0.1:8069/web/assets/9066c9a/web.assets_web.min.js (11064)
+[16:16:0908/135313.788834:INFO:CONSOLE:11102] "test successful", source: http://127.0.0.1:8069/web/assets/9066c9a/web.assets_web.min.js (11102)

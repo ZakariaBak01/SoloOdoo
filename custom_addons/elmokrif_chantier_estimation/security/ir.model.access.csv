@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_chantier_estimation_user,chantier.estimation user,model_chantier_estimation,elmokrif_chantier.group_chantier_user,1,1,1,0
+access_chantier_estimation_manager,chantier.estimation manager,model_chantier_estimation,elmokrif_chantier.group_chantier_manager,1,1,1,1
+access_chantier_cost_code_user,chantier.cost.code user,model_chantier_cost_code,elmokrif_chantier.group_chantier_user,1,0,0,0
+access_chantier_cost_code_manager,chantier.cost.code manager,model_chantier_cost_code,elmokrif_chantier.group_chantier_manager,1,1,1,1
+access_chantier_daily_report_user,chantier.daily.report user,model_chantier_daily_report,elmokrif_chantier.group_chantier_user,1,1,1,0
+access_chantier_daily_report_manager,chantier.daily.report manager,model_chantier_daily_report,elmokrif_chantier.group_chantier_manager,1,1,1,1

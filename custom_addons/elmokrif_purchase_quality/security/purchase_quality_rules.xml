@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="rule_chantier_quality_inspection_company" model="ir.rule">
+        <field name="name">Quality inspections: allowed companies</field>
+        <field name="model_id" ref="model_chantier_quality_inspection"/>
+        <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+        <field name="groups" eval="[(4, ref('elmokrif_chantier.group_chantier_user')), (4, ref('stock.group_stock_user'))]"/>
+    </record>
+    <record id="rule_chantier_quality_line_company" model="ir.rule">
+        <field name="name">Quality inspection lines: allowed companies</field>
+        <field name="model_id" ref="model_chantier_quality_inspection_line"/>
+        <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+        <field name="groups" eval="[(4, ref('elmokrif_chantier.group_chantier_user')), (4, ref('stock.group_stock_user'))]"/>
+    </record>
+</odoo>
+

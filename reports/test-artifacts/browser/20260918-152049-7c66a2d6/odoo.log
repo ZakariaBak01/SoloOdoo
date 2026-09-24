@@ -1,0 +1,1191 @@
+﻿2026-09-18 14:20:59,171 1 INFO ? odoo: Odoo version 17.0-20260817 
+2026-09-18 14:20:59,171 1 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2026-09-18 14:20:59,171 1 INFO ? odoo: addons paths: ['/usr/lib/python3/dist-packages/odoo/addons', '/var/lib/odoo/addons/17.0', '/mnt/extra-addons', '/opt/elmokrif-addons'] 
+2026-09-18 14:20:59,171 1 INFO ? odoo: database: odoo_test@test-db:5432 
+2026-09-18 14:20:59,635 1 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/local/bin/wkhtmltopdf 
+2026-09-18 14:21:00,248 1 INFO ? odoo.service.server: HTTP service (werkzeug) running on 018fb6130139:8069 
+2026-09-18 14:21:00,265 1 INFO soloodoo_uattest odoo.modules.loading: init db 
+2026-09-18 14:21:03,246 1 INFO soloodoo_uattest odoo.modules.loading: loading 1 modules... 
+2026-09-18 14:21:03,246 1 INFO soloodoo_uattest odoo.modules.loading: Loading module base (1/1) 
+2026-09-18 14:21:03,279 1 INFO soloodoo_uattest odoo.modules.registry: module base: creating or updating database tables 
+2026-09-18 14:21:03,870 1 INFO soloodoo_uattest odoo.models: Prepare computation of ir.module.module.menus_by_module 
+2026-09-18 14:21:03,871 1 INFO soloodoo_uattest odoo.models: Prepare computation of ir.module.module.reports_by_module 
+2026-09-18 14:21:03,871 1 INFO soloodoo_uattest odoo.models: Prepare computation of ir.module.module.views_by_module 
+2026-09-18 14:21:04,013 1 INFO soloodoo_uattest odoo.models: Prepare computation of res.partner.user_id 
+2026-09-18 14:21:04,013 1 INFO soloodoo_uattest odoo.models: Prepare computation of res.partner.commercial_partner_id 
+2026-09-18 14:21:04,013 1 INFO soloodoo_uattest odoo.models: Prepare computation of res.partner.complete_name 
+2026-09-18 14:21:04,013 1 INFO soloodoo_uattest odoo.models: Prepare computation of res.partner.company_registry 
+2026-09-18 14:21:04,013 1 INFO soloodoo_uattest odoo.models: Prepare computation of res.partner.commercial_company_name 
+2026-09-18 14:21:04,013 1 INFO soloodoo_uattest odoo.models: Prepare computation of res.partner.partner_share 
+2026-09-18 14:21:04,063 1 INFO soloodoo_uattest odoo.models: Prepare computation of res.currency.decimal_places 
+2026-09-18 14:21:04,100 1 INFO soloodoo_uattest odoo.models: Prepare computation of res.company.uses_default_logo 
+2026-09-18 14:21:04,100 1 INFO soloodoo_uattest odoo.models: Prepare computation of res.company.logo_web 
+2026-09-18 14:21:04,104 1 INFO soloodoo_uattest odoo.models: Computing parent_path for table res_company... 
+2026-09-18 14:21:04,138 1 INFO soloodoo_uattest odoo.models: Prepare computation of res.users.signature 
+2026-09-18 14:21:04,138 1 INFO soloodoo_uattest odoo.models: Prepare computation of res.users.share 
+2026-09-18 14:21:06,592 1 INFO soloodoo_uattest odoo.modules.loading: loading base/data/res_bank.xml 
+2026-09-18 14:21:06,605 1 INFO soloodoo_uattest odoo.modules.loading: loading base/data/res.lang.csv 
+2026-09-18 14:21:06,643 1 INFO soloodoo_uattest odoo.modules.loading: loading base/data/res_lang_data.xml 
+2026-09-18 14:21:06,682 1 INFO soloodoo_uattest odoo.modules.loading: loading base/data/res_partner_data.xml 
+2026-09-18 14:21:06,779 1 INFO soloodoo_uattest odoo.modules.loading: loading base/data/res_currency_data.xml 
+2026-09-18 14:21:07,328 1 INFO soloodoo_uattest odoo.modules.loading: loading base/data/res_company_data.xml 
+2026-09-18 14:21:07,341 1 INFO soloodoo_uattest odoo.modules.loading: loading base/data/res_users_data.xml 
+2026-09-18 14:21:08,214 1 INFO soloodoo_uattest odoo.modules.loading: loading base/data/report_paperformat_data.xml 
+2026-09-18 14:21:08,223 1 INFO soloodoo_uattest odoo.modules.loading: loading base/data/res_country_data.xml 
+2026-09-18 14:21:08,676 1 INFO soloodoo_uattest odoo.modules.loading: loading base/data/ir_demo_data.xml 
+2026-09-18 14:21:08,691 1 INFO soloodoo_uattest odoo.modules.loading: loading base/security/base_groups.xml 
+2026-09-18 14:21:09,250 1 INFO soloodoo_uattest odoo.modules.loading: loading base/security/base_security.xml 
+2026-09-18 14:21:09,416 1 INFO soloodoo_uattest odoo.modules.loading: loading base/views/base_menus.xml 
+2026-09-18 14:21:09,497 1 INFO soloodoo_uattest odoo.modules.loading: loading base/views/decimal_precision_views.xml 
+2026-09-18 14:21:09,518 1 INFO soloodoo_uattest odoo.modules.loading: loading base/views/res_config_views.xml 
+2026-09-18 14:21:09,528 1 INFO soloodoo_uattest odoo.modules.loading: loading base/data/res.country.state.csv 
+2026-09-18 14:21:09,955 1 INFO soloodoo_uattest odoo.modules.loading: loading base/views/ir_actions_views.xml 
+2026-09-18 14:21:10,126 1 INFO soloodoo_uattest odoo.modules.loading: loading base/views/ir_asset_views.xml 
+2026-09-18 14:21:10,154 1 INFO soloodoo_uattest odoo.modules.loading: loading base/views/ir_config_parameter_views.xml 
+2026-09-18 14:21:10,181 1 INFO soloodoo_uattest odoo.modules.loading: loading base/views/ir_cron_views.xml 
+2026-09-18 14:21:10,222 1 INFO soloodoo_uattest odoo.modules.loading: loading base/views/ir_cron_trigger_views.xml 
+2026-09-18 14:21:10,240 1 INFO soloodoo_uattest odoo.modules.loading: loading base/views/ir_filters_views.xml 
+2026-09-18 14:21:10,268 1 INFO soloodoo_uattest odoo.modules.loading: loading base/views/ir_mail_server_views.xml 
+2026-09-18 14:21:10,290 1 INFO soloodoo_uattest odoo.modules.loading: loading base/views/ir_model_views.xml 
+2026-09-18 14:21:10,438 1 INFO soloodoo_uattest odoo.modules.loading: loading base/views/ir_attachment_views.xml 
+2026-09-18 14:21:10,460 1 INFO soloodoo_uattest odoo.modules.loading: loading base/views/ir_rule_views.xml 
+2026-09-18 14:21:10,488 1 INFO soloodoo_uattest odoo.modules.loading: loading base/views/ir_sequence_views.xml 
+2026-09-18 14:21:10,508 1 INFO soloodoo_uattest odoo.modules.loading: loading base/views/ir_ui_menu_views.xml 
+2026-09-18 14:21:10,538 1 INFO soloodoo_uattest odoo.modules.loading: loading base/views/ir_ui_view_views.xml 
+2026-09-18 14:21:10,584 1 INFO soloodoo_uattest odoo.modules.loading: loading base/views/ir_default_views.xml 
+2026-09-18 14:21:10,601 1 INFO soloodoo_uattest odoo.modules.loading: loading base/data/ir_cron_data.xml 
+2026-09-18 14:21:10,611 1 INFO soloodoo_uattest odoo.modules.loading: loading base/report/ir_model_report.xml 
+2026-09-18 14:21:10,617 1 INFO soloodoo_uattest odoo.modules.loading: loading base/report/ir_model_templates.xml 
+2026-09-18 14:21:10,626 1 INFO soloodoo_uattest odoo.modules.loading: loading base/views/ir_logging_views.xml 
+2026-09-18 14:21:10,644 1 INFO soloodoo_uattest odoo.modules.loading: loading base/views/ir_qweb_widget_templates.xml 
+2026-09-18 14:21:10,658 1 INFO soloodoo_uattest odoo.modules.loading: loading base/views/ir_module_views.xml 
+2026-09-18 14:21:10,706 1 INFO soloodoo_uattest odoo.modules.loading: loading base/data/ir_module_category_data.xml 
+2026-09-18 14:21:10,778 1 INFO soloodoo_uattest odoo.modules.loading: loading base/data/ir_module_module.xml 
+2026-09-18 14:21:10,846 1 INFO soloodoo_uattest odoo.modules.loading: loading base/report/ir_module_reports.xml 
+2026-09-18 14:21:10,851 1 INFO soloodoo_uattest odoo.modules.loading: loading base/report/ir_module_report_templates.xml 
+2026-09-18 14:21:10,857 1 INFO soloodoo_uattest odoo.modules.loading: loading base/wizard/base_module_update_views.xml 
+2026-09-18 14:21:10,868 1 INFO soloodoo_uattest odoo.modules.loading: loading base/wizard/base_language_install_views.xml 
+2026-09-18 14:21:10,881 1 INFO soloodoo_uattest odoo.modules.loading: loading base/wizard/base_import_language_views.xml 
+2026-09-18 14:21:10,894 1 INFO soloodoo_uattest odoo.modules.loading: loading base/wizard/base_module_upgrade_views.xml 
+2026-09-18 14:21:10,911 1 INFO soloodoo_uattest odoo.modules.loading: loading base/wizard/base_module_uninstall_views.xml 
+2026-09-18 14:21:10,919 1 INFO soloodoo_uattest odoo.modules.loading: loading base/wizard/base_export_language_views.xml 
+2026-09-18 14:21:10,932 1 INFO soloodoo_uattest odoo.modules.loading: loading base/wizard/base_partner_merge_views.xml 
+2026-09-18 14:21:10,946 1 INFO soloodoo_uattest odoo.modules.loading: loading base/data/ir_demo_failure_data.xml 
+2026-09-18 14:21:10,959 1 INFO soloodoo_uattest odoo.modules.loading: loading base/views/ir_profile_views.xml 
+2026-09-18 14:21:10,983 1 INFO soloodoo_uattest odoo.modules.loading: loading base/views/res_company_views.xml 
+2026-09-18 14:21:11,005 1 INFO soloodoo_uattest odoo.modules.loading: loading base/views/res_lang_views.xml 
+2026-09-18 14:21:11,029 1 INFO soloodoo_uattest odoo.modules.loading: loading base/views/res_partner_views.xml 
+2026-09-18 14:21:11,143 1 INFO soloodoo_uattest odoo.modules.loading: loading base/views/res_bank_views.xml 
+2026-09-18 14:21:11,177 1 INFO soloodoo_uattest odoo.modules.loading: loading base/views/res_country_views.xml 
+2026-09-18 14:21:11,225 1 INFO soloodoo_uattest odoo.modules.loading: loading base/views/res_currency_views.xml 
+2026-09-18 14:21:11,264 1 INFO soloodoo_uattest odoo.modules.loading: loading base/views/res_users_views.xml 
+2026-09-18 14:21:11,375 1 INFO soloodoo_uattest odoo.modules.loading: loading base/views/res_users_identitycheck_views.xml 
+2026-09-18 14:21:11,387 1 INFO soloodoo_uattest odoo.modules.loading: loading base/views/ir_property_views.xml 
+2026-09-18 14:21:11,409 1 INFO soloodoo_uattest odoo.modules.loading: loading base/views/res_config_settings_views.xml 
+2026-09-18 14:21:11,417 1 INFO soloodoo_uattest odoo.modules.loading: loading base/views/report_paperformat_views.xml 
+2026-09-18 14:21:11,447 1 INFO soloodoo_uattest odoo.modules.loading: loading base/security/ir.model.access.csv 
+2026-09-18 14:21:11,755 1 INFO soloodoo_uattest odoo.modules.loading: Module base loaded in 8.51s, 7944 queries (+7944 other) 
+2026-09-18 14:21:11,755 1 INFO soloodoo_uattest odoo.modules.loading: 1 modules loaded in 8.51s, 7944 queries (+7944 extra) 
+2026-09-18 14:21:11,768 1 INFO soloodoo_uattest odoo.modules.loading: updating modules list 
+2026-09-18 14:21:11,769 1 INFO soloodoo_uattest odoo.addons.base.models.ir_module: ALLOW access to module.update_list on [] to user __system__ #1 via n/a 
+2026-09-18 14:21:12,611 1 INFO soloodoo_uattest odoo.addons.base.models.ir_module: ALLOW access to module.button_install on ['EL MOKRIF Browser Acceptance Tests'] to user __system__ #1 via n/a 
+2026-09-18 14:21:12,859 1 INFO soloodoo_uattest odoo.modules.loading: loading 71 modules... 
+2026-09-18 14:21:12,860 1 INFO soloodoo_uattest odoo.modules.loading: Loading module uom (2/71) 
+2026-09-18 14:21:12,881 1 INFO soloodoo_uattest odoo.modules.registry: module uom: creating or updating database tables 
+2026-09-18 14:21:12,977 1 INFO soloodoo_uattest odoo.modules.loading: loading uom/data/uom_data.xml 
+2026-09-18 14:21:13,062 1 INFO soloodoo_uattest odoo.modules.loading: loading uom/security/uom_security.xml 
+2026-09-18 14:21:13,079 1 INFO soloodoo_uattest odoo.modules.loading: loading uom/security/ir.model.access.csv 
+2026-09-18 14:21:13,091 1 INFO soloodoo_uattest odoo.modules.loading: loading uom/views/uom_uom_views.xml 
+2026-09-18 14:21:13,137 1 INFO soloodoo_uattest odoo.modules.loading: Module uom loaded in 0.28s, 287 queries (+287 other) 
+2026-09-18 14:21:13,138 1 INFO soloodoo_uattest odoo.modules.loading: Loading module web (3/71) 
+2026-09-18 14:21:13,156 1 INFO soloodoo_uattest odoo.modules.registry: module web: creating or updating database tables 
+2026-09-18 14:21:13,697 1 INFO soloodoo_uattest odoo.modules.loading: loading web/security/ir.model.access.csv 
+2026-09-18 14:21:13,708 1 INFO soloodoo_uattest odoo.modules.loading: loading web/views/webclient_templates.xml 
+2026-09-18 14:21:13,764 1 INFO soloodoo_uattest odoo.modules.loading: loading web/views/report_templates.xml 
+2026-09-18 14:21:13,842 1 INFO soloodoo_uattest odoo.modules.loading: loading web/views/base_document_layout_views.xml 
+2026-09-18 14:21:13,853 1 INFO soloodoo_uattest odoo.modules.loading: loading web/views/partner_view.xml 
+2026-09-18 14:21:13,860 1 INFO soloodoo_uattest odoo.modules.loading: loading web/views/speedscope_template.xml 
+2026-09-18 14:21:13,866 1 INFO soloodoo_uattest odoo.modules.loading: loading web/views/neutralize_views.xml 
+2026-09-18 14:21:13,872 1 INFO soloodoo_uattest odoo.modules.loading: loading web/data/ir_attachment.xml 
+2026-09-18 14:21:13,878 1 INFO soloodoo_uattest odoo.modules.loading: loading web/data/report_layout.xml 
+2026-09-18 14:21:14,147 1 INFO soloodoo_uattest odoo.modules.loading: Module web loaded in 1.01s, 1018 queries (+1018 other) 
+2026-09-18 14:21:14,147 1 INFO soloodoo_uattest odoo.modules.loading: Loading module auth_totp (4/71) 
+2026-09-18 14:21:14,183 1 INFO soloodoo_uattest odoo.modules.registry: module auth_totp: creating or updating database tables 
+2026-09-18 14:21:14,239 1 INFO soloodoo_uattest odoo.modules.loading: loading auth_totp/security/security.xml 
+2026-09-18 14:21:14,268 1 INFO soloodoo_uattest odoo.modules.loading: loading auth_totp/security/ir.model.access.csv 
+2026-09-18 14:21:14,277 1 INFO soloodoo_uattest odoo.modules.loading: loading auth_totp/data/ir_action_data.xml 
+2026-09-18 14:21:14,285 1 INFO soloodoo_uattest odoo.modules.loading: loading auth_totp/views/res_users_views.xml 
+2026-09-18 14:21:14,310 1 INFO soloodoo_uattest odoo.modules.loading: loading auth_totp/views/templates.xml 
+2026-09-18 14:21:14,317 1 INFO soloodoo_uattest odoo.modules.loading: loading auth_totp/wizard/auth_totp_wizard_views.xml 
+2026-09-18 14:21:14,346 1 INFO soloodoo_uattest odoo.modules.loading: Module auth_totp loaded in 0.20s, 179 queries (+179 other) 
+2026-09-18 14:21:14,346 1 INFO soloodoo_uattest odoo.modules.loading: Loading module barcodes (5/71) 
+2026-09-18 14:21:14,367 1 INFO soloodoo_uattest odoo.modules.registry: module barcodes: creating or updating database tables 
+2026-09-18 14:21:14,436 1 INFO soloodoo_uattest odoo.modules.loading: loading barcodes/data/barcodes_data.xml 
+2026-09-18 14:21:14,443 1 INFO soloodoo_uattest odoo.modules.loading: loading barcodes/views/barcodes_view.xml 
+2026-09-18 14:21:14,463 1 INFO soloodoo_uattest odoo.modules.loading: loading barcodes/security/ir.model.access.csv 
+2026-09-18 14:21:14,490 1 INFO soloodoo_uattest odoo.modules.loading: Module barcodes loaded in 0.14s, 135 queries (+135 other) 
+2026-09-18 14:21:14,491 1 INFO soloodoo_uattest odoo.modules.loading: Loading module base_import (6/71) 
+2026-09-18 14:21:14,538 1 INFO soloodoo_uattest odoo.modules.registry: module base_import: creating or updating database tables 
+2026-09-18 14:21:14,984 1 INFO soloodoo_uattest odoo.modules.loading: loading base_import/security/ir.model.access.csv 
+2026-09-18 14:21:15,003 1 INFO soloodoo_uattest odoo.modules.loading: Module base_import loaded in 0.51s, 843 queries (+843 other) 
+2026-09-18 14:21:15,003 1 INFO soloodoo_uattest odoo.modules.loading: Loading module base_import_module (7/71) 
+2026-09-18 14:21:15,024 1 INFO soloodoo_uattest odoo.modules.registry: module base_import_module: creating or updating database tables 
+2026-09-18 14:21:15,087 1 INFO soloodoo_uattest odoo.modules.loading: loading base_import_module/security/ir.model.access.csv 
+2026-09-18 14:21:15,096 1 INFO soloodoo_uattest odoo.modules.loading: loading base_import_module/views/base_import_module_view.xml 
+2026-09-18 14:21:15,112 1 INFO soloodoo_uattest odoo.modules.loading: loading base_import_module/views/ir_module_views.xml 
+2026-09-18 14:21:15,158 1 INFO soloodoo_uattest odoo.modules.loading: Module base_import_module loaded in 0.15s, 154 queries (+154 other) 
+2026-09-18 14:21:15,158 1 INFO soloodoo_uattest odoo.modules.loading: Loading module base_setup (8/71) 
+2026-09-18 14:21:15,179 1 INFO soloodoo_uattest odoo.modules.registry: module base_setup: creating or updating database tables 
+2026-09-18 14:21:15,227 1 INFO soloodoo_uattest odoo.modules.loading: loading base_setup/data/base_setup_data.xml 
+2026-09-18 14:21:15,233 1 INFO soloodoo_uattest odoo.modules.loading: loading base_setup/views/res_config_settings_views.xml 
+2026-09-18 14:21:15,261 1 INFO soloodoo_uattest odoo.modules.loading: loading base_setup/views/res_partner_views.xml 
+2026-09-18 14:21:15,288 1 INFO soloodoo_uattest odoo.modules.loading: Module base_setup loaded in 0.13s, 143 queries (+143 other) 
+2026-09-18 14:21:15,288 1 INFO soloodoo_uattest odoo.modules.loading: Loading module bus (9/71) 
+2026-09-18 14:21:15,302 1 INFO soloodoo_uattest odoo.modules.registry: module bus: creating or updating database tables 
+2026-09-18 14:21:15,420 1 INFO soloodoo_uattest odoo.modules.loading: loading bus/security/ir.model.access.csv 
+2026-09-18 14:21:15,452 1 INFO soloodoo_uattest odoo.modules.loading: Module bus loaded in 0.16s, 119 queries (+119 other) 
+2026-09-18 14:21:15,452 1 INFO soloodoo_uattest odoo.modules.loading: Loading module http_routing (10/71) 
+2026-09-18 14:21:15,464 1 INFO soloodoo_uattest odoo.modules.registry: module http_routing: creating or updating database tables 
+2026-09-18 14:21:15,473 1 INFO soloodoo_uattest odoo.modules.loading: loading http_routing/views/http_routing_template.xml 
+2026-09-18 14:21:15,505 1 INFO soloodoo_uattest odoo.modules.loading: loading http_routing/views/res_lang_views.xml 
+2026-09-18 14:21:15,527 1 INFO soloodoo_uattest odoo.modules.loading: Module http_routing loaded in 0.07s, 71 queries (+71 other) 
+2026-09-18 14:21:15,527 1 INFO soloodoo_uattest odoo.modules.loading: Loading module onboarding (11/71) 
+2026-09-18 14:21:15,550 1 INFO soloodoo_uattest odoo.modules.registry: module onboarding: creating or updating database tables 
+2026-09-18 14:21:15,671 1 INFO soloodoo_uattest odoo.modules.loading: loading onboarding/views/onboarding_templates.xml 
+2026-09-18 14:21:15,686 1 INFO soloodoo_uattest odoo.modules.loading: loading onboarding/views/onboarding_views.xml 
+2026-09-18 14:21:15,712 1 INFO soloodoo_uattest odoo.modules.loading: loading onboarding/views/onboarding_menus.xml 
+2026-09-18 14:21:15,723 1 INFO soloodoo_uattest odoo.modules.loading: loading onboarding/security/ir.model.access.csv 
+2026-09-18 14:21:15,791 1 INFO soloodoo_uattest odoo.modules.loading: Module onboarding loaded in 0.26s, 237 queries (+237 other) 
+2026-09-18 14:21:15,791 1 INFO soloodoo_uattest odoo.modules.loading: Loading module resource (12/71) 
+2026-09-18 14:21:15,831 1 INFO soloodoo_uattest odoo.modules.registry: module resource: creating or updating database tables 
+2026-09-18 14:21:15,970 1 INFO soloodoo_uattest odoo.modules.loading: loading resource/data/resource_data.xml 
+2026-09-18 14:21:15,992 1 INFO soloodoo_uattest odoo.modules.loading: loading resource/security/ir.model.access.csv 
+2026-09-18 14:21:16,004 1 INFO soloodoo_uattest odoo.modules.loading: loading resource/security/resource_security.xml 
+2026-09-18 14:21:16,030 1 INFO soloodoo_uattest odoo.modules.loading: loading resource/views/resource_resource_views.xml 
+2026-09-18 14:21:16,053 1 INFO soloodoo_uattest odoo.modules.loading: loading resource/views/resource_calendar_leaves_views.xml 
+2026-09-18 14:21:16,081 1 INFO soloodoo_uattest odoo.modules.loading: loading resource/views/resource_calendar_attendance_views.xml 
+2026-09-18 14:21:16,092 1 INFO soloodoo_uattest odoo.modules.loading: loading resource/views/resource_calendar_views.xml 
+2026-09-18 14:21:16,112 1 INFO soloodoo_uattest odoo.modules.loading: loading resource/views/menuitems.xml 
+2026-09-18 14:21:16,147 1 INFO soloodoo_uattest odoo.modules.loading: Module resource loaded in 0.36s, 407 queries (+407 other) 
+2026-09-18 14:21:16,148 1 INFO soloodoo_uattest odoo.modules.loading: Loading module utm (13/71) 
+2026-09-18 14:21:16,170 1 INFO soloodoo_uattest odoo.modules.registry: module utm: creating or updating database tables 
+2026-09-18 14:21:16,290 1 INFO soloodoo_uattest odoo.modules.loading: loading utm/data/utm_medium_data.xml 
+2026-09-18 14:21:16,321 1 INFO soloodoo_uattest odoo.modules.loading: loading utm/data/utm_source_data.xml 
+2026-09-18 14:21:16,346 1 INFO soloodoo_uattest odoo.modules.loading: loading utm/data/utm_stage_data.xml 
+2026-09-18 14:21:16,351 1 INFO soloodoo_uattest odoo.modules.loading: loading utm/data/utm_tag_data.xml 
+2026-09-18 14:21:16,356 1 INFO soloodoo_uattest odoo.modules.loading: loading utm/views/utm_campaign_views.xml 
+2026-09-18 14:21:16,383 1 INFO soloodoo_uattest odoo.modules.loading: loading utm/views/utm_medium_views.xml 
+2026-09-18 14:21:16,399 1 INFO soloodoo_uattest odoo.modules.loading: loading utm/views/utm_source_views.xml 
+2026-09-18 14:21:16,412 1 INFO soloodoo_uattest odoo.modules.loading: loading utm/views/utm_stage_views.xml 
+2026-09-18 14:21:16,427 1 INFO soloodoo_uattest odoo.modules.loading: loading utm/views/utm_tag_views.xml 
+2026-09-18 14:21:16,437 1 INFO soloodoo_uattest odoo.modules.loading: loading utm/views/utm_menus.xml 
+2026-09-18 14:21:16,466 1 INFO soloodoo_uattest odoo.modules.loading: loading utm/security/ir.model.access.csv 
+2026-09-18 14:21:16,499 1 INFO soloodoo_uattest odoo.modules.loading: Module utm loaded in 0.35s, 405 queries (+405 other) 
+2026-09-18 14:21:16,499 1 INFO soloodoo_uattest odoo.modules.loading: Loading module web_tour (14/71) 
+2026-09-18 14:21:16,521 1 INFO soloodoo_uattest odoo.modules.registry: module web_tour: creating or updating database tables 
+2026-09-18 14:21:16,550 1 INFO soloodoo_uattest odoo.modules.loading: loading web_tour/security/ir.model.access.csv 
+2026-09-18 14:21:16,561 1 INFO soloodoo_uattest odoo.modules.loading: loading web_tour/security/ir.rule.csv 
+2026-09-18 14:21:16,572 1 INFO soloodoo_uattest odoo.modules.loading: loading web_tour/views/tour_views.xml 
+2026-09-18 14:21:16,606 1 INFO soloodoo_uattest odoo.modules.loading: Module web_tour loaded in 0.11s, 104 queries (+104 other) 
+2026-09-18 14:21:16,606 1 INFO soloodoo_uattest odoo.modules.loading: Loading module barcodes_gs1_nomenclature (15/71) 
+2026-09-18 14:21:16,627 1 INFO soloodoo_uattest odoo.modules.registry: module barcodes_gs1_nomenclature: creating or updating database tables 
+2026-09-18 14:21:16,660 1 INFO soloodoo_uattest odoo.modules.loading: loading barcodes_gs1_nomenclature/data/barcodes_gs1_rules.xml 
+2026-09-18 14:21:16,725 1 INFO soloodoo_uattest odoo.modules.loading: loading barcodes_gs1_nomenclature/views/barcodes_view.xml 
+2026-09-18 14:21:16,756 1 INFO soloodoo_uattest odoo.modules.loading: Module barcodes_gs1_nomenclature loaded in 0.15s, 189 queries (+189 other) 
+2026-09-18 14:21:16,756 1 INFO soloodoo_uattest odoo.modules.loading: Loading module iap (16/71) 
+2026-09-18 14:21:16,776 1 INFO soloodoo_uattest odoo.modules.registry: module iap: creating or updating database tables 
+2026-09-18 14:21:16,837 1 INFO soloodoo_uattest odoo.modules.loading: loading iap/security/ir.model.access.csv 
+2026-09-18 14:21:16,847 1 INFO soloodoo_uattest odoo.modules.loading: loading iap/security/ir_rule.xml 
+2026-09-18 14:21:16,855 1 INFO soloodoo_uattest odoo.modules.loading: loading iap/views/iap_views.xml 
+2026-09-18 14:21:16,879 1 INFO soloodoo_uattest odoo.modules.loading: loading iap/views/res_config_settings.xml 
+2026-09-18 14:21:16,906 1 INFO soloodoo_uattest odoo.modules.loading: Module iap loaded in 0.15s, 151 queries (+151 other) 
+2026-09-18 14:21:16,906 1 INFO soloodoo_uattest odoo.modules.loading: Loading module mail (17/71) 
+2026-09-18 14:21:16,940 1 INFO soloodoo_uattest odoo.modules.registry: module mail: creating or updating database tables 
+2026-09-18 14:21:17,183 1 INFO soloodoo_uattest odoo.models: Prepare computation of ir.actions.server.partner_ids 
+2026-09-18 14:21:17,184 1 INFO soloodoo_uattest odoo.models: Prepare computation of ir.actions.server.template_id 
+2026-09-18 14:21:17,184 1 INFO soloodoo_uattest odoo.models: Prepare computation of ir.actions.server.activity_type_id 
+2026-09-18 14:21:17,184 1 INFO soloodoo_uattest odoo.models: Prepare computation of ir.actions.server.activity_date_deadline_range 
+2026-09-18 14:21:17,184 1 INFO soloodoo_uattest odoo.models: Prepare computation of ir.actions.server.activity_user_id 
+2026-09-18 14:21:17,184 1 INFO soloodoo_uattest odoo.models: Prepare computation of ir.actions.server.mail_post_method 
+2026-09-18 14:21:17,184 1 INFO soloodoo_uattest odoo.models: Prepare computation of ir.actions.server.activity_summary 
+2026-09-18 14:21:17,184 1 INFO soloodoo_uattest odoo.models: Prepare computation of ir.actions.server.activity_date_deadline_range_type 
+2026-09-18 14:21:17,184 1 INFO soloodoo_uattest odoo.models: Prepare computation of ir.actions.server.activity_user_type 
+2026-09-18 14:21:17,184 1 INFO soloodoo_uattest odoo.models: Prepare computation of ir.actions.server.activity_user_field_name 
+2026-09-18 14:21:17,184 1 INFO soloodoo_uattest odoo.models: Prepare computation of ir.actions.server.activity_note 
+2026-09-18 14:21:17,184 1 INFO soloodoo_uattest odoo.models: Prepare computation of ir.actions.server.mail_post_autofollow 
+2026-09-18 14:21:17,219 1 INFO soloodoo_uattest odoo.models: Prepare computation of res.company.email_primary_color 
+2026-09-18 14:21:17,219 1 INFO soloodoo_uattest odoo.models: Prepare computation of res.company.email_secondary_color 
+2026-09-18 14:21:17,234 1 INFO soloodoo_uattest odoo.models: Prepare computation of res.users.notification_type 
+2026-09-18 14:21:17,320 1 INFO soloodoo_uattest odoo.models: Prepare computation of res.partner.email_normalized 
+<string>:38: (ERROR/3) Unexpected indentation.
+<string>:43: (WARNING/2) Block quote ends without a blank line; unexpected unindent.
+2026-09-18 14:21:18,632 1 INFO soloodoo_uattest odoo.modules.loading: loading mail/data/mail_groups.xml 
+2026-09-18 14:21:18,721 1 INFO soloodoo_uattest odoo.modules.loading: loading mail/wizard/mail_activity_schedule_views.xml 
+2026-09-18 14:21:18,729 1 INFO soloodoo_uattest odoo.modules.loading: loading mail/wizard/mail_blacklist_remove_views.xml 
+2026-09-18 14:21:18,735 1 INFO soloodoo_uattest odoo.modules.loading: loading mail/wizard/mail_compose_message_views.xml 
+2026-09-18 14:21:18,751 1 INFO soloodoo_uattest odoo.modules.loading: loading mail/wizard/mail_resend_message_views.xml 
+2026-09-18 14:21:18,762 1 INFO soloodoo_uattest odoo.modules.loading: loading mail/wizard/mail_resend_partner_views.xml 
+2026-09-18 14:21:18,771 1 INFO soloodoo_uattest odoo.modules.loading: loading mail/wizard/mail_template_preview_views.xml 
+2026-09-18 14:21:18,782 1 INFO soloodoo_uattest odoo.modules.loading: loading mail/wizard/mail_wizard_invite_views.xml 
+2026-09-18 14:21:18,788 1 INFO soloodoo_uattest odoo.modules.loading: loading mail/wizard/mail_template_reset_views.xml 
+2026-09-18 14:21:18,798 1 INFO soloodoo_uattest odoo.modules.loading: loading mail/views/fetchmail_views.xml 
+2026-09-18 14:21:18,819 1 INFO soloodoo_uattest odoo.modules.loading: loading mail/views/mail_message_subtype_views.xml 
+2026-09-18 14:21:18,831 1 INFO soloodoo_uattest odoo.modules.loading: loading mail/views/mail_tracking_value_views.xml 
+2026-09-18 14:21:18,843 1 INFO soloodoo_uattest odoo.modules.loading: loading mail/views/mail_notification_views.xml 
+2026-09-18 14:21:18,858 1 INFO soloodoo_uattest odoo.modules.loading: loading mail/views/mail_message_views.xml 
+2026-09-18 14:21:18,884 1 INFO soloodoo_uattest odoo.modules.loading: loading mail/views/mail_message_schedule_views.xml 
+2026-09-18 14:21:18,898 1 INFO soloodoo_uattest odoo.modules.loading: loading mail/views/mail_mail_views.xml 
+2026-09-18 14:21:18,923 1 INFO soloodoo_uattest odoo.modules.loading: loading mail/views/mail_followers_views.xml 
+2026-09-18 14:21:18,936 1 INFO soloodoo_uattest odoo.modules.loading: loading mail/views/mail_ice_server_views.xml 
+2026-09-18 14:21:18,947 1 INFO soloodoo_uattest odoo.modules.loading: loading mail/views/discuss_channel_member_views.xml 
+2026-09-18 14:21:18,960 1 INFO soloodoo_uattest odoo.modules.loading: loading mail/views/discuss_channel_rtc_session_views.xml 
+2026-09-18 14:21:18,976 1 INFO soloodoo_uattest odoo.modules.loading: loading mail/views/mail_link_preview_views.xml 
+2026-09-18 14:21:18,988 1 INFO soloodoo_uattest odoo.modules.loading: loading mail/views/discuss/discuss_gif_favorite_views.xml 
+2026-09-18 14:21:19,000 1 INFO soloodoo_uattest odoo.modules.loading: loading mail/views/discuss_channel_views.xml 
+2026-09-18 14:21:19,024 1 INFO soloodoo_uattest odoo.modules.loading: loading mail/views/mail_shortcode_views.xml 
+2026-09-18 14:21:19,040 1 INFO soloodoo_uattest odoo.modules.loading: loading mail/views/mail_activity_views.xml 
+2026-09-18 14:21:19,117 1 INFO soloodoo_uattest odoo.modules.loading: loading mail/views/mail_activity_plan_views.xml 
+2026-09-18 14:21:19,143 1 INFO soloodoo_uattest odoo.modules.loading: loading mail/views/mail_activity_plan_template_views.xml 
+2026-09-18 14:21:19,152 1 INFO soloodoo_uattest odoo.modules.loading: loading mail/views/res_config_settings_views.xml 
+2026-09-18 14:21:19,174 1 INFO soloodoo_uattest odoo.modules.loading: loading mail/data/ir_config_parameter_data.xml 
+2026-09-18 14:21:19,180 1 INFO soloodoo_uattest odoo.modules.loading: loading mail/data/res_partner_data.xml 
+2026-09-18 14:21:19,247 1 INFO soloodoo_uattest odoo.modules.loading: loading mail/data/mail_message_subtype_data.xml 
+2026-09-18 14:21:19,257 1 INFO soloodoo_uattest odoo.modules.loading: loading mail/data/mail_templates_chatter.xml 
+2026-09-18 14:21:19,273 1 INFO soloodoo_uattest odoo.modules.loading: loading mail/data/mail_templates_email_layouts.xml 
+2026-09-18 14:21:19,292 1 INFO soloodoo_uattest odoo.modules.loading: loading mail/data/mail_templates_mailgateway.xml 
+2026-09-18 14:21:19,303 1 INFO soloodoo_uattest odoo.modules.loading: loading mail/data/discuss_channel_data.xml 
+2026-09-18 14:21:19,348 1 INFO soloodoo_uattest odoo.modules.loading: loading mail/data/mail_activity_data.xml 
+2026-09-18 14:21:19,368 1 INFO soloodoo_uattest odoo.modules.loading: loading mail/data/security_notifications_templates.xml 
+2026-09-18 14:21:19,374 1 INFO soloodoo_uattest odoo.modules.loading: loading mail/data/ir_cron_data.xml 
+2026-09-18 14:21:19,414 1 INFO soloodoo_uattest odoo.modules.loading: loading mail/security/mail_security.xml 
+2026-09-18 14:21:19,548 1 INFO soloodoo_uattest odoo.modules.loading: loading mail/security/ir.model.access.csv 
+2026-09-18 14:21:19,606 1 INFO soloodoo_uattest odoo.modules.loading: loading mail/views/discuss_public_templates.xml 
+2026-09-18 14:21:19,613 1 INFO soloodoo_uattest odoo.modules.loading: loading mail/views/mail_alias_domain_views.xml 
+2026-09-18 14:21:19,629 1 INFO soloodoo_uattest odoo.modules.loading: loading mail/views/mail_alias_views.xml 
+2026-09-18 14:21:19,647 1 INFO soloodoo_uattest odoo.modules.loading: loading mail/views/mail_gateway_allowed_views.xml 
+2026-09-18 14:21:19,658 1 INFO soloodoo_uattest odoo.modules.loading: loading mail/views/mail_guest_views.xml 
+2026-09-18 14:21:19,670 1 INFO soloodoo_uattest odoo.modules.loading: loading mail/views/mail_message_reaction_views.xml 
+2026-09-18 14:21:19,681 1 INFO soloodoo_uattest odoo.modules.loading: loading mail/views/mail_templates_public.xml 
+2026-09-18 14:21:19,691 1 INFO soloodoo_uattest odoo.modules.loading: loading mail/views/res_users_views.xml 
+2026-09-18 14:21:19,707 1 INFO soloodoo_uattest odoo.modules.loading: loading mail/views/res_users_settings_views.xml 
+2026-09-18 14:21:19,719 1 INFO soloodoo_uattest odoo.modules.loading: loading mail/views/mail_template_views.xml 
+2026-09-18 14:21:19,742 1 INFO soloodoo_uattest odoo.modules.loading: loading mail/views/ir_actions_server_views.xml 
+2026-09-18 14:21:19,753 1 INFO soloodoo_uattest odoo.modules.loading: loading mail/views/ir_model_views.xml 
+2026-09-18 14:21:19,775 1 INFO soloodoo_uattest odoo.modules.loading: loading mail/views/res_partner_views.xml 
+2026-09-18 14:21:19,822 1 INFO soloodoo_uattest odoo.modules.loading: loading mail/views/mail_blacklist_views.xml 
+2026-09-18 14:21:19,840 1 INFO soloodoo_uattest odoo.modules.loading: loading mail/views/mail_menus.xml 
+2026-09-18 14:21:19,979 1 INFO soloodoo_uattest odoo.modules.loading: loading mail/views/res_company_views.xml 
+2026-09-18 14:21:20,048 1 INFO soloodoo_uattest odoo.modules.loading: Module mail loaded in 3.14s, 4209 queries (+4210 other) 
+2026-09-18 14:21:20,049 1 INFO soloodoo_uattest odoo.modules.loading: Loading module web_editor (18/71) 
+2026-09-18 14:21:20,100 1 INFO soloodoo_uattest odoo.modules.registry: module web_editor: creating or updating database tables 
+2026-09-18 14:21:20,876 1 INFO soloodoo_uattest odoo.modules.loading: loading web_editor/security/ir.model.access.csv 
+2026-09-18 14:21:20,888 1 INFO soloodoo_uattest odoo.modules.loading: loading web_editor/data/editor_assets.xml 
+2026-09-18 14:21:20,895 1 INFO soloodoo_uattest odoo.modules.loading: loading web_editor/views/editor.xml 
+2026-09-18 14:21:20,910 1 INFO soloodoo_uattest odoo.modules.loading: loading web_editor/views/snippets.xml 
+2026-09-18 14:21:20,969 1 INFO soloodoo_uattest odoo.modules.loading: Module web_editor loaded in 0.92s, 1417 queries (+1417 other) 
+2026-09-18 14:21:20,969 1 INFO soloodoo_uattest odoo.modules.loading: Loading module analytic (19/71) 
+2026-09-18 14:21:21,009 1 INFO soloodoo_uattest odoo.modules.registry: module analytic: creating or updating database tables 
+2026-09-18 14:21:21,186 1 INFO soloodoo_uattest odoo.modules.loading: loading analytic/security/analytic_security.xml 
+2026-09-18 14:21:21,224 1 INFO soloodoo_uattest odoo.modules.loading: loading analytic/security/ir.model.access.csv 
+2026-09-18 14:21:21,240 1 INFO soloodoo_uattest odoo.modules.loading: loading analytic/views/analytic_line_views.xml 
+2026-09-18 14:21:21,282 1 INFO soloodoo_uattest odoo.modules.loading: loading analytic/views/analytic_account_views.xml 
+2026-09-18 14:21:21,313 1 INFO soloodoo_uattest odoo.modules.loading: loading analytic/views/analytic_plan_views.xml 
+2026-09-18 14:21:21,331 1 INFO soloodoo_uattest odoo.modules.loading: loading analytic/views/analytic_distribution_model_views.xml 
+2026-09-18 14:21:21,345 1 INFO soloodoo_uattest odoo.modules.loading: loading analytic/data/analytic_data.xml 
+2026-09-18 14:21:21,420 1 INFO soloodoo_uattest odoo.modules.loading: Module analytic loaded in 0.45s, 410 queries (+410 other) 
+2026-09-18 14:21:21,420 1 INFO soloodoo_uattest odoo.modules.loading: Loading module auth_signup (20/71) 
+2026-09-18 14:21:21,469 1 INFO soloodoo_uattest odoo.modules.registry: module auth_signup: creating or updating database tables 
+2026-09-18 14:21:21,535 1 INFO soloodoo_uattest odoo.modules.loading: loading auth_signup/data/ir_config_parameter_data.xml 
+2026-09-18 14:21:21,541 1 INFO soloodoo_uattest odoo.modules.loading: loading auth_signup/data/ir_cron_data.xml 
+2026-09-18 14:21:21,551 1 INFO soloodoo_uattest odoo.modules.loading: loading auth_signup/data/mail_template_data.xml 
+2026-09-18 14:21:21,564 1 INFO soloodoo_uattest odoo.modules.loading: loading auth_signup/views/res_config_settings_views.xml 
+2026-09-18 14:21:21,578 1 INFO soloodoo_uattest odoo.modules.loading: loading auth_signup/views/res_users_views.xml 
+2026-09-18 14:21:21,599 1 INFO soloodoo_uattest odoo.modules.loading: loading auth_signup/views/auth_signup_login_templates.xml 
+2026-09-18 14:21:21,624 1 INFO soloodoo_uattest odoo.modules.loading: loading auth_signup/views/auth_signup_templates_email.xml 
+2026-09-18 14:21:21,637 1 INFO soloodoo_uattest odoo.modules.loading: loading auth_signup/views/webclient_templates.xml 
+2026-09-18 14:21:21,675 1 INFO soloodoo_uattest odoo.modules.loading: Module auth_signup loaded in 0.26s, 202 queries (+202 other) 
+2026-09-18 14:21:21,676 1 INFO soloodoo_uattest odoo.modules.loading: Loading module auth_totp_mail (21/71) 
+2026-09-18 14:21:21,713 1 INFO soloodoo_uattest odoo.modules.registry: module auth_totp_mail: creating or updating database tables 
+2026-09-18 14:21:21,754 1 INFO soloodoo_uattest odoo.modules.loading: loading auth_totp_mail/data/ir_action_data.xml 
+2026-09-18 14:21:21,779 1 INFO soloodoo_uattest odoo.modules.loading: loading auth_totp_mail/data/mail_template_data.xml 
+2026-09-18 14:21:21,786 1 INFO soloodoo_uattest odoo.modules.loading: loading auth_totp_mail/data/security_notifications_template.xml 
+2026-09-18 14:21:21,795 1 INFO soloodoo_uattest odoo.modules.loading: loading auth_totp_mail/views/res_users_views.xml 
+2026-09-18 14:21:21,842 1 INFO soloodoo_uattest odoo.modules.loading: Module auth_totp_mail loaded in 0.17s, 112 queries (+112 other) 
+2026-09-18 14:21:21,842 1 INFO soloodoo_uattest odoo.modules.loading: Loading module base_install_request (22/71) 
+2026-09-18 14:21:21,890 1 INFO soloodoo_uattest odoo.modules.registry: module base_install_request: creating or updating database tables 
+2026-09-18 14:21:21,999 1 INFO soloodoo_uattest odoo.modules.loading: loading base_install_request/security/ir.model.access.csv 
+2026-09-18 14:21:22,050 1 INFO soloodoo_uattest odoo.modules.loading: loading base_install_request/wizard/base_module_install_request_views.xml 
+2026-09-18 14:21:22,098 1 INFO soloodoo_uattest odoo.modules.loading: loading base_install_request/data/mail_template_data.xml 
+2026-09-18 14:21:22,110 1 INFO soloodoo_uattest odoo.modules.loading: loading base_install_request/data/mail_templates_module_install.xml 
+2026-09-18 14:21:22,123 1 INFO soloodoo_uattest odoo.modules.loading: loading base_install_request/views/ir_module_module_views.xml 
+2026-09-18 14:21:22,173 1 INFO soloodoo_uattest odoo.modules.loading: Module base_install_request loaded in 0.33s, 144 queries (+144 other) 
+2026-09-18 14:21:22,173 1 INFO soloodoo_uattest odoo.modules.loading: Loading module google_gmail (23/71) 
+2026-09-18 14:21:22,213 1 INFO soloodoo_uattest odoo.modules.registry: module google_gmail: creating or updating database tables 
+2026-09-18 14:21:22,272 1 INFO soloodoo_uattest odoo.modules.loading: loading google_gmail/views/fetchmail_server_views.xml 
+2026-09-18 14:21:22,288 1 INFO soloodoo_uattest odoo.modules.loading: loading google_gmail/views/ir_mail_server_views.xml 
+2026-09-18 14:21:22,298 1 INFO soloodoo_uattest odoo.modules.loading: loading google_gmail/views/res_config_settings_views.xml 
+2026-09-18 14:21:22,340 1 INFO soloodoo_uattest odoo.modules.loading: Module google_gmail loaded in 0.17s, 118 queries (+118 other) 
+2026-09-18 14:21:22,340 1 INFO soloodoo_uattest odoo.modules.loading: Loading module iap_mail (24/71) 
+2026-09-18 14:21:22,377 1 INFO soloodoo_uattest odoo.modules.registry: module iap_mail: creating or updating database tables 
+2026-09-18 14:21:22,400 1 INFO soloodoo_uattest odoo.modules.loading: loading iap_mail/data/mail_templates.xml 
+2026-09-18 14:21:22,436 1 INFO soloodoo_uattest odoo.modules.loading: Module iap_mail loaded in 0.10s, 40 queries (+40 other) 
+2026-09-18 14:21:22,436 1 INFO soloodoo_uattest odoo.modules.loading: Loading module mail_bot (25/71) 
+2026-09-18 14:21:22,480 1 INFO soloodoo_uattest odoo.modules.registry: module mail_bot: creating or updating database tables 
+2026-09-18 14:21:22,623 1 INFO soloodoo_uattest odoo.modules.loading: loading mail_bot/views/res_users_views.xml 
+2026-09-18 14:21:22,656 1 INFO soloodoo_uattest odoo.modules.loading: loading mail_bot/data/mailbot_data.xml 
+2026-09-18 14:21:22,684 1 INFO soloodoo_uattest odoo.modules.loading: Module mail_bot loaded in 0.25s, 157 queries (+157 other) 
+2026-09-18 14:21:22,684 1 INFO soloodoo_uattest odoo.modules.loading: Loading module phone_validation (26/71) 
+2026-09-18 14:21:22,812 1 INFO soloodoo_uattest odoo.modules.registry: module phone_validation: creating or updating database tables 
+2026-09-18 14:21:23,752 1 INFO soloodoo_uattest odoo.modules.loading: loading phone_validation/security/ir.model.access.csv 
+2026-09-18 14:21:23,768 1 INFO soloodoo_uattest odoo.modules.loading: loading phone_validation/views/phone_blacklist_views.xml 
+2026-09-18 14:21:23,796 1 INFO soloodoo_uattest odoo.modules.loading: loading phone_validation/wizard/phone_blacklist_remove_view.xml 
+2026-09-18 14:21:23,823 1 INFO soloodoo_uattest odoo.modules.loading: Module phone_validation loaded in 1.14s, 1486 queries (+1486 other) 
+2026-09-18 14:21:23,823 1 INFO soloodoo_uattest odoo.modules.loading: Loading module privacy_lookup (27/71) 
+2026-09-18 14:21:23,862 1 INFO soloodoo_uattest odoo.modules.registry: module privacy_lookup: creating or updating database tables 
+2026-09-18 14:21:23,976 1 INFO soloodoo_uattest odoo.modules.loading: loading privacy_lookup/wizard/privacy_lookup_wizard_views.xml 
+2026-09-18 14:21:24,009 1 INFO soloodoo_uattest odoo.modules.loading: loading privacy_lookup/views/privacy_log_views.xml 
+2026-09-18 14:21:24,035 1 INFO soloodoo_uattest odoo.modules.loading: loading privacy_lookup/security/ir.model.access.csv 
+2026-09-18 14:21:24,053 1 INFO soloodoo_uattest odoo.modules.loading: loading privacy_lookup/data/ir_actions_server_data.xml 
+2026-09-18 14:21:24,084 1 INFO soloodoo_uattest odoo.modules.loading: Module privacy_lookup loaded in 0.26s, 245 queries (+245 other) 
+2026-09-18 14:21:24,084 1 INFO soloodoo_uattest odoo.modules.loading: Loading module product (28/71) 
+2026-09-18 14:21:24,212 1 INFO soloodoo_uattest odoo.modules.registry: module product: creating or updating database tables 
+2026-09-18 14:21:24,852 1 INFO soloodoo_uattest odoo.modules.loading: loading product/data/product_data.xml 
+2026-09-18 14:21:24,875 1 INFO soloodoo_uattest odoo.modules.loading: loading product/security/product_security.xml 
+2026-09-18 14:21:24,980 1 INFO soloodoo_uattest odoo.modules.loading: loading product/security/ir.model.access.csv 
+2026-09-18 14:21:25,011 1 INFO soloodoo_uattest odoo.modules.loading: loading product/wizard/product_label_layout_views.xml 
+2026-09-18 14:21:25,023 1 INFO soloodoo_uattest odoo.modules.loading: loading product/views/product_tag_views.xml 
+2026-09-18 14:21:25,038 1 INFO soloodoo_uattest odoo.modules.loading: loading product/views/product_views.xml 
+2026-09-18 14:21:25,131 1 INFO soloodoo_uattest odoo.modules.loading: loading product/views/res_config_settings_views.xml 
+2026-09-18 14:21:25,154 1 INFO soloodoo_uattest odoo.modules.loading: loading product/views/product_attribute_views.xml 
+2026-09-18 14:21:25,183 1 INFO soloodoo_uattest odoo.modules.loading: loading product/views/product_attribute_value_views.xml 
+2026-09-18 14:21:25,189 1 INFO soloodoo_uattest odoo.modules.loading: loading product/views/product_category_views.xml 
+2026-09-18 14:21:25,205 1 INFO soloodoo_uattest odoo.modules.loading: loading product/views/product_document_views.xml 
+2026-09-18 14:21:25,224 1 INFO soloodoo_uattest odoo.modules.loading: loading product/views/product_packaging_views.xml 
+2026-09-18 14:21:25,248 1 INFO soloodoo_uattest odoo.modules.loading: loading product/views/product_pricelist_item_views.xml 
+2026-09-18 14:21:25,271 1 INFO soloodoo_uattest odoo.modules.loading: loading product/views/product_pricelist_views.xml 
+2026-09-18 14:21:25,296 1 INFO soloodoo_uattest odoo.modules.loading: loading product/views/product_supplierinfo_views.xml 
+2026-09-18 14:21:25,321 1 INFO soloodoo_uattest odoo.modules.loading: loading product/views/product_template_views.xml 
+2026-09-18 14:21:25,357 1 INFO soloodoo_uattest odoo.modules.loading: loading product/views/res_country_group_views.xml 
+2026-09-18 14:21:25,365 1 INFO soloodoo_uattest odoo.modules.loading: loading product/views/res_partner_views.xml 
+2026-09-18 14:21:25,375 1 INFO soloodoo_uattest odoo.modules.loading: loading product/report/product_reports.xml 
+2026-09-18 14:21:25,401 1 INFO soloodoo_uattest odoo.modules.loading: loading product/report/product_product_templates.xml 
+2026-09-18 14:21:25,430 1 INFO soloodoo_uattest odoo.modules.loading: loading product/report/product_template_templates.xml 
+2026-09-18 14:21:25,450 1 INFO soloodoo_uattest odoo.modules.loading: loading product/report/product_packaging.xml 
+2026-09-18 14:21:25,457 1 INFO soloodoo_uattest odoo.modules.loading: loading product/report/product_pricelist_report_templates.xml 
+2026-09-18 14:21:25,502 1 INFO soloodoo_uattest odoo.modules.loading: Module product loaded in 1.42s, 1491 queries (+1491 other) 
+2026-09-18 14:21:25,502 1 INFO soloodoo_uattest odoo.modules.loading: Loading module rating (29/71) 
+2026-09-18 14:21:25,563 1 INFO soloodoo_uattest odoo.modules.registry: module rating: creating or updating database tables 
+2026-09-18 14:21:25,789 1 INFO soloodoo_uattest odoo.modules.loading: loading rating/views/rating_rating_views.xml 
+2026-09-18 14:21:25,848 1 INFO soloodoo_uattest odoo.modules.loading: loading rating/views/rating_templates.xml 
+2026-09-18 14:21:25,859 1 INFO soloodoo_uattest odoo.modules.loading: loading rating/views/mail_message_views.xml 
+2026-09-18 14:21:25,868 1 INFO soloodoo_uattest odoo.modules.loading: loading rating/security/ir.model.access.csv 
+2026-09-18 14:21:25,900 1 INFO soloodoo_uattest odoo.modules.loading: Module rating loaded in 0.40s, 359 queries (+359 other) 
+2026-09-18 14:21:25,900 1 INFO soloodoo_uattest odoo.modules.loading: Loading module sales_team (30/71) 
+2026-09-18 14:21:25,948 1 INFO soloodoo_uattest odoo.modules.registry: module sales_team: creating or updating database tables 
+2026-09-18 14:21:25,986 1 INFO soloodoo_uattest odoo.models: Prepare computation of res.users.sale_team_id 
+2026-09-18 14:21:26,100 1 INFO soloodoo_uattest odoo.modules.loading: loading sales_team/security/sales_team_security.xml 
+2026-09-18 14:21:26,235 1 INFO soloodoo_uattest odoo.modules.loading: loading sales_team/security/ir.model.access.csv 
+2026-09-18 14:21:26,250 1 INFO soloodoo_uattest odoo.modules.loading: loading sales_team/data/crm_team_data.xml 
+2026-09-18 14:21:26,299 1 INFO soloodoo_uattest odoo.modules.loading: loading sales_team/views/crm_tag_views.xml 
+2026-09-18 14:21:26,314 1 INFO soloodoo_uattest odoo.modules.loading: loading sales_team/views/crm_team_views.xml 
+2026-09-18 14:21:26,353 1 INFO soloodoo_uattest odoo.modules.loading: loading sales_team/views/crm_team_member_views.xml 
+2026-09-18 14:21:26,392 1 INFO soloodoo_uattest odoo.modules.loading: loading sales_team/views/mail_activity_views.xml 
+2026-09-18 14:21:26,398 1 INFO soloodoo_uattest odoo.modules.loading: loading sales_team/views/res_partner_views.xml 
+2026-09-18 14:21:26,433 1 INFO soloodoo_uattest odoo.modules.loading: Module sales_team loaded in 0.53s, 538 queries (+538 other) 
+2026-09-18 14:21:26,433 1 INFO soloodoo_uattest odoo.modules.loading: Loading module web_unsplash (31/71) 
+2026-09-18 14:21:26,481 1 INFO soloodoo_uattest odoo.modules.registry: module web_unsplash: creating or updating database tables 
+2026-09-18 14:21:26,539 1 INFO soloodoo_uattest odoo.modules.loading: loading web_unsplash/views/res_config_settings_view.xml 
+2026-09-18 14:21:26,580 1 INFO soloodoo_uattest odoo.modules.loading: Module web_unsplash loaded in 0.15s, 98 queries (+98 other) 
+2026-09-18 14:21:26,580 1 INFO soloodoo_uattest odoo.modules.loading: Loading module partner_autocomplete (32/71) 
+2026-09-18 14:21:26,638 1 INFO soloodoo_uattest odoo.modules.registry: module partner_autocomplete: creating or updating database tables 
+2026-09-18 14:21:26,735 1 INFO soloodoo_uattest odoo.modules.loading: loading partner_autocomplete/security/ir.model.access.csv 
+2026-09-18 14:21:26,749 1 INFO soloodoo_uattest odoo.modules.loading: loading partner_autocomplete/views/res_partner_views.xml 
+2026-09-18 14:21:26,767 1 INFO soloodoo_uattest odoo.modules.loading: loading partner_autocomplete/views/res_company_views.xml 
+2026-09-18 14:21:26,776 1 INFO soloodoo_uattest odoo.modules.loading: loading partner_autocomplete/views/res_config_settings_views.xml 
+2026-09-18 14:21:26,790 1 INFO soloodoo_uattest odoo.modules.loading: loading partner_autocomplete/data/cron.xml 
+2026-09-18 14:21:26,820 1 INFO soloodoo_uattest odoo.modules.loading: Module partner_autocomplete loaded in 0.24s, 196 queries (+196 other) 
+2026-09-18 14:21:26,820 1 INFO soloodoo_uattest odoo.modules.loading: Loading module portal (33/71) 
+2026-09-18 14:21:26,864 1 INFO soloodoo_uattest odoo.modules.registry: module portal: creating or updating database tables 
+2026-09-18 14:21:27,088 1 INFO soloodoo_uattest odoo.modules.loading: loading portal/security/ir.model.access.csv 
+2026-09-18 14:21:27,102 1 INFO soloodoo_uattest odoo.modules.loading: loading portal/data/mail_template_data.xml 
+2026-09-18 14:21:27,110 1 INFO soloodoo_uattest odoo.modules.loading: loading portal/data/mail_templates.xml 
+2026-09-18 14:21:27,118 1 INFO soloodoo_uattest odoo.modules.loading: loading portal/views/mail_templates_public.xml 
+2026-09-18 14:21:27,127 1 INFO soloodoo_uattest odoo.modules.loading: loading portal/views/portal_templates.xml 
+2026-09-18 14:21:27,239 1 INFO soloodoo_uattest odoo.modules.loading: loading portal/views/res_config_settings_views.xml 
+2026-09-18 14:21:27,253 1 INFO soloodoo_uattest odoo.modules.loading: loading portal/wizard/portal_share_views.xml 
+2026-09-18 14:21:27,264 1 INFO soloodoo_uattest odoo.modules.loading: loading portal/wizard/portal_wizard_views.xml 
+2026-09-18 14:21:27,304 1 INFO soloodoo_uattest odoo.modules.loading: Module portal loaded in 0.48s, 505 queries (+505 other) 
+2026-09-18 14:21:27,304 1 INFO soloodoo_uattest odoo.modules.loading: Loading module sms (34/71) 
+2026-09-18 14:21:27,383 1 INFO soloodoo_uattest odoo.modules.registry: module sms: creating or updating database tables 
+2026-09-18 14:21:27,391 1 INFO soloodoo_uattest odoo.models: Prepare computation of ir.actions.server.sms_template_id 
+2026-09-18 14:21:27,391 1 INFO soloodoo_uattest odoo.models: Prepare computation of ir.actions.server.sms_method 
+2026-09-18 14:21:27,422 1 INFO soloodoo_uattest odoo.models: Prepare computation of res.partner.phone_sanitized 
+2026-09-18 14:21:28,673 1 INFO soloodoo_uattest odoo.modules.loading: loading sms/data/ir_cron_data.xml 
+2026-09-18 14:21:28,686 1 INFO soloodoo_uattest odoo.modules.loading: loading sms/wizard/sms_composer_views.xml 
+2026-09-18 14:21:28,706 1 INFO soloodoo_uattest odoo.modules.loading: loading sms/wizard/sms_template_preview_views.xml 
+2026-09-18 14:21:28,719 1 INFO soloodoo_uattest odoo.modules.loading: loading sms/wizard/sms_resend_views.xml 
+2026-09-18 14:21:28,732 1 INFO soloodoo_uattest odoo.modules.loading: loading sms/wizard/sms_template_reset_views.xml 
+2026-09-18 14:21:28,744 1 INFO soloodoo_uattest odoo.modules.loading: loading sms/views/ir_actions_server_views.xml 
+2026-09-18 14:21:28,759 1 INFO soloodoo_uattest odoo.modules.loading: loading sms/views/mail_notification_views.xml 
+2026-09-18 14:21:28,776 1 INFO soloodoo_uattest odoo.modules.loading: loading sms/views/res_config_settings_views.xml 
+2026-09-18 14:21:28,794 1 INFO soloodoo_uattest odoo.modules.loading: loading sms/views/res_partner_views.xml 
+2026-09-18 14:21:28,832 1 INFO soloodoo_uattest odoo.modules.loading: loading sms/views/sms_sms_views.xml 
+2026-09-18 14:21:28,867 1 INFO soloodoo_uattest odoo.modules.loading: loading sms/views/sms_template_views.xml 
+2026-09-18 14:21:28,905 1 INFO soloodoo_uattest odoo.modules.loading: loading sms/security/ir.model.access.csv 
+2026-09-18 14:21:28,947 1 INFO soloodoo_uattest odoo.modules.loading: loading sms/security/sms_security.xml 
+2026-09-18 14:21:28,991 1 INFO soloodoo_uattest odoo.modules.loading: Module sms loaded in 1.69s, 2088 queries (+2088 other) 
+2026-09-18 14:21:28,991 1 INFO soloodoo_uattest odoo.modules.loading: Loading module snailmail (35/71) 
+2026-09-18 14:21:29,070 1 INFO soloodoo_uattest odoo.modules.registry: module snailmail: creating or updating database tables 
+2026-09-18 14:21:29,413 1 INFO soloodoo_uattest odoo.modules.loading: loading snailmail/data/snailmail_data.xml 
+2026-09-18 14:21:29,427 1 INFO soloodoo_uattest odoo.modules.loading: loading snailmail/views/report_assets.xml 
+2026-09-18 14:21:29,450 1 INFO soloodoo_uattest odoo.modules.loading: loading snailmail/views/snailmail_views.xml 
+2026-09-18 14:21:29,472 1 INFO soloodoo_uattest odoo.modules.loading: loading snailmail/wizard/snailmail_letter_format_error_views.xml 
+2026-09-18 14:21:29,483 1 INFO soloodoo_uattest odoo.modules.loading: loading snailmail/wizard/snailmail_letter_missing_required_fields_views.xml 
+2026-09-18 14:21:29,493 1 INFO soloodoo_uattest odoo.modules.loading: loading snailmail/security/ir.model.access.csv 
+2026-09-18 14:21:29,539 1 INFO soloodoo_uattest odoo.modules.loading: Module snailmail loaded in 0.55s, 446 queries (+446 other) 
+2026-09-18 14:21:29,539 1 INFO soloodoo_uattest odoo.modules.loading: Loading module auth_totp_portal (36/71) 
+2026-09-18 14:21:29,595 1 INFO soloodoo_uattest odoo.modules.registry: module auth_totp_portal: creating or updating database tables 
+2026-09-18 14:21:29,633 1 INFO soloodoo_uattest odoo.modules.loading: loading auth_totp_portal/security/security.xml 
+2026-09-18 14:21:29,651 1 INFO soloodoo_uattest odoo.modules.loading: loading auth_totp_portal/views/templates.xml 
+2026-09-18 14:21:29,679 1 INFO soloodoo_uattest odoo.modules.loading: Module auth_totp_portal loaded in 0.14s, 66 queries (+66 other) 
+2026-09-18 14:21:29,679 1 INFO soloodoo_uattest odoo.modules.loading: Loading module digest (37/71) 
+2026-09-18 14:21:29,738 1 INFO soloodoo_uattest odoo.modules.registry: module digest: creating or updating database tables 
+2026-09-18 14:21:29,865 1 INFO soloodoo_uattest odoo.modules.loading: loading digest/security/ir.model.access.csv 
+2026-09-18 14:21:29,880 1 INFO soloodoo_uattest odoo.modules.loading: loading digest/data/digest_data.xml 
+2026-09-18 14:21:29,903 1 INFO soloodoo_uattest odoo.modules.loading: loading digest/data/digest_tips_data.xml 
+2026-09-18 14:21:29,921 1 INFO soloodoo_uattest odoo.modules.loading: loading digest/data/ir_cron_data.xml 
+2026-09-18 14:21:29,931 1 INFO soloodoo_uattest odoo.modules.loading: loading digest/data/res_config_settings_data.xml 
+2026-09-18 14:21:29,939 1 INFO soloodoo_uattest odoo.modules.loading: loading digest/views/digest_views.xml 
+2026-09-18 14:21:29,986 1 INFO soloodoo_uattest odoo.modules.loading: loading digest/views/digest_templates.xml 
+2026-09-18 14:21:29,993 1 INFO soloodoo_uattest odoo.modules.loading: loading digest/views/res_config_settings_views.xml 
+2026-09-18 14:21:30,040 1 INFO soloodoo_uattest odoo.modules.loading: Module digest loaded in 0.36s, 296 queries (+296 other) 
+2026-09-18 14:21:30,040 1 INFO soloodoo_uattest odoo.modules.loading: Loading module payment (38/71) 
+2026-09-18 14:21:30,121 1 INFO soloodoo_uattest odoo.modules.registry: module payment: creating or updating database tables 
+2026-09-18 14:21:30,506 1 INFO soloodoo_uattest odoo.modules.loading: loading payment/data/onboarding_data.xml 
+2026-09-18 14:21:30,513 1 INFO soloodoo_uattest odoo.modules.loading: loading payment/data/payment_method_data.xml 
+2026-09-18 14:21:32,323 1 INFO soloodoo_uattest odoo.modules.loading: loading payment/data/payment_provider_data.xml 
+2026-09-18 14:21:32,519 1 INFO soloodoo_uattest odoo.modules.loading: loading payment/data/payment_cron.xml 
+2026-09-18 14:21:33,163 1 INFO soloodoo_uattest odoo.modules.loading: loading payment/views/express_checkout_templates.xml 
+2026-09-18 14:21:33,174 1 INFO soloodoo_uattest odoo.modules.loading: loading payment/views/payment_form_templates.xml 
+2026-09-18 14:21:33,198 1 INFO soloodoo_uattest odoo.modules.loading: loading payment/views/portal_templates.xml 
+2026-09-18 14:21:33,244 1 INFO soloodoo_uattest odoo.modules.loading: loading payment/views/payment_provider_views.xml 
+2026-09-18 14:21:33,274 1 INFO soloodoo_uattest odoo.modules.loading: loading payment/views/payment_method_views.xml 
+2026-09-18 14:21:33,296 1 INFO soloodoo_uattest odoo.modules.loading: loading payment/views/payment_transaction_views.xml 
+2026-09-18 14:21:33,324 1 INFO soloodoo_uattest odoo.modules.loading: loading payment/views/payment_token_views.xml 
+2026-09-18 14:21:33,345 1 INFO soloodoo_uattest odoo.modules.loading: loading payment/views/res_partner_views.xml 
+2026-09-18 14:21:33,361 1 INFO soloodoo_uattest odoo.modules.loading: loading payment/security/ir.model.access.csv 
+2026-09-18 14:21:33,384 1 INFO soloodoo_uattest odoo.modules.loading: loading payment/security/payment_security.xml 
+2026-09-18 14:21:33,415 1 INFO soloodoo_uattest odoo.modules.loading: loading payment/wizards/payment_capture_wizard_views.xml 
+2026-09-18 14:21:33,423 1 INFO soloodoo_uattest odoo.modules.loading: loading payment/wizards/payment_link_wizard_views.xml 
+2026-09-18 14:21:33,430 1 INFO soloodoo_uattest odoo.modules.loading: loading payment/wizards/payment_onboarding_views.xml 
+2026-09-18 14:21:33,472 1 INFO soloodoo_uattest odoo.modules.loading: Module payment loaded in 3.43s, 2222 queries (+2222 other) 
+2026-09-18 14:21:33,472 1 INFO soloodoo_uattest odoo.modules.loading: Loading module portal_rating (39/71) 
+2026-09-18 14:21:33,536 1 INFO soloodoo_uattest odoo.modules.registry: module portal_rating: creating or updating database tables 
+2026-09-18 14:21:33,602 1 INFO soloodoo_uattest odoo.modules.loading: loading portal_rating/views/rating_rating_views.xml 
+2026-09-18 14:21:33,612 1 INFO soloodoo_uattest odoo.modules.loading: loading portal_rating/views/portal_templates.xml 
+2026-09-18 14:21:33,620 1 INFO soloodoo_uattest odoo.modules.loading: loading portal_rating/views/rating_templates.xml 
+2026-09-18 14:21:33,642 1 INFO soloodoo_uattest odoo.modules.loading: Module portal_rating loaded in 0.17s, 105 queries (+105 other) 
+2026-09-18 14:21:33,642 1 INFO soloodoo_uattest odoo.modules.loading: Loading module spreadsheet (40/71) 
+2026-09-18 14:21:33,758 1 INFO soloodoo_uattest odoo.modules.registry: module spreadsheet: creating or updating database tables 
+2026-09-18 14:21:33,807 1 INFO soloodoo_uattest odoo.modules.loading: loading spreadsheet/views/public_readonly_spreadsheet_templates.xml 
+2026-09-18 14:21:33,833 1 INFO soloodoo_uattest odoo.modules.loading: Module spreadsheet loaded in 0.19s, 83 queries (+83 other) 
+2026-09-18 14:21:33,833 1 INFO soloodoo_uattest odoo.modules.loading: Loading module account (41/71) 
+2026-09-18 14:21:33,996 1 INFO soloodoo_uattest odoo.modules.registry: module account: creating or updating database tables 
+2026-09-18 14:21:34,378 1 INFO soloodoo_uattest odoo.models: Prepare computation of res.company.account_fiscal_country_id 
+2026-09-18 14:21:34,379 1 INFO soloodoo_uattest odoo.models: Prepare computation of res.company.invoice_terms_html 
+2026-09-18 14:21:36,084 1 INFO soloodoo_uattest odoo.modules.loading: loading account/security/account_security.xml 
+2026-09-18 14:21:36,565 1 INFO soloodoo_uattest odoo.modules.loading: loading account/security/ir.model.access.csv 
+2026-09-18 14:21:36,640 1 INFO soloodoo_uattest odoo.modules.loading: loading account/data/account_data.xml 
+2026-09-18 14:21:36,718 1 INFO soloodoo_uattest odoo.modules.loading: loading account/data/digest_data.xml 
+2026-09-18 14:21:36,727 1 INFO soloodoo_uattest odoo.modules.loading: loading account/views/account_report.xml 
+2026-09-18 14:21:36,750 1 INFO soloodoo_uattest odoo.modules.loading: loading account/data/mail_template_data.xml 
+2026-09-18 14:21:36,767 1 INFO soloodoo_uattest odoo.modules.loading: loading account/data/onboarding_data.xml 
+2026-09-18 14:21:36,823 1 INFO soloodoo_uattest odoo.modules.loading: loading account/views/account_payment_view.xml 
+2026-09-18 14:21:36,894 1 INFO soloodoo_uattest odoo.modules.loading: loading account/wizard/account_automatic_entry_wizard_views.xml 
+2026-09-18 14:21:36,906 1 INFO soloodoo_uattest odoo.modules.loading: loading account/wizard/account_unreconcile_view.xml 
+2026-09-18 14:21:36,916 1 INFO soloodoo_uattest odoo.modules.loading: loading account/wizard/account_move_reversal_view.xml 
+2026-09-18 14:21:36,926 1 INFO soloodoo_uattest odoo.modules.loading: loading account/wizard/account_resequence_views.xml 
+2026-09-18 14:21:36,937 1 INFO soloodoo_uattest odoo.modules.loading: loading account/wizard/account_payment_register_views.xml 
+2026-09-18 14:21:36,947 1 INFO soloodoo_uattest odoo.modules.loading: loading account/views/account_move_views.xml 
+2026-09-18 14:21:37,300 1 INFO soloodoo_uattest odoo.modules.loading: loading account/wizard/setup_wizards_view.xml 
+2026-09-18 14:21:37,317 1 INFO soloodoo_uattest odoo.modules.loading: loading account/views/account_account_views.xml 
+2026-09-18 14:21:37,351 1 INFO soloodoo_uattest odoo.modules.loading: loading account/views/account_group_views.xml 
+2026-09-18 14:21:37,368 1 INFO soloodoo_uattest odoo.modules.loading: loading account/views/account_journal_views.xml 
+2026-09-18 14:21:37,419 1 INFO soloodoo_uattest odoo.modules.loading: loading account/views/account_account_tag_views.xml 
+2026-09-18 14:21:37,435 1 INFO soloodoo_uattest odoo.modules.loading: loading account/views/account_bank_statement_views.xml 
+2026-09-18 14:21:37,468 1 INFO soloodoo_uattest odoo.modules.loading: loading account/views/account_reconcile_model_views.xml 
+2026-09-18 14:21:37,497 1 INFO soloodoo_uattest odoo.modules.loading: loading account/views/account_tax_views.xml 
+2026-09-18 14:21:37,556 1 INFO soloodoo_uattest odoo.modules.loading: loading account/views/account_full_reconcile_views.xml 
+2026-09-18 14:21:37,565 1 INFO soloodoo_uattest odoo.modules.loading: loading account/views/account_payment_term_views.xml 
+2026-09-18 14:21:37,588 1 INFO soloodoo_uattest odoo.modules.loading: loading account/views/account_payment_method.xml 
+2026-09-18 14:21:37,599 1 INFO soloodoo_uattest odoo.modules.loading: loading account/views/res_partner_bank_views.xml 
+2026-09-18 14:21:37,625 1 INFO soloodoo_uattest odoo.modules.loading: loading account/views/report_statement.xml 
+2026-09-18 14:21:37,640 1 INFO soloodoo_uattest odoo.modules.loading: loading account/views/terms_template.xml 
+2026-09-18 14:21:37,653 1 INFO soloodoo_uattest odoo.modules.loading: loading account/wizard/account_validate_move_view.xml 
+2026-09-18 14:21:37,664 1 INFO soloodoo_uattest odoo.modules.loading: loading account/views/res_company_views.xml 
+2026-09-18 14:21:37,692 1 INFO soloodoo_uattest odoo.modules.loading: loading account/views/product_view.xml 
+2026-09-18 14:21:37,721 1 INFO soloodoo_uattest odoo.modules.loading: loading account/views/account_analytic_plan_views.xml 
+2026-09-18 14:21:37,730 1 INFO soloodoo_uattest odoo.modules.loading: loading account/views/account_analytic_account_views.xml 
+2026-09-18 14:21:37,745 1 INFO soloodoo_uattest odoo.modules.loading: loading account/views/account_analytic_distribution_model_views.xml 
+2026-09-18 14:21:37,761 1 INFO soloodoo_uattest odoo.modules.loading: loading account/views/account_analytic_line_views.xml 
+2026-09-18 14:21:37,797 1 INFO soloodoo_uattest odoo.modules.loading: loading account/views/report_invoice.xml 
+2026-09-18 14:21:37,835 1 INFO soloodoo_uattest odoo.modules.loading: loading account/report/account_invoice_report_view.xml 
+2026-09-18 14:21:37,879 1 INFO soloodoo_uattest odoo.modules.loading: loading account/views/account_cash_rounding_view.xml 
+2026-09-18 14:21:37,895 1 INFO soloodoo_uattest odoo.modules.loading: loading account/views/ir_module_views.xml 
+2026-09-18 14:21:37,905 1 INFO soloodoo_uattest odoo.modules.loading: loading account/views/res_config_settings_views.xml 
+2026-09-18 14:21:37,938 1 INFO soloodoo_uattest odoo.modules.loading: loading account/views/partner_view.xml 
+2026-09-18 14:21:38,013 1 INFO soloodoo_uattest odoo.modules.loading: loading account/views/account_journal_dashboard_view.xml 
+2026-09-18 14:21:38,034 1 INFO soloodoo_uattest odoo.modules.loading: loading account/views/account_portal_templates.xml 
+2026-09-18 14:21:38,083 1 INFO soloodoo_uattest odoo.modules.loading: loading account/views/report_payment_receipt_templates.xml 
+2026-09-18 14:21:38,098 1 INFO soloodoo_uattest odoo.modules.loading: loading account/data/service_cron.xml 
+2026-09-18 14:21:38,117 1 INFO soloodoo_uattest odoo.modules.loading: loading account/views/account_incoterms_view.xml 
+2026-09-18 14:21:38,140 1 INFO soloodoo_uattest odoo.modules.loading: loading account/data/account_incoterms_data.xml 
+2026-09-18 14:21:38,166 1 INFO soloodoo_uattest odoo.modules.loading: loading account/views/digest_views.xml 
+2026-09-18 14:21:38,179 1 INFO soloodoo_uattest odoo.modules.loading: loading account/wizard/account_move_send_views.xml 
+2026-09-18 14:21:38,198 1 INFO soloodoo_uattest odoo.modules.loading: loading account/report/account_hash_integrity_templates.xml 
+2026-09-18 14:21:38,206 1 INFO soloodoo_uattest odoo.modules.loading: loading account/views/res_currency.xml 
+2026-09-18 14:21:38,216 1 INFO soloodoo_uattest odoo.modules.loading: loading account/views/account_menuitem.xml 
+2026-09-18 14:21:38,485 1 INFO soloodoo_uattest odoo.modules.loading: loading account/wizard/account_tour_upload_bill.xml 
+2026-09-18 14:21:38,497 1 INFO soloodoo_uattest odoo.modules.loading: loading account/wizard/accrued_orders.xml 
+2026-09-18 14:21:38,504 1 INFO soloodoo_uattest odoo.modules.loading: loading account/views/bill_preview_template.xml 
+2026-09-18 14:21:38,512 1 INFO soloodoo_uattest odoo.modules.loading: loading account/data/account_reports_data.xml 
+2026-09-18 14:21:39,274 1 INFO soloodoo_uattest odoo.modules.loading: loading account/views/uom_uom_views.xml 
+2026-09-18 14:21:39,283 1 INFO soloodoo_uattest odoo.modules.loading: loading account/data/ir_config_parameter_data.xml 
+2026-09-18 14:21:39,476 1 INFO soloodoo_uattest odoo.modules.loading: Module account loaded in 5.64s, 5694 queries (+5694 other) 
+2026-09-18 14:21:39,476 1 INFO soloodoo_uattest odoo.modules.loading: Loading module project (42/71) 
+2026-09-18 14:21:39,589 1 INFO soloodoo_uattest odoo.modules.registry: module project: creating or updating database tables 
+2026-09-18 14:21:40,206 1 INFO soloodoo_uattest odoo.modules.loading: loading project/security/project_security.xml 
+2026-09-18 14:21:40,554 1 INFO soloodoo_uattest odoo.modules.loading: loading project/security/ir.model.access.csv 
+2026-09-18 14:21:40,590 1 INFO soloodoo_uattest odoo.modules.loading: loading project/security/ir.model.access.xml 
+2026-09-18 14:21:40,596 1 INFO soloodoo_uattest odoo.modules.loading: loading project/data/digest_data.xml 
+2026-09-18 14:21:40,607 1 INFO soloodoo_uattest odoo.modules.loading: loading project/report/project_task_burndown_chart_report_views.xml 
+2026-09-18 14:21:40,623 1 INFO soloodoo_uattest odoo.modules.loading: loading project/views/account_analytic_account_views.xml 
+2026-09-18 14:21:40,635 1 INFO soloodoo_uattest odoo.modules.loading: loading project/views/digest_digest_views.xml 
+2026-09-18 14:21:40,646 1 INFO soloodoo_uattest odoo.modules.loading: loading project/views/rating_rating_views.xml 
+2026-09-18 14:21:40,729 1 INFO soloodoo_uattest odoo.modules.loading: loading project/views/project_update_views.xml 
+2026-09-18 14:21:40,753 1 INFO soloodoo_uattest odoo.modules.loading: loading project/views/project_update_templates.xml 
+2026-09-18 14:21:40,765 1 INFO soloodoo_uattest odoo.modules.loading: loading project/views/project_project_stage_views.xml 
+2026-09-18 14:21:40,800 1 INFO soloodoo_uattest odoo.modules.loading: loading project/wizard/project_share_wizard_views.xml 
+2026-09-18 14:21:40,815 1 INFO soloodoo_uattest odoo.modules.loading: loading project/views/project_collaborator_views.xml 
+2026-09-18 14:21:40,830 1 INFO soloodoo_uattest odoo.modules.loading: loading project/views/project_task_type_views.xml 
+2026-09-18 14:21:40,870 1 INFO soloodoo_uattest odoo.modules.loading: loading project/views/project_project_views.xml 
+2026-09-18 14:21:41,015 1 INFO soloodoo_uattest odoo.modules.loading: loading project/views/project_task_views.xml 
+2026-09-18 14:21:41,265 1 INFO soloodoo_uattest odoo.modules.loading: loading project/views/project_tags_views.xml 
+2026-09-18 14:21:41,282 1 INFO soloodoo_uattest odoo.modules.loading: loading project/views/project_milestone_views.xml 
+2026-09-18 14:21:41,295 1 INFO soloodoo_uattest odoo.modules.loading: loading project/views/res_partner_views.xml 
+2026-09-18 14:21:41,310 1 INFO soloodoo_uattest odoo.modules.loading: loading project/views/res_config_settings_views.xml 
+2026-09-18 14:21:41,332 1 INFO soloodoo_uattest odoo.modules.loading: loading project/views/mail_activity_plan_views.xml 
+2026-09-18 14:21:41,353 1 INFO soloodoo_uattest odoo.modules.loading: loading project/views/mail_activity_type_views.xml 
+2026-09-18 14:21:41,359 1 INFO soloodoo_uattest odoo.modules.loading: loading project/views/project_sharing_project_task_views.xml 
+2026-09-18 14:21:41,416 1 INFO soloodoo_uattest odoo.modules.loading: loading project/views/project_portal_project_project_templates.xml 
+2026-09-18 14:21:41,441 1 INFO soloodoo_uattest odoo.modules.loading: loading project/views/project_portal_project_task_templates.xml 
+2026-09-18 14:21:41,486 1 INFO soloodoo_uattest odoo.modules.loading: loading project/views/project_task_templates.xml 
+2026-09-18 14:21:41,491 1 INFO soloodoo_uattest odoo.modules.loading: loading project/views/project_sharing_project_task_templates.xml 
+2026-09-18 14:21:41,504 1 INFO soloodoo_uattest odoo.modules.loading: loading project/report/project_report_views.xml 
+2026-09-18 14:21:41,523 1 INFO soloodoo_uattest odoo.modules.loading: loading project/data/ir_cron_data.xml 
+2026-09-18 14:21:41,532 1 INFO soloodoo_uattest odoo.modules.loading: loading project/data/mail_message_subtype_data.xml 
+2026-09-18 14:21:41,583 1 INFO soloodoo_uattest odoo.modules.loading: loading project/data/mail_template_data.xml 
+2026-09-18 14:21:41,597 1 INFO soloodoo_uattest odoo.modules.loading: loading project/data/project_data.xml 
+2026-09-18 14:21:41,608 1 INFO soloodoo_uattest odoo.modules.loading: loading project/wizard/project_task_type_delete_views.xml 
+2026-09-18 14:21:41,622 1 INFO soloodoo_uattest odoo.modules.loading: loading project/wizard/project_project_stage_delete_views.xml 
+2026-09-18 14:21:41,633 1 INFO soloodoo_uattest odoo.modules.loading: loading project/views/project_menus.xml 
+2026-09-18 14:21:41,800 1 INFO soloodoo_uattest odoo.modules.loading: Module project loaded in 2.32s, 2597 queries (+2597 other) 
+2026-09-18 14:21:41,801 1 INFO soloodoo_uattest odoo.modules.loading: Loading module spreadsheet_dashboard (43/71) 
+2026-09-18 14:21:41,879 1 INFO soloodoo_uattest odoo.modules.registry: module spreadsheet_dashboard: creating or updating database tables 
+2026-09-18 14:21:42,056 1 INFO soloodoo_uattest odoo.modules.loading: loading spreadsheet_dashboard/security/security.xml 
+2026-09-18 14:21:42,118 1 INFO soloodoo_uattest odoo.modules.loading: loading spreadsheet_dashboard/security/ir.model.access.csv 
+2026-09-18 14:21:42,134 1 INFO soloodoo_uattest odoo.modules.loading: loading spreadsheet_dashboard/views/spreadsheet_dashboard_views.xml 
+2026-09-18 14:21:42,152 1 INFO soloodoo_uattest odoo.modules.loading: loading spreadsheet_dashboard/views/menu_views.xml 
+2026-09-18 14:21:42,183 1 INFO soloodoo_uattest odoo.modules.loading: loading spreadsheet_dashboard/data/dashboard.xml 
+2026-09-18 14:21:42,222 1 INFO soloodoo_uattest odoo.modules.loading: Module spreadsheet_dashboard loaded in 0.42s, 269 queries (+269 other) 
+2026-09-18 14:21:42,222 1 INFO soloodoo_uattest odoo.modules.loading: Loading module stock (44/71) 
+2026-09-18 14:21:42,380 1 INFO soloodoo_uattest odoo.modules.registry: module stock: creating or updating database tables 
+2026-09-18 14:21:44,453 1 INFO soloodoo_uattest odoo.modules.loading: loading stock/security/stock_security.xml 
+2026-09-18 14:21:44,901 1 INFO soloodoo_uattest odoo.modules.loading: loading stock/security/ir.model.access.csv 
+2026-09-18 14:21:44,977 1 INFO soloodoo_uattest odoo.modules.loading: loading stock/data/digest_data.xml 
+2026-09-18 14:21:44,985 1 INFO soloodoo_uattest odoo.modules.loading: loading stock/data/mail_templates.xml 
+2026-09-18 14:21:44,998 1 INFO soloodoo_uattest odoo.modules.loading: loading stock/data/default_barcode_patterns.xml 
+2026-09-18 14:21:45,011 1 INFO soloodoo_uattest odoo.modules.loading: loading stock/data/stock_data.xml 
+2026-09-18 14:21:45,302 1 INFO soloodoo_uattest odoo.modules.loading: loading stock/data/stock_sequence_data.xml 
+2026-09-18 14:21:45,330 1 INFO soloodoo_uattest odoo.modules.loading: loading stock/data/stock_traceability_report_data.xml 
+2026-09-18 14:21:45,337 1 INFO soloodoo_uattest odoo.modules.loading: loading stock/report/report_stock_quantity.xml 
+2026-09-18 14:21:45,348 1 INFO soloodoo_uattest odoo.modules.loading: loading stock/report/report_stock_reception.xml 
+2026-09-18 14:21:45,374 1 INFO soloodoo_uattest odoo.modules.loading: loading stock/report/stock_report_views.xml 
+2026-09-18 14:21:45,435 1 INFO soloodoo_uattest odoo.modules.loading: loading stock/report/report_package_barcode.xml 
+2026-09-18 14:21:45,460 1 INFO soloodoo_uattest odoo.modules.loading: loading stock/report/report_lot_barcode.xml 
+2026-09-18 14:21:45,470 1 INFO soloodoo_uattest odoo.modules.loading: loading stock/report/report_location_barcode.xml 
+2026-09-18 14:21:45,480 1 INFO soloodoo_uattest odoo.modules.loading: loading stock/report/report_stockpicking_operations.xml 
+2026-09-18 14:21:45,494 1 INFO soloodoo_uattest odoo.modules.loading: loading stock/report/report_deliveryslip.xml 
+2026-09-18 14:21:45,524 1 INFO soloodoo_uattest odoo.modules.loading: loading stock/report/report_stockinventory.xml 
+2026-09-18 14:21:45,532 1 INFO soloodoo_uattest odoo.modules.loading: loading stock/report/report_stock_rule.xml 
+2026-09-18 14:21:45,561 1 INFO soloodoo_uattest odoo.modules.loading: loading stock/report/package_templates.xml 
+2026-09-18 14:21:45,567 1 INFO soloodoo_uattest odoo.modules.loading: loading stock/report/picking_templates.xml 
+2026-09-18 14:21:45,582 1 INFO soloodoo_uattest odoo.modules.loading: loading stock/report/product_templates.xml 
+2026-09-18 14:21:45,591 1 INFO soloodoo_uattest odoo.modules.loading: loading stock/report/product_packaging.xml 
+2026-09-18 14:21:45,598 1 INFO soloodoo_uattest odoo.modules.loading: loading stock/report/report_return_slip.xml 
+2026-09-18 14:21:45,607 1 INFO soloodoo_uattest odoo.modules.loading: loading stock/data/mail_template_data.xml 
+2026-09-18 14:21:45,616 1 INFO soloodoo_uattest odoo.modules.loading: loading stock/views/stock_menu_views.xml 
+2026-09-18 14:21:45,700 1 INFO soloodoo_uattest odoo.modules.loading: loading stock/wizard/stock_assign_serial_views.xml 
+2026-09-18 14:21:45,712 1 INFO soloodoo_uattest odoo.modules.loading: loading stock/wizard/stock_change_product_qty_views.xml 
+2026-09-18 14:21:45,721 1 INFO soloodoo_uattest odoo.modules.loading: loading stock/wizard/stock_picking_return_views.xml 
+2026-09-18 14:21:45,732 1 INFO soloodoo_uattest odoo.modules.loading: loading stock/wizard/stock_scheduler_compute_views.xml 
+2026-09-18 14:21:45,746 1 INFO soloodoo_uattest odoo.modules.loading: loading stock/wizard/stock_inventory_conflict.xml 
+2026-09-18 14:21:45,755 1 INFO soloodoo_uattest odoo.modules.loading: loading stock/wizard/stock_backorder_confirmation_views.xml 
+2026-09-18 14:21:45,762 1 INFO soloodoo_uattest odoo.modules.loading: loading stock/wizard/stock_quantity_history.xml 
+2026-09-18 14:21:45,768 1 INFO soloodoo_uattest odoo.modules.loading: loading stock/wizard/stock_request_count.xml 
+2026-09-18 14:21:45,777 1 INFO soloodoo_uattest odoo.modules.loading: loading stock/wizard/stock_replenishment_info.xml 
+2026-09-18 14:21:45,795 1 INFO soloodoo_uattest odoo.modules.loading: loading stock/wizard/stock_rules_report_views.xml 
+2026-09-18 14:21:45,804 1 INFO soloodoo_uattest odoo.modules.loading: loading stock/wizard/stock_warn_insufficient_qty_views.xml 
+2026-09-18 14:21:45,817 1 INFO soloodoo_uattest odoo.modules.loading: loading stock/wizard/product_replenish_views.xml 
+2026-09-18 14:21:45,828 1 INFO soloodoo_uattest odoo.modules.loading: loading stock/wizard/product_label_layout_views.xml 
+2026-09-18 14:21:45,836 1 INFO soloodoo_uattest odoo.modules.loading: loading stock/wizard/stock_track_confirmation_views.xml 
+2026-09-18 14:21:45,843 1 INFO soloodoo_uattest odoo.modules.loading: loading stock/wizard/stock_orderpoint_snooze_views.xml 
+2026-09-18 14:21:45,852 1 INFO soloodoo_uattest odoo.modules.loading: loading stock/wizard/stock_package_destination_views.xml 
+2026-09-18 14:21:45,860 1 INFO soloodoo_uattest odoo.modules.loading: loading stock/wizard/stock_inventory_adjustment_name.xml 
+2026-09-18 14:21:45,867 1 INFO soloodoo_uattest odoo.modules.loading: loading stock/wizard/stock_inventory_warning.xml 
+2026-09-18 14:21:45,878 1 INFO soloodoo_uattest odoo.modules.loading: loading stock/wizard/stock_label_type.xml 
+2026-09-18 14:21:45,885 1 INFO soloodoo_uattest odoo.modules.loading: loading stock/wizard/stock_lot_label_layout.xml 
+2026-09-18 14:21:45,891 1 INFO soloodoo_uattest odoo.modules.loading: loading stock/wizard/stock_quant_relocate.xml 
+2026-09-18 14:21:45,898 1 INFO soloodoo_uattest odoo.modules.loading: loading stock/views/res_partner_views.xml 
+2026-09-18 14:21:45,922 1 INFO soloodoo_uattest odoo.modules.loading: loading stock/views/product_strategy_views.xml 
+2026-09-18 14:21:45,951 1 INFO soloodoo_uattest odoo.modules.loading: loading stock/views/stock_lot_views.xml 
+2026-09-18 14:21:45,993 1 INFO soloodoo_uattest odoo.modules.loading: loading stock/views/stock_scrap_views.xml 
+2026-09-18 14:21:46,040 1 INFO soloodoo_uattest odoo.modules.loading: loading stock/views/stock_quant_views.xml 
+2026-09-18 14:21:46,260 1 INFO soloodoo_uattest odoo.modules.loading: loading stock/views/stock_warehouse_views.xml 
+2026-09-18 14:21:46,286 1 INFO soloodoo_uattest odoo.modules.loading: loading stock/views/stock_move_line_views.xml 
+2026-09-18 14:21:46,348 1 INFO soloodoo_uattest odoo.modules.loading: loading stock/views/stock_picking_views.xml 
+2026-09-18 14:21:46,517 1 INFO soloodoo_uattest odoo.modules.loading: loading stock/views/stock_picking_type_views.xml 
+2026-09-18 14:21:46,577 1 INFO soloodoo_uattest odoo.modules.loading: loading stock/views/stock_move_views.xml 
+2026-09-18 14:21:46,673 1 INFO soloodoo_uattest odoo.modules.loading: loading stock/views/product_views.xml 
+2026-09-18 14:21:46,859 1 INFO soloodoo_uattest odoo.modules.loading: loading stock/views/stock_location_views.xml 
+2026-09-18 14:21:46,930 1 INFO soloodoo_uattest odoo.modules.loading: loading stock/views/stock_orderpoint_views.xml 
+2026-09-18 14:21:46,986 1 INFO soloodoo_uattest odoo.modules.loading: loading stock/views/stock_storage_category_views.xml 
+2026-09-18 14:21:47,015 1 INFO soloodoo_uattest odoo.modules.loading: loading stock/views/res_config_settings_views.xml 
+2026-09-18 14:21:47,058 1 INFO soloodoo_uattest odoo.modules.loading: loading stock/views/report_stock_traceability.xml 
+2026-09-18 14:21:47,070 1 INFO soloodoo_uattest odoo.modules.loading: loading stock/views/stock_template.xml 
+2026-09-18 14:21:47,082 1 INFO soloodoo_uattest odoo.modules.loading: loading stock/views/stock_rule_views.xml 
+2026-09-18 14:21:47,118 1 INFO soloodoo_uattest odoo.modules.loading: loading stock/views/stock_package_level_views.xml 
+2026-09-18 14:21:47,137 1 INFO soloodoo_uattest odoo.modules.loading: loading stock/views/stock_package_type_view.xml 
+2026-09-18 14:21:47,163 1 INFO soloodoo_uattest odoo.modules.loading: loading stock/views/stock_forecasted.xml 
+2026-09-18 14:21:47,256 1 INFO soloodoo_uattest odoo.modules.loading: Module stock loaded in 5.03s, 5103 queries (+5103 other) 
+2026-09-18 14:21:47,256 1 INFO soloodoo_uattest odoo.modules.loading: Loading module account_add_gln (45/71) 
+2026-09-18 14:21:47,428 1 INFO soloodoo_uattest odoo.modules.registry: module account_add_gln: creating or updating database tables 
+2026-09-18 14:21:47,509 1 INFO soloodoo_uattest odoo.modules.loading: loading account_add_gln/views/res_partner_views.xml 
+2026-09-18 14:21:47,545 1 INFO soloodoo_uattest odoo.modules.loading: Module account_add_gln loaded in 0.29s, 96 queries (+96 other) 
+2026-09-18 14:21:47,546 1 INFO soloodoo_uattest odoo.modules.loading: Loading module account_edi_ubl_cii (46/71) 
+2026-09-18 14:21:47,710 1 INFO soloodoo_uattest odoo.modules.registry: module account_edi_ubl_cii: creating or updating database tables 
+2026-09-18 14:21:47,737 1 INFO soloodoo_uattest odoo.models: Prepare computation of res.partner.ubl_cii_format 
+2026-09-18 14:21:47,737 1 INFO soloodoo_uattest odoo.models: Prepare computation of res.partner.peppol_endpoint 
+2026-09-18 14:21:47,737 1 INFO soloodoo_uattest odoo.models: Prepare computation of res.partner.peppol_eas 
+2026-09-18 14:21:47,929 1 INFO soloodoo_uattest odoo.modules.loading: loading account_edi_ubl_cii/data/cii_22_templates.xml 
+2026-09-18 14:21:47,961 1 INFO soloodoo_uattest odoo.modules.loading: loading account_edi_ubl_cii/data/ubl_20_templates.xml 
+2026-09-18 14:21:48,080 1 INFO soloodoo_uattest odoo.modules.loading: loading account_edi_ubl_cii/data/ubl_21_templates.xml 
+2026-09-18 14:21:48,117 1 INFO soloodoo_uattest odoo.modules.loading: loading account_edi_ubl_cii/views/account_move_views.xml 
+2026-09-18 14:21:48,126 1 INFO soloodoo_uattest odoo.modules.loading: loading account_edi_ubl_cii/views/res_config_settings_views.xml 
+2026-09-18 14:21:48,146 1 INFO soloodoo_uattest odoo.modules.loading: loading account_edi_ubl_cii/views/res_partner_views.xml 
+2026-09-18 14:21:48,179 1 INFO soloodoo_uattest odoo.modules.loading: loading account_edi_ubl_cii/wizard/account_move_send_views.xml 
+2026-09-18 14:21:48,217 1 INFO soloodoo_uattest odoo.modules.loading: Module account_edi_ubl_cii loaded in 0.67s, 438 queries (+438 other) 
+2026-09-18 14:21:48,218 1 INFO soloodoo_uattest odoo.modules.loading: Loading module account_payment (47/71) 
+2026-09-18 14:21:48,329 1 INFO soloodoo_uattest odoo.modules.registry: module account_payment: creating or updating database tables 
+2026-09-18 14:21:48,529 1 INFO soloodoo_uattest odoo.modules.loading: loading account_payment/data/ir_config_parameter.xml 
+2026-09-18 14:21:48,536 1 INFO soloodoo_uattest odoo.modules.loading: loading account_payment/data/onboarding_data.xml 
+2026-09-18 14:21:48,553 1 INFO soloodoo_uattest odoo.modules.loading: loading account_payment/security/ir.model.access.csv 
+2026-09-18 14:21:48,569 1 INFO soloodoo_uattest odoo.modules.loading: loading account_payment/security/ir_rules.xml 
+2026-09-18 14:21:48,579 1 INFO soloodoo_uattest odoo.modules.loading: loading account_payment/views/account_payment_menus.xml 
+2026-09-18 14:21:48,611 1 INFO soloodoo_uattest odoo.modules.loading: loading account_payment/views/account_portal_templates.xml 
+2026-09-18 14:21:48,648 1 INFO soloodoo_uattest odoo.modules.loading: loading account_payment/views/account_move_views.xml 
+2026-09-18 14:21:48,664 1 INFO soloodoo_uattest odoo.modules.loading: loading account_payment/views/account_journal_views.xml 
+2026-09-18 14:21:48,677 1 INFO soloodoo_uattest odoo.modules.loading: loading account_payment/views/account_payment_views.xml 
+2026-09-18 14:21:48,688 1 INFO soloodoo_uattest odoo.modules.loading: loading account_payment/views/payment_provider_views.xml 
+2026-09-18 14:21:48,699 1 INFO soloodoo_uattest odoo.modules.loading: loading account_payment/views/payment_transaction_views.xml 
+2026-09-18 14:21:48,711 1 INFO soloodoo_uattest odoo.modules.loading: loading account_payment/wizards/account_payment_register_views.xml 
+2026-09-18 14:21:48,721 1 INFO soloodoo_uattest odoo.modules.loading: loading account_payment/wizards/payment_link_wizard_views.xml 
+2026-09-18 14:21:48,729 1 INFO soloodoo_uattest odoo.modules.loading: loading account_payment/wizards/payment_refund_wizard_views.xml 
+2026-09-18 14:21:48,736 1 INFO soloodoo_uattest odoo.modules.loading: loading account_payment/wizards/res_config_settings_views.xml 
+2026-09-18 14:21:48,813 1 INFO soloodoo_uattest odoo.modules.loading: Module account_payment loaded in 0.60s, 481 queries (+481 other) 
+2026-09-18 14:21:48,813 1 INFO soloodoo_uattest odoo.modules.loading: Loading module account_payment_term (48/71) 
+2026-09-18 14:21:49,000 1 INFO soloodoo_uattest odoo.modules.registry: module account_payment_term: creating or updating database tables 
+2026-09-18 14:21:49,051 1 INFO soloodoo_uattest odoo.modules.loading: loading account_payment_term/views/account_payment_term_views.xml 
+2026-09-18 14:21:49,085 1 INFO soloodoo_uattest odoo.modules.loading: Module account_payment_term loaded in 0.27s, 52 queries (+52 other) 
+2026-09-18 14:21:49,085 1 INFO soloodoo_uattest odoo.modules.loading: Loading module elmokrif_chantier (49/71) 
+2026-09-18 14:21:49,188 1 INFO soloodoo_uattest odoo.modules.registry: module elmokrif_chantier: creating or updating database tables 
+2026-09-18 14:21:49,374 1 INFO soloodoo_uattest odoo.modules.loading: loading elmokrif_chantier/security/chantier_groups.xml 
+2026-09-18 14:21:49,436 1 INFO soloodoo_uattest odoo.modules.loading: loading elmokrif_chantier/security/ir.model.access.csv 
+2026-09-18 14:21:49,449 1 INFO soloodoo_uattest odoo.modules.loading: loading elmokrif_chantier/security/chantier_rules.xml 
+2026-09-18 14:21:49,479 1 INFO soloodoo_uattest odoo.modules.loading: loading elmokrif_chantier/data/analytic_plan_data.xml 
+2026-09-18 14:21:49,742 1 INFO soloodoo_uattest odoo.modules.loading: loading elmokrif_chantier/data/chantier_sequence.xml 
+2026-09-18 14:21:49,767 1 INFO soloodoo_uattest odoo.modules.loading: loading elmokrif_chantier/data/chantier_health_cron.xml 
+2026-09-18 14:21:49,782 1 INFO soloodoo_uattest odoo.modules.loading: loading elmokrif_chantier/views/project_project_views.xml 
+2026-09-18 14:21:49,871 1 INFO soloodoo_uattest odoo.modules.loading: loading elmokrif_chantier/views/project_task_views.xml 
+2026-09-18 14:21:49,958 1 INFO soloodoo_uattest odoo.modules.loading: Module elmokrif_chantier loaded in 0.87s, 566 queries (+566 other) 
+2026-09-18 14:21:49,958 1 INFO soloodoo_uattest odoo.modules.loading: Loading module project_account (50/71) 
+2026-09-18 14:21:50,147 1 INFO soloodoo_uattest odoo.modules.registry: module project_account: creating or updating database tables 
+2026-09-18 14:21:50,183 1 INFO soloodoo_uattest odoo.modules.loading: loading project_account/views/account_analytic_line_views.xml 
+2026-09-18 14:21:50,219 1 INFO soloodoo_uattest odoo.modules.loading: loading project_account/views/project_project_views.xml 
+2026-09-18 14:21:50,254 1 INFO soloodoo_uattest odoo.modules.loading: loading project_account/views/project_task_views.xml 
+2026-09-18 14:21:50,279 1 INFO soloodoo_uattest odoo.modules.loading: loading project_account/views/project_sharing_project_task_views.xml 
+2026-09-18 14:21:50,309 1 INFO soloodoo_uattest odoo.modules.loading: Module project_account loaded in 0.35s, 135 queries (+135 other) 
+2026-09-18 14:21:50,309 1 INFO soloodoo_uattest odoo.modules.loading: Loading module project_sms (51/71) 
+2026-09-18 14:21:50,403 1 INFO soloodoo_uattest odoo.modules.registry: module project_sms: creating or updating database tables 
+2026-09-18 14:21:50,490 1 INFO soloodoo_uattest odoo.modules.loading: loading project_sms/views/project_stage_views.xml 
+2026-09-18 14:21:50,514 1 INFO soloodoo_uattest odoo.modules.loading: loading project_sms/views/project_task_type_views.xml 
+2026-09-18 14:21:50,536 1 INFO soloodoo_uattest odoo.modules.loading: loading project_sms/views/project_project_views.xml 
+2026-09-18 14:21:50,542 1 INFO soloodoo_uattest odoo.modules.loading: loading project_sms/views/project_task_views.xml 
+2026-09-18 14:21:50,549 1 INFO soloodoo_uattest odoo.modules.loading: loading project_sms/security/ir.model.access.csv 
+2026-09-18 14:21:50,561 1 INFO soloodoo_uattest odoo.modules.loading: loading project_sms/security/project_sms_security.xml 
+2026-09-18 14:21:50,589 1 INFO soloodoo_uattest odoo.modules.loading: Module project_sms loaded in 0.28s, 209 queries (+209 other) 
+2026-09-18 14:21:50,589 1 INFO soloodoo_uattest odoo.modules.loading: Loading module project_todo (52/71) 
+2026-09-18 14:21:50,689 1 INFO soloodoo_uattest odoo.modules.registry: module project_todo: creating or updating database tables 
+2026-09-18 14:21:50,775 1 INFO soloodoo_uattest odoo.modules.loading: loading project_todo/security/ir.model.access.csv 
+2026-09-18 14:21:50,790 1 INFO soloodoo_uattest odoo.modules.loading: loading project_todo/security/project_todo_security.xml 
+2026-09-18 14:21:50,828 1 INFO soloodoo_uattest odoo.modules.loading: loading project_todo/data/mail_activity_type_data.xml 
+2026-09-18 14:21:50,839 1 INFO soloodoo_uattest odoo.modules.loading: loading project_todo/data/todo_template.xml 
+2026-09-18 14:21:50,848 1 INFO soloodoo_uattest odoo.modules.loading: loading project_todo/views/project_task_views.xml 
+2026-09-18 14:21:50,903 1 INFO soloodoo_uattest odoo.modules.loading: loading project_todo/views/project_todo_menus.xml 
+2026-09-18 14:21:50,916 1 INFO soloodoo_uattest odoo.modules.loading: loading project_todo/wizard/mail_activity_todo_create.xml 
+2026-09-18 14:21:50,948 1 INFO soloodoo_uattest odoo.modules.loading: Module project_todo loaded in 0.36s, 266 queries (+266 other) 
+2026-09-18 14:21:50,949 1 INFO soloodoo_uattest odoo.modules.loading: Loading module snailmail_account (53/71) 
+2026-09-18 14:21:51,044 1 INFO soloodoo_uattest odoo.modules.registry: module snailmail_account: creating or updating database tables 
+2026-09-18 14:21:51,266 1 INFO soloodoo_uattest odoo.modules.loading: loading snailmail_account/views/res_config_settings_views.xml 
+2026-09-18 14:21:51,290 1 INFO soloodoo_uattest odoo.modules.loading: loading snailmail_account/wizard/account_move_send_views.xml 
+2026-09-18 14:21:51,322 1 INFO soloodoo_uattest odoo.modules.loading: Module snailmail_account loaded in 0.37s, 132 queries (+132 other) 
+2026-09-18 14:21:51,322 1 INFO soloodoo_uattest odoo.modules.loading: Loading module spreadsheet_account (54/71) 
+2026-09-18 14:21:51,418 1 INFO soloodoo_uattest odoo.modules.registry: module spreadsheet_account: creating or updating database tables 
+2026-09-18 14:21:51,496 1 INFO soloodoo_uattest odoo.modules.loading: Module spreadsheet_account loaded in 0.17s, 55 queries (+55 other) 
+2026-09-18 14:21:51,496 1 INFO soloodoo_uattest odoo.modules.loading: Loading module spreadsheet_dashboard_account (55/71) 
+2026-09-18 14:21:51,594 1 INFO soloodoo_uattest odoo.modules.loading: loading spreadsheet_dashboard_account/data/dashboards.xml 
+2026-09-18 14:21:51,664 1 INFO soloodoo_uattest odoo.modules.loading: Module spreadsheet_dashboard_account loaded in 0.17s, 29 queries (+29 other) 
+2026-09-18 14:21:51,664 1 INFO soloodoo_uattest odoo.modules.loading: Loading module stock_account (56/71) 
+2026-09-18 14:21:51,773 1 INFO soloodoo_uattest odoo.modules.registry: module stock_account: creating or updating database tables 
+2026-09-18 14:21:52,095 1 INFO soloodoo_uattest odoo.modules.loading: loading stock_account/security/stock_account_security.xml 
+2026-09-18 14:21:52,134 1 INFO soloodoo_uattest odoo.modules.loading: loading stock_account/security/ir.model.access.csv 
+2026-09-18 14:21:52,155 1 INFO soloodoo_uattest odoo.modules.loading: loading stock_account/data/stock_account_data.xml 
+2026-09-18 14:21:52,164 1 INFO soloodoo_uattest odoo.modules.loading: loading stock_account/views/stock_account_views.xml 
+2026-09-18 14:21:52,281 1 INFO soloodoo_uattest odoo.modules.loading: loading stock_account/views/res_config_settings_views.xml 
+2026-09-18 14:21:52,302 1 INFO soloodoo_uattest odoo.modules.loading: loading stock_account/data/product_data.xml 
+2026-09-18 14:21:52,312 1 INFO soloodoo_uattest odoo.modules.loading: loading stock_account/views/report_invoice.xml 
+2026-09-18 14:21:52,322 1 INFO soloodoo_uattest odoo.modules.loading: loading stock_account/views/stock_valuation_layer_views.xml 
+2026-09-18 14:21:52,408 1 INFO soloodoo_uattest odoo.modules.loading: loading stock_account/views/stock_quant_views.xml 
+2026-09-18 14:21:52,429 1 INFO soloodoo_uattest odoo.modules.loading: loading stock_account/views/product_views.xml 
+2026-09-18 14:21:52,549 1 INFO soloodoo_uattest odoo.modules.loading: loading stock_account/wizard/stock_request_count.xml 
+2026-09-18 14:21:52,556 1 INFO soloodoo_uattest odoo.modules.loading: loading stock_account/wizard/stock_valuation_layer_revaluation_views.xml 
+2026-09-18 14:21:52,563 1 INFO soloodoo_uattest odoo.modules.loading: loading stock_account/wizard/stock_quantity_history.xml 
+2026-09-18 14:21:52,571 1 INFO soloodoo_uattest odoo.modules.loading: loading stock_account/report/account_invoice_report_view.xml 
+2026-09-18 14:21:52,610 1 INFO soloodoo_uattest odoo.modules.loading: Module stock_account loaded in 0.95s, 735 queries (+735 other) 
+2026-09-18 14:21:52,610 1 INFO soloodoo_uattest odoo.modules.loading: Loading module stock_sms (57/71) 
+2026-09-18 14:21:52,716 1 INFO soloodoo_uattest odoo.modules.registry: module stock_sms: creating or updating database tables 
+2026-09-18 14:21:52,825 1 INFO soloodoo_uattest odoo.modules.loading: loading stock_sms/data/sms_data.xml 
+2026-09-18 14:21:52,834 1 INFO soloodoo_uattest odoo.modules.loading: loading stock_sms/views/res_config_settings_views.xml 
+2026-09-18 14:21:52,874 1 INFO soloodoo_uattest odoo.modules.loading: loading stock_sms/wizard/confirm_stock_sms_views.xml 
+2026-09-18 14:21:52,883 1 INFO soloodoo_uattest odoo.modules.loading: loading stock_sms/security/ir.model.access.csv 
+2026-09-18 14:21:52,904 1 INFO soloodoo_uattest odoo.modules.loading: loading stock_sms/security/sms_security.xml 
+2026-09-18 14:21:52,950 1 INFO soloodoo_uattest odoo.modules.loading: Module stock_sms loaded in 0.34s, 199 queries (+199 other) 
+2026-09-18 14:21:52,950 1 INFO soloodoo_uattest odoo.modules.loading: Loading module sale (58/71) 
+2026-09-18 14:21:53,083 1 INFO soloodoo_uattest odoo.modules.registry: module sale: creating or updating database tables 
+2026-09-18 14:21:53,860 1 INFO soloodoo_uattest odoo.modules.loading: loading sale/security/ir.model.access.csv 
+2026-09-18 14:21:53,910 1 INFO soloodoo_uattest odoo.modules.loading: loading sale/security/res_groups.xml 
+2026-09-18 14:21:53,954 1 INFO soloodoo_uattest odoo.modules.loading: loading sale/security/ir_rules.xml 
+2026-09-18 14:21:54,170 1 INFO soloodoo_uattest odoo.modules.loading: loading sale/report/account_invoice_report_views.xml 
+2026-09-18 14:21:54,193 1 INFO soloodoo_uattest odoo.modules.loading: loading sale/report/ir_actions_report_templates.xml 
+2026-09-18 14:21:54,225 1 INFO soloodoo_uattest odoo.modules.loading: loading sale/report/ir_actions_report.xml 
+2026-09-18 14:21:54,235 1 INFO soloodoo_uattest odoo.modules.loading: loading sale/report/sale_report_views.xml 
+2026-09-18 14:21:54,290 1 INFO soloodoo_uattest odoo.modules.loading: loading sale/data/ir_cron.xml 
+2026-09-18 14:21:54,301 1 INFO soloodoo_uattest odoo.modules.loading: loading sale/data/ir_sequence_data.xml 
+2026-09-18 14:21:54,307 1 INFO soloodoo_uattest odoo.modules.loading: loading sale/data/mail_activity_type_data.xml 
+2026-09-18 14:21:54,317 1 INFO soloodoo_uattest odoo.modules.loading: loading sale/data/mail_message_subtype_data.xml 
+2026-09-18 14:21:54,339 1 INFO soloodoo_uattest odoo.modules.loading: loading sale/data/mail_template_data.xml 
+2026-09-18 14:21:54,360 1 INFO soloodoo_uattest odoo.modules.loading: loading sale/data/ir_config_parameter.xml 
+2026-09-18 14:21:54,369 1 INFO soloodoo_uattest odoo.modules.loading: loading sale/data/onboarding_data.xml 
+2026-09-18 14:21:54,394 1 INFO soloodoo_uattest odoo.modules.loading: loading sale/wizard/account_accrued_orders_wizard_views.xml 
+2026-09-18 14:21:54,401 1 INFO soloodoo_uattest odoo.modules.loading: loading sale/wizard/mass_cancel_orders_views.xml 
+2026-09-18 14:21:54,412 1 INFO soloodoo_uattest odoo.modules.loading: loading sale/wizard/payment_link_wizard_views.xml 
+2026-09-18 14:21:54,426 1 INFO soloodoo_uattest odoo.modules.loading: loading sale/wizard/res_config_settings_views.xml 
+2026-09-18 14:21:54,459 1 INFO soloodoo_uattest odoo.modules.loading: loading sale/wizard/sale_make_invoice_advance_views.xml 
+2026-09-18 14:21:54,472 1 INFO soloodoo_uattest odoo.modules.loading: loading sale/wizard/sale_order_cancel_views.xml 
+2026-09-18 14:21:54,480 1 INFO soloodoo_uattest odoo.modules.loading: loading sale/wizard/sale_order_discount_views.xml 
+2026-09-18 14:21:54,487 1 INFO soloodoo_uattest odoo.modules.loading: loading sale/views/sale_order_views.xml 
+2026-09-18 14:21:54,664 1 INFO soloodoo_uattest odoo.modules.loading: loading sale/views/account_views.xml 
+2026-09-18 14:21:54,721 1 INFO soloodoo_uattest odoo.modules.loading: loading sale/views/crm_team_views.xml 
+2026-09-18 14:21:54,762 1 INFO soloodoo_uattest odoo.modules.loading: loading sale/views/mail_activity_views.xml 
+2026-09-18 14:21:54,766 1 INFO soloodoo_uattest odoo.modules.loading: loading sale/views/mail_activity_plan_views.xml 
+2026-09-18 14:21:54,772 1 INFO soloodoo_uattest odoo.modules.loading: loading sale/views/payment_views.xml 
+2026-09-18 14:21:54,796 1 INFO soloodoo_uattest odoo.modules.loading: loading sale/views/product_document_views.xml 
+2026-09-18 14:21:54,822 1 INFO soloodoo_uattest odoo.modules.loading: loading sale/views/product_packaging_views.xml 
+2026-09-18 14:21:54,844 1 INFO soloodoo_uattest odoo.modules.loading: loading sale/views/product_views.xml 
+2026-09-18 14:21:54,903 1 INFO soloodoo_uattest odoo.modules.loading: loading sale/views/res_partner_views.xml 
+2026-09-18 14:21:54,959 1 INFO soloodoo_uattest odoo.modules.loading: loading sale/views/sale_order_line_views.xml 
+2026-09-18 14:21:54,978 1 INFO soloodoo_uattest odoo.modules.loading: loading sale/views/sale_portal_templates.xml 
+2026-09-18 14:21:55,034 1 INFO soloodoo_uattest odoo.modules.loading: loading sale/views/utm_campaign_views.xml 
+2026-09-18 14:21:55,053 1 INFO soloodoo_uattest odoo.modules.loading: loading sale/views/sale_menus.xml 
+2026-09-18 14:21:55,303 1 INFO soloodoo_uattest odoo.modules.loading: Module sale loaded in 2.35s, 2505 queries (+2505 other) 
+2026-09-18 14:21:55,303 1 INFO soloodoo_uattest odoo.modules.loading: Loading module spreadsheet_dashboard_stock_account (59/71) 
+2026-09-18 14:21:55,541 1 INFO soloodoo_uattest odoo.modules.loading: loading spreadsheet_dashboard_stock_account/data/dashboards.xml 
+2026-09-18 14:21:55,602 1 INFO soloodoo_uattest odoo.modules.loading: Module spreadsheet_dashboard_stock_account loaded in 0.30s, 28 queries (+28 other) 
+2026-09-18 14:21:55,602 1 INFO soloodoo_uattest odoo.modules.loading: Loading module sale_async_emails (60/71) 
+2026-09-18 14:21:55,722 1 INFO soloodoo_uattest odoo.modules.registry: module sale_async_emails: creating or updating database tables 
+2026-09-18 14:21:55,792 1 INFO soloodoo_uattest odoo.modules.loading: loading sale_async_emails/data/ir_config_parameter.xml 
+2026-09-18 14:21:55,799 1 INFO soloodoo_uattest odoo.modules.loading: loading sale_async_emails/data/ir_cron.xml 
+2026-09-18 14:21:55,830 1 INFO soloodoo_uattest odoo.modules.loading: Module sale_async_emails loaded in 0.23s, 78 queries (+78 other) 
+2026-09-18 14:21:55,830 1 INFO soloodoo_uattest odoo.modules.loading: Loading module sale_management (61/71) 
+2026-09-18 14:21:56,039 1 INFO soloodoo_uattest odoo.modules.registry: module sale_management: creating or updating database tables 
+2026-09-18 14:21:56,279 1 INFO soloodoo_uattest odoo.modules.loading: loading sale_management/data/digest_data.xml 
+2026-09-18 14:21:56,295 1 INFO soloodoo_uattest odoo.modules.loading: loading sale_management/security/ir.model.access.csv 
+2026-09-18 14:21:56,313 1 INFO soloodoo_uattest odoo.modules.loading: loading sale_management/security/sale_management_security.xml 
+2026-09-18 14:21:56,345 1 INFO soloodoo_uattest odoo.modules.loading: loading sale_management/report/sale_report_templates.xml 
+2026-09-18 14:21:56,358 1 INFO soloodoo_uattest odoo.modules.loading: loading sale_management/views/sale_order_template_views.xml 
+2026-09-18 14:21:56,381 1 INFO soloodoo_uattest odoo.modules.loading: loading sale_management/views/digest_views.xml 
+2026-09-18 14:21:56,394 1 INFO soloodoo_uattest odoo.modules.loading: loading sale_management/views/res_config_settings_views.xml 
+2026-09-18 14:21:56,423 1 INFO soloodoo_uattest odoo.modules.loading: loading sale_management/views/sale_order_views.xml 
+2026-09-18 14:21:56,441 1 INFO soloodoo_uattest odoo.modules.loading: loading sale_management/views/sale_portal_templates.xml 
+2026-09-18 14:21:56,451 1 INFO soloodoo_uattest odoo.modules.loading: loading sale_management/views/sale_management_menus.xml 
+2026-09-18 14:21:56,492 1 INFO soloodoo_uattest odoo.modules.loading: Module sale_management loaded in 0.66s, 442 queries (+442 other) 
+2026-09-18 14:21:56,492 1 INFO soloodoo_uattest odoo.modules.loading: Loading module sale_product_configurator (62/71) 
+2026-09-18 14:21:56,691 1 INFO soloodoo_uattest odoo.modules.registry: module sale_product_configurator: creating or updating database tables 
+2026-09-18 14:21:56,791 1 INFO soloodoo_uattest odoo.modules.loading: loading sale_product_configurator/views/product_template_views.xml 
+2026-09-18 14:21:56,807 1 INFO soloodoo_uattest odoo.modules.loading: loading sale_product_configurator/views/sale_order_views.xml 
+2026-09-18 14:21:56,851 1 INFO soloodoo_uattest odoo.modules.loading: Module sale_product_configurator loaded in 0.36s, 122 queries (+122 other) 
+2026-09-18 14:21:56,851 1 INFO soloodoo_uattest odoo.modules.loading: Loading module sale_sms (63/71) 
+2026-09-18 14:21:56,980 1 INFO soloodoo_uattest odoo.modules.loading: loading sale_sms/security/ir.model.access.csv 
+2026-09-18 14:21:57,015 1 INFO soloodoo_uattest odoo.modules.loading: loading sale_sms/security/security.xml 
+2026-09-18 14:21:57,045 1 INFO soloodoo_uattest odoo.modules.loading: Module sale_sms loaded in 0.19s, 43 queries (+43 other) 
+2026-09-18 14:21:57,045 1 INFO soloodoo_uattest odoo.modules.loading: Loading module sale_stock (64/71) 
+2026-09-18 14:21:57,234 1 INFO soloodoo_uattest odoo.modules.registry: module sale_stock: creating or updating database tables 
+2026-09-18 14:21:57,740 1 INFO soloodoo_uattest odoo.modules.loading: loading sale_stock/security/sale_stock_security.xml 
+2026-09-18 14:21:57,757 1 INFO soloodoo_uattest odoo.modules.loading: loading sale_stock/security/ir.model.access.csv 
+2026-09-18 14:21:57,796 1 INFO soloodoo_uattest odoo.modules.loading: loading sale_stock/views/sale_order_views.xml 
+2026-09-18 14:21:57,898 1 INFO soloodoo_uattest odoo.modules.loading: loading sale_stock/views/stock_route_views.xml 
+2026-09-18 14:21:57,911 1 INFO soloodoo_uattest odoo.modules.loading: loading sale_stock/views/res_config_settings_views.xml 
+2026-09-18 14:21:57,982 1 INFO soloodoo_uattest odoo.modules.loading: loading sale_stock/views/sale_stock_portal_template.xml 
+2026-09-18 14:21:57,999 1 INFO soloodoo_uattest odoo.modules.loading: loading sale_stock/views/stock_lot_views.xml 
+2026-09-18 14:21:58,013 1 INFO soloodoo_uattest odoo.modules.loading: loading sale_stock/views/res_users_views.xml 
+2026-09-18 14:21:58,052 1 INFO soloodoo_uattest odoo.modules.loading: loading sale_stock/report/sale_order_report_templates.xml 
+2026-09-18 14:21:58,067 1 INFO soloodoo_uattest odoo.modules.loading: loading sale_stock/report/stock_report_deliveryslip.xml 
+2026-09-18 14:21:58,082 1 INFO soloodoo_uattest odoo.modules.loading: loading sale_stock/data/mail_templates.xml 
+2026-09-18 14:21:58,099 1 INFO soloodoo_uattest odoo.modules.loading: loading sale_stock/data/sale_stock_data.xml 
+2026-09-18 14:21:58,106 1 INFO soloodoo_uattest odoo.modules.loading: loading sale_stock/wizard/stock_rules_report_views.xml 
+2026-09-18 14:21:58,120 1 INFO soloodoo_uattest odoo.modules.loading: loading sale_stock/wizard/sale_order_cancel_views.xml 
+2026-09-18 14:21:58,188 1 INFO soloodoo_uattest odoo.modules.loading: Module sale_stock loaded in 1.14s, 654 queries (+654 other) 
+2026-09-18 14:21:58,188 1 INFO soloodoo_uattest odoo.modules.loading: Loading module spreadsheet_dashboard_sale (65/71) 
+2026-09-18 14:21:58,521 1 INFO soloodoo_uattest odoo.modules.loading: loading spreadsheet_dashboard_sale/data/dashboards.xml 
+2026-09-18 14:21:58,655 1 INFO soloodoo_uattest odoo.modules.loading: Module spreadsheet_dashboard_sale loaded in 0.47s, 33 queries (+33 other) 
+2026-09-18 14:21:58,656 1 INFO soloodoo_uattest odoo.modules.loading: Loading module elmokrif_sale_chantier (66/71) 
+2026-09-18 14:21:58,861 1 INFO soloodoo_uattest odoo.modules.registry: module elmokrif_sale_chantier: creating or updating database tables 
+2026-09-18 14:21:59,326 1 INFO soloodoo_uattest odoo.modules.loading: loading elmokrif_sale_chantier/views/res_company_views.xml 
+2026-09-18 14:21:59,351 1 INFO soloodoo_uattest odoo.modules.loading: loading elmokrif_sale_chantier/views/res_partner_views.xml 
+2026-09-18 14:21:59,378 1 INFO soloodoo_uattest odoo.modules.loading: loading elmokrif_sale_chantier/views/sale_order_views.xml 
+2026-09-18 14:21:59,436 1 INFO soloodoo_uattest odoo.modules.loading: loading elmokrif_sale_chantier/views/account_move_views.xml 
+2026-09-18 14:21:59,460 1 INFO soloodoo_uattest odoo.modules.loading: loading elmokrif_sale_chantier/views/project_project_views.xml 
+2026-09-18 14:21:59,483 1 INFO soloodoo_uattest odoo.modules.loading: loading elmokrif_sale_chantier/views/sale_order_report.xml 
+2026-09-18 14:21:59,528 1 INFO soloodoo_uattest odoo.modules.loading: Module elmokrif_sale_chantier loaded in 0.87s, 409 queries (+409 other) 
+2026-09-18 14:21:59,529 1 INFO soloodoo_uattest odoo.modules.loading: Loading module sale_pdf_quote_builder (67/71) 
+2026-09-18 14:21:59,696 1 INFO soloodoo_uattest odoo.modules.registry: module sale_pdf_quote_builder: creating or updating database tables 
+2026-09-18 14:21:59,856 1 INFO soloodoo_uattest odoo.modules.loading: loading sale_pdf_quote_builder/report/ir_actions_report.xml 
+2026-09-18 14:21:59,870 1 INFO soloodoo_uattest odoo.modules.loading: loading sale_pdf_quote_builder/views/sale_order_template_views.xml 
+2026-09-18 14:21:59,886 1 INFO soloodoo_uattest odoo.modules.loading: loading sale_pdf_quote_builder/wizards/res_config_settings_views.xml 
+2026-09-18 14:21:59,976 1 INFO soloodoo_uattest odoo.modules.loading: Module sale_pdf_quote_builder loaded in 0.45s, 181 queries (+181 other) 
+2026-09-18 14:21:59,976 1 INFO soloodoo_uattest odoo.modules.loading: Loading module sale_service (68/71) 
+2026-09-18 14:22:00,196 1 INFO soloodoo_uattest odoo.modules.registry: module sale_service: creating or updating database tables 
+2026-09-18 14:22:00,274 1 INFO soloodoo_uattest odoo.modules.loading: Module sale_service loaded in 0.30s, 58 queries (+58 other) 
+2026-09-18 14:22:00,274 1 INFO soloodoo_uattest odoo.modules.loading: Loading module elmokrif_browser_tests (69/71) 
+2026-09-18 14:22:00,436 1 INFO soloodoo_uattest odoo.modules.loading: Module elmokrif_browser_tests loaded in 0.16s, 16 queries (+16 other) 
+2026-09-18 14:22:00,436 1 INFO soloodoo_uattest odoo.modules.loading: Loading module sale_project (70/71) 
+2026-09-18 14:22:00,551 1 INFO soloodoo_uattest odoo.modules.registry: module sale_project: creating or updating database tables 
+2026-09-18 14:22:00,768 1 INFO soloodoo_uattest odoo.modules.loading: loading sale_project/security/ir.model.access.csv 
+2026-09-18 14:22:00,781 1 INFO soloodoo_uattest odoo.modules.loading: loading sale_project/security/sale_project_security.xml 
+2026-09-18 14:22:00,791 1 INFO soloodoo_uattest odoo.modules.loading: loading sale_project/views/product_views.xml 
+2026-09-18 14:22:00,806 1 INFO soloodoo_uattest odoo.modules.loading: loading sale_project/views/project_task_views.xml 
+2026-09-18 14:22:00,925 1 INFO soloodoo_uattest odoo.modules.loading: loading sale_project/views/sale_order_line_views.xml 
+2026-09-18 14:22:00,943 1 INFO soloodoo_uattest odoo.modules.loading: loading sale_project/views/sale_order_views.xml 
+2026-09-18 14:22:00,961 1 INFO soloodoo_uattest odoo.modules.loading: loading sale_project/views/sale_project_portal_templates.xml 
+2026-09-18 14:22:00,970 1 INFO soloodoo_uattest odoo.modules.loading: loading sale_project/views/project_sharing_views.xml 
+2026-09-18 14:22:00,981 1 INFO soloodoo_uattest odoo.modules.loading: loading sale_project/views/project_views.xml 
+2026-09-18 14:22:01,030 1 INFO soloodoo_uattest odoo.modules.loading: Module sale_project loaded in 0.59s, 556 queries (+556 other) 
+2026-09-18 14:22:01,031 1 INFO soloodoo_uattest odoo.modules.loading: Loading module sale_project_stock (71/71) 
+2026-09-18 14:22:01,126 1 INFO soloodoo_uattest odoo.modules.registry: module sale_project_stock: creating or updating database tables 
+2026-09-18 14:22:01,163 1 INFO soloodoo_uattest odoo.modules.loading: loading sale_project_stock/views/stock_move_views.xml 
+2026-09-18 14:22:01,298 1 INFO soloodoo_uattest odoo.modules.loading: Module sale_project_stock loaded in 0.27s, 58 queries (+58 other) 
+2026-09-18 14:22:01,298 1 INFO soloodoo_uattest odoo.modules.loading: 71 modules loaded in 48.44s, 43714 queries (+43715 extra) 
+2026-09-18 14:22:02,213 1 INFO soloodoo_uattest odoo.modules.loading: Modules loaded. 
+2026-09-18 14:22:02,755 1 INFO soloodoo_uattest odoo.modules.registry: Registry loaded in 62.507s 
+2026-09-18 14:22:02,756 1 INFO soloodoo_uattest odoo.service.server: Starting post tests 
+2026-09-18 14:22:02,885 1 INFO soloodoo_uattest odoo.addons.base.models.ir_qweb: Pregenerating assets bundles 
+2026-09-18 14:22:04,241 1 INFO soloodoo_uattest odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/3453bcf/bus.websocket_worker_assets.min.js (id:459) 
+2026-09-18 14:22:04,276 1 INFO soloodoo_uattest odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/3ce7b96/mail.assets_discuss_public_test_tours.min.js (id:460) 
+2026-09-18 14:22:04,288 1 INFO soloodoo_uattest odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/a36cf01/mail.assets_lamejs.min.js (id:461) 
+2026-09-18 14:22:04,425 1 INFO soloodoo_uattest odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/093978f/mail.assets_odoo_sfu.min.js (id:462) 
+2026-09-18 14:22:05,019 1 INFO soloodoo_uattest odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/b6de4ca/mail.assets_public.min.js (id:463) 
+2026-09-18 14:22:06,327 1 INFO soloodoo_uattest odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/23ae789/project.webclient.min.js (id:464) 
+2026-09-18 14:22:06,343 1 INFO soloodoo_uattest odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/09a73e2/snailmail.report_assets_snailmail.min.js (id:465) 
+2026-09-18 14:22:06,347 1 INFO soloodoo_uattest odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/cf83e13/spreadsheet.assets_print.min.js (id:466) 
+2026-09-18 14:22:06,486 1 INFO soloodoo_uattest odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/0a9bfc4/spreadsheet.o_spreadsheet.min.js (id:467) 
+2026-09-18 14:22:06,695 1 INFO soloodoo_uattest odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/480022a/spreadsheet.public_spreadsheet.min.js (id:468) 
+2026-09-18 14:22:06,752 1 INFO soloodoo_uattest odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/3505200/web.__assets_tests_call__.min.js (id:469) 
+2026-09-18 14:22:06,779 1 INFO soloodoo_uattest odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/105f885/web.ace_lib.min.js (id:470) 
+2026-09-18 14:22:06,787 1 INFO soloodoo_uattest odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/8803394/web.assets_clickbot.min.js (id:471) 
+2026-09-18 14:22:06,909 1 INFO soloodoo_uattest odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/24fedb3/web.assets_emoji.min.js (id:472) 
+2026-09-18 14:22:07,288 1 INFO soloodoo_uattest odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/d055007/web.assets_frontend_lazy.min.js (id:473) 
+2026-09-18 14:22:07,297 1 INFO soloodoo_uattest odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/e009f4d/web.assets_frontend_minimal.min.js (id:474) 
+2026-09-18 14:22:07,336 1 INFO soloodoo_uattest odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/9f34f4e/web.assets_tests.min.js (id:475) 
+2026-09-18 14:22:08,493 1 INFO soloodoo_uattest odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/c426b09/web.assets_web.min.js (id:476) 
+2026-09-18 14:22:09,564 1 INFO soloodoo_uattest odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/c426b09/web.assets_web_dark.min.js (id:477) 
+2026-09-18 14:22:09,570 1 INFO soloodoo_uattest odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/a392257/web.chartjs_lib.min.js (id:478) 
+2026-09-18 14:22:09,811 1 INFO soloodoo_uattest odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/f94b140/web.qunit_mobile_suite_tests.min.js (id:479) 
+2026-09-18 14:22:12,296 1 INFO soloodoo_uattest odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/26ad308/web.qunit_suite_tests.min.js (id:480) 
+2026-09-18 14:22:12,312 1 INFO soloodoo_uattest odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/4c1f8aa/web.report_assets_common.min.js (id:481) 
+2026-09-18 14:22:12,315 1 INFO soloodoo_uattest odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/cf83e13/web.report_assets_pdf.min.js (id:482) 
+2026-09-18 14:22:13,726 1 INFO soloodoo_uattest odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/7f6875a/web.tests_assets.min.js (id:483) 
+2026-09-18 14:22:13,839 1 INFO soloodoo_uattest odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/4cc29a9/web_editor.assets_legacy_wysiwyg.min.js (id:484) 
+2026-09-18 14:22:14,061 1 INFO soloodoo_uattest odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/306a16a/web_editor.assets_wysiwyg.min.js (id:485) 
+2026-09-18 14:22:14,244 1 INFO soloodoo_uattest odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/e0ef46d/web_editor.backend_assets_wysiwyg.min.js (id:486) 
+2026-09-18 14:22:14,688 1 INFO soloodoo_uattest odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/05ea9d0/web_editor.mocha_tests.min.js (id:487) 
+2026-09-18 14:22:14,763 1 INFO soloodoo_uattest odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/81c701b/web_editor.wysiwyg_iframe_editor_assets.min.js (id:488) 
+2026-09-18 14:22:14,764 1 INFO soloodoo_uattest odoo.addons.base.models.ir_qweb: JS Assets bundles generated in 10.582406759262085 seconds 
+2026-09-18 14:22:14,766 1 INFO soloodoo_uattest odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/cf83e13/bus.websocket_worker_assets.min.css (id:489) 
+2026-09-18 14:22:14,768 1 INFO soloodoo_uattest odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/cf83e13/mail.assets_discuss_public_test_tours.min.css (id:490) 
+2026-09-18 14:22:14,770 1 INFO soloodoo_uattest odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/cf83e13/mail.assets_lamejs.min.css (id:491) 
+2026-09-18 14:22:14,773 1 INFO soloodoo_uattest odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/cf83e13/mail.assets_odoo_sfu.min.css (id:492) 
+2026-09-18 14:22:15,296 1 INFO soloodoo_uattest odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/070da3e/mail.assets_public.min.css (id:493) 
+2026-09-18 14:22:16,088 1 INFO soloodoo_uattest odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/2b686e7/project.webclient.min.css (id:494) 
+2026-09-18 14:22:16,129 1 INFO soloodoo_uattest odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/be365dd/snailmail.report_assets_snailmail.min.css (id:495) 
+2026-09-18 14:22:16,136 1 INFO soloodoo_uattest odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/8d1638d/spreadsheet.assets_print.min.css (id:496) 
+2026-09-18 14:22:16,140 1 INFO soloodoo_uattest odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/cf83e13/spreadsheet.o_spreadsheet.min.css (id:497) 
+2026-09-18 14:22:16,468 1 INFO soloodoo_uattest odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/9cfc969/spreadsheet.public_spreadsheet.min.css (id:498) 
+2026-09-18 14:22:16,472 1 INFO soloodoo_uattest odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/cf83e13/stock.assets_stock_print_report.min.css (id:499) 
+2026-09-18 14:22:16,475 1 INFO soloodoo_uattest odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/cf83e13/web.__assets_tests_call__.min.css (id:500) 
+2026-09-18 14:22:16,477 1 INFO soloodoo_uattest odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/cf83e13/web.ace_lib.min.css (id:501) 
+2026-09-18 14:22:16,479 1 INFO soloodoo_uattest odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/cf83e13/web.assets_clickbot.min.css (id:502) 
+2026-09-18 14:22:16,482 1 INFO soloodoo_uattest odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/cf83e13/web.assets_emoji.min.css (id:503) 
+2026-09-18 14:22:17,122 1 INFO soloodoo_uattest odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/a2ed931/web.assets_frontend.min.css (id:504) 
+2026-09-18 14:22:17,125 1 INFO soloodoo_uattest odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/cf83e13/web.assets_tests.min.css (id:505) 
+2026-09-18 14:22:18,091 1 INFO soloodoo_uattest odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/3fc8a8f/web.assets_web.min.css (id:506) 
+2026-09-18 14:22:19,011 1 INFO soloodoo_uattest odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/bf1fbcb/web.assets_web_dark.min.css (id:507) 
+2026-09-18 14:22:19,014 1 INFO soloodoo_uattest odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/cf83e13/web.chartjs_lib.min.css (id:508) 
+2026-09-18 14:22:19,018 1 INFO soloodoo_uattest odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/cf83e13/web.qunit_mobile_suite_tests.min.css (id:509) 
+2026-09-18 14:22:19,142 1 INFO soloodoo_uattest odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/29e3f6e/web.qunit_suite_tests.min.css (id:510) 
+2026-09-18 14:22:19,724 1 INFO soloodoo_uattest odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/6055013/web.report_assets_common.min.css (id:511) 
+2026-09-18 14:22:19,729 1 INFO soloodoo_uattest odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/5d75526/web.report_assets_pdf.min.css (id:512) 
+2026-09-18 14:22:20,671 1 INFO soloodoo_uattest odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/37876c4/web.tests_assets.min.css (id:513) 
+2026-09-18 14:22:20,674 1 INFO soloodoo_uattest odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/cf83e13/web_editor.assets_legacy_wysiwyg.min.css (id:514) 
+2026-09-18 14:22:20,722 1 INFO soloodoo_uattest odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/60026ee/web_editor.assets_tests_styles.min.css (id:515) 
+2026-09-18 14:22:20,843 1 INFO soloodoo_uattest odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/29e3f6e/web_editor.assets_wysiwyg.min.css (id:516) 
+2026-09-18 14:22:20,972 1 INFO soloodoo_uattest odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/29e3f6e/web_editor.backend_assets_wysiwyg.min.css (id:517) 
+2026-09-18 14:22:20,975 1 INFO soloodoo_uattest odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/cf83e13/web_editor.mocha_tests.min.css (id:518) 
+2026-09-18 14:22:21,106 1 INFO soloodoo_uattest odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/35bdacc/web_editor.wysiwyg_iframe_editor_assets.min.css (id:519) 
+2026-09-18 14:22:21,107 1 INFO soloodoo_uattest odoo.addons.base.models.ir_qweb: CSS Assets bundles generated in 6.343321800231934 seconds 
+2026-09-18 14:22:21,804 1 INFO soloodoo_uattest odoo.addons.mail.models.mail_mail: Mail (mail.mail) with ID 1 and Message-Id '<604088513581690.1789741341.730554580688477-openerp-message-notify@018fb6130139>' from 'odoobot@example.com' to (redacted) 'b*************************on@example.test' successfully sent 
+2026-09-18 14:22:21,804 1 INFO soloodoo_uattest odoo.addons.mail.models.mail_mail: Total emails tried by SMTP: 1 
+2026-09-18 14:22:21,841 1 INFO soloodoo_uattest odoo.models.unlink: User #1 deleted mail.mail records with IDs: [1] 
+2026-09-18 14:22:21,841 1 INFO soloodoo_uattest odoo.addons.mail.models.mail_mail: Sent batch 1 emails via mail server ID #False 
+2026-09-18 14:22:21,858 1 INFO soloodoo_uattest odoo.addons.elmokrif_browser_tests.tests.test_sale_chantier_browser: Starting TestSaleChantierBrowser.test_salesperson_send_followup_confirm_and_accountant_invoice ... 
+2026-09-18 14:22:23,907 1 INFO soloodoo_uattest odoo.addons.elmokrif_browser_tests.tests.test_sale_chantier_browser.TestSaleChantierBrowser: Chrome pid: 16 
+2026-09-18 14:22:23,907 1 INFO soloodoo_uattest odoo.addons.elmokrif_browser_tests.tests.test_sale_chantier_browser.TestSaleChantierBrowser: Chrome headless temporary user profile dir: /tmp/tmp3sxe6gjh_chrome_odoo 
+2026-09-18 14:22:23,908 1 INFO soloodoo_uattest odoo.addons.elmokrif_browser_tests.tests.test_sale_chantier_browser.TestSaleChantierBrowser: Issuing json command http://127.0.0.1:46005/json/version 
+2026-09-18 14:22:23,915 1 INFO soloodoo_uattest odoo.tests.common.requests: request http://127.0.0.1:46005/json/version with timeout 3 increased to 10s during tests 
+2026-09-18 14:22:24,246 1 INFO soloodoo_uattest odoo.addons.elmokrif_browser_tests.tests.test_sale_chantier_browser.TestSaleChantierBrowser: Browser version: Chrome/153.0.8010.36 
+2026-09-18 14:22:24,247 1 INFO soloodoo_uattest odoo.addons.elmokrif_browser_tests.tests.test_sale_chantier_browser.TestSaleChantierBrowser: Issuing json command http://127.0.0.1:46005/json 
+2026-09-18 14:22:24,249 1 INFO soloodoo_uattest odoo.tests.common.requests: request http://127.0.0.1:46005/json with timeout 3 increased to 10s during tests 
+2026-09-18 14:22:24,315 1 INFO soloodoo_uattest odoo.addons.elmokrif_browser_tests.tests.test_sale_chantier_browser.TestSaleChantierBrowser: Websocket url found: ws://127.0.0.1:46005/devtools/page/D4B655DB2534377294B367E0F8DB5F45 
+2026-09-18 14:22:24,364 1 INFO soloodoo_uattest odoo.addons.elmokrif_browser_tests.tests.test_sale_chantier_browser.TestSaleChantierBrowser: Enable chrome headless console log notification 
+2026-09-18 14:22:24,405 1 INFO soloodoo_uattest odoo.addons.elmokrif_browser_tests.tests.test_sale_chantier_browser.TestSaleChantierBrowser: Chrome headless enable page notifications 
+2026-09-18 14:22:24,486 1 INFO soloodoo_uattest odoo.addons.base.models.res_users: Login successful for db:soloodoo_uattest login:browser_chantier_salesperson from n/a 
+2026-09-18 14:22:24,497 1 INFO soloodoo_uattest odoo.addons.elmokrif_browser_tests.tests.test_sale_chantier_browser.TestSaleChantierBrowser: Setting session cookie in browser 
+2026-09-18 14:22:24,503 1 INFO soloodoo_uattest odoo.addons.elmokrif_browser_tests.tests.test_sale_chantier_browser.TestSaleChantierBrowser: Open "http://127.0.0.1:8069/web#id=1&model=sale.order&view_type=form" in browser 
+2026-09-18 14:22:24,503 1 INFO soloodoo_uattest odoo.addons.elmokrif_browser_tests.tests.test_sale_chantier_browser.TestSaleChantierBrowser: Navigating to: "http://127.0.0.1:8069/web#id=1&model=sale.order&view_type=form" 
+2026-09-18 14:22:24,534 1 INFO soloodoo_uattest odoo.addons.base.models.ir_http: Generating routing map for key None 
+2026-09-18 14:22:24,810 1 INFO soloodoo_uattest werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:24] "GET /web HTTP/1.1" 200 - 63 0.038 0.246
+2026-09-18 14:22:24,815 1 INFO soloodoo_uattest odoo.addons.elmokrif_browser_tests.tests.test_sale_chantier_browser.TestSaleChantierBrowser: Navigation result: {'frameId': 'D4B655DB2534377294B367E0F8DB5F45', 'loaderId': '6536CF4AEAF4B5C0EEC061557613ADD3', 'isDownload': False} 
+2026-09-18 14:22:24,815 1 INFO soloodoo_uattest odoo.addons.elmokrif_browser_tests.tests.test_sale_chantier_browser.TestSaleChantierBrowser: Evaluate ready code "odoo.isTourReady('elmokrif_sale_chantier_send')" 
+2026-09-18 14:22:24,864 1 INFO soloodoo_uattest werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:24] "GET /web/assets/3fc8a8f/web.assets_web.min.css HTTP/1.1" 200 - 4 0.008 0.006
+2026-09-18 14:22:24,869 1 INFO soloodoo_uattest werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:24] "GET /web/webclient/load_menus/75b0b50f1e74575c77e6601b3ab49590d4140eb0711939475e0b58e963dd0e6c HTTP/1.1" 200 - 3 0.002 0.015
+2026-09-18 14:22:24,878 1 INFO soloodoo_uattest werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:24] "GET /web/assets/c426b09/web.assets_web.min.js HTTP/1.1" 200 - 4 0.003 0.023
+2026-09-18 14:22:24,884 1 INFO soloodoo_uattest werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:24] "GET /web/webclient/translations/74586edbc413758d2eb4597492c10195482d6217?lang=en_US HTTP/1.1" 200 - 4 0.004 0.022
+2026-09-18 14:22:24,902 1 INFO soloodoo_uattest werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:24] "GET /web/manifest.webmanifest HTTP/1.1" 200 - 10 0.010 0.033
+2026-09-18 14:22:24,931 1 INFO soloodoo_uattest werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:24] "GET /web/assets/9f34f4e/web.assets_tests.min.js HTTP/1.1" 200 - 4 0.002 0.008
+2026-09-18 14:22:25,384 1 INFO soloodoo_uattest werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:25] "GET /bus/websocket_worker_bundle?v=17.0-3 HTTP/1.1" 200 - 4 0.002 0.006
+2026-09-18 14:22:25,487 1 INFO soloodoo_uattest odoo.addons.elmokrif_browser_tests.tests.test_sale_chantier_browser.TestSaleChantierBrowser: Evaluate test code "odoo.startTour('elmokrif_sale_chantier_send', {"stepDelay": 0, "keepWatchBrowser": false, "startUrl": "/web#id=1&model=sale.order&view_type=form"})" 
+2026-09-18 14:22:25,621 1 INFO soloodoo_uattest werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:25] "POST /mail/init_messaging HTTP/1.1" 200 - 94 0.121 0.101
+2026-09-18 14:22:25,637 1 INFO soloodoo_uattest werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:25] "GET /web/service-worker.js HTTP/1.1" 200 - 2 0.001 0.206
+2026-09-18 14:22:25,661 1 INFO soloodoo_uattest werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:25] "POST /web/dataset/call_kw/res.users/systray_get_activities HTTP/1.1" 200 - 5 0.018 0.175
+2026-09-18 14:22:25,740 1 INFO soloodoo_uattest werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:25] "GET /web/image?model=res.users&field=avatar_128&id=6 HTTP/1.1" 200 - 17 0.056 0.176
+2026-09-18 14:22:25,750 1 INFO soloodoo_uattest werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:25] "GET /websocket?version=17.0-3 HTTP/1.1" 503 - 3 0.007 0.179
+2026-09-18 14:22:26,157 1 INFO ? werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:26] "GET /web/static/img/odoo-icon-192x192.png HTTP/1.1" 200 - 0 0.000 0.653
+2026-09-18 14:22:26,157 1 INFO ? werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:26] "GET /web/static/img/favicon.ico HTTP/1.1" 200 - 0 0.000 0.787
+2026-09-18 14:22:26,160 1 INFO ? werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:26] "GET /web/static/src/libs/fontawesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 200 - 0 0.000 0.507
+2026-09-18 14:22:26,165 1 INFO ? werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:26] "GET /web/static/lib/odoo_ui_icons/fonts/odoo_ui_icons.woff2 HTTP/1.1" 200 - 0 0.000 0.538
+2026-09-18 14:22:26,179 1 INFO soloodoo_uattest werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:26] "POST /web/dataset/call_kw/sale.order/get_views HTTP/1.1" 200 - 97 0.173 0.323
+2026-09-18 14:22:26,186 1 INFO soloodoo_uattest werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:26] "POST /mail/load_message_failures HTTP/1.1" 200 - 4 0.003 0.435
+2026-09-18 14:22:26,201 1 INFO soloodoo_uattest werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:26] "GET /web/offline HTTP/1.1" 200 - 7 0.003 0.037
+2026-09-18 14:22:26,385 1 INFO soloodoo_uattest werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:26] "POST /web/dataset/call_kw/sale.order/web_read HTTP/1.1" 200 - 103 0.068 0.091
+2026-09-18 14:22:26,536 1 INFO soloodoo_uattest werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:26] "GET /web/bundle/web_editor.backend_assets_wysiwyg?lang=en_US HTTP/1.1" 200 - 2 0.001 0.004
+2026-09-18 14:22:26,561 1 INFO soloodoo_uattest werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:26] "GET /web/assets/29e3f6e/web_editor.backend_assets_wysiwyg.min.css HTTP/1.1" 200 - 4 0.004 0.008
+2026-09-18 14:22:26,572 1 INFO soloodoo_uattest werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:26] "GET /web/assets/e0ef46d/web_editor.backend_assets_wysiwyg.min.js HTTP/1.1" 200 - 4 0.004 0.014
+2026-09-18 14:22:26,684 1 INFO soloodoo_uattest werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:26] "POST /web/dataset/call_kw/ir.ui.view/render_public_asset HTTP/1.1" 200 - 9 0.010 0.019
+2026-09-18 14:22:26,728 1 INFO ? werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:26] "GET /web/static/img/openhand.cur HTTP/1.1" 200 - 0 0.000 0.003
+2026-09-18 14:22:26,909 1 INFO soloodoo_uattest werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:26] "POST /mail/thread/data HTTP/1.1" 200 - 26 0.035 0.047
+2026-09-18 14:22:26,953 1 INFO soloodoo_uattest werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:26] "POST /mail/thread/messages HTTP/1.1" 200 - 25 0.017 0.024
+2026-09-18 14:22:27,058 1 INFO soloodoo_uattest werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:27] "GET /web/image?field=avatar_128&id=2&model=res.partner&unique=2026-09-18%2014%3A21%3A42 HTTP/1.1" 200 - 8 0.009 0.024
+2026-09-18 14:22:27,787 1 INFO soloodoo_uattest odoo.addons.elmokrif_browser_tests.tests.test_sale_chantier_browser.TestSaleChantierBrowser.browser: Tour elmokrif_sale_chantier_send on step: 'The salesperson can see the quotation's header chantier (trigger: .o_form_view:contains("Browser Site A"))' 
+2026-09-18 14:22:27,797 1 INFO soloodoo_uattest odoo.addons.elmokrif_browser_tests.tests.test_sale_chantier_browser.TestSaleChantierBrowser.browser: Tour elmokrif_sale_chantier_send on step: 'The first quotation line is allocated to Site A (trigger: .o_field_one2many[name="order_line"] .o_data_row td[name="chantier_id"]:contains("Browser Site A"))' 
+2026-09-18 14:22:27,828 1 INFO soloodoo_uattest odoo.addons.elmokrif_browser_tests.tests.test_sale_chantier_browser.TestSaleChantierBrowser.browser: Tour elmokrif_sale_chantier_send on step: 'The second quotation line is allocated to Site B (trigger: .o_field_one2many[name="order_line"] .o_data_row td[name="chantier_id"]:contains("Browser Site B"))' 
+2026-09-18 14:22:27,901 1 INFO soloodoo_uattest odoo.addons.elmokrif_browser_tests.tests.test_sale_chantier_browser.TestSaleChantierBrowser.browser: Tour elmokrif_sale_chantier_send on step: 'Open the quotation email composer (trigger: .o_statusbar_buttons button[name="action_quotation_send"])' 
+2026-09-18 14:22:27,997 1 INFO soloodoo_uattest odoo.addons.elmokrif_browser_tests.tests.test_sale_chantier_browser.TestSaleChantierBrowser.browser: Tour elmokrif_sale_chantier_send on step: 'Send the quotation from the composer (trigger: .modal-footer button[name="action_send_mail"])' 
+2026-09-18 14:22:28,053 1 INFO soloodoo_uattest werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:28] "POST /web/dataset/call_button HTTP/1.1" 200 - 19 0.040 0.052
+2026-09-18 14:22:28,059 1 INFO soloodoo_uattest werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:28] "GET /websocket?version=17.0-3 HTTP/1.1" 503 - 3 0.002 0.065
+2026-09-18 14:22:28,165 1 INFO soloodoo_uattest werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:28] "POST /web/dataset/call_kw/mail.compose.message/get_views HTTP/1.1" 200 - 13 0.020 0.042
+2026-09-18 14:22:28,764 1 INFO soloodoo_uattest werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:28] "POST /web/dataset/call_kw/mail.compose.message/onchange HTTP/1.1" 200 - 185 0.127 0.444
+2026-09-18 14:22:28,825 1 INFO ? werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:28] "GET /web/static/img/mimetypes/text.svg HTTP/1.1" 200 - 0 0.000 0.003
+2026-09-18 14:22:29,798 1 INFO soloodoo_uattest werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:29] "GET /websocket?version=17.0-3 HTTP/1.1" 503 - 3 0.003 0.013
+2026-09-18 14:22:30,301 1 INFO soloodoo_uattest odoo.addons.elmokrif_browser_tests.tests.test_sale_chantier_browser.TestSaleChantierBrowser.browser: Tour elmokrif_sale_chantier_send on step: 'The quotation is now sent (trigger: .o_statusbar_buttons > button[name="action_confirm"]:first-child)' 
+2026-09-18 14:22:30,370 1 INFO soloodoo_uattest werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:30] "POST /web/dataset/call_kw/mail.compose.message/web_save HTTP/1.1" 200 - 18 0.026 0.037
+2026-09-18 14:22:30,659 1 INFO soloodoo_uattest werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:30] "POST /web/dataset/call_button HTTP/1.1" 200 - 83 0.098 0.170
+2026-09-18 14:22:30,740 1 INFO soloodoo_uattest werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:30] "POST /mail/thread/messages HTTP/1.1" 200 - 25 0.024 0.036
+2026-09-18 14:22:30,893 1 INFO soloodoo_uattest werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:30] "POST /web/dataset/call_kw/sale.order/web_read HTTP/1.1" 200 - 45 0.053 0.151
+2026-09-18 14:22:30,898 1 INFO soloodoo_uattest werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:30] "GET /websocket?version=17.0-3 HTTP/1.1" 503 - 3 0.002 0.138
+2026-09-18 14:22:30,931 1 INFO soloodoo_uattest werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:30] "GET /web/image?field=avatar_128&id=9&model=res.partner&unique=2026-09-18%2014%3A22%3A21 HTTP/1.1" 200 - 9 0.012 0.110
+2026-09-18 14:22:31,032 1 INFO soloodoo_uattest werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:31] "POST /mail/thread/data HTTP/1.1" 200 - 38 0.043 0.068
+2026-09-18 14:22:31,107 1 INFO soloodoo_uattest werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:31] "GET /web/image/res.users/6/avatar_128 HTTP/1.1" 200 - 10 0.012 0.025
+2026-09-18 14:22:31,841 1 WARNING soloodoo_uattest odoo.addons.elmokrif_browser_tests.tests.test_sale_chantier_browser.TestSaleChantierBrowser.browser: Tour elmokrif_sale_chantier_send: ignoring action (auto) of last step 
+2026-09-18 14:22:31,844 1 INFO soloodoo_uattest odoo.addons.elmokrif_browser_tests.tests.test_sale_chantier_browser.TestSaleChantierBrowser.browser: test successful 
+2026-09-18 14:22:31,963 1 INFO ? werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:31] "GET /web/static/img/smile.svg HTTP/1.1" 200 - 0 0.000 0.043
+2026-09-18 14:22:32,298 1 INFO soloodoo_uattest odoo.addons.elmokrif_browser_tests.tests.test_sale_chantier_browser.TestSaleChantierBrowser: Closing chrome headless with pid 16 
+2026-09-18 14:22:32,303 1 INFO soloodoo_uattest odoo.addons.elmokrif_browser_tests.tests.test_sale_chantier_browser.TestSaleChantierBrowser: Closing websocket connection 
+2026-09-18 14:22:32,307 1 INFO soloodoo_uattest odoo.addons.elmokrif_browser_tests.tests.test_sale_chantier_browser.TestSaleChantierBrowser: Terminating chrome headless with pid 16 
+2026-09-18 14:22:32,412 1 INFO soloodoo_uattest odoo.addons.elmokrif_browser_tests.tests.test_sale_chantier_browser.TestSaleChantierBrowser: Chrome Log in: /tmp/odoo_tests/soloodoo_uattest/chrome_logs/chrome_log_20260918_142232_410237_TestSaleChantierBrowser.txt 
+2026-09-18 14:22:32,412 1 INFO soloodoo_uattest odoo.addons.elmokrif_browser_tests.tests.test_sale_chantier_browser.TestSaleChantierBrowser: Removing chrome user profile "/tmp/tmp3sxe6gjh_chrome_odoo" 
+2026-09-18 14:22:33,277 1 INFO soloodoo_uattest odoo.addons.elmokrif_browser_tests.tests.test_sale_chantier_browser.TestSaleChantierBrowser: Chrome pid: 218 
+2026-09-18 14:22:33,278 1 INFO soloodoo_uattest odoo.addons.elmokrif_browser_tests.tests.test_sale_chantier_browser.TestSaleChantierBrowser: Chrome headless temporary user profile dir: /tmp/tmpd8q_jk0v_chrome_odoo 
+2026-09-18 14:22:33,280 1 INFO soloodoo_uattest odoo.addons.elmokrif_browser_tests.tests.test_sale_chantier_browser.TestSaleChantierBrowser: Issuing json command http://127.0.0.1:32995/json/version 
+2026-09-18 14:22:33,298 1 INFO soloodoo_uattest odoo.tests.common.requests: request http://127.0.0.1:32995/json/version with timeout 3 increased to 10s during tests 
+2026-09-18 14:22:34,187 1 INFO soloodoo_uattest odoo.addons.elmokrif_browser_tests.tests.test_sale_chantier_browser.TestSaleChantierBrowser: Browser version: Chrome/153.0.8010.36 
+2026-09-18 14:22:34,188 1 INFO soloodoo_uattest odoo.addons.elmokrif_browser_tests.tests.test_sale_chantier_browser.TestSaleChantierBrowser: Issuing json command http://127.0.0.1:32995/json 
+2026-09-18 14:22:34,195 1 INFO soloodoo_uattest odoo.tests.common.requests: request http://127.0.0.1:32995/json with timeout 3 increased to 10s during tests 
+2026-09-18 14:22:34,306 1 INFO soloodoo_uattest odoo.addons.elmokrif_browser_tests.tests.test_sale_chantier_browser.TestSaleChantierBrowser: Websocket url found: ws://127.0.0.1:32995/devtools/page/91F06D8EDE5FDEDE535375D5FB4D404A 
+2026-09-18 14:22:34,380 1 INFO soloodoo_uattest odoo.addons.elmokrif_browser_tests.tests.test_sale_chantier_browser.TestSaleChantierBrowser: Enable chrome headless console log notification 
+2026-09-18 14:22:34,457 1 INFO soloodoo_uattest odoo.addons.elmokrif_browser_tests.tests.test_sale_chantier_browser.TestSaleChantierBrowser: Chrome headless enable page notifications 
+2026-09-18 14:22:34,575 1 INFO soloodoo_uattest odoo.addons.base.models.res_users: Login successful for db:soloodoo_uattest login:browser_chantier_salesperson from n/a 
+2026-09-18 14:22:34,583 1 INFO soloodoo_uattest odoo.addons.elmokrif_browser_tests.tests.test_sale_chantier_browser.TestSaleChantierBrowser: Setting session cookie in browser 
+2026-09-18 14:22:34,595 1 INFO soloodoo_uattest odoo.addons.elmokrif_browser_tests.tests.test_sale_chantier_browser.TestSaleChantierBrowser: Open "http://127.0.0.1:8069/web#id=1&model=sale.order&view_type=form" in browser 
+2026-09-18 14:22:34,596 1 INFO soloodoo_uattest odoo.addons.elmokrif_browser_tests.tests.test_sale_chantier_browser.TestSaleChantierBrowser: Navigating to: "http://127.0.0.1:8069/web#id=1&model=sale.order&view_type=form" 
+2026-09-18 14:22:34,681 1 INFO soloodoo_uattest werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:34] "GET /web HTTP/1.1" 200 - 11 0.012 0.045
+2026-09-18 14:22:34,694 1 INFO soloodoo_uattest odoo.addons.elmokrif_browser_tests.tests.test_sale_chantier_browser.TestSaleChantierBrowser: Navigation result: {'frameId': '91F06D8EDE5FDEDE535375D5FB4D404A', 'loaderId': 'DDFA96A60AF7C02D6F7BB3464FF10911', 'isDownload': False} 
+2026-09-18 14:22:34,695 1 INFO soloodoo_uattest odoo.addons.elmokrif_browser_tests.tests.test_sale_chantier_browser.TestSaleChantierBrowser: Evaluate ready code "odoo.isTourReady('elmokrif_sale_chantier_confirm')" 
+2026-09-18 14:22:34,791 1 INFO soloodoo_uattest werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:34] "GET /web/assets/3fc8a8f/web.assets_web.min.css HTTP/1.1" 200 - 4 0.006 0.021
+2026-09-18 14:22:34,810 1 INFO soloodoo_uattest werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:34] "GET /web/assets/c426b09/web.assets_web.min.js HTTP/1.1" 200 - 4 0.006 0.037
+2026-09-18 14:22:34,816 1 INFO soloodoo_uattest werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:34] "GET /web/webclient/load_menus/75b0b50f1e74575c77e6601b3ab49590d4140eb0711939475e0b58e963dd0e6c HTTP/1.1" 200 - 2 0.003 0.035
+2026-09-18 14:22:34,831 1 INFO soloodoo_uattest werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:34] "GET /web/webclient/translations/74586edbc413758d2eb4597492c10195482d6217?lang=en_US HTTP/1.1" 200 - 3 0.005 0.046
+2026-09-18 14:22:34,876 1 INFO soloodoo_uattest werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:34] "GET /web/manifest.webmanifest HTTP/1.1" 200 - 8 0.022 0.070
+2026-09-18 14:22:34,965 1 INFO soloodoo_uattest werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:34] "GET /web/assets/9f34f4e/web.assets_tests.min.js HTTP/1.1" 200 - 4 0.004 0.010
+2026-09-18 14:22:35,557 1 INFO soloodoo_uattest werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:35] "GET /bus/websocket_worker_bundle?v=17.0-3 HTTP/1.1" 200 - 4 0.002 0.009
+2026-09-18 14:22:35,673 1 INFO soloodoo_uattest odoo.addons.elmokrif_browser_tests.tests.test_sale_chantier_browser.TestSaleChantierBrowser: Evaluate test code "odoo.startTour('elmokrif_sale_chantier_confirm', {"stepDelay": 0, "keepWatchBrowser": false, "startUrl": "/web#id=1&model=sale.order&view_type=form"})" 
+2026-09-18 14:22:35,682 1 INFO soloodoo_uattest werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:35] "POST /mail/init_messaging HTTP/1.1" 200 - 33 0.034 0.073
+2026-09-18 14:22:35,706 1 INFO soloodoo_uattest werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:35] "GET /web/service-worker.js HTTP/1.1" 200 - 2 0.001 0.103
+2026-09-18 14:22:35,736 1 INFO soloodoo_uattest werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:35] "POST /web/dataset/call_kw/res.users/systray_get_activities HTTP/1.1" 200 - 9 0.010 0.085
+2026-09-18 14:22:35,779 1 INFO ? werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:35] "GET /web/static/lib/odoo_ui_icons/fonts/odoo_ui_icons.woff2 HTTP/1.1" 200 - 0 0.000 0.024
+2026-09-18 14:22:35,787 1 INFO soloodoo_uattest werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:35] "GET /web/image?model=res.users&field=avatar_128&id=6 HTTP/1.1" 200 - 10 0.022 0.063
+2026-09-18 14:22:35,788 1 INFO ? werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:35] "GET /web/static/src/libs/fontawesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 200 - 0 0.000 0.021
+2026-09-18 14:22:35,793 1 INFO ? werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:35] "GET /web/static/img/favicon.ico HTTP/1.1" 200 - 0 0.000 0.016
+2026-09-18 14:22:35,807 1 INFO soloodoo_uattest werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:35] "GET /web/offline HTTP/1.1" 200 - 3 0.005 0.061
+2026-09-18 14:22:35,820 1 INFO soloodoo_uattest werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:35] "POST /mail/load_message_failures HTTP/1.1" 200 - 4 0.006 0.032
+2026-09-18 14:22:35,836 1 INFO ? werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:35] "GET /web/static/img/odoo-icon-192x192.png HTTP/1.1" 200 - 0 0.000 0.004
+2026-09-18 14:22:35,861 1 INFO soloodoo_uattest werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:35] "POST /web/dataset/call_kw/sale.order/get_views HTTP/1.1" 200 - 4 0.003 0.052
+2026-09-18 14:22:35,865 1 INFO soloodoo_uattest werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:35] "GET /websocket?version=17.0-3 HTTP/1.1" 503 - 3 0.001 0.014
+2026-09-18 14:22:36,059 1 INFO soloodoo_uattest werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:36] "POST /web/dataset/call_kw/sale.order/web_read HTTP/1.1" 200 - 45 0.045 0.094
+2026-09-18 14:22:36,239 1 INFO soloodoo_uattest werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:36] "GET /web/bundle/web_editor.backend_assets_wysiwyg?lang=en_US HTTP/1.1" 200 - 2 0.001 0.003
+2026-09-18 14:22:36,257 1 INFO soloodoo_uattest werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:36] "GET /web/assets/29e3f6e/web_editor.backend_assets_wysiwyg.min.css HTTP/1.1" 200 - 4 0.003 0.007
+2026-09-18 14:22:36,263 1 INFO soloodoo_uattest werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:36] "GET /web/assets/e0ef46d/web_editor.backend_assets_wysiwyg.min.js HTTP/1.1" 200 - 4 0.002 0.009
+2026-09-18 14:22:36,335 1 INFO soloodoo_uattest werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:36] "POST /web/dataset/call_kw/ir.ui.view/render_public_asset HTTP/1.1" 200 - 6 0.005 0.007
+2026-09-18 14:22:36,379 1 INFO ? werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:36] "GET /web/static/img/openhand.cur HTTP/1.1" 200 - 0 0.000 0.002
+2026-09-18 14:22:36,516 1 INFO soloodoo_uattest werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:36] "POST /mail/thread/data HTTP/1.1" 200 - 34 0.023 0.039
+2026-09-18 14:22:36,569 1 INFO soloodoo_uattest werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:36] "POST /mail/thread/messages HTTP/1.1" 200 - 28 0.022 0.049
+2026-09-18 14:22:36,597 1 INFO soloodoo_uattest werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:36] "GET /web/image/res.users/6/avatar_128 HTTP/1.1" 200 - 10 0.009 0.042
+2026-09-18 14:22:36,675 1 INFO ? werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:36] "GET /web/static/img/mimetypes/text.svg HTTP/1.1" 200 - 0 0.000 0.003
+2026-09-18 14:22:36,721 1 INFO soloodoo_uattest werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:36] "GET /web/image?field=avatar_128&id=9&model=res.partner&unique=2026-09-18%2014%3A22%3A21 HTTP/1.1" 200 - 9 0.010 0.022
+2026-09-18 14:22:36,757 1 INFO soloodoo_uattest werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:36] "GET /web/image?field=avatar_128&id=2&model=res.partner&unique=2026-09-18%2014%3A21%3A42 HTTP/1.1" 200 - 8 0.008 0.056
+2026-09-18 14:22:37,438 1 INFO soloodoo_uattest odoo.addons.elmokrif_browser_tests.tests.test_sale_chantier_browser.TestSaleChantierBrowser.browser: Tour elmokrif_sale_chantier_confirm on step: 'The sent quotation still exposes line allocation (trigger: .o_field_one2many[name="order_line"] td[name="chantier_id"]:contains("Browser Site B"))' 
+2026-09-18 14:22:37,457 1 INFO soloodoo_uattest odoo.addons.elmokrif_browser_tests.tests.test_sale_chantier_browser.TestSaleChantierBrowser.browser: Tour elmokrif_sale_chantier_confirm on step: 'Confirm the quotation (trigger: .o_statusbar_buttons button[name="action_confirm"])' 
+2026-09-18 14:22:37,482 1 INFO soloodoo_uattest odoo.addons.elmokrif_browser_tests.tests.test_sale_chantier_browser.TestSaleChantierBrowser.browser: test successful 
+2026-09-18 14:22:37,540 1 INFO ? werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:37] "GET /web/static/img/smile.svg HTTP/1.1" 200 - 0 0.000 0.005
+2026-09-18 14:22:37,582 1 INFO soloodoo_uattest odoo.addons.elmokrif_browser_tests.tests.test_sale_chantier_browser.TestSaleChantierBrowser: Closing chrome headless with pid 218 
+2026-09-18 14:22:37,592 1 INFO soloodoo_uattest odoo.addons.elmokrif_browser_tests.tests.test_sale_chantier_browser.TestSaleChantierBrowser: Closing websocket connection 
+2026-09-18 14:22:37,598 1 INFO soloodoo_uattest odoo.addons.elmokrif_browser_tests.tests.test_sale_chantier_browser.TestSaleChantierBrowser: Terminating chrome headless with pid 218 
+2026-09-18 14:22:37,700 1 INFO soloodoo_uattest odoo.models.unlink: User #6 deleted mail.activity records with IDs: [1] 
+2026-09-18 14:22:37,713 1 INFO soloodoo_uattest odoo.addons.elmokrif_browser_tests.tests.test_sale_chantier_browser.TestSaleChantierBrowser: Chrome Log in: /tmp/odoo_tests/soloodoo_uattest/chrome_logs/chrome_log_20260918_142237_710520_TestSaleChantierBrowser.txt 
+2026-09-18 14:22:37,713 1 INFO soloodoo_uattest odoo.addons.elmokrif_browser_tests.tests.test_sale_chantier_browser.TestSaleChantierBrowser: Removing chrome user profile "/tmp/tmpd8q_jk0v_chrome_odoo" 
+2026-09-18 14:22:37,742 1 INFO soloodoo_uattest werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:37] "POST /web/dataset/call_button HTTP/1.1" 200 - 78 0.102 0.138
+2026-09-18 14:22:38,229 1 INFO soloodoo_uattest odoo.addons.mail.models.mail_mail: Mail (mail.mail) with ID 3 and Message-Id '<857595112587996.1789741358.126162767410278-openerp-message-notify@018fb6130139>' from 'odoobot@example.com' to (redacted) 'b*************************on@example.test' successfully sent 
+2026-09-18 14:22:38,229 1 INFO soloodoo_uattest odoo.addons.mail.models.mail_mail: Total emails tried by SMTP: 1 
+2026-09-18 14:22:38,259 1 INFO soloodoo_uattest odoo.models.unlink: User #1 deleted mail.mail records with IDs: [3] 
+2026-09-18 14:22:38,259 1 INFO soloodoo_uattest odoo.addons.mail.models.mail_mail: Sent batch 1 emails via mail server ID #False 
+2026-09-18 14:22:38,740 1 INFO soloodoo_uattest odoo.addons.elmokrif_browser_tests.tests.test_sale_chantier_browser.TestSaleChantierBrowser: Chrome pid: 408 
+2026-09-18 14:22:38,740 1 INFO soloodoo_uattest odoo.addons.elmokrif_browser_tests.tests.test_sale_chantier_browser.TestSaleChantierBrowser: Chrome headless temporary user profile dir: /tmp/tmpohr1tgoz_chrome_odoo 
+2026-09-18 14:22:38,740 1 INFO soloodoo_uattest odoo.addons.elmokrif_browser_tests.tests.test_sale_chantier_browser.TestSaleChantierBrowser: Issuing json command http://127.0.0.1:37405/json/version 
+2026-09-18 14:22:38,741 1 INFO soloodoo_uattest odoo.tests.common.requests: request http://127.0.0.1:37405/json/version with timeout 3 increased to 10s during tests 
+2026-09-18 14:22:38,794 1 INFO soloodoo_uattest odoo.addons.elmokrif_browser_tests.tests.test_sale_chantier_browser.TestSaleChantierBrowser: Browser version: Chrome/153.0.8010.36 
+2026-09-18 14:22:38,794 1 INFO soloodoo_uattest odoo.addons.elmokrif_browser_tests.tests.test_sale_chantier_browser.TestSaleChantierBrowser: Issuing json command http://127.0.0.1:37405/json 
+2026-09-18 14:22:38,795 1 INFO soloodoo_uattest odoo.tests.common.requests: request http://127.0.0.1:37405/json with timeout 3 increased to 10s during tests 
+2026-09-18 14:22:38,819 1 INFO soloodoo_uattest odoo.addons.elmokrif_browser_tests.tests.test_sale_chantier_browser.TestSaleChantierBrowser: Websocket url found: ws://127.0.0.1:37405/devtools/page/6EB24AF54A7D80FA9807AADA4C0CE064 
+2026-09-18 14:22:38,837 1 INFO soloodoo_uattest odoo.addons.elmokrif_browser_tests.tests.test_sale_chantier_browser.TestSaleChantierBrowser: Enable chrome headless console log notification 
+2026-09-18 14:22:38,866 1 INFO soloodoo_uattest odoo.addons.elmokrif_browser_tests.tests.test_sale_chantier_browser.TestSaleChantierBrowser: Chrome headless enable page notifications 
+2026-09-18 14:22:38,928 1 INFO soloodoo_uattest odoo.addons.base.models.res_users: Login successful for db:soloodoo_uattest login:browser_chantier_accountant from n/a 
+2026-09-18 14:22:38,938 1 INFO soloodoo_uattest odoo.addons.elmokrif_browser_tests.tests.test_sale_chantier_browser.TestSaleChantierBrowser: Setting session cookie in browser 
+2026-09-18 14:22:38,944 1 INFO soloodoo_uattest odoo.addons.elmokrif_browser_tests.tests.test_sale_chantier_browser.TestSaleChantierBrowser: Open "http://127.0.0.1:8069/web#id=1&model=account.move&view_type=form" in browser 
+2026-09-18 14:22:38,944 1 INFO soloodoo_uattest odoo.addons.elmokrif_browser_tests.tests.test_sale_chantier_browser.TestSaleChantierBrowser: Navigating to: "http://127.0.0.1:8069/web#id=1&model=account.move&view_type=form" 
+2026-09-18 14:22:39,061 1 INFO soloodoo_uattest werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:39] "GET /web HTTP/1.1" 200 - 38 0.039 0.060
+2026-09-18 14:22:39,064 1 INFO soloodoo_uattest odoo.addons.elmokrif_browser_tests.tests.test_sale_chantier_browser.TestSaleChantierBrowser: Navigation result: {'frameId': '6EB24AF54A7D80FA9807AADA4C0CE064', 'loaderId': '722EF71F49CDCEC323F2AD415E63996C', 'isDownload': False} 
+2026-09-18 14:22:39,064 1 INFO soloodoo_uattest odoo.addons.elmokrif_browser_tests.tests.test_sale_chantier_browser.TestSaleChantierBrowser: Evaluate ready code "odoo.isTourReady('elmokrif_sale_chantier_invoice')" 
+2026-09-18 14:22:39,109 1 INFO soloodoo_uattest werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:39] "GET /web/assets/3fc8a8f/web.assets_web.min.css HTTP/1.1" 200 - 4 0.008 0.007
+2026-09-18 14:22:39,117 1 INFO soloodoo_uattest werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:39] "GET /web/assets/c426b09/web.assets_web.min.js HTTP/1.1" 200 - 4 0.003 0.017
+2026-09-18 14:22:39,122 1 INFO soloodoo_uattest werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:39] "GET /web/webclient/load_menus/7602dd05e335115153ae6e4dbbf8cc7b4f4247dabaf6ee91d85cd1e595ad4412 HTTP/1.1" 200 - 2 0.002 0.026
+2026-09-18 14:22:39,131 1 INFO soloodoo_uattest werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:39] "GET /web/webclient/translations/74586edbc413758d2eb4597492c10195482d6217?lang=en_US HTTP/1.1" 200 - 4 0.004 0.029
+2026-09-18 14:22:39,153 1 INFO soloodoo_uattest werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:39] "GET /web/manifest.webmanifest HTTP/1.1" 200 - 9 0.013 0.039
+2026-09-18 14:22:39,174 1 INFO soloodoo_uattest werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:39] "GET /web/assets/9f34f4e/web.assets_tests.min.js HTTP/1.1" 200 - 4 0.003 0.008
+2026-09-18 14:22:39,540 1 INFO ? werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:39] "GET /web/static/img/favicon.ico HTTP/1.1" 200 - 0 0.000 0.001
+2026-09-18 14:22:39,549 1 INFO soloodoo_uattest werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:39] "GET /bus/websocket_worker_bundle?v=17.0-3 HTTP/1.1" 200 - 4 0.002 0.003
+2026-09-18 14:22:39,604 1 INFO soloodoo_uattest odoo.addons.elmokrif_browser_tests.tests.test_sale_chantier_browser.TestSaleChantierBrowser: Evaluate test code "odoo.startTour('elmokrif_sale_chantier_invoice', {"stepDelay": 0, "keepWatchBrowser": false, "startUrl": "/web#id=1&model=account.move&view_type=form"})" 
+2026-09-18 14:22:39,634 1 INFO ? werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:39] "GET /web/static/img/odoo-icon-192x192.png HTTP/1.1" 200 - 0 0.000 0.004
+2026-09-18 14:22:39,679 1 INFO ? werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:39] "GET /web/static/lib/odoo_ui_icons/fonts/odoo_ui_icons.woff2 HTTP/1.1" 200 - 0 0.000 0.002
+2026-09-18 14:22:39,688 1 INFO ? werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:39] "GET /web/static/src/libs/fontawesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 200 - 0 0.000 0.003
+2026-09-18 14:22:39,730 1 INFO soloodoo_uattest werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:39] "POST /mail/init_messaging HTTP/1.1" 200 - 86 0.090 0.084
+2026-09-18 14:22:39,734 1 INFO soloodoo_uattest werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:39] "GET /web/service-worker.js HTTP/1.1" 200 - 2 0.001 0.164
+2026-09-18 14:22:39,743 1 INFO soloodoo_uattest werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:39] "POST /web/dataset/call_kw/res.users/systray_get_activities HTTP/1.1" 200 - 4 0.004 0.145
+2026-09-18 14:22:39,782 1 INFO soloodoo_uattest werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:39] "GET /web/image?model=res.users&field=avatar_128&id=7 HTTP/1.1" 200 - 17 0.016 0.131
+2026-09-18 14:22:39,928 1 INFO soloodoo_uattest werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:39] "POST /web/dataset/call_kw/account.move/get_views HTTP/1.1" 200 - 86 0.053 0.205
+2026-09-18 14:22:39,930 1 INFO soloodoo_uattest werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:39] "GET /websocket?version=17.0-3 HTTP/1.1" 503 - 3 0.001 0.256
+2026-09-18 14:22:39,937 1 INFO soloodoo_uattest werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:39] "POST /mail/load_message_failures HTTP/1.1" 200 - 4 0.002 0.187
+2026-09-18 14:22:39,943 1 INFO soloodoo_uattest werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:39] "GET /web/offline HTTP/1.1" 200 - 3 0.002 0.187
+2026-09-18 14:22:40,083 1 INFO soloodoo_uattest werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:40] "POST /web/dataset/call_kw/account.move/web_read HTTP/1.1" 200 - 81 0.046 0.066
+2026-09-18 14:22:40,293 1 INFO soloodoo_uattest werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:40] "GET /web/bundle/web_editor.backend_assets_wysiwyg?lang=en_US HTTP/1.1" 200 - 2 0.001 0.005
+2026-09-18 14:22:40,311 1 INFO soloodoo_uattest werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:40] "GET /web/assets/29e3f6e/web_editor.backend_assets_wysiwyg.min.css HTTP/1.1" 200 - 4 0.003 0.005
+2026-09-18 14:22:40,318 1 INFO soloodoo_uattest werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:40] "GET /web/assets/e0ef46d/web_editor.backend_assets_wysiwyg.min.js HTTP/1.1" 200 - 4 0.002 0.008
+2026-09-18 14:22:40,403 1 INFO soloodoo_uattest werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:40] "POST /web/dataset/call_kw/ir.ui.view/render_public_asset HTTP/1.1" 200 - 6 0.003 0.007
+2026-09-18 14:22:40,445 1 INFO ? werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:40] "GET /web/static/img/openhand.cur HTTP/1.1" 200 - 0 0.000 0.002
+2026-09-18 14:22:40,595 1 INFO soloodoo_uattest werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:40] "POST /mail/thread/data HTTP/1.1" 200 - 29 0.033 0.038
+2026-09-18 14:22:40,641 1 INFO soloodoo_uattest werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:40] "POST /mail/thread/messages HTTP/1.1" 200 - 25 0.021 0.030
+2026-09-18 14:22:40,643 1 INFO soloodoo_uattest werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:40] "GET /websocket?version=17.0-3 HTTP/1.1" 503 - 3 0.001 0.034
+2026-09-18 14:22:40,707 1 INFO soloodoo_uattest werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:40] "GET /web/image?field=avatar_128&id=2&model=res.partner&unique=2026-09-18%2014%3A21%3A42 HTTP/1.1" 200 - 8 0.005 0.014
+2026-09-18 14:22:41,442 1 INFO soloodoo_uattest odoo.addons.elmokrif_browser_tests.tests.test_sale_chantier_browser.TestSaleChantierBrowser.browser: Tour elmokrif_sale_chantier_invoice on step: 'The accountant sees Site A on its invoice line (trigger: .o_field_one2many[name="invoice_line_ids"] .o_data_row td[name="chantier_id"]:contains("Browser Site A"))' 
+2026-09-18 14:22:41,457 1 INFO soloodoo_uattest odoo.addons.elmokrif_browser_tests.tests.test_sale_chantier_browser.TestSaleChantierBrowser.browser: Tour elmokrif_sale_chantier_invoice on step: 'The accountant sees Site B on its invoice line (trigger: .o_field_one2many[name="invoice_line_ids"] .o_data_row td[name="chantier_id"]:contains("Browser Site B"))' 
+2026-09-18 14:22:41,483 1 INFO soloodoo_uattest odoo.addons.elmokrif_browser_tests.tests.test_sale_chantier_browser.TestSaleChantierBrowser.browser: Tour elmokrif_sale_chantier_invoice on step: 'Post the invoice as the accountant (trigger: .o_statusbar_buttons button[name="action_post"])' 
+2026-09-18 14:22:41,500 1 INFO soloodoo_uattest odoo.addons.elmokrif_browser_tests.tests.test_sale_chantier_browser.TestSaleChantierBrowser.browser: test successful 
+2026-09-18 14:22:41,534 1 INFO ? werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:41] "GET /web/static/img/smile.svg HTTP/1.1" 200 - 0 0.000 0.001
+2026-09-18 14:22:41,554 1 INFO soloodoo_uattest odoo.addons.elmokrif_browser_tests.tests.test_sale_chantier_browser.TestSaleChantierBrowser: Closing chrome headless with pid 408 
+2026-09-18 14:22:41,558 1 INFO soloodoo_uattest odoo.addons.elmokrif_browser_tests.tests.test_sale_chantier_browser.TestSaleChantierBrowser: Closing websocket connection 
+2026-09-18 14:22:41,559 1 INFO soloodoo_uattest odoo.addons.elmokrif_browser_tests.tests.test_sale_chantier_browser.TestSaleChantierBrowser: Terminating chrome headless with pid 408 
+2026-09-18 14:22:41,677 1 INFO soloodoo_uattest odoo.addons.elmokrif_browser_tests.tests.test_sale_chantier_browser.TestSaleChantierBrowser: Chrome Log in: /tmp/odoo_tests/soloodoo_uattest/chrome_logs/chrome_log_20260918_142241_677079_TestSaleChantierBrowser.txt 
+2026-09-18 14:22:41,677 1 INFO soloodoo_uattest odoo.addons.elmokrif_browser_tests.tests.test_sale_chantier_browser.TestSaleChantierBrowser: Removing chrome user profile "/tmp/tmpohr1tgoz_chrome_odoo" 
+2026-09-18 14:22:41,688 1 INFO soloodoo_uattest odoo.addons.elmokrif_browser_tests.tests.test_sale_chantier_browser.TestSaleChantierBrowser: waiting for threads: [<Thread(odoo.service.http.request.140595022509632, started 140595022509632)>, <Thread(odoo.service.http.request.140595005724224, started 140595005724224)>] 
+2026-09-18 14:22:41,772 1 INFO soloodoo_uattest werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:41] "POST /web/dataset/call_button HTTP/1.1" 200 - 128 0.115 0.144
+2026-09-18 14:22:41,774 1 INFO soloodoo_uattest werkzeug: 127.0.0.1 - - [18/Sep/2026 14:22:41] "GET /websocket?version=17.0-3 HTTP/1.1" 503 - 3 0.001 0.256
+2026-09-18 14:22:42,129 1 INFO soloodoo_uattest odoo.addons.base.models.ir_attachment: filestore gc 433 checked, 3 removed 
+2026-09-18 14:22:42,131 1 WARNING soloodoo_uattest odoo.tests.common: A child process was found, terminating it: psutil.Process(pid=24, name='chrome_crashpad', status='zombie', started='14:22:22') 
+2026-09-18 14:22:42,132 1 WARNING soloodoo_uattest odoo.tests.common: A child process was found, terminating it: psutil.Process(pid=26, name='chrome_crashpad', status='zombie', started='14:22:22') 
+2026-09-18 14:22:42,133 1 WARNING soloodoo_uattest odoo.tests.common: A child process was found, terminating it: psutil.Process(pid=225, name='chrome_crashpad', status='zombie', started='14:22:32') 
+2026-09-18 14:22:42,134 1 WARNING soloodoo_uattest odoo.tests.common: A child process was found, terminating it: psutil.Process(pid=229, name='chrome_crashpad', status='zombie', started='14:22:32') 
+2026-09-18 14:22:42,134 1 WARNING soloodoo_uattest odoo.tests.common: A child process was found, terminating it: psutil.Process(pid=415, name='chrome_crashpad', status='zombie', started='14:22:38') 
+2026-09-18 14:22:42,134 1 WARNING soloodoo_uattest odoo.tests.common: A child process was found, terminating it: psutil.Process(pid=418, name='chrome_crashpad', status='zombie', started='14:22:38') 
+2026-09-18 14:22:42,135 1 INFO soloodoo_uattest odoo.service.server: 1 post-tests in 39.38s, 3231 queries 
+2026-09-18 14:22:42,135 1 INFO soloodoo_uattest odoo.tests.stats: elmokrif_browser_tests: 3 tests 21.00s 2838 queries 
+2026-09-18 14:22:42,136 1 INFO soloodoo_uattest odoo.tests.result: 0 failed, 0 error(s) of 1 tests when loading database 'soloodoo_uattest' 
+2026-09-18 14:22:42,136 1 INFO soloodoo_uattest odoo.service.server: Initiating shutdown 
+2026-09-18 14:22:42,136 1 INFO soloodoo_uattest odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2026-09-18 14:22:42,541 1 INFO soloodoo_uattest odoo.sql_db: ConnectionPool(used=0/count=0/max=64): Closed 1 connections  

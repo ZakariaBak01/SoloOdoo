@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="module_category_elmokrif_purchase_buyer" model="ir.module.category">
+        <field name="name">EL MOKRIF Purchase Buyer</field>
+        <field name="sequence">36</field>
+    </record>
+    <record id="module_category_elmokrif_purchase_approver" model="ir.module.category">
+        <field name="name">EL MOKRIF Purchase Approver</field>
+        <field name="sequence">37</field>
+    </record>
+    <record id="module_category_elmokrif_quality" model="ir.module.category">
+        <field name="name">EL MOKRIF Quality</field>
+        <field name="sequence">38</field>
+    </record>
+
+    <record id="group_chantier_purchase_buyer" model="res.groups">
+        <field name="name">Chantier Buyer</field>
+        <field name="category_id" ref="elmokrif_purchase_quality.module_category_elmokrif_purchase_buyer"/>
+        <field name="implied_ids" eval="[(4, ref('purchase.group_purchase_user')), (4, ref('elmokrif_chantier.group_chantier_user'))]"/>
+    </record>
+    <record id="group_chantier_purchase_approver" model="res.groups">
+        <field name="name">Chantier Purchase Approver</field>
+        <field name="category_id" ref="elmokrif_purchase_quality.module_category_elmokrif_purchase_approver"/>
+        <field name="implied_ids" eval="[(4, ref('purchase.group_purchase_manager')), (4, ref('elmokrif_chantier.group_chantier_user'))]"/>
+    </record>
+    <record id="group_chantier_quality_inspector" model="res.groups">
+        <field name="name">Chantier Quality Inspector</field>
+        <field name="category_id" ref="elmokrif_purchase_quality.module_category_elmokrif_quality"/>
+        <field name="implied_ids" eval="[(4, ref('stock.group_stock_user')), (4, ref('elmokrif_chantier.group_chantier_user'))]"/>
+    </record>
+</odoo>

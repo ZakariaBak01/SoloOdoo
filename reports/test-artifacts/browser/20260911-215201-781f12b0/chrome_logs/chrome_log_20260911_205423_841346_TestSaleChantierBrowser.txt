@@ -1,0 +1,37 @@
+[407:429:0911/205420.704232:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory
+[407:429:0911/205420.704396:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[407:429:0911/205420.709089:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory
+[407:429:0911/205420.709288:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory
+[407:429:0911/205420.709325:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[443:443:0911/205420.732216:WARNING:media/gpu/vaapi/vaapi_wrapper.cc:1660] drmGetDevices2() has not found any devices
+[443:443:0911/205420.736091:WARNING:sandbox/policy/linux/sandbox_linux.cc:405] InitializeSandbox() called with multiple threads in process gpu-process.
+[407:429:0911/205420.740696:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[407:407:0911/205420.744663:INFO:components/enterprise/browser/controller/chrome_browser_cloud_management_controller.cc:241] No machine level policy manager exists.
+[407:429:0911/205420.767954:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[407:407:0911/205420.860180:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[407:429:0911/205420.860316:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[407:407:0911/205420.860327:WARNING:device/bluetooth/dbus/bluez_dbus_manager.cc:209] Floss manager service not available, cannot set Floss enable/disable.
+[407:407:0911/205420.860343:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[407:429:0911/205420.860408:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[407:407:0911/205420.861013:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[407:407:0911/205420.861980:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[407:429:0911/205420.862254:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[407:407:0911/205420.880677:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[407:407:0911/205420.881014:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[407:429:0911/205420.882733:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory
+[407:429:0911/205420.882789:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory
+[407:429:0911/205420.882802:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[407:407:0911/205420.886596:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[407:407:0911/205420.917786:WARNING:dbus/property.cc:94] Failed to connect to PropertiesChangedsignal.
+[407:407:0911/205420.917824:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.Properties.GetAll: object_path= /org/freedesktop/UPower/devices/DisplayDevice: unknown error type: 
+[407:407:0911/205420.917835:WARNING:dbus/property.cc:174] GetAll request failed for: org.freedesktop.UPower.Device
+[407:407:0911/205420.917901:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[407:429:0911/205420.917985:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[407:407:0911/205420.949591:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[407:429:0911/205420.949702:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[407:407:0911/205420.983693:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[407:407:0911/205420.983724:WARNING:ui/base/idle/idle_linux.cc:111] None of the known D-Bus ScreenSaver services could be used.
+[407:407:0911/205423.604027:INFO:CONSOLE:11059] "Tour elmokrif_sale_chantier_invoice on step: 'The accountant sees Site A on its invoice line (trigger: .o_field_one2many[name="invoice_line_ids"] .o_data_row td[name="chantier_id"]:contains("Browser Site A"))'", source: http://127.0.0.1:8069/web/assets/f8c8af2/web.assets_web.min.js (11059)
+[407:407:0911/205423.616581:INFO:CONSOLE:11059] "Tour elmokrif_sale_chantier_invoice on step: 'The accountant sees Site B on its invoice line (trigger: .o_field_one2many[name="invoice_line_ids"] .o_data_row td[name="chantier_id"]:contains("Browser Site B"))'", source: http://127.0.0.1:8069/web/assets/f8c8af2/web.assets_web.min.js (11059)
+[407:407:0911/205423.650621:INFO:CONSOLE:11059] "Tour elmokrif_sale_chantier_invoice on step: 'Post the invoice as the accountant (trigger: .o_statusbar_buttons button[name="action_post"])'", source: http://127.0.0.1:8069/web/assets/f8c8af2/web.assets_web.min.js (11059)
+[407:407:0911/205423.671231:INFO:CONSOLE:11102] "test successful", source: http://127.0.0.1:8069/web/assets/f8c8af2/web.assets_web.min.js (11102)

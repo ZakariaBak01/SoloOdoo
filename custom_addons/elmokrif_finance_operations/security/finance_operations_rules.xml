@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="rule_elmokrif_bank_import_company" model="ir.rule"><field name="name">Bank imports: allowed companies</field><field name="model_id" ref="model_elmokrif_bank_import"/><field name="domain_force">[('company_id', 'in', company_ids)]</field><field name="groups" eval="[(4, ref('account.group_account_manager'))]"/></record>
+    <record id="rule_elmokrif_bank_import_line_company" model="ir.rule"><field name="name">Bank import lines: allowed companies</field><field name="model_id" ref="model_elmokrif_bank_import_line"/><field name="domain_force">[('company_id', 'in', company_ids)]</field><field name="groups" eval="[(4, ref('account.group_account_manager'))]"/></record>
+    <record id="rule_elmokrif_payment_reminder_company" model="ir.rule"><field name="name">Payment reminders: allowed companies</field><field name="model_id" ref="model_elmokrif_payment_reminder"/><field name="domain_force">[('company_id', 'in', company_ids)]</field><field name="groups" eval="[(4, ref('account.group_account_manager'))]"/></record>
+</odoo>

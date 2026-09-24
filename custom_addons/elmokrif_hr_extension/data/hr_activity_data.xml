@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record id="mail_activity_type_contract_expiry" model="mail.activity.type">
+        <field name="name">Contract Expiry Review</field>
+        <field name="category">default</field>
+        <field name="res_model">hr.contract</field>
+    </record>
+</odoo>

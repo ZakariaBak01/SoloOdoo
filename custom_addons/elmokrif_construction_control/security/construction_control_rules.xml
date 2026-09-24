@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="rule_site_issue_scope" model="ir.rule">
+        <field name="name">Site issues: assigned chantier and company</field>
+        <field name="model_id" ref="model_construction_site_issue"/>
+        <field name="global" eval="True"/>
+        <field name="domain_force">[('company_id', 'in', company_ids), '|', ('chantier_id.user_id', '=', user.id), ('chantier_id.chantier_member_ids', 'in', [user.id])]</field>
+    </record>
+    <record id="rule_rfi_scope" model="ir.rule">
+        <field name="name">RFIs: assigned chantier and company</field>
+        <field name="model_id" ref="model_construction_rfi"/>
+        <field name="global" eval="True"/>
+        <field name="domain_force">[('company_id', 'in', company_ids), '|', ('chantier_id.user_id', '=', user.id), ('chantier_id.chantier_member_ids', 'in', [user.id])]</field>
+    </record>
+    <record id="rule_submittal_scope" model="ir.rule">
+        <field name="name">Submittals: assigned chantier and company</field>
+        <field name="model_id" ref="model_construction_submittal"/>
+        <field name="global" eval="True"/>
+        <field name="domain_force">[('company_id', 'in', company_ids), '|', ('chantier_id.user_id', '=', user.id), ('chantier_id.chantier_member_ids', 'in', [user.id])]</field>
+    </record>
+    <record id="rule_work_package_scope" model="ir.rule">
+        <field name="name">Work packages: assigned chantier and company</field>
+        <field name="model_id" ref="model_construction_work_package"/>
+        <field name="global" eval="True"/>
+        <field name="domain_force">[('company_id', 'in', company_ids), '|', ('chantier_id.user_id', '=', user.id), ('chantier_id.chantier_member_ids', 'in', [user.id])]</field>
+    </record>
+    <record id="rule_change_event_scope" model="ir.rule">
+        <field name="name">Change events: assigned chantier and company</field>
+        <field name="model_id" ref="model_construction_change_event"/>
+        <field name="global" eval="True"/>
+        <field name="domain_force">[('company_id', 'in', company_ids), '|', ('chantier_id.user_id', '=', user.id), ('chantier_id.chantier_member_ids', 'in', [user.id])]</field>
+    </record>
+    <record id="rule_variation_scope" model="ir.rule">
+        <field name="name">Variations: assigned chantier and company</field>
+        <field name="model_id" ref="model_construction_variation_order"/>
+        <field name="global" eval="True"/>
+        <field name="domain_force">[('company_id', 'in', company_ids), '|', ('chantier_id.user_id', '=', user.id), ('chantier_id.chantier_member_ids', 'in', [user.id])]</field>
+    </record>
+    <record id="rule_variation_line_scope" model="ir.rule">
+        <field name="name">Variation lines: assigned chantier and company</field>
+        <field name="model_id" ref="model_construction_variation_order_line"/>
+        <field name="global" eval="True"/>
+        <field name="domain_force">[('company_id', 'in', company_ids), '|', ('variation_id.chantier_id.user_id', '=', user.id), ('variation_id.chantier_id.chantier_member_ids', 'in', [user.id])]</field>
+    </record>
+    <record id="rule_certificate_scope" model="ir.rule">
+        <field name="name">Progress certificates: assigned chantier and company</field>
+        <field name="model_id" ref="model_construction_progress_certificate"/>
+        <field name="global" eval="True"/>
+        <field name="domain_force">[('company_id', 'in', company_ids), '|', ('chantier_id.user_id', '=', user.id), ('chantier_id.chantier_member_ids', 'in', [user.id])]</field>
+    </record>
+    <record id="rule_certificate_line_scope" model="ir.rule">
+        <field name="name">Certificate lines: assigned chantier and company</field>
+        <field name="model_id" ref="model_construction_progress_certificate_line"/>
+        <field name="global" eval="True"/>
+        <field name="domain_force">[('company_id', 'in', company_ids), '|', ('certificate_id.chantier_id.user_id', '=', user.id), ('certificate_id.chantier_id.chantier_member_ids', 'in', [user.id])]</field>
+    </record>
+</odoo>
+

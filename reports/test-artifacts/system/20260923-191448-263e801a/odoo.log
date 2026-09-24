@@ -1,0 +1,1058 @@
+﻿2026-09-23 19:14:52,687 1 INFO ? odoo: Odoo version 17.0-20260908 
+2026-09-23 19:14:52,687 1 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2026-09-23 19:14:52,687 1 INFO ? odoo: addons paths: ['/usr/lib/python3/dist-packages/odoo/addons', '/var/lib/odoo/addons/17.0', '/mnt/extra-addons', '/opt/elmokrif-addons'] 
+2026-09-23 19:14:52,687 1 INFO ? odoo: database: odoo_test@test-db:5432 
+2026-09-23 19:14:52,852 1 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/local/bin/wkhtmltopdf 
+2026-09-23 19:14:53,007 1 INFO ? odoo.service.server: HTTP service (werkzeug) running on 128b9209ea21:8069 
+2026-09-23 19:14:53,018 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: init db 
+2026-09-23 19:14:54,528 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading 1 modules... 
+2026-09-23 19:14:54,528 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Loading module base (1/1) 
+2026-09-23 19:14:54,550 1 INFO soloodoo_finance_native_test2 odoo.modules.registry: module base: creating or updating database tables 
+2026-09-23 19:14:55,041 1 INFO soloodoo_finance_native_test2 odoo.models: Prepare computation of ir.module.module.menus_by_module 
+2026-09-23 19:14:55,041 1 INFO soloodoo_finance_native_test2 odoo.models: Prepare computation of ir.module.module.reports_by_module 
+2026-09-23 19:14:55,041 1 INFO soloodoo_finance_native_test2 odoo.models: Prepare computation of ir.module.module.views_by_module 
+2026-09-23 19:14:55,214 1 INFO soloodoo_finance_native_test2 odoo.models: Prepare computation of res.partner.user_id 
+2026-09-23 19:14:55,214 1 INFO soloodoo_finance_native_test2 odoo.models: Prepare computation of res.partner.commercial_partner_id 
+2026-09-23 19:14:55,214 1 INFO soloodoo_finance_native_test2 odoo.models: Prepare computation of res.partner.complete_name 
+2026-09-23 19:14:55,215 1 INFO soloodoo_finance_native_test2 odoo.models: Prepare computation of res.partner.company_registry 
+2026-09-23 19:14:55,215 1 INFO soloodoo_finance_native_test2 odoo.models: Prepare computation of res.partner.commercial_company_name 
+2026-09-23 19:14:55,215 1 INFO soloodoo_finance_native_test2 odoo.models: Prepare computation of res.partner.partner_share 
+2026-09-23 19:14:55,270 1 INFO soloodoo_finance_native_test2 odoo.models: Prepare computation of res.currency.decimal_places 
+2026-09-23 19:14:55,308 1 INFO soloodoo_finance_native_test2 odoo.models: Prepare computation of res.company.uses_default_logo 
+2026-09-23 19:14:55,308 1 INFO soloodoo_finance_native_test2 odoo.models: Prepare computation of res.company.logo_web 
+2026-09-23 19:14:55,313 1 INFO soloodoo_finance_native_test2 odoo.models: Computing parent_path for table res_company... 
+2026-09-23 19:14:55,348 1 INFO soloodoo_finance_native_test2 odoo.models: Prepare computation of res.users.signature 
+2026-09-23 19:14:55,348 1 INFO soloodoo_finance_native_test2 odoo.models: Prepare computation of res.users.share 
+2026-09-23 19:14:56,872 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading base/data/res_bank.xml 
+2026-09-23 19:14:56,877 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading base/data/res.lang.csv 
+2026-09-23 19:14:56,912 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading base/data/res_lang_data.xml 
+2026-09-23 19:14:56,942 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading base/data/res_partner_data.xml 
+2026-09-23 19:14:57,039 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading base/data/res_currency_data.xml 
+2026-09-23 19:14:57,740 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading base/data/res_company_data.xml 
+2026-09-23 19:14:57,757 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading base/data/res_users_data.xml 
+2026-09-23 19:14:58,711 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading base/data/report_paperformat_data.xml 
+2026-09-23 19:14:58,720 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading base/data/res_country_data.xml 
+2026-09-23 19:14:59,192 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading base/data/ir_demo_data.xml 
+2026-09-23 19:14:59,202 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading base/security/base_groups.xml 
+2026-09-23 19:14:59,465 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading base/security/base_security.xml 
+2026-09-23 19:14:59,616 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading base/views/base_menus.xml 
+2026-09-23 19:14:59,713 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading base/views/decimal_precision_views.xml 
+2026-09-23 19:14:59,730 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading base/views/res_config_views.xml 
+2026-09-23 19:14:59,740 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading base/data/res.country.state.csv 
+2026-09-23 19:15:00,206 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading base/views/ir_actions_views.xml 
+2026-09-23 19:15:00,338 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading base/views/ir_asset_views.xml 
+2026-09-23 19:15:00,360 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading base/views/ir_config_parameter_views.xml 
+2026-09-23 19:15:00,380 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading base/views/ir_cron_views.xml 
+2026-09-23 19:15:00,412 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading base/views/ir_cron_trigger_views.xml 
+2026-09-23 19:15:00,433 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading base/views/ir_filters_views.xml 
+2026-09-23 19:15:00,455 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading base/views/ir_mail_server_views.xml 
+2026-09-23 19:15:00,482 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading base/views/ir_model_views.xml 
+2026-09-23 19:15:00,653 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading base/views/ir_attachment_views.xml 
+2026-09-23 19:15:00,681 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading base/views/ir_rule_views.xml 
+2026-09-23 19:15:00,716 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading base/views/ir_sequence_views.xml 
+2026-09-23 19:15:00,739 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading base/views/ir_ui_menu_views.xml 
+2026-09-23 19:15:00,761 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading base/views/ir_ui_view_views.xml 
+2026-09-23 19:15:00,821 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading base/views/ir_default_views.xml 
+2026-09-23 19:15:00,841 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading base/data/ir_cron_data.xml 
+2026-09-23 19:15:00,854 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading base/report/ir_model_report.xml 
+2026-09-23 19:15:00,859 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading base/report/ir_model_templates.xml 
+2026-09-23 19:15:00,868 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading base/views/ir_logging_views.xml 
+2026-09-23 19:15:00,889 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading base/views/ir_qweb_widget_templates.xml 
+2026-09-23 19:15:00,903 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading base/views/ir_module_views.xml 
+2026-09-23 19:15:00,960 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading base/data/ir_module_category_data.xml 
+2026-09-23 19:15:01,042 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading base/data/ir_module_module.xml 
+2026-09-23 19:15:01,120 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading base/report/ir_module_reports.xml 
+2026-09-23 19:15:01,124 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading base/report/ir_module_report_templates.xml 
+2026-09-23 19:15:01,131 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading base/wizard/base_module_update_views.xml 
+2026-09-23 19:15:01,145 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading base/wizard/base_language_install_views.xml 
+2026-09-23 19:15:01,156 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading base/wizard/base_import_language_views.xml 
+2026-09-23 19:15:01,170 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading base/wizard/base_module_upgrade_views.xml 
+2026-09-23 19:15:01,191 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading base/wizard/base_module_uninstall_views.xml 
+2026-09-23 19:15:01,199 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading base/wizard/base_export_language_views.xml 
+2026-09-23 19:15:01,212 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading base/wizard/base_partner_merge_views.xml 
+2026-09-23 19:15:01,226 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading base/data/ir_demo_failure_data.xml 
+2026-09-23 19:15:01,240 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading base/views/ir_profile_views.xml 
+2026-09-23 19:15:01,261 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading base/views/res_company_views.xml 
+2026-09-23 19:15:01,282 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading base/views/res_lang_views.xml 
+2026-09-23 19:15:01,302 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading base/views/res_partner_views.xml 
+2026-09-23 19:15:01,411 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading base/views/res_bank_views.xml 
+2026-09-23 19:15:01,449 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading base/views/res_country_views.xml 
+2026-09-23 19:15:01,487 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading base/views/res_currency_views.xml 
+2026-09-23 19:15:01,521 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading base/views/res_users_views.xml 
+2026-09-23 19:15:01,620 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading base/views/res_users_identitycheck_views.xml 
+2026-09-23 19:15:01,628 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading base/views/ir_property_views.xml 
+2026-09-23 19:15:01,645 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading base/views/res_config_settings_views.xml 
+2026-09-23 19:15:01,652 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading base/views/report_paperformat_views.xml 
+2026-09-23 19:15:01,676 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading base/security/ir.model.access.csv 
+2026-09-23 19:15:01,870 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Module base loaded in 7.34s, 7944 queries (+7944 other) 
+2026-09-23 19:15:01,870 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: 1 modules loaded in 7.34s, 7944 queries (+7944 extra) 
+2026-09-23 19:15:01,883 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: updating modules list 
+2026-09-23 19:15:01,884 1 INFO soloodoo_finance_native_test2 odoo.addons.base.models.ir_module: ALLOW access to module.update_list on [] to user __system__ #1 via n/a 
+2026-09-23 19:15:02,772 1 INFO soloodoo_finance_native_test2 odoo.addons.base.models.ir_module: ALLOW access to module.button_install on ['EL MOKRIF Finance Operations'] to user __system__ #1 via n/a 
+2026-09-23 19:15:03,060 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading 82 modules... 
+2026-09-23 19:15:03,060 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Loading module uom (2/82) 
+2026-09-23 19:15:03,077 1 INFO soloodoo_finance_native_test2 odoo.modules.registry: module uom: creating or updating database tables 
+2026-09-23 19:15:03,189 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading uom/data/uom_data.xml 
+2026-09-23 19:15:03,296 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading uom/security/uom_security.xml 
+2026-09-23 19:15:03,318 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading uom/security/ir.model.access.csv 
+2026-09-23 19:15:03,331 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading uom/views/uom_uom_views.xml 
+2026-09-23 19:15:03,389 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Module uom loaded in 0.33s, 287 queries (+287 other) 
+2026-09-23 19:15:03,390 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Loading module web (3/82) 
+2026-09-23 19:15:03,411 1 INFO soloodoo_finance_native_test2 odoo.modules.registry: module web: creating or updating database tables 
+2026-09-23 19:15:04,306 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading web/security/ir.model.access.csv 
+2026-09-23 19:15:04,319 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading web/views/webclient_templates.xml 
+2026-09-23 19:15:04,389 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading web/views/report_templates.xml 
+2026-09-23 19:15:04,482 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading web/views/base_document_layout_views.xml 
+2026-09-23 19:15:04,494 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading web/views/partner_view.xml 
+2026-09-23 19:15:04,501 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading web/views/speedscope_template.xml 
+2026-09-23 19:15:04,507 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading web/views/neutralize_views.xml 
+2026-09-23 19:15:04,514 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading web/data/ir_attachment.xml 
+2026-09-23 19:15:04,519 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading web/data/report_layout.xml 
+2026-09-23 19:15:04,670 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Module web loaded in 1.28s, 1018 queries (+1018 other) 
+2026-09-23 19:15:04,671 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Loading module auth_totp (4/82) 
+2026-09-23 19:15:04,700 1 INFO soloodoo_finance_native_test2 odoo.modules.registry: module auth_totp: creating or updating database tables 
+2026-09-23 19:15:04,789 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading auth_totp/security/security.xml 
+2026-09-23 19:15:04,829 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading auth_totp/security/ir.model.access.csv 
+2026-09-23 19:15:04,841 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading auth_totp/data/ir_action_data.xml 
+2026-09-23 19:15:04,850 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading auth_totp/views/res_users_views.xml 
+2026-09-23 19:15:04,887 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading auth_totp/views/templates.xml 
+2026-09-23 19:15:04,895 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading auth_totp/wizard/auth_totp_wizard_views.xml 
+2026-09-23 19:15:04,933 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Module auth_totp loaded in 0.26s, 179 queries (+179 other) 
+2026-09-23 19:15:04,933 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Loading module barcodes (5/82) 
+2026-09-23 19:15:04,958 1 INFO soloodoo_finance_native_test2 odoo.modules.registry: module barcodes: creating or updating database tables 
+2026-09-23 19:15:05,054 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading barcodes/data/barcodes_data.xml 
+2026-09-23 19:15:05,065 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading barcodes/views/barcodes_view.xml 
+2026-09-23 19:15:05,088 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading barcodes/security/ir.model.access.csv 
+2026-09-23 19:15:05,121 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Module barcodes loaded in 0.19s, 135 queries (+135 other) 
+2026-09-23 19:15:05,121 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Loading module base_import (6/82) 
+2026-09-23 19:15:05,160 1 INFO soloodoo_finance_native_test2 odoo.modules.registry: module base_import: creating or updating database tables 
+2026-09-23 19:15:05,652 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading base_import/security/ir.model.access.csv 
+2026-09-23 19:15:05,680 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Module base_import loaded in 0.56s, 843 queries (+843 other) 
+2026-09-23 19:15:05,681 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Loading module base_import_module (7/82) 
+2026-09-23 19:15:05,704 1 INFO soloodoo_finance_native_test2 odoo.modules.registry: module base_import_module: creating or updating database tables 
+2026-09-23 19:15:05,781 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading base_import_module/security/ir.model.access.csv 
+2026-09-23 19:15:05,792 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading base_import_module/views/base_import_module_view.xml 
+2026-09-23 19:15:05,811 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading base_import_module/views/ir_module_views.xml 
+2026-09-23 19:15:05,865 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Module base_import_module loaded in 0.18s, 154 queries (+154 other) 
+2026-09-23 19:15:05,865 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Loading module base_setup (8/82) 
+2026-09-23 19:15:05,940 1 INFO soloodoo_finance_native_test2 odoo.modules.registry: module base_setup: creating or updating database tables 
+2026-09-23 19:15:05,996 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading base_setup/data/base_setup_data.xml 
+2026-09-23 19:15:06,002 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading base_setup/views/res_config_settings_views.xml 
+2026-09-23 19:15:06,038 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading base_setup/views/res_partner_views.xml 
+2026-09-23 19:15:06,065 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Module base_setup loaded in 0.20s, 143 queries (+143 other) 
+2026-09-23 19:15:06,065 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Loading module bus (9/82) 
+2026-09-23 19:15:06,086 1 INFO soloodoo_finance_native_test2 odoo.modules.registry: module bus: creating or updating database tables 
+2026-09-23 19:15:06,182 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading bus/security/ir.model.access.csv 
+2026-09-23 19:15:06,217 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Module bus loaded in 0.15s, 119 queries (+119 other) 
+2026-09-23 19:15:06,217 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Loading module http_routing (10/82) 
+2026-09-23 19:15:06,236 1 INFO soloodoo_finance_native_test2 odoo.modules.registry: module http_routing: creating or updating database tables 
+2026-09-23 19:15:06,248 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading http_routing/views/http_routing_template.xml 
+2026-09-23 19:15:06,292 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading http_routing/views/res_lang_views.xml 
+2026-09-23 19:15:06,320 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Module http_routing loaded in 0.10s, 71 queries (+71 other) 
+2026-09-23 19:15:06,320 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Loading module onboarding (11/82) 
+2026-09-23 19:15:06,342 1 INFO soloodoo_finance_native_test2 odoo.modules.registry: module onboarding: creating or updating database tables 
+2026-09-23 19:15:06,510 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading onboarding/views/onboarding_templates.xml 
+2026-09-23 19:15:06,532 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading onboarding/views/onboarding_views.xml 
+2026-09-23 19:15:06,558 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading onboarding/views/onboarding_menus.xml 
+2026-09-23 19:15:06,571 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading onboarding/security/ir.model.access.csv 
+2026-09-23 19:15:06,623 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Module onboarding loaded in 0.30s, 237 queries (+237 other) 
+2026-09-23 19:15:06,623 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Loading module resource (12/82) 
+2026-09-23 19:15:06,647 1 INFO soloodoo_finance_native_test2 odoo.modules.registry: module resource: creating or updating database tables 
+2026-09-23 19:15:06,813 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading resource/data/resource_data.xml 
+2026-09-23 19:15:06,836 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading resource/security/ir.model.access.csv 
+2026-09-23 19:15:06,847 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading resource/security/resource_security.xml 
+2026-09-23 19:15:06,876 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading resource/views/resource_resource_views.xml 
+2026-09-23 19:15:06,902 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading resource/views/resource_calendar_leaves_views.xml 
+2026-09-23 19:15:06,933 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading resource/views/resource_calendar_attendance_views.xml 
+2026-09-23 19:15:06,945 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading resource/views/resource_calendar_views.xml 
+2026-09-23 19:15:06,969 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading resource/views/menuitems.xml 
+2026-09-23 19:15:07,005 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Module resource loaded in 0.38s, 407 queries (+407 other) 
+2026-09-23 19:15:07,005 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Loading module utm (13/82) 
+2026-09-23 19:15:07,025 1 INFO soloodoo_finance_native_test2 odoo.modules.registry: module utm: creating or updating database tables 
+2026-09-23 19:15:07,210 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading utm/data/utm_medium_data.xml 
+2026-09-23 19:15:07,256 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading utm/data/utm_source_data.xml 
+2026-09-23 19:15:07,287 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading utm/data/utm_stage_data.xml 
+2026-09-23 19:15:07,292 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading utm/data/utm_tag_data.xml 
+2026-09-23 19:15:07,299 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading utm/views/utm_campaign_views.xml 
+2026-09-23 19:15:07,340 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading utm/views/utm_medium_views.xml 
+2026-09-23 19:15:07,367 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading utm/views/utm_source_views.xml 
+2026-09-23 19:15:07,383 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading utm/views/utm_stage_views.xml 
+2026-09-23 19:15:07,405 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading utm/views/utm_tag_views.xml 
+2026-09-23 19:15:07,417 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading utm/views/utm_menus.xml 
+2026-09-23 19:15:07,451 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading utm/security/ir.model.access.csv 
+2026-09-23 19:15:07,492 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Module utm loaded in 0.49s, 405 queries (+405 other) 
+2026-09-23 19:15:07,492 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Loading module web_tour (14/82) 
+2026-09-23 19:15:07,517 1 INFO soloodoo_finance_native_test2 odoo.modules.registry: module web_tour: creating or updating database tables 
+2026-09-23 19:15:07,561 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading web_tour/security/ir.model.access.csv 
+2026-09-23 19:15:07,590 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading web_tour/security/ir.rule.csv 
+2026-09-23 19:15:07,618 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading web_tour/views/tour_views.xml 
+2026-09-23 19:15:07,734 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Module web_tour loaded in 0.24s, 104 queries (+104 other) 
+2026-09-23 19:15:07,735 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Loading module barcodes_gs1_nomenclature (15/82) 
+2026-09-23 19:15:07,773 1 INFO soloodoo_finance_native_test2 odoo.modules.registry: module barcodes_gs1_nomenclature: creating or updating database tables 
+2026-09-23 19:15:07,838 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading barcodes_gs1_nomenclature/data/barcodes_gs1_rules.xml 
+2026-09-23 19:15:07,925 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading barcodes_gs1_nomenclature/views/barcodes_view.xml 
+2026-09-23 19:15:07,971 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Module barcodes_gs1_nomenclature loaded in 0.24s, 189 queries (+189 other) 
+2026-09-23 19:15:07,972 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Loading module iap (16/82) 
+2026-09-23 19:15:07,990 1 INFO soloodoo_finance_native_test2 odoo.modules.registry: module iap: creating or updating database tables 
+2026-09-23 19:15:08,077 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading iap/security/ir.model.access.csv 
+2026-09-23 19:15:08,092 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading iap/security/ir_rule.xml 
+2026-09-23 19:15:08,101 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading iap/views/iap_views.xml 
+2026-09-23 19:15:08,127 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading iap/views/res_config_settings.xml 
+2026-09-23 19:15:08,162 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Module iap loaded in 0.19s, 151 queries (+151 other) 
+2026-09-23 19:15:08,162 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Loading module mail (17/82) 
+2026-09-23 19:15:08,210 1 INFO soloodoo_finance_native_test2 odoo.modules.registry: module mail: creating or updating database tables 
+2026-09-23 19:15:08,669 1 INFO soloodoo_finance_native_test2 odoo.models: Prepare computation of ir.actions.server.partner_ids 
+2026-09-23 19:15:08,670 1 INFO soloodoo_finance_native_test2 odoo.models: Prepare computation of ir.actions.server.template_id 
+2026-09-23 19:15:08,670 1 INFO soloodoo_finance_native_test2 odoo.models: Prepare computation of ir.actions.server.activity_type_id 
+2026-09-23 19:15:08,670 1 INFO soloodoo_finance_native_test2 odoo.models: Prepare computation of ir.actions.server.activity_date_deadline_range 
+2026-09-23 19:15:08,670 1 INFO soloodoo_finance_native_test2 odoo.models: Prepare computation of ir.actions.server.activity_user_id 
+2026-09-23 19:15:08,670 1 INFO soloodoo_finance_native_test2 odoo.models: Prepare computation of ir.actions.server.mail_post_method 
+2026-09-23 19:15:08,670 1 INFO soloodoo_finance_native_test2 odoo.models: Prepare computation of ir.actions.server.activity_summary 
+2026-09-23 19:15:08,670 1 INFO soloodoo_finance_native_test2 odoo.models: Prepare computation of ir.actions.server.activity_date_deadline_range_type 
+2026-09-23 19:15:08,670 1 INFO soloodoo_finance_native_test2 odoo.models: Prepare computation of ir.actions.server.activity_user_type 
+2026-09-23 19:15:08,670 1 INFO soloodoo_finance_native_test2 odoo.models: Prepare computation of ir.actions.server.activity_user_field_name 
+2026-09-23 19:15:08,670 1 INFO soloodoo_finance_native_test2 odoo.models: Prepare computation of ir.actions.server.activity_note 
+2026-09-23 19:15:08,670 1 INFO soloodoo_finance_native_test2 odoo.models: Prepare computation of ir.actions.server.mail_post_autofollow 
+2026-09-23 19:15:08,710 1 INFO soloodoo_finance_native_test2 odoo.models: Prepare computation of res.company.email_primary_color 
+2026-09-23 19:15:08,710 1 INFO soloodoo_finance_native_test2 odoo.models: Prepare computation of res.company.email_secondary_color 
+2026-09-23 19:15:08,730 1 INFO soloodoo_finance_native_test2 odoo.models: Prepare computation of res.users.notification_type 
+2026-09-23 19:15:08,860 1 INFO soloodoo_finance_native_test2 odoo.models: Prepare computation of res.partner.email_normalized 
+<string>:38: (ERROR/3) Unexpected indentation.
+<string>:43: (WARNING/2) Block quote ends without a blank line; unexpected unindent.
+2026-09-23 19:15:10,526 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading mail/data/mail_groups.xml 
+2026-09-23 19:15:10,626 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading mail/wizard/mail_activity_schedule_views.xml 
+2026-09-23 19:15:10,634 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading mail/wizard/mail_blacklist_remove_views.xml 
+2026-09-23 19:15:10,640 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading mail/wizard/mail_compose_message_views.xml 
+2026-09-23 19:15:10,659 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading mail/wizard/mail_resend_message_views.xml 
+2026-09-23 19:15:10,674 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading mail/wizard/mail_resend_partner_views.xml 
+2026-09-23 19:15:10,684 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading mail/wizard/mail_template_preview_views.xml 
+2026-09-23 19:15:10,695 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading mail/wizard/mail_wizard_invite_views.xml 
+2026-09-23 19:15:10,701 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading mail/wizard/mail_template_reset_views.xml 
+2026-09-23 19:15:10,710 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading mail/views/fetchmail_views.xml 
+2026-09-23 19:15:10,730 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading mail/views/mail_message_subtype_views.xml 
+2026-09-23 19:15:10,741 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading mail/views/mail_tracking_value_views.xml 
+2026-09-23 19:15:10,754 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading mail/views/mail_notification_views.xml 
+2026-09-23 19:15:10,766 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading mail/views/mail_message_views.xml 
+2026-09-23 19:15:10,793 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading mail/views/mail_message_schedule_views.xml 
+2026-09-23 19:15:10,808 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading mail/views/mail_mail_views.xml 
+2026-09-23 19:15:10,832 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading mail/views/mail_followers_views.xml 
+2026-09-23 19:15:10,845 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading mail/views/mail_ice_server_views.xml 
+2026-09-23 19:15:10,856 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading mail/views/discuss_channel_member_views.xml 
+2026-09-23 19:15:10,866 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading mail/views/discuss_channel_rtc_session_views.xml 
+2026-09-23 19:15:10,881 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading mail/views/mail_link_preview_views.xml 
+2026-09-23 19:15:10,891 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading mail/views/discuss/discuss_gif_favorite_views.xml 
+2026-09-23 19:15:10,902 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading mail/views/discuss_channel_views.xml 
+2026-09-23 19:15:10,928 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading mail/views/mail_shortcode_views.xml 
+2026-09-23 19:15:10,943 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading mail/views/mail_activity_views.xml 
+2026-09-23 19:15:11,024 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading mail/views/mail_activity_plan_views.xml 
+2026-09-23 19:15:11,054 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading mail/views/mail_activity_plan_template_views.xml 
+2026-09-23 19:15:11,064 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading mail/views/res_config_settings_views.xml 
+2026-09-23 19:15:11,086 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading mail/data/ir_config_parameter_data.xml 
+2026-09-23 19:15:11,090 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading mail/data/res_partner_data.xml 
+2026-09-23 19:15:11,160 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading mail/data/mail_message_subtype_data.xml 
+2026-09-23 19:15:11,171 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading mail/data/mail_templates_chatter.xml 
+2026-09-23 19:15:11,186 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading mail/data/mail_templates_email_layouts.xml 
+2026-09-23 19:15:11,206 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading mail/data/mail_templates_mailgateway.xml 
+2026-09-23 19:15:11,217 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading mail/data/discuss_channel_data.xml 
+2026-09-23 19:15:11,248 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading mail/data/mail_activity_data.xml 
+2026-09-23 19:15:11,272 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading mail/data/security_notifications_templates.xml 
+2026-09-23 19:15:11,278 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading mail/data/ir_cron_data.xml 
+2026-09-23 19:15:11,328 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading mail/security/mail_security.xml 
+2026-09-23 19:15:11,467 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading mail/security/ir.model.access.csv 
+2026-09-23 19:15:11,534 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading mail/views/discuss_public_templates.xml 
+2026-09-23 19:15:11,540 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading mail/views/mail_alias_domain_views.xml 
+2026-09-23 19:15:11,557 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading mail/views/mail_alias_views.xml 
+2026-09-23 19:15:11,576 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading mail/views/mail_gateway_allowed_views.xml 
+2026-09-23 19:15:11,587 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading mail/views/mail_guest_views.xml 
+2026-09-23 19:15:11,599 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading mail/views/mail_message_reaction_views.xml 
+2026-09-23 19:15:11,612 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading mail/views/mail_templates_public.xml 
+2026-09-23 19:15:11,622 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading mail/views/res_users_views.xml 
+2026-09-23 19:15:11,639 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading mail/views/res_users_settings_views.xml 
+2026-09-23 19:15:11,652 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading mail/views/mail_template_views.xml 
+2026-09-23 19:15:11,676 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading mail/views/ir_actions_server_views.xml 
+2026-09-23 19:15:11,687 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading mail/views/ir_model_views.xml 
+2026-09-23 19:15:11,707 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading mail/views/res_partner_views.xml 
+2026-09-23 19:15:11,758 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading mail/views/mail_blacklist_views.xml 
+2026-09-23 19:15:11,778 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading mail/views/mail_menus.xml 
+2026-09-23 19:15:11,928 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading mail/views/res_company_views.xml 
+2026-09-23 19:15:11,981 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Module mail loaded in 3.82s, 4209 queries (+4210 other) 
+2026-09-23 19:15:11,981 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Loading module web_editor (18/82) 
+2026-09-23 19:15:12,036 1 INFO soloodoo_finance_native_test2 odoo.modules.registry: module web_editor: creating or updating database tables 
+2026-09-23 19:15:12,830 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading web_editor/security/ir.model.access.csv 
+2026-09-23 19:15:12,846 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading web_editor/data/editor_assets.xml 
+2026-09-23 19:15:12,852 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading web_editor/views/editor.xml 
+2026-09-23 19:15:12,869 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading web_editor/views/snippets.xml 
+2026-09-23 19:15:12,925 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Module web_editor loaded in 0.94s, 1417 queries (+1417 other) 
+2026-09-23 19:15:12,925 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Loading module analytic (19/82) 
+2026-09-23 19:15:12,961 1 INFO soloodoo_finance_native_test2 odoo.modules.registry: module analytic: creating or updating database tables 
+2026-09-23 19:15:13,207 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading analytic/security/analytic_security.xml 
+2026-09-23 19:15:13,248 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading analytic/security/ir.model.access.csv 
+2026-09-23 19:15:13,267 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading analytic/views/analytic_line_views.xml 
+2026-09-23 19:15:13,311 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading analytic/views/analytic_account_views.xml 
+2026-09-23 19:15:13,346 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading analytic/views/analytic_plan_views.xml 
+2026-09-23 19:15:13,364 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading analytic/views/analytic_distribution_model_views.xml 
+2026-09-23 19:15:13,378 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading analytic/data/analytic_data.xml 
+2026-09-23 19:15:13,454 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Module analytic loaded in 0.53s, 410 queries (+410 other) 
+2026-09-23 19:15:13,454 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Loading module auth_signup (20/82) 
+2026-09-23 19:15:13,491 1 INFO soloodoo_finance_native_test2 odoo.modules.registry: module auth_signup: creating or updating database tables 
+2026-09-23 19:15:13,568 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading auth_signup/data/ir_config_parameter_data.xml 
+2026-09-23 19:15:13,574 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading auth_signup/data/ir_cron_data.xml 
+2026-09-23 19:15:13,587 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading auth_signup/data/mail_template_data.xml 
+2026-09-23 19:15:13,600 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading auth_signup/views/res_config_settings_views.xml 
+2026-09-23 19:15:13,615 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading auth_signup/views/res_users_views.xml 
+2026-09-23 19:15:13,639 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading auth_signup/views/auth_signup_login_templates.xml 
+2026-09-23 19:15:13,663 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading auth_signup/views/auth_signup_templates_email.xml 
+2026-09-23 19:15:13,675 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading auth_signup/views/webclient_templates.xml 
+2026-09-23 19:15:13,703 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Module auth_signup loaded in 0.25s, 202 queries (+202 other) 
+2026-09-23 19:15:13,703 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Loading module auth_totp_mail (21/82) 
+2026-09-23 19:15:13,737 1 INFO soloodoo_finance_native_test2 odoo.modules.registry: module auth_totp_mail: creating or updating database tables 
+2026-09-23 19:15:13,770 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading auth_totp_mail/data/ir_action_data.xml 
+2026-09-23 19:15:13,791 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading auth_totp_mail/data/mail_template_data.xml 
+2026-09-23 19:15:13,798 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading auth_totp_mail/data/security_notifications_template.xml 
+2026-09-23 19:15:13,809 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading auth_totp_mail/views/res_users_views.xml 
+2026-09-23 19:15:13,853 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Module auth_totp_mail loaded in 0.15s, 112 queries (+112 other) 
+2026-09-23 19:15:13,853 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Loading module base_install_request (22/82) 
+2026-09-23 19:15:13,890 1 INFO soloodoo_finance_native_test2 odoo.modules.registry: module base_install_request: creating or updating database tables 
+2026-09-23 19:15:13,970 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading base_install_request/security/ir.model.access.csv 
+2026-09-23 19:15:13,988 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading base_install_request/wizard/base_module_install_request_views.xml 
+2026-09-23 19:15:14,004 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading base_install_request/data/mail_template_data.xml 
+2026-09-23 19:15:14,011 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading base_install_request/data/mail_templates_module_install.xml 
+2026-09-23 19:15:14,018 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading base_install_request/views/ir_module_module_views.xml 
+2026-09-23 19:15:14,123 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Module base_install_request loaded in 0.27s, 144 queries (+144 other) 
+2026-09-23 19:15:14,124 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Loading module google_gmail (23/82) 
+2026-09-23 19:15:14,160 1 INFO soloodoo_finance_native_test2 odoo.modules.registry: module google_gmail: creating or updating database tables 
+2026-09-23 19:15:14,213 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading google_gmail/views/fetchmail_server_views.xml 
+2026-09-23 19:15:14,228 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading google_gmail/views/ir_mail_server_views.xml 
+2026-09-23 19:15:14,238 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading google_gmail/views/res_config_settings_views.xml 
+2026-09-23 19:15:14,278 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Module google_gmail loaded in 0.15s, 118 queries (+118 other) 
+2026-09-23 19:15:14,278 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Loading module iap_mail (24/82) 
+2026-09-23 19:15:14,313 1 INFO soloodoo_finance_native_test2 odoo.modules.registry: module iap_mail: creating or updating database tables 
+2026-09-23 19:15:14,330 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading iap_mail/data/mail_templates.xml 
+2026-09-23 19:15:14,364 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Module iap_mail loaded in 0.09s, 40 queries (+40 other) 
+2026-09-23 19:15:14,365 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Loading module mail_bot (25/82) 
+2026-09-23 19:15:14,402 1 INFO soloodoo_finance_native_test2 odoo.modules.registry: module mail_bot: creating or updating database tables 
+2026-09-23 19:15:14,486 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading mail_bot/views/res_users_views.xml 
+2026-09-23 19:15:14,513 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading mail_bot/data/mailbot_data.xml 
+2026-09-23 19:15:14,541 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Module mail_bot loaded in 0.18s, 157 queries (+157 other) 
+2026-09-23 19:15:14,541 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Loading module phone_validation (26/82) 
+2026-09-23 19:15:14,611 1 INFO soloodoo_finance_native_test2 odoo.modules.registry: module phone_validation: creating or updating database tables 
+2026-09-23 19:15:15,423 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading phone_validation/security/ir.model.access.csv 
+2026-09-23 19:15:15,437 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading phone_validation/views/phone_blacklist_views.xml 
+2026-09-23 19:15:15,465 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading phone_validation/wizard/phone_blacklist_remove_view.xml 
+2026-09-23 19:15:15,490 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Module phone_validation loaded in 0.95s, 1486 queries (+1486 other) 
+2026-09-23 19:15:15,490 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Loading module privacy_lookup (27/82) 
+2026-09-23 19:15:15,527 1 INFO soloodoo_finance_native_test2 odoo.modules.registry: module privacy_lookup: creating or updating database tables 
+2026-09-23 19:15:15,656 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading privacy_lookup/wizard/privacy_lookup_wizard_views.xml 
+2026-09-23 19:15:15,697 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading privacy_lookup/views/privacy_log_views.xml 
+2026-09-23 19:15:15,725 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading privacy_lookup/security/ir.model.access.csv 
+2026-09-23 19:15:15,741 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading privacy_lookup/data/ir_actions_server_data.xml 
+2026-09-23 19:15:15,774 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Module privacy_lookup loaded in 0.28s, 245 queries (+245 other) 
+2026-09-23 19:15:15,774 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Loading module product (28/82) 
+2026-09-23 19:15:15,867 1 INFO soloodoo_finance_native_test2 odoo.modules.registry: module product: creating or updating database tables 
+2026-09-23 19:15:16,811 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading product/data/product_data.xml 
+2026-09-23 19:15:16,836 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading product/security/product_security.xml 
+2026-09-23 19:15:16,947 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading product/security/ir.model.access.csv 
+2026-09-23 19:15:16,976 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading product/wizard/product_label_layout_views.xml 
+2026-09-23 19:15:16,988 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading product/views/product_tag_views.xml 
+2026-09-23 19:15:17,002 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading product/views/product_views.xml 
+2026-09-23 19:15:17,105 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading product/views/res_config_settings_views.xml 
+2026-09-23 19:15:17,130 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading product/views/product_attribute_views.xml 
+2026-09-23 19:15:17,162 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading product/views/product_attribute_value_views.xml 
+2026-09-23 19:15:17,167 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading product/views/product_category_views.xml 
+2026-09-23 19:15:17,185 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading product/views/product_document_views.xml 
+2026-09-23 19:15:17,209 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading product/views/product_packaging_views.xml 
+2026-09-23 19:15:17,235 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading product/views/product_pricelist_item_views.xml 
+2026-09-23 19:15:17,260 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading product/views/product_pricelist_views.xml 
+2026-09-23 19:15:17,286 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading product/views/product_supplierinfo_views.xml 
+2026-09-23 19:15:17,313 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading product/views/product_template_views.xml 
+2026-09-23 19:15:17,350 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading product/views/res_country_group_views.xml 
+2026-09-23 19:15:17,358 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading product/views/res_partner_views.xml 
+2026-09-23 19:15:17,369 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading product/report/product_reports.xml 
+2026-09-23 19:15:17,397 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading product/report/product_product_templates.xml 
+2026-09-23 19:15:17,428 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading product/report/product_template_templates.xml 
+2026-09-23 19:15:17,450 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading product/report/product_packaging.xml 
+2026-09-23 19:15:17,457 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading product/report/product_pricelist_report_templates.xml 
+2026-09-23 19:15:17,503 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Module product loaded in 1.73s, 1491 queries (+1491 other) 
+2026-09-23 19:15:17,503 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Loading module rating (29/82) 
+2026-09-23 19:15:17,554 1 INFO soloodoo_finance_native_test2 odoo.modules.registry: module rating: creating or updating database tables 
+2026-09-23 19:15:17,775 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading rating/views/rating_rating_views.xml 
+2026-09-23 19:15:17,851 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading rating/views/rating_templates.xml 
+2026-09-23 19:15:17,863 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading rating/views/mail_message_views.xml 
+2026-09-23 19:15:17,871 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading rating/security/ir.model.access.csv 
+2026-09-23 19:15:17,907 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Module rating loaded in 0.40s, 359 queries (+359 other) 
+2026-09-23 19:15:17,907 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Loading module sales_team (30/82) 
+2026-09-23 19:15:17,955 1 INFO soloodoo_finance_native_test2 odoo.modules.registry: module sales_team: creating or updating database tables 
+2026-09-23 19:15:18,009 1 INFO soloodoo_finance_native_test2 odoo.models: Prepare computation of res.users.sale_team_id 
+2026-09-23 19:15:18,146 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sales_team/security/sales_team_security.xml 
+2026-09-23 19:15:18,318 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sales_team/security/ir.model.access.csv 
+2026-09-23 19:15:18,336 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sales_team/data/crm_team_data.xml 
+2026-09-23 19:15:18,399 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sales_team/views/crm_tag_views.xml 
+2026-09-23 19:15:18,413 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sales_team/views/crm_team_views.xml 
+2026-09-23 19:15:18,452 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sales_team/views/crm_team_member_views.xml 
+2026-09-23 19:15:18,504 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sales_team/views/mail_activity_views.xml 
+2026-09-23 19:15:18,510 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sales_team/views/res_partner_views.xml 
+2026-09-23 19:15:18,546 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Module sales_team loaded in 0.64s, 538 queries (+538 other) 
+2026-09-23 19:15:18,546 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Loading module web_unsplash (31/82) 
+2026-09-23 19:15:18,604 1 INFO soloodoo_finance_native_test2 odoo.modules.registry: module web_unsplash: creating or updating database tables 
+2026-09-23 19:15:18,663 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading web_unsplash/views/res_config_settings_view.xml 
+2026-09-23 19:15:18,713 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Module web_unsplash loaded in 0.17s, 98 queries (+98 other) 
+2026-09-23 19:15:18,713 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Loading module partner_autocomplete (32/82) 
+2026-09-23 19:15:18,789 1 INFO soloodoo_finance_native_test2 odoo.modules.registry: module partner_autocomplete: creating or updating database tables 
+2026-09-23 19:15:18,907 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading partner_autocomplete/security/ir.model.access.csv 
+2026-09-23 19:15:18,923 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading partner_autocomplete/views/res_partner_views.xml 
+2026-09-23 19:15:18,947 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading partner_autocomplete/views/res_company_views.xml 
+2026-09-23 19:15:18,957 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading partner_autocomplete/views/res_config_settings_views.xml 
+2026-09-23 19:15:18,971 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading partner_autocomplete/data/cron.xml 
+2026-09-23 19:15:19,005 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Module partner_autocomplete loaded in 0.29s, 196 queries (+196 other) 
+2026-09-23 19:15:19,005 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Loading module portal (33/82) 
+2026-09-23 19:15:19,051 1 INFO soloodoo_finance_native_test2 odoo.modules.registry: module portal: creating or updating database tables 
+2026-09-23 19:15:19,306 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading portal/security/ir.model.access.csv 
+2026-09-23 19:15:19,320 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading portal/data/mail_template_data.xml 
+2026-09-23 19:15:19,328 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading portal/data/mail_templates.xml 
+2026-09-23 19:15:19,337 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading portal/views/mail_templates_public.xml 
+2026-09-23 19:15:19,347 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading portal/views/portal_templates.xml 
+2026-09-23 19:15:19,481 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading portal/views/res_config_settings_views.xml 
+2026-09-23 19:15:19,496 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading portal/wizard/portal_share_views.xml 
+2026-09-23 19:15:19,506 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading portal/wizard/portal_wizard_views.xml 
+2026-09-23 19:15:19,546 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Module portal loaded in 0.54s, 505 queries (+505 other) 
+2026-09-23 19:15:19,546 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Loading module sms (34/82) 
+2026-09-23 19:15:19,717 1 INFO soloodoo_finance_native_test2 odoo.modules.registry: module sms: creating or updating database tables 
+2026-09-23 19:15:19,728 1 INFO soloodoo_finance_native_test2 odoo.models: Prepare computation of ir.actions.server.sms_template_id 
+2026-09-23 19:15:19,728 1 INFO soloodoo_finance_native_test2 odoo.models: Prepare computation of ir.actions.server.sms_method 
+2026-09-23 19:15:19,772 1 INFO soloodoo_finance_native_test2 odoo.models: Prepare computation of res.partner.phone_sanitized 
+2026-09-23 19:15:20,934 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sms/data/ir_cron_data.xml 
+2026-09-23 19:15:20,943 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sms/wizard/sms_composer_views.xml 
+2026-09-23 19:15:20,955 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sms/wizard/sms_template_preview_views.xml 
+2026-09-23 19:15:20,963 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sms/wizard/sms_resend_views.xml 
+2026-09-23 19:15:20,974 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sms/wizard/sms_template_reset_views.xml 
+2026-09-23 19:15:20,982 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sms/views/ir_actions_server_views.xml 
+2026-09-23 19:15:20,991 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sms/views/mail_notification_views.xml 
+2026-09-23 19:15:21,004 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sms/views/res_config_settings_views.xml 
+2026-09-23 19:15:21,018 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sms/views/res_partner_views.xml 
+2026-09-23 19:15:21,048 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sms/views/sms_sms_views.xml 
+2026-09-23 19:15:21,072 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sms/views/sms_template_views.xml 
+2026-09-23 19:15:21,094 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sms/security/ir.model.access.csv 
+2026-09-23 19:15:21,119 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sms/security/sms_security.xml 
+2026-09-23 19:15:21,151 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Module sms loaded in 1.61s, 2088 queries (+2088 other) 
+2026-09-23 19:15:21,151 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Loading module snailmail (35/82) 
+2026-09-23 19:15:21,199 1 INFO soloodoo_finance_native_test2 odoo.modules.registry: module snailmail: creating or updating database tables 
+2026-09-23 19:15:21,512 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading snailmail/data/snailmail_data.xml 
+2026-09-23 19:15:21,524 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading snailmail/views/report_assets.xml 
+2026-09-23 19:15:21,545 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading snailmail/views/snailmail_views.xml 
+2026-09-23 19:15:21,568 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading snailmail/wizard/snailmail_letter_format_error_views.xml 
+2026-09-23 19:15:21,580 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading snailmail/wizard/snailmail_letter_missing_required_fields_views.xml 
+2026-09-23 19:15:21,590 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading snailmail/security/ir.model.access.csv 
+2026-09-23 19:15:21,627 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Module snailmail loaded in 0.48s, 446 queries (+446 other) 
+2026-09-23 19:15:21,627 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Loading module auth_totp_portal (36/82) 
+2026-09-23 19:15:21,675 1 INFO soloodoo_finance_native_test2 odoo.modules.registry: module auth_totp_portal: creating or updating database tables 
+2026-09-23 19:15:21,705 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading auth_totp_portal/security/security.xml 
+2026-09-23 19:15:21,722 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading auth_totp_portal/views/templates.xml 
+2026-09-23 19:15:21,745 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Module auth_totp_portal loaded in 0.12s, 66 queries (+66 other) 
+2026-09-23 19:15:21,745 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Loading module digest (37/82) 
+2026-09-23 19:15:21,790 1 INFO soloodoo_finance_native_test2 odoo.modules.registry: module digest: creating or updating database tables 
+2026-09-23 19:15:21,902 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading digest/security/ir.model.access.csv 
+2026-09-23 19:15:21,914 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading digest/data/digest_data.xml 
+2026-09-23 19:15:21,933 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading digest/data/digest_tips_data.xml 
+2026-09-23 19:15:21,949 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading digest/data/ir_cron_data.xml 
+2026-09-23 19:15:21,958 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading digest/data/res_config_settings_data.xml 
+2026-09-23 19:15:21,964 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading digest/views/digest_views.xml 
+2026-09-23 19:15:22,006 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading digest/views/digest_templates.xml 
+2026-09-23 19:15:22,011 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading digest/views/res_config_settings_views.xml 
+2026-09-23 19:15:22,050 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Module digest loaded in 0.31s, 296 queries (+296 other) 
+2026-09-23 19:15:22,050 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Loading module payment (38/82) 
+2026-09-23 19:15:22,103 1 INFO soloodoo_finance_native_test2 odoo.modules.registry: module payment: creating or updating database tables 
+2026-09-23 19:15:22,549 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading payment/data/onboarding_data.xml 
+2026-09-23 19:15:22,555 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading payment/data/payment_method_data.xml 
+2026-09-23 19:15:24,160 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading payment/data/payment_provider_data.xml 
+2026-09-23 19:15:24,291 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading payment/data/payment_cron.xml 
+2026-09-23 19:15:24,852 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading payment/views/express_checkout_templates.xml 
+2026-09-23 19:15:24,858 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading payment/views/payment_form_templates.xml 
+2026-09-23 19:15:24,879 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading payment/views/portal_templates.xml 
+2026-09-23 19:15:24,916 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading payment/views/payment_provider_views.xml 
+2026-09-23 19:15:24,939 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading payment/views/payment_method_views.xml 
+2026-09-23 19:15:24,957 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading payment/views/payment_transaction_views.xml 
+2026-09-23 19:15:24,979 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading payment/views/payment_token_views.xml 
+2026-09-23 19:15:24,995 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading payment/views/res_partner_views.xml 
+2026-09-23 19:15:25,006 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading payment/security/ir.model.access.csv 
+2026-09-23 19:15:25,022 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading payment/security/payment_security.xml 
+2026-09-23 19:15:25,048 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading payment/wizards/payment_capture_wizard_views.xml 
+2026-09-23 19:15:25,056 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading payment/wizards/payment_link_wizard_views.xml 
+2026-09-23 19:15:25,062 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading payment/wizards/payment_onboarding_views.xml 
+2026-09-23 19:15:25,087 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Module payment loaded in 3.04s, 2222 queries (+2222 other) 
+2026-09-23 19:15:25,087 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Loading module portal_rating (39/82) 
+2026-09-23 19:15:25,134 1 INFO soloodoo_finance_native_test2 odoo.modules.registry: module portal_rating: creating or updating database tables 
+2026-09-23 19:15:25,196 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading portal_rating/views/rating_rating_views.xml 
+2026-09-23 19:15:25,209 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading portal_rating/views/portal_templates.xml 
+2026-09-23 19:15:25,217 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading portal_rating/views/rating_templates.xml 
+2026-09-23 19:15:25,247 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Module portal_rating loaded in 0.16s, 105 queries (+105 other) 
+2026-09-23 19:15:25,247 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Loading module spreadsheet (40/82) 
+2026-09-23 19:15:25,301 1 INFO soloodoo_finance_native_test2 odoo.modules.registry: module spreadsheet: creating or updating database tables 
+2026-09-23 19:15:25,352 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading spreadsheet/views/public_readonly_spreadsheet_templates.xml 
+2026-09-23 19:15:25,373 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Module spreadsheet loaded in 0.13s, 83 queries (+83 other) 
+2026-09-23 19:15:25,373 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Loading module account (41/82) 
+2026-09-23 19:15:25,489 1 INFO soloodoo_finance_native_test2 odoo.modules.registry: module account: creating or updating database tables 
+2026-09-23 19:15:26,064 1 INFO soloodoo_finance_native_test2 odoo.models: Prepare computation of res.company.account_fiscal_country_id 
+2026-09-23 19:15:26,064 1 INFO soloodoo_finance_native_test2 odoo.models: Prepare computation of res.company.invoice_terms_html 
+2026-09-23 19:15:27,857 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading account/security/account_security.xml 
+2026-09-23 19:15:28,265 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading account/security/ir.model.access.csv 
+2026-09-23 19:15:28,343 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading account/data/account_data.xml 
+2026-09-23 19:15:28,421 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading account/data/digest_data.xml 
+2026-09-23 19:15:28,429 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading account/views/account_report.xml 
+2026-09-23 19:15:28,449 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading account/data/mail_template_data.xml 
+2026-09-23 19:15:28,462 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading account/data/onboarding_data.xml 
+2026-09-23 19:15:28,507 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading account/views/account_payment_view.xml 
+2026-09-23 19:15:28,574 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading account/wizard/account_automatic_entry_wizard_views.xml 
+2026-09-23 19:15:28,585 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading account/wizard/account_unreconcile_view.xml 
+2026-09-23 19:15:28,595 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading account/wizard/account_move_reversal_view.xml 
+2026-09-23 19:15:28,606 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading account/wizard/account_resequence_views.xml 
+2026-09-23 19:15:28,616 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading account/wizard/account_payment_register_views.xml 
+2026-09-23 19:15:28,625 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading account/views/account_move_views.xml 
+2026-09-23 19:15:28,948 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading account/wizard/setup_wizards_view.xml 
+2026-09-23 19:15:28,964 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading account/views/account_account_views.xml 
+2026-09-23 19:15:28,988 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading account/views/account_group_views.xml 
+2026-09-23 19:15:28,999 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading account/views/account_journal_views.xml 
+2026-09-23 19:15:29,038 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading account/views/account_account_tag_views.xml 
+2026-09-23 19:15:29,051 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading account/views/account_bank_statement_views.xml 
+2026-09-23 19:15:29,076 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading account/views/account_reconcile_model_views.xml 
+2026-09-23 19:15:29,102 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading account/views/account_tax_views.xml 
+2026-09-23 19:15:29,155 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading account/views/account_full_reconcile_views.xml 
+2026-09-23 19:15:29,160 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading account/views/account_payment_term_views.xml 
+2026-09-23 19:15:29,179 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading account/views/account_payment_method.xml 
+2026-09-23 19:15:29,188 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading account/views/res_partner_bank_views.xml 
+2026-09-23 19:15:29,209 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading account/views/report_statement.xml 
+2026-09-23 19:15:29,222 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading account/views/terms_template.xml 
+2026-09-23 19:15:29,233 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading account/wizard/account_validate_move_view.xml 
+2026-09-23 19:15:29,246 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading account/views/res_company_views.xml 
+2026-09-23 19:15:29,274 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading account/views/product_view.xml 
+2026-09-23 19:15:29,313 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading account/views/account_analytic_plan_views.xml 
+2026-09-23 19:15:29,321 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading account/views/account_analytic_account_views.xml 
+2026-09-23 19:15:29,335 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading account/views/account_analytic_distribution_model_views.xml 
+2026-09-23 19:15:29,348 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading account/views/account_analytic_line_views.xml 
+2026-09-23 19:15:29,377 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading account/views/report_invoice.xml 
+2026-09-23 19:15:29,409 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading account/report/account_invoice_report_view.xml 
+2026-09-23 19:15:29,447 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading account/views/account_cash_rounding_view.xml 
+2026-09-23 19:15:29,463 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading account/views/ir_module_views.xml 
+2026-09-23 19:15:29,471 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading account/views/res_config_settings_views.xml 
+2026-09-23 19:15:29,502 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading account/views/partner_view.xml 
+2026-09-23 19:15:29,617 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading account/views/account_journal_dashboard_view.xml 
+2026-09-23 19:15:29,644 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading account/views/account_portal_templates.xml 
+2026-09-23 19:15:29,699 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading account/views/report_payment_receipt_templates.xml 
+2026-09-23 19:15:29,712 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading account/data/service_cron.xml 
+2026-09-23 19:15:29,727 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading account/views/account_incoterms_view.xml 
+2026-09-23 19:15:29,747 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading account/data/account_incoterms_data.xml 
+2026-09-23 19:15:29,776 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading account/views/digest_views.xml 
+2026-09-23 19:15:29,785 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading account/wizard/account_move_send_views.xml 
+2026-09-23 19:15:29,797 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading account/report/account_hash_integrity_templates.xml 
+2026-09-23 19:15:29,804 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading account/views/res_currency.xml 
+2026-09-23 19:15:29,812 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading account/views/account_menuitem.xml 
+2026-09-23 19:15:30,100 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading account/wizard/account_tour_upload_bill.xml 
+2026-09-23 19:15:30,122 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading account/wizard/accrued_orders.xml 
+2026-09-23 19:15:30,132 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading account/views/bill_preview_template.xml 
+2026-09-23 19:15:30,143 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading account/data/account_reports_data.xml 
+2026-09-23 19:15:30,607 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading account/views/uom_uom_views.xml 
+2026-09-23 19:15:30,614 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading account/data/ir_config_parameter_data.xml 
+2026-09-23 19:15:30,763 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Module account loaded in 5.39s, 5697 queries (+5697 other) 
+2026-09-23 19:15:30,763 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Loading module project (42/82) 
+2026-09-23 19:15:30,854 1 INFO soloodoo_finance_native_test2 odoo.modules.registry: module project: creating or updating database tables 
+2026-09-23 19:15:31,598 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading project/security/project_security.xml 
+2026-09-23 19:15:31,954 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading project/security/ir.model.access.csv 
+2026-09-23 19:15:31,988 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading project/security/ir.model.access.xml 
+2026-09-23 19:15:31,994 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading project/data/digest_data.xml 
+2026-09-23 19:15:32,003 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading project/report/project_task_burndown_chart_report_views.xml 
+2026-09-23 19:15:32,017 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading project/views/account_analytic_account_views.xml 
+2026-09-23 19:15:32,027 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading project/views/digest_digest_views.xml 
+2026-09-23 19:15:32,035 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading project/views/rating_rating_views.xml 
+2026-09-23 19:15:32,110 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading project/views/project_update_views.xml 
+2026-09-23 19:15:32,131 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading project/views/project_update_templates.xml 
+2026-09-23 19:15:32,140 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading project/views/project_project_stage_views.xml 
+2026-09-23 19:15:32,173 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading project/wizard/project_share_wizard_views.xml 
+2026-09-23 19:15:32,187 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading project/views/project_collaborator_views.xml 
+2026-09-23 19:15:32,199 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading project/views/project_task_type_views.xml 
+2026-09-23 19:15:32,235 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading project/views/project_project_views.xml 
+2026-09-23 19:15:32,380 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading project/views/project_task_views.xml 
+2026-09-23 19:15:32,627 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading project/views/project_tags_views.xml 
+2026-09-23 19:15:32,645 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading project/views/project_milestone_views.xml 
+2026-09-23 19:15:32,657 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading project/views/res_partner_views.xml 
+2026-09-23 19:15:32,671 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading project/views/res_config_settings_views.xml 
+2026-09-23 19:15:32,692 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading project/views/mail_activity_plan_views.xml 
+2026-09-23 19:15:32,712 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading project/views/mail_activity_type_views.xml 
+2026-09-23 19:15:32,717 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading project/views/project_sharing_project_task_views.xml 
+2026-09-23 19:15:32,773 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading project/views/project_portal_project_project_templates.xml 
+2026-09-23 19:15:32,797 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading project/views/project_portal_project_task_templates.xml 
+2026-09-23 19:15:32,847 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading project/views/project_task_templates.xml 
+2026-09-23 19:15:32,851 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading project/views/project_sharing_project_task_templates.xml 
+2026-09-23 19:15:32,863 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading project/report/project_report_views.xml 
+2026-09-23 19:15:32,882 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading project/data/ir_cron_data.xml 
+2026-09-23 19:15:32,890 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading project/data/mail_message_subtype_data.xml 
+2026-09-23 19:15:32,941 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading project/data/mail_template_data.xml 
+2026-09-23 19:15:32,953 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading project/data/project_data.xml 
+2026-09-23 19:15:32,963 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading project/wizard/project_task_type_delete_views.xml 
+2026-09-23 19:15:32,979 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading project/wizard/project_project_stage_delete_views.xml 
+2026-09-23 19:15:32,989 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading project/views/project_menus.xml 
+2026-09-23 19:15:33,137 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Module project loaded in 2.37s, 2597 queries (+2597 other) 
+2026-09-23 19:15:33,137 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Loading module spreadsheet_dashboard (43/82) 
+2026-09-23 19:15:33,221 1 INFO soloodoo_finance_native_test2 odoo.modules.registry: module spreadsheet_dashboard: creating or updating database tables 
+2026-09-23 19:15:33,354 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading spreadsheet_dashboard/security/security.xml 
+2026-09-23 19:15:33,439 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading spreadsheet_dashboard/security/ir.model.access.csv 
+2026-09-23 19:15:33,458 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading spreadsheet_dashboard/views/spreadsheet_dashboard_views.xml 
+2026-09-23 19:15:33,486 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading spreadsheet_dashboard/views/menu_views.xml 
+2026-09-23 19:15:33,537 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading spreadsheet_dashboard/data/dashboard.xml 
+2026-09-23 19:15:33,582 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Module spreadsheet_dashboard loaded in 0.44s, 269 queries (+269 other) 
+2026-09-23 19:15:33,582 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Loading module stock (44/82) 
+2026-09-23 19:15:33,770 1 INFO soloodoo_finance_native_test2 odoo.modules.registry: module stock: creating or updating database tables 
+2026-09-23 19:15:36,206 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading stock/security/stock_security.xml 
+2026-09-23 19:15:36,605 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading stock/security/ir.model.access.csv 
+2026-09-23 19:15:36,672 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading stock/data/digest_data.xml 
+2026-09-23 19:15:36,677 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading stock/data/mail_templates.xml 
+2026-09-23 19:15:36,685 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading stock/data/default_barcode_patterns.xml 
+2026-09-23 19:15:36,695 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading stock/data/stock_data.xml 
+2026-09-23 19:15:36,948 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading stock/data/stock_sequence_data.xml 
+2026-09-23 19:15:36,973 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading stock/data/stock_traceability_report_data.xml 
+2026-09-23 19:15:36,979 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading stock/report/report_stock_quantity.xml 
+2026-09-23 19:15:36,986 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading stock/report/report_stock_reception.xml 
+2026-09-23 19:15:37,009 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading stock/report/stock_report_views.xml 
+2026-09-23 19:15:37,064 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading stock/report/report_package_barcode.xml 
+2026-09-23 19:15:37,081 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading stock/report/report_lot_barcode.xml 
+2026-09-23 19:15:37,087 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading stock/report/report_location_barcode.xml 
+2026-09-23 19:15:37,097 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading stock/report/report_stockpicking_operations.xml 
+2026-09-23 19:15:37,111 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading stock/report/report_deliveryslip.xml 
+2026-09-23 19:15:37,142 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading stock/report/report_stockinventory.xml 
+2026-09-23 19:15:37,150 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading stock/report/report_stock_rule.xml 
+2026-09-23 19:15:37,180 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading stock/report/package_templates.xml 
+2026-09-23 19:15:37,186 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading stock/report/picking_templates.xml 
+2026-09-23 19:15:37,200 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading stock/report/product_templates.xml 
+2026-09-23 19:15:37,210 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading stock/report/product_packaging.xml 
+2026-09-23 19:15:37,217 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading stock/report/report_return_slip.xml 
+2026-09-23 19:15:37,226 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading stock/data/mail_template_data.xml 
+2026-09-23 19:15:37,235 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading stock/views/stock_menu_views.xml 
+2026-09-23 19:15:37,339 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading stock/wizard/stock_assign_serial_views.xml 
+2026-09-23 19:15:37,351 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading stock/wizard/stock_change_product_qty_views.xml 
+2026-09-23 19:15:37,364 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading stock/wizard/stock_picking_return_views.xml 
+2026-09-23 19:15:37,377 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading stock/wizard/stock_scheduler_compute_views.xml 
+2026-09-23 19:15:37,393 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading stock/wizard/stock_inventory_conflict.xml 
+2026-09-23 19:15:37,404 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading stock/wizard/stock_backorder_confirmation_views.xml 
+2026-09-23 19:15:37,413 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading stock/wizard/stock_quantity_history.xml 
+2026-09-23 19:15:37,419 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading stock/wizard/stock_request_count.xml 
+2026-09-23 19:15:37,430 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading stock/wizard/stock_replenishment_info.xml 
+2026-09-23 19:15:37,450 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading stock/wizard/stock_rules_report_views.xml 
+2026-09-23 19:15:37,459 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading stock/wizard/stock_warn_insufficient_qty_views.xml 
+2026-09-23 19:15:37,474 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading stock/wizard/product_replenish_views.xml 
+2026-09-23 19:15:37,484 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading stock/wizard/product_label_layout_views.xml 
+2026-09-23 19:15:37,494 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading stock/wizard/stock_track_confirmation_views.xml 
+2026-09-23 19:15:37,500 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading stock/wizard/stock_orderpoint_snooze_views.xml 
+2026-09-23 19:15:37,514 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading stock/wizard/stock_package_destination_views.xml 
+2026-09-23 19:15:37,524 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading stock/wizard/stock_inventory_adjustment_name.xml 
+2026-09-23 19:15:37,533 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading stock/wizard/stock_inventory_warning.xml 
+2026-09-23 19:15:37,544 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading stock/wizard/stock_label_type.xml 
+2026-09-23 19:15:37,551 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading stock/wizard/stock_lot_label_layout.xml 
+2026-09-23 19:15:37,563 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading stock/wizard/stock_quant_relocate.xml 
+2026-09-23 19:15:37,572 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading stock/views/res_partner_views.xml 
+2026-09-23 19:15:37,609 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading stock/views/product_strategy_views.xml 
+2026-09-23 19:15:37,653 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading stock/views/stock_lot_views.xml 
+2026-09-23 19:15:37,703 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading stock/views/stock_scrap_views.xml 
+2026-09-23 19:15:37,751 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading stock/views/stock_quant_views.xml 
+2026-09-23 19:15:37,979 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading stock/views/stock_warehouse_views.xml 
+2026-09-23 19:15:38,011 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading stock/views/stock_move_line_views.xml 
+2026-09-23 19:15:38,083 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading stock/views/stock_picking_views.xml 
+2026-09-23 19:15:38,234 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading stock/views/stock_picking_type_views.xml 
+2026-09-23 19:15:38,284 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading stock/views/stock_move_views.xml 
+2026-09-23 19:15:38,388 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading stock/views/product_views.xml 
+2026-09-23 19:15:38,585 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading stock/views/stock_location_views.xml 
+2026-09-23 19:15:38,671 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading stock/views/stock_orderpoint_views.xml 
+2026-09-23 19:15:38,732 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading stock/views/stock_storage_category_views.xml 
+2026-09-23 19:15:38,766 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading stock/views/res_config_settings_views.xml 
+2026-09-23 19:15:38,813 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading stock/views/report_stock_traceability.xml 
+2026-09-23 19:15:38,823 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading stock/views/stock_template.xml 
+2026-09-23 19:15:38,832 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading stock/views/stock_rule_views.xml 
+2026-09-23 19:15:38,872 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading stock/views/stock_package_level_views.xml 
+2026-09-23 19:15:38,896 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading stock/views/stock_package_type_view.xml 
+2026-09-23 19:15:38,925 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading stock/views/stock_forecasted.xml 
+2026-09-23 19:15:39,007 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Module stock loaded in 5.42s, 5103 queries (+5103 other) 
+2026-09-23 19:15:39,007 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Loading module account_add_gln (45/82) 
+2026-09-23 19:15:39,100 1 INFO soloodoo_finance_native_test2 odoo.modules.registry: module account_add_gln: creating or updating database tables 
+2026-09-23 19:15:39,177 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading account_add_gln/views/res_partner_views.xml 
+2026-09-23 19:15:39,210 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Module account_add_gln loaded in 0.20s, 96 queries (+96 other) 
+2026-09-23 19:15:39,210 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Loading module account_edi_ubl_cii (46/82) 
+2026-09-23 19:15:39,343 1 INFO soloodoo_finance_native_test2 odoo.modules.registry: module account_edi_ubl_cii: creating or updating database tables 
+2026-09-23 19:15:39,363 1 INFO soloodoo_finance_native_test2 odoo.models: Prepare computation of res.partner.ubl_cii_format 
+2026-09-23 19:15:39,363 1 INFO soloodoo_finance_native_test2 odoo.models: Prepare computation of res.partner.peppol_endpoint 
+2026-09-23 19:15:39,363 1 INFO soloodoo_finance_native_test2 odoo.models: Prepare computation of res.partner.peppol_eas 
+2026-09-23 19:15:39,511 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading account_edi_ubl_cii/data/cii_22_templates.xml 
+2026-09-23 19:15:39,541 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading account_edi_ubl_cii/data/ubl_20_templates.xml 
+2026-09-23 19:15:39,648 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading account_edi_ubl_cii/data/ubl_21_templates.xml 
+2026-09-23 19:15:39,788 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading account_edi_ubl_cii/views/account_move_views.xml 
+2026-09-23 19:15:39,799 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading account_edi_ubl_cii/views/res_config_settings_views.xml 
+2026-09-23 19:15:39,820 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading account_edi_ubl_cii/views/res_partner_views.xml 
+2026-09-23 19:15:39,858 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading account_edi_ubl_cii/wizard/account_move_send_views.xml 
+2026-09-23 19:15:39,902 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Module account_edi_ubl_cii loaded in 0.69s, 438 queries (+438 other) 
+2026-09-23 19:15:39,903 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Loading module account_payment (47/82) 
+2026-09-23 19:15:40,022 1 INFO soloodoo_finance_native_test2 odoo.modules.registry: module account_payment: creating or updating database tables 
+2026-09-23 19:15:40,250 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading account_payment/data/ir_config_parameter.xml 
+2026-09-23 19:15:40,257 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading account_payment/data/onboarding_data.xml 
+2026-09-23 19:15:40,271 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading account_payment/security/ir.model.access.csv 
+2026-09-23 19:15:40,290 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading account_payment/security/ir_rules.xml 
+2026-09-23 19:15:40,304 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading account_payment/views/account_payment_menus.xml 
+2026-09-23 19:15:40,347 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading account_payment/views/account_portal_templates.xml 
+2026-09-23 19:15:40,395 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading account_payment/views/account_move_views.xml 
+2026-09-23 19:15:40,413 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading account_payment/views/account_journal_views.xml 
+2026-09-23 19:15:40,425 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading account_payment/views/account_payment_views.xml 
+2026-09-23 19:15:40,437 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading account_payment/views/payment_provider_views.xml 
+2026-09-23 19:15:40,448 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading account_payment/views/payment_transaction_views.xml 
+2026-09-23 19:15:40,458 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading account_payment/wizards/account_payment_register_views.xml 
+2026-09-23 19:15:40,469 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading account_payment/wizards/payment_link_wizard_views.xml 
+2026-09-23 19:15:40,477 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading account_payment/wizards/payment_refund_wizard_views.xml 
+2026-09-23 19:15:40,484 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading account_payment/wizards/res_config_settings_views.xml 
+2026-09-23 19:15:40,566 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Module account_payment loaded in 0.66s, 481 queries (+481 other) 
+2026-09-23 19:15:40,566 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Loading module account_payment_term (48/82) 
+2026-09-23 19:15:40,673 1 INFO soloodoo_finance_native_test2 odoo.modules.registry: module account_payment_term: creating or updating database tables 
+2026-09-23 19:15:40,721 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading account_payment_term/views/account_payment_term_views.xml 
+2026-09-23 19:15:40,751 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Module account_payment_term loaded in 0.18s, 52 queries (+52 other) 
+2026-09-23 19:15:40,751 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Loading module elmokrif_chantier (49/82) 
+2026-09-23 19:15:40,864 1 INFO soloodoo_finance_native_test2 odoo.modules.registry: module elmokrif_chantier: creating or updating database tables 
+2026-09-23 19:15:41,078 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading elmokrif_chantier/security/chantier_groups.xml 
+2026-09-23 19:15:41,139 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading elmokrif_chantier/security/menu_security.xml 
+2026-09-23 19:15:41,150 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading elmokrif_chantier/security/ir.model.access.csv 
+2026-09-23 19:15:41,165 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading elmokrif_chantier/security/chantier_rules.xml 
+2026-09-23 19:15:41,196 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading elmokrif_chantier/data/analytic_plan_data.xml 
+2026-09-23 19:15:41,598 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading elmokrif_chantier/data/chantier_sequence.xml 
+2026-09-23 19:15:41,626 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading elmokrif_chantier/data/chantier_health_cron.xml 
+2026-09-23 19:15:41,643 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading elmokrif_chantier/views/project_project_views.xml 
+2026-09-23 19:15:41,753 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading elmokrif_chantier/views/project_task_views.xml 
+2026-09-23 19:15:41,850 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Module elmokrif_chantier loaded in 1.10s, 591 queries (+591 other) 
+2026-09-23 19:15:41,850 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Loading module l10n_ma (50/82) 
+2026-09-23 19:15:41,966 1 INFO soloodoo_finance_native_test2 odoo.modules.registry: module l10n_ma: creating or updating database tables 
+2026-09-23 19:15:42,035 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading l10n_ma/data/account_tax_report_data.xml 
+2026-09-23 19:15:43,537 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading l10n_ma/views/res_partner_views.xml 
+2026-09-23 19:15:43,556 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading l10n_ma/views/res_company_views.xml 
+2026-09-23 19:15:43,613 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Module l10n_ma loaded in 1.76s, 1757 queries (+1757 other) 
+2026-09-23 19:15:43,613 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Loading module project_account (51/82) 
+2026-09-23 19:15:43,839 1 INFO soloodoo_finance_native_test2 odoo.modules.registry: module project_account: creating or updating database tables 
+2026-09-23 19:15:43,886 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading project_account/views/account_analytic_line_views.xml 
+2026-09-23 19:15:43,927 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading project_account/views/project_project_views.xml 
+2026-09-23 19:15:43,955 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading project_account/views/project_task_views.xml 
+2026-09-23 19:15:43,982 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading project_account/views/project_sharing_project_task_views.xml 
+2026-09-23 19:15:44,009 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Module project_account loaded in 0.40s, 135 queries (+135 other) 
+2026-09-23 19:15:44,009 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Loading module project_sms (52/82) 
+2026-09-23 19:15:44,110 1 INFO soloodoo_finance_native_test2 odoo.modules.registry: module project_sms: creating or updating database tables 
+2026-09-23 19:15:44,201 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading project_sms/views/project_stage_views.xml 
+2026-09-23 19:15:44,225 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading project_sms/views/project_task_type_views.xml 
+2026-09-23 19:15:44,251 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading project_sms/views/project_project_views.xml 
+2026-09-23 19:15:44,257 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading project_sms/views/project_task_views.xml 
+2026-09-23 19:15:44,263 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading project_sms/security/ir.model.access.csv 
+2026-09-23 19:15:44,275 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading project_sms/security/project_sms_security.xml 
+2026-09-23 19:15:44,312 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Module project_sms loaded in 0.30s, 209 queries (+209 other) 
+2026-09-23 19:15:44,312 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Loading module project_todo (53/82) 
+2026-09-23 19:15:44,417 1 INFO soloodoo_finance_native_test2 odoo.modules.registry: module project_todo: creating or updating database tables 
+2026-09-23 19:15:44,538 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading project_todo/security/ir.model.access.csv 
+2026-09-23 19:15:44,557 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading project_todo/security/project_todo_security.xml 
+2026-09-23 19:15:44,611 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading project_todo/data/mail_activity_type_data.xml 
+2026-09-23 19:15:44,623 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading project_todo/data/todo_template.xml 
+2026-09-23 19:15:44,632 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading project_todo/views/project_task_views.xml 
+2026-09-23 19:15:44,707 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading project_todo/views/project_todo_menus.xml 
+2026-09-23 19:15:44,722 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading project_todo/wizard/mail_activity_todo_create.xml 
+2026-09-23 19:15:44,759 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Module project_todo loaded in 0.45s, 266 queries (+266 other) 
+2026-09-23 19:15:44,759 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Loading module purchase (54/82) 
+2026-09-23 19:15:44,877 1 INFO soloodoo_finance_native_test2 odoo.modules.registry: module purchase: creating or updating database tables 
+2026-09-23 19:15:45,533 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading purchase/security/purchase_security.xml 
+2026-09-23 19:15:45,875 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading purchase/security/ir.model.access.csv 
+2026-09-23 19:15:45,913 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading purchase/data/digest_data.xml 
+2026-09-23 19:15:45,921 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading purchase/views/account_move_views.xml 
+2026-09-23 19:15:45,941 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading purchase/data/purchase_data.xml 
+2026-09-23 19:15:45,977 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading purchase/data/ir_cron_data.xml 
+2026-09-23 19:15:45,991 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading purchase/report/purchase_reports.xml 
+2026-09-23 19:15:46,004 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading purchase/views/purchase_views.xml 
+2026-09-23 19:15:46,286 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading purchase/views/res_config_settings_views.xml 
+2026-09-23 19:15:46,325 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading purchase/views/product_views.xml 
+2026-09-23 19:15:46,432 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading purchase/views/res_partner_views.xml 
+2026-09-23 19:15:46,508 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading purchase/report/purchase_bill_views.xml 
+2026-09-23 19:15:46,520 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading purchase/report/purchase_report_views.xml 
+2026-09-23 19:15:46,559 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading purchase/data/mail_templates.xml 
+2026-09-23 19:15:46,573 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading purchase/data/mail_template_data.xml 
+2026-09-23 19:15:46,592 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading purchase/views/portal_templates.xml 
+2026-09-23 19:15:46,655 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading purchase/report/purchase_order_templates.xml 
+2026-09-23 19:15:46,673 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading purchase/report/purchase_quotation_templates.xml 
+2026-09-23 19:15:46,685 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading purchase/views/product_packaging_views.xml 
+2026-09-23 19:15:46,706 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading purchase/views/analytic_account_views.xml 
+2026-09-23 19:15:46,764 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Module purchase loaded in 2.01s, 1604 queries (+1604 other) 
+2026-09-23 19:15:46,765 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Loading module snailmail_account (55/82) 
+2026-09-23 19:15:46,870 1 INFO soloodoo_finance_native_test2 odoo.modules.registry: module snailmail_account: creating or updating database tables 
+2026-09-23 19:15:46,981 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading snailmail_account/views/res_config_settings_views.xml 
+2026-09-23 19:15:47,004 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading snailmail_account/wizard/account_move_send_views.xml 
+2026-09-23 19:15:47,037 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Module snailmail_account loaded in 0.27s, 132 queries (+132 other) 
+2026-09-23 19:15:47,037 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Loading module spreadsheet_account (56/82) 
+2026-09-23 19:15:47,144 1 INFO soloodoo_finance_native_test2 odoo.modules.registry: module spreadsheet_account: creating or updating database tables 
+2026-09-23 19:15:47,228 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Module spreadsheet_account loaded in 0.19s, 55 queries (+55 other) 
+2026-09-23 19:15:47,228 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Loading module spreadsheet_dashboard_account (57/82) 
+2026-09-23 19:15:47,353 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading spreadsheet_dashboard_account/data/dashboards.xml 
+2026-09-23 19:15:47,541 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Module spreadsheet_dashboard_account loaded in 0.31s, 29 queries (+29 other) 
+2026-09-23 19:15:47,542 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Loading module stock_account (58/82) 
+2026-09-23 19:15:47,675 1 INFO soloodoo_finance_native_test2 odoo.modules.registry: module stock_account: creating or updating database tables 
+2026-09-23 19:15:48,173 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading stock_account/security/stock_account_security.xml 
+2026-09-23 19:15:48,227 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading stock_account/security/ir.model.access.csv 
+2026-09-23 19:15:48,253 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading stock_account/data/stock_account_data.xml 
+2026-09-23 19:15:48,262 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading stock_account/views/stock_account_views.xml 
+2026-09-23 19:15:48,362 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading stock_account/views/res_config_settings_views.xml 
+2026-09-23 19:15:48,384 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading stock_account/data/product_data.xml 
+2026-09-23 19:15:48,396 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading stock_account/views/report_invoice.xml 
+2026-09-23 19:15:48,405 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading stock_account/views/stock_valuation_layer_views.xml 
+2026-09-23 19:15:48,504 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading stock_account/views/stock_quant_views.xml 
+2026-09-23 19:15:48,530 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading stock_account/views/product_views.xml 
+2026-09-23 19:15:48,577 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading stock_account/wizard/stock_request_count.xml 
+2026-09-23 19:15:48,586 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading stock_account/wizard/stock_valuation_layer_revaluation_views.xml 
+2026-09-23 19:15:48,595 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading stock_account/wizard/stock_quantity_history.xml 
+2026-09-23 19:15:48,605 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading stock_account/report/account_invoice_report_view.xml 
+2026-09-23 19:15:48,647 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Module stock_account loaded in 1.11s, 735 queries (+735 other) 
+2026-09-23 19:15:48,647 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Loading module stock_sms (59/82) 
+2026-09-23 19:15:48,761 1 INFO soloodoo_finance_native_test2 odoo.modules.registry: module stock_sms: creating or updating database tables 
+2026-09-23 19:15:48,893 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading stock_sms/data/sms_data.xml 
+2026-09-23 19:15:48,901 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading stock_sms/views/res_config_settings_views.xml 
+2026-09-23 19:15:48,952 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading stock_sms/wizard/confirm_stock_sms_views.xml 
+2026-09-23 19:15:48,959 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading stock_sms/security/ir.model.access.csv 
+2026-09-23 19:15:48,975 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading stock_sms/security/sms_security.xml 
+2026-09-23 19:15:49,010 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Module stock_sms loaded in 0.36s, 200 queries (+200 other) 
+2026-09-23 19:15:49,010 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Loading module elmokrif_chantier_stock (60/82) 
+2026-09-23 19:15:49,121 1 INFO soloodoo_finance_native_test2 odoo.modules.registry: module elmokrif_chantier_stock: creating or updating database tables 
+2026-09-23 19:15:49,425 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading elmokrif_chantier_stock/security/chantier_security.xml 
+2026-09-23 19:15:49,445 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading elmokrif_chantier_stock/security/ir.model.access.csv 
+2026-09-23 19:15:49,456 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading elmokrif_chantier_stock/data/stock_location_data.xml 
+2026-09-23 19:15:49,462 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading elmokrif_chantier_stock/views/material_request_views.xml 
+2026-09-23 19:15:49,484 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading elmokrif_chantier_stock/views/project_project_views.xml 
+2026-09-23 19:15:49,499 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading elmokrif_chantier_stock/views/stock_picking_views.xml 
+2026-09-23 19:15:49,514 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading elmokrif_chantier_stock/views/stock_warehouse_views.xml 
+2026-09-23 19:15:49,551 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Module elmokrif_chantier_stock loaded in 0.54s, 326 queries (+326 other) 
+2026-09-23 19:15:49,551 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Loading module project_purchase (61/82) 
+2026-09-23 19:15:49,663 1 INFO soloodoo_finance_native_test2 odoo.modules.registry: module project_purchase: creating or updating database tables 
+2026-09-23 19:15:49,749 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Module project_purchase loaded in 0.20s, 85 queries (+85 other) 
+2026-09-23 19:15:49,749 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Loading module purchase_stock (62/82) 
+2026-09-23 19:15:49,863 1 INFO soloodoo_finance_native_test2 odoo.modules.registry: module purchase_stock: creating or updating database tables 
+2026-09-23 19:15:50,224 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading purchase_stock/security/ir.model.access.csv 
+2026-09-23 19:15:50,244 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading purchase_stock/data/purchase_stock_data.xml 
+2026-09-23 19:15:50,323 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading purchase_stock/data/mail_templates.xml 
+2026-09-23 19:15:50,330 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading purchase_stock/report/vendor_delay_report.xml 
+2026-09-23 19:15:50,344 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading purchase_stock/views/purchase_views.xml 
+2026-09-23 19:15:50,386 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading purchase_stock/views/stock_views.xml 
+2026-09-23 19:15:50,429 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading purchase_stock/views/stock_rule_views.xml 
+2026-09-23 19:15:50,438 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading purchase_stock/views/res_config_settings_views.xml 
+2026-09-23 19:15:50,507 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading purchase_stock/views/res_partner_views.xml 
+2026-09-23 19:15:50,527 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading purchase_stock/views/stock_lot_views.xml 
+2026-09-23 19:15:50,537 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading purchase_stock/views/product_views.xml 
+2026-09-23 19:15:50,576 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading purchase_stock/report/purchase_report_views.xml 
+2026-09-23 19:15:50,585 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading purchase_stock/report/purchase_report_templates.xml 
+2026-09-23 19:15:50,603 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading purchase_stock/report/report_stock_rule.xml 
+2026-09-23 19:15:50,612 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading purchase_stock/wizard/stock_replenishment_info.xml 
+2026-09-23 19:15:50,631 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading purchase_stock/wizard/product_replenish_views.xml 
+2026-09-23 19:15:50,678 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Module purchase_stock loaded in 0.93s, 857 queries (+857 other) 
+2026-09-23 19:15:50,678 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Loading module sale (63/82) 
+2026-09-23 19:15:50,902 1 INFO soloodoo_finance_native_test2 odoo.modules.registry: module sale: creating or updating database tables 
+2026-09-23 19:15:51,726 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sale/security/ir.model.access.csv 
+2026-09-23 19:15:51,777 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sale/security/res_groups.xml 
+2026-09-23 19:15:51,824 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sale/security/ir_rules.xml 
+2026-09-23 19:15:51,984 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sale/report/account_invoice_report_views.xml 
+2026-09-23 19:15:52,003 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sale/report/ir_actions_report_templates.xml 
+2026-09-23 19:15:52,028 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sale/report/ir_actions_report.xml 
+2026-09-23 19:15:52,037 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sale/report/sale_report_views.xml 
+2026-09-23 19:15:52,091 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sale/data/ir_cron.xml 
+2026-09-23 19:15:52,101 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sale/data/ir_sequence_data.xml 
+2026-09-23 19:15:52,107 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sale/data/mail_activity_type_data.xml 
+2026-09-23 19:15:52,116 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sale/data/mail_message_subtype_data.xml 
+2026-09-23 19:15:52,135 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sale/data/mail_template_data.xml 
+2026-09-23 19:15:52,152 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sale/data/ir_config_parameter.xml 
+2026-09-23 19:15:52,160 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sale/data/onboarding_data.xml 
+2026-09-23 19:15:52,178 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sale/wizard/account_accrued_orders_wizard_views.xml 
+2026-09-23 19:15:52,183 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sale/wizard/mass_cancel_orders_views.xml 
+2026-09-23 19:15:52,192 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sale/wizard/payment_link_wizard_views.xml 
+2026-09-23 19:15:52,204 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sale/wizard/res_config_settings_views.xml 
+2026-09-23 19:15:52,235 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sale/wizard/sale_make_invoice_advance_views.xml 
+2026-09-23 19:15:52,247 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sale/wizard/sale_order_cancel_views.xml 
+2026-09-23 19:15:52,255 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sale/wizard/sale_order_discount_views.xml 
+2026-09-23 19:15:52,260 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sale/views/sale_order_views.xml 
+2026-09-23 19:15:52,404 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sale/views/account_views.xml 
+2026-09-23 19:15:52,448 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sale/views/crm_team_views.xml 
+2026-09-23 19:15:52,482 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sale/views/mail_activity_views.xml 
+2026-09-23 19:15:52,486 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sale/views/mail_activity_plan_views.xml 
+2026-09-23 19:15:52,492 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sale/views/payment_views.xml 
+2026-09-23 19:15:52,510 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sale/views/product_document_views.xml 
+2026-09-23 19:15:52,536 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sale/views/product_packaging_views.xml 
+2026-09-23 19:15:52,554 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sale/views/product_views.xml 
+2026-09-23 19:15:52,615 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sale/views/res_partner_views.xml 
+2026-09-23 19:15:52,670 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sale/views/sale_order_line_views.xml 
+2026-09-23 19:15:52,690 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sale/views/sale_portal_templates.xml 
+2026-09-23 19:15:52,737 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sale/views/utm_campaign_views.xml 
+2026-09-23 19:15:52,752 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sale/views/sale_menus.xml 
+2026-09-23 19:15:52,983 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Module sale loaded in 2.31s, 2507 queries (+2507 other) 
+2026-09-23 19:15:52,984 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Loading module spreadsheet_dashboard_purchase (64/82) 
+2026-09-23 19:15:53,102 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading spreadsheet_dashboard_purchase/data/dashboards.xml 
+2026-09-23 19:15:53,155 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Module spreadsheet_dashboard_purchase loaded in 0.17s, 28 queries (+28 other) 
+2026-09-23 19:15:53,156 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Loading module spreadsheet_dashboard_stock_account (65/82) 
+2026-09-23 19:15:53,365 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading spreadsheet_dashboard_stock_account/data/dashboards.xml 
+2026-09-23 19:15:53,424 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Module spreadsheet_dashboard_stock_account loaded in 0.27s, 28 queries (+28 other) 
+2026-09-23 19:15:53,424 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Loading module elmokrif_purchase_quality (66/82) 
+2026-09-23 19:15:53,564 1 INFO soloodoo_finance_native_test2 odoo.modules.registry: module elmokrif_purchase_quality: creating or updating database tables 
+2026-09-23 19:15:53,863 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading elmokrif_purchase_quality/security/purchase_quality_groups.xml 
+2026-09-23 19:15:53,920 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading elmokrif_purchase_quality/security/ir.model.access.csv 
+2026-09-23 19:15:53,936 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading elmokrif_purchase_quality/security/purchase_quality_rules.xml 
+2026-09-23 19:15:53,951 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading elmokrif_purchase_quality/data/quality_sequence.xml 
+2026-09-23 19:15:53,956 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading elmokrif_purchase_quality/views/res_company_views.xml 
+2026-09-23 19:15:53,967 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading elmokrif_purchase_quality/views/material_request_views.xml 
+2026-09-23 19:15:53,978 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading elmokrif_purchase_quality/views/purchase_order_views.xml 
+2026-09-23 19:15:53,992 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading elmokrif_purchase_quality/views/quality_inspection_views.xml 
+2026-09-23 19:15:54,013 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading elmokrif_purchase_quality/views/stock_picking_views.xml 
+2026-09-23 19:15:54,026 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading elmokrif_purchase_quality/views/stock_warehouse_views.xml 
+2026-09-23 19:15:54,058 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Module elmokrif_purchase_quality loaded in 0.63s, 551 queries (+551 other) 
+2026-09-23 19:15:54,058 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Loading module sale_async_emails (67/82) 
+2026-09-23 19:15:54,170 1 INFO soloodoo_finance_native_test2 odoo.modules.registry: module sale_async_emails: creating or updating database tables 
+2026-09-23 19:15:54,230 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sale_async_emails/data/ir_config_parameter.xml 
+2026-09-23 19:15:54,237 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sale_async_emails/data/ir_cron.xml 
+2026-09-23 19:15:54,266 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Module sale_async_emails loaded in 0.21s, 78 queries (+78 other) 
+2026-09-23 19:15:54,266 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Loading module sale_management (68/82) 
+2026-09-23 19:15:54,621 1 INFO soloodoo_finance_native_test2 odoo.modules.registry: module sale_management: creating or updating database tables 
+2026-09-23 19:15:54,899 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sale_management/data/digest_data.xml 
+2026-09-23 19:15:54,912 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sale_management/security/ir.model.access.csv 
+2026-09-23 19:15:54,932 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sale_management/security/sale_management_security.xml 
+2026-09-23 19:15:54,958 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sale_management/report/sale_report_templates.xml 
+2026-09-23 19:15:54,967 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sale_management/views/sale_order_template_views.xml 
+2026-09-23 19:15:54,990 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sale_management/views/digest_views.xml 
+2026-09-23 19:15:54,999 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sale_management/views/res_config_settings_views.xml 
+2026-09-23 19:15:55,027 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sale_management/views/sale_order_views.xml 
+2026-09-23 19:15:55,041 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sale_management/views/sale_portal_templates.xml 
+2026-09-23 19:15:55,051 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sale_management/views/sale_management_menus.xml 
+2026-09-23 19:15:55,089 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Module sale_management loaded in 0.82s, 442 queries (+442 other) 
+2026-09-23 19:15:55,090 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Loading module sale_product_configurator (69/82) 
+2026-09-23 19:15:55,207 1 INFO soloodoo_finance_native_test2 odoo.modules.registry: module sale_product_configurator: creating or updating database tables 
+2026-09-23 19:15:55,305 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sale_product_configurator/views/product_template_views.xml 
+2026-09-23 19:15:55,320 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sale_product_configurator/views/sale_order_views.xml 
+2026-09-23 19:15:55,353 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Module sale_product_configurator loaded in 0.26s, 122 queries (+122 other) 
+2026-09-23 19:15:55,354 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Loading module sale_purchase (70/82) 
+2026-09-23 19:15:55,464 1 INFO soloodoo_finance_native_test2 odoo.modules.registry: module sale_purchase: creating or updating database tables 
+2026-09-23 19:15:55,597 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sale_purchase/data/mail_templates.xml 
+2026-09-23 19:15:55,612 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sale_purchase/views/product_views.xml 
+2026-09-23 19:15:55,626 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sale_purchase/views/sale_order_views.xml 
+2026-09-23 19:15:55,641 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sale_purchase/views/purchase_order_views.xml 
+2026-09-23 19:15:55,657 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sale_purchase/wizards/sale_order_cancel_views.xml 
+2026-09-23 19:15:55,683 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Module sale_purchase loaded in 0.33s, 214 queries (+214 other) 
+2026-09-23 19:15:55,683 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Loading module sale_sms (71/82) 
+2026-09-23 19:15:55,911 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sale_sms/security/ir.model.access.csv 
+2026-09-23 19:15:55,949 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sale_sms/security/security.xml 
+2026-09-23 19:15:55,979 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Module sale_sms loaded in 0.30s, 43 queries (+43 other) 
+2026-09-23 19:15:55,979 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Loading module sale_stock (72/82) 
+2026-09-23 19:15:56,110 1 INFO soloodoo_finance_native_test2 odoo.modules.registry: module sale_stock: creating or updating database tables 
+2026-09-23 19:15:56,440 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sale_stock/security/sale_stock_security.xml 
+2026-09-23 19:15:56,451 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sale_stock/security/ir.model.access.csv 
+2026-09-23 19:15:56,477 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sale_stock/views/sale_order_views.xml 
+2026-09-23 19:15:56,547 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sale_stock/views/stock_route_views.xml 
+2026-09-23 19:15:56,555 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sale_stock/views/res_config_settings_views.xml 
+2026-09-23 19:15:56,608 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sale_stock/views/sale_stock_portal_template.xml 
+2026-09-23 19:15:56,619 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sale_stock/views/stock_lot_views.xml 
+2026-09-23 19:15:56,631 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sale_stock/views/res_users_views.xml 
+2026-09-23 19:15:56,662 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sale_stock/report/sale_order_report_templates.xml 
+2026-09-23 19:15:56,674 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sale_stock/report/stock_report_deliveryslip.xml 
+2026-09-23 19:15:56,681 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sale_stock/data/mail_templates.xml 
+2026-09-23 19:15:56,693 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sale_stock/data/sale_stock_data.xml 
+2026-09-23 19:15:56,699 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sale_stock/wizard/stock_rules_report_views.xml 
+2026-09-23 19:15:56,708 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sale_stock/wizard/sale_order_cancel_views.xml 
+2026-09-23 19:15:56,747 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Module sale_stock loaded in 0.77s, 662 queries (+662 other) 
+2026-09-23 19:15:56,747 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Loading module spreadsheet_dashboard_purchase_stock (73/82) 
+2026-09-23 19:15:56,866 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading spreadsheet_dashboard_purchase_stock/data/dashboards.xml 
+2026-09-23 19:15:56,920 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Module spreadsheet_dashboard_purchase_stock loaded in 0.17s, 28 queries (+28 other) 
+2026-09-23 19:15:56,920 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Loading module spreadsheet_dashboard_sale (74/82) 
+2026-09-23 19:15:57,148 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading spreadsheet_dashboard_sale/data/dashboards.xml 
+2026-09-23 19:15:57,218 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Module spreadsheet_dashboard_sale loaded in 0.30s, 33 queries (+33 other) 
+2026-09-23 19:15:57,218 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Loading module elmokrif_sale_chantier (75/82) 
+2026-09-23 19:15:57,338 1 INFO soloodoo_finance_native_test2 odoo.modules.registry: module elmokrif_sale_chantier: creating or updating database tables 
+2026-09-23 19:15:57,635 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading elmokrif_sale_chantier/views/res_company_views.xml 
+2026-09-23 19:15:57,650 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading elmokrif_sale_chantier/views/res_partner_views.xml 
+2026-09-23 19:15:57,672 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading elmokrif_sale_chantier/views/sale_order_views.xml 
+2026-09-23 19:15:57,711 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading elmokrif_sale_chantier/views/account_move_views.xml 
+2026-09-23 19:15:57,728 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading elmokrif_sale_chantier/views/project_project_views.xml 
+2026-09-23 19:15:57,743 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading elmokrif_sale_chantier/views/sale_order_report.xml 
+2026-09-23 19:15:57,774 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Module elmokrif_sale_chantier loaded in 0.56s, 409 queries (+409 other) 
+2026-09-23 19:15:57,774 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Loading module sale_pdf_quote_builder (76/82) 
+2026-09-23 19:15:57,899 1 INFO soloodoo_finance_native_test2 odoo.modules.registry: module sale_pdf_quote_builder: creating or updating database tables 
+2026-09-23 19:15:58,009 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sale_pdf_quote_builder/report/ir_actions_report.xml 
+2026-09-23 19:15:58,019 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sale_pdf_quote_builder/views/sale_order_template_views.xml 
+2026-09-23 19:15:58,030 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sale_pdf_quote_builder/wizards/res_config_settings_views.xml 
+2026-09-23 19:15:58,101 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Module sale_pdf_quote_builder loaded in 0.33s, 182 queries (+182 other) 
+2026-09-23 19:15:58,101 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Loading module sale_purchase_stock (77/82) 
+2026-09-23 19:15:58,323 1 INFO soloodoo_finance_native_test2 odoo.modules.registry: module sale_purchase_stock: creating or updating database tables 
+2026-09-23 19:15:58,410 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Module sale_purchase_stock loaded in 0.31s, 58 queries (+58 other) 
+2026-09-23 19:15:58,411 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Loading module sale_service (78/82) 
+2026-09-23 19:15:58,530 1 INFO soloodoo_finance_native_test2 odoo.modules.registry: module sale_service: creating or updating database tables 
+2026-09-23 19:15:58,613 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Module sale_service loaded in 0.20s, 58 queries (+58 other) 
+2026-09-23 19:15:58,614 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Loading module elmokrif_finance_readiness (79/82) 
+2026-09-23 19:15:58,730 1 INFO soloodoo_finance_native_test2 odoo.modules.registry: module elmokrif_finance_readiness: creating or updating database tables 
+2026-09-23 19:15:58,918 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading elmokrif_finance_readiness/security/ir.model.access.csv 
+2026-09-23 19:15:58,932 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading elmokrif_finance_readiness/security/finance_readiness_rules.xml 
+2026-09-23 19:15:58,940 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading elmokrif_finance_readiness/views/finance_readiness_views.xml 
+2026-09-23 19:15:58,962 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading elmokrif_finance_readiness/views/account_move_views.xml 
+2026-09-23 19:15:58,977 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading elmokrif_finance_readiness/views/res_company_views.xml 
+2026-09-23 19:15:59,028 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Module elmokrif_finance_readiness loaded in 0.41s, 296 queries (+296 other) 
+2026-09-23 19:15:59,029 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Loading module sale_project (80/82) 
+2026-09-23 19:15:59,264 1 INFO soloodoo_finance_native_test2 odoo.modules.registry: module sale_project: creating or updating database tables 
+2026-09-23 19:15:59,497 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sale_project/security/ir.model.access.csv 
+2026-09-23 19:15:59,509 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sale_project/security/sale_project_security.xml 
+2026-09-23 19:15:59,519 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sale_project/views/product_views.xml 
+2026-09-23 19:15:59,536 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sale_project/views/project_task_views.xml 
+2026-09-23 19:15:59,660 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sale_project/views/sale_order_line_views.xml 
+2026-09-23 19:15:59,678 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sale_project/views/sale_order_views.xml 
+2026-09-23 19:15:59,698 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sale_project/views/sale_project_portal_templates.xml 
+2026-09-23 19:15:59,708 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sale_project/views/project_sharing_views.xml 
+2026-09-23 19:15:59,721 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sale_project/views/project_views.xml 
+2026-09-23 19:15:59,766 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Module sale_project loaded in 0.74s, 556 queries (+556 other) 
+2026-09-23 19:15:59,766 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Loading module elmokrif_finance_operations (81/82) 
+2026-09-23 19:15:59,891 1 INFO soloodoo_finance_native_test2 odoo.modules.registry: module elmokrif_finance_operations: creating or updating database tables 
+2026-09-23 19:16:00,189 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading elmokrif_finance_operations/security/ir.model.access.csv 
+2026-09-23 19:16:00,209 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading elmokrif_finance_operations/security/finance_operations_rules.xml 
+2026-09-23 19:16:00,238 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading elmokrif_finance_operations/views/account_move_views.xml 
+2026-09-23 19:16:00,262 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading elmokrif_finance_operations/views/account_payment_views.xml 
+2026-09-23 19:16:00,277 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading elmokrif_finance_operations/views/bank_import_views.xml 
+2026-09-23 19:16:00,344 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading elmokrif_finance_operations/views/res_company_views.xml 
+2026-09-23 19:16:00,359 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading elmokrif_finance_operations/report/cheque_report.xml 
+2026-09-23 19:16:00,373 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading elmokrif_finance_operations/data/reminder_cron.xml 
+2026-09-23 19:16:00,434 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Module elmokrif_finance_operations loaded in 0.67s, 435 queries (+435 other) 
+2026-09-23 19:16:00,434 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Loading module sale_project_stock (82/82) 
+2026-09-23 19:16:00,552 1 INFO soloodoo_finance_native_test2 odoo.modules.registry: module sale_project_stock: creating or updating database tables 
+2026-09-23 19:16:00,593 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: loading sale_project_stock/views/stock_move_views.xml 
+2026-09-23 19:16:00,809 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Module sale_project_stock loaded in 0.37s, 58 queries (+58 other) 
+2026-09-23 19:16:00,809 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: 82 modules loaded in 57.75s, 49977 queries (+49978 extra) 
+2026-09-23 19:16:02,023 1 INFO soloodoo_finance_native_test2 odoo.modules.loading: Modules loaded. 
+2026-09-23 19:16:04,039 1 INFO soloodoo_finance_native_test2 odoo.modules.registry: Registry loaded in 71.032s 
+2026-09-23 19:16:04,039 1 INFO soloodoo_finance_native_test2 odoo.service.server: Starting post tests 
+2026-09-23 19:16:04,157 1 INFO soloodoo_finance_native_test2 odoo.addons.elmokrif_finance_operations.tests.test_finance_operations: Starting TestFinanceOperations.test_bank_import_is_deduplicated_reviewed_and_immutable ... 
+2026-09-23 19:16:04,380 1 INFO soloodoo_finance_native_test2 odoo.addons.elmokrif_finance_operations.tests.test_finance_operations: Starting TestFinanceOperations.test_create_cannot_forge_finance_workflow_evidence ... 
+2026-09-23 19:16:04,525 1 INFO soloodoo_finance_native_test2 odoo.addons.base.models.ir_attachment: filestore gc 392 checked, 1 removed 
+2026-09-23 19:16:08,058 1 INFO soloodoo_finance_native_test2 odoo.addons.elmokrif_finance_operations.tests.test_finance_operations: Starting TestFinanceWorkflowSafety.test_bank_csv_rejects_overflow_and_bad_columns ... 
+2026-09-23 19:16:08,138 1 INFO soloodoo_finance_native_test2 odoo.addons.elmokrif_finance_operations.tests.test_finance_operations: Starting TestFinanceWorkflowSafety.test_bank_match_checks_direction_currency_and_prevents_payment_reuse ... 
+2026-09-23 19:16:09,037 1 INFO soloodoo_finance_native_test2 odoo.addons.elmokrif_finance_operations.tests.test_finance_operations: ====================================================================== 
+2026-09-23 19:16:09,037 1 ERROR soloodoo_finance_native_test2 odoo.addons.elmokrif_finance_operations.tests.test_finance_operations: ERROR: TestFinanceWorkflowSafety.test_bank_match_checks_direction_currency_and_prevents_payment_reuse
+Traceback (most recent call last):
+  File "/opt/elmokrif-addons/elmokrif_finance_operations/tests/test_finance_operations.py", line 131, in test_bank_match_checks_direction_currency_and_prevents_payment_reuse
+    self.assertTrue(line.native_reconciliation_ref)
+  File "/usr/lib/python3/dist-packages/odoo/fields.py", line 1217, in __get__
+    self.compute_value(recs)
+  File "/usr/lib/python3/dist-packages/odoo/fields.py", line 1399, in compute_value
+    records._compute_field_value(self)
+  File "/usr/lib/python3/dist-packages/odoo/models.py", line 4923, in _compute_field_value
+    fields.determine(field.compute, self)
+  File "/usr/lib/python3/dist-packages/odoo/fields.py", line 102, in determine
+    return needle(*args)
+  File "/opt/elmokrif-addons/elmokrif_finance_operations/models/bank_import.py", line 245, in _compute_native_reconciliation_ref
+    references = move_lines.mapped("full_reconcile_id.name")
+  File "/usr/lib/python3/dist-packages/odoo/addons/analytic/models/analytic_mixin.py", line 108, in mapped
+    return super().mapped(func)
+  File "/usr/lib/python3/dist-packages/odoo/models.py", line 6142, in mapped
+    recs = recs._fields[name].mapped(recs)
+KeyError: 'name'
+ 
+2026-09-23 19:16:09,039 1 INFO soloodoo_finance_native_test2 odoo.addons.elmokrif_finance_operations.tests.test_finance_operations: Starting TestFinanceWorkflowSafety.test_cheque_report_and_voided_evidence_are_guarded ... 
+2026-09-23 19:16:09,288 1 INFO soloodoo_finance_native_test2 odoo.addons.elmokrif_finance_operations.tests.test_finance_operations: Starting TestFinanceWorkflowSafety.test_foreign_bank_currency_and_negative_outbound_match ... 
+2026-09-23 19:16:09,542 1 INFO soloodoo_finance_native_test2 odoo.models.unlink: User #6 deleted account.payment.method.line records with IDs: [9] 
+2026-09-23 19:16:09,557 1 INFO soloodoo_finance_native_test2 odoo.models.unlink: User #6 deleted account.payment.method.line records with IDs: [10] 
+2026-09-23 19:16:09,793 1 INFO soloodoo_finance_native_test2 odoo.addons.elmokrif_finance_operations.tests.test_finance_operations: Starting TestFinanceWorkflowSafety.test_reminder_is_suppressed_at_delivery_before_refresh_cron ... 
+2026-09-23 19:16:10,054 1 INFO soloodoo_finance_native_test2 odoo.addons.elmokrif_finance_operations.tests.test_finance_operations: Starting TestFinanceWorkflowSafety.test_sent_reminder_keeps_delivery_evidence_after_collection_hold ... 
+2026-09-23 19:16:10,299 1 INFO soloodoo_finance_native_test2 odoo.addons.base.models.ir_attachment: filestore gc 5 checked, 5 removed 
+2026-09-23 19:16:10,299 1 INFO soloodoo_finance_native_test2 odoo.service.server: 8 post-tests in 6.26s, 5642 queries 
+2026-09-23 19:16:10,300 1 INFO soloodoo_finance_native_test2 odoo.tests.stats: elmokrif_finance_operations: 12 tests 6.14s 5642 queries 
+2026-09-23 19:16:10,300 1 ERROR soloodoo_finance_native_test2 odoo.tests.result: 0 failed, 1 error(s) of 8 tests when loading database 'soloodoo_finance_native_test2' 
+2026-09-23 19:16:10,300 1 INFO soloodoo_finance_native_test2 odoo.service.server: Initiating shutdown 
+2026-09-23 19:16:10,300 1 INFO soloodoo_finance_native_test2 odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2026-09-23 19:16:10,390 1 INFO soloodoo_finance_native_test2 odoo.sql_db: ConnectionPool(used=0/count=0/max=64): Closed 1 connections  

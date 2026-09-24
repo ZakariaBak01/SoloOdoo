@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_chantier_project_user,project.project chantier user,project.model_project_project,elmokrif_chantier.group_chantier_user,1,1,0,0
+access_chantier_project_sales_reader,project.project chantier sales reference,project.model_project_project,elmokrif_chantier.group_chantier_sales_reader,1,0,0,0

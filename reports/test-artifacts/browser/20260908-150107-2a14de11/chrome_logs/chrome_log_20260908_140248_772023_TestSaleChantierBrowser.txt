@@ -1,0 +1,35 @@
+[441:462:0908/140246.435878:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory
+[441:462:0908/140246.435956:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[441:462:0908/140246.439205:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory
+[441:462:0908/140246.439526:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory
+[441:462:0908/140246.439535:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[441:462:0908/140246.444294:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[441:441:0908/140246.447929:INFO:components/enterprise/browser/controller/chrome_browser_cloud_management_controller.cc:241] No machine level policy manager exists.
+[476:476:0908/140246.458171:WARNING:media/gpu/vaapi/vaapi_wrapper.cc:1660] drmGetDevices2() has not found any devices
+[476:476:0908/140246.460899:WARNING:sandbox/policy/linux/sandbox_linux.cc:405] InitializeSandbox() called with multiple threads in process gpu-process.
+[441:462:0908/140246.467770:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[441:441:0908/140246.534364:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[441:462:0908/140246.534459:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[441:441:0908/140246.534538:WARNING:device/bluetooth/dbus/bluez_dbus_manager.cc:209] Floss manager service not available, cannot set Floss enable/disable.
+[441:441:0908/140246.534556:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[441:462:0908/140246.534606:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[441:441:0908/140246.534744:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[441:441:0908/140246.535714:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[441:441:0908/140246.549478:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[441:441:0908/140246.549735:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[441:462:0908/140246.549784:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory
+[441:462:0908/140246.549811:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory
+[441:462:0908/140246.549822:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[441:441:0908/140246.560844:WARNING:dbus/property.cc:94] Failed to connect to PropertiesChangedsignal.
+[441:441:0908/140246.560868:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.Properties.GetAll: object_path= /org/freedesktop/UPower/devices/DisplayDevice: unknown error type: 
+[441:441:0908/140246.560879:WARNING:dbus/property.cc:174] GetAll request failed for: org.freedesktop.UPower.Device
+[441:441:0908/140246.560894:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[441:462:0908/140246.561012:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[441:441:0908/140246.565651:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[441:462:0908/140246.566830:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[441:441:0908/140246.572969:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+[441:441:0908/140246.572992:WARNING:ui/base/idle/idle_linux.cc:111] None of the known D-Bus ScreenSaver services could be used.
+[441:441:0908/140248.534399:INFO:CONSOLE:11059] "Tour elmokrif_sale_chantier_invoice on step: 'The accountant sees Site A on its invoice line (trigger: .o_field_one2many[name="invoice_line_ids"] .o_data_row td[name="chantier_id"]:contains("Browser Site A"))'", source: http://127.0.0.1:8069/web/assets/9066c9a/web.assets_web.min.js (11059)
+[441:441:0908/140248.555046:INFO:CONSOLE:11059] "Tour elmokrif_sale_chantier_invoice on step: 'The accountant sees Site B on its invoice line (trigger: .o_field_one2many[name="invoice_line_ids"] .o_data_row td[name="chantier_id"]:contains("Browser Site B"))'", source: http://127.0.0.1:8069/web/assets/9066c9a/web.assets_web.min.js (11059)
+[441:441:0908/140248.582082:INFO:CONSOLE:11059] "Tour elmokrif_sale_chantier_invoice on step: 'Post the invoice as the accountant (trigger: .o_statusbar_buttons button[name="action_post"])'", source: http://127.0.0.1:8069/web/assets/9066c9a/web.assets_web.min.js (11059)
+[441:441:0908/140248.599276:INFO:CONSOLE:11102] "test successful", source: http://127.0.0.1:8069/web/assets/9066c9a/web.assets_web.min.js (11102)

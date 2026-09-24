@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="project_project_form_materials" model="ir.ui.view">
+        <field name="name">project.project.form.materials</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="elmokrif_chantier.project_project_form_chantier"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='button_box']" position="inside">
+                <button name="action_view_material_requests" type="object" class="oe_stat_button" icon="fa-cubes" invisible="not is_chantier">
+                    <field name="material_request_count" widget="statinfo" string="Material Requests"/>
+                </button>
+                <button name="action_create_material_operation" type="object" class="oe_stat_button" icon="fa-exchange" invisible="not is_chantier or not chantier_initialized">
+                    <div class="o_stat_info"><span class="o_stat_text">Material Operation</span></div>
+                </button>
+            </xpath>
+            <xpath expr="//page[@name='chantier']" position="inside">
+                <group string="Materials">
+                    <field name="material_cost" readonly="1"/>
+                    <field name="unvalued_material_move_count" readonly="1"/>
+                    <div class="alert alert-warning" role="alert" invisible="not unvalued_material_move_count">
+                        Some completed consumption or missing-material moves have no stock valuation layer. Review them before financial reconciliation.
+                    </div>
+                </group>
+                <group string="Materials Summary">
+                    <field name="material_summary" nolabel="1" readonly="1"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>

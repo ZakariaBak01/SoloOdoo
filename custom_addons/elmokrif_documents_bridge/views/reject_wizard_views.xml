@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_elmokrif_document_reject_wizard_form" model="ir.ui.view">
+        <field name="name">elmokrif.document.reject.wizard.form</field>
+        <field name="model">elmokrif.document.reject.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Reject Controlled Document">
+                <group>
+                    <field name="document_id"/>
+                    <field name="reason" placeholder="Explain what must be corrected before resubmission"/>
+                </group>
+                <footer>
+                    <button name="action_confirm" type="object" string="Reject" class="btn-primary"/>
+                    <button string="Cancel" special="cancel" class="btn-secondary"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

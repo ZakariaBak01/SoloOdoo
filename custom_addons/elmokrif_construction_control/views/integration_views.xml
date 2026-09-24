@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_project_task_form_construction_control" model="ir.ui.view">
+        <field name="name">project.task.form.construction.control</field><field name="model">project.task</field>
+        <field name="inherit_id" ref="project.view_task_form2"/>
+        <field name="arch" type="xml"><xpath expr="//form/sheet/group/group/field[@name='project_id']" position="after"><field name="work_package_id" invisible="not is_chantier_project"/></xpath></field>
+    </record>
+
+    <record id="view_project_form_construction_control" model="ir.ui.view">
+        <field name="name">project.project.form.construction.control</field><field name="model">project.project</field>
+        <field name="inherit_id" ref="elmokrif_chantier.project_project_form_chantier"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='button_box']" position="inside">
+                <button name="action_view_work_packages" type="object" class="oe_stat_button" icon="fa-cubes" invisible="not is_chantier"><field name="work_package_count" widget="statinfo" string="Work Packages"/></button>
+                <button name="action_view_site_issues" type="object" class="oe_stat_button" icon="fa-exclamation-triangle" invisible="not is_chantier"><field name="open_issue_count" widget="statinfo" string="Open Issues"/></button>
+                <button name="action_view_rfis" type="object" class="oe_stat_button" icon="fa-question-circle" invisible="not is_chantier"><field name="overdue_rfi_count" widget="statinfo" string="Overdue RFIs"/></button>
+                <button name="action_view_change_events" type="object" class="oe_stat_button" icon="fa-exclamation-circle" invisible="not is_chantier"><field name="pending_change_count" widget="statinfo" string="Pending Changes"/></button>
+                <button name="action_view_variations" type="object" class="oe_stat_button" icon="fa-exchange" groups="elmokrif_construction_control.group_construction_control_manager" invisible="not is_chantier"><field name="variation_order_count" widget="statinfo" string="Variations"/></button>
+                <button name="action_view_progress_certificates" type="object" class="oe_stat_button" icon="fa-certificate" groups="elmokrif_construction_control.group_progress_certifier" invisible="not is_chantier"><field name="progress_certificate_count" widget="statinfo" string="Certificates"/></button>
+            </xpath>
+            <xpath expr="//page[@name='chantier']" position="after">
+                <page name="project_control" string="Project Control" invisible="not is_chantier" groups="elmokrif_construction_control.group_construction_control_user">
+                    <div class="alert alert-danger" role="alert" invisible="not overdue_rfi_count and not open_issue_count">Attention is required: review overdue RFIs and unresolved site issues.</div>
+                    <group><group string="Cost and Contract"><field name="approved_budget_live"/><field name="approved_variation_cost"/><field name="current_budget_control"/><field name="actual_cost_live"/><field name="forecast_cost_control"/></group><group string="Revenue and Margin"><field name="approved_variation_revenue"/><field name="current_contract_control"/><field name="certified_revenue_control"/><field name="revenue_invoiced_live"/><field name="forecast_margin_control"/></group></group>
+                    <group><group string="Engineering Control"><field name="open_issue_count"/><field name="overdue_rfi_count"/><field name="pending_submittal_count"/></group><group string="Delivery Control"><field name="work_package_count"/><field name="pending_change_count"/><field name="last_update_status"/><field name="health_check_reason"/></group></group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_account_move_form_progress_certificate" model="ir.ui.view">
+        <field name="name">account.move.form.progress.certificate</field><field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form"/>
+        <field name="arch" type="xml"><xpath expr="//field[@name='invoice_origin']" position="after"><field name="progress_certificate_id" invisible="not progress_certificate_id" readonly="1"/></xpath></field>
+    </record>
+
+    <record id="view_elmokrif_dashboard_construction_control" model="ir.ui.view">
+        <field name="name">elmokrif.dashboard.form.construction.control</field><field name="model">elmokrif.dashboard</field>
+        <field name="inherit_id" ref="elmokrif_dashboard.view_elmokrif_dashboard_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet/group[last()]" position="after">
+                <group string="Construction Portfolio">
+                    <group string="Delivery Health"><field name="active_chantier_count"/><field name="at_risk_chantier_count"/><field name="off_track_chantier_count"/><field name="critical_issue_count"/><field name="overdue_rfi_count"/></group>
+                    <group string="Commercial Control"><field name="pending_change_exposure"/><field name="approved_variation_cost"/><field name="certified_revenue"/></group>
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>

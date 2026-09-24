@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="action_hr_appraisal" model="ir.actions.act_window">
+        <field name="name">Employee Appraisals</field>
+        <field name="res_model">elmokrif.hr.appraisal</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem id="menu_hr_appraisal"
+              name="Employee Appraisals"
+              parent="hr.menu_hr_root"
+              action="action_hr_appraisal"
+              groups="elmokrif_hr_extension.group_hr_employee"
+              sequence="40"/>
+
+    <record id="view_hr_appraisal_tree" model="ir.ui.view">
+        <field name="name">elmokrif.hr.appraisal.tree</field>
+        <field name="model">elmokrif.hr.appraisal</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="employee_id"/>
+                <field name="manager_id"/>
+                <field name="due_date"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_hr_appraisal_form" model="ir.ui.view">
+        <field name="name">elmokrif.hr.appraisal.form</field>
+        <field name="model">elmokrif.hr.appraisal</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_start_self_assessment" type="object"
+                            string="Start Self-Assessment"
+                            invisible="state != 'draft'"/>
+                    <button name="action_submit_for_review" type="object"
+                            string="Submit for Review"
+                            invisible="state != 'self_assessment'"/>
+                    <button name="action_complete" type="object"
+                            string="Complete"
+                            class="btn-primary"
+                            invisible="state != 'manager_review'"/>
+                    <button name="action_cancel" type="object"
+                            string="Cancel"
+                            invisible="state in ['completed', 'cancelled']"/>
+                    <button name="action_reopen" type="object"
+                            string="Reopen"
+                            groups="elmokrif_hr_extension.group_hr_manager"
+                            invisible="state != 'completed' or not reopen_reason"/>
+                    <field name="state" widget="statusbar"
+                           statusbar_visible="draft,self_assessment,manager_review,completed,cancelled"/>
+                </header>
+                <sheet>
+                    <group>
+                        <field name="name" readonly="state == 'completed'"/>
+                        <field name="employee_id" readonly="state != 'draft'"/>
+                        <field name="manager_id" readonly="state != 'draft'"/>
+                        <field name="company_id" readonly="1"/>
+                    </group>
+                    <group string="Review Period">
+                        <field name="period_start" readonly="state == 'completed'"/>
+                        <field name="period_end" readonly="state == 'completed'"/>
+                        <field name="due_date" readonly="state == 'completed'"/>
+                        <field name="next_review_date" readonly="state == 'completed'"/>
+                    </group>
+                    <group string="Objectives">
+                        <field name="objectives" readonly="state == 'completed'"/>
+                    </group>
+                    <group string="Assessment">
+                        <field name="employee_feedback"
+                               readonly="state not in ['self_assessment', 'manager_review']"/>
+                        <field name="manager_feedback"
+                               readonly="state != 'manager_review'"/>
+                    </group>
+                    <group string="Reopening">
+                        <field name="reopen_reason"
+                               groups="elmokrif_hr_extension.group_hr_manager"
+                               readonly="state != 'completed'"/>
+                        <field name="completed_at" readonly="1"/>
+                    </group>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,7 @@
+invoice,payment_reference,due_date,collector,reminder_level,reminder_state,mail_id,mail_state,recipient
+INV/2026/00001,UAT-12-J+7,2026-09-16,uat.u8.accountant,J+7,failed,9,exception,uat-reminder-recipient@example.test
+INV/2026/00002,UAT-12-J+15,2026-09-08,uat.u8.accountant,J+7,suppressed,7,cancel,uat-reminder-recipient@example.test
+INV/2026/00002,UAT-12-J+15,2026-09-08,uat.u8.accountant,J+15,suppressed,8,cancel,uat-reminder-recipient@example.test
+INV/2026/00003,UAT-12-J+30,2026-08-24,uat.u8.accountant,J+7,failed,4,exception,uat-reminder-recipient@example.test
+INV/2026/00003,UAT-12-J+30,2026-08-24,uat.u8.accountant,J+15,failed,5,exception,uat-reminder-recipient@example.test
+INV/2026/00003,UAT-12-J+30,2026-08-24,uat.u8.accountant,J+30,failed,6,exception,uat-reminder-recipient@example.test

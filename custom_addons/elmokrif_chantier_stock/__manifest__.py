@@ -1,0 +1,20 @@
+{
+    "name": "EL MOKRIF Chantier Materials",
+    "summary": "Material requests and warehouse transfers for chantiers",
+    "version": "17.0.1.6.3",
+    "category": "Inventory/Inventory",
+    "author": "EL MOKRIF",
+    "license": "LGPL-3",
+    "depends": ["elmokrif_chantier", "stock_account"],
+    "data": [
+        "security/chantier_security.xml",
+        "security/ir.model.access.csv",
+        "data/stock_location_data.xml",
+        "views/material_request_views.xml",
+        "views/project_project_views.xml",
+        "views/stock_picking_views.xml",
+        "views/stock_warehouse_views.xml",
+    ],
+    "installable": True,
+    "application": True,
+}

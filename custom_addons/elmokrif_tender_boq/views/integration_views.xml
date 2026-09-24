@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_project_form_tender_boq" model="ir.ui.view">
+        <field name="name">project.project.form.tender.boq</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="elmokrif_chantier.project_project_form_chantier"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='button_box']" position="inside">
+                <button name="action_view_boqs" type="object" class="oe_stat_button" icon="fa-list-alt" groups="elmokrif_tender_boq.group_boq_user" invisible="not is_chantier"><field name="boq_count" widget="statinfo" string="BOQs"/></button>
+                <button name="action_view_tenders" type="object" class="oe_stat_button" icon="fa-gavel" groups="elmokrif_tender_boq.group_tender_buyer,elmokrif_tender_boq.group_tender_evaluator" invisible="not is_chantier"><field name="tender_count" widget="statinfo" string="Tenders"/></button>
+            </xpath>
+        </field>
+    </record>
+    <record id="view_estimation_form_tender_boq" model="ir.ui.view">
+        <field name="name">chantier.estimation.form.tender.boq</field>
+        <field name="model">chantier.estimation</field>
+        <field name="inherit_id" ref="elmokrif_chantier_estimation.view_chantier_estimation_form_usability"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form/header" position="inside">
+                <button name="action_generate_boq_ui" type="object" string="Generate Formal BOQ" class="oe_highlight" groups="elmokrif_tender_boq.group_boq_estimator" invisible="state != 'approved'"/>
+            </xpath>
+            <xpath expr="//form/sheet" position="inside">
+                <div class="oe_button_box" name="button_box">
+                    <button name="action_view_boqs" type="object" class="oe_stat_button" icon="fa-list-alt" groups="elmokrif_tender_boq.group_boq_user"><field name="boq_count" widget="statinfo" string="BOQs"/></button>
+                </div>
+            </xpath>
+        </field>
+    </record>
+    <record id="view_purchase_order_form_tender_boq" model="ir.ui.view">
+        <field name="name">purchase.order.form.tender.boq</field>
+        <field name="model">purchase.order</field>
+        <field name="inherit_id" ref="purchase.purchase_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='origin']" position="after">
+                <field name="tender_award_id" readonly="1" invisible="not tender_award_id"/>
+                <field name="tender_id" readonly="1" invisible="not tender_id"/>
+                <field name="boq_id" readonly="1" invisible="not boq_id"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

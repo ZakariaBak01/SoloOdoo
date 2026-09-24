@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_chantier_finance_readiness_tree" model="ir.ui.view">
+        <field name="name">chantier.finance.readiness.tree</field>
+        <field name="model">chantier.finance.readiness</field>
+        <field name="arch" type="xml">
+            <tree create="false" delete="false">
+                <field name="company_id"/>
+                <field name="technical_ready"/>
+                <field name="state"/>
+                <field name="approved_by_id"/>
+                <field name="approved_at"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_chantier_finance_readiness_form" model="ir.ui.view">
+        <field name="name">chantier.finance.readiness.form</field>
+        <field name="model">chantier.finance.readiness</field>
+        <field name="arch" type="xml">
+            <form create="false" delete="false">
+                <header>
+                    <button name="action_approve" type="object" string="Approve Finance Readiness"
+                            class="btn-primary" groups="account.group_account_manager"
+                            invisible="state == 'approved'"/>
+                    <button name="action_reset" type="object" string="Reset Approval"
+                            groups="account.group_account_manager" invisible="state != 'approved'"/>
+                    <field name="state" widget="statusbar"/>
+                </header>
+                <sheet>
+                    <div class="oe_title"><h1><field name="company_id" readonly="1"/></h1></div>
+                    <div class="alert alert-danger" role="alert" invisible="technical_ready">
+                        Technical checks still have failures. Correct them before accountant approval.
+                    </div>
+                    <div class="alert alert-success" role="alert" invisible="not technical_ready">
+                        Technical checks pass. Accountant review and pilot evidence are still required.
+                    </div>
+                    <group string="Live Technical Checks">
+                        <field name="technical_ready" invisible="1"/>
+                        <field name="technical_status" nolabel="1" readonly="1" colspan="2"/>
+                    </group>
+                    <group string="Accountant Checklist">
+                        <group>
+                            <field name="legal_identity_reviewed" readonly="state == 'approved'"/>
+                            <field name="chart_accounts_reviewed" readonly="state == 'approved'"/>
+                            <field name="taxes_reviewed" readonly="state == 'approved'"/>
+                            <field name="journals_payments_reviewed" readonly="state == 'approved'"/>
+                            <field name="inventory_valuation_reviewed" readonly="state == 'approved'"/>
+                        </group>
+                        <group>
+                            <field name="analytic_policy_reviewed" readonly="state == 'approved'"/>
+                            <field name="reports_reconciliation_reviewed" readonly="state == 'approved'"/>
+                            <field name="lock_access_reviewed" readonly="state == 'approved'"/>
+                            <field name="pilot_documents_reviewed" readonly="state == 'approved'"/>
+                            <field name="approved_by_id"/>
+                            <field name="approved_at"/>
+                        </group>
+                    </group>
+                    <group string="Evidence and Decisions">
+                        <field name="review_notes" placeholder="Evidence links, report totals, decisions and limitations..."
+                               readonly="state == 'approved'"/>
+                    </group>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_chantier_finance_readiness" model="ir.actions.act_window">
+        <field name="name">Chantier Finance Readiness</field>
+        <field name="res_model">chantier.finance.readiness</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_chantier_finance_readiness"
+              name="Chantier Finance Readiness"
+              parent="account.menu_finance_configuration"
+              action="action_chantier_finance_readiness"
+              groups="account.group_account_manager"
+              sequence="95"/>
+</odoo>

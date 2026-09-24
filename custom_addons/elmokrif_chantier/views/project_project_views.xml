@@ -1,13 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
+    <record id="project_project_kanban_chantier" model="ir.ui.view">
+        <field name="name">project.project.kanban.chantier</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.view_project_kanban"/>
+        <field name="mode">primary</field>
+        <field name="arch" type="xml">
+            <xpath expr="//kanban" position="attributes">
+                <attribute name="on_create">elmokrif_chantier.action_new_chantier</attribute>
+                <attribute name="quick_create">false</attribute>
+            </xpath>
+        </field>
+    </record>
+
     <record id="action_chantier" model="ir.actions.act_window">
         <field name="name">Chantiers</field>
         <field name="res_model">project.project</field>
         <field name="view_mode">kanban,tree,form</field>
-        <field name="view_id" ref="project.view_project_kanban"/>
+        <field name="view_id" ref="elmokrif_chantier.project_project_kanban_chantier"/>
         <field name="search_view_id" ref="project.view_project_project_filter"/>
         <field name="domain">[('is_chantier', '=', True)]</field>
-        <field name="context">{'default_is_chantier': True}</field>
+        <field name="context">{'default_is_chantier': True, 'form_view_initial_mode': 'edit'}</field>
+    </record>
+
+    <record id="action_new_chantier" model="ir.actions.act_window">
+        <field name="name">New Chantier</field>
+        <field name="res_model">project.project</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="project.edit_project"/>
+        <field name="context">{'default_is_chantier': True, 'form_view_initial_mode': 'edit'}</field>
+        <field name="target">current</field>
     </record>
 
     <menuitem id="menu_chantier"
@@ -15,14 +37,106 @@
               parent="project.menu_main_pm"
               action="action_chantier"
               sequence="2"
-              groups="project.group_project_user,project.group_project_manager"/>
+              groups="elmokrif_chantier.group_chantier_user"/>
 
     <menuitem id="menu_chantier_root"
               name="EL MOKRIF"
               action="action_chantier"
               web_icon="project,static/description/icon.png"
               sequence="71"
-              groups="project.group_project_user,project.group_project_manager"/>
+              groups="elmokrif_chantier.group_chantier_user"/>
+
+    <menuitem id="menu_new_chantier"
+              name="New Chantier"
+              parent="menu_chantier_root"
+              action="action_new_chantier"
+              sequence="1"
+              groups="elmokrif_chantier.group_chantier_manager"/>
+
+    <menuitem id="menu_chantier_list"
+              name="All Chantiers"
+              parent="menu_chantier_root"
+              action="action_chantier"
+              sequence="2"
+              groups="elmokrif_chantier.group_chantier_user"/>
+
+    <record id="view_chantier_site_partner_form" model="ir.ui.view">
+        <field name="name">res.partner.chantier.site.form</field>
+        <field name="model">res.partner</field>
+        <field name="arch" type="xml">
+            <form string="Site Address">
+                <sheet>
+                    <div class="oe_title">
+                        <label for="name" string="Site Name"/>
+                        <h1>
+                            <field name="name" placeholder="e.g. CH-UAT-001 Site - Mohammedia"/>
+                        </h1>
+                    </div>
+                    <field name="type" invisible="1"/>
+                    <field name="is_company" invisible="1"/>
+                    <field name="company_id" invisible="1"/>
+                    <group>
+                        <group string="Site">
+                            <field name="parent_id"
+                                   string="Customer"
+                                   domain="[('customer_rank', '&gt;', 0), ('is_company', '=', True), '|', ('company_id', '=', False), ('company_id', '=', company_id)]"
+                                   options="{'no_create': True}"/>
+                            <field name="phone"/>
+                            <field name="mobile"/>
+                        </group>
+                        <group string="Physical Address">
+                            <field name="street" placeholder="Street and number"/>
+                            <field name="street2" placeholder="Additional address information"/>
+                            <field name="city"/>
+                            <field name="state_id"
+                                   domain="[('country_id', '=?', country_id)]"
+                                   options="{'no_create': True}"/>
+                            <field name="zip"/>
+                            <field name="country_id" options="{'no_create': True}"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_chantier_customer_partner_form" model="ir.ui.view">
+        <field name="name">res.partner.chantier.customer.form</field>
+        <field name="model">res.partner</field>
+        <field name="arch" type="xml">
+            <form string="Customer">
+                <sheet>
+                    <field name="customer_rank" invisible="1"/>
+                    <field name="company_id" invisible="1"/>
+                    <div class="oe_title">
+                        <label for="name" string="Customer Name"/>
+                        <h1>
+                            <field name="name" placeholder="e.g. UAT Customer A"/>
+                        </h1>
+                        <field name="company_type" widget="radio" options="{'horizontal': True}"/>
+                    </div>
+                    <group>
+                        <group string="Contact">
+                            <field name="phone"/>
+                            <field name="mobile"/>
+                            <field name="email" widget="email"/>
+                            <field name="vat"/>
+                        </group>
+                        <group string="Primary Address">
+                            <field name="street" placeholder="Street and number"/>
+                            <field name="street2" placeholder="Additional address information"/>
+                            <field name="city"/>
+                            <field name="state_id"
+                                   domain="[('country_id', '=?', country_id)]"
+                                   options="{'no_create': True}"/>
+                            <field name="zip"/>
+                            <field name="country_id" options="{'no_create': True}"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
 
     <record id="project_project_form_chantier" model="ir.ui.view">
         <field name="name">project.project.form.chantier</field>
@@ -35,10 +149,10 @@
                         string="Initialize Chantier"
                         class="btn-primary"
                         groups="elmokrif_chantier.group_chantier_manager"
-                        invisible="not is_chantier or chantier_initialized"/>
+                        invisible="not is_chantier or chantier_initialized or chantier_state == 'draft'"/>
                 <button name="action_approve_chantier"
                         type="object"
-                        string="Approve"
+                        string="Approve and Initialize"
                         class="btn-primary"
                         groups="elmokrif_chantier.group_chantier_manager"
                         invisible="not is_chantier or chantier_state != 'draft'"/>
@@ -46,7 +160,7 @@
                         type="object"
                         string="Start"
                         groups="elmokrif_chantier.group_chantier_user"
-                        invisible="not is_chantier or chantier_state not in ['approved', 'on_hold', 'completed']"/>
+                        invisible="not is_chantier or not chantier_initialized or chantier_state not in ['approved', 'on_hold']"/>
                 <button name="action_hold_chantier"
                         type="object"
                         string="Put on Hold"
@@ -66,40 +180,138 @@
                         type="object"
                         string="Reopen"
                         groups="elmokrif_chantier.group_chantier_manager"
-                        invisible="not is_chantier or chantier_state != 'closed' or not reopen_reason"/>
+                        invisible="not is_chantier or chantier_state not in ['completed', 'closed'] or not reopen_reason"/>
+                <button name="action_archive_chantier"
+                        type="object"
+                        string="Archive"
+                        groups="elmokrif_chantier.group_chantier_manager"
+                        invisible="not is_chantier or chantier_state != 'closed' or not active"/>
                 <field name="chantier_state"
                        widget="statusbar"
                        statusbar_visible="draft,approved,in_progress,on_hold,completed,closed"
                        invisible="not is_chantier"/>
             </xpath>
 
+            <!-- Keep the general Project tab compact for chantiers; these native
+                 project fields are shown together with the chantier master data. -->
+            <xpath expr="//field[@name='partner_id']" position="attributes">
+                <attribute name="invisible">is_chantier</attribute>
+            </xpath>
+            <xpath expr="//field[@name='user_id']" position="attributes">
+                <attribute name="invisible">is_chantier</attribute>
+            </xpath>
+            <xpath expr="//field[@name='date_start']" position="attributes">
+                <attribute name="invisible">is_chantier</attribute>
+            </xpath>
+            <xpath expr="//field[@name='date']" position="attributes">
+                <attribute name="invisible">is_chantier</attribute>
+            </xpath>
+            <xpath expr="//page[@name='settings']//field[@name='analytic_account_id']"
+                   position="attributes">
+                <attribute name="invisible">is_chantier</attribute>
+            </xpath>
+            <xpath expr="//page[@name='settings']//div[@name='alias_def']"
+                   position="attributes">
+                <attribute name="invisible">is_chantier</attribute>
+            </xpath>
+            <xpath expr="//page[@name='settings']//field[@name='alias_contact']"
+                   position="attributes">
+                <attribute name="invisible">is_chantier</attribute>
+            </xpath>
+
             <xpath expr="//field[@name='label_tasks']" position="before">
-                <field name="is_chantier"/>
+                <field name="can_manage_chantier" invisible="1"/>
+                <field name="is_chantier" readonly="not can_manage_chantier"/>
                 <field name="chantier_reference" invisible="not is_chantier"/>
             </xpath>
 
             <xpath expr="//page[@name='description']" position="after">
                 <page name="chantier" string="Chantier" invisible="not is_chantier">
+                    <field name="chantier_initialized" invisible="1"/>
+                    <field name="eligible_chantier_manager_ids" invisible="1"/>
+                    <field name="eligible_chantier_member_ids" invisible="1"/>
+                    <div class="alert alert-info" role="alert" invisible="chantier_state != 'draft'">
+                        <i class="fa fa-info-circle me-2" title="Chantier setup"/>
+                        Complete the chantier master data, then ask a chantier manager to approve it.
+                    </div>
+                    <div class="alert alert-warning" role="alert"
+                         invisible="chantier_state != 'approved' or chantier_initialized">
+                        <i class="fa fa-cogs me-2" title="Initialization required"/>
+                        Approval is complete. Initialize the chantier to create its analytic account and dedicated site stock location.
+                    </div>
+                    <div class="alert alert-success" role="alert" invisible="not chantier_initialized">
+                        <i class="fa fa-check-circle me-2" title="Chantier initialized"/>
+                        The analytic account and site stock location are ready. Initialization can safely be run again if required.
+                    </div>
                     <group>
+                        <group string="Customer and Planning">
+                            <field name="partner_id"
+                                   string="Customer"
+                                   widget="res_partner_many2one"
+                                   domain="[('customer_rank', '&gt;', 0), '|', ('company_id', '=', False), ('company_id', '=', company_id)]"
+                                   context="{'default_customer_rank': 1, 'default_company_type': 'company', 'default_is_company': True, 'default_company_id': company_id, 'form_view_ref': 'elmokrif_chantier.view_chantier_customer_partner_form'}"
+                                   options="{'no_quick_create': True}"
+                                   readonly="not can_manage_chantier"/>
+                            <field name="user_id"
+                                   string="Chantier Manager"
+                                   widget="many2one_avatar_user"
+                                   readonly="not active or not can_manage_chantier"
+                                   domain="[('id', 'in', eligible_chantier_manager_ids)]"
+                                   options="{'no_create': True}"/>
+                            <field name="chantier_member_ids"
+                                   string="Chantier Team"
+                                   widget="many2many_avatar_user"
+                                   domain="[('id', 'in', eligible_chantier_member_ids), ('id', '!=', user_id)]"
+                                   options="{'no_create': True}"
+                                   readonly="not can_manage_chantier"/>
+                            <field name="sales_user_ids"
+                                   string="Sales Contacts"
+                                   widget="many2many_avatar_user"
+                                   domain="[('company_ids', 'in', company_id)]"
+                                   options="{'no_create': True}"
+                                   readonly="not can_manage_chantier"/>
+                            <field name="date_start"
+                                   string="Planned Dates"
+                                   widget="daterange"
+                                   options='{"end_date_field": "date", "always_range": "1"}'
+                                   required="date_start or date"
+                                   readonly="not can_manage_chantier"/>
+                            <field name="date" invisible="1" required="date_start"/>
+                        </group>
                         <group string="Classification">
-                            <field name="work_type"/>
-                            <field name="chantier_region"/>
-                            <field name="site_partner_id"/>
+                            <field name="work_type" readonly="not can_manage_chantier"/>
+                            <field name="chantier_region" readonly="not can_manage_chantier"/>
+                            <field name="site_partner_id"
+                                   readonly="not can_manage_chantier"
+                                   domain="[('type', 'in', ['delivery', 'other']), '|', ('company_id', '=', False), ('company_id', '=', company_id)]"
+                                   context="{'default_type': 'other', 'default_is_company': False, 'default_company_id': company_id, 'form_view_ref': 'elmokrif_chantier.view_chantier_site_partner_form'}"
+                                   options="{'no_quick_create': True}"/>
                         </group>
                         <group string="Stock and Analytics">
                             <field name="warehouse_id"
-                                   readonly="chantier_initialized"
+                                   readonly="chantier_initialized or not can_manage_chantier"
                                    options="{'no_create': True}"/>
                             <field name="site_location_id"/>
                             <field name="analytic_account_id"
-                                   groups="analytic.group_analytic_accounting"/>
-                            <field name="chantier_initialized" invisible="1"/>
+                                   readonly="is_chantier"
+                                   groups="elmokrif_chantier.group_chantier_manager"
+                                   options="{'no_open': True, 'no_create': True}"/>
+                            <field name="chantier_analytic_plan_id"
+                                   readonly="1"
+                                   groups="elmokrif_chantier.group_chantier_manager"
+                                   options="{'no_open': True, 'no_create': True}"/>
                         </group>
                     </group>
                     <group string="Closure and Reopening">
                         <field name="reopen_reason"
                                placeholder="Required before reopening a closed chantier"
-                               readonly="chantier_state != 'closed'"/>
+                               readonly="chantier_state not in ['completed', 'closed']"/>
+                    </group>
+                    <group string="Automatic Health Assessment">
+                        <field name="last_update_status" readonly="1"/>
+                        <field name="health_check_reason" readonly="1"/>
+                        <field name="health_signal_count" readonly="1"/>
+                        <field name="health_check_date" readonly="1"/>
                     </group>
                 </page>
             </xpath>
@@ -135,6 +347,7 @@
                 <field name="chantier_reference" optional="show"/>
                 <field name="chantier_state" optional="show"/>
                 <field name="work_type" optional="hide"/>
+                <field name="chantier_initialized" optional="hide"/>
             </xpath>
         </field>
     </record>

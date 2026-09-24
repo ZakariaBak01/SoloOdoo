@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_tender_boq_root" name="Tendering &amp; BOQ" parent="elmokrif_chantier.menu_chantier_root" sequence="12" groups="elmokrif_tender_boq.group_boq_user"/>
+    <menuitem id="menu_construction_boq" name="Bills of Quantities" parent="menu_tender_boq_root" action="action_construction_boq" sequence="10" groups="elmokrif_tender_boq.group_boq_user"/>
+    <menuitem id="menu_construction_tender" name="Tenders" parent="menu_tender_boq_root" action="action_construction_tender" sequence="20" groups="elmokrif_tender_boq.group_tender_buyer,elmokrif_tender_boq.group_tender_evaluator"/>
+    <menuitem id="menu_construction_tender_bid" name="Tender Bids" parent="menu_tender_boq_root" action="action_construction_tender_bid" sequence="30" groups="elmokrif_tender_boq.group_tender_buyer,elmokrif_tender_boq.group_tender_evaluator"/>
+    <menuitem id="menu_construction_tender_comparison" name="Bid Comparisons" parent="menu_tender_boq_root" action="action_construction_tender_comparison" sequence="40" groups="elmokrif_tender_boq.group_tender_evaluator"/>
+    <menuitem id="menu_construction_tender_award" name="Awards" parent="menu_tender_boq_root" action="action_construction_tender_award" sequence="50" groups="elmokrif_tender_boq.group_tender_buyer,elmokrif_tender_boq.group_tender_award_approver"/>
+</odoo>

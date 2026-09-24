@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_construction_boq_search" model="ir.ui.view">
+        <field name="name">construction.boq.search</field><field name="model">construction.boq</field>
+        <field name="arch" type="xml"><search string="Bills of Quantities">
+            <field name="name"/><field name="title"/><field name="chantier_id"/><field name="package_code"/>
+            <filter name="current" string="Current Revisions" domain="[('is_current_revision', '=', True)]"/>
+            <filter name="editable" string="In Preparation" domain="[('state', 'in', ['draft', 'under_review', 'changes_requested', 'reviewed'])]"/>
+            <filter name="approved" string="Approved / Issued" domain="[('state', 'in', ['approved', 'issued'])]"/>
+            <group expand="0" string="Group By"><filter name="group_chantier" string="Chantier" context="{'group_by':'chantier_id'}"/><filter name="group_purpose" string="Purpose" context="{'group_by':'purpose'}"/><filter name="group_state" string="Status" context="{'group_by':'state'}"/></group>
+        </search></field>
+    </record>
+    <record id="view_construction_boq_tree" model="ir.ui.view">
+        <field name="name">construction.boq.tree</field><field name="model">construction.boq</field>
+        <field name="arch" type="xml"><tree decoration-muted="state in ['superseded', 'cancelled']" decoration-success="state in ['approved', 'issued']">
+            <field name="name"/><field name="title"/><field name="chantier_id"/><field name="purpose"/><field name="package_code"/><field name="revision_no"/><field name="amount_internal" sum="Internal Total"/><field name="amount_target" sum="Target Total"/><field name="state" widget="badge"/><field name="company_id" groups="base.group_multi_company"/>
+        </tree></field>
+    </record>
+    <record id="view_construction_boq_line_form" model="ir.ui.view">
+        <field name="name">construction.boq.line.form</field><field name="model">construction.boq.line</field>
+        <field name="arch" type="xml"><form string="BOQ Item">
+            <sheet><field name="company_id" invisible="1"/><div class="oe_title"><label for="item_code"/><h1><field name="item_code" placeholder="e.g. 03.01.001"/></h1><h2><field name="description" placeholder="Measured work description"/></h2></div>
+                <group><group string="Scope"><field name="boq_id" readonly="1"/><field name="section_id" domain="[('boq_id', '=', boq_id)]"/><field name="product_id"/><field name="cost_code_id"/><field name="uom_id"/><field name="provisional"/><field name="optional"/></group>
+                    <group string="Quantity and Programme"><field name="quantity_method"/><field name="manual_quantity" invisible="quantity_method != 'manual'"/><field name="quantity" readonly="1"/><field name="planned_start"/><field name="planned_finish"/></group></group>
+                <notebook>
+                    <page string="Rate Analysis"><field name="rate_component_ids" context="{'default_boq_line_id': id}"><tree editable="bottom"><field name="company_id" column_invisible="True"/><field name="sequence" widget="handle"/><field name="component_type"/><field name="description"/><field name="product_id" optional="show"/><field name="uom_id" optional="show"/><field name="quantity_per_unit"/><field name="waste_percent"/><field name="unit_rate"/><field name="amount" readonly="1" sum="Direct Unit Cost"/></tree></field>
+                        <group><group><field name="material_unit_cost" readonly="1"/><field name="labor_unit_cost" readonly="1"/><field name="equipment_unit_cost" readonly="1"/></group><group><field name="subcontract_unit_cost" readonly="1"/><field name="other_unit_cost" readonly="1"/><field name="direct_unit_cost" readonly="1"/></group></group>
+                    </page>
+                    <page string="Quantity Take-Off"><field name="takeoff_ids" context="{'default_boq_line_id': id}"><tree editable="bottom"><field name="sequence" widget="handle"/><field name="description"/><field name="drawing_reference"/><field name="drawing_revision"/><field name="location"/><field name="formula_type"/><field name="length" optional="show"/><field name="width" optional="show"/><field name="height_or_depth" optional="show"/><field name="count" optional="hide"/><field name="factor"/><field name="wastage_percent"/><field name="manual_quantity" optional="hide"/><field name="calculated_quantity" readonly="1" sum="Quantity"/></tree></field></page>
+                    <page string="Commercial"><group><group><field name="overhead_percent"/><field name="contingency_percent"/><field name="target_margin_percent"/><field name="contract_unit_rate"/></group><group><field name="internal_unit_cost" readonly="1"/><field name="internal_amount" readonly="1"/><field name="target_unit_rate" readonly="1"/><field name="target_amount" readonly="1"/><field name="contract_amount" readonly="1"/></group></group></page>
+                    <page string="Cost Control"><group><field name="committed_amount" readonly="1"/><field name="actual_amount" readonly="1"/><field name="cost_variance_amount" readonly="1"/><field name="analytic_distribution" widget="analytic_distribution"/></group></page>
+                </notebook>
+            </sheet>
+        </form></field>
+    </record>
+    <record id="view_construction_boq_form" model="ir.ui.view">
+        <field name="name">construction.boq.form</field><field name="model">construction.boq</field>
+        <field name="arch" type="xml"><form string="Bill of Quantities">
+            <header>
+                <button name="action_submit_review" type="object" string="Submit for Review" class="oe_highlight" groups="elmokrif_tender_boq.group_boq_estimator" invisible="state not in ['draft', 'changes_requested']"/>
+                <button name="action_complete_review" type="object" string="Complete Review" class="oe_highlight" groups="elmokrif_tender_boq.group_boq_reviewer" invisible="state != 'under_review'"/>
+                <button name="action_open_return_wizard" type="object" string="Request Changes" groups="elmokrif_tender_boq.group_boq_reviewer" invisible="state not in ['under_review', 'reviewed']"/>
+                <button name="action_approve" type="object" string="Approve Baseline" class="oe_highlight" groups="elmokrif_tender_boq.group_boq_approver" invisible="state != 'reviewed'"/>
+                <button name="action_open_revision_wizard" type="object" string="Create Revision" groups="elmokrif_tender_boq.group_boq_estimator" invisible="state not in ['approved', 'issued', 'superseded']"/>
+                <button name="action_cancel" type="object" string="Cancel" confirm="Cancel this BOQ revision?" invisible="state not in ['draft', 'changes_requested']"/>
+                <field name="state" widget="statusbar" statusbar_visible="draft,under_review,changes_requested,reviewed,approved,issued,superseded"/>
+            </header>
+            <sheet>
+                <div class="oe_button_box" name="button_box"><button name="action_view_tenders" type="object" class="oe_stat_button" icon="fa-gavel" invisible="not tender_count"><field name="tender_count" widget="statinfo" string="Tenders"/></button></div>
+                <widget name="web_ribbon" title="Superseded" bg_color="text-bg-secondary" invisible="state != 'superseded'"/><widget name="web_ribbon" title="Issued" bg_color="text-bg-success" invisible="state != 'issued'"/>
+                <div class="oe_title"><label for="title"/><h1><field name="title" placeholder="BOQ title and package"/></h1><h2><field name="name" readonly="1"/></h2></div>
+                <group><group><field name="company_id" invisible="1"/><field name="chantier_id" options="{'no_create': True}"/><field name="purpose"/><field name="package_code"/></group><group><field name="revision_no"/><field name="previous_revision_id"/><field name="revision_reason" readonly="state not in ['draft', 'changes_requested']"/><field name="is_current_revision"/></group></group>
+                <notebook>
+                    <page string="BOQ Lines"><field name="line_ids" context="{'default_boq_id': id}"><tree decoration-info="optional" decoration-warning="provisional"><field name="sequence" widget="handle"/><field name="item_code"/><field name="section_id"/><field name="description"/><field name="uom_id"/><field name="quantity"/><field name="internal_unit_cost"/><field name="internal_amount" sum="Internal Total"/><field name="target_unit_rate"/><field name="target_amount" sum="Target Total"/><field name="contract_unit_rate" optional="hide"/><field name="committed_amount" optional="hide"/><field name="actual_amount" optional="hide"/><field name="optional" optional="hide"/><field name="provisional" optional="hide"/></tree></field></page>
+                    <page string="WBS"><field name="section_ids" context="{'default_boq_id': id}"><tree editable="bottom"><field name="boq_id" column_invisible="True"/><field name="sequence" widget="handle"/><field name="code"/><field name="name"/><field name="parent_id" domain="[('boq_id', '=', boq_id)]"/><field name="amount_internal" readonly="1"/><field name="amount_target" readonly="1"/></tree></field></page>
+                    <page string="Revision Changes" invisible="revision_no == 0"><field name="delta_ids" readonly="1"><tree decoration-success="change_type == 'added'" decoration-danger="change_type == 'removed'" decoration-warning="change_type == 'modified'"><field name="change_type"/><field name="old_line_id"/><field name="new_line_id"/><field name="old_quantity"/><field name="new_quantity"/><field name="old_unit_rate"/><field name="new_unit_rate"/><field name="amount_delta" sum="Revision Delta"/></tree></field></page>
+                    <page string="Approvals"><group><group><field name="prepared_by_id"/><field name="reviewed_by_id"/><field name="reviewed_at"/></group><group><field name="approved_by_id"/><field name="approved_at"/><field name="frozen_by_id"/><field name="frozen_at"/></group></group><field name="review_comment"/><field name="content_hash" readonly="1"/></page>
+                    <page string="Documents"><field name="attachment_ids" widget="many2many_binary"/></page>
+                </notebook>
+                <group class="oe_subtotal_footer oe_right"><field name="amount_internal"/><field name="contingency_amount"/><field name="amount_target"/><field name="amount_contract"/></group>
+            </sheet><chatter/>
+        </form></field>
+    </record>
+    <record id="action_construction_boq" model="ir.actions.act_window"><field name="name">Bills of Quantities</field><field name="res_model">construction.boq</field><field name="view_mode">tree,form</field><field name="search_view_id" ref="view_construction_boq_search"/><field name="context">{'search_default_current': 1}</field></record>
+</odoo>

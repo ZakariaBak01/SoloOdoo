@@ -1,0 +1,9 @@
+CHECK Inventory / Administrator 0
+CHECK Inventory / User 0
+CHECK Purchase / Administrator 1
+CHECK Purchase / User 1
+CHECK Extra Rights / Technical Features 1
+CHECK Technical / Access to export feature 1
+CHECK Technical / Mail Template Editor 1
+CHECK Technical / Send an automatic reminder email to confirm delivery 1
+REMOVED ['Purchase / Administrator', 'Purchase / User', 'Extra Rights / Technical Features', 'Technical / Access to export feature', 'Technical / Mail Template Editor', 'Technical / Send an automatic reminder email to confirm delivery']
